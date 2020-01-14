@@ -8,7 +8,6 @@ Nom d'équipe : Yer'hed mat
 
 Participants :
 
-- Sciencescom
-
-- AGR :
-- Polytech :  
+- Sciencescom : Lisa TENAILLEAU, Marine POHU
+- AGR : Léa DURAN, Morgann Dagorn
+- Polytech : Gabrielle DEMASSOL, Yahuan CHEN, Florian DANIEL, Alexis AIGUEPARSE, Jonas DELANNOY
