@@ -1,0 +1,29 @@
+#home-wrapper {
+	text-align: center;
+	margin: auto;
+}
+
+#home-logo-wrapper {
+	position: relative;
+	margin: auto;
+}
+
+#home-logo {
+	z-index: 2;
+}
+
+#home-experience {
+	font-size: 70px;
+
+	position: absolute;
+	top: 20px;
+	left: 40%;
+
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg); /* Safari */
+	-moz-transform: rotate(45deg); /* Firefox */
+	-ms-transform: rotate(45deg); /* IE */
+	-o-transform: rotate(45deg); /* Opera */
+
+	z-index: 1;
+}

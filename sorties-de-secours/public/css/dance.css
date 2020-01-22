@@ -1,0 +1,14 @@
+#dance-wrapper {
+	height: 100%;
+	width: 100%;
+	background: url('../img/dance-scene.jpg');
+	background-size: cover;
+}
+
+#dance-trail-layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
