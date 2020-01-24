@@ -6,14 +6,14 @@
 var $header_top = $('.header-top');
 var $nav = $('nav');
 
-// toggle menu 
+// toggle menu
 $header_top.find('a').on('click', function() {
   $(this).parent().toggleClass('open-menu');
 });
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#B8AE9C', '#348899', '#F2AE72', '#5C832F', '#B8B89F'],
+  sectionsColor: ['#DEDEDE', '#348899', '#F2AE72', '#5C832F', '#B8B89F'],
   sectionSelector: '.vertical-scrolling',
   slideSelector: '.horizontal-scrolling',
   navigation: false,
@@ -60,7 +60,7 @@ $('#fullpage').fullpage({
       $header_top.css('background', 'rgba(0, 47, 77, .3)');
       $nav.css('background', 'rgba(0, 47, 77, .25)');
     }
-  } 
+  }
 });
 /* =============================
     END FULLPAGE INITIALISATION

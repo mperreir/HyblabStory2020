@@ -27,3 +27,11 @@
 
 	z-index: 1;
 }
+
+.fa-chevron-circle-down {
+	color: black;
+	position: absolute;
+	left: 50%;
+	top: 91.02%;
+	bottom: 4.1%;
+}
