@@ -5,6 +5,9 @@
 var express = require('express');
 var path = require('path');
 
+var jsdom = require('jsdom');
+global.$ = require('jquery')(new jsdom.JSDOM().window);
+
 var app = express();
 
 // Minimum routing: serve static content from the html directory

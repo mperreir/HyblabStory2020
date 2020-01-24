@@ -1,70 +1,75 @@
-<!doctype html>
-
-<html lang="fr">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Hyblab 2020</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-  <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
-  <script src="https://rawcdn.githack.com/bchanx/slidr/397004f7acc338b112a9e1dc2481acc1446e0209/slidr.min.js"></script>
-  <script src="js/slide1.js" defer></script>
-  <script src="js/slide2.js" defer></script>
-  <script src="js/index.js" defer></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bodymovin.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet'/>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js" charset="utf-8"></script>
+    <script src="js/config.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/main.js"></script>
+
+    <title>Bouts du monde</title>
+
 </head>
 <body>
-    <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-    <div id="container">
-        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-        <main id = "slidr">
-            <section data-slidr="page-1">
-                <header>
-                    <h1 id="titre">Welcome to</h1>
-                </header>
-                
-                <img src="img/logo_hyblab.png" id="logo-hyblab"></img>
-
-                <video id="background-video" class="video-js" data-setup='{"autoplay": true, "loop" : true, "fill": true, "muted": true}'>
-                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-                </video>
-
-                <!-- le footer sera remplir à partir de données lues dans un fichier Json-->
-                <footer></footer>
-            </section>
-            <section data-slidr="page-2">
-                <img id="img-fini" src="https://www.tri-d-aix.com/media/bilder/fini_55c9f_2e319.png">
-                <footer id="bandeau">
-                        <!-- Logo Hyblab -->
-                          <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
-                      
-                          <!-- Les organisateurs -->
-                          <ul>
-                            <li><a href="http://www.ouestmedialab.fr/"><img src="logo_oml.png" alt="Ouest Médialab"></a></li>
-                            <li><a href="http://www.agrnantes.fr"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a></li>
-                            <li><a href="http://www.univ-nantes.fr/"><img src="ecoles/logo_universitenantes.jpg" alt="Université de Nantes"></a></li>
-                            <li><a href="http://www.polytech.univ-nantes.fr/"><img src="ecoles/logo_polytech.png" alt="Polytech Nantes"></a></li>
-                            <li><a href="http://sciencescom.audencia.com/"><img src="ecoles/logo_sciencescom.jpg" alt="SciencesCom"></a></li>
-                          </ul>
-                          <!-- Les autres logos -->
-                          <ul>
-                            <!-- Logos CC et opensource -->
-                            <li>
-                            <ul>
-                              <li class="stacked"><img id="cc" src="logo_cc.png" alt="Creative commons"></li>
-                              <li class="stacked"><img id="opensource" src="logo_opensource.png" alt="Open source"></li>
-                            </ul>
-                            </li>
-                            <!-- Logo de votre porteur de projet -->
-                            <li><a href="http://www.mon-porteur-de-projet.org"><img src="no-logo.png" alt="Logo de mon porteur de projet"></a></li>
-                            <!-- Partenaires institutionnels -->
-                            <li><a href="http://www.paysdelaloire.fr/"><img class="institutionnel" src="institutionnels/logo_pdl.png" alt="Pays de La Loire"></a></li>
-                            <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="institutionnels/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
-                          </ul>
-                </footer>
-            </section>
-        </main>
+<div id="s1-map">
+    <div id="map"></div>
+    <div id="story"></div>
+    <button id='start-story'>Lancer l'histoire</button>
+</div>
+<div id="sec-story">
+    <section id="s2" class="normal start"></section>
+    <section id="s3" class="attack">
+        <button class="attack">Go</button>
+    </section>
+    <section id="s4" class="normal"></section>
+    <section id="s5" class="choice">
+        <button id="tashi" class="choice choice1">Tashi</button>
+        <button id="alone" class="choice choice1">Seul</button>
+    </section>
+    <section id="s6" class="answer">
+        <button id="b1" class="back">Retour</button>
+    </section>
+    <section id="s7" class="answer"></section>
+    <section id="s8" class="normal"></section>
+    <section id="s9" class="choice">
+        <button id="catch" class="choice choice2">Le rattraper</button>
+        <button id="leave" class="choice choice2">Chercher de l'aide</button>
+    </section>
+    <section id="s10" class="answer">
+        <button id="b2" class="back">Retour</button>
+    </section>
+    <section id="s11" class="answer"></section>
+    <section id="s12" class="normal"></section>
+    <section id="s13" class="choice">
+        <button id="food" class="choice choice3">Nourriture + tente</button>
+        <button id="wood" class="choice choice3">Grotte et bois</button>
+    </section>
+    <section id="s14" class="answer">
+        <button id="b3" class="back">Retour</button>
+    </section>
+    <section id="s15" class="answer"></section>
+    <section id="s16" class="normal"></section>
+    <section id="s17" class="normal end"></section>
+    <div id="scroll" class="i-animate">
+        <i class="material-icons">expand_more</i>
+        <span>scroll</span>
     </div>
+    <div id="retry" class="i-animate">
+        <i class="material-icons">refresh</i>
+        <span>Recommencer</span>
+    </div>
+</div>
 </body>
 </html>
