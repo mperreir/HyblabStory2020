@@ -1,4 +1,4 @@
-# Descriptif du projet [Transition Énergétique](hyblab.polytech.univ-nantes.fr/region-pdl/)
+# Descriptif du projet [Transition Énergétique](http://hyblab.polytech.univ-nantes.fr/region-pdl/)
 
 Porteur de projet : **Région Pays de la Loire (Olivier Guillon)**
 
