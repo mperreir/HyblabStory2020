@@ -1,22 +1,25 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : Région Pays de la Loire (Olivier Guillon)
 
-Sujet :
+Sujet : Transition Énergétique.
 
-Nom d'équipe :
+Nom d'équipe : GreenLight
 
 Participants : 
 
-- Sciencescom
-
+- Sciencescom :
+    - Nina Naulleau
+    - Vinciane Le Borgne
 - AGR :
+    - Mathilde Mousset
+    - Marine Boisman
 - Polytech :  
+    - Nathan Seva
+    - Mathis Le Berrigaud
+    - Julien Garcia
+    - Xavier Tremillon
 
-
-
-
-# region-pdl
 
 ## Project setup
 ```
