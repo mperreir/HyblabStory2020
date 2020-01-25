@@ -13,9 +13,10 @@ Participants :
     - Vinciane Le Borgne
 - AGR :
     - Mathilde Mousset
-    - Marine Boisman
+    - Marine Boismain
 - Polytech :  
     - Nathan Seva
+    - Nicolas Vautier
     - Mathis Le Berrigaud
     - Julien Garcia
     - Xavier Tremillon
