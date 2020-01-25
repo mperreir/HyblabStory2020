@@ -54,5 +54,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - Quand une fonctionnalité est prête faire : `git merge dev` et résoudre les conflits s'il y en a (faire un commit quand les conflits sont résolus).
 - Merge la nouvelle fonctionnalité dans dev : `git merge ma_fonctionnalité`.
 - Merge dev dans master, **seulement quand on est sûr que ça marche bien** : `git checkout master` puis `git merge dev`.
+- Push les modifications : `git push`
 - Se connecter sur [L'espace SSH du projet](https://hyblab.polytech.univ-nantes.fr/ssh/) avec l'identifiant **region-pdl** et le mot de passe **story4region-pdl**.
 - Lancer simplement la commande : `./sync_project`
