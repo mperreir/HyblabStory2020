@@ -1,9 +1,7 @@
 let initSlide2 = function(){
-  anime({
-    targets: '#img-fini',
-    scale: 1.2,
-    easing: 'easeInOutQuad',
-    direction: 'alternate',
-    loop: true
+
+  d3.select('#next3').on('click', function(){
+    mySlidr.slide('page-3');
+    initSlide3();
   });
-};
+}
