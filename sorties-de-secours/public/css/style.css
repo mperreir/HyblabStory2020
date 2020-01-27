@@ -22,10 +22,15 @@ body{
 
 /* image not draggable */
 img {
-    user-drag: none; 
+    user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+@font-face {
+ font-family: "Caslon";
+ src: url("/fonts/CaslonCP.otf");
 }

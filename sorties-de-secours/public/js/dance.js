@@ -20,7 +20,7 @@ $(document).ready(function() {
     this.x = 0;
     this.y = 0;
   };
-  // The Dot.prototype.draw() method sets the position of 
+  // The Dot.prototype.draw() method sets the position of
     // the object's <div> node
   /*Dot.prototype.draw = function() {
     this.node.style.background = "radial-gradient(circle at " + this.x + "px " + this.y + "px, transparent, #000 5%)";
@@ -40,11 +40,11 @@ $(document).ready(function() {
         y = mouse.y;
 
     var radial_gradients = "";
-    
+
     // This loop is where all the 90s magic happens
     dots.forEach(function(dot, index, dots) {
       var nextDot = dots[index + 1] || dots[0];
-      
+
       dot.x = x;
       dot.y = y;
       //dot.draw();
@@ -54,8 +54,6 @@ $(document).ready(function() {
     });
 
     radial_gradients = radial_gradients.substring(0, radial_gradients.length - 2); // remove last ','
-    console.log(radial_gradients);
-    console.log(node);
     node.style.background = radial_gradients;
   }
 

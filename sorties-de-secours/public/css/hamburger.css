@@ -1,7 +1,6 @@
-#menuToggle
-{
+#hamburger {
   display: block;
-  position: relative;
+  position: absolute;
   top: 50px;
   right: 50px;
 
@@ -11,28 +10,30 @@
   user-select: none;
 }
 
-#menuToggle a
-{
+.menuLink {
   text-decoration: none;
-  color: black;
+  color: white;
+  padding: 10px 0;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: "Caslon";
+  padding: 5px;
 
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
+.menuLink:hover {
   color: tomato;
 }
 
 
-#menuToggle input
-{
+#hamburger input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
-  left: -5px;
+  right: -5px;
 
   cursor: pointer;
 
@@ -42,14 +43,10 @@
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
+#hamburger span {
   display: block;
   width: 33px;
-  height: 4px;
+  height: 3px;
   margin-bottom: 5px;
   position: relative;
 
@@ -65,77 +62,50 @@
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#hamburger span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#hamburger span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
+#hamburger input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: black;
+  background: white;
 }
 
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#hamburger input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
+#hamburger input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0px, 2px);
+  background: white;
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
+#categories {
   position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
+  width: 250px;
+  top: -50px;
+  right: -50px;
+  border: 0;
   padding: 50px;
   padding-top: 125px;
 
-  background: #ededed;
+  background: #232323;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
 
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  transform: translate(100%, 0);
 
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
+#hamburger input:checked ~ ul {
   transform: none;
 }
