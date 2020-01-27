@@ -1,0 +1,21 @@
+#choice-section {
+  display: table;
+}
+
+.expChoice {
+  float: left;
+  height: 100%;
+  width: 33.33%
+}
+
+#choice-section div:first-child {
+  background: black;
+}
+
+#choice-section div:nth-last-child(2) {
+  background: grey;
+}
+
+#choice-section div:nth-last-child(3) {
+  background: white;
+}
