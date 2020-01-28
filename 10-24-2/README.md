@@ -12,4 +12,4 @@ Participants : Pascal Couffin
 
 - AGR : Cécile Castan, Lucas Roux
 
-- Polytech : Parpaillon Thomas, Lhinarès Xavier, Crouin Yoann, Gonzalès Valentin, Quentin Gastebois
+- Polytech : Yoann Crouin, Quentin Gastebois, Valentin Gonzales, Xavier Lhinares, Thomas Parpaillon
