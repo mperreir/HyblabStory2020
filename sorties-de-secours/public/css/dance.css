@@ -1,14 +1,17 @@
 #dance-wrapper {
-	height: 100%;
+	height: 1000px;
 	width: 100%;
-	background: url('../img/dance-scene.jpg');
-	background-size: cover;
 }
 
-#dance-trail-layer {
+#img-dancers {
 	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
+	z-index: 1;
+}
+
+#img-dancers-annotations {
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+	transition-property: opacity;
+  transition-duration: 1s;
 }
