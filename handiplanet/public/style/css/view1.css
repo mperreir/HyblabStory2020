@@ -6,6 +6,7 @@
 #view1 {
   width: 100vw;
   height: 100vh;
+  background-color: #ffffff;
 }
 #view1 #view-1-middle {
   width: 80vw;
@@ -28,10 +29,36 @@
   max-width: 45%;
   left: 7vw;
 }
+#view1 #view-1-middle #view-1-hotel-img {
+  position: absolute;
+  max-height: 20%;
+  max-width: 20%;
+  top: 30%;
+  left: 7vw;
+}
+#view1 #view-1-middle #view-1-luggage-img {
+  position: absolute;
+  max-height: 20%;
+  max-width: 20%;
+  top: 30%;
+  left: 55%;
+}
 #view1 #view-1-middle article {
   position: absolute;
-  right: 2vw;
-  bottom: 20vh;
+  right: 5%;
+  max-width: 45%;
+  bottom: 10%;
+}
+#view1 #view-1-middle article p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #426262;
+}
+#view1 #view-1-middle article span {
+  color: #cb563e;
 }
 #view1 footer {
   width: 100vw;

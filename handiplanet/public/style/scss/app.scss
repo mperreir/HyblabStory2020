@@ -102,9 +102,6 @@
         // bottom: 1vh;
       }
     }
-    }
-
-      
     .selected{
       
       border: 0.5vh solid #cb563e !important ; 
@@ -115,6 +112,10 @@
       &::before{
         background-color: #cb563e !important ;
       }
+    }
+
+      
+    
     }
 
     #text-size{
@@ -133,7 +134,7 @@
         color: white;
       }
       .selected{
-        background-color: #cb563e !important;
+        background-color: #cb563e;
       }
 
       #small{
@@ -149,6 +150,20 @@
     }
     
   }
-
   
+  
+}
+
+#son{
+  position: absolute;
+  height: 10vh;
+  width : 10vh;
+  left: 5vh;
+  bottom: 5vh;
+  .on{
+
+  }
+  .mute{
+    display: none;
+  }
 }

@@ -6,6 +6,11 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 
+*{
+  scroll-behavior: smooth;
+  //overflow: hidden;
+}
+
 body {
   margin: 0px;
 }
@@ -61,6 +66,13 @@ a{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+
+    button{
+      &:last-of-type{
+         padding-top: 1vh;
+      }
+      padding-top: 4vh;
+    }
 
     h1, h2{
       margin: 0px;

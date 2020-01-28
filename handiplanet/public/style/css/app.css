@@ -88,13 +88,13 @@
   bottom: calc(100% + 0.5vh);
   z-index: -1000;
 }
-#app-view #app-overlay .selected {
+#app-view #app-overlay #scroll-point .selected {
   border: 0.5vh solid #cb563e !important;
 }
-#app-view #app-overlay .selected::after {
+#app-view #app-overlay #scroll-point .selected::after {
   background-color: #cb563e !important;
 }
-#app-view #app-overlay .selected::before {
+#app-view #app-overlay #scroll-point .selected::before {
   background-color: #cb563e !important;
 }
 #app-view #app-overlay #text-size {
@@ -113,7 +113,7 @@
   color: white;
 }
 #app-view #app-overlay #text-size .selected {
-  background-color: #cb563e !important;
+  background-color: #cb563e;
 }
 #app-view #app-overlay #text-size #small {
   font-size: small;
@@ -123,6 +123,17 @@
 }
 #app-view #app-overlay #text-size #large {
   font-size: large;
+}
+
+#son {
+  position: absolute;
+  height: 10vh;
+  width: 10vh;
+  left: 5vh;
+  bottom: 5vh;
+}
+#son .mute {
+  display: none;
 }
 
 /*# sourceMappingURL=app.css.map */
