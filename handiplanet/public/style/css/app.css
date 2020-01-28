@@ -48,7 +48,7 @@
 #app-view #app-overlay #scroll-point {
   position: absolute;
   right: 5vw;
-  top: 50vh;
+  top: 60vh;
   transform: translateY(-50%);
 }
 #app-view #app-overlay #scroll-point .point {
@@ -105,11 +105,12 @@
   height: 80%;
 }
 #app-view #app-overlay #text-size .text {
-  margin-bottom: 10vh;
+  margin-bottom: 4vh;
   background-color: #5a8d8c;
   height: 8vh;
   width: 8vh;
   border-radius: calc(8vh / 2);
+  color: white;
 }
 #app-view #app-overlay #text-size .selected {
   background-color: #cb563e !important;
@@ -122,30 +123,6 @@
 }
 #app-view #app-overlay #text-size #large {
   font-size: large;
-}
-#app-view #first-view {
-  height: 100vh;
-  width: 100vw;
-}
-#app-view #first-view #decore-view-1 {
-  height: 80vh;
-  width: 90vw;
-  position: absolute;
-  left: 5vw;
-  bottom: 10vh;
-}
-#app-view #first-view #decore-view-1 img {
-  position: absolute;
-}
-#app-view #first-view #decore-view-1 #perso-view-1 {
-  max-width: 50%;
-  max-height: 70%;
-  bottom: 0px;
-  z-index: 1;
-}
-#app-view #first-view #decore-view-1 #tache-view-1 {
-  height: 100%;
-  margin-left: 10vw;
 }
 
 /*# sourceMappingURL=app.css.map */
