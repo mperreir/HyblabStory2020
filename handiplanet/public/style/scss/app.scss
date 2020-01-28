@@ -1,8 +1,8 @@
 /*
- * File Created: 2020-01-27 21:14:19
- * Author: Christophe SONNEVILLE
- * Copyright - 2020 Christophe SONNEVILLE
- */
+* File Created: 2020-01-27 21:14:19
+* Author: Christophe SONNEVILLE
+* Copyright - 2020 Christophe SONNEVILLE
+*/
 
 #app-view {
   position: relative;
@@ -14,17 +14,18 @@
     bottom: 0px;
     right: 0px;
     padding: 30px;
-
-    &>*{
+    
+    *{
       z-index: 999;
     }
-
+    
     header {
+      z-index: 999;
       display: flex;
       img {
         height: 6.5vh;
       }
-
+      
       ul{
         margin: 0px;
         padding: 0px;
@@ -38,7 +39,7 @@
           color: #5A8D8C;
           padding: 5px 10px;
           font-weight: lighter;
-
+          
           &:last-of-type {
             background-color: #5A8D8C;
             color: #ffffff;
@@ -58,76 +59,71 @@
       top: 60vh;
       transform: translateY(-50%);
       
-    .point{
-      position: relative;
-      height: 2vh;
-      width: 2vh;
-      border-radius: calc(2vh / 2);
-      background-color: #ffffff;
-      border: 0.5vh solid #5a8d8c;
-      margin-bottom: 10vh;
-
-      
-      &:last-of-type{
+      .point{
+        position: relative;
+        height: 2vh;
+        width: 2vh;
+        border-radius: calc(2vh / 2);
+        background-color: #ffffff;
+        border: 0.5vh solid #5a8d8c;
+        margin-bottom: 10vh;
+        
+        
+        &:last-of-type{
+          &::after{
+            display: none;
+          }
+        }
+        
+        &:first-of-type{
+          &::before{
+            display: none;
+          }
+        }
+        
         &::after{
-          display: none;
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 8vh;
+          width: 0.6vh;
+          background-color: #5a8d8c;
+          top: calc(100% + 0.5vh);
+          // z-index: -1000;
+          // bottom: 1vh;
         }
-      }
-      
-      &:first-of-type{
         &::before{
-          display: none;
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 5vh;
+          width: 0.6vh;
+          background-color: #5a8d8c;
+          bottom: calc(100% + 0.5vh);
         }
       }
-
-      &::after{
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 8vh;
-        width: 0.6vh;
-        background-color: #5a8d8c;
-        top: calc(100% + 0.5vh);
-        z-index: -1000;
-        // bottom: 1vh;
-      }
-      &::before{
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 5vh;
-        width: 0.6vh;
-        background-color: #5a8d8c;
-        bottom: calc(100% + 0.5vh);
-        z-index: -1000;
-        // bottom: 1vh;
+      .selected{
+        
+        border: 0.5vh solid #cb563e !important ; 
+        
+        &::after{
+          background-color: #cb563e !important ;
+        }
+        &::before{
+          background-color: #cb563e !important ;
+        }
       }
     }
-    .selected{
-      
-      border: 0.5vh solid #cb563e !important ; 
-
-      &::after{
-        background-color: #cb563e !important ;
-      }
-      &::before{
-        background-color: #cb563e !important ;
-      }
-    }
-
-      
     
-    }
-
     #text-size{
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
       height: 80%;
-
+      
       .text{
         margin-bottom: 4vh;
         background-color: #5a8d8c;
@@ -139,7 +135,7 @@
       .selected{
         background-color: #cb563e;
       }
-
+      
       #small{
         font-size: small;
       }
@@ -149,7 +145,7 @@
       #large{
         font-size: large;        
       }
-
+      
     }
     
   }
@@ -163,9 +159,6 @@
   width : 10vh;
   left: 5vh;
   bottom: 5vh;
-  .on{
-
-  }
   .mute{
     display: none;
   }

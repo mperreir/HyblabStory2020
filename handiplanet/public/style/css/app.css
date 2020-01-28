@@ -1,8 +1,8 @@
 /*
- * File Created: 2020-01-27 21:14:19
- * Author: Christophe SONNEVILLE
- * Copyright - 2020 Christophe SONNEVILLE
- */
+* File Created: 2020-01-27 21:14:19
+* Author: Christophe SONNEVILLE
+* Copyright - 2020 Christophe SONNEVILLE
+*/
 #app-view {
   position: relative;
   background-color: #ffffff;
@@ -15,10 +15,11 @@
   right: 0px;
   padding: 30px;
 }
-#app-view #app-overlay > * {
+#app-view #app-overlay * {
   z-index: 999;
 }
 #app-view #app-overlay header {
+  z-index: 999;
   display: flex;
 }
 #app-view #app-overlay header img {
@@ -78,7 +79,6 @@
   width: 0.6vh;
   background-color: #5a8d8c;
   top: calc(100% + 0.5vh);
-  z-index: -1000;
 }
 #app-view #app-overlay #scroll-point .point::before {
   content: "";
@@ -89,7 +89,6 @@
   width: 0.6vh;
   background-color: #5a8d8c;
   bottom: calc(100% + 0.5vh);
-  z-index: -1000;
 }
 #app-view #app-overlay #scroll-point .selected {
   border: 0.5vh solid #cb563e !important;
