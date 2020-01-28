@@ -14,7 +14,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: black; /*changer la background color pour la page d'accueil*/
     color: white;
     overflow: hidden;   /* pour slidr dans certains navigateurs */
 }

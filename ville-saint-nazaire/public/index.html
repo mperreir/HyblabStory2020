@@ -1,12 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <title>Hyblab 2020</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style1.css">
   <link rel="stylesheet" href="css/style2.css">
   <link rel="stylesheet" href="css/style5.css">
+  <link rel="stylesheet" href="css/style9.css">
+  <link rel="stylesheet" href="css/style11.css">
   <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
@@ -56,19 +59,8 @@
     <div id="container">
         <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
         <main id = "slidr">
-            <section data-slidr="page-1">
-                <header>
-                    <h1 id="titre">Welcome to</h1>
-                </header>
-
-                <img src="img/logo_hyblab.png" id="logo-hyblab"></img>
-
-                <video id="background-video" class="video-js" data-setup='{"autoplay": true, "loop" : true, "fill": true, "muted": true}'>
-                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-                </video>
-
-                <!-- le footer sera remplir à partir de données lues dans un fichier Json-->
-                <footer></footer>
+            <section data-slidr="page-1" id="page-1">
+              <button id="next2">Découvrir</button>
             </section>
             <section data-slidr="page-2" id="page2"></section>
             <section data-slidr="page-3" id="page3"></section>
