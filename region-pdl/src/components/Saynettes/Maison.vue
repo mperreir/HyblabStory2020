@@ -1,6 +1,9 @@
 <template>
 <div class="Saynette">
-    <MaisonSVG />
+    <div>
+        <MaisonSVG ref="houseSVG" :class="classObject"/>
+    </div>
+    
 </div>
 </template>
 
@@ -15,11 +18,23 @@ export default {
     name: "Maison",
     extends: Saynette,
 
+    data: () => ({
+        classObject: {
+            animated: false,
+            fadeInRight: false,
+        },
+    }),
+
     methods: {
         arrive() {
-            console.log("ok nouvelle saynette : Maison !");
+            this.classObject = {
+                animated: true,
+                fadeInRight: true,
+            };
         }
     },
+
+    
 };
 
 </script>
