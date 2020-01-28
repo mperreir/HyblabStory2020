@@ -1,6 +1,6 @@
 <template>
 <div class="Saynette">
-    <Background />
+    
 </div>
 </template>
 

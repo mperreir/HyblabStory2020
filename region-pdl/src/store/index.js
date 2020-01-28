@@ -8,7 +8,9 @@ export default new Vuex.Store({
     
   },
   mutations: {},
-  actions: {},
+  actions: {
+    
+  },
   getters: {
     //insert getters here if needed
   },

@@ -1,6 +1,5 @@
 <template>
 <div class="Saynette">
-    <Background />
     <MaisonSVG />
 </div>
 </template>
