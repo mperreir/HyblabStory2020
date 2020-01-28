@@ -3,42 +3,42 @@
  * Author: Pierre MAUPIN
  * Copyright - 2020 Pierre MAUPIN
  */
-#view-1 {
+#view1 {
   width: 100vw;
   height: 100vh;
 }
-#view-1 #view-1-middle {
+#view1 #view-1-middle {
   width: 80vw;
   height: 80vh;
   margin: 0px 10vw;
   border-bottom: 2px solid #5A8D8C;
   position: relative;
 }
-#view-1 #view-1-middle img {
+#view1 #view-1-middle img {
   position: absolute;
   bottom: -2px;
 }
-#view-1 #view-1-middle #view-1-splash-img {
+#view1 #view-1-middle #view-1-splash-img {
   max-height: 95%;
   max-width: 70%;
   right: 2vw;
 }
-#view-1 #view-1-middle #view-1-charactere-img {
+#view1 #view-1-middle #view-1-charactere-img {
   max-height: 70%;
   max-width: 45%;
   left: 7vw;
 }
-#view-1 #view-1-middle article {
+#view1 #view-1-middle article {
   position: absolute;
   right: 2vw;
   bottom: 20vh;
 }
-#view-1 footer {
+#view1 footer {
   width: 100vw;
   height: 20vh;
   position: relative;
 }
-#view-1 footer #view-1-next-button {
+#view1 footer #view-1-next-button {
   position: absolute;
   right: 0px;
   background-color: #CB563E;
