@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     var circle_positions = [];
+    var eraser_size = 50;
 
     let stage = new Konva.Stage({
         container: 'expo-konva',
@@ -16,7 +17,7 @@ $(document).ready(function() {
         clipFunc: function(ctx) {
             for (let i=0 ; i<circle_positions.length ; i++) {
                 ctx.moveTo(circle_positions[i].x, circle_positions[i].y);
-                ctx.arc(circle_positions[i].x, circle_positions[i].y, 30, 0, Math.PI * 2, false);
+                ctx.arc(circle_positions[i].x, circle_positions[i].y, eraser_size, 0, Math.PI * 2, false);
             }
         },
         draggable: false
