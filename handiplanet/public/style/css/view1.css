@@ -3,29 +3,51 @@
  * Author: Pierre MAUPIN
  * Copyright - 2020 Pierre MAUPIN
  */
-#first-view {
-  height: 100vh;
+#view-1 {
   width: 100vw;
+  height: 100vh;
 }
-#first-view #decore-view-1 {
+#view-1 #view-1-middle {
+  width: 80vw;
   height: 80vh;
-  width: 90vw;
-  position: absolute;
-  left: 20vw;
-  bottom: 10vh;
+  margin: 0px 10vw;
+  border-bottom: 2px solid #5A8D8C;
+  position: relative;
 }
-#first-view #decore-view-1 img {
+#view-1 #view-1-middle img {
   position: absolute;
+  bottom: -2px;
 }
-#first-view #decore-view-1 #perso-view-1 {
-  max-width: 50%;
+#view-1 #view-1-middle #view-1-splash-img {
+  max-height: 95%;
+  max-width: 70%;
+  right: 2vw;
+}
+#view-1 #view-1-middle #view-1-charactere-img {
   max-height: 70%;
-  bottom: 0px;
-  z-index: 1;
+  max-width: 45%;
+  left: 7vw;
 }
-#first-view #decore-view-1 #tache-view-1 {
-  height: 100%;
-  margin-left: 10vw;
+#view-1 footer {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+}
+#view-1 footer #view-1-next-button {
+  position: absolute;
+  right: 0px;
+  background-color: #CB563E;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 10px 30px;
+  margin: 0px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*# sourceMappingURL=view1.css.map */
