@@ -4,4 +4,5 @@
  * Copyright - 2020 Christophe SONNEVILLE
  */
 
-loadTemplate('view1');
+// loadTemplate('view1');
+loadTemplate('view2');

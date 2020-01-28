@@ -1,0 +1,31 @@
+/*
+ * File Created: 2020-01-28 13:52:00
+ * Author: Pierre MAUPIN
+ * Copyright - 2020 Pierre MAUPIN
+ */
+#second-view {
+  height: 100vh;
+  width: 100vw;
+}
+#second-view #decore-view-2 {
+  height: 80vh;
+  width: 90vw;
+  position: absolute;
+  left: 20vw;
+  bottom: 10vh;
+}
+#second-view #decore-view-2 img {
+  position: absolute;
+}
+#second-view #decore-view-2 #perso-view-1 {
+  max-width: 50%;
+  max-height: 70%;
+  bottom: 0px;
+  z-index: 1;
+}
+#second-view #decore-view-2 #tache-view-1 {
+  height: 100%;
+  margin-left: 10vw;
+}
+
+/*# sourceMappingURL=view2.css.map */
