@@ -32,5 +32,5 @@ img {
 
 @font-face {
  font-family: "Caslon";
- src: url("/fonts/CaslonCP.otf");
+ src: url("./fonts/CaslonCP.otf");
 }

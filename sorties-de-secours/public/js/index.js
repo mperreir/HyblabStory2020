@@ -12,13 +12,14 @@ $header_top.find('a').on('click', function() {
 });
 
 // fullpage customization
-$('#fullpage').fullpage({
-  sectionsColor: ['white', 'black', 'black', '#F2AE72', '#5C832F'],
+$('#fullpage1').fullpage({
+  sectionsColor: ['white', 'black', 'black', '#F2AE72', '#5C832F', 'black'],
   sectionSelector: '.vertical-scrolling',
   slideSelector: '.horizontal-scrolling',
   navigation: false,
   slidesNavigation: true,
   controlArrows: false,
+  scrollOverflow:true,
   anchors: ['home', 'sound', 'choice', 'expo', 'dance'],
   menu: '#menu',
 
