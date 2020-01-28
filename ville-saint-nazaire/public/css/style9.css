@@ -3,3 +3,30 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#image_salon_petit{
+  position: absolute;
+  top:10%;
+  left:0%;
+  width: 6%;
+  height: auto;
+  z-index: 1;
+}
+
+#image_bureau_petit{
+  position: absolute;
+  top:20%;
+  left:0%;
+  width: 15%;
+  height: auto;
+  z-index: 2;
+}
+
+#image_comission_petit{
+  position: absolute;
+  top:60%;
+  left:0%;
+  width: 6.5%;
+  height: auto;
+  z-index: 3;
+}
