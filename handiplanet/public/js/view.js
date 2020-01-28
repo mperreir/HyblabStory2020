@@ -1,6 +1,11 @@
 class View {
     constructor(name, target){
         this.viewName = name;
-        loadTemplate(name, target);
+        this.target = target;
     }
+
+    load(){
+        return loadTemplate(this.viewName, this.target);
+    }
+
 }
