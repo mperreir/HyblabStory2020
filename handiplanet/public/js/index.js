@@ -10,7 +10,7 @@ window.scrollTo(0,0);
 
 window.addEventListener('load', function () {
     function scroll(){
-    window.scrollTo(0,window.innerHeight*2);
+    window.scrollTo(0,window.innerHeight);
     }
 
     function setSmall(){
