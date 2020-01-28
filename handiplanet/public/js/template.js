@@ -4,7 +4,7 @@
  * Copyright - 2020 Christophe SONNEVILLE
  */
 function loadTemplate(name) {
-  fetch(`/handiplanet/templates/${name}.html`).then((res) => {
+  fetch(`/handiplanet/views/${name}/${name}.html`).then((res) => {
     return res.text();
   }).then((html) => {
     document.getElementById('view-container').innerHTML = html;
