@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let initSlide2 = function(){
 
     var son = document.querySelector('#audioBombardement');
@@ -17,3 +18,5 @@ let initSlide2 = function(){
     //setTimeout(next3, 16000);
 
 }
+
+
