@@ -13,13 +13,13 @@ $header_top.find('a').on('click', function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#B8AE9C', '#000000', '#F2AE72', '#f0f0f0', '#f0f0f0'],
+  sectionsColor: ['#B8AE9C', '#000000', '#F2AE72', '#f0f0f0', '#f0f0f0', '#f0f0f0'],
   sectionSelector: '.vertical-scrolling',
   slideSelector: '.horizontal-scrolling',
   navigation: false,
   slidesNavigation: true,
   controlArrows: false,
-  anchors: ['home', 'loading', 'thirdSection', 'expo', 'dance'],
+  anchors: ['home', 'loading', 'thirdSection', 'expo', 'dance', 'music_workshop'],
   menu: '#menu',
 
   afterLoad: function(anchorLink, index) {
