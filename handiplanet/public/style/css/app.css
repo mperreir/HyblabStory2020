@@ -98,6 +98,7 @@
   background-color: #cb563e !important;
 }
 #app-view #app-overlay #text-size {
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -126,6 +127,7 @@
 }
 
 #son {
+  z-index: 1000;
   position: absolute;
   height: 10vh;
   width: 10vh;

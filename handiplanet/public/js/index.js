@@ -19,7 +19,10 @@ window.addEventListener('load', function () {
         large.style.background = '#5a8d8c';
 
         //mettre les textes en small
-        text.style.fontSize = "50%" ;
+        for(var i = 0; i < paragraphs.length; i++)
+        {
+            paragraphs[i].style.fontSize = "18px";
+        }
     }
     function setMedium(){
         medium.style.background = '#cb563e';
@@ -27,7 +30,10 @@ window.addEventListener('load', function () {
         large.style.background = '#5a8d8c';
 
         //mettre les textes en medium
-        text.style.fontSize = "100%" ;
+        for(var i = 0; i < paragraphs.length; i++)
+        {
+            paragraphs[i].style.fontSize = "21px";
+        }
     }
     function setLarge(){
         large.style.background = '#cb563e';
@@ -35,7 +41,10 @@ window.addEventListener('load', function () {
         medium.style.background = '#5a8d8c';
 
         //mettre les textes en larges
-        text.style.fontSize = "150%" ;
+        for(var i = 0; i < paragraphs.length; i++)
+        {
+            paragraphs[i].style.fontSize = "25px";
+        }
     }
 
     function mute(){
@@ -75,6 +84,9 @@ window.addEventListener('load', function () {
     sonOnW.onclick = mute;
     var sonMuteW = document.getElementById('muteW');
     sonMuteW.onclick = on;
+
+    var paragraphs = document.getElementsByTagName("p");
+
 
     text = document.getElementsByClassName('')
 });	
