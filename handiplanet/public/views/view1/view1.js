@@ -19,6 +19,7 @@ class View1 extends View {
         nextView.tempDiv.style.transform = `translateY(-100%)`;
         setTimeout(() => {
             nextView.tempDiv.replaceWith = nextView.view;
+            this.view.parentNode.removeChild(this.view);
         }, 1000);
     }
 
