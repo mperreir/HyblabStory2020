@@ -1,0 +1,44 @@
+/* CHOIX MATÉRIAUX */
+
+
+#page11{
+
+	background-image: url(../img/fond_slide11.jpg);
+	background-repeat: no-repeat;
+	width:100%;
+	height:100%;
+}
+
+
+/* maquette -02 1 */
+
+#materiaux1{
+	position: absolute;
+	width: 35%;
+	height: 60%;
+	left:0%;
+	top:20%;
+}
+
+
+/* maquette -01 1 */
+
+#materiaux2{
+	position: absolute;
+	width: 35%;
+	height: 60%;
+	top:20%;
+	left : 31%;
+}
+
+
+/* maquette -03 1 */
+
+#materiaux3{
+	position: absolute;
+	width: 35%;
+	height: 60%;
+	top:20%;
+	right:0%;
+}
+
