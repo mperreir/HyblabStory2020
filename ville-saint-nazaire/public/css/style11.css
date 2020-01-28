@@ -1,16 +1,13 @@
-/* CHOIX MATÉRIAUX */
-
 
 #page11{
 
 	background-image: url(../img/fond_slide11.jpg);
 	background-repeat: no-repeat;
+	background-size:100%;
 	width:100%;
 	height:100%;
 }
 
-
-/* maquette -02 1 */
 
 #materiaux1{
 	position: absolute;
@@ -21,8 +18,6 @@
 }
 
 
-/* maquette -01 1 */
-
 #materiaux2{
 	position: absolute;
 	width: 35%;
@@ -32,8 +27,6 @@
 }
 
 
-/* maquette -03 1 */
-
 #materiaux3{
 	position: absolute;
 	width: 35%;
@@ -41,4 +34,66 @@
 	top:20%;
 	right:0%;
 }
+
+
+
+p{
+    font-family:"Parisienne";
+    color:black;
+    text-align: justify;
+
+}
+
+
+
+#ecume{
+ 
+ 	position: absolute;
+    left:7%;
+    top: 75%;
+
+}
+
+#brise{
+	position: absolute;
+    left:38%;
+    top: 75%;
+}
+
+#rive{
+	position: absolute;
+    right:9%;
+    top: 75%;
+}
+
+
+@media screen and (max-aspect-ratio: 16/9){
+    p{
+        font-size: 3vw;
+    }
+}
+@media screen and (min-aspect-ratio: 16/9){
+    p{
+        font-size: 5vh;
+    }
+}
+
+
+
+
+/*
+#ecume{
+    left:7%;
+    top:75%;
+}
+
+#brise{
+    left:38%;
+    top:75%;
+}
+
+#rive{
+    right:9%;
+    top:75%;
+}*/
 
