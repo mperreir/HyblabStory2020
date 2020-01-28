@@ -15,6 +15,9 @@
   right: 0px;
   padding: 30px;
 }
+#app-view #app-overlay > * {
+  z-index: 999;
+}
 #app-view #app-overlay header {
   display: flex;
 }
