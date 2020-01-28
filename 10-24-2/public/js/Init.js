@@ -30,7 +30,7 @@ function init_story_intro () {
 }
 
 
-
+// 1st diagram : bullying
 function init_story_bullying() {
 
   var story = "bullying";
@@ -38,25 +38,35 @@ function init_story_bullying() {
   // BULLYING STORY
   var story_bullying = new Story();
 
-  var scene1 = new Scene(story, "enfant_qui_s'enferme", 2);
+  var scene1 = new Scene(story, "L'enfant s'enferme dans sa chambre", 2);
   story_bullying.add_scene(1, scene1);
 
-  var scene2 = new Scene(story, "aller le voir?", 2);
+  var choice1 = new Choice();
+  choice1.add_choice("Aller le voir",2);
+  choice1.add_choice("On a tous des mauvais jours",2);
+  
+  // Peut être créer une scène intermédiare entre le fait de ne pas y aller
+
+  var scene2 = new Scene(story, "Premier choix : aller le voir ?", 3);
   story_bullying.add_scene(2, scene2);
 
-  var scene3 = new Scene(story, "tout va bien?", 4);
+  var scene3 = new Scene(story, "Tu es sur que tout va bien ?", 4);
   story_bullying.add_scene(3, scene3);
 
-  var scene4 = new Scene(story, "insister?", 4);
+  var scene4 = new Scene(story, "Choix 2 : insister ?", 5);
   story_bullying.add_scene(4, scene4);
 
-  var scene5 = new Scene(story, "flashback", 6);
+  var choice2 = new Choice();
+  choice2.add_choice("Non, je pense que ca ne va pas",4);
+  choice2.add_choice("Si ca va, je ta laisse tranquille",4);
+
+  var scene5 = new Scene(story, "Flashback sur ce qui c'est passe à l ecole", 6);
   story_bullying.add_scene(5, scene5);
 
-  var scene6 = new Scene(story, "insister encore ?", 7);
+  var scene6 = new Scene(story, "Insister encore ?", 7);
   story_bullying.add_scene(6, scene6);
 
-  var scene7 = new Scene(story, "fin de l'histoire", 0);
+  var scene7 = new Scene(story, "Fin de l'histoire", 0);
   story_bullying.add_scene(7, scene7);
 
   var scene_retour_choix_porte = new Scene(story, "retour au choix de la porte", 0);
@@ -65,32 +75,41 @@ function init_story_bullying() {
   return true;
 
 }
+  // END BULLYING STORY
 
 
-
+// 2nd diagram : screens
 function init_story_screens() {
 
   var story = "screens";
 
+// SCREENS STORY
   var story_screens = new Story();
 
-  var scene1 = new Scene(story, "bruits de robots", 2);
+  var scene1 = new Scene(story, "Bruits provenants de la chambre", 2);
   story_screens.add_scene(1, scene1); 
 
-  var scene2 = new Scene(story, "aller voir?", 2);
+  var scene2 = new Scene(story, "Choix 1 : aller voir ?", 2);
   story_screens.add_scene(2, scene2);
 
-  var scene3 = new Scene(story, "c'est son cote creatif...", 1);
+  var choice1 = new Choice();
+  choice1.add_choice("Aller  voir",2);
+  choice1.add_choice("C'est son cote creatif",2);
+
+  var scene3 = new Scene(story, "C'est son cote creatif...", 1);
   story_screens.add_scene(3, scene3);
 
-  var scene4 = new Scene(story, "on entre dans la chambre", 5);
+  var scene4 = new Scene(story, "On entre dans la chambre", 5);
   story_screens.add_scene(4, scene4);
 
-  var scene5 = new Scene(story, "mon cheri il est 23h!", 6);
+  var scene5 = new Scene(story, "Mon cheri il est 23h!", 6);
   story_screens.add_scene(5, scene5);
 
-  var scene6 = new Scene(story, "choix de la plage horaire", 6);
+  var scene6 = new Scene(story, "Choix de la plage horaire", 6);
   story_screens.add_scene(6, scene6);
+
+  var choice2 = new Choice();
+  // Ajouter un slider pour définir la plage horaire
 
   var scene7 = new Scene(story, "mauvaise reponse", 6);
   story_screens.add_scene(7, scene7);
@@ -108,7 +127,7 @@ function init_story_screens() {
   story_screens.add_scene(0, scene_retour_choix_porte);
 
   return true;
-
+// END SCREENS STORY
 }
 
 
