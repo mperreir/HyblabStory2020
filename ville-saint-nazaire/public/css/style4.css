@@ -7,10 +7,15 @@
 
 #img-journaliste {
 
-
 }
 
 #img-architecte {
+	position: absolute;
+	width : 30%;
+	height : 40%;
+	top : 60%;
+	left : 70%;
+	z-index: 200;
 
 }
 
@@ -22,7 +27,6 @@
     font-family: Parisienne;
     font-style: normal;
 	font-weight: normal;
-	line-height: 49px;
 	background-color: #C4C4C4;
 	padding: 2%;
 }
@@ -32,9 +36,9 @@
 #container-dialogue1 {
 	position: absolute;
 	width: 55%;
-	height: 20%;
-	left: 35%;
-	top: 60%;
+	height: 10%;
+	left: 40%;
+	top: 10%;
 
 }
 
@@ -42,8 +46,8 @@
 	position: absolute;
 	width: 55%;
 	height: 13%;
-	left: 15%;
-	top: 20%;
+	left: 30%;
+	top: 35%;
 
 	visibility: hidden;
 	background-color: #C4C4C4;
@@ -53,10 +57,10 @@
 
 #container-dialogue3 {
 	position: absolute;
-	width: 70%;
+	width: 62%;
 	height: 8%;
-	left: 20%;
-	top: 40%;
+	left: 15%;
+	top: 53%;
 
 	visibility: hidden;
 
@@ -77,6 +81,10 @@
     #page4 p{
         font-size: 1.8vw;
     }
+
+    #dialogueSuivant {
+        font-size: 1.8vw;
+    }
 }
 
 
@@ -85,7 +93,13 @@
    #page4 p{
         font-size: 3vh;
     }
+
+    #dialogueSuivant {
+        font-size: 3vh;
+    }
 }
+
+
 
 
 

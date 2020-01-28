@@ -1,4 +1,10 @@
 let initSlide4 = function(){
+	// Bruits de pas 
+	var son = document.querySelector('#audioPas');
+    son.play();
+    var dialogueSuivant = d3.select('#dialogueSuivant');
+    console.log(dialogueSuivant);
+
    d3.select('#dialogueSuivant').on('click', function(){
     	var dialogue1 = document.querySelector('#dialogue1');
     	var dialogue2 = document.querySelector('#dialogue2');
@@ -14,9 +20,9 @@ let initSlide4 = function(){
     		console.log("dialogue3");
     		dialogue2.style.visibility = "hidden";
     		dialogue3.style.visibility = "visible";
+    		$("#dialogueSuivant").hide();
     	}
     	
-
 
   });
 
