@@ -1,8 +1,8 @@
 <template>
 <div class="mainScene">
     <Background />
-    <Maison v-if="currentScene == 'house'"/>
-    <SaynetteExample v-if="currentScene == 'example'"/>
+    <Maison v-if="currentScene === Scenes.house"/>
+    <SaynetteExample v-if="currentScene == Scenes.example"/>
     
 </div>
 </template>
@@ -28,7 +28,9 @@ export default {
     }
 
   },
-  
+  data: () => ({
+    Scenes: Scenes,
+  }),
   mounted() {
     this.$store.dispatch('initScene', {sceneName: Scenes.house});
   }
