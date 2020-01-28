@@ -26,7 +26,8 @@ export default {
 
 <style scoped>
     .Saynette {
-        width: 100%;
-        height: 100%;
+        width: 50%;
+        padding-left: 20vw;
+        padding-top: 10vw;
     }
 </style>
