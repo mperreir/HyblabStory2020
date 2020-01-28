@@ -112,6 +112,7 @@
   width: 8vh;
   border-radius: calc(8vh / 2);
   color: white;
+  z-index: 1000;
 }
 #app-view #app-overlay #text-size .selected {
   background-color: #cb563e;
