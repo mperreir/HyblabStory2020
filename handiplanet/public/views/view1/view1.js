@@ -25,7 +25,8 @@ class View1 extends View {
     linkElements(){
         this.btNext = document.getElementById('view-1-next-button');
         this.btNext.addEventListener('click', ()=>{
-            this.btNext.style.display = 'none';
+            this.btNext.style.transition = 'right 1s';
+            this.btNext.style.right = '-100%';
             this.switchToView2();
         });
 
