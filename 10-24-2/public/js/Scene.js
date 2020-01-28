@@ -2,9 +2,11 @@
 
 class Scene {
 
-  constructor (name,next) {
-    this.name = name;
-    this.layers = new Animation()[];
+  constructor (name_scene, name_histoire,next) {
+    this.name_scene = name_scene;
+    this.name_histoire = name_histoire;
+    // layers is an array of Animation
+    this.layers = new Array();
     this.choices = new Choice();
     this.default_next_scene = next;
   }
@@ -19,7 +21,12 @@ class Scene {
   }
 
   auto_add_element () {
-    
+    let i = 0;
+    while (this.layers.push(new Animation("../img/" + this.name_histoire + "/" + this.name_scene))) {
+      i++;
+    }
+    return false;
+    // Done importing
   }
 
   // Displaying

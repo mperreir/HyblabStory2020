@@ -13,6 +13,8 @@ class Choice {
   // DISPLAY -------------------------------------------------------------------
 
   display () {
+
+      noFill();
       for (let i = 0 ; i < this.choices.length ; i++) {
         rect( bm,           // top left x coordinate
               h-(i+1.5)*bh,       // top left y coordinate
