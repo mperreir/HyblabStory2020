@@ -1,19 +1,24 @@
 <template>
 <div class="Saynette">
     <Background />
+    <MaisonSVG />
 </div>
 </template>
 
 <script>
 import Saynette from '../Saynette';
+import MaisonSVG from "@/assets/Sans titre - 2.svg";
 
 export default {
-    name: "SaynetteExample",
+    components: {
+        MaisonSVG
+    },
+    name: "Maison",
     extends: Saynette,
 
     methods: {
         arrive() {
-            console.log("ok nouvelle saynette !");
+            console.log("ok nouvelle saynette : Maison !");
         }
     },
 };
