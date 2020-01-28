@@ -1,20 +1,19 @@
 <template>
 <div class="saynette">
-    <BGSVG class="bg"/>
-    <MaisonSVG class="house"/>
+    <BgSVG class="svg-scene"/>
+    <MaisonSVG class="svg-scene house"/>
 </div>
 </template>
 
 <script>
 import Saynette from '../Saynette';
-// import MaisonSVG from "@/assets/mason2.svg";
-import MaisonSVG from "@/assets/Sans titre - 2.svg";
-import BGSVG from "@/assets/bg-house.svg";
+import MaisonSVG from "@/assets/house.svg";
+import BgSVG from "@/assets/bg-house.svg";
 
 export default {
     components: {
         MaisonSVG,
-        BGSVG
+        BgSVG
     },
     name: "Maison",
     extends: Saynette,
@@ -29,9 +28,6 @@ export default {
 
 <style scoped>
 .saynette {
-    /* top: 25%;
-    left: 20%; */
-    /* width: 100vw; */
     display: inline-block;
     position: relative;
     width: 100vw;
@@ -39,25 +35,12 @@ export default {
     overflow: hidden;
 }
 
-.bg {
-    /* position: absolute; */
+.house {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-}
-
-.house {
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh; */
-    position: absolute;
-    top: 40vh;
-    left: 28vw;
-    width: 53%;
-    height: 38%;
 }
 
 .text {
