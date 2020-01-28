@@ -3,7 +3,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+#next10{
+  position: absolute;
+  left:5%;
+}
 #image_salon_petit{
   position: absolute;
   top:10%;
