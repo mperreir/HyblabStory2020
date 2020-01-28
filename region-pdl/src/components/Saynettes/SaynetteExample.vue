@@ -8,6 +8,7 @@
 import Saynette from '../Saynette';
 
 export default {
+    // This is an example of a saynette
     name: "SaynetteExample",
     extends: Saynette,
 

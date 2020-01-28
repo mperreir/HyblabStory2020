@@ -1,9 +1,7 @@
 <template>
 <div class="Saynette">
-    <div>
-        <MaisonSVG ref="houseSVG" :class="classObject"/>
-    </div>
-    
+    <MaisonSVG />
+    <p class="text">Ma maison</p>
 </div>
 </template>
 
@@ -40,8 +38,18 @@ export default {
 </script>
 
 <style scoped>
-    .Saynette {
-        width: 100%;
-        height: 100%;
-    }
+.Saynette {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 50%;
+}
+.text {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 50%;
+    color: red;
+    font-size: 3vw;
+}
 </style>
