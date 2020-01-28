@@ -2,6 +2,8 @@
 
 class Animation extends Interactable {
 
+  // CONSTRUCTOR ---------------------------------------------------------------
+
   constructor (path) {
     this.path = path;
     this.images = new Array();
@@ -9,6 +11,8 @@ class Animation extends Interactable {
 
     auto_add_image();
   }
+
+  // ADDING NEW ELEMENTS -------------------------------------------------------
 
   add_image (image_path) {
     // Images should all be the same size : 1080x720
@@ -23,6 +27,8 @@ class Animation extends Interactable {
     // Done importing
   }
 
+  // DISPLAYING ----------------------------------------------------------------
+
   display(time) {
     if (images.length == 0) {
       rect(iwm,ihm,iw,ih);
@@ -30,6 +36,8 @@ class Animation extends Interactable {
       image(images[time%images.length], iwm, ihm);
     }
   }
+
+  // INTERACTING ---------------------------------------------------------------
 
   interact() {
 

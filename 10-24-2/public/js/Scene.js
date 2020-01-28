@@ -49,13 +49,15 @@ class Scene {
 
   // DISPLAYING ----------------------------------------------------------------
 
-
+  display () {
+    for (i)
+  }
 
   // UPDATING ------------------------------------------------------------------
 
   update () {
     this.time++;
-    forEach((layers, inter) => {
+    forEach((this.layers, inter) => {
       inter.interaction();
     });
 
