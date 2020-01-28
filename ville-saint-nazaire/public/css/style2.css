@@ -1,0 +1,21 @@
+#page2{
+    background-image: url(../img/Bombardement.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#texteBombardement{
+    position: absolute;
+    width:65%;
+    height:12%;
+    background-color: #C4C4C4;
+    right:5%;
+    bottom: 5%;
+    padding : 0.5%
+}
+
+#texteBombardement p{
+    font-family:"Parisienne";
+    color:black;
+    font-size: 3vh;
+    text-align: justify;
+}
