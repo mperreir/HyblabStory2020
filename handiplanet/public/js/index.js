@@ -3,3 +3,5 @@
  * Author: Christophe SONNEVILLE
  * Copyright - 2020 Christophe SONNEVILLE
  */
+
+loadTemplate('view1');
