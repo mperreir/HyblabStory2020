@@ -1,0 +1,1 @@
+class View10 extends View {}
