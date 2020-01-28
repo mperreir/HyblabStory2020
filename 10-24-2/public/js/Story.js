@@ -3,7 +3,7 @@
 
 class Story {
 
-  Story () {
+  constructor () {
     this.scenes = new Array();
     this.current_scene = 0;
   }

@@ -2,12 +2,12 @@
 
 class Choice {
 
-  Choice () {
+  constructor () {
     this.choices = new Array();
   }
 
-  add_choice (text, id_next_scene) {
-    this.choices.push([text,id_next_scene]);
+  add_choice (text, id_linked_scene) {
+    this.choices.push([text,id_linked_scene]);
   }
 
   // DISPLAY -------------------------------------------------------------------

@@ -2,7 +2,7 @@
 
 class Animation {
 
-  Animation () {
+  constructor () {
     var images = new Array();
     var freq = 24;
   }
