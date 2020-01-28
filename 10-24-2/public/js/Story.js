@@ -11,4 +11,10 @@ class Story {
   add_scene (id_scene, scene) {
     this.scenes.push([id_scene, scene]);
   }
+
+  update() {
+
+    this.current_scene = this.scenes.get(this.current_scene).update();
+
+  }
 }
