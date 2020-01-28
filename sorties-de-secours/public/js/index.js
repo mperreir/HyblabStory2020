@@ -13,25 +13,25 @@ $header_top.find('a').on('click', function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['white', 'black', '#F2AE72', '#5C832F'],
+  sectionsColor: ['white', 'black', 'black', '#F2AE72', '#5C832F'],
   sectionSelector: '.vertical-scrolling',
   slideSelector: '.horizontal-scrolling',
   navigation: false,
   slidesNavigation: true,
   controlArrows: false,
-  anchors: ['home', 'choice', 'expo', 'dance'],
+  anchors: ['home', 'sound', 'choice', 'expo', 'dance'],
   menu: '#menu',
 
   afterLoad: function(anchorLink, index) {
     $header_top.css('background', 'rgba(0, 47, 77, .3)');
     $nav.css('background', 'rgba(0, 47, 77, .25)');
-    if (index == 4) {
+    if (index == 5) {
         $('#fp-nav').hide();
       }
   },
 
   onLeave: function(index, nextIndex, direction) {
-    if(index == 4) {
+    if(index == 5) {
       $('#fp-nav').show();
     }
   },

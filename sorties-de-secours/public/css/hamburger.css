@@ -23,7 +23,7 @@
 }
 
 .menuLink:hover {
-  color: tomato;
+  color: yellow;
 }
 
 
@@ -94,6 +94,7 @@
   border: 0;
   padding: 50px;
   padding-top: 125px;
+  padding-bottom: 250px;
 
   background: #232323;
   list-style-type: none;
