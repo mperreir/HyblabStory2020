@@ -1,15 +1,16 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : 10-24
 
-Sujet :
+Sujet : 
 
-Nom d'équipe :
+Nom d'équipe : Soliphonie
 
 Participants : 
 
-- Sciencescom
+- Sciencescom :
 
 - AGR :
-- Polytech :  
+
+- Polytech :  Parpaillon Thomas, Lhinarès Xavier, Crouin Yoann, Gonzalès Valentin, Quentin Gastebois
 
