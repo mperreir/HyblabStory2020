@@ -10,7 +10,7 @@
 
 body{
     background-color: black;
-    color: white;
+    color: black;
     overflow: hidden;   /* pour slidr dans certains navigateurs */
 }
 
@@ -28,9 +28,4 @@ img {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-}
-
-@font-face {
- font-family: "Caslon";
- src: url("./fonts/CaslonCP.otf");
 }

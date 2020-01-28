@@ -11,7 +11,7 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
 
-  <!-- fullPage.js 2.6.6 -->
+  <!-- fullPage.js 2.8.0 -->
   <!-- CSS v3.0.8 -->
   <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.0/vendors/scrolloverflow.min.js"></script>
@@ -23,6 +23,9 @@
   <!-- CUSTOMS -->
   <link rel="stylesheet" href="css/style.css" />
   <script type="text/javascript" src="js/index.js" defer></script>
+
+    <!-- FONTS -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nimbus-sans-l" type="text/css"/>
 
     <!-- home -->
     <link rel="stylesheet" href="css/home.css" />
@@ -42,7 +45,7 @@
 </head>
 <body>
   <!-- FULLPAGE -->
-  <div id="fullpage1">
+  <div id="fullpage">
 
     <!-- HOME -->
     <section class="vertical-scrolling">
@@ -52,23 +55,16 @@
         <span></span>
         <span></span>
         <ul id="categories">
-          <a href="#expo" class="menuLink"><li>Exposition</li></a>
-          <a href="#dance" class="menuLink"><li>Danse</li></a>
-          <a href="#music" class="menuLink"><li>Musique</li></a>
-          <a href="#about" class="menuLink"><li>A propos</li></a>
-          <a href="#contact" class="menuLink"><li>Contact</li></a>
+          <li><a href="#expo" class="menuLink">Exposition</a></li>
+          <li><a href="#dance" class="menuLink">Danse</a></li>
+          <li><a href="#music" class="menuLink">Musique</a></li>
+          <li><a href="#about" class="menuLink">A propos</a></li>
+          <li><a href="#contact" class="menuLink">Contact</a></li>
         </ul>
       </div>
-      <div id="home-wrapper">
-
-        <div id="home-logo-wrapper">
-
-          <img src='img/logo.png' id='home-logo' />
-
-        </div>
-      </div>
-      <!-- Ce sera un png -->
-      <a href="#choice"><i class="fas fa-chevron-circle-down fa-2x"></i></a>
+      <img src='img/logo_sorties_de_secours.png' id='home-logo' />
+      <img src='img/logo_experience.png' id='home-logo-experience' />
+      <a href="#presentation"><img src='img/arrow_down.png' id='arrow-down' /></a>
     </section>
     <!-- END HOME -->
 
@@ -80,6 +76,12 @@
       </div>
     </section>
     <!-- END SOUND ON -->
+
+    <!-- PRESENTATION -->
+    <section class="vertical-scrolling" id="presentation-section">
+      <h1>Présentation</h1>
+    </section>
+    <!-- END PRESENTATION -->
 
     <!-- CHOICE -->
     <section class="vertical-scrolling" id="choice-section">
@@ -135,7 +137,7 @@
     <!-- END DANCE -->
 
   </div>
-  <!-- END FULLPAGE #1-->
+  <!-- END FULLPAGE -->
 </body>
 </html>
 
