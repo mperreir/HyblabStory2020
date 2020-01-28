@@ -55,6 +55,7 @@ class Scene {
 
   update () {
     this.time++;
+    this.current_scene = this.scenes.get(this.current_scene).update();
     forEach((layers, inter) => {
       inter.interact();
     });
