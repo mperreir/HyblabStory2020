@@ -3,11 +3,11 @@
  * Author: Christophe SONNEVILLE
  * Copyright - 2020 Christophe SONNEVILLE
  */
-function loadTemplate(name) {
+function loadTemplate(name, target) {
   fetch(`/handiplanet/views/${name}/${name}.html`).then((res) => {
     return res.text();
   }).then((html) => {
-    document.getElementById('view-container').innerHTML = html;
+    target.innerHTML = html;
   }).catch((err) => {
     console.error(err);
   })
