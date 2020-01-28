@@ -1,6 +1,6 @@
 /* Displays several choices and */
 
-class Choice {
+class Choice extends Interactable{
 
   constructor () {
     this.choices = new Array();
@@ -34,7 +34,7 @@ class Choice {
 
   // INTERACTION ---------------------------------------------------------------
 
-  interaction () {
+  interact () {
     if (mouseX > bm && mouseX < (w-bm)) {
       let closest_choice = parseInt((h-mouseY)/(1.5*bh));
       if (mouseY-closest_choice*bh*1.5 > 0.5*bh) {
