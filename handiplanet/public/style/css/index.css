@@ -1,0 +1,81 @@
+/*
+ * File Created: 2020-01-27 13:18:42
+ * Author: Christophe SONNEVILLE
+ * Copyright - 2020 Christophe SONNEVILLE
+ */
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+body {
+  margin: 0px;
+}
+
+* {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.view {
+  height: 100vh;
+  width: 100vw;
+}
+
+#home-view {
+  background: linear-gradient(180deg, #628B8B 0%, #80BEA3 100%);
+  display: flex;
+  position: relative;
+}
+#home-view img {
+  margin: auto;
+  max-width: 60%;
+  max-height: 60%;
+}
+#home-view #begin-button {
+  border-radius: 12.5vw 12.5vw 0 0;
+  position: absolute;
+  bottom: 0px;
+  width: 25vw;
+  height: 12.5vw;
+  background-color: #ffffff;
+  padding: 10px;
+  margin-left: 50vw;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+#home-view #begin-button h1, #home-view #begin-button h2 {
+  margin: 0px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #5A8D8C;
+}
+#home-view #begin-button h1 {
+  font-weight: bold;
+  margin-top: auto;
+  padding-top: 20px;
+  font-size: calc(1.3vw + 1.3vh);
+}
+#home-view #begin-button h2 {
+  margin-bottom: auto;
+  font-size: calc(0.9vw + 0.9vh);
+  font-weight: lighter;
+}
+@media screen and (min-width: 1400px) {
+  #home-view #begin-button {
+    width: 300px;
+    height: 150px;
+    border-radius: 150px 150px 0 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #home-view #begin-button {
+    width: 230px;
+    height: 115px;
+    border-radius: 115px 115px 0 0;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
