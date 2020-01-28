@@ -6,6 +6,7 @@ module.exports = {
 
     publicPath: '/region-pdl/',
 
+    lintOnSave: false,
     chainWebpack: (config) => {
     const svgRule = config.module.rule('svg');
 
