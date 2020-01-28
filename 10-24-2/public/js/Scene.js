@@ -56,9 +56,12 @@ class Scene {
   update () {
     this.time++;
     forEach((layers, inter) => {
-      inter.interaction();
+      inter.interact();
     });
-
+    if(choices.interact()!=-1){
+      this.default_next_scene = choices.interact();
+    }
+    
   }
 
 
