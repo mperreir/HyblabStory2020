@@ -53,6 +53,7 @@ a {
   border-radius: 12.5vw 12.5vw 0 0;
   position: absolute;
   bottom: 0px;
+  cursor: pointer;
   width: 25vw;
   height: 12.5vw;
   background-color: #ffffff;

@@ -6,18 +6,19 @@ class View1 extends View {
         .then(()=>{
             this.view = document.getElementById(this.viewName);
             this.linkElements();
-            this.nextView = new View2();
         });
     }
 
     
-    switchToView2(){
+    async switchToView2(){
+        const nextView = new View2();
+        await nextView.load();
         this.view.style.transition = 'transform 1s';
-        this.nextView.tempDiv.style.transition = `transform 1s`;
+        nextView.tempDiv.style.transition = `transform 1s`;
         this.view.style.transform = `translateY(-100%)`;
-        this.nextView.tempDiv.style.transform = `translateY(-100%)`;
+        nextView.tempDiv.style.transform = `translateY(-100%)`;
         setTimeout(() => {
-            this.nextView.tempDiv.replaceWith = this.nextView.view;
+            nextView.tempDiv.replaceWith = nextView.view;
         }, 1000);
     }
 
