@@ -14,6 +14,6 @@ let initSlide2 = function(){
       initSlide3();
     });
 
-    setTimeout(next3, 16000);
+    //setTimeout(next3, 16000);
 
 }

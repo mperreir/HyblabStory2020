@@ -27,7 +27,7 @@ let initSlide4 = function(){
   });
 
   d3.select('#next5').on('click', function(){
-  	console.log('Ici');
+  	son.pause();
     mySlidr.slide('page-5');
     initSlide5();
   });
