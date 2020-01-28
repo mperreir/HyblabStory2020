@@ -39,7 +39,7 @@ function init_story_bullying() {
   var story_bullying = new Story();
 
   var scene1 = new Scene(story, "enfant_s_enferme", 2);
-  
+
 
   var choice1 = new Choice();
   choice1.add_choice("aller_voir",2);
@@ -63,7 +63,7 @@ function init_story_bullying() {
   var scene6 = new Scene(story, "insister_encore", 7);
   var scene7 = new Scene(story, "fin", 0);
   var scene_retour_choix_porte = new Scene(story, "retour_choix_porte", 0);
-  
+
   story_bullying.add_scene(1, scene1);
   story_bullying.add_scene(2, scene2);
   story_bullying.add_scene(3, scene3);
@@ -89,7 +89,7 @@ function init_story_screens() {
 
   var scene1 = new Scene(story, "bruits_chambre", 2);
 
-  
+
   var choice1 = new Choice();
   choice1.add_choice("aller_voir",2);
   choice1.add_choice("cest_son_cote_creatif",2);
@@ -102,19 +102,19 @@ function init_story_screens() {
   var scene5 = new Scene(story, "il_est_23h", 6);
 
 
-  var choice2 = new Choice();
+  var slider = new Slider();
   // Ajouter un slider pour définir la plage horaire
 
 
   var scene7 = new Scene(story, "mauvaise_reponse", 6);
   var scene8 = new Scene(story, "bonne_reponse", 9);
   var scene6 = new Scene(story, "choix_plage_horaire", 6);
-  scene6.add_choice(choice2);
+  scene6.new_top_layer(slider);
   var scene9 = new Screen(story, "informations_techniques", 10);
   var scene10 = new Screen(story, "fin", 0);
   var scene_retour_choix_porte = new Scene(story, "retour_choix_porte", 0);
-  
-  story_screens.add_scene(1, scene1); 
+
+  story_screens.add_scene(1, scene1);
   story_screens.add_scene(2, scene2);
   story_screens.add_scene(3, scene3);
   story_screens.add_scene(4, scene4);
@@ -138,16 +138,16 @@ function init_story_puberty() {
 
     var story_puberty_choice = new Story();
 
-    
+
     var choice1 = new Choice();
     choice1.add_choice("garcon",2);
     choice1.add_choice("fille",2);
-    
+
 
     var scene = new Scene(story, "choix_du_sexe", 1);
     scene.add_choice(choice1);
     var scene_retour_choix_porte = new Scene(story, "retour_choix_porte", 0);
-    
+
     story_puberty_choice.add_scene(1, scene);
     story_puberty_choice.add_scene(0, scene_retour_choix_porte);
 
@@ -164,7 +164,7 @@ function init_story_pubertyF() {
 
     var scene1 = new Scene(story, "montre_la_culotte", 1);
 
-    
+
     var choice3 = new Choice();
     choice3.add_choice("faire_courses",2);
     choice3.add_choice("expliquer_situation",2);
@@ -173,7 +173,7 @@ function init_story_pubertyF() {
     var scene2 = new Scene(story, "faire_les_courses", 3);
     scene2.add_choice(choice3);
     var scene3 = new Scene(story, "je_communique_ecouter 10_24", 4);
-    
+
 
     var choice4 = new Choice();
     choice4.add_choice("serviettes",2);
@@ -214,7 +214,7 @@ function init_story_pubertyM() {
     var scene2 = new Scene(story, "tu_es_enrhume", 3);
     var scene3 = new Scene(story, "AH", 4);
 
-    
+
     var choice2 = new Choice();
     choice2.add_choice("public",2);
     choice2.add_choice("prive",2);
@@ -228,7 +228,7 @@ function init_story_pubertyM() {
     var scene7 = new Screen(story, "parler_devant_tout_le_monde", 8);
     var scene8 = new Scene(story, "temoignage_fin", 0);
     var scene_retour_choix_porte = new Scene(story, "retour_choix_porte", 0);
-    
+
     story_pubertyM.add_scene(1, scene1);
     story_pubertyM.add_scene(2, scene2);
     story_pubertyM.add_scene(3, scene3);

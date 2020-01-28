@@ -55,6 +55,10 @@ class Scene {
 
   update () {
     this.time++;
+    forEach((layers, inter) => {
+      inter.interaction();
+    });
+
   }
 
 
