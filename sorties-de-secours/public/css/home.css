@@ -1,27 +1,22 @@
 #home-logo {
-	position: absolute;
-	width: 431.69px;
-	height: 149.2px;
-	top: 27%;
-	left: 35%;
-	right: 35%;
-	bottom: 27%;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 #home-logo-experience {
-	position: absolute;
-	width: 900px;
-	height: 300px;
-	top: 35%;
-	left: 17%;
-	right: 17%;
-	bottom: 35%;
+	position: fixed;
+	top: 53%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 #arrow-down {
-	position: absolute;
-	left: 50%;
+	position: fixed;
 	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	opacity: 1;
 	width: 50px;
 	height: 50px;
@@ -30,5 +25,5 @@
 }
 
 #arrow-down:hover {
-	opacity: 0.7;
+	opacity: 0.5;
 }
