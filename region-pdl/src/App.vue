@@ -5,7 +5,7 @@
 </template>
 
 <style>
-* {
+/* * {
   margin: 0;
   padding: 0;
 }
@@ -63,5 +63,5 @@
 
 .cream {
   color: #fcf8ef;
-}
+} */
 </style>
