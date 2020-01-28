@@ -1,6 +1,11 @@
 /* ------- Important ! Regardez bien à la fin de ce CSS pour des règles permettant de ----------- */
 /* contraindre le format des slides affichés sur la page web */
 
+@font-face {
+ font-family: "Parisienne";
+ src: url("../fonts/parisienne-regular.ttf");
+}
+
 
 /* normalisation des marges et padding pour simplifier le positionnement des éléments */
 *{
@@ -20,7 +25,6 @@ body{
 
 /* on fait en sorte que le slidr et les slides remplissent tout notre conteneur */
 #slidr, #slidr section{
-    background-color: black;
     width: 100%;
     height: 100%;
 }
