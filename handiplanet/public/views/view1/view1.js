@@ -23,11 +23,34 @@ class View1 extends View {
     }
 
     linkElements(){
+        // Button to next view
         this.btNext = document.getElementById('view-1-next-button');
         this.btNext.addEventListener('click', ()=>{
             this.btNext.style.transition = 'right 1s';
             this.btNext.style.right = '-100%';
             this.switchToView2();
+        });
+
+        // Background elements
+        this.hotel = document.getElementById('view-1-hotel-img');
+        this.luggage = document.getElementById('view-1-luggage-img');
+
+        // Parallax for background elements
+        const vc = document.getElementById('view-container');
+        vc.addEventListener('mousemove', (e)=>{
+            var relX = e.pageX - vc.offsetLeft;
+            var relY = e.pageY - vc.offsetTop;
+
+            TweenMax.to(this.hotel, 1, {
+                x: (relX - vc.offsetWidth/2) / vc.offsetWidth * -50,
+                y: (relY - vc.offsetHeight/2) / vc.offsetHeight * -50,
+                ease: Power2.easeOut
+            })
+            TweenMax.to(this.luggage, 1, {
+                x: (relX - vc.offsetWidth/2) / vc.offsetWidth * -50,
+                y: (relY - vc.offsetHeight/2) / vc.offsetHeight * -50,
+                ease: Power2.easeOut
+            })
         });
 
         // Switch color of character
