@@ -267,7 +267,7 @@ function init_story_laziness() {
     scene5.add_choice(choice1);
     var scene6 = new Scene(story, "refus_2", 7);
     var scene7 = new Scene(story, "proposition_3", 8);
-    scene5.add_choice(choice1);
+    scene7.add_choice(choice1);
 
 
     var choice2 = new Choice();
