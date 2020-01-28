@@ -36,8 +36,8 @@
 	position: absolute;
 	width: 55%;
 	height: 10%;
-	left: 35%;
-	top: 50%;
+	left: 40%;
+	top: 10%;
 
 }
 
@@ -45,8 +45,8 @@
 	position: absolute;
 	width: 55%;
 	height: 13%;
-	left: 15%;
-	top: 20%;
+	left: 30%;
+	top: 35%;
 
 	visibility: hidden;
 	background-color: #C4C4C4;
@@ -58,8 +58,8 @@
 	position: absolute;
 	width: 70%;
 	height: 8%;
-	left: 20%;
-	top: 40%;
+	left: 18%;
+	top: 53%;
 
 	visibility: hidden;
 
