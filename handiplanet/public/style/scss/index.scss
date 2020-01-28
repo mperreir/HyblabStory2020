@@ -29,6 +29,11 @@ button{
   cursor: pointer;
 }
 
+a{
+  text-decoration: none;
+  color: #5A8D8C;
+}
+
 #home-view{
   background: linear-gradient(180deg, #628B8B 0%, #80BEA3 100%);
   display: flex;

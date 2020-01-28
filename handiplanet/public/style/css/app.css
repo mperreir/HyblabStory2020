@@ -42,6 +42,9 @@
   margin-right: 0px;
   border-radius: 20px;
 }
+#app-view #app-overlay header ul li:last-of-type a {
+  color: #ffffff;
+}
 #app-view #first-view {
   height: 100vh;
   width: 100vw;
