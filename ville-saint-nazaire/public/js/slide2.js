@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 let initSlide2 = function(){
 
     var son = document.querySelector('#audioBombardement');
