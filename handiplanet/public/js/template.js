@@ -3,12 +3,16 @@
  * Author: Christophe SONNEVILLE
  * Copyright - 2020 Christophe SONNEVILLE
  */
-function loadTemplate(name) {
-  fetch(`/handiplanet/views/${name}/${name}.html`).then((res) => {
-    return res.text();
-  }).then((html) => {
-    document.getElementById('view-container').innerHTML = html;
-  }).catch((err) => {
-    console.error(err);
-  })
+function loadTemplate(name, target) {
+  return new Promise((resolve,reject) => {
+    fetch(`/handiplanet/views/${name}/${name}.html`).then((res) => {
+      return res.text();
+    }).then((html) => {
+      target.innerHTML = html;
+      resolve();
+    }).catch((err) => {
+      console.error(err);
+      reject(err);
+    });
+  });
 }

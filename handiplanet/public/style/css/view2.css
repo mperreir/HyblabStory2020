@@ -1,0 +1,44 @@
+/*
+ * File Created: 2020-01-28 13:52:00
+ * Author: Pierre MAUPIN
+ * Copyright - 2020 Pierre MAUPIN
+ */
+#second-view {
+  height: 100vh;
+  width: 100vw;
+}
+#second-view #decor-view-2 {
+  height: 80vh;
+  width: 90vw;
+  position: absolute;
+  left: 5vw;
+  bottom: 10vh;
+}
+#second-view #decor-view-2 p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #426262;
+}
+#second-view #decor-view-2 #speech em {
+  font-weight: bold;
+  color: #CB563E;
+}
+#second-view #decor-view-2 img {
+  position: absolute;
+}
+#second-view #decor-view-2 #ordi-view-2 {
+  left: 15vw;
+  max-width: 50vw;
+  bottom: 0px;
+  z-index: 1;
+}
+#second-view #decor-view-2 #fond-view-2 {
+  height: 100%;
+  margin-left: 10vw;
+  text-align: left;
+}
+
+/*# sourceMappingURL=view2.css.map */
