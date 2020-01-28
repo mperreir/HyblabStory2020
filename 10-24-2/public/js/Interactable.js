@@ -4,7 +4,7 @@ class Interactable {
 
   }
 
-  interaction () {
+  interact () {
     
   }
 
