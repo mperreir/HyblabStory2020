@@ -2,15 +2,14 @@
 
 Porteur de projet : 10-24
 
-Sujet : 
+Sujet : ados - parents
 
 Nom d'équipe : Soliphonie
 
-Participants : 
+Participants : Pascal Couffin
 
-- Sciencescom :
+- Sciencescom : Margaux Corvaisier-Hamelin, Guirec Feuvrier
 
-- AGR :
+- AGR : Cécile Castan, Lucas Roux
 
-- Polytech :  Parpaillon Thomas, Lhinarès Xavier, Crouin Yoann, Gonzalès Valentin, Quentin Gastebois
-
+- Polytech : Parpaillon Thomas, Lhinarès Xavier, Crouin Yoann, Gonzalès Valentin, Quentin Gastebois
