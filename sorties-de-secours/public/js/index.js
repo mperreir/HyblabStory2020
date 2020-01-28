@@ -35,6 +35,7 @@ $('#fullpage').fullpage({
     if(index == 6) {
       $('#fp-nav').show();
     }
+    $.fn.fullpage.setScrollingSpeed(1000);
   },
 
   afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex) {
