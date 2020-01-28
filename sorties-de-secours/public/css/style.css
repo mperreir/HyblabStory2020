@@ -10,7 +10,7 @@
 
 body{
     background-color: black;
-    color: white;
+    color: black;
     overflow: hidden;   /* pour slidr dans certains navigateurs */
 }
 
@@ -22,7 +22,7 @@ body{
 
 /* image not draggable */
 img {
-    user-drag: none; 
+    user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;

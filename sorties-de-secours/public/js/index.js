@@ -6,32 +6,33 @@
 var $header_top = $('.header-top');
 var $nav = $('nav');
 
-// toggle menu 
+// toggle menu
 $header_top.find('a').on('click', function() {
   $(this).parent().toggleClass('open-menu');
 });
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#B8AE9C', '#000000', '#F2AE72', '#f0f0f0', '#f0f0f0'],
+  sectionsColor: ['white', 'black', 'white', 'black', '#F2AE72', '#5C832F', 'black'],
   sectionSelector: '.vertical-scrolling',
   slideSelector: '.horizontal-scrolling',
   navigation: false,
   slidesNavigation: true,
   controlArrows: false,
-  anchors: ['home', 'loading', 'thirdSection', 'expo', 'dance'],
+  scrollOverflow:true,
+  anchors: ['home', 'loading', 'presentation', 'choice', 'expo', 'dance'],
   menu: '#menu',
 
   afterLoad: function(anchorLink, index) {
     $header_top.css('background', 'rgba(0, 47, 77, .3)');
     $nav.css('background', 'rgba(0, 47, 77, .25)');
-    if (index == 5) {
+    if (index == 6) {
         $('#fp-nav').hide();
       }
   },
 
   onLeave: function(index, nextIndex, direction) {
-    if(index == 5) {
+    if(index == 6) {
       $('#fp-nav').show();
     }
   },
@@ -60,7 +61,7 @@ $('#fullpage').fullpage({
       $header_top.css('background', 'rgba(0, 47, 77, .3)');
       $nav.css('background', 'rgba(0, 47, 77, .25)');
     }
-  } 
+  }
 });
 /* =============================
     END FULLPAGE INITIALISATION
