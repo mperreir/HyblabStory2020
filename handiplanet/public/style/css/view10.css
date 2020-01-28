@@ -5,10 +5,22 @@
   height: 100vh;
   width: 100vw;
 }
-#view10 #graph {
+#view10 #graph_container {
+  position: relative;
+  margin: 0% 0% 0 10%;
+}
+#view10 #graph_container #graph {
   height: 100%;
-  margin: 0% 5% 0 20%;
-  width: 40%;
+  width: 100%;
+  min-width: 100%;
+}
+#view10 #graph_container #graph_title {
+  position: absolute;
+  right: 0;
+  bottom: 55%;
+  font-size: 30px;
+  max-width: 20%;
+  margin: 0;
 }
 #view10 #data {
   position: absolute;
