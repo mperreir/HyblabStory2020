@@ -36,14 +36,52 @@
 }
 
 
+
 p{
-    position: absolute;
     font-family:"Parisienne";
     color:black;
-    font-size: 5vh;
     text-align: justify;
+
 }
 
+
+
+#ecume{
+ 
+ 	position: absolute;
+    left:7%;
+    top: 75%;
+
+}
+
+#brise{
+	position: absolute;
+    left:38%;
+    top: 75%;
+}
+
+#rive{
+	position: absolute;
+    right:9%;
+    top: 75%;
+}
+
+
+@media screen and (max-aspect-ratio: 16/9){
+    p{
+        font-size: 3vw;
+    }
+}
+@media screen and (min-aspect-ratio: 16/9){
+    p{
+        font-size: 5vh;
+    }
+}
+
+
+
+
+/*
 #ecume{
     left:7%;
     top:75%;
@@ -57,5 +95,5 @@ p{
 #rive{
     right:9%;
     top:75%;
-}
+}*/
 
