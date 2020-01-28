@@ -22,8 +22,16 @@ function init_story_intro () {
 
   var story1 = new Story();
   // SCENE 1 --------------------------------------------------
-  var scene1 = new Scene(story, "scene_horloge", 2); // "intro" is the story used to start the other stories
+  var scene1 = new Scene(story, "scene_4_portes", 2); // "intro" is the story used to start the other stories
   story1.add_scene(1, scene1);
+  var choice_portes = new Choice();
+  choice_portes.add_choice("Harcelement",2);
+  choice_portes.add_choice("Flemmardise",3);
+  choice_portes.add_choice("Ecrans",4);
+  choice_portes.add_choice("Puberte",5);
+
+  //selectionner le script en fonction du choix fait et lancer le init_story associé
+
   // SCENE 2 --------------------------------------------------
   /*var scene2 = new Scene(2);
   story2.add_scene(2, scene2);*/
@@ -40,28 +48,28 @@ function init_story_bullying() {
 
   var scene1 = new Scene(story, "enfant_s_enferme", 2);
 
-
   var choice1 = new Choice();
   choice1.add_choice("aller_voir",2);
   choice1.add_choice("on_a_tous_des_mauvais_jours",2);
   // Peut être créer une scène intermédiare entre le fait de ne pas y aller
 
-
   var scene2 = new Scene(story, "choix_1_aller_le_voir", 3);
   scene2.add_choice(choice1);
   var scene3 = new Scene(story, "tu_es_sur", 4);
-
 
   var choice2 = new Choice();
   choice2.add_choice("non_ca_ne_va_pas",4);
   choice2.add_choice("je_te_laisse_tranquille",4);
 
-
   var scene4 = new Scene(story, "choix_2_insister", 5);
   scene4.add_choice(choice2);
+
   var scene5 = new Scene(story, "flashback", 6);
+
   var scene6 = new Scene(story, "insister_encore", 7);
+
   var scene7 = new Scene(story, "fin", 0);
+
   var scene_retour_choix_porte = new Scene(story, "retour_choix_porte", 0);
 
   story_bullying.add_scene(1, scene1);

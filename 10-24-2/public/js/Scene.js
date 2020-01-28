@@ -8,6 +8,7 @@ class Scene {
     this.name_scene = name_scene;
     this.name_histoire = name_histoire;
     this.default_next_scene = next;
+    this.actual_next_scene;
 
     // Variables related to the inside
     this.layers = new Array();            // layers is an array of Interactable, essentiellement des animations
@@ -19,6 +20,17 @@ class Scene {
       auto_add_element();
     }
   }
+
+
+  // Obtain the number of the next scene
+
+  get_next (){
+    return default_next_scene;
+  }
+
+
+  // Confirm the next scene via les
+
 
   // ADDING NEW ELEMENTS -------------------------------------------------------
 
@@ -57,9 +69,13 @@ class Scene {
 
   update () {
     this.time++;
-    forEach((this.layers, inter) => {
-      inter.interaction();
+    this.current_scene = this.scenes.get(this.current_scene).update();
+    forEach((layers, inter) => {
+      inter.interact();
     });
+    if(choices.interact()!=-1){
+      this.default_next_scene = choices.interact();
+    }
 
   }
 
