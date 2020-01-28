@@ -1,14 +1,16 @@
 #dance-wrapper {
-	height: 1000px;
+	height: 10000px;
 	width: 100%;
 }
 
 #img-dancers {
+	width: 100%;
 	position: absolute;
 	z-index: 1;
 }
 
 #img-dancers-annotations {
+	width: 100%;
 	position: absolute;
 	z-index: 2;
 	opacity: 0;
