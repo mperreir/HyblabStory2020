@@ -7,6 +7,7 @@
 
 <script>
 import Saynette from '../Saynette';
+// import MaisonSVG from "@/assets/mason2.svg";
 import MaisonSVG from "@/assets/Sans titre - 2.svg";
 import BGSVG from "@/assets/bg-house.svg";
 
@@ -47,6 +48,11 @@ export default {
 }
 
 .house {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; */
     position: absolute;
     top: 40vh;
     left: 28vw;
