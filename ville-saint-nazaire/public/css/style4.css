@@ -7,10 +7,14 @@
 
 #img-journaliste {
 
-
 }
 
 #img-architecte {
+	position: absolute;
+	width : 15%;
+	height : 30%;
+	top : 70%;
+	left : 70%;
 
 }
 
@@ -22,7 +26,6 @@
     font-family: Parisienne;
     font-style: normal;
 	font-weight: normal;
-	line-height: 49px;
 	background-color: #C4C4C4;
 	padding: 2%;
 }
@@ -32,9 +35,9 @@
 #container-dialogue1 {
 	position: absolute;
 	width: 55%;
-	height: 20%;
+	height: 10%;
 	left: 35%;
-	top: 60%;
+	top: 50%;
 
 }
 
@@ -77,6 +80,10 @@
     #page4 p{
         font-size: 1.8vw;
     }
+
+    #dialogueSuivant {
+        font-size: 1.8vw;
+    }
 }
 
 
@@ -85,7 +92,13 @@
    #page4 p{
         font-size: 3vh;
     }
+
+    #dialogueSuivant {
+        font-size: 3vh;
+    }
 }
+
+
 
 
 
