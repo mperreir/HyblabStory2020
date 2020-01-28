@@ -13,6 +13,7 @@ import { mapState } from 'vuex';
 import Background from "@/components/Background.vue";
 import Maison from "@/components/Saynettes/Maison.vue";
 import SaynetteExample from "@/components/Saynettes/SaynetteExample";
+import { Scenes } from "@/utils/scenes.js";
 
 export default {
   name: "views",
@@ -29,7 +30,7 @@ export default {
   },
   
   mounted() {
-    this.$store.dispatch('initScene', {sceneName: "house"});
+    this.$store.dispatch('initScene', {sceneName: Scenes.house});
   }
 };
 </script>
