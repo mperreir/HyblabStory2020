@@ -23,6 +23,6 @@ export default {
 <style scoped>
     .Saynette {
         width: 100%;
-        height: 100%
+        height: 100%;
     }
 </style>
