@@ -37,6 +37,7 @@ a {
   background: linear-gradient(180deg, #628B8B 0%, #80BEA3 100%);
   display: flex;
   position: relative;
+  z-index: 1000;
 }
 #home-view img {
   margin: auto;

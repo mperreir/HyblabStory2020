@@ -1,3 +1,4 @@
+
 class View1 extends View {
     constructor(){
         super('view1', document.getElementById('view-container'));
@@ -11,13 +12,19 @@ class View1 extends View {
 
     
     switchToView2(){
-        
+        this.view.style.transition = 'transform 1s';
+        this.nextView.tempDiv.style.transition = `transform 1s`;
+        this.view.style.transform = `translateY(-100%)`;
+        this.nextView.tempDiv.style.transform = `translateY(-100%)`;
+        setTimeout(() => {
+            this.nextView.tempDiv.replaceWith = this.nextView.view;
+        }, 1000);
     }
 
     linkElements(){
         this.btNext = document.getElementById('view-1-next-button');
         this.btNext.addEventListener('click', ()=>{
-            console.log('Hey c\'est Wendy');
+            this.switchToView2();
         });
     }
 }

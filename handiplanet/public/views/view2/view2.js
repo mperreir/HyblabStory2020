@@ -1,9 +1,12 @@
+
 class View2 extends View {
     constructor(){
         const tempDiv = document.createElement('div');
+        document.getElementById('view-container').appendChild(tempDiv);
         tempDiv.setAttribute("id", "tempDiv");
+        tempDiv.style.position = "absolute";
         tempDiv.style.top = '100%';
-        super('view1', tempDiv);
+        super('view2', tempDiv);
         this.load()
         .then(()=>{
             this.tempDiv = tempDiv;
