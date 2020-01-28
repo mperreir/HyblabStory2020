@@ -1,0 +1,94 @@
+#page4 {
+	background-image: url("../img/fond_HDV_constrcution.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+#img-journaliste {
+
+
+}
+
+#img-architecte {
+
+}
+
+#page4 p {
+	z-index: 200;
+	color : black;
+    text-align : center;
+    text-align: justify;
+    font-family: Parisienne;
+    font-style: normal;
+	font-weight: normal;
+	line-height: 49px;
+	background-color: #C4C4C4;
+	padding: 2%;
+}
+
+
+
+#container-dialogue1 {
+	position: absolute;
+	width: 55%;
+	height: 20%;
+	left: 35%;
+	top: 60%;
+
+}
+
+#container-dialogue2 {
+	position: absolute;
+	width: 55%;
+	height: 13%;
+	left: 15%;
+	top: 20%;
+
+	visibility: hidden;
+	background-color: #C4C4C4;
+
+}
+
+
+#container-dialogue3 {
+	position: absolute;
+	width: 70%;
+	height: 8%;
+	left: 20%;
+	top: 40%;
+
+	visibility: hidden;
+
+
+}
+
+#dialogueSuivant {
+	position: absolute;
+	width: 10%;
+	height: 5%;
+	left: 45%;
+	top: 90%;
+
+}
+
+@media screen and (max-aspect-ratio: 16/9){
+   
+    #page4 p{
+        font-size: 1.8vw;
+    }
+}
+
+
+@media screen and (min-aspect-ratio: 16/9){
+    
+   #page4 p{
+        font-size: 3vh;
+    }
+}
+
+
+
+
+
+
