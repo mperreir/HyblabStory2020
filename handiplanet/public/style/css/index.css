@@ -20,6 +20,14 @@ body {
   width: 100vw;
 }
 
+button {
+  border: none;
+  background: none;
+  outline: none;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
 #home-view {
   background: linear-gradient(180deg, #628B8B 0%, #80BEA3 100%);
   display: flex;

@@ -8,15 +8,15 @@ Nom d'équipe : HandiGo
 
 Participants : 
 
-- Sciencescom   Clément Godet
-                Jean Pechère
+- Sciencescom   * Clément Godet
+                * Jean Pechère
 
-- AGR :         Maéva Pasquier
-                Benoit Frehel
+- AGR :         * Maéva Pasquier
+                * Benoit Frehel
 
-- Polytech :    Pierre Le Guen
-                Alban Lecuivre
-                Christophe Sonneville
-                Eric Bizet
-                Pierre Maupin
+- Polytech :    * Pierre Le Guen
+                * Alban Lecuivre
+                * Christophe Sonneville
+                * Eric Bizet
+                * Pierre Maupin
 
