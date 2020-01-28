@@ -54,8 +54,8 @@ $(document).ready(function() {
     });
 
     radial_gradients = radial_gradients.substring(0, radial_gradients.length - 2); // remove last ','
-    console.log(radial_gradients);
-    console.log(node);
+    // console.log(radial_gradients);
+    // console.log(node);
     node.style.background = radial_gradients;
   }
 

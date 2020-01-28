@@ -16,6 +16,9 @@
   <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 
+  <!-- Konva -->
+  <script src="https://unpkg.com/konva@4.0.0/konva.min.js"></script>
+
   <!-- CUSTOMS -->
   <link rel="stylesheet" href="css/style.css" />
   <script type="text/javascript" src="js/index.js" defer></script>
@@ -71,22 +74,29 @@
       class="vertical-scrolling"
       id="expo-section">
 
+      <!-- v1 -->
       <!-- Image on top -->
-      <img
+      <!--<img
         src='img/expo-cover.png'
         class='expo-img' />
       <!-- Image to discover -->
-      <img
+      <!--<img
         src='img/expo-discover.png'
         class='expo-img discover' />
 
       <!-- display discovered area -->
-      <svg width="100" heigth="100">
+      <!--<svg width="100" heigth="100">
         <defs>
           <clipPath id="expo-clip">
           </clipPath>
         </defs>
-      </svg>
+      </svg>-->
+
+
+      <!-- v2 -->
+      <div id="expo-konva">
+
+      </div>
 
     </section>
     <!-- END EXPO -->
