@@ -2,11 +2,11 @@
 
 class Scene {
 
-  Scene (name,next) {
-    var this.name = name;
-    var this.layers = new Animation()[];
-    var this.choices = new Choice();
-    var this.default_next_scene = next;
+  constructor (name,next) {
+    this.name = name;
+    this.layers = new Animation()[];
+    this.choices = new Choice();
+    this.default_next_scene = next;
   }
 
   // Adding elements
