@@ -4,7 +4,7 @@
  * Copyright - 2020 Christophe SONNEVILLE
  */
 
-loadTemplate('view1');
+loadTemplate('view10');
 
 window.scrollTo(0,0);
 
