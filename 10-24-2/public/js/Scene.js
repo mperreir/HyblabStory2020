@@ -2,7 +2,7 @@
 
 class Scene {
 
-  constructor (name_scene, name_histoire,next) {
+  constructor (name_histoire, name_scene, next) {
     this.name_scene = name_scene;
     this.name_histoire = name_histoire;
     // layers is an array of Animation
