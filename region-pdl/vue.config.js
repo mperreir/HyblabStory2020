@@ -4,5 +4,6 @@ module.exports = {
         // assetsPublicPath: '/region-pdl/'
     // }
 
-    publicPath: '/region-pdl/'
+    publicPath: '/region-pdl/',
+    lintOnSave: false,
 }
