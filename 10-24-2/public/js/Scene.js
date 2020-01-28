@@ -20,6 +20,10 @@ class Scene {
     this.layers.unshift(anim);
   }
 
+  add_choice(choice){
+    this.choices = choice;
+  }
+
   auto_add_element () {
     let i = 0;
     while (this.layers.push(new Animation("../img/" + this.name_histoire + "/" + this.name_scene))) {

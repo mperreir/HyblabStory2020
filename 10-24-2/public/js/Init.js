@@ -41,29 +41,36 @@ function init_story_bullying() {
   var scene1 = new Scene(story, "L'enfant s'enferme dans sa chambre", 2);
   story_bullying.add_scene(1, scene1);
 
-  var choice1 = new Choice();
-  choice1.add_choice("Aller le voir",2);
-  choice1.add_choice("On a tous des mauvais jours",2);
-  
   // Peut être créer une scène intermédiare entre le fait de ne pas y aller
 
-  var scene2 = new Scene(story, "Premier choix : aller le voir ?", 3);
-  story_bullying.add_scene(2, scene2);
+  var choice1 = new Choice();
+  choice1.add_choice("Aller le voir",3);
+  choice1.add_choice("On a tous des mauvais jours",1);
 
+  var scene2 = new Scene(story, "Premier choix : aller le voir ?", 3);
+  scene2.add_choice(choice1);
+  story_bullying.add_scene(2, scene2);
+  
   var scene3 = new Scene(story, "Tu es sur que tout va bien ?", 4);
   story_bullying.add_scene(3, scene3);
 
-  var scene4 = new Scene(story, "Choix 2 : insister ?", 5);
-  story_bullying.add_scene(4, scene4);
-
   var choice2 = new Choice();
-  choice2.add_choice("Non, je pense que ca ne va pas",4);
-  choice2.add_choice("Si ca va, je ta laisse tranquille",4);
+  choice2.add_choice("Non, je pense que ca ne va pas",5);
+  choice2.add_choice("Si ca va, je te laisse tranquille",1);
+
+  var scene4 = new Scene(story, "Choix 2 : insister ?", 5);
+  scene4.add_choice(choice2);
+  story_bullying.add_scene(4, scene4);
 
   var scene5 = new Scene(story, "Flashback sur ce qui c'est passe à l ecole", 6);
   story_bullying.add_scene(5, scene5);
 
+  var choice3 = new Choice();
+  choice3.add_choice("Oui je veux savoir ce qui c'est passe",7);
+  choice3.add_choice("Bon, ca a l'air complique pour toi d'en parler, mais si tu veux en parler, n'hesites pas",7);
+
   var scene6 = new Scene(story, "Insister encore ?", 7);
+  scene6.add_choice(choice3);
   story_bullying.add_scene(6, scene6);
 
   var scene7 = new Scene(story, "Fin de l'histoire", 0);
@@ -89,12 +96,13 @@ function init_story_screens() {
   var scene1 = new Scene(story, "Bruits provenants de la chambre", 2);
   story_screens.add_scene(1, scene1); 
 
-  var scene2 = new Scene(story, "Choix 1 : aller voir ?", 2);
-  story_screens.add_scene(2, scene2);
-
   var choice1 = new Choice();
-  choice1.add_choice("Aller  voir",2);
-  choice1.add_choice("C'est son cote creatif",2);
+  choice1.add_choice("Aller  voir",3);
+  choice1.add_choice("C'est son cote creatif",1);
+
+  var scene2 = new Scene(story, "Choix 1 : aller voir ?", 2);
+  scene2.add_choice(choice1);
+  story_screens.add_scene(2, scene2);
 
   var scene3 = new Scene(story, "C'est son cote creatif...", 1);
   story_screens.add_scene(3, scene3);
@@ -105,11 +113,12 @@ function init_story_screens() {
   var scene5 = new Scene(story, "Mon cheri il est 23h!", 6);
   story_screens.add_scene(5, scene5);
 
-  var scene6 = new Scene(story, "Choix de la plage horaire", 6);
-  story_screens.add_scene(6, scene6);
-
   var choice2 = new Choice();
   // Ajouter un slider pour définir la plage horaire
+
+  var scene6 = new Scene(story, "Choix de la plage horaire", 6);
+  scene6.add_choice(choice2);
+  story_screens.add_scene(6, scene6);
 
   var scene7 = new Scene(story, "mauvaise reponse", 6);
   story_screens.add_scene(7, scene7);
@@ -128,6 +137,43 @@ function init_story_screens() {
 
   return true;
 // END SCREENS STORY
+
+/*Truc à intégrer aux scénarii Puberté et Flemme
+  
+  // Puberte
+  var choice1 = new Choice();
+  choice1.add_choice("Garcon",2);
+  choice1.add_choice("Fille",2);
+
+  //Garcon
+  var choice2 = new Choice();
+  choice2.add_choice("En parler en public",2);
+  choice2.add_choice("En parler en privé",2);
+  choice2.add_choice("Ne pas en parler",2);
+
+  //Fille
+  var choice3 = new Choice();
+  choice3.add_choice("Courir faire les courses",2);
+  choice3.add_choice("Lui expliquer la situation",2);
+
+  var choice4 = new Choice();
+  choice4.add_choice("Acheter des serviettes",2);
+  choice4.add_choice("Acheter des culottes",2);
+  choice4.add_choice("Acheter des tampons",2);
+
+
+  //Flemme
+  var choice1 = new Choice();
+  choice1.add_choice("Viens jouer dehors",2);
+  choice1.add_choice("Viens faire un jeu de société",2);
+  choice1.add_choice("Viens faire les courses",2);
+  //Ajouter d'autres possibilités
+
+  var choice2 = new Choice();
+  choice2.add_choice("Le forcer a venir",2);
+  choice2.add_choice("chercher le dialogue",2);
+  choice2.add_choice("le laisser tranquille",2);
+*/
 }
 
 
