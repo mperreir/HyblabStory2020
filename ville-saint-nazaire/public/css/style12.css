@@ -1,0 +1,26 @@
+#page12{
+    background-image: url(../img/fond_slide9.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#next15-1{
+  position: absolute;
+  left:5%;
+}
+#image_salon_petit{
+  position: absolute;
+  top:10%;
+  left:0%;
+  width: 6%;
+  height: auto;
+  z-index: 1;
+}
+
+#image_bureau_petit{
+  position: absolute;
+  top:20%;
+  left:0%;
+  width: 15%;
+  height: auto;
+  z-index: 2;
+}
