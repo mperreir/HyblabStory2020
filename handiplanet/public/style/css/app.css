@@ -45,6 +45,58 @@
 #app-view #app-overlay header ul li:last-of-type a {
   color: #ffffff;
 }
+#app-view #app-overlay #scroll-point {
+  position: absolute;
+  right: 5vw;
+  top: 50vh;
+  transform: translateY(-50%);
+}
+#app-view #app-overlay #scroll-point .point {
+  position: relative;
+  height: 4vh;
+  width: 4vh;
+  border-radius: calc(4vh / 2);
+  background-color: #ffffff;
+  border: 1vh solid #5a8d8c;
+  margin-bottom: 5vh;
+}
+#app-view #app-overlay #scroll-point .point:last-of-type::after {
+  display: none;
+}
+#app-view #app-overlay #scroll-point .point:first-of-type::before {
+  display: none;
+}
+#app-view #app-overlay #scroll-point .point::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3vh;
+  width: 1.3vh;
+  background-color: #5a8d8c;
+  top: calc(100% + 0.5vh);
+  z-index: -1000;
+}
+#app-view #app-overlay #scroll-point .point::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3vh;
+  width: 1.3vh;
+  background-color: #5a8d8c;
+  bottom: calc(100% + 0.5vh);
+  z-index: -1000;
+}
+#app-view #app-overlay .selected {
+  border: 1vh solid #cb563e !important;
+}
+#app-view #app-overlay .selected::after {
+  background-color: #cb563e !important;
+}
+#app-view #app-overlay .selected::before {
+  background-color: #cb563e !important;
+}
 #app-view #first-view {
   height: 100vh;
   width: 100vw;
