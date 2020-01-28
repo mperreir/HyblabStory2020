@@ -28,6 +28,11 @@
   max-width: 45%;
   left: 7vw;
 }
+#view-1 #view-1-middle article {
+  position: absolute;
+  right: 2vw;
+  bottom: 20vh;
+}
 #view-1 footer {
   width: 100vw;
   height: 20vh;
