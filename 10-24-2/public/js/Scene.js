@@ -2,22 +2,32 @@
 
 class Scene {
 
-  constructor (name_histoire, name_scene, next) {
+  constructor (name_histoire, name_scene, next, auto_import=true) {
+
+    // Variables related to the outside
     this.name_scene = name_scene;
     this.name_histoire = name_histoire;
-    // layers is an array of Animation
-    this.layers = new Array();
-    this.choices = new Choice();
     this.default_next_scene = next;
+
+    // Variables related to the inside
+    this.layers = new Array();            // layers is an array of Interactable, essentiellement des animations
+    this.choices = new Choice();
+    this.time = 0;
+
+    // Initialisation methods
+    if (auto_import) {
+      auto_add_element();
+    }
   }
 
-  // Adding elements
-  new_top_layer (anim) {
-    this.layers.push(anim);
+  // ADDING NEW ELEMENTS -------------------------------------------------------
+
+  new_top_layer (inter) {
+    this.layers.push(inter);
   }
 
-  new_bottom_layer (anim) {
-    this.layers.unshift(anim);
+  new_bottom_layer (inter) {
+    this.layers.unshift(inter);
   }
 
   auto_add_element () {
@@ -25,11 +35,23 @@ class Scene {
     while (this.layers.push(new Animation("../img/" + this.name_histoire + "/" + this.name_scene))) {
       i++;
     }
-    return false;
+    if (i == 0) {
+      return true;
+    } else {
+      return false;
+    }
     // Done importing
   }
 
-  // Displaying
+  // DISPLAYING ----------------------------------------------------------------
+
+
+
+  // UPDATING ------------------------------------------------------------------
+
+  update () {
+    this.time++;
+  }
 
 
 }

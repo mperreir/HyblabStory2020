@@ -1,0 +1,12 @@
+class Interactable {
+
+  constructor () {
+
+  }
+
+  interaction () {
+    
+  }
+
+
+}

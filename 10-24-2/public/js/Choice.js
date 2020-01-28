@@ -5,8 +5,10 @@ class Choice {
   constructor () {
     this.choices = new Array();
   }
-  // IL FAUDRAIT AJOUTER LA SCENE VERS LAQUELLE VA LE CHOIX
+
   add_choice (text, id_linked_scene) {
+    // text is what is displayed for this choice
+    // id_linked_scene is the id of the scene which relates to this choice
     this.choices.push([text,id_linked_scene]);
   }
 
