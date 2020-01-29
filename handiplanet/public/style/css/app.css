@@ -141,6 +141,11 @@
   border-radius: calc(8vh / 2);
   color: white;
   z-index: 1000;
+  transition: box-shadow 0.5s;
+  box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
+}
+#app-view #app-overlay #text-size .text:hover {
+  box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
 }
 #app-view #app-overlay #text-size .selected {
   animation: setSelected 0.5s forwards ease-out;
@@ -181,12 +186,14 @@
   width: 7vh;
   left: 5vh;
   bottom: 4vh;
+  /*&:hover{
+    box-shadow: 0 0 0 5px rgba(203, 86, 62, 0.3);
+  }*/
 }
 #son .mute {
   display: none;
 }
 
-/* The switch - the box around the slider */
 .switch {
   position: absolute;
   width: auto;
@@ -198,21 +205,27 @@
   cursor: pointer;
 }
 .switch button {
+  transition: box-shadow 2s;
   width: 10vh;
   height: 6vh;
   background-color: #5a8d8c;
   z-index: 100000;
   border-radius: calc(10vh / 2);
   border: 1px solid dimgray;
+  transition: box-shadow 0.2s;
+  box-shadow: 50px 50px 0 0px rgba(203, 86, 62, 0.3), 0 0 0 0px rgba(203, 85, 62, 0.363);
 }
 .switch p {
-  font-size: 15px;
+  font-size: 21px;
   margin-left: 1vw;
   margin-top: 0px;
   margin-bottom: 0px;
   font-family: Nunito;
   font-style: normal;
   color: #5a8d8c;
+}
+.switch:hover > button {
+  box-shadow: 50px 50px 0 200px rgba(203, 86, 62, 0.3), 0 0 0 10px rgba(203, 85, 62, 0.363);
 }
 
 /*# sourceMappingURL=app.css.map */
