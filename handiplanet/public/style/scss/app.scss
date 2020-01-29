@@ -132,6 +132,21 @@
           }
         }
       }
+      .beforeLast{
+        background-color: #ffffff;
+        animation: diselectedHalo 1s forwards ease-out;
+
+        @keyframes diselectedHalo {
+
+          0% {
+            box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
+          }
+          
+          100% {
+            box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
+          }
+        }
+      }
     }
     
     #text-size{
@@ -152,7 +167,33 @@
         z-index: 1000;
       }
       .selected{
-        background-color: #cb563e;
+        animation: setSelected 0.5s forwards ease-out;
+
+        @keyframes setSelected {
+
+          0% {
+            background-color: #5a8d8c;
+          }
+          
+          100% {
+            background-color: #cb563e;
+          }
+        }        
+      }
+
+      .diselected{
+        animation: setDiselected 0.5s forwards ease-out;
+
+        @keyframes setDiselected {
+
+          0% {
+            background-color: #cb563e;
+          }
+          
+          100% {
+            background-color: #5a8d8c;
+          }
+        }        
       }
       
       #small{

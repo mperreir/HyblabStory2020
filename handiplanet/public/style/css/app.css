@@ -113,6 +113,18 @@
     box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
   }
 }
+#app-view #app-overlay #scroll-point .beforeLast {
+  background-color: #ffffff;
+  animation: diselectedHalo 1s forwards ease-out;
+}
+@keyframes diselectedHalo {
+  0% {
+    box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
+  }
+}
 #app-view #app-overlay #text-size {
   z-index: 1000;
   display: flex;
@@ -131,7 +143,26 @@
   z-index: 1000;
 }
 #app-view #app-overlay #text-size .selected {
-  background-color: #cb563e;
+  animation: setSelected 0.5s forwards ease-out;
+}
+@keyframes setSelected {
+  0% {
+    background-color: #5a8d8c;
+  }
+  100% {
+    background-color: #cb563e;
+  }
+}
+#app-view #app-overlay #text-size .diselected {
+  animation: setDiselected 0.5s forwards ease-out;
+}
+@keyframes setDiselected {
+  0% {
+    background-color: #cb563e;
+  }
+  100% {
+    background-color: #5a8d8c;
+  }
 }
 #app-view #app-overlay #text-size #small {
   font-size: small;

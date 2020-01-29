@@ -14,9 +14,13 @@ window.addEventListener('load', function () {
     }
     
     function setSmall(){
-        small.style.background = '#cb563e';
-        medium.style.background = '#5a8d8c';
-        large.style.background = '#5a8d8c';
+        if(medium.className == "text selected"){
+            medium.className = "text diselected";
+        }else medium.className = "text";
+        small.className = "text selected";
+        if(large.className == "text selected"){
+            large.className = "text diselected";
+        }else large.className = "text";
         
         //mettre les textes en small
         for(var i = 0; i < paragraphs.length; i++)
@@ -25,9 +29,13 @@ window.addEventListener('load', function () {
         }
     }
     function setMedium(){
-        medium.style.background = '#cb563e';
-        small.style.background = '#5a8d8c';
-        large.style.background = '#5a8d8c';
+        if(small.className == "text selected"){
+            small.className = "text diselected";
+        }else small.className = "text";
+        medium.className = "text selected";
+        if(large.className == "text selected"){
+            large.className = "text diselected";
+        }else large.className = "text";
         
         //mettre les textes en medium
         for(var i = 0; i < paragraphs.length; i++)
@@ -36,9 +44,13 @@ window.addEventListener('load', function () {
         }
     }
     function setLarge(){
-        large.style.background = '#cb563e';
-        small.style.background = '#5a8d8c';
-        medium.style.background = '#5a8d8c';
+        if(small.className == "text selected"){
+            small.className = "text diselected";
+        }else small.className = "text";
+        large.className = "text selected";
+        if(medium.className == "text selected"){
+            medium.className = "text diselected";
+        }else medium.className = "text";
         
         //mettre les textes en larges
         for(var i = 0; i < paragraphs.length; i++)
