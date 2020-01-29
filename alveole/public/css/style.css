@@ -8,7 +8,7 @@
     margin:0;
 }
 
-body{
+body {
     background-color: black;
     color: white;
     overflow: hidden;   /* pour slidr dans certains navigateurs */
@@ -16,6 +16,48 @@ body{
 
 #container{
     position: relative; /* pour permettre le positionnement en absolu des autres éléments */
+}
+
+header {
+  position: absolute;
+  top: 0;
+  height: 15%;
+  width: 100%;
+  background-color: #ccc;
+}
+
+footer {
+  position: absolute;
+  top: 80%;
+  height: 20%;
+  width: 100%;
+  background-color: #ccc;
+}
+
+#left {
+  position: absolute;
+  top: 15%;
+  width: 20%;
+  height: 65%;
+  background-color: #fff;
+}
+
+#right {
+  position: absolute;
+  top: 15%;
+  width: 20%;
+  left: 80%;
+  height: 65%;
+  background-color: #fff;
+}
+
+#center {
+  position: absolute;
+  top: 15%;
+  width: 60%;
+  height: 65%;
+  left: 20%;
+  background-color: #aaa;
 }
 
 /* on fait en sorte que le slidr et les slides remplissent tout notre conteneur */

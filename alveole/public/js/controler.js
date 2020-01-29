@@ -3,14 +3,20 @@ class Controler {
   constructor(model) {
 
     // View
-    var view = new View();
+    var viewHeader = new ViewHeader();
+    var viewFooter = new ViewFooter();
+    var viewLeft   = new ViewLeft();
+    var viewCenter = new ViewCenter();
+    var viewRight  = new ViewRight();
 
     // Listener of view
-    
+
 
     // Observer of model
-    var update = new Update(model, view);
-    model.addObservers(update);
+    // var update1 = new Update(model, viewHeader);
+    // var update2 = new Update(model, viewFooter);
+    // model.addObservers(update1);
+    // model.addObservers(update2);
   }
 }
 

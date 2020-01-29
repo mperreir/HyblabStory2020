@@ -1,12 +1,52 @@
-class View {
+class ViewHeader {
     constructor() {
-      this.header = document.querySelector("header");
-      this.footer = document.querySelector("footer");
       this.main = document.querySelector("main");
 
-      let title = document.createElement('h2');
-      title.setAttribute('class', 'title');
-      title.innerHTML = 'Podcast';
-      this.header.appendChild(title);
+      let header = document.createElement('header');
+
+      this.main.appendChild(header);
     }
+}
+
+class ViewFooter {
+
+  constructor() {
+    this.main = document.querySelector('main');
+    let footer = document.createElement('footer');
+
+    this.main.appendChild(footer);
+  }
+}
+
+class ViewLeft {
+
+  constructor() {
+    this.main = document.querySelector('main');
+    let left = document.createElement('div');
+    left.setAttribute('id', 'left');
+
+    this.main.appendChild(left);
+  }
+}
+
+class ViewCenter {
+
+  constructor() {
+    this.main = document.querySelector('main');
+    let center = document.createElement('div');
+    center.setAttribute('id', 'center');
+
+    this.main.appendChild(center);
+  }
+}
+
+class ViewRight {
+
+  constructor() {
+    this.main = document.querySelector('main');
+    let right = document.createElement('div');
+    right.setAttribute('id', 'right');
+
+    this.main.appendChild(right);
+  }
 }
