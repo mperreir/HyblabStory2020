@@ -1,7 +1,7 @@
 
 class View1 extends View {
-    constructor(){
-        super('view1', document.getElementById('view-container'));
+    constructor(receiver){
+        super('view1', receiver);
         this.load()
         .then(()=>{
             this.view = document.getElementById(this.viewName);
@@ -11,14 +11,22 @@ class View1 extends View {
 
     
     async switchToView2(){
-        const nextView = new View2();
+        // Construction d'une div temporaire positionnée en dehors
+        // de l'écran pour faire entrer la prochaine view
+        const tempDiv = document.createElement('div');
+        document.getElementById('view-container').appendChild(tempDiv);
+        tempDiv.style.position = "absolute";
+        tempDiv.style.top = '100%';
+
+        // Création de la prochaine view
+        const nextView = new View2(tempDiv);
         await nextView.load();
         this.view.style.transition = 'transform 1s';
-        nextView.tempDiv.style.transition = `transform 1s`;
-        this.view.style.transform = `translateY(-100%)`;
-        nextView.tempDiv.style.transform = `translateY(-100%)`;
+        tempDiv.style.transition = 'transform 1s';
+        this.view.style.transform = 'translateY(-100%)';
+        tempDiv.style.transform = 'translateY(-100%)';
         setTimeout(() => {
-            nextView.tempDiv.replaceWith = nextView.view;
+            tempDiv.replaceWith = nextView.view;
             this.view.parentNode.removeChild(this.view);
         }, 1000);
     }

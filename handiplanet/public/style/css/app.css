@@ -57,10 +57,10 @@
 }
 #app-view #app-overlay #scroll-point .point {
   position: relative;
-  height: 2vh;
-  width: 2vh;
-  border-radius: calc(2vh / 2);
-  background-color: #ffffff;
+  height: 1.25vh;
+  width: 1.25vh;
+  border-radius: calc(1.25vh / 2);
+  background-color: #5a8d8c;
   border: 0.5vh solid #5a8d8c;
   margin-bottom: 10vh;
 }
@@ -75,8 +75,8 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  height: 8vh;
-  width: 0.6vh;
+  height: 5vh;
+  width: 0.15vw;
   background-color: #5a8d8c;
   top: calc(100% + 0.5vh);
 }
@@ -86,18 +86,28 @@
   left: 50%;
   transform: translateX(-50%);
   height: 5vh;
-  width: 0.6vh;
+  width: 0.15vw;
   background-color: #5a8d8c;
   bottom: calc(100% + 0.5vh);
 }
 #app-view #app-overlay #scroll-point .selected {
   border: 0.5vh solid #cb563e !important;
+  background-color: #ffffff;
+  animation: selectedHalo 1s forwards ease-out;
 }
 #app-view #app-overlay #scroll-point .selected::after {
   background-color: #cb563e !important;
 }
 #app-view #app-overlay #scroll-point .selected::before {
   background-color: #cb563e !important;
+}
+@keyframes selectedHalo {
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 86, 62, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
+  }
 }
 #app-view #app-overlay #text-size {
   display: flex;
