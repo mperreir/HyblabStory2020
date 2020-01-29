@@ -93,14 +93,17 @@
 }
 #app-view #app-overlay #scroll-point .selected {
   border: 0.5vh solid #cb563e !important;
-  background-color: #ffffff;
-  animation: selectedHalo 1s forwards ease-out;
+  background-color: #cb563e;
 }
 #app-view #app-overlay #scroll-point .selected::after {
   background-color: #cb563e !important;
 }
 #app-view #app-overlay #scroll-point .selected::before {
   background-color: #cb563e !important;
+}
+#app-view #app-overlay #scroll-point .last {
+  background-color: #ffffff;
+  animation: selectedHalo 1s forwards ease-out;
 }
 @keyframes selectedHalo {
   0% {

@@ -59,7 +59,7 @@
       right: 5vw;
       top: 60vh;
       transform: translateY(-50%);
-      
+
       .point{
         position: relative;
         height: 1.25vh;
@@ -108,8 +108,7 @@
       .selected{
         
         border: 0.5vh solid #cb563e !important ; 
-        background-color: #ffffff;
-        animation: selectedHalo 1s forwards ease-out;
+        background-color: #cb563e;
 
         &::after{
           background-color: #cb563e !important ;
@@ -117,9 +116,13 @@
         &::before{
           background-color: #cb563e !important ;
         }
+      }
+      .last{
+        background-color: #ffffff;
+        animation: selectedHalo 1s forwards ease-out;
 
         @keyframes selectedHalo {
-    
+
           0% {
             box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
           }
@@ -165,8 +168,6 @@
     }
     
   }
-  
-  
 }
 
 #son{
