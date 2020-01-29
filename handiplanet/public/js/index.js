@@ -63,6 +63,20 @@ window.addEventListener('load', function () {
         //mettre son
     }
 
+    function contraste(){
+        console.log("t");
+        if(cont){
+            console.log("o");
+            toggle.style.background = '#5a8d8c';
+            cont = false;
+        }
+        else{
+            console.log("n");
+            toggle.style.background = '#cb563e';
+            cont = true;
+        }
+    }
+
 
     var button = document.getElementById('begin-button');
     button.onclick = scroll;
@@ -86,6 +100,11 @@ window.addEventListener('load', function () {
     sonMuteW.onclick = on;
 
     var paragraphs = document.getElementsByTagName("p");
+
+    var toggle = document.getElementById('tog');
+    var switchButton = document.getElementById('switch');
+    var cont = false;
+    switchButton.onclick = contraste;
 
 
     text = document.getElementsByClassName('')
