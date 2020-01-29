@@ -51,13 +51,13 @@ class View1 extends View {
             var relY = e.pageY - vc.offsetTop;
 
             TweenMax.to(this.hotel, 1, {
-                x: (relX - vc.offsetWidth/2) / vc.offsetWidth * -50,
-                y: (relY - vc.offsetHeight/2) / vc.offsetHeight * -50,
+                x: (relX - vc.offsetWidth/2) / vc.offsetWidth * -25,
+                y: (relY - vc.offsetHeight/2) / vc.offsetHeight * -25,
                 ease: Power2.easeOut
             })
             TweenMax.to(this.luggage, 1, {
-                x: (relX - vc.offsetWidth/2) / vc.offsetWidth * -50,
-                y: (relY - vc.offsetHeight/2) / vc.offsetHeight * -50,
+                x: (relX - vc.offsetWidth/2) / vc.offsetWidth * -25,
+                y: (relY - vc.offsetHeight/2) / vc.offsetHeight * -25,
                 ease: Power2.easeOut
             })
         });
@@ -70,7 +70,7 @@ class View1 extends View {
 
         // Select color of character
         this.selectCharContainer = document.getElementById('view-1-select-character');
-        this.caracterImg = document.getElementById('view-1-charactere-img');
+        this.caracterImg = document.getElementById('view-1-character-img');
 
         this.selectCharButtons = document.querySelectorAll('#view-1-select-character li');
 
