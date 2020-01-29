@@ -1,5 +1,5 @@
 #page14{
-    background-image: url(../img/fond_slide9.png);
+    background-image: url(../img/fond_choix_decorateur.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -23,4 +23,28 @@
   width: 15%;
   height: auto;
   z-index: 2;
+}
+
+#texte_slide14{
+    position: absolute;
+    width:68%;
+    height:12%;
+    right:16%;
+    top: 87%;
+    padding : 0.5%
+}
+#texte_slide14 p{
+    font-family:"Parisienne";
+    color:black;
+    text-align: justify;
+}
+@media screen and (max-aspect-ratio: 16/9){
+    #texte_slide14 p{
+        font-size: 1.7vw;
+    }
+}
+@media screen and (min-aspect-ratio: 16/9){
+    #texte_slide14 p{
+        font-size: 3vh;
+    }
 }
