@@ -13,6 +13,8 @@
 
 body {
   margin: 0px;
+  //filter: contrast(200%);
+  //filter: grayscale(5%);
 }
 
 * {
@@ -51,6 +53,7 @@ a{
   }
 
   #begin-button{
+    cursor: pointer;
     border-radius: 12.5vw 12.5vw 0 0;
     position: absolute;
     bottom: 0px;

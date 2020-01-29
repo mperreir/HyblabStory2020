@@ -14,28 +14,49 @@ window.addEventListener('load', function () {
     }
     
     function setSmall(){
-        small.style.background = '#cb563e';
-        medium.style.background = '#5a8d8c';
-        large.style.background = '#5a8d8c';
+        if(medium.className == "text selected"){
+            medium.className = "text diselected";
+        }else medium.className = "text";
+        small.className = "text selected";
+        if(large.className == "text selected"){
+            large.className = "text diselected";
+        }else large.className = "text";
         
         //mettre les textes en small
-        text.style.fontSize = "50%" ;
+        for(var i = 0; i < paragraphs.length; i++)
+        {
+            paragraphs[i].style.fontSize = "18px";
+        }
     }
     function setMedium(){
-        medium.style.background = '#cb563e';
-        small.style.background = '#5a8d8c';
-        large.style.background = '#5a8d8c';
+        if(small.className == "text selected"){
+            small.className = "text diselected";
+        }else small.className = "text";
+        medium.className = "text selected";
+        if(large.className == "text selected"){
+            large.className = "text diselected";
+        }else large.className = "text";
         
         //mettre les textes en medium
-        text.style.fontSize = "100%" ;
+        for(var i = 0; i < paragraphs.length; i++)
+        {
+            paragraphs[i].style.fontSize = "21px";
+        }
     }
     function setLarge(){
-        large.style.background = '#cb563e';
-        small.style.background = '#5a8d8c';
-        medium.style.background = '#5a8d8c';
+        if(small.className == "text selected"){
+            small.className = "text diselected";
+        }else small.className = "text";
+        large.className = "text selected";
+        if(medium.className == "text selected"){
+            medium.className = "text diselected";
+        }else medium.className = "text";
         
         //mettre les textes en larges
-        text.style.fontSize = "150%" ;
+        for(var i = 0; i < paragraphs.length; i++)
+        {
+            paragraphs[i].style.fontSize = "25px";
+        }
     }
     
     function mute(){
@@ -53,8 +74,28 @@ window.addEventListener('load', function () {
         sonOnW.style.display = 'block';
         //mettre son
     }
-    
-    
+
+    function contraste(){
+        console.log("t");
+        if(cont){
+            console.log("o");
+            toggle.style.background = '#5a8d8c';
+            cont = false;
+            document.body.style.filter = "grayscale(0%)";
+            document.body.style.filter= "hue-rotate(0deg)";
+            document.body.style.filter = "contrast(100%)";
+        }
+        else{
+            console.log("n");
+            toggle.style.background = '#cb563e';
+            cont = true;
+            //document.body.style.filter = "grayscale(100%)";
+            document.body.style.filter= "hue-rotate(200deg)";
+            //document.body.style.filter = "contrast(150%)";
+        }
+    }
+
+
     var button = document.getElementById('begin-button');
     button.onclick = scroll;
     
@@ -75,6 +116,14 @@ window.addEventListener('load', function () {
     sonOnW.onclick = mute;
     var sonMuteW = document.getElementById('muteW');
     sonMuteW.onclick = on;
-    
+
+    var paragraphs = document.getElementsByTagName("p");
+
+    var toggle = document.getElementById('tog');
+    var switchButton = document.getElementById('switch');
+    var cont = false;
+    switchButton.onclick = contraste;
+
+
     text = document.getElementsByClassName('')
 });	

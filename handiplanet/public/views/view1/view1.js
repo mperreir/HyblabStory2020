@@ -11,6 +11,7 @@ class View1 extends View {
 
     
     async switchToView2(){
+        scrollPosition(1);
         // Construction d'une div temporaire positionnée en dehors
         // de l'écran pour faire entrer la prochaine view
         const tempDiv = document.createElement('div');
