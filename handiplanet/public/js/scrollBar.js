@@ -7,11 +7,14 @@
 
 var points = document.getElementsByClassName("point");
 
-function render(int){
+function scrollPosition(int){
     for(var i = 0; i < points.length; i++)
         {
             if(points[i].getAttribute("data-place") < int){
                 points[i].className = "point selected";
+            }
+            else if(points[i].getAttribute("data-place") == int){
+                points[i].className = "point selected last";
             }
             else if(points[i].getAttribute("data-place") > int){
                 points[i].className = "point";
