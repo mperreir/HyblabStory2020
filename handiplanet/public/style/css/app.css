@@ -213,7 +213,7 @@
   border-radius: calc(10vh / 2);
   border: 1px solid dimgray;
   transition: box-shadow 0.2s;
-  box-shadow: 50px 50px 0 0px rgba(203, 86, 62, 0.3), 0 0 0 0px rgba(203, 85, 62, 0.363);
+  box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3), 0 0 0 0px rgba(203, 85, 62, 0.363);
 }
 .switch p {
   font-size: 21px;
