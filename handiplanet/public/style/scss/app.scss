@@ -177,7 +177,7 @@
     height: 7vh;
     width : 7vh;
     left: 5vh;
-    bottom: 5vh;
+    bottom: 4vh;
     }
   }
   .mute{
@@ -189,9 +189,9 @@
 .switch {
   // z-index: 10000;
   position: absolute;
-  width: 100%;
+  width: auto;
   left: 20vh;
-  bottom: 5vh;
+  bottom: 4vh;
   display: flex;
   flex-direction: row;
   align-items: center;

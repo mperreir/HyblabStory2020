@@ -146,7 +146,7 @@
   height: 7vh;
   width: 7vh;
   left: 5vh;
-  bottom: 5vh;
+  bottom: 4vh;
 }
 #son .mute {
   display: none;
@@ -155,9 +155,9 @@
 /* The switch - the box around the slider */
 .switch {
   position: absolute;
-  width: 100%;
+  width: auto;
   left: 20vh;
-  bottom: 5vh;
+  bottom: 4vh;
   display: flex;
   flex-direction: row;
   align-items: center;

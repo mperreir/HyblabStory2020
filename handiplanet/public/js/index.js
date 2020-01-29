@@ -69,11 +69,17 @@ window.addEventListener('load', function () {
             console.log("o");
             toggle.style.background = '#5a8d8c';
             cont = false;
+            document.body.style.filter = "grayscale(0%)";
+            document.body.style.filter= "hue-rotate(0deg)";
+            document.body.style.filter = "contrast(100%)";
         }
         else{
             console.log("n");
             toggle.style.background = '#cb563e';
             cont = true;
+            //document.body.style.filter = "grayscale(100%)";
+            document.body.style.filter= "hue-rotate(200deg)";
+            //document.body.style.filter = "contrast(150%)";
         }
     }
 
