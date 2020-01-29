@@ -15,7 +15,7 @@ body {
 * {
   font-family: Nunito;
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   box-sizing: border-box;
 }
 
@@ -59,10 +59,10 @@ a {
   padding: 10px;
   margin-left: 50vw;
   transform: translateX(-50%);
-  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  animation: pulse 1s infinite alternate ease-out;
 }
 #home-view #begin-button button {
   padding-top: 4vh;
@@ -78,15 +78,16 @@ a {
   color: #5A8D8C;
 }
 #home-view #begin-button h1 {
-  font-weight: bold;
+  font-weight: 600;
   margin-top: auto;
   padding-top: 20px;
-  font-size: calc(1.3vw + 1.3vh);
+  margin-bottom: 8px;
+  font-size: calc(1.1vw + 1.1vh);
 }
 #home-view #begin-button h2 {
   margin-bottom: auto;
-  font-size: calc(0.9vw + 0.9vh);
-  font-weight: lighter;
+  font-size: calc(0.8vw + 0.8vh);
+  font-weight: 200;
 }
 @media screen and (min-width: 1400px) {
   #home-view #begin-button {
@@ -100,6 +101,15 @@ a {
     width: 230px;
     height: 115px;
     border-radius: 115px 115px 0 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.3);
   }
 }
 
