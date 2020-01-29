@@ -20,68 +20,83 @@
   bottom: -2px;
 }
 #view1 #view-1-middle #view-1-splash-img {
-  max-height: 95%;
-  max-width: 70%;
-  right: 2vw;
+  z-index: 1;
+  max-height: 100%;
+  max-width: 60%;
+  left: 40%;
 }
-#view1 #view-1-middle #view-1-charactere-img {
+#view1 #view-1-middle > div {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: flex-start;
+  right: 50%;
+  bottom: -1px;
   max-height: 70%;
-  max-width: 45%;
-  left: 7vw;
+  max-width: 50%;
 }
-#view1 #view-1-middle #view-1-hotel-img {
-  position: absolute;
-  max-height: 20%;
-  max-width: 20%;
-  top: 30%;
-  left: 7vw;
+#view1 #view-1-middle > div #view-1-character-img {
+  z-index: 5;
+  position: relative;
+  max-width: 100%;
 }
-#view1 #view-1-middle #view-1-luggage-img {
-  position: absolute;
-  max-height: 20%;
-  max-width: 20%;
-  top: 30%;
-  left: 55%;
-}
-#view1 #view-1-middle .view-1-switch-character {
+#view1 #view-1-middle > div .view-1-switch-character {
+  z-index: 6;
   position: absolute;
   cursor: pointer;
-  left: 5vw;
-  bottom: 5vh;
+  left: -5%;
+  bottom: 5%;
   background-color: #426262;
   border-radius: 50px;
   transform: rotate(-22.68deg);
   color: #ffffff;
   padding: 10px 15px;
 }
-#view1 #view-1-middle #view-1-select-character {
+#view1 #view-1-middle > div #view-1-select-character {
+  z-index: 6;
   display: none;
 }
-#view1 #view-1-middle #view-1-select-character ul {
+#view1 #view-1-middle > div #view-1-select-character ul {
   list-style: none;
   padding: 0px;
   margin: 0px;
 }
-#view1 #view-1-middle #view-1-select-character ul li {
+#view1 #view-1-middle > div #view-1-select-character ul li {
   display: inline-block;
   height: 30px;
   width: 30px;
   border-radius: 15px;
   background-color: red;
 }
-#view1 #view-1-middle #view-1-select-character ul li:nth-of-type(1) {
+#view1 #view-1-middle > div #view-1-select-character ul li:nth-of-type(1) {
   background-color: #ffffff;
 }
-#view1 #view-1-middle #view-1-select-character ul li:nth-of-type(2) {
+#view1 #view-1-middle > div #view-1-select-character ul li:nth-of-type(2) {
   background-color: #80BEA3;
 }
-#view1 #view-1-middle #view-1-select-character ul li:nth-of-type(3) {
+#view1 #view-1-middle > div #view-1-select-character ul li:nth-of-type(3) {
   background-color: #CB563E;
 }
-#view1 #view-1-middle article {
+#view1 #view-1-middle #view-1-hotel-img {
   position: absolute;
-  right: 5%;
-  max-width: 45%;
+  max-height: 20%;
+  max-width: 20%;
+  top: 30%;
+  left: 20%;
+}
+#view1 #view-1-middle #view-1-luggage-img {
+  position: absolute;
+  max-height: 20%;
+  max-width: 20%;
+  top: 45%;
+  left: 50%;
+}
+#view1 #view-1-middle article {
+  z-index: 7;
+  position: absolute;
+  left: 55%;
+  max-width: 30%;
   bottom: 10%;
 }
 #view1 #view-1-middle article p {
@@ -104,7 +119,7 @@
   position: absolute;
   right: 0px;
   background-color: #CB563E;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 25px;
   line-height: 34px;
   text-transform: uppercase;
