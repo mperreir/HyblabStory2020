@@ -26,6 +26,18 @@ header {
   background-color: #black;
 }
 
+#header_brand {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#svg_brand {
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+
 footer {
   position: absolute;
   top: 80%;
@@ -47,6 +59,13 @@ footer {
   left: 0;
 }
 
+#svg_ellipse_big_circle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 707px;
+  top: 717px;
+}
 
 #left {
   position: absolute;

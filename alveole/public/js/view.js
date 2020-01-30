@@ -1,8 +1,17 @@
 class ViewHeader {
     constructor() {
       this.main = document.querySelector("main");
-
       let header = document.createElement('header');
+
+      let div = document.createElement('div');
+      div.setAttribute('id', 'header_brand');
+
+      header.appendChild(div);
+
+      Snap.load('data/header_brand.svg', function(data) {
+        let snap = Snap('#header_brand');
+        snap.append(data);
+      });
 
       this.main.appendChild(header);
     }
@@ -20,12 +29,13 @@ class ViewFooter {
     footer.appendChild(div);
 
     Snap.load('data/footer_ellipse.svg', function(data) {
+
+      // Adding the ellipse to the div
       let snap = Snap('#footer_ellipse');
       snap.append(data);
     });
-
+    
     this.main.appendChild(footer);
-
   }
 }
 
