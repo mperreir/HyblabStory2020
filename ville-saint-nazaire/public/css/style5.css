@@ -1,3 +1,81 @@
-#logo{
-    width: 10%;
+#page5 {
+	background-image: url("../img/fond_HDV_constrcution.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }
+
+#img-journaliste {
+
+}
+
+#img-architecte {
+	position: absolute;
+	width : 30%;
+	height : 40%;
+	top : 60%;
+	left : 70%;
+	z-index: 200;
+
+
+}
+
+#page5 p {
+	font-family:"Parisienne";
+    color:black;
+    text-align: justify;
+}
+
+#page5 p:hover {
+    color:red;
+}
+
+#container1-slide5 {
+	position: absolute;
+	left: 24%;
+	top: 10%;
+
+}
+
+#container2-slide5 {
+	position: absolute;
+	left: 31%;
+	top: 30%;
+
+}
+
+
+#container3-slide5 {
+	position: absolute;
+	left: 29%;
+	top: 50%;
+}
+
+
+#next6, #next7, #next8{
+	background-color: transparent;
+	border-style: none;
+}
+
+@media screen and (max-aspect-ratio: 16/9){
+   
+    #page5 p{
+        font-size: 3vw;
+    }
+}
+
+
+@media screen and (min-aspect-ratio: 16/9){
+    
+   #page5 p{
+        font-size: 4.2vh;
+    }
+}
+
+
+
+
+
+
+
+
