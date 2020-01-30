@@ -23,32 +23,81 @@
         color: #426262;
       }
 
+      img {
+        position: absolute;
+      }
+
       #speech {
         em {
           font-weight: bold;
           color: #CB563E;
         }
 
-      
+        max-width: 25%;
+        right: 20%;
+        bottom: 15%;
+        position: absolute;
 
       }
       
-      img {
+      figcaption {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 29px;
+        color: #426262;
+        top: 25%;
         position: absolute;
+
+        em{
+          font-weight: bold;
+          color: #CB563E;
+        }
       }
+
+      #hotel-a-caption{
+        left: -15%;
+      }
+
+      #hotel-b-caption{
+        right: 30%;
+      }
+
+
 
       #ordi-view-2 {
-        left: 15vw;
-        max-width: 50vw;
-        bottom: 0px;
-        z-index: 1;
+        position: relative;
+        height: 70%;
+        width: 50%;
       }
   
       #fond-view-2 {
-        height: 100%;
-        margin-left: 10vw;
-        // max-width: 70%;
-        text-align: left;
+        width: 80%;
+        bottom: 0%;
+        left: 10%;
+      }
+
+      #button-hotel-a {
+        position: absolute;
+        left: -15%;
+        top: -30%;
+        height: 50%;
+      }
+
+      #button-hotel-b {
+        position: absolute;
+        right: 20%;
+        top: -30%;
+        height: 50%;
+      }
+
+      #ecran-container {
+        position: absolute;
+        left: 20%;
+        bottom: -0%;
+        width: 40%;
+        max-height: 50%;
       }
     }
   }
