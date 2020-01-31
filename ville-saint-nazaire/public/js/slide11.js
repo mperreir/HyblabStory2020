@@ -73,23 +73,17 @@ let initSlide11 = function(){
 
 
 
-
-  d3.select('#next12').on('click', function(){
-    mySlidr.slide('page-12');
+  d3.select('#next12-1').on('click', function(){
+    moveDown();
     initSlide12();
   });
 
-  d3.select('#next13').on('click', function(){
-    mySlidr.slide('page-13');
-    initSlide13();
-  });
+  d3.select('#next12-2').on('click', function(){
+    moveDown();
 
-  d3.select('#next14').on('click', function(){
-    mySlidr.slide('page-14');
-    initSlide14();
+
+  d3.select('#next12-3').on('click', function(){
+    moveDown();
+    initSlide12();
   });
 }
-
-
-
-

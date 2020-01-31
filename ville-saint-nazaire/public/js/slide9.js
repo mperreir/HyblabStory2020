@@ -1,7 +1,13 @@
 let initSlide9 = function(){
 
-  d3.select('#next10').on('click', function(){
-    mySlidr.slide('page-10');
+  d3.select('#page9-1 #next10').on('click', function(){
+    console.log('10');
+    moveDown();
+    initSlide10();
+  });
+  d3.select('#page9-2 #next10').on('click', function(){
+    console.log('10');
+    moveDown();
     initSlide10();
   });
 }

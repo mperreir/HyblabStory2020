@@ -1,4 +1,3 @@
-
 let initSlide2 = function(){
 
     var son = document.querySelector('#audioBombardement');
@@ -10,13 +9,14 @@ let initSlide2 = function(){
     };
 
     d3.select('#next3').on('click', function(){
+      console.log('3');
       son.pause();
-      mySlidr.slide('page-3');
+      moveDown();
       initSlide3();
     });
+
+
 
     //setTimeout(next3, 16000);
 
 }
-
-

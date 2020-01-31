@@ -1,12 +1,12 @@
 let initSlide4 = function(){
-	// Bruits de pas 
+	// Bruits de pas
 	var son = document.querySelector('#audioPas');
 	console.log(son.duration);
     son.play();
-    
+
     // Affichage du premier texte après 5s
-    setTimeout(playDialogues, 5500); 
-   	
+    setTimeout(playDialogues, 5500);
+
    	function playDialogues()
 	{
 		son.pause();
@@ -31,18 +31,17 @@ let initSlide4 = function(){
 	    		dialogue3.style.visibility = "visible";
 	    		$("#dialogueSuivant").hide();
 	    	}
-	    	
+
 
 	  });
 	}
-    	
 
-    
-  d3.select('#next5').on('click', function(){
-  	son.pause();
-    mySlidr.slide('page-5');
-    initSlide5();
-  });
+
+
+	d3.select('#next5').on('click', function(){
+  		moveDown();
+		initSlide5();
+	});
 
 }
 

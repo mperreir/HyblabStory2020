@@ -18,10 +18,8 @@
   <link rel="stylesheet" href="css/style11.css">
   <link rel="stylesheet" href="css/style12.css">
   <link rel="stylesheet" href="css/style13.css">
-  <link rel="stylesheet" href="css/style14.css">
-  <link rel="stylesheet" href="css/style15.css">
-  <link rel="stylesheet" href="css/style16.css">
 
+  <link href="https://fonts.googleapis.com/css?family=Vibur&display=swap" rel="stylesheet">
   <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
@@ -40,11 +38,7 @@
   <script src="js/slide11.js" defer></script>
   <script src="js/slide12.js" defer></script>
   <script src="js/slide13.js" defer></script>
-  <script src="js/slide14.js" defer></script>
-  <script src="js/slide15.js" defer></script>
-  <script src="js/slide16.js" defer></script>
   <script src="js/index.js" defer></script>
-  <script src="js/util.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <script>
@@ -56,42 +50,71 @@
         $("#page6").load("html/slide6.html");
         $("#page7").load("html/slide7.html");
         $("#page8").load("html/slide8.html");
-        $("#page9").load("html/slide9.html");
-        $("#page10").load("html/slide10.html");
+        $("#page9-1").load("html/slide9.html");
+        $("#page9-2").load("html/slide9.html");
+        $("#page10-1").load("html/slide10.html");
+        $("#page10-2").load("html/slide10.html");
         $("#page11").load("html/slide11.html");
         $("#page12").load("html/slide12.html");
         $("#page13").load("html/slide13.html");
-        $("#page14").load("html/slide14.html");
-        $("#page15").load("html/slide15.html");
-        $("#page16").load("html/slide16.html");
     });
     </script>
 </head>
 <body>
     <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
     <div id="container">
-        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-        <main id = "slidr">
-            <section data-slidr="page-1" id="page-1">
-              <button id="next2">Découvrir</button>
-            </section>
-            <section data-slidr="page-2" id="page2"></section>
-            <section data-slidr="page-3" id="page3"></section>
-            <section data-slidr="page-4" id="page4"></section>
-            <section data-slidr="page-5" id="page5"></section>
-            <section data-slidr="page-6" id="page6"></section>
-            <section data-slidr="page-7" id="page7"></section>
-            <section data-slidr="page-8" id="page8"></section>
-            <section data-slidr="page-9" id="page9"></section>
-            <section data-slidr="page-10" id="page10"></section>
-            <section data-slidr="page-11" id="page11"></section>
-            <section data-slidr="page-12" id="page12"></section>
-            <section data-slidr="page-13" id="page13"></section>
-            <section data-slidr="page-14" id="page14"></section>
-            <section data-slidr="page-15" id="page15"></section>
-            <section data-slidr="page-16" id="page16"></section>
+      <div class="site-wrap">
+          <div class="panel-wrap animate--none">
+            <div class="panel" data-x-pos="0"  data-y-pos="0">
+              <section id="page-1">
+                <button id="next2">Découvrir</button>
+              </section>
+            </div>
+            <div class="panel" data-x-pos="-1"  data-y-pos="0">
+              <section id="page2"></section>
+            </div>
+            <div class="panel" data-x-pos="-1"  data-y-pos="-1">
+              <section id="page3"></section>
+            </div>
+            <div class="panel" data-x-pos="0"  data-y-pos="-1">
+              <section id="page4"></section>
+            </div>
+            <div class="panel" data-x-pos="0"  data-y-pos="-2">
+              <section id="page5"></section>
+            </div>
+            <div class="panel" data-x-pos="-1"  data-y-pos="-2">
+              <section id="page6"></section>
+            </div>
+            <div class="panel" data-x-pos="0"  data-y-pos="-3">
+              <section id="page7"></section>
+            </div>
+            <div class="panel" data-x-pos="1"  data-y-pos="-2">
+              <section id="page8"></section>
+            </div>
+            <div class="panel" data-x-pos="-1"  data-y-pos="-3">
+              <section id="page9-1"></section>
+            </div>
+            <div class="panel" data-x-pos="1"  data-y-pos="-3">
+              <section id="page9-2"></section>
+            </div>
+            <div class="panel" data-x-pos="-1"  data-y-pos="-4">
+              <section id="page10-1"></section>
+            </div>
+            <div class="panel" data-x-pos="1"  data-y-pos="-4">
+              <section id="page10-2"></section>
+            </div>
+            <div class="panel" data-x-pos="0"  data-y-pos="-4">
+              <section id="page11"></section>
+            </div>
+            <div class="panel" data-x-pos="0"  data-y-pos="-5">
+              <section id="page12"></section>
+            </div>
+            <div class="panel" data-x-pos="1"  data-y-pos="-5">
+              <section id="page13"></section>
+            </div>
 
-        </main>
-    </div>
+          </div>
+        </div>
+   </div>
 </body>
 </html>

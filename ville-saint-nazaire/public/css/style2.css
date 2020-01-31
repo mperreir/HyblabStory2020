@@ -5,17 +5,20 @@
 }
 #texteBombardement{
     position: absolute;
-    width:68%;
-    height:12%;
-    right:6%;
-    top: 87%;
-    padding : 0.5%
+    width: 1018.09px;
+    height: 207px;
+    left: 378px;
+    top: 752.71px;
 }
 
 #texteBombardement p{
-    font-family:"Parisienne";
-    color:black;
-    text-align: justify;
+    font-family: Vibur;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 62px;
+
+    color: #265984;
 }
 
 @media screen and (max-aspect-ratio: 16/9){

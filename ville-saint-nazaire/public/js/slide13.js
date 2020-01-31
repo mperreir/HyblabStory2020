@@ -1,8 +1,13 @@
 let initSlide13 = function(){
 
-  d3.select('#next15-2').on('click', function(){
-    mySlidr.slide('page-15');
-    initSlide15();
+  d3.select('#again').on('click', function(){
+    moveUp();
+    moveUp();
+    moveUp();
+    moveUp();
+    moveUp();
+    moveLeft();
+    //window.location.reload();
   });
 }
 
