@@ -7,22 +7,40 @@
   position: absolute;
   left:5%;
 }
-#image_salon_petit{
+#blackblock13{
+  top: 0%;
+  width: 25%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: -25%;
+  z-index: 10;
+}
+
+#image_bureau13{
   position: absolute;
   top:10%;
-  left:0%;
-  width: 6%;
+  left:-20%;
+  width: 25%;
   height: auto;
   z-index: 1;
 }
 
-#image_bureau_petit{
+#image_commission13{
   position: absolute;
-  top:20%;
-  left:0%;
-  width: 15%;
+  top:30%;
+  left:-20%;
+  width: 25%;
   height: auto;
   z-index: 2;
+}
+#image_salon13{
+  position: absolute;
+  top:55%;
+  left:-12%;
+  width: 16%;
+  height: auto;
+  z-index: 3;
 }
 
 #texte_slide13{
