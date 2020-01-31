@@ -1,13 +1,18 @@
 window.onload = function(){
 
   // Model part
-  // model = new Model();      // Create
   modelSlide = new ModelSlide();
-  modelSlide.setValue(0);        // init
-  console.log(modelSlide.getFooterValues());
 
+  modelHeader = new ModelHeader();
 
+  modelFooter = new ModelFooter();
 
-  controler = new Controler(modelSlide);
+  superControler = new SuperControler(modelSlide, modelFooter, modelHeader);
+
+  // Initialization
+  modelSlide.setValue(0);
+  modelFooter.setValue(false);
+  modelHeader.setValue(false);
+
   // //set the value 0 to initial the page
 }

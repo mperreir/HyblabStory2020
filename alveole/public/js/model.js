@@ -28,11 +28,16 @@ class ModelSlide extends Observable {
     super();
     this.obj = {
       "0": "Introduction",
-      "1": "Slide 1",
-      "2": "Slide 2",
-      "3": "Slide 3",
-      "4": "Conclusion",
-      "length": 5
+      "1": "Lieu",
+      "2": "Micro",
+      "3": "Voix",
+      "4": "Tournage",
+      "5": "Dérushage",
+      "6": "Mixage",
+      "7": "Podcast ou Capsule ?",
+      "8": "Capsule",
+      "9": "Conclusion",
+      "length": 10
     };
     this.value;
   }
@@ -89,5 +94,53 @@ class ModelSlide extends Observable {
       }
     }
     return footValues;
+  }
+}
+
+class ModelFooter extends Observable {
+
+  // Value
+  bool;
+
+  constructor() {
+    super();
+    this.bool;
+  }
+
+  setValue(value) {
+    if (this.bool != value) {
+      console.log("Footer value has changed: " + value);
+      this.bool = value;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+
+  getValue() {
+    return this.bool;
+  }
+}
+
+class ModelHeader extends Observable {
+
+  // Value
+  bool;
+
+  constructor() {
+    super();
+    this.bool;
+  }
+
+  setValue(value) {
+    if (this.bool != value) {
+      console.log("Header value has changed: " + value);
+      this.bool = value;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+
+  getValue() {
+    return this.bool;
   }
 }

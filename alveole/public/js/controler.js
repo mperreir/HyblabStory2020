@@ -1,33 +1,73 @@
-class Controler {
+class SuperControler {
 
-  constructor(model) {
+  constructor(modelSlide, modelFooter, modelHeader) {
 
-    // View
+    // Header
     var viewHeader = new ViewHeader();
+    let updateHeader = new UpdateHeader(modelHeader, viewHeader.div);
+    modelFooter.addObservers(updateHeader);
+
+    // Right
+    var viewRight = new ViewRight();
+
+    // Footer
     var viewFooter = new ViewFooter();
-    var viewLeft   = new ViewLeft();
-    var viewCenter = new ViewCenter();
-    var viewRight  = new ViewRight();
-
-    // Listener of view
+    let updateFooter = new UpdateFooter(modelFooter, viewFooter.div);
+    modelFooter.addObservers(updateFooter);
 
 
-    // Observer of model
-    // var update1 = new Update(model, viewHeader);
-    // var update2 = new Update(model, viewFooter);
-    // model.addObservers(update1);
-    // model.addObservers(update2);
+
   }
 }
 
 class Update extends Observer {
 
-    constructor(model, composant) {
-      super();
-      this.model = model;
-      this.composant = composant;
-    }
+  constructor(model, composant) {
+    super();
+    this.model = model;
+    this.composant = composant;
+  }
 
-    update(observable, object) {
+  update(observable, object) {
+  }
+}
+
+class UpdateFooter extends Observer {
+
+  constructor(model, composant) {
+    super();
+    this.model = model;
+    this.composant = composant;
+  }
+
+  update(observable, object) {
+    let val = observable.getValue();
+    if (val == true) {
+      this.composant.style.visibility = 'visible';
+    } else if (val == false) {
+      this.composant.style.visibility = 'hidden';
+    } else {
+      console.log("err : value not handled (updateFooter observer)");
     }
+  }
+}
+
+class UpdateHeader extends Observer {
+
+  constructor(model, composant) {
+    super();
+    this.model = model;
+    this.composant = composant;
+  }
+
+  update(observable, object) {
+    let val = observable.getValue();
+    if (val == true) {
+      this.composant.style.visibility = 'visible';
+    } else if (val == false) {
+      this.composant.style.visibility = 'hidden';
+    } else {
+      console.log("err : value not handled (updateFooter observer)");
+    }
+  }
 }

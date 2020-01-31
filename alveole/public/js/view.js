@@ -3,10 +3,10 @@ class ViewHeader {
       this.main = document.querySelector("main");
       let header = document.createElement('header');
 
-      let div = document.createElement('div');
-      div.setAttribute('id', 'header_brand');
+      this.div = document.createElement('div');
+      this.div.setAttribute('id', 'header_brand');
 
-      header.appendChild(div);
+      header.appendChild(this.div);
 
       Snap.load('data/header_brand.svg', function(data) {
         let snap = Snap('#header_brand');
@@ -23,10 +23,10 @@ class ViewFooter {
     this.main = document.querySelector('main');
     let footer = document.createElement('footer');
 
-    let div = document.createElement('div');
-    div.setAttribute('id', 'footer_ellipse');
+    this.div = document.createElement('div');
+    this.div.setAttribute('id', 'footer_ellipse');
 
-    footer.appendChild(div);
+    footer.appendChild(this.div);
 
     Snap.load('data/footer_ellipse.svg', function(data) {
 
@@ -34,7 +34,7 @@ class ViewFooter {
       let snap = Snap('#footer_ellipse');
       snap.append(data);
     });
-    
+
     this.main.appendChild(footer);
   }
 }
@@ -69,5 +69,13 @@ class ViewRight {
     right.setAttribute('id', 'right');
 
     this.main.appendChild(right);
+  }
+}
+
+class ViewStupidButtons {
+
+  constructor() {
+    this.right = document.querySelector('main');
+    let right = document.createElement('div');
   }
 }
