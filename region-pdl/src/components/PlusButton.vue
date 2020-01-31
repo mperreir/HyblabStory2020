@@ -6,11 +6,9 @@
         v-on:click="plusOnClick"
         v-bind:class="{ spinnin: popover, pulse: pulse }"
       />
-      <span
-        class="bg-darkblue cream"
-        v-if="popover"
-        v-bind:class="{ popover: popover }"
-      >{{ popoverText }}</span>
+      <span class="bg-darkblue cream" v-if="popover" v-bind:class="{ popover: popover }">
+        <slot></slot>
+      </span>
     </span>
   </div>
 </template>
@@ -23,12 +21,7 @@ export default {
     Plus
   },
   name: "PlusButton",
-  props: {
-    popoverText: {
-      type: String,
-      default: ""
-    }
-  },
+  props: ["value"],
   data: () => ({
     popover: false,
     pulse: true
@@ -37,9 +30,27 @@ export default {
     plusOnClick() {
       this.popover = !this.popover;
 
-      if (this.pulse === true) this.pulse = false;
+      if (this.pulse === true) {
+        this.pulse = false;
+      }
+
+      if (this.popover === true) {
+        this.$emit("open");
+      }
     },
-    outsideOnClick() {}
+    close() {
+      if (this.popover === true) {
+        this.popover = false;
+        this.$emit("close");
+      }
+    }
+  },
+  watch: {
+    value: function(oldValue, newValue) {
+      if (newValue === false) {
+        this.close();
+      }
+    }
   }
 };
 </script>
@@ -50,8 +61,8 @@ export default {
 }
 
 .plus {
-  height: 6vh;
-  width: 6vh;
+  height: 3vw;
+  max-width: auto;
   border-radius: 50%;
 }
 
@@ -79,7 +90,7 @@ export default {
   box-shadow: 2px 2px 1.5px rgba(0, 0, 0, 0.3);
   font-size: 25px;
   left: -117px;
-  padding: 30px 20px;
+  padding: 0 20px;
   position: absolute;
   width: 250px;
   text-align: center;
@@ -202,22 +213,22 @@ export default {
 
 @-webkit-keyframes pulse {
   to {
-    box-shadow: 0 0 0 20px;
+    box-shadow: 0 0 0 1.5vw rgba(61, 115, 232, 0);
   }
 }
 @-moz-keyframes pulse {
   to {
-    box-shadow: 0 0 0 20px rgba(61, 115, 232, 0);
+    box-shadow: 0 0 0 1.5vw rgba(61, 115, 232, 0);
   }
 }
 @-ms-keyframes pulse {
   to {
-    box-shadow: 0 0 0 20px rgba(61, 115, 232, 0);
+    box-shadow: 0 0 0 1.5vw rgba(61, 115, 232, 0);
   }
 }
 @keyframes pulse {
   to {
-    box-shadow: 0 0 0 20px rgba(61, 115, 232, 0);
+    box-shadow: 0 0 0 1.5vw rgba(61, 115, 232, 0);
   }
 }
 </style>
