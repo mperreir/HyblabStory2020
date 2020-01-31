@@ -98,11 +98,28 @@ footer {
 
 #center {
   position: absolute;
+  display: block;
   top: 15%;
   width: 60%;
   height: 65%;
   left: 20%;
   background-color: #black;
+}
+
+.slide1 {
+  position: absolute;
+}
+
+#svg_hotel {
+  left: 0;
+  width: 40%!important;
+  height: 40%!important;
+}
+
+#svg_studio {
+  right: 0;
+  width: 40%!important;
+  height: 40%!important;
 }
 
 /* on fait en sorte que le slidr et les slides remplissent tout notre conteneur */

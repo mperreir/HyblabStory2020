@@ -54,10 +54,10 @@ class ViewCenter {
 
   constructor() {
     this.main = document.querySelector('main');
-    let center = document.createElement('div');
-    center.setAttribute('id', 'center');
+    this.div = document.createElement('div');
+    this.div.setAttribute('id', 'center');
 
-    this.main.appendChild(center);
+    this.main.appendChild(this.div);
   }
 }
 

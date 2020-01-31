@@ -101,3 +101,84 @@ class ModelSlide extends Observable {
     return footValues;
   }
 }
+
+class ModelSlide1 extends Observable {
+
+  // value
+  bool;
+  choice;
+  answer;
+  instanciated;
+  hotel;
+  studio;
+
+  constructor() {
+    super();
+    this.bool = false;
+    this.choice;
+    this.answer = 'studio';
+    this.instanciated = false;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+
+  destroyHotel() {
+    if (this.instanciated == true) {
+      this.hotel.destroy();
+    } else {
+      console.log('err : not instanciated');
+    }
+  }
+
+  destroyStudio() {
+    if (this.instanciated == true) {
+      this.studio.destroy();
+    } else {
+      console.log('err : not instanciated');
+    }
+  }
+
+  loadHotel() {
+    this.hotel = bodymovin.loadAnimation({
+      container : document.getElementById('center'),
+      renderer: 'svg',
+      name: 'animation1',
+      loop: true,
+      autoplay: false,
+      path: 'data/hotel.json',
+      rendererSettings: {
+        className: 'slide1',
+        id: 'svg_hotel'
+      }
+    });
+    this.instanciated = true;
+    return this.hotel;
+  }
+
+  loadStudio() {
+    this.studio = bodymovin.loadAnimation({
+      container : document.getElementById('center'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: false,
+      path: 'data/studio.json',
+      rendererSettings: {
+        className: 'slide1',
+        id: 'svg_studio'
+      }
+    });
+    this.instanciated = true;
+    return this.studio;
+  }
+
+}
