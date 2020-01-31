@@ -1,0 +1,72 @@
+#page10 {
+	background-image: url("../img/fond10.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+#img-journaliste {
+
+}
+
+#img-decorateur {
+	position: absolute;
+	width : 30%;
+	height : 40%;
+	top : 60%;
+	left : 70%;
+	z-index: 200;
+
+}
+
+
+#page10 p {
+	z-index: 200;
+	color : black;
+    text-align : center;
+    text-align: justify;
+    font-family: Parisienne;
+    font-style: normal;
+	font-weight: normal;
+/*	background-color: #C4C4C4;
+*/	padding: 2%;
+}
+
+
+
+#container-dialogue {
+	position: absolute;
+	width: 45%;
+	height: 10%;
+	left: 13%;
+	top: 18%;
+}
+
+
+/* Media queries pour le responsive */
+
+@media screen and (max-aspect-ratio: 16/9){
+   
+    #page10 p{
+        font-size: 1.8vw;
+    }
+
+
+}
+
+
+@media screen and (min-aspect-ratio: 16/9){
+    
+   #page10 p{
+        font-size: 3vh;
+    }
+
+}
+
+
+
+
+
+
+
+
