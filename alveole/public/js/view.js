@@ -75,7 +75,22 @@ class ViewRight {
 class ViewStupidButtons {
 
   constructor() {
-    this.right = document.querySelector('main');
-    let right = document.createElement('div');
+    this.right = document.querySelector('#right');
+
+    let div = document.createElement('div');
+    div.setAttribute('id', 'buttonContainers');
+
+    this.prev = document.createElement('button');
+    this.prev.setAttribute('class', 'stupidButton');
+    this.prev.innerHTML = "prev";
+
+    this.next = document.createElement('button');
+    this.next.setAttribute('class', 'stupidButton');
+    this.next.innerHTML = "next";
+
+    div.appendChild(this.prev);
+    div.appendChild(this.next);
+
+    this.right.appendChild(div);
   }
 }

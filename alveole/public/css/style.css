@@ -86,6 +86,16 @@ footer {
   background-color: #black;
 }
 
+#buttonContainers {
+  display: block;
+  position: absolute;
+}
+.stupidButton {
+  position: relative;
+  width: 50px;
+  height: 30px;
+}
+
 #center {
   position: absolute;
   top: 15%;

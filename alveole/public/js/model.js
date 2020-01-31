@@ -56,6 +56,11 @@ class ModelSlide extends Observable {
 
   }
 
+  // Get the slide position
+  getValue() {
+    return this.value;
+  }
+
   // Change to next slide (meaning animate the footer and make the transitions)
   nextSlide() {
     if (this.value < this.obj.length - 1) {
@@ -67,7 +72,7 @@ class ModelSlide extends Observable {
 
   // Change to previous slide (meaning animate the footer and make the transitions) ! most likely useless
   prevSlide() {
-    if (this.value < 0) {
+    if (this.value > 0) {
       this.setValue(this.value - 1);
     } else {
       console.log("err: out of range");
@@ -94,53 +99,5 @@ class ModelSlide extends Observable {
       }
     }
     return footValues;
-  }
-}
-
-class ModelFooter extends Observable {
-
-  // Value
-  bool;
-
-  constructor() {
-    super();
-    this.bool;
-  }
-
-  setValue(value) {
-    if (this.bool != value) {
-      console.log("Footer value has changed: " + value);
-      this.bool = value;
-      this.setChanged();
-      this.notifyObservers();
-    }
-  }
-
-  getValue() {
-    return this.bool;
-  }
-}
-
-class ModelHeader extends Observable {
-
-  // Value
-  bool;
-
-  constructor() {
-    super();
-    this.bool;
-  }
-
-  setValue(value) {
-    if (this.bool != value) {
-      console.log("Header value has changed: " + value);
-      this.bool = value;
-      this.setChanged();
-      this.notifyObservers();
-    }
-  }
-
-  getValue() {
-    return this.bool;
   }
 }
