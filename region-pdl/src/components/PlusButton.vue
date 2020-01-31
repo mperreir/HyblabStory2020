@@ -3,7 +3,7 @@
     <span class="qs">
       <Plus
         class="plus"
-        v-on:click="plusOnClick"
+        @click="plusOnClick"
         v-bind:class="{ spinnin: popover, pulse: pulse }"
       />
       <span class="bg-darkblue cream" v-if="popover" v-bind:class="{ popover: popover }">
@@ -41,7 +41,6 @@ export default {
     close() {
       if (this.popover === true) {
         this.popover = false;
-        this.$emit("close");
       }
     }
   },
