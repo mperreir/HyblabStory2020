@@ -49,4 +49,11 @@ html, body, #app, .mainScene {
 .cream {
   color: #fcf8ef;
 }
+
+.svg-scene {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
 </style>

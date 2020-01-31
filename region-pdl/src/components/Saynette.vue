@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
     .Saynette {
-        width: 100%;
-        height: 100%
+        /* min-width: 100vw;
+        max-height: 100vh */
     }
 </style>

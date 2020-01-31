@@ -1,6 +1,6 @@
 <template>
 <div class="Saynette">
-
+    <p class="Example-text">Saynette d'exemple</p>
 </div>
 </template>
 
@@ -25,5 +25,9 @@ export default {
     .Saynette {
         width: 100%;
         height: 100%;
+    }
+
+    .Example-text {
+        color: #FFF;
     }
 </style>

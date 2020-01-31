@@ -26,7 +26,7 @@
 
 <script>
 import Saynette from "../Saynette";
-import MaisonSVG from "@/assets/Sans titre - 2.svg";
+import MaisonSVG from "@/assets/house.svg";
 import PlusButton from "@/components/PlusButton.vue";
 
 export default {
