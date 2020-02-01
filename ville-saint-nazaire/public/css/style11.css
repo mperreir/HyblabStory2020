@@ -101,8 +101,8 @@
 	position: absolute;
 	width: 6%;
 	height: 23%;
-	top:41%;
-	left: 50%;
+	/*top:41%;
+	left: 50%;*/
 	z-index:4;
 }
 
@@ -221,18 +221,17 @@
 
 
 #page11 p{
-    font-family:"Parisienne";
-    color:black;
+	font-family:Vibur;
+    color: #265984;
     text-align: justify;
 }
-
-
 
 #ecume{
  
  	position: absolute;
     left:6%;
     top: 75%;
+
 
 }
 

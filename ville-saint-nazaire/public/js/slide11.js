@@ -11,7 +11,7 @@ let initSlide11 = function(){
     let coeff1 = (top1)/8;
     let coeff2 = (left1-50)/8;
 
-    if(left1<50){
+    if(left1<=50){
       var id = setInterval(frame, 100);
 
       function frame() {
@@ -55,7 +55,7 @@ let initSlide11 = function(){
 
 
   myMove("maq2_1",47,46)
-  //myMove("maq2_2",41,50)
+  myMove("maq2_2",41,50)
   myMove("maq2_3",45,41)
   myMove("maq2_4",55,53)
   myMove("maq2_5",58,45)

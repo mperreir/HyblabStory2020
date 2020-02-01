@@ -39,6 +39,7 @@ let initSlide4 = function(){
 
 
 	d3.select('#next5').on('click', function(){
+		son.pause();
   		moveDown();
 		initSlide5();
 	});
