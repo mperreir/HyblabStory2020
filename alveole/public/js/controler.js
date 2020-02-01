@@ -25,11 +25,16 @@ class SuperControler {
 
     // ModelSlide1
     let modelSlide1 = new ModelSlide1();
-    let updateSlide1 = new UpdateSlide1(modelSlides, viewCenter.div);
+    let updateSlide1 = new UpdateSlide1();
     modelSlide1.addObservers(updateSlide1);
 
+    // ModelSlide2
+    let modelSlide2 = new ModelSlide2();
+    let updateSlide2 = new UpdateSlide2(viewCenter.div);
+    modelSlide2.addObservers(updateSlide2);
+
     // Mediator of slide model
-    let mediatorSlide = new MediatorSlide(modelSlides, modelSlide1, viewFooter, viewLeft, viewCenter, viewRight);
+    let mediatorSlide = new MediatorSlide(modelSlides, modelSlide1, modelSlide2, viewLeft, viewCenter, viewRight);
     modelSlides.addObservers(mediatorSlide);
 
     // Adding Listenners
@@ -42,15 +47,32 @@ class SuperControler {
   }
 }
 
-class Update extends Observer {
+class MediatorSlide extends Observer {
 
-  constructor(model, composant) {
+  constructor(modelSlide, modelSlide1, modelSlide2, viewLeft, viewCenter, viewRight) {
     super();
-    this.model = model;
-    this.composant = composant;
+    this.modelSlide = modelSlide;
+    this.modelSlide1 = modelSlide1;
+    this.modelSlide2 = modelSlide2;
+
+    this.viewCenter = viewCenter;
+    this.viewLeft   = viewLeft  ;
+    this.viewRight  = viewRight ;
   }
 
   update(observable, object) {
+    let val = observable.getValue();
+    if (val != 1) {
+      this.modelSlide1.setValue(false);
+    } else if (val == 1) {
+      this.modelSlide1.setValue(true);
+    }
+
+    if (val != 2) {
+      this.modelSlide2.setValue(false);
+    } else if (val == 2) {
+      this.modelSlide2.setValue(true);
+    }
   }
 }
 
@@ -96,34 +118,12 @@ class UpdateHeader extends Observer {
   }
 }
 
-class MediatorSlide extends Observer {
 
-  constructor(modelSlide, modelSlide1, viewFooter, viewLeft, viewCenter, viewRight) {
-    super();
-    this.modelSlide = modelSlide;
-    this.modelSlide1 = modelSlide1;
-    this.viewFooter = viewFooter;
-    this.viewCenter = viewCenter;
-    this.viewLeft   = viewLeft  ;
-    this.viewRight  = viewRight ;
-  }
-
-  update(observable, object) {
-    let val = observable.getValue();
-    if (val != 1) {
-      this.modelSlide1.setValue(false);
-    } else if (val == 1) {
-      this.modelSlide1.setValue(true);
-    }
-  }
-}
 
 class UpdateSlide1 extends Observer {
 
-  constructor(model, composant) {
+  constructor() {
     super();
-    this.model = model;
-    this.composant = composant;
   }
 
   update(observable, object) {
@@ -150,6 +150,31 @@ class UpdateSlide1 extends Observer {
     } else if (val == false) {
       observable.destroyHotel();
       observable.destroyStudio();
+    }
+  }
+}
+
+class UpdateSlide2 extends Observer {
+
+  constructor(composant) {
+    super();
+    this.composant = composant;
+  }
+
+  update(observable, object) {
+    let val = observable.getValue();
+
+    if (val == true) {
+
+      let container = document.createElement('div');
+      container.setAttribute('id', 'slide2_micros');
+      this.composant.appendChild(container);
+
+      let micros = observable.loadMicros(container);
+
+    } else if (val == false) {
+       this.composant.querySelector("#slide2_micros").remove();
+       observable.setDestroyed();
     }
   }
 }

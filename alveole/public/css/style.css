@@ -129,6 +129,35 @@ footer {
   height: 40%!important;
 }
 
+#slide2_micros {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.slide2 {
+  height: 20%;
+  width: 20%;
+}
+
+.slide2 .st0 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-miterlimit: 10;
+}
+
+.slide2 .st1 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+
 /* on fait en sorte que le slidr et les slides remplissent tout notre conteneur */
 #slidr, #slidr section{
     background-color: dodgerblue;
@@ -181,13 +210,14 @@ footer {
     font-size: 20%;
     text-align: center;
 } */
-footer{
+
+/* footer{
     width: 100%;
     bottom: 5%;
     position: absolute;
     font-size: 20%;
     text-align: center;
-}
+} */
 
 /* Pour que la vidéo remplisse son conteneur (elle sera un peu coupée si nécessaire...) */
 .vjs-tech { object-fit: cover; }

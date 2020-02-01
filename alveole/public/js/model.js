@@ -142,6 +142,7 @@ class ModelSlide1 extends Observable {
   destroyStudio() {
     if (this.instanciated == true) {
       this.studio.destroy();
+      this.instanciated = false;
     } else {
       console.log('err : not instanciated');
     }
@@ -178,6 +179,64 @@ class ModelSlide1 extends Observable {
     });
     this.instanciated = true;
     return this.studio;
+  }
+
+}
+
+class ModelSlide2 extends Observable {
+
+  // values;
+  bool;
+  choice;
+  answer;
+  instanciated;
+
+  constructor() {
+    super();
+    this.bool = false;
+    this.instanciated = false;
+    this.choice;
+    this.answer;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+
+  loadMicros(container) {
+    if (this.instanciated == false) {
+      Snap.load('data/micro_cravate.svg', function(data) {
+        let snap = Snap(container);
+        snap.append(data);
+      });
+      Snap.load('data/micro_canon.svg', function(data) {
+        let snap = Snap(container);
+        snap.append(data);
+      });
+      Snap.load('data/micro_chant.svg', function(data) {
+        let snap = Snap(container);
+        snap.append(data);
+      });
+      Snap.load('data/micro_XY.svg', function(data) {
+        let snap = Snap(container);
+        snap.append(data);
+      });
+      this.instanciated = true;
+    } else {
+      console.log('err : slide2 micros already instanciated');
+    }
+  }
+
+  setDestroyed() {
+    this.instanciated = false;
   }
 
 }
