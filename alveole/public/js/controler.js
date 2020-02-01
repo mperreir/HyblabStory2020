@@ -1,15 +1,15 @@
 class SuperControler {
 
-  constructor(modelSlide) {
+  constructor(modelSlides) {
     // Header
     let viewHeader = new ViewHeader();
-    let updateHeader = new UpdateHeader(modelSlide, viewHeader.div);
-    modelSlide.addObservers(updateHeader);
+    let updateHeader = new UpdateHeader(modelSlides, viewHeader.div);
+    modelSlides.addObservers(updateHeader);
 
     // Footer
     var viewFooter = new ViewFooter();
-    let updateFooter = new UpdateFooter(modelSlide, viewFooter.div);
-    modelSlide.addObservers(updateFooter);
+    let updateFooter = new UpdateFooter(viewFooter.div);
+    modelSlides.addObservers(updateFooter);
 
     // Center
     var viewCenter = new ViewCenter();
@@ -25,19 +25,19 @@ class SuperControler {
 
     // ModelSlide1
     let modelSlide1 = new ModelSlide1();
-    let updateSlide1 = new UpdateSlide1(modelSlide, viewCenter.div);
+    let updateSlide1 = new UpdateSlide1(modelSlides, viewCenter.div);
     modelSlide1.addObservers(updateSlide1);
 
     // Mediator of slide model
-    let mediatorSlide = new MediatorSlide(modelSlide, modelSlide1, viewFooter, viewLeft, viewCenter, viewRight);
-    modelSlide.addObservers(mediatorSlide);
+    let mediatorSlide = new MediatorSlide(modelSlides, modelSlide1, viewFooter, viewLeft, viewCenter, viewRight);
+    modelSlides.addObservers(mediatorSlide);
 
     // Adding Listenners
     viewStupidButtons.next.addEventListener('click', function() {
-      modelSlide.nextSlide();
+      modelSlides.nextSlide();
     });
     viewStupidButtons.prev.addEventListener('click', function() {
-      modelSlide.prevSlide();
+      modelSlides.prevSlide();
     });
   }
 }
@@ -56,18 +56,20 @@ class Update extends Observer {
 
 class UpdateFooter extends Observer {
 
-  constructor(model, composant) {
+  constructor(div, svg) {
     super();
-    this.model = model;
-    this.composant = composant;
+    this.div = div;
+    this.svg = svg;
   }
 
   update(observable, object) {
-    let val = this.model.getValue();
+    let val = observable.getValue();
     if (val == 0 || val == observable.obj.length - 1) {
-      this.composant.style.visibility = 'hidden';
+      this.div.style.visibility = 'hidden';
     } else if (val > 0 || val < observable.obj.length - 1) {
-      this.composant.style.visibility = 'visible';
+      this.div.style.visibility = 'visible';
+      let titles = Object.values(observable.getFooterValues()).toString();
+      document.getElementById('footer_titles').textContent = titles;
     } else {
       console.log("err : value not handled (updateFooter observer)");
     }

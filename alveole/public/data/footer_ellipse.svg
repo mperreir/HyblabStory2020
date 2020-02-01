@@ -1,3 +1,4 @@
 <svg id="svg_ellipse" width="705" height="111" viewBox="0 0 705 111" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M704 352C704 545.851 546.629 703 352.5 703C158.371 703 1 545.851 1 352C1 158.149 158.371 1 352.5 1C546.629 1 704 158.149 704 352Z" stroke="#F7F0DB" stroke-width="2"/>
+<text id="footer_titles" x="200" y="50" font-family="Verdana" font-size="20" fill="#F7F0DB"></text>
 </svg>

@@ -34,7 +34,6 @@ class ViewFooter {
       let snap = Snap('#footer_ellipse');
       snap.append(data);
     });
-
     this.main.appendChild(footer);
   }
 }

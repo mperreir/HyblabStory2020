@@ -61,6 +61,11 @@ footer {
   left: 0;
 }
 
+#svg_ellipse text {
+  position: absolute;
+  left: 50%;
+}
+
 #svg_ellipse_big_circle {
   position: absolute;
   width: 25px;
@@ -111,14 +116,16 @@ footer {
 }
 
 #svg_hotel {
-  left: 0;
-  width: 40%!important;
+  left: 10%;
+  top: 20%;
+  width: 25%!important;
   height: 40%!important;
 }
 
 #svg_studio {
-  right: 0;
-  width: 40%!important;
+  right: 10%;
+  top: 20%;
+  width: 25%!important;
   height: 40%!important;
 }
 

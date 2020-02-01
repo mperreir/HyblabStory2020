@@ -87,8 +87,7 @@ class ModelSlide extends Observable {
     }
     if (this.value != undefined) {
       if (this.value == 0) {
-        footValues[2] = this.obj[this.value];
-        footValues[3] = this.obj[this.value + 1];
+        // if first slide return empty object
       } else if (this.value == this.obj.length - 1) {
         footValues[1] = this.obj[this.value - 1];
         footValues[2] = this.obj[this.value];
