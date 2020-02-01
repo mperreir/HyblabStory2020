@@ -2,8 +2,8 @@
   <div class="mainScene">
     <Background />
     <!--<TestSaynetteButtonPlus />-->
-    <Maison v-if="currentScene === Scenes.house"/>
-    <SaynetteExample v-if="currentScene == Scenes.example"/>
+    <!--<Maison v-if="currentScene === Scenes.house"/>-->
+    <!--<SaynetteExample v-if="currentScene == Scenes.example"/>-->
     
 </div>
 </template>
