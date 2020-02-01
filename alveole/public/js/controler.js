@@ -23,6 +23,11 @@ class SuperControler {
     // Stupid buttons
     var viewStupidButtons = new ViewStupidButtons();
 
+    // ModelSlide0
+    let modelIntroSlide = new ModelIntroSlide();
+    let updateIntroSlide = new UpdateIntroSlide();
+    modelIntroSlide.addObservers(updateIntroSlide);
+
     // ModelSlide1
     let modelSlide1 = new ModelSlide1();
     let updateSlide1 = new UpdateSlide1();
@@ -33,8 +38,53 @@ class SuperControler {
     let updateSlide2 = new UpdateSlide2(viewCenter.div);
     modelSlide2.addObservers(updateSlide2);
 
+    // ModelSlide3
+    let modelSlide3 = new ModelSlide3();
+    let updateSlide3 = new UpdateSlide3(viewCenter.div);
+    modelSlide3.addObservers(updateSlide3);
+
+    // ModelSlide4
+    let modelSlide4 = new ModelSlide4();
+    let updateSlide4 = new UpdateSlide4(viewCenter.div);
+    modelSlide4.addObservers(updateSlide4);
+
+    // ModelSlide5
+    let modelSlide5 = new ModelSlide5();
+    let updateSlide5 = new UpdateSlide5(viewCenter.div);
+    modelSlide5.addObservers(updateSlide5);
+
+    // ModelSlide6
+    let modelSlide6 = new ModelSlide6();
+    let updateSlide6 = new UpdateSlide6(viewCenter.div);
+    modelSlide6.addObservers(updateSlide6);
+
+    // ModelSlide7
+    let modelSlide7 = new ModelSlide7();
+    let updateSlide7 = new UpdateSlide7(viewCenter.div);
+    modelSlide7.addObservers(updateSlide7);
+
+    // ModelSlide8
+    let modelSlide8 = new ModelSlide8();
+    let updateSlide8 = new UpdateSlide8(viewCenter.div);
+    modelSlide8.addObservers(updateSlide8);
+
+    // ModelLastSlide
+    let modelLastSlide = new ModelLastSlide();
+    let updateLastSlide = new UpdateLastSlide();
+    modelLastSlide.addObservers(updateLastSlide);
+
     // Mediator of slide model
-    let mediatorSlide = new MediatorSlide(modelSlides, modelSlide1, modelSlide2, viewLeft, viewCenter, viewRight);
+    let mediatorSlide = new MediatorSlide(  modelIntroSlide,
+                                            modelSlide1,
+                                            modelSlide2,
+                                            modelSlide3,
+                                            modelSlide4,
+                                            modelSlide5,
+                                            modelSlide6,
+                                            modelSlide7,
+                                            modelSlide8,
+                                            modelLastSlide
+                                          );
     modelSlides.addObservers(mediatorSlide);
 
     // Adding Listenners
@@ -49,29 +99,35 @@ class SuperControler {
 
 class MediatorSlide extends Observer {
 
-  constructor(modelSlide, modelSlide1, modelSlide2, viewLeft, viewCenter, viewRight) {
-    super();
-    this.modelSlide = modelSlide;
-    this.modelSlide1 = modelSlide1;
-    this.modelSlide2 = modelSlide2;
+  constructor(modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide) {
 
-    this.viewCenter = viewCenter;
-    this.viewLeft   = viewLeft  ;
-    this.viewRight  = viewRight ;
+    super();
+
+    this.slides = {
+      "0": modelIntroSlide,
+      "1": modelSlide1,
+      "2": modelSlide2,
+      "3": modelSlide3,
+      "4": modelSlide4,
+      "5": modelSlide5,
+      "6": modelSlide6,
+      "7": modelSlide7,
+      "8": modelSlide8,
+      "9": modelLastSlide
+    }
   }
 
   update(observable, object) {
     let val = observable.getValue();
-    if (val != 1) {
-      this.modelSlide1.setValue(false);
-    } else if (val == 1) {
-      this.modelSlide1.setValue(true);
-    }
 
-    if (val != 2) {
-      this.modelSlide2.setValue(false);
-    } else if (val == 2) {
-      this.modelSlide2.setValue(true);
+    const entries = Object.entries(this.slides);
+
+    for (const [i, model] of entries) {
+      if (i != val) {
+        model.setValue(false);
+      } else {
+        model.setValue(true);
+      }
     }
   }
 }
@@ -118,7 +174,16 @@ class UpdateHeader extends Observer {
   }
 }
 
+class UpdateIntroSlide extends Observer {
 
+  constructor() {
+    super();
+  }
+
+  update(observable, object) {
+
+  }
+}
 
 class UpdateSlide1 extends Observer {
 
@@ -176,5 +241,82 @@ class UpdateSlide2 extends Observer {
        this.composant.querySelector("#slide2_micros").remove();
        observable.setDestroyed();
     }
+  }
+}
+
+class UpdateSlide3 extends Observer {
+
+  constructor() {
+    super();
+  }
+
+  update(observable, object) {
+
+  }
+}
+
+class UpdateSlide4 extends Observer {
+
+  constructor() {
+    super();
+  }
+
+  update(observable, object) {
+
+  }
+}
+
+class UpdateSlide5 extends Observer {
+
+  constructor() {
+    super();
+  }
+
+  update(observable, object) {
+
+  }
+}
+
+class UpdateSlide6 extends Observer {
+
+  constructor() {
+    super();
+  }
+
+  update(observable, object) {
+
+  }
+}
+
+class UpdateSlide7 extends Observer {
+
+  constructor() {
+    super();
+  }
+
+  update(observable, object) {
+
+  }
+}
+
+class UpdateSlide8 extends Observer {
+
+  constructor() {
+    super();
+  }
+
+  update(observable, object) {
+
+  }
+}
+
+class UpdateLastSlide extends Observer {
+
+  constructor() {
+    super();
+  }
+
+  update(observable, object) {
+
   }
 }

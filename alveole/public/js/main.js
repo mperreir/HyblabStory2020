@@ -6,7 +6,5 @@ window.onload = function(){
   superControler = new SuperControler(modelSlide);
 
   // Initialization
-  modelSlide.setValue(0);
-
-  // //set the value 0 to initial the page
+  modelSlide.setValue(0); // Do not remove, important
 }

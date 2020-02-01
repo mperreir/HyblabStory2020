@@ -11,7 +11,6 @@ class Model extends Observable {
   setValue(value) {
     if (value != this.value) {
       this.value = value;
-      console.log("Model value has been changed");
       this.setChanged();
       this.notifyObservers();
     }
@@ -46,7 +45,6 @@ class ModelSlide extends Observable {
     if (value >= 0 && value < this.obj.length) {
       if (value != this.value) {
         this.value = value;
-        console.log("Slide has changed: " + this.obj[this.value]);
         this.setChanged();
         this.notifyObservers();
       }
@@ -85,6 +83,7 @@ class ModelSlide extends Observable {
       "2": null,
       "3": null
     }
+
     if (this.value != undefined) {
       if (this.value == 0) {
         // if first slide return empty object
@@ -100,6 +99,30 @@ class ModelSlide extends Observable {
     return footValues;
   }
 }
+
+class ModelIntroSlide extends Observable {
+
+  // values
+  bool;
+
+  constructor() {
+    super();
+    this.bool = false;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+}
+
 
 class ModelSlide1 extends Observable {
 
@@ -238,5 +261,165 @@ class ModelSlide2 extends Observable {
   setDestroyed() {
     this.instanciated = false;
   }
+}
 
+class ModelSlide3 extends Observable {
+
+  // values
+  bool;
+
+  constructor() {
+    super();
+    this.bool = false;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+}
+
+class ModelSlide4 extends Observable {
+
+  // values
+  bool;
+
+  constructor() {
+    super();
+    this.bool = false;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+}
+
+class ModelSlide5 extends Observable {
+
+  // values
+  bool;
+
+  constructor() {
+    super();
+    this.bool = false;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+}
+
+class ModelSlide6 extends Observable {
+
+  // values
+  bool;
+
+  constructor() {
+    super();
+    this.bool = false;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+}
+
+class ModelSlide7 extends Observable {
+
+  // values
+  bool;
+
+  constructor() {
+    super();
+    this.bool = false;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+}
+
+class ModelSlide8 extends Observable {
+
+  // values
+  bool;
+
+  constructor() {
+    super();
+    this.bool = false;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+}
+
+class ModelLastSlide extends Observable {
+
+  // values
+  bool;
+
+  constructor() {
+    super();
+    this.bool = false;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
 }
