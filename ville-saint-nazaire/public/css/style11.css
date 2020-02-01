@@ -4,11 +4,17 @@
 	background-image: url(../img/fond_slide11.jpg);
 	background-repeat: no-repeat;
 	background-size:100%;
-	width:100%;
-	height:100%;
 }
 
-
+#next12-1{
+	cursor : pointer;
+}
+#next12-2{
+	cursor : pointer;
+}
+#next12-3{
+	cursor : pointer;
+}
 
 
 #maq1_1{

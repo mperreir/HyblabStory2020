@@ -78,8 +78,10 @@ let initSlide11 = function(){
     initSlide12();
   });
 
-  d3.select('#next12-2').on('click', function(){
+  d3.select('#next12-2').on('click', function() {
     moveDown();
+    initSlide12();
+  });
 
 
   d3.select('#next12-3').on('click', function(){

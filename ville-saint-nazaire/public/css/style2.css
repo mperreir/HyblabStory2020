@@ -5,19 +5,14 @@
 }
 #texteBombardement{
     position: absolute;
-    width: 1018.09px;
-    height: 207px;
-    left: 378px;
-    top: 752.71px;
+    width: 53%;
+    height: 19%;
+    left: 19%;
+    top: 76%;
 }
 
 #texteBombardement p{
     font-family: Vibur;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 42px;
-    line-height: 62px;
-
     color: #265984;
 }
 
