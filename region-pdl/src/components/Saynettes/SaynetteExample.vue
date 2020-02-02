@@ -1,7 +1,9 @@
 <template>
-<div class="Saynette">
-    <p class="Example-text">Saynette d'exemple</p>
-</div>
+  <div class="Saynette">
+    <p class="Example-text">
+      Saynette d'exemple
+    </p>
+  </div>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
-<div class="Saynette">
+  <div class="Saynette">
     <Background />
-</div>
+  </div>
 </template>
 
 <script>
@@ -14,21 +14,21 @@ export default {
         // List of components usable in the template
         Background
     },
+    computed: {
+        // List of computed variable
+    },
+    mounted() {
+        // Lifecylcle function
+        this.arrive();
+    },
     methods: {
         // List of methods
         arrive() {
             console.log("ok");
         }
     },
-    computed: {
-        // List of computed variable
-    },
     watcher: {
         // List of watcher variable
-    },
-    mounted() {
-        // Lifecylcle function
-        this.arrive();
     }
 };
 

@@ -18,13 +18,13 @@ import House from "@/assets/house.svg";
 import Cloud from "@/assets/nuages.svg";
 
 export default {
+  name: "SaynetteDecor",
   components: {
     Decor,
     Bg,
     House,
     Cloud
   },
-  name: "SaynetteDecor",
   extends: Saynette,
   methods: {
     arrive() {

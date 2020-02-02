@@ -1,31 +1,34 @@
 <template>
-  <div class="saynette">
+  <div class="scene">
     <BgSVG class="svg-scene" />
-    <MaisonSVG class="svg-scene house" />
+    <HouseSVG class="svg-scene house" />
+    <Slider class="slider" />
   </div>
 </template>
 
 <script>
-import MaisonSVG from "@/assets/house.svg";
+import HouseSVG from "@/assets/house.svg";
 import BgSVG from "@/assets/bg-house.svg";
+// import SmallHouseSVG from "@/assets/small-house.svg";
 
-import Saynette from '../Saynette';
+import Saynette from "@/components/Saynette";
+import Slider from "@/components/Saynettes/House/Slider";
 
 export default {
-    name: "Maison",
+    name: "House",
     components: {
-        MaisonSVG,
-        BgSVG
+        BgSVG,
+        HouseSVG,
+        // SmallHouseSVG,
+        Slider
     },
     extends: Saynette,
-
     data: () => ({
         classObject: {
             animated: false,
             fadeInRight: false,
         },
     }),
-
     methods: {
         arrive() {
             this.classObject = {
@@ -34,14 +37,12 @@ export default {
             };
         }
     },
-
-
 };
 
 </script>
 
 <style scoped>
-.saynette {
+.scene {
     display: inline-block;
     position: relative;
     width: 100vw;
@@ -57,12 +58,9 @@ export default {
     height: 100vh;
 }
 
-.text {
+.slider {
     position: absolute;
-    top: 25%;
-    left: 20%;
-    width: 50%;
-    color: red;
-    font-size: 3vw;
+    top: 79%;
+    left: 32%;
 }
 </style>

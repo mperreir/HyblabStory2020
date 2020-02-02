@@ -9,7 +9,7 @@ export default new Vuex.Store({
   },
   mutations: {
     initScene(state, sceneName) {
-      state.currentScene = sceneName; 
+      state.currentScene = sceneName;
     }
   },
   actions: {

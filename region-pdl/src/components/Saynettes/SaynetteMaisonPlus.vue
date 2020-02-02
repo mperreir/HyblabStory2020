@@ -3,19 +3,31 @@
     <MaisonSVG />
     <ul>
       <li>
-        <PlusButton class="plus1" @open="closePopover(1)" v-model="closePopover1">
+        <PlusButton
+          v-model="closePopover1"
+          class="plus1"
+          @open="closePopover(1)"
+        >
           <p>1. Ceci est une information sur la transition énergétique</p>
           <!-- Ajouter n'importe quelle balise HTML -->
         </PlusButton>
       </li>
       <li>
-        <PlusButton class="plus2" @open="closePopover(2)" v-model="closePopover2">
+        <PlusButton
+          v-model="closePopover2"
+          class="plus2"
+          @open="closePopover(2)"
+        >
           <p>2. Ceci est une information sur la transition énergétique</p>
           <!-- Ajouter n'importe quelle balise HTML -->
         </PlusButton>
       </li>
       <li>
-        <PlusButton class="plus3" @open="closePopover(3)" v-model="closePopover3">
+        <PlusButton
+          v-model="closePopover3"
+          class="plus3"
+          @open="closePopover(3)"
+        >
           <p>3. Ceci est une information sur la transition énergétique</p>
           <!-- Ajouter n'importe quelle balise HTML -->
         </PlusButton>
@@ -30,11 +42,11 @@ import MaisonSVG from "@/assets/house.svg";
 import PlusButton from "@/components/PlusButton.vue";
 
 export default {
+  name: "SaynettePlusPopup",
   components: {
     MaisonSVG,
     PlusButton
   },
-  name: "SaynettePlusPopup",
   extends: Saynette,
   data: () => ({
     closePopover1: false,
@@ -48,22 +60,22 @@ export default {
     closePopover(i) {
       switch(i) {
         case 1:
-          this.closePopover1 = false; 
-          this.closePopover2 = true; 
+          this.closePopover1 = false;
+          this.closePopover2 = true;
           this.closePopover3 = true;
           break;
         case 2:
-          this.closePopover2 = false; 
-          this.closePopover1 = true; 
+          this.closePopover2 = false;
+          this.closePopover1 = true;
           this.closePopover3 = true;
           break;
         case 3:
-          this.closePopover3 = false; 
-          this.closePopover1 = true; 
+          this.closePopover3 = false;
+          this.closePopover1 = true;
           this.closePopover2 = true;
           break;
       }
-      
+
     }
   }
 };

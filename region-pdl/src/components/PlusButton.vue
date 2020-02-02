@@ -1,9 +1,17 @@
 <template>
   <div class="plus-button">
     <span class="qs">
-      <Plus class="plus" @click="plusOnClick" v-bind:class="{ spinnin: popover, pulse: pulse }" />
-      <span class="bg-darkblue cream" v-if="popover" v-bind:class="{ popover: popover }">
-        <slot></slot>
+      <Plus
+        class="plus"
+        :class="{ spinnin: popover, pulse: pulse }"
+        @click="plusOnClick"
+      />
+      <span
+        v-if="popover"
+        class="bg-darkblue cream"
+        :class="{ popover: popover }"
+      >
+        <slot />
       </span>
     </span>
   </div>
@@ -13,15 +21,22 @@
 import Plus from "@/assets/plus.svg";
 
 export default {
+  name: "PlusButton",
   components: {
     Plus
   },
-  name: "PlusButton",
   props: ["value"],
   data: () => ({
     popover: false,
     pulse: true
   }),
+  watch: {
+    value: function(oldValue, newValue) {
+      if (newValue === false) {
+        this.close();
+      }
+    }
+  },
   methods: {
     plusOnClick() {
       this.popover = !this.popover;
@@ -37,13 +52,6 @@ export default {
     close() {
       if (this.popover === true) {
         this.popover = false;
-      }
-    }
-  },
-  watch: {
-    value: function(oldValue, newValue) {
-      if (newValue === false) {
-        this.close();
       }
     }
   }

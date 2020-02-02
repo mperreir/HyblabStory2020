@@ -4,7 +4,7 @@ Porteur de projet : **Région Pays de la Loire (Olivier Guillon)**
 
 Nom d'équipe : **GreenLight**
 
-Participants : 
+Participants :
 
 - Sciencescom :
     - Nina Naulleau
@@ -55,3 +55,12 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - Push les modifications : `git push`
 - Se connecter sur [L'espace SSH du projet](https://hyblab.polytech.univ-nantes.fr/ssh/) avec l'identifiant **region-pdl** et le mot de passe **story4region-pdl**.
 - Lancer simplement la commande : `./sync_project`
+
+
+# Set up linter
+
+Install:
+ - https://github.com/steelbrain/linter
+ - https://github.com/hedefalk/atom-vue
+ - https://github.com/AtomLinter/linter-eslint
+   - put this `source.js, source.jsx, source.js.jsx, source.flow, source.babel, source.js-semantic, text.html.vue` in Settings -> List of scopes...
