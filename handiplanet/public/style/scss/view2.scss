@@ -87,6 +87,17 @@
         height: 90%;
         top: -50%;
         position: absolute;
+
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+
+        -webkit-backface-visibility: hidden;
+
+        &:hover{
+          transform: scale(1.2, 1.2);
+        }
         
         img {
           position: relative;
@@ -106,6 +117,7 @@
         animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
         // background-color: #e84c3d;
         border-radius: 50%;
+
       }
 
       @-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
