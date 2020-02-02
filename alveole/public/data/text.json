@@ -1,0 +1,74 @@
+{
+  "introSlide": {
+    "speech": "Vous vous apprêtez à expérimenter la réalisation d’un podcast, du brief à la restitution. Entrez dans l’univers d’Alvéole Média et découvrez leur expertise. Mettez vous dans la peau d’un gérant d’hôtel et testez vos connaissance sur les podcasts !"
+  },
+  "slide1": {
+    "theme": "Lieux",
+    "speech": "Le choix du lieu de tournage a une incidence sur les choix techniques que vous devrez faire par la suite.",
+    "question": "Quel lieu privilégierez-vous pour l’enregistrement de votre podcast ?",
+    "type": "select",
+    "choices": {
+      "hotel": "Le choix de l'hôtel est pertinent si vous faites preuve de prudence lors de l’enregistrement. En effet, il est indispensable de bien isoler la pièce afin de ne pas capter de bruits parasites.",
+      "studio": "Les locaux d’Alvéole Média disposent de studios d'enregistrement sonore isolés, davantage propices à la captation des sons."
+    },
+    "answer": "studio"
+  },
+  "slide2": {
+    "theme": "Le micro",
+    "speech": "Le choix du bon micro est primordial dans la réalisation d’un podcast. Il assure une bonne prise de son et permet une meilleure immersion.",
+    "question": "Parmi les trois micros suivants, lequel vous semble plus adapté pour l’enregistrement d’une voix ?",
+    "rule": "Nous vous invitons à tester les différents micros en glissant directement l’embout dans le port.",
+    "type": "drag",
+    "choices": {
+      "micro-cravate": "",
+      "micro-canon": "",
+      "micro-XY": "",
+      "micro-chant": ""
+    },
+    "answer": ""
+  },
+  "slide3": {
+    "theme": "La voix",
+    "speech": "L’intégralité du podcast repose sur la voix. Il est fondamental que celle-ci soit en harmonie avec le contenu.",
+    "question": "Pour enregistrer la voix-off, feriez-vous appel à un professionnel ou à un amateur ?",
+    "type": "select",
+    "choices": {
+      "pro": " Alvéole dispose d’un catalogue vocal aux registres très différents. L’agence vous propose un panel de voix afin de sélectionner la plus adaptée à votre demande.",
+      "amateur": "En faisant appel à un amateur pour réaliser une voix-off, la justesse de l’interprétation risque d’être mise en jeu. Ce choix pourrait donc desservir le podcast."
+    },
+    "answer": "professionnel"
+  },
+  "slide4": {
+    "theme": "Le tournage",
+    "speech": "Après la stratégie, la pratique !",
+    "question": "Connaissez-vous les étapes qui composent un tournage ?",
+    "type": "checkbox",
+    "rule": " Cochez (sélectionner)  les trois étapes qui vous semblent indispensables/ nécessaires.",
+    "choices": {
+      "1": "Trouver une pièce",
+      "2": "Installer le matériel ",
+      "3": "Placer les interviewés"
+    },
+    "answer": [1, 2, 3]
+  },
+  "slide5" : {
+    "theme": "Le mixage ",
+    "speech": "Le mixage consiste à obtenir un son uniforme, en supprimant les grésillements par exemple. C’est la table de mixage qui permet de mélanger, dissocier et accentuer certains sons.",
+    "rule": "Vous pouvez tester le son à l’aide des différents curseurs et boutons.",
+    "type": "drag",
+    "answer": "Pas simple ? développer expertise du monteur : connaît les règles de l’acoustique, le fonctionnement d’un micro dans ses moindres détails, le traitement des sons, un peu l’oreille absolue, sait quel matériel utiliser selon situations."
+  },
+  "slide6": {
+    "theme": "Choix Podcast ou Capsule sonore ?",
+    "question": "Souhaitez- vous réaliser un podcast ou une capsule sonore ?"
+  },
+  "slide7": {
+    "theme": "Capsule",
+    "question": "Souhaitez- vous bénéficiez d’une aide pour l’installation de la capsule ? ",
+    "answer": "Alvéole Média s’efforce de travailler avec des artisans locaux pour l’installation de ses capsules sonores."
+  },
+  "lastSlide": {
+    "theme": "Conclusion",
+    "speech": "La réalisation d’un podcast est un processus complexe et chronophage.\nAlvéole Média vous propose un accompagnement personnalisé et adapté à vos besoins.\nChoisissez notre expertise, faites vous entendre autrement !"
+  }
+}
