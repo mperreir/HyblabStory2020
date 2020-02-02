@@ -1,6 +1,7 @@
 <template>
   <div class="mainScene">
     <Background />
+    <!-- <TestDecor /> -->
     <!--<TestSaynetteButtonPlus />-->
     <!--<Maison v-if="currentScene === Scenes.house"/>-->
     <!--<SaynetteExample v-if="currentScene == Scenes.example"/>-->
@@ -14,6 +15,7 @@ import { mapState } from 'vuex';
 import Background from "@/components/Background.vue";
 import Maison from "@/components/Saynettes/Maison.vue";
 import TestSaynetteButtonPlus from "@/components/Saynettes/SaynetteMaisonPlus.vue";
+import TestDecor from "@/components/Saynettes/DecorExample.vue";
 import SaynetteExample from "@/components/Saynettes/SaynetteExample";
 import { Scenes } from "@/utils/scenes.js";
 
@@ -23,7 +25,8 @@ export default {
     Maison,
     SaynetteExample,
     Background,
-    TestSaynetteButtonPlus
+    TestSaynetteButtonPlus,
+    TestDecor
   },
   computed : {
     currentScene() {

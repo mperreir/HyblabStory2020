@@ -1,11 +1,7 @@
 <template>
   <div class="plus-button">
     <span class="qs">
-      <Plus
-        class="plus"
-        @click="plusOnClick"
-        v-bind:class="{ spinnin: popover, pulse: pulse }"
-      />
+      <Plus class="plus" @click="plusOnClick" v-bind:class="{ spinnin: popover, pulse: pulse }" />
       <span class="bg-darkblue cream" v-if="popover" v-bind:class="{ popover: popover }">
         <slot></slot>
       </span>
