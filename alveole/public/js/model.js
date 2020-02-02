@@ -267,10 +267,12 @@ class ModelSlide3 extends Observable {
 
   // values
   bool;
+  instanciated;
 
   constructor() {
     super();
     this.bool = false;
+    this.instanciated = false;
   }
 
   getValue() {
@@ -283,6 +285,22 @@ class ModelSlide3 extends Observable {
       this.setChanged();
       this.notifyObservers();
     }
+  }
+
+  loadMixTable(container) {
+    if (this.instanciated == false) {
+      Snap.load('data/mix_table.svg', function(data) {
+        let snap = Snap(container);
+        snap.append(data);
+      });
+      this.instanciated = true;
+    } else {
+      console.log('err : slide3 mix table already instanciated');
+    }
+  }
+
+  setDestroyed() {
+    this.instanciated = false;
   }
 }
 

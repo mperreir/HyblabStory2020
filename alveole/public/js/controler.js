@@ -246,12 +246,26 @@ class UpdateSlide2 extends Observer {
 
 class UpdateSlide3 extends Observer {
 
-  constructor() {
+  constructor(composant) {
     super();
+    this.composant = composant;
   }
 
   update(observable, object) {
+    let val = observable.getValue();
 
+    if (val == true) {
+
+      let container = document.createElement('div');
+      container.setAttribute('id', 'slide3_mixtable');
+      this.composant.appendChild(container);
+
+      let micros = observable.loadMixTable(container);
+
+    } else if (val == false) {
+       this.composant.querySelector("#slide3_mixtable").remove();
+       observable.setDestroyed();
+    }
   }
 }
 
@@ -260,7 +274,6 @@ class UpdateSlide4 extends Observer {
   constructor() {
     super();
   }
-
   update(observable, object) {
 
   }

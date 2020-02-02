@@ -157,6 +157,32 @@ footer {
   stroke-miterlimit: 10;
 }
 
+#slide3_mixtable {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#svg_mix_table
+  	.st0{opacity:0.5;fill:#FFF8E6;stroke:#FFF8E6;stroke-width:2.0609;stroke-linecap:round;stroke-miterlimit:10;}
+  	.st1{opacity:0.74;}
+  	.st2{opacity:0.5;fill:#FFFFFF;stroke:#FFFFFF;stroke-width:2.0609;stroke-linecap:round;stroke-miterlimit:10;}
+  	.st3{opacity:0.5;fill:none;stroke:#FFFFFF;stroke-width:2.0609;stroke-linecap:round;stroke-miterlimit:10;}
+  	.st4{opacity:0.5;fill:#FFFFFF;}
+  	.st5{display:none;}
+  	.st6{fill:none;stroke:#FFFFFF;stroke-width:5.2156;stroke-linecap:round;stroke-miterlimit:10;}
+  	.st7{opacity:0.6;fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+  	.st8{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+  	.st9{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+  	.st10{fill:none;stroke:#FFF8E6;stroke-width:5.2156;stroke-linecap:round;stroke-miterlimit:10;}
+  	.st11{fill:none;stroke:#FFF8E6;stroke-width:1.5461;stroke-linecap:round;stroke-miterlimit:10;}
+  	.st12{fill:#FFFFFF;}
+
+#svg_mix_table {
+  position: absolute;
+  height: 90%;
+  width: 100%;
+}
 
 /* on fait en sorte que le slidr et les slides remplissent tout notre conteneur */
 #slidr, #slidr section{
