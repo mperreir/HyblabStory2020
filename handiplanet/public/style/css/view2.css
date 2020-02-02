@@ -83,6 +83,32 @@
   width: 20%;
   position: absolute;
   right: 15%;
+  box-shadow: 0 0 3px 0 #426262;
+  -webkit-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  border-radius: 50%;
+}
+@-webkit-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+@-moz-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+@-ms-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
 }
 #second-view #decor-view-2 #circle-a {
   top: 0%;
