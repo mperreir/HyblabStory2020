@@ -1,22 +1,23 @@
 let initSlide4 = function(){
 	// Bruits de pas
 	var son = document.querySelector('#audioPas');
-	console.log(son.duration);
     son.play();
+
 
     // Affichage du premier texte après 5s
     setTimeout(playDialogues, 5500);
 
+    var dialogueSuivant = document.querySelector('#dialogueSuivant');
+	var dialogue1 = document.querySelector('#dialogue1');
+    var dialogue2 = document.querySelector('#dialogue2');
+    var dialogue3 = document.querySelector('#dialogue3');
+    var architecte = document.querySelector('#img-architecte');
+
    	function playDialogues()
 	{
 		son.pause();
-		var dialogueSuivant = document.querySelector('#dialogueSuivant');
-    	var dialogue1 = document.querySelector('#dialogue1');
-	    var dialogue2 = document.querySelector('#dialogue2');
-	    var dialogue3 = document.querySelector('#dialogue3');
-	    var architecte = document.querySelector('#img-architecte');
 	    dialogue1.style.visibility = "visible";
-	    dialogueSuivant.style.visibility = "visible";
+	    $("#dialogueSuivant").show();
 	    architecte.style.visibility = "visible";
 
 	   d3.select('#dialogueSuivant').on('click', function(){
@@ -39,6 +40,7 @@ let initSlide4 = function(){
 
 
 	d3.select('#next5').on('click', function(){
+		dialogue3.style.visibility = "hidden";
 		son.pause();
   		moveDown();
 		initSlide5();
