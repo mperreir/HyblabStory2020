@@ -20,7 +20,7 @@ $('#fullpage').fullpage({
   slidesNavigation: true,
   controlArrows: false,
   scrollOverflow:true,
-  anchors: ['home', 'loading', 'presentation', 'choice', 'expo', 'dance'],
+  anchors: ['home', 'sound', 'presentation', 'menu', 'expo', 'dance'],
   menu: '#menu',
 
   afterLoad: function(anchorLink, index) {
