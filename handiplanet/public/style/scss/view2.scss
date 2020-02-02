@@ -48,7 +48,8 @@
         line-height: 29px;
         color: #426262;
         top: 25%;
-        position: absolute;
+        position: relative;
+        margin: 0px !important;
 
         em{
           font-weight: bold;
@@ -57,11 +58,13 @@
       }
 
       #hotel-a-caption{
-        left: -15%;
+        position: relative;
+        bottom: -15%;
       }
 
       #hotel-b-caption{
-        right: 30%;
+        position: relative;
+        bottom: -15%;
       }
 
 
@@ -78,18 +81,39 @@
         left: 10%;
       }
 
-      #button-hotel-a {
+      button{
+        padding: 0px;
+        width: 60%;
+        height: 90%;
+        top: -50%;
         position: absolute;
-        left: -15%;
-        top: -30%;
-        height: 50%;
+        
+        img {
+          position: relative;
+          width: 50%;
+        }
+      }
+
+      .circle{
+        width: 20%;
+        position: absolute;
+        right: 15%;
+      }
+
+      #circle-a{
+        top: 00%;
+      }
+
+      #circle-b{
+        top: 25%;
+      }
+
+      #button-hotel-a {
+        left: -40%;  
       }
 
       #button-hotel-b {
-        position: absolute;
-        right: 20%;
-        top: -30%;
-        height: 50%;
+        right:  10%;
       }
 
       #ecran-container {

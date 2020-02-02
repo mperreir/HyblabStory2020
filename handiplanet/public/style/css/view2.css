@@ -43,17 +43,20 @@
   line-height: 29px;
   color: #426262;
   top: 25%;
-  position: absolute;
+  position: relative;
+  margin: 0px !important;
 }
 #second-view #decor-view-2 figcaption em {
   font-weight: bold;
   color: #CB563E;
 }
 #second-view #decor-view-2 #hotel-a-caption {
-  left: -15%;
+  position: relative;
+  bottom: -15%;
 }
 #second-view #decor-view-2 #hotel-b-caption {
-  right: 30%;
+  position: relative;
+  bottom: -15%;
 }
 #second-view #decor-view-2 #ordi-view-2 {
   position: relative;
@@ -65,17 +68,33 @@
   bottom: 0%;
   left: 10%;
 }
-#second-view #decor-view-2 #button-hotel-a {
+#second-view #decor-view-2 button {
+  padding: 0px;
+  width: 60%;
+  height: 90%;
+  top: -50%;
   position: absolute;
-  left: -15%;
-  top: -30%;
-  height: 50%;
+}
+#second-view #decor-view-2 button img {
+  position: relative;
+  width: 50%;
+}
+#second-view #decor-view-2 .circle {
+  width: 20%;
+  position: absolute;
+  right: 15%;
+}
+#second-view #decor-view-2 #circle-a {
+  top: 0%;
+}
+#second-view #decor-view-2 #circle-b {
+  top: 25%;
+}
+#second-view #decor-view-2 #button-hotel-a {
+  left: -40%;
 }
 #second-view #decor-view-2 #button-hotel-b {
-  position: absolute;
-  right: 20%;
-  top: -30%;
-  height: 50%;
+  right: 10%;
 }
 #second-view #decor-view-2 #ecran-container {
   position: absolute;
