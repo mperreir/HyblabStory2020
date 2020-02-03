@@ -89,6 +89,12 @@ html, body, #app {
 .bg-grey-blue {
   background-color: #004b78;
 }
+.lightblue {
+  color: #009dff;
+}
+.bg-lightblue {
+  background-color: #009dff;
+}
 .blue {
   color: #0177be;
 }
