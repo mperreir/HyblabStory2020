@@ -9,16 +9,12 @@
 import MaisonSVG from "@/assets/HOME/HOME FOND_Plan de travail 1.svg";
 import Cloud1 from "@/assets/HOME/Nuage 1Fichier 7.svg";
 
-import Saynette from '../Saynette';
-
 export default {
     name: "Maison",
     components: {
         MaisonSVG,
         Cloud1
     },
-    extends: Saynette,
-
     data: () => ({
         classObject: {
             animated: false,
