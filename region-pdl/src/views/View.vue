@@ -1,9 +1,9 @@
 <template>
-  <div class="mainScene">
-    <Background />
+  <div class="mainScene bg-bluegreen">
+    <!-- <Background /> -->
     <!-- <TestDecor /> -->
-    <!--<TestSaynetteButtonPlus />-->
-    <!--<Maison v-if="currentScene === Scenes.house"/>-->
+    <!-- <TestSaynetteButtonPlus /> -->
+    <Maison v-if="currentScene === Scenes.house" />
     <!--<SaynetteExample v-if="currentScene == Scenes.example"/>-->
   </div>
 </template>
@@ -22,11 +22,11 @@ import { Scenes } from "@/utils/scenes.js";
 export default {
   name: "Views",
   components: {
+    Maison,
+    // Background,
     // House,
     // SaynetteExample,
-    // Maison,
     // SaynetteExample,
-    // Background,
     // TestSaynetteButtonPlus,
     // TestDecor
   },
@@ -44,3 +44,12 @@ export default {
   }
 };
 </script>
+
+<style>
+.mainScene {
+  text-align:center;
+  margin:auto;
+  width: 800px;
+  height: 564px;
+}
+</style>

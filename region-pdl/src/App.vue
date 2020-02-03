@@ -6,10 +6,10 @@
 
 <style>
 html, body, #app, .mainScene {
-  margin: 0;
-  padding: 0;
   height: 100vh;
-  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* --- Couleurs du nuancier --- */
@@ -53,7 +53,5 @@ html, body, #app, .mainScene {
 .svg-scene {
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
 }
 </style>

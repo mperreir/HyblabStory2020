@@ -1,13 +1,13 @@
 <template>
   <div class="saynette">
-    <BgSVG class="svg-scene" />
     <MaisonSVG class="svg-scene house" />
+    <Cloud1 class="cloud" />
   </div>
 </template>
 
 <script>
-import MaisonSVG from "@/assets/house.svg";
-import BgSVG from "@/assets/bg-house.svg";
+import MaisonSVG from "@/assets/HOME/HOME FOND_Plan de travail 1.svg";
+import Cloud1 from "@/assets/HOME/Nuage 1Fichier 7.svg";
 
 import Saynette from '../Saynette';
 
@@ -15,7 +15,7 @@ export default {
     name: "Maison",
     components: {
         MaisonSVG,
-        BgSVG
+        Cloud1
     },
     extends: Saynette,
 
@@ -44,24 +44,15 @@ export default {
 .saynette {
     display: inline-block;
     position: relative;
-    width: 100vw;
     vertical-align: middle;
     overflow: hidden;
 }
 
-.house {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-.text {
+.cloud {
     position: absolute;
     top: 25%;
     left: 20%;
-    width: 50%;
+    width: 10%;
     color: red;
     font-size: 3vw;
 }
