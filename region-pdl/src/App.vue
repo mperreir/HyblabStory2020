@@ -5,11 +5,18 @@
 </template>
 
 <style>
-html, body, #app, .mainScene {
+html, body, #app {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.saynette {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    overflow: hidden;
 }
 
 /* --- Couleurs du nuancier --- */
@@ -50,8 +57,4 @@ html, body, #app, .mainScene {
   color: #fcf8ef;
 }
 
-.svg-scene {
-    top: 0;
-    left: 0;
-}
 </style>

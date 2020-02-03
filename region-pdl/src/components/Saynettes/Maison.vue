@@ -1,6 +1,6 @@
 <template>
   <div class="saynette">
-    <MaisonSVG class="svg-scene house" />
+    <MaisonSVG />
     <Cloud1 class="cloud" />
   </div>
 </template>
@@ -37,13 +37,6 @@ export default {
 </script>
 
 <style scoped>
-.saynette {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    overflow: hidden;
-}
-
 .cloud {
     position: absolute;
     top: 25%;
