@@ -4,6 +4,13 @@ $(document).ready(function() {
     $("#img-dancers-annotations").css("opacity", "1");
   });
   $('body').bind('mousewheel DOMMouseScroll', function (e) {
-    console.log('bingo');
+    //console.log('bingo');
+  });
+
+  $("#dance-section").css("display", "block");
+  $("#dance-section").css("overflow-x", "scroll");
+  $('#dance-section').on('mousewheel', function(e, delta) {
+    this.scrollLeft -= (delta * 60);
+    e.preventDefault();
   });
 });

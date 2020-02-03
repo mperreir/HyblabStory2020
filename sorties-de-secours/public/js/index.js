@@ -19,7 +19,7 @@ $('#fullpage').fullpage({
   navigation: false,
   slidesNavigation: true,
   controlArrows: false,
-  scrollOverflow:true,
+  scrollOverflow: true,
   anchors: ['home', 'sound', 'presentation', 'menu', 'expo', 'dance'],
   menu: '#menu',
 
@@ -27,8 +27,14 @@ $('#fullpage').fullpage({
     $header_top.css('background', 'rgba(0, 47, 77, .3)');
     $nav.css('background', 'rgba(0, 47, 77, .25)');
     if (index == 6) {
-        $('#fp-nav').hide();
-      }
+      $('#fp-nav').hide();
+    }
+    if(anchorLink == 'menu') {
+      $.fn.fullpage.setAllowScrolling(false, 'down');
+    }
+    if(anchorLink == 'dance') {
+      $.fn.fullpage.setAllowScrolling(false, 'up');
+    }
   },
 
   onLeave: function(index, nextIndex, direction) {
@@ -36,6 +42,8 @@ $('#fullpage').fullpage({
       $('#fp-nav').show();
     }
     $.fn.fullpage.setScrollingSpeed(1000);
+    $.fn.fullpage.setAllowScrolling(true, 'up');
+    $.fn.fullpage.setAllowScrolling(true, 'down');
   },
 
   afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex) {

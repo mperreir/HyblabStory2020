@@ -14,6 +14,10 @@ body{
     overflow: hidden;   /* pour slidr dans certains navigateurs */
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 /* probably needed for fontawesome svg
 .icon {
   width: 2em;
