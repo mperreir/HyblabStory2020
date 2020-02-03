@@ -1,6 +1,6 @@
 <template>
   <div class="saynette">
-    <MaisonSVG />
+    <MaisonSVG class="bg-bluegreen svg" />
     <Cloud1 class="cloud" />
   </div>
 </template>

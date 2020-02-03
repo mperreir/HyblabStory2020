@@ -5,6 +5,11 @@
 </template>
 
 <style>
+
+html {
+  background-color: black;
+}
+
 html, body, #app {
   height: 100vh;
   display: flex;
@@ -17,6 +22,11 @@ html, body, #app {
     position: relative;
     vertical-align: middle;
     overflow: hidden;
+    height: 100%;
+}
+
+.svg {
+  height: 100%;
 }
 
 /* --- Couleurs du nuancier --- */

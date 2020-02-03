@@ -1,5 +1,5 @@
 <template>
-  <div class="mainScene bg-bluegreen">
+  <div class="mainScene">
     <Maison v-if="currentScene === Scenes.house" />
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {
 .mainScene {
   text-align:center;
   margin:auto;
-  width: 800px;
-  height: 564px;
+  /* width: 800px; */
+  height: 100vh;
 }
 </style>
