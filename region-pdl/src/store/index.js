@@ -5,16 +5,16 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    currentScene: null
+    currentSceneIndex: 0
   },
   mutations: {
-    initScene(state, sceneName) {
-      state.currentScene = sceneName;
-    }
+      nextScene(state) {
+        state.currentSceneIndex+=1;
+      }
   },
   actions: {
-    initScene({ commit }, { sceneName }) {
-      commit('initScene', sceneName);
+    nextScene({ commit }) {
+      commit('nextScene');
     }
   },
   getters: {

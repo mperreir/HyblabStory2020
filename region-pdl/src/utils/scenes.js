@@ -1,5 +1,5 @@
 const Scenes = {
-    example: 0,
+    intro: 0,
     house: 1,
 }
 

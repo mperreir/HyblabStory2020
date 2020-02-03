@@ -1,0 +1,90 @@
+<template>
+  <transition name="slide">
+    <div
+      v-show="visible"
+      class="carouselSlide"
+    >
+      <slot />
+    </div>
+  </transition>
+</template>
+
+<script>
+  export default {
+    props: {
+      index: {
+        type: Number,
+        default: 0,
+      }
+    },
+    computed: {
+      visible() {
+        return this.index === this.$store.state.currentSceneIndex
+      }
+    }
+  }
+</script>
+
+<style>
+
+.carouselSlide {
+  height:100%;
+}
+.slide-enter-active {
+  -webkit-animation: slideIn 5s;
+          animation: slideIn 5s;
+}
+.slide-leave-active {
+  -webkit-animation: slideOut 5s;
+          animation: slideOut 5s;
+  position: absolute;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+@-webkit-keyframes slideIn {
+from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+}
+to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+}
+}
+@keyframes slideIn {
+from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+}
+to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+}
+}
+@-webkit-keyframes slideOut {
+from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+}
+to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+}
+}
+@keyframes slideOut {
+from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+}
+to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+}
+}
+
+
+</style>

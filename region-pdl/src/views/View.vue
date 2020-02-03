@@ -1,19 +1,36 @@
 <template>
-  <div class="mainScene">
-    <Maison v-if="currentScene === Scenes.house" />
+  <div @click="click()">
+    <Carousel>
+      <CarouselSlide :index="0">
+        <!-- <div style="position: absolute; height: 100%;"> -->
+        <Intro />
+        <!-- </div> -->
+      </CarouselSlide>
+      <CarouselSlide :index="1">
+        <!-- <div style="position: absolute; height: 100%;"> -->
+        <House />
+        <!-- </div> -->
+      </CarouselSlide>
+    </Carousel>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import { mapState } from 'vuex';
-import Maison from "@/components/Saynettes/Maison.vue";
+import Intro from "@/components/Saynettes/Intro";
+import House from "@/components/Saynettes/House";
+import Carousel from "@/components/carousel/Carousel"
+import CarouselSlide from "@/components/carousel/CarouselSlide"
 import { Scenes } from "@/utils/scenes.js";
 
 export default {
   name: "Views",
   components: {
-    Maison,
+    Intro,
+    House,
+    Carousel,
+    CarouselSlide
   },
   data: () => ({
     Scenes: Scenes,
@@ -24,8 +41,10 @@ export default {
     }
 
   },
-  mounted() {
-    this.$store.dispatch('initScene', {sceneName: Scenes.house});
+  methods: {
+    click() {
+      this.$store.dispatch("nextScene")
+    }
   }
 };
 </script>
@@ -34,7 +53,38 @@ export default {
 .mainScene {
   text-align:center;
   margin:auto;
-  /* width: 800px; */
   height: 100vh;
+}
+
+.swipe-enter-active, .swipe-leave-active {
+  transition: 1s;
+  transform: translateX(50%);
+}
+.swipe-enter, .swipe-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transition: 1s;
+  transform:translateX(-50%);
+}
+
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>

@@ -8,23 +8,22 @@
 
 html {
   background-color: black;
+  z-index: 3;
 }
-
+body {
+  margin: 0;
+}
 html, body, #app {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; justify-content: center; align-items: center;
 }
-
 .saynette {
-    display: inline-block;
+    /*! display: inline-block; */
     position: relative;
     vertical-align: middle;
     overflow: hidden;
     height: 100%;
 }
-
 .svg {
   height: 100%;
 }
@@ -66,5 +65,4 @@ html, body, #app {
 .cream {
   color: #fcf8ef;
 }
-
 </style>
