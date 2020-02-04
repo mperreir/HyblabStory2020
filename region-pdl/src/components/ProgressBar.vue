@@ -1,17 +1,14 @@
 <template>
   <div>
     <div class="progress-line bg-darkblue">
-      <div
-        class="percentage bg-yellow"
-        :style="{'width': percentage + '%'}"
-      />
+      <div class="percentage bg-yellow" :style="{'width': percentage + '%'}" />
     </div>
     <div class="progress">
       <div
         v-for="n in number"
         :key="n"
         class="dot"
-        :class="{current: n === index, 'bg-red': n === number, 'bg-green': n === index, 'bg-blue': n !== index && n !== number}"
+        :class="{current: n === index && animCurrent, 'bg-green': n === index && animCurrent, 'bg-blue': !animCurrent || n !== index}"
       />
     </div>
   </div>
@@ -21,16 +18,19 @@
 export default {
   name: "ProgressBar",
   props: {
-    number: Number,
-    index: Number
+    number: Number
   },
   data: () => {
     return {
-      percentage: 0
+      percentage: 0,
+      index: 1,
+      animCurrent: true
     };
   },
   watch: {
     index: function() {
+      this.animCurrent = false;
+
       let newPercentage = ((this.index - 1) / (this.number - 1)) * 100;
 
       setInterval(() => {
@@ -39,9 +39,17 @@ export default {
           newPercentage <= 100 &&
           this.percentage < newPercentage
         ) {
-          this.percentage += 1;
+          this.percentage += 0.2;
         }
       }, 15);
+    },
+    percentage: function() {
+      if (this.percentage > ((this.index - 1) / (this.number - 1)) * 100 - 2) {
+        this.animCurrent = true;
+      }
+    },
+    "$store.state.currentSceneIndex": function() {
+      this.index++;
     }
   }
 };

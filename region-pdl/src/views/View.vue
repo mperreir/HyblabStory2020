@@ -10,7 +10,7 @@
         </CarouselSlide>
       </Carousel>
     </div>
-    <ProgressBar v-bind:number="4" v-bind:index="1"/>
+    <ProgressBar v-bind:number="4" />
   </div>
 </template>
 
@@ -34,11 +34,6 @@ export default {
   data: () => ({
     Scenes: Scenes
   }),
-  computed: {
-    currentScene() {
-      return this.$store.state.currentScene;
-    }
-  },
   methods: {
     click() {
       this.$store.dispatch("nextScene", { sceneId: 1 });
