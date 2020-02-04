@@ -4,9 +4,13 @@
  * Copyright - 2020 Christophe SONNEVILLE
  */
 class View9Premium extends View {
-  constructor() {
-    super('view9premium', document.getElementById('view-container'));
-    this.load()
+  constructor(el) {
+    super('view9premium', el);
+    
+  }
+
+  load() {
+    super.load()
       .then(() => {
         this.view = document.getElementById(this.viewName);
         this.linkElements();
