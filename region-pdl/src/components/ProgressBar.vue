@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="progress-line bg-lightgrey">
+    <div class="progress-line bg-darkblue">
       <div
         class="percentage bg-yellow"
         :style="{'width': percentage + '%'}"
@@ -11,7 +11,7 @@
         v-for="n in number"
         :key="n"
         class="dot"
-        :class="{current: n === index, 'bg-green': n === index, 'bg-darkblue': n !== index}"
+        :class="{current: n === index, 'bg-red': n === number, 'bg-green': n === index, 'bg-blue': n !== index && n !== number}"
       />
     </div>
   </div>
