@@ -1,0 +1,103 @@
+/*
+ * File Created: 2020-01-28 13:52:00
+ * Author: Pierre MAUPIN
+ * Copyright - 2020 Pierre MAUPIN
+ */
+#contexte {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+}
+#contexte #contexte-middle {
+  width: 80vw;
+  height: 80vh;
+  margin: 0px 10vw;
+  border-bottom: 2px solid #5A8D8C;
+  position: relative;
+}
+#contexte #contexte-middle img {
+  position: absolute;
+  bottom: -2px;
+}
+#contexte #contexte-middle #contexte-splash-img {
+  z-index: 1;
+  max-height: 100%;
+  max-width: 60%;
+  left: 40%;
+}
+#contexte #contexte-middle > div {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: flex-start;
+  right: 50%;
+  bottom: -1px;
+  max-height: 70%;
+  max-width: 50%;
+}
+#contexte #contexte-middle > div #contexte-character-img {
+  z-index: 5;
+  position: relative;
+  height: 55vh;
+  max-width: 100%;
+}
+#contexte #contexte-middle #context-text {
+  position: absolute;
+  top: 35vh;
+}
+#contexte #contexte-middle #context-text #context-1 {
+  display: block;
+}
+#contexte #contexte-middle #context-text #context-2 {
+  display: none;
+}
+#contexte #contexte-middle #context-text #context-3 {
+  display: none;
+}
+#contexte #contexte-middle #contexte-questions .contexte-question {
+  background-color: #426262;
+  border-radius: 40px;
+}
+#contexte #contexte-middle article {
+  z-index: 7;
+  position: absolute;
+  left: 55%;
+  max-width: 30%;
+  bottom: 10%;
+}
+#contexte #contexte-middle article p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #426262;
+}
+#contexte #contexte-middle article span {
+  color: #cb563e;
+}
+#contexte footer {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+}
+#contexte footer #contexte-next-button {
+  position: absolute;
+  right: 0px;
+  background-color: #CB563E;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 10px 30px;
+  padding-right: 50px;
+  margin: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=contexte.css.map */
