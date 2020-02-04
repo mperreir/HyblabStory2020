@@ -1,10 +1,19 @@
 <template>
   <div style="{ overflow: hidden; }">
-    <div class="blackBand-left" :style="bandWidthStyle"></div>
-    <div class="carousel" ref="carousel">
+    <div
+      class="blackBand-left"
+      :style="bandWidthStyle"
+    />
+    <div
+      ref="carousel"
+      class="carousel"
+    >
       <slot />
     </div>
-    <div class="blackBand-right" :style="bandWidthStyle"></div>
+    <div
+      class="blackBand-right"
+      :style="bandWidthStyle"
+    />
   </div>
 </template>
 
@@ -15,13 +24,13 @@
         slides: []
       }
     },
+    data: () => ({
+      bandWidthStyle: { width: '100px'},
+    }),
     mounted () {
       this.slides = this.$children
       this.updateBandWidth();
     },
-    data: () => ({
-      bandWidthStyle: { width: '100px'},
-    }),
     created() {
       window.addEventListener('resize', this.updateBandWidth);
     },
@@ -29,8 +38,8 @@
       window.removeEventListener('resize', this.updateBandWidth);
     },
     methods: {
-      updateBandWidth () { 
-        this.bandWidthStyle = { width: (window.innerWidth - this.$refs.carousel.offsetWidth)/2+'px' } 
+      updateBandWidth () {
+        this.bandWidthStyle = { width: (window.innerWidth - this.$refs.carousel.offsetWidth)/2+'px' }
       },
     }
   }

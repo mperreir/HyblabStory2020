@@ -13,7 +13,6 @@
 
 <script>
 
-import { mapState } from 'vuex';
 import Intro from "@/components/Saynettes/Intro";
 import House from "@/components/Saynettes/House";
 import Carousel from "@/components/carousel/Carousel"

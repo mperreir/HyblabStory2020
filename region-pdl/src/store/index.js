@@ -12,7 +12,7 @@ export default new Vuex.Store({
         if(sceneId === null)
           state.currentSceneIndex++;
         else {
-          state.currentSceneIndex+=sceneId;  
+          state.currentSceneIndex+=sceneId;
         }
       }
   },
