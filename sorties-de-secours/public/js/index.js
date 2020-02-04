@@ -13,7 +13,7 @@ $header_top.find('a').on('click', function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['white', 'black', 'white', 'black', '#F2AE72', '#5C832F', 'black'],
+  sectionsColor: ['#1E1E1E', '#1E1E1E', 'white', 'black', '#F2AE72', '#5C832F', 'black'],
   sectionSelector: '.vertical-scrolling',
   slideSelector: '.horizontal-scrolling',
   navigation: false,
