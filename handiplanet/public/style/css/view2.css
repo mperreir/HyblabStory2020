@@ -78,7 +78,9 @@
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 #second-view #decor-view-2 button:hover {
   transform: scale(1.2, 1.2);

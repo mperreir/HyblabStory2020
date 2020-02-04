@@ -1,0 +1,82 @@
+/*
+* File Created: 2020-02-04 20:44:47
+* Author: Christophe SONNEVILLE
+* Copyright - 2020 Christophe SONNEVILLE
+*/
+#view9free {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(203, 85, 62, 0.1);
+}
+#view9free #view-9f-middle {
+  width: 80vw;
+  height: 80vh;
+  margin: 0px 10vw;
+  border-bottom: 2px solid #5A8D8C;
+  position: relative;
+}
+#view9free #view-9f-middle section {
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+}
+#view9free #view-9f-middle section article:first-of-type {
+  flex: 2;
+  display: flex;
+}
+#view9free #view-9f-middle section article:first-of-type img {
+  max-height: 80%;
+  max-width: 80%;
+  display: block;
+  margin: auto;
+  margin-right: 5%;
+}
+#view9free #view-9f-middle section article:last-of-type {
+  display: flex;
+  flex: 1;
+  padding: 2%;
+}
+#view9free #view-9f-middle section article:last-of-type p {
+  margin: auto;
+  text-align: justify;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #426262;
+  top: 25%;
+  position: relative;
+  margin: 0px !important;
+}
+#view9free #view-9f-middle section article:last-of-type p em {
+  font-weight: bold;
+  color: #CB563E;
+}
+#view9free footer {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+}
+#view9free footer #view-9f-next-button {
+  position: absolute;
+  right: 0px;
+  background-color: #CB563E;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 10px 30px;
+  padding-right: 50px;
+  margin: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=view9free.css.map */

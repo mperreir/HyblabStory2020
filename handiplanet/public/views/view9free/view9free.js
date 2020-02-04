@@ -3,9 +3,9 @@
  * Author: Christophe SONNEVILLE
  * Copyright - 2020 Christophe SONNEVILLE
  */
-class View8 extends View {
+class View9Free extends View {
   constructor() {
-    super('view8', document.getElementById('view-container'));
+    super('view9free', document.getElementById('view-container'));
     this.load()
       .then(() => {
         this.view = document.getElementById(this.viewName);
