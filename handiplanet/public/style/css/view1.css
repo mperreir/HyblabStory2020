@@ -39,6 +39,7 @@
 #view1 #view-1-middle > div #view-1-character-img {
   z-index: 5;
   position: relative;
+  height: 55vh;
   max-width: 100%;
 }
 #view1 #view-1-middle > div .view-1-switch-character {
