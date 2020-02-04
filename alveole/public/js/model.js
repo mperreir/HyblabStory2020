@@ -22,6 +22,7 @@ class ModelSlide extends Observable {
   // Model value
   obj;
   value;
+  text;
 
   constructor() {
     super();
@@ -39,6 +40,7 @@ class ModelSlide extends Observable {
       "length": 10
     };
     this.value;
+    
   }
 
   setValue(value) {
