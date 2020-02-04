@@ -5,11 +5,32 @@ class View3Premium extends View {
     }
 
 
-    async switchToView2() {
+    async switchToView4() {
+        // Construction d'une div temporaire positionnée en dehors
+        // de l'écran pour faire entrer la prochaine view
+        const tempDiv = document.createElement('div');
+        document.getElementById('view-container').appendChild(tempDiv);
+        tempDiv.style.position = "absolute";
+        tempDiv.style.top = '100%';
+        // Création de la prochaine view
+        const nextView = new View4(tempDiv);
+        await nextView.load();
+        this.view.style.transition = 'transform 1s';
+        tempDiv.style.transition = 'transform 1s';
+        this.view.style.transform = 'translateY(-100%)';
+        tempDiv.style.transform = 'translateY(-100%)';
+        setTimeout(() => {
+            tempDiv.replaceWith = nextView.view;
+            this.view.parentNode.removeChild(this.view);
+        }, 1000);
     }
 
     linkElements() {
-
+        // Button to next view
+        this.btNext = document.getElementById('view-3-premium-next-button');
+        this.btNext.addEventListener('click', ()=>{
+            this.switchToView4();
+        });
         // Background elements
         this.dot1 = document.getElementById('view-3-premium-white-ring');
         this.dot2 = document.getElementById('view-3-premium-dot');
