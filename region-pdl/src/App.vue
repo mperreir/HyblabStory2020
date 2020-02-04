@@ -33,41 +33,97 @@ html, body, #app {
   height: 100%;
 }
 
+/* --- Police des titres --- */
+.title {
+  font-family: "Neo Sans Std";
+}
+
+/* --- Police des textes --- */
+.text {
+  font-family: "AvantGardeGothicITCW02XLt";
+}
+
 /* --- Couleurs du nuancier --- */
-.bg-darkblue {
-  background-color: #2c4068;
+/* Utiliser uniquement ces classes pour les couleurs */
+.yellow {
+  color: #ffc441;
 }
-.darkblue {
-  color: #2c4068;
+.bg-yellow {
+  background-color: #ffc441;
 }
-.bg-bluegreen {
-  background-color: #63b4bb;
+.yellow-orange {
+  color: #faaf04;
 }
-.bluegreen {
-  color: #63b4bb;
-}
-.bg-green {
-  background-color: #d6efbb;
-}
-.green {
-  color: #d6efbb;
-}
-.bg-orange {
-  background-color: #fd7e61;
+.bg-yellow-orange {
+  background-color: #faaf04;
 }
 .orange {
-  color: #fd7e61;
+  color: #f99a04;
 }
-.bg-grey {
-  background-color: #e3deca;
+.bg-orange {
+  background-color: #f99a04;
+}
+.red {
+  color: #f31512;
+}
+.bg-red {
+  background-color: #f31512;
+}
+.darkgreen {
+  color: #598104;
+}
+.bg-darkgreen {
+  background-color: #598104;
+}
+.green {
+  color: #88b309;
+}
+.bg-green {
+  background-color: #88b309;
+}
+.lightgreen {
+  color: #b7df41;
+}
+.bg-lightgreen {
+  background-color: #b7df41;
+}
+.grey-blue {
+  color: #004b78;
+}
+.bg-grey-blue {
+  background-color: #004b78;
+}
+.lightblue {
+  color: #009dff;
+}
+.bg-lightblue {
+  background-color: #009dff;
+}
+.blue {
+  color: #0177be;
+}
+.bg-blue {
+  background-color: #0177be;
+}
+.darkblue {
+  color: #00324e;
+}
+.bg-darkblue {
+  background-color: #00324e;
+}
+.darkgrey {
+  color: #79787d;
+}
+.bg-darkgrey {
+  background-color: #79787d;
 }
 .grey {
-  color: #e3deca;
+  color: #d3d3d3;
 }
-.bg-cream {
-  background-color: #fcf8ef;
+.bg-grey {
+  background-color: #d3d3d3;
 }
-.cream {
-  color: #fcf8ef;
+.lightgrey {
+  color: #f2f2f2;
 }
 </style>
