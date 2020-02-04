@@ -1,24 +1,25 @@
 <template>
-  <div
-    id="app"
-    class="app"
-  >
+  <div id="app" class="app">
     <router-view />
   </div>
 </template>
 
 <style>
-
 html {
-  background-color: black;
-  z-index: 3;
+  background-color: #000;
 }
+
 body {
   margin: 0;
 }
-html, body, #app {
+
+html,
+body,
+#app {
   height: 100vh;
-  display: flex; justify-content: center; align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app {
@@ -26,24 +27,52 @@ html, body, #app {
 }
 
 .saynette {
-    /*! display: inline-block; */
-    position: relative;
-    vertical-align: middle;
-    overflow: hidden;
-    height: 100%;
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+  height: 100%;
 }
+
 .svg {
   height: 100%;
 }
 
 /* --- Police des titres --- */
+@font-face {
+  font-family: "Neo Sans";
+  src: url("./fonts/NeoSansStd-Medium.otf");
+}
+
+@font-face {
+  font-family: "Neo Sans Bold";
+  src: url("./fonts/NeoSansPro-Bold.ttf");
+}
+
 .title {
-  font-family: "Neo Sans Std";
+  font-family: "Neo Sans";
+}
+
+.title-bold {
+  font-family: "Neo Sans Bold";
 }
 
 /* --- Police des textes --- */
+@font-face {
+  font-family: "Avant Garde";
+  src: url("./fonts/AvantGarde-Demi.otf");
+}
+
+@font-face {
+  font-family: "Avant Garde Bold";
+  src: url("./fonts/AvantGarde-Bold.otf");
+}
+
 .text {
-  font-family: "AvantGardeGothicITCW02XLt";
+  font-family: "Avant Garde";
+}
+
+.text-bold {
+  font-family: "Avant Garde Bold";
 }
 
 /* --- Couleurs du nuancier --- */
