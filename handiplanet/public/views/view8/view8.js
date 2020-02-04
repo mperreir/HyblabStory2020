@@ -12,4 +12,8 @@ class View8 extends View {
         this.linkElements();
       });
   }
+
+  linkElements() {
+    document.getElementById('view-8-middle').style.backgroundImage='./assets/view8/tache.svg';
+  }
 }

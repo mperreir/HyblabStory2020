@@ -14,5 +14,119 @@
     margin: 0px 10vw;
     border-bottom: 2px solid #5A8D8C;
     position: relative;
+
+    background-image: url("../../assets/view8/tache.svg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: bottom -2px center;
+
+    #view-8-computer-container {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 60%;
+      display: inline-block;
+
+      #view-8-perso {
+        transform: translateY(2px);
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain;
+        object-position: bottom center;
+      }
+
+      #view-8-computer {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        max-height: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      #view-8-hotela-container {
+        position: absolute;
+        width: 60%;
+        height: 50%;
+        left: -20%;
+        bottom: 5%;
+        #view-8-hotel-a {
+          width: 100% !important;
+          height: 100% !important;
+          display: block;
+          // object-fit: contain;
+        }
+
+        #view-8-circle-a {
+          max-width: 30%;
+          position: absolute;
+          top: 0px;
+          left: 5%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+
+        #view-8-a-caption {
+          position: absolute;
+          top: -30%;
+          left: 20%;
+        }
+      }
+
+      #view-8-hotelb-container {
+        position: absolute;
+        width: 60%;
+        height: 50%;
+        right: -30%;
+        top: 5%;
+        #view-8-hotel-b {
+          width: 100% !important;
+          height: 100% !important;
+          display: block;
+          object-fit: contain;
+        }
+
+        #view-8-circle-b {
+          position: absolute;
+          top: 0px;
+          right: 5%;
+          transform: translateX(50%) translateY(-50%);
+          max-width: 30%;
+        }
+
+        #view-8-b-caption {
+          position: absolute;
+          top: 40%;
+          right: -25%;
+        }
+      }
+
+      .view-8-circle {
+        cursor: pointer;
+        border-radius: 50%;
+        box-shadow: 0 0 3px 0 rgb(66, 98, 98);
+        animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+      }
+
+      figcaption {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 29px;
+        color: #426262;
+        top: 25%;
+        position: relative;
+        margin: 0px !important;
+
+        em{
+          font-weight: bold;
+          color: #CB563E;
+        }
+      }
+
+      @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+    }
   }
 }
