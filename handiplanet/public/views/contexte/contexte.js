@@ -5,7 +5,6 @@ class Contexte extends View {
         this.load()
         .then(()=>{
             this.view = document.getElementById(this.viewName);
-            this.linkElements();
         });
     }
 

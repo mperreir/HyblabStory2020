@@ -14,16 +14,18 @@
   margin: 0px 10vw;
   border-bottom: 2px solid #5A8D8C;
   position: relative;
-}
-#contexte #contexte-middle img {
-  position: absolute;
-  bottom: -2px;
+  /*img {
+    position: absolute;
+    bottom: -2px;
+  }*/
 }
 #contexte #contexte-middle #contexte-splash-img {
   z-index: 1;
   max-height: 100%;
   max-width: 60%;
   left: 40%;
+  position: absolute;
+  bottom: -2px;
 }
 #contexte #contexte-middle > div {
   position: absolute;
@@ -55,9 +57,57 @@
 #contexte #contexte-middle #context-text #context-3 {
   display: none;
 }
+#contexte #contexte-middle #contexte-questions {
+  margin-top: 2vh;
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  right: 20%;
+  bottom: 1vh;
+}
 #contexte #contexte-middle #contexte-questions .contexte-question {
+  display: flex;
+  flex-direction: columnS;
+  align-items: center;
+  width: 35vw;
   background-color: #426262;
   border-radius: 40px;
+  padding-left: 12vw;
+  margin-top: 2vh;
+  height: 8vh;
+}
+#contexte #contexte-middle #contexte-questions .contexte-question .contexte-choix {
+  color: white;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 10px;
+  width: 20vw;
+}
+#contexte #contexte-middle #contexte-questions .contexte-question .contexte-img {
+  background-color: white;
+  border-radius: 4vh;
+  height: 4vh;
+  width: 4vh;
+  box-shadow: 0 0 0 1vh white;
+  align-items: center;
+}
+#contexte #contexte-middle #contexte-questions .contexte-question .contexte-img img {
+  position: absolute;
+  margin-left: auto;
+  z-index: 100;
+  height: 4vh;
+  width: 4vh;
+  align-items: center;
+}
+#contexte #contexte-middle #contexte-questions .contexte-question #contexte-info-img {
+  font-family: Nunito;
+  color: #426262;
+  font-size: 20px;
+  text-align: center;
 }
 #contexte #contexte-middle article {
   z-index: 7;
