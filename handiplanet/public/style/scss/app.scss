@@ -7,7 +7,7 @@
 #app-view {
   position: relative;
   background-color: #ffffff;
-  #app-overlay {
+  #app-overlay {   
     position: absolute;
     top: 0px;
     left: 0px;
@@ -27,6 +27,7 @@
       }
       
       ul{
+        z-index: 1000;
         margin: 0px;
         padding: 0px;
         margin-left: auto;
@@ -58,13 +59,13 @@
       right: 5vw;
       top: 60vh;
       transform: translateY(-50%);
-      
+
       .point{
         position: relative;
-        height: 2vh;
-        width: 2vh;
-        border-radius: calc(2vh / 2);
-        background-color: #ffffff;
+        height: 1.25vh;
+        width: 1.25vh;
+        border-radius: calc(1.25vh / 2);
+        background-color: #5a8d8c;
         border: 0.5vh solid #5a8d8c;
         margin-bottom: 10vh;
         
@@ -86,8 +87,8 @@
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          height: 8vh;
-          width: 0.6vh;
+          height: 5vh;
+          width: 0.15vw;
           background-color: #5a8d8c;
           top: calc(100% + 0.5vh);
           // z-index: -1000;
@@ -99,7 +100,7 @@
           left: 50%;
           transform: translateX(-50%);
           height: 5vh;
-          width: 0.6vh;
+          width: 0.15vw;
           background-color: #5a8d8c;
           bottom: calc(100% + 0.5vh);
         }
@@ -107,7 +108,8 @@
       .selected{
         
         border: 0.5vh solid #cb563e !important ; 
-        
+        background-color: #cb563e;
+
         &::after{
           background-color: #cb563e !important ;
         }
@@ -115,9 +117,40 @@
           background-color: #cb563e !important ;
         }
       }
+      .last{
+        background-color: #ffffff;
+        animation: selectedHalo 1s forwards ease-out;
+
+        @keyframes selectedHalo {
+
+          0% {
+            box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
+          }
+          
+          100% {
+            box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
+          }
+        }
+      }
+      .beforeLast{
+        background-color: #cb563e;
+        animation: diselectedHalo 1s forwards ease-out;
+
+        @keyframes diselectedHalo {
+
+          0% {
+            box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
+          }
+          
+          100% {
+            box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
+          }
+        }
+      }
     }
     
     #text-size{
+      z-index: 1000;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -131,9 +164,42 @@
         width: 8vh;
         border-radius: calc(8vh / 2);
         color: white;
+        z-index: 1000;
+        transition: box-shadow 0.5s;
+        box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
+
+        &:hover{
+          box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
+        }
       }
       .selected{
-        background-color: #cb563e;
+        animation: setSelected 0.5s forwards ease-out;
+
+        @keyframes setSelected {
+
+          0% {
+            background-color: #5a8d8c;
+          }
+          
+          100% {
+            background-color: #cb563e;
+          }
+        }        
+      }
+
+      .diselected{
+        animation: setDiselected 0.5s forwards ease-out;
+
+        @keyframes setDiselected {
+
+          0% {
+            background-color: #cb563e;
+          }
+          
+          100% {
+            background-color: #5a8d8c;
+          }
+        }        
       }
       
       #small{
@@ -149,17 +215,62 @@
     }
     
   }
-  
-  
 }
 
 #son{
-  position: absolute;
-  height: 10vh;
-  width : 10vh;
-  left: 5vh;
-  bottom: 5vh;
+  button{
+    img{
+    z-index: 1000;
+    position: absolute;
+    height: 7vh;
+    width : 7vh;
+    left: 5vh;
+    bottom: 4vh;
+    
+    /*&:hover{
+      box-shadow: 0 0 0 5px rgba(203, 86, 62, 0.3);
+    }*/    
+    }
+  }
   .mute{
     display: none;
+  }
+}
+
+
+.switch {
+  // z-index: 10000;
+  position: absolute;
+  width: auto;
+  left: 20vh;
+  bottom: 4vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+
+  button {
+    transition: box-shadow 2s;
+    width: 10vh;
+    height: 6vh;
+    background-color: #5a8d8c;
+    z-index: 100000;
+    border-radius: calc(10vh / 2);
+    border: 1px solid rgb(105, 105, 105);
+    transition: box-shadow 0.2s;
+    box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3), 0 0 0 0px rgba(203, 85, 62, 0.363);
+  }
+
+  p{
+    font-size: 21px;
+    margin-left: 1vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Nunito;
+    font-style: normal;
+    color: #5a8d8c;
+  }
+  &:hover > button{
+    box-shadow: 50px 50px 0 200px rgba(203, 86, 62, 0.3), 0 0 0 10px rgba(203, 85, 62, 0.363);
   }
 }

@@ -26,6 +26,7 @@
   height: 6.5vh;
 }
 #app-view #app-overlay header ul {
+  z-index: 1000;
   margin: 0px;
   padding: 0px;
   margin-left: auto;
@@ -57,10 +58,10 @@
 }
 #app-view #app-overlay #scroll-point .point {
   position: relative;
-  height: 2vh;
-  width: 2vh;
-  border-radius: calc(2vh / 2);
-  background-color: #ffffff;
+  height: 1.25vh;
+  width: 1.25vh;
+  border-radius: calc(1.25vh / 2);
+  background-color: #5a8d8c;
   border: 0.5vh solid #5a8d8c;
   margin-bottom: 10vh;
 }
@@ -75,8 +76,8 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  height: 8vh;
-  width: 0.6vh;
+  height: 5vh;
+  width: 0.15vw;
   background-color: #5a8d8c;
   top: calc(100% + 0.5vh);
 }
@@ -86,12 +87,13 @@
   left: 50%;
   transform: translateX(-50%);
   height: 5vh;
-  width: 0.6vh;
+  width: 0.15vw;
   background-color: #5a8d8c;
   bottom: calc(100% + 0.5vh);
 }
 #app-view #app-overlay #scroll-point .selected {
   border: 0.5vh solid #cb563e !important;
+  background-color: #cb563e;
 }
 #app-view #app-overlay #scroll-point .selected::after {
   background-color: #cb563e !important;
@@ -99,7 +101,32 @@
 #app-view #app-overlay #scroll-point .selected::before {
   background-color: #cb563e !important;
 }
+#app-view #app-overlay #scroll-point .last {
+  background-color: #ffffff;
+  animation: selectedHalo 1s forwards ease-out;
+}
+@keyframes selectedHalo {
+  0% {
+    box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
+  }
+}
+#app-view #app-overlay #scroll-point .beforeLast {
+  background-color: #cb563e;
+  animation: diselectedHalo 1s forwards ease-out;
+}
+@keyframes diselectedHalo {
+  0% {
+    box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
+  }
+}
 #app-view #app-overlay #text-size {
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -113,9 +140,34 @@
   width: 8vh;
   border-radius: calc(8vh / 2);
   color: white;
+  z-index: 1000;
+  transition: box-shadow 0.5s;
+  box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
+}
+#app-view #app-overlay #text-size .text:hover {
+  box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
 }
 #app-view #app-overlay #text-size .selected {
-  background-color: #cb563e;
+  animation: setSelected 0.5s forwards ease-out;
+}
+@keyframes setSelected {
+  0% {
+    background-color: #5a8d8c;
+  }
+  100% {
+    background-color: #cb563e;
+  }
+}
+#app-view #app-overlay #text-size .diselected {
+  animation: setDiselected 0.5s forwards ease-out;
+}
+@keyframes setDiselected {
+  0% {
+    background-color: #cb563e;
+  }
+  100% {
+    background-color: #5a8d8c;
+  }
 }
 #app-view #app-overlay #text-size #small {
   font-size: small;
@@ -127,15 +179,53 @@
   font-size: large;
 }
 
-#son {
+#son button img {
+  z-index: 1000;
   position: absolute;
-  height: 10vh;
-  width: 10vh;
+  height: 7vh;
+  width: 7vh;
   left: 5vh;
-  bottom: 5vh;
+  bottom: 4vh;
+  /*&:hover{
+    box-shadow: 0 0 0 5px rgba(203, 86, 62, 0.3);
+  }*/
 }
 #son .mute {
   display: none;
+}
+
+.switch {
+  position: absolute;
+  width: auto;
+  left: 20vh;
+  bottom: 4vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.switch button {
+  transition: box-shadow 2s;
+  width: 10vh;
+  height: 6vh;
+  background-color: #5a8d8c;
+  z-index: 100000;
+  border-radius: calc(10vh / 2);
+  border: 1px solid dimgray;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3), 0 0 0 0px rgba(203, 85, 62, 0.363);
+}
+.switch p {
+  font-size: 21px;
+  margin-left: 1vw;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Nunito;
+  font-style: normal;
+  color: #5a8d8c;
+}
+.switch:hover > button {
+  box-shadow: 50px 50px 0 200px rgba(203, 86, 62, 0.3), 0 0 0 10px rgba(203, 85, 62, 0.363);
 }
 
 /*# sourceMappingURL=app.css.map */

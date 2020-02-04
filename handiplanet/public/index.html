@@ -16,7 +16,9 @@ Copyright - 2020 Christophe SONNEVILLE
     <link rel="stylesheet" href="./style/css/view2.css">
     <link rel="stylesheet" href="./style/css/view8.css">
 
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
     <script defer src="./js/template.js"></script>
+    <script defer src="./js/scrollBar.js"></script>
     <script defer src="./js/view.js"></script>
     <script defer src="./views/view1/view1.js"></script>
     <script defer src="./views/view2/view2.js"></script>
@@ -53,16 +55,16 @@ Copyright - 2020 Christophe SONNEVILLE
         </header>
 
         <div id="scroll-point">
-          <div class="point selected"></div>
-          <div class="point"></div>
-          <div class="point"></div>
-          <div class="point"></div>
-          <div class="point"></div>
+          <div class="point selected last" data-place=0></div>
+          <div class="point" data-place=1></div>
+          <div class="point" data-place=2></div>
+          <div class="point" data-place=3></div>
+          <div class="point" data-place=4></div>
         </div>
 
         <div id="text-size">
-          <button class="text selected" id="small">Aa</button>
-          <button class="text" id="medium">Aa</button>
+          <button class="text" id="small">Aa</button>
+          <button class="text selected" id="medium">Aa</button>
           <button class="text" id="large">Aa</button>
         </div>
 
@@ -70,6 +72,13 @@ Copyright - 2020 Christophe SONNEVILLE
          <button id="onB" class="on"><img src="./assets/Son.svg"></button>
          <button id="muteB" class="mute"><img src="./assets/SonMute.svg"></button>
         </div>
+
+        <!-- <span class="slider round"></span> -->
+        <div class="switch" id="switch">
+          <button id="tog"></button>
+          <p>Changer contraste</p>          
+        </div>
+        
 
       </div>
 
