@@ -16,14 +16,15 @@ $('#fullpage').fullpage({
   sectionsColor: ['#1E1E1E', '#1E1E1E', 'white', 'black', '#F2AE72', '#5C832F', 'black'],
   sectionSelector: '.vertical-scrolling',
   slideSelector: '.horizontal-scrolling',
+  animateAnchor: false,
   navigation: false,
-  slidesNavigation: true,
   controlArrows: false,
   scrollOverflow: true,
   anchors: ['home', 'sound', 'presentation', 'menu', 'expo', 'dance'],
   menu: '#menu',
 
   afterLoad: function(anchorLink, index) {
+    console.log($.fn.fullpage);
     $header_top.css('background', 'rgba(0, 47, 77, .3)');
     $nav.css('background', 'rgba(0, 47, 77, .25)');
     if (index == 6) {
@@ -35,6 +36,11 @@ $('#fullpage').fullpage({
     if(anchorLink == 'dance') {
       $.fn.fullpage.setAllowScrolling(false, 'up');
     }
+    console.log("ici");
+    console.log(anchorLink, index);
+    if(index == 2)
+      $.fn.fullpage.silentMoveTo('menu', undefined);
+    console.log("ici2");
   },
 
   onLeave: function(index, nextIndex, direction) {
