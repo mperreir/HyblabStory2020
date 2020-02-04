@@ -2,11 +2,7 @@
 class View1 extends View {
     constructor(receiver){
         super('view1', receiver);
-        this.load()
-        .then(()=>{
-            this.view = document.getElementById(this.viewName);
-            this.linkElements();
-        });
+        super.load();
     }
 
     
