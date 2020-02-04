@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <router-view />
   </div>
 </template>
@@ -17,6 +17,11 @@ html, body, #app {
   height: 100vh;
   display: flex; justify-content: center; align-items: center;
 }
+
+.app {
+  overflow: hidden;
+}
+
 .saynette {
     /*! display: inline-block; */
     position: relative;

@@ -8,13 +8,17 @@ export default new Vuex.Store({
     currentSceneIndex: 0
   },
   mutations: {
-      nextScene(state) {
-        state.currentSceneIndex+=1;
+      nextScene(state, sceneId) {
+        if(sceneId === null)
+          state.currentSceneIndex++;
+        else {
+          state.currentSceneIndex+=sceneId;  
+        }
       }
   },
   actions: {
-    nextScene({ commit }) {
-      commit('nextScene');
+    nextScene({ commit }, { sceneId }) {
+      commit('nextScene', sceneId);
     }
   },
   getters: {

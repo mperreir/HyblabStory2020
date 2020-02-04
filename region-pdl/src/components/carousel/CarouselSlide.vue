@@ -31,12 +31,12 @@
   height:100%;
 }
 .slide-enter-active {
-  -webkit-animation: slideIn 5s;
-          animation: slideIn 5s;
+  -webkit-animation: slideIn 3s;
+          animation: slideIn 3s;
 }
 .slide-leave-active {
-  -webkit-animation: slideOut 5s;
-          animation: slideOut 5s;
+  -webkit-animation: slideOut 3s;
+          animation: slideOut 3s;
   position: absolute;
   top: 0;
   left:0;

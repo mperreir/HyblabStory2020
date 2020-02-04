@@ -1,6 +1,10 @@
 <template>
-  <div class="carousel">
-    <slot />
+  <div style="{ overflow: hidden; }">
+    <div class="blackBand-left" :style="bandWidthStyle"></div>
+    <div class="carousel" ref="carousel">
+      <slot />
+    </div>
+    <div class="blackBand-right" :style="bandWidthStyle"></div>
   </div>
 </template>
 
@@ -13,9 +17,21 @@
     },
     mounted () {
       this.slides = this.$children
-      // this.slides.forEach((slide, i) => {
-      //   slide.index = i
-      // })
+      this.updateBandWidth();
+    },
+    data: () => ({
+      bandWidthStyle: { width: '100px'},
+    }),
+    created() {
+      window.addEventListener('resize', this.updateBandWidth);
+    },
+    destroyed() {
+      window.removeEventListener('resize', this.updateBandWidth);
+    },
+    methods: {
+      updateBandWidth () { 
+        this.bandWidthStyle = { width: (window.innerWidth - this.$refs.carousel.offsetWidth)/2+'px' } 
+      },
     }
   }
 </script>
@@ -24,5 +40,23 @@
 .carousel {
   position: relative;
   height: 100vh;
+}
+
+.blackBand-left {
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100vh;
+  background-color: black;
+  z-index: 100;
+}
+
+.blackBand-right {
+  position: absolute;
+  right:0;
+  top:0;
+  height: 100vh;
+  background-color: black;
+  z-index: 100;
 }
 </style>

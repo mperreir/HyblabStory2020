@@ -2,21 +2,17 @@
   <div @click="click()">
     <Carousel>
       <CarouselSlide :index="0">
-        <!-- <div style="position: absolute; height: 100%;"> -->
         <Intro />
-        <!-- </div> -->
       </CarouselSlide>
       <CarouselSlide :index="1">
-        <!-- <div style="position: absolute; height: 100%;"> -->
         <House />
-        <!-- </div> -->
       </CarouselSlide>
     </Carousel>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+
 import { mapState } from 'vuex';
 import Intro from "@/components/Saynettes/Intro";
 import House from "@/components/Saynettes/House";
@@ -43,7 +39,7 @@ export default {
   },
   methods: {
     click() {
-      this.$store.dispatch("nextScene")
+      this.$store.dispatch("nextScene", { sceneId: 1 });
     }
   }
 };
@@ -64,7 +60,6 @@ export default {
   transition: 1s;
   transform:translateX(-50%);
 }
-
 
 
 .fade-enter-active, .fade-leave-active {
