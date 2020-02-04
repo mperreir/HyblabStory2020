@@ -1,17 +1,21 @@
 <template>
-  <div @click="click()">
-    <Carousel>
-      <CarouselSlide :index="0">
-        <Intro />
-      </CarouselSlide>
-      <CarouselSlide :index="1">
-        <House />
-      </CarouselSlide>
-    </Carousel>
+  <div>
+    <div @click="click()">
+      <Carousel>
+        <CarouselSlide :index="0">
+          <Intro />
+        </CarouselSlide>
+        <CarouselSlide :index="1">
+          <House />
+        </CarouselSlide>
+      </Carousel>
+    </div>
+    <ProgressBar v-bind:number="4" v-bind:index="1"/>
   </div>
 </template>
 
 <script>
+import ProgressBar from "@/components/ProgressBar.vue";
 import Intro from "@/components/Saynettes/Intro";
 import House from "@/components/Saynettes/House";
 import Carousel from "@/components/carousel/Carousel";
@@ -24,7 +28,8 @@ export default {
     Intro,
     House,
     Carousel,
-    CarouselSlide
+    CarouselSlide,
+    ProgressBar
   },
   data: () => ({
     Scenes: Scenes

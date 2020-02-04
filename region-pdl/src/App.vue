@@ -158,4 +158,7 @@ body,
 .lightgrey {
   color: #f2f2f2;
 }
+.bg-lightgrey {
+  background-color: #f2f2f2;
+}
 </style>

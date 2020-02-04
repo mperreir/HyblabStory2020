@@ -2,8 +2,8 @@
   <div>
     <div class="progress-line bg-lightgrey">
       <div
-        class="percentage bg-orange"
-        :style="{'height': percentage + '%'}"
+        class="percentage bg-yellow"
+        :style="{'width': percentage + '%'}"
       />
     </div>
     <div class="progress">
@@ -39,9 +39,9 @@ export default {
           newPercentage <= 100 &&
           this.percentage < newPercentage
         ) {
-          this.percentage += 0.2;
+          this.percentage += 1;
         }
-      }, 1);
+      }, 15);
     }
   }
 };
@@ -51,27 +51,26 @@ export default {
 .progress {
   position: absolute;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   justify-content: space-between;
-  top: 10vh;
-  left: 10vh;
-  height: 45vh;
-  width: 6vh;
+  top: 8vh;
+  left: 25vw;
+  height: 6vh;
+  width: 50vw;
   align-items: center;
 }
 
 .progress-line {
   position: absolute;
-  top: 12vh;
-  left: 12.5vh;
-  height: 40vh;
-  width: 1vh;
+  top: 10.5vh;
+  left: 26vw;
+  height: 1vh;
+  width: 48vw;
 }
 
 .percentage {
-  width: 100%;
-  bottom: 0;
-  position: absolute;
+  height: 100%;
+  left: 0;
 }
 
 .dot {
