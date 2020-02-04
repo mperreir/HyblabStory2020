@@ -48,37 +48,4 @@ export default {
   margin: auto;
   height: 100vh;
 }
-
-.swipe-enter-active,
-.swipe-leave-active {
-  transition: 1s;
-  transform: translateX(50%);
-}
-.swipe-enter, .swipe-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  transition: 1s;
-  transform: translateX(-50%);
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
-/* Enter and leave animations can use different */
-/* durations and timing functions.              */
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  opacity: 0;
-}
 </style>
