@@ -134,3 +134,12 @@ a{
     transform: translateY(-100%);
   }
 }
+
+@keyframes scrollTransitionHorizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

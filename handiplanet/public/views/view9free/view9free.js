@@ -4,8 +4,8 @@
  * Copyright - 2020 Christophe SONNEVILLE
  */
 class View9Free extends View {
-  constructor() {
-    super('view9free', document.getElementById('view-container'));
+  constructor(el) {
+    super('view9free', el || document.getElementById('view-container'));
     this.load()
       .then(() => {
         this.view = document.getElementById(this.viewName);
@@ -28,15 +28,16 @@ class View9Free extends View {
     const tempDiv = document.createElement('div');
     document.getElementById('view-container').appendChild(tempDiv);
     tempDiv.style.position = 'absolute';
-    tempDiv.style.top = '100%';
+    tempDiv.style.top = '0px';
+    tempDiv.style.left = '100%';
 
     // Création de la prochaine view
     const nextView = new View9Premium(tempDiv);
     await nextView.load();
-    this.view.style.animation = 'scrollTransition 1s forwards';
-    this.view.style.webkitAnimation = 'scrollTransition 1s forwards';
-    tempDiv.style.animation = 'scrollTransition 1s forwards';
-    tempDiv.style.webkitAnimation = 'scrollTransition 1s forwards';
+    this.view.style.animation = 'scrollTransitionHorizontal 1s forwards';
+    this.view.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
+    tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
+    tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
     setTimeout(() => {
       document.getElementById('view-container').innerHTML = '';
       document.getElementById('view-container').appendChild(nextView.view);
