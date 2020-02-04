@@ -1,68 +1,219 @@
 <template>
   <div>
-    <input
-      type="range"
-      :value="searchText"
-      @input="searchText = $event"
-    >
+    <p class="text size">{{ 50 * value }}m²</p>
+    <div class="slider">
+      <Moins
+        class="button"
+        :class="{'spinnin-minus': spinninMinus, minus: clickableMinus}"
+        @click="minusClick"
+      />
+      <input type="range" min="1" max="3" v-model="value" @input="onValueChange" />
+      <Plus
+        class="button"
+        :class="{'spinnin-plus': spinninPlus, plus: clickablePlus}"
+        @click="plusClick"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import Moins from "@/assets/Slider/minus.svg";
+import Plus from "@/assets/Slider/plus.svg";
+
 export default {
-    name: "Slider",
-    props: ['value'],
-    data: () => ({
-        classObject: {
-            animated: false,
-            fadeInRight: false,
-        },
-    }),
-    methods: {
-        arrive() {
-            this.classObject = {
-                animated: true,
-                fadeInRight: true,
-            };
-        }
+  name: "Slider",
+  components: {
+    Moins,
+    Plus
+  },
+  data: () => ({
+    value: 1,
+    spinninMinus: false,
+    spinninPlus: false,
+    clickableMinus: true,
+    clickablePlus: true
+  }),
+  created: function() {
+    this.onValueChange();
+  },
+  methods: {
+    onValueChange() {
+      this.$emit("input", this.value);
+
+      if (this.value > 1) {
+        this.clickableMinus = true;
+      } else {
+        this.clickableMinus = false;
+      }
+
+      if (this.value < 3) {
+        this.clickablePlus = true;
+      } else {
+        this.clickablePlus = false;
+      }
     },
+    minusClick() {
+      if (this.value > 1) {
+        this.value--;
+        this.spinninMinus = true;
+      }
+
+      setTimeout(() => {
+        this.spinninMinus = false;
+      }, 200);
+
+      this.onValueChange();
+    },
+    plusClick() {
+      if (this.value < 3) {
+        this.value++;
+        this.spinninPlus = true;
+      }
+
+      setTimeout(() => {
+        this.spinninPlus = false;
+      }, 200);
+
+      this.onValueChange();
+    }
+  }
 };
 </script>
 
 <style scoped>
-input[type="range"] {
-    display: block;
-    -webkit-appearance: none;
-    background-color: #bdc3c7;
-    height: 4px;
-    border-radius: 5px;
-    margin: 0 auto;
-    outline: 0;
-}
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: #e74c3c;
-    width: 25px;
-    height: 25px;
-    border-radius: 150%;
-    border: 2px solid white;
-    cursor: pointer;
-    transition: .3s ease-in-out;
-}​
-input[type="range"]::-webkit-slider-thumb:hover {
-    background-color: white;
-    border: 2px solid #e74c3c;
-}
-input[type="range"]::-webkit-slider-thumb:active {
-    transform: scale(1.6);
+.slider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-input[type=range]::-moz-range-thumb {
-    width: 2em;
-    height: 2em;
-    height: inherit;
-    border: none;
-    border-radius: 0;
-    background: red;
+.size {
+  margin: 0;
+}
+
+.button {
+  height: 2.5vh;
+  width: 2.5vh;
+  border-radius: 45%;
+}
+
+.plus:hover,
+.minus:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background-color: #00324e;
+  height: 0.5vh;
+  border-radius: 5px;
+  margin: 0 2vh;
+  width: 20vh;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 2.5vh;
+  width: 2.5vh;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: radial-gradient(#f31512 50%, #f99a04 75%);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 2.5vh;
+  width: 2.5vh;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: radial-gradient(#f31512 50%, #f99a04 75%);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  background: #f99a04;
+  cursor: pointer;
+  height: 40px;
+}
+
+.spinnin-plus {
+  animation: spin-plus 0.2s cubic-bezier(0.8, 0.2, 0.6, 0.8);
+}
+
+.spinnin-minus {
+  animation: spin-minus 0.2s cubic-bezier(0.8, 0.2, 0.6, 0.8);
+}
+
+@-webkit-keyframes spin-plus {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin-plus {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-ms-keyframes spin-plus {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-plus {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin-minus {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@-moz-keyframes spin-minus {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@-ms-keyframes spin-minus {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes spin-minus {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 </style>
