@@ -28,7 +28,7 @@
         </CarouselSlide>
       </Carousel>
     </div>
-    <ProgressBar v-bind:number="8" />
+    <!-- <ProgressBar v-bind:number="8" /> -->
   </div>
 </template>
 
