@@ -15,18 +15,19 @@
     margin: 0px 10vw;
     border-bottom: 2px solid #5A8D8C;
     position: relative;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: flex-end;
     img {
       position: absolute;
       bottom: -2px;
     }
     
     #view-4-chart-container{
-      position: absolute;
-      right: 50%;
-      bottom: 0%;
       height: 80%;
-      width: 30%;
+      flex: 1;
+      margin: 0 5vw;
       display: flex;
       flex-direction: row;
 
@@ -93,10 +94,8 @@
 
     article {
       z-index: 7;
-      position: absolute;
-      left: 52.5%;
-      max-width: 30%;
-      bottom: 25%;
+      flex: 1;
+      margin: 5vh 5vw 5vh 0;
       p{
         font-family: Nunito;
         font-style: normal;
