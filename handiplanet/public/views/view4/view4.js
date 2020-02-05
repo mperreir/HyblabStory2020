@@ -2,7 +2,6 @@
 class View4 extends View {
     constructor(receiver){
         super('view4', receiver);
-        super.load();
     }
 
     
@@ -16,17 +15,5 @@ class View4 extends View {
         this.btNext.addEventListener('click', ()=>{
             
         });
-    }
-
-    showSelectChar() {
-        // Show color selector
-        this.switchCharButton.style.display = 'none';
-        this.selectCharContainer.style.display = 'initial';
-    }
-
-    hideSelectChar() {
-        // Hide color selector
-        this.selectCharContainer.style.display = 'none';
-        this.switchCharButton.style.display = 'initial';
     }
 }

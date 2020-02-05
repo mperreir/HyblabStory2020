@@ -31,13 +31,11 @@ class View3Free extends View {
         this.dot2 = document.getElementById('view-3-free-green-dot');
         this.dot3 = document.getElementById('view-3-free-white-ring');
         this.dot4 = document.getElementById('view-3-free-green-tiny-dot');
-
         // Parallax for background elements
         const vc = document.getElementById('view-container');
         vc.addEventListener('mousemove', (e) => {
             var relX = e.pageX - vc.offsetLeft;
             var relY = e.pageY - vc.offsetTop;
-
             TweenMax.to(this.dot1, 1, {
                 x: (relX - vc.offsetWidth / 2) / vc.offsetWidth * -150,
                 y: (relY - vc.offsetHeight / 2) / vc.offsetHeight * -50,
