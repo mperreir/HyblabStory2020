@@ -80,18 +80,6 @@
       height: 20vh;
       max-width: 100%;
     }
-
-    &>div {
-      position: absolute;
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: flex-end;
-      justify-content: flex-start;
-      right: 50%;
-      bottom: -1px;
-      max-height: 70%;
-      max-width: 50%;
-    }
     
     article {
       z-index: 7;
