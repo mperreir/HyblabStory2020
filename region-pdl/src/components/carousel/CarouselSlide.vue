@@ -35,6 +35,7 @@ export default {
   -moz-animation: slideIn 3s;
   -ms-animation: slideIn 3s;
   animation: slideIn 3s;
+  pointer-events: none;
 }
 
 .slide-leave-active {
@@ -49,6 +50,7 @@ export default {
   bottom: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
 @-webkit-keyframes slideIn {

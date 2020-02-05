@@ -41,7 +41,6 @@ export default {
             };
         },
         onNext() {
-            console.log("ok");
             this.$store.dispatch("nextScene", {sceneId: 1});
         }
     },
