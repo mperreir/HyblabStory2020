@@ -9,7 +9,7 @@
 
 <style>
 html {
-  background-image: linear-gradient(to top, #f7e999 20%, #99e0f7 50%);
+  background-image: linear-gradient(to top, #f7e999 20%, #ccf2ff 50%);
 }
 
 body {

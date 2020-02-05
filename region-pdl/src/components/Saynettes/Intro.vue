@@ -1,20 +1,30 @@
 <template>
   <div class="saynette">
-    <MaisonSVG class="svg" />
-    <Cloud1 class="cloud" />
+    <LogoRegion class="logoRegion"/>
+    <TextTitle :x="7" :y="30">La Région Pays de la Loire<br> pour la transition énergétique</TextTitle>
+    <SimpleText :x="7" :y="43" :width="40">
+        Suivez la journée de Monsieur Moreau et Madame Dubois et découvez comment la Région <b>Pays de La Loire</b> les accompagne pour une consommation d'énergie plus verte.
+    </SimpleText>
+    <SimpleButton text="Démarrer l'aventure" :width="23" :x="7" :y="58"/>
+    <MaisonSVG class="svg"/>
   </div>
 </template>
 
 <script>
-import MaisonSVG from "@/assets/HOME/HOME FOND_Plan de travail 1.svg";
-import Cloud1 from "@/assets/HOME/Nuage 1Fichier 7.svg";
-
+import MaisonSVG from "@/assets/HOME/FOND HOME-01.svg";
+import TextTitle from "@/components/TextTitle";
+import SimpleText from "@/components/SimpleText";
+import SimpleButton from "@/components/SimpleButton";
+import LogoRegion from "@/assets/HOME/logo_region.svg";
 
 export default {
     name: "Intro",
     components: {
         MaisonSVG,
-        Cloud1,
+        TextTitle,
+        SimpleButton,
+        SimpleText,
+        LogoRegion,
     },
     data: () => ({
         classObject: {
@@ -36,21 +46,10 @@ export default {
 </script>
 
 <style scoped>
-.cloud {
+.logoRegion {
     position: absolute;
-    top: 25%;
-    left: 20%;
-    width: 10%;
-    color: red;
-    font-size: 3vw;
-}
-
-.house {
-  position: absolute;
-  top: 25%;
-  left: 20%;
-  width: 10%;
-  color: red;
-  font-size: 3vw;
+    left: 7%;
+    top: 4%;
+    width: 15%;
 }
 </style>
