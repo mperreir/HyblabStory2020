@@ -1,0 +1,28 @@
+#page2{
+    background-image: url(../img/Bombardement.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#texteBombardement{
+    position: absolute;
+    width: 53%;
+    height: 19%;
+    left: 19%;
+    top: 76%;
+}
+
+#texteBombardement p{
+    font-family: Vibur;
+    color: #265984;
+}
+
+@media screen and (max-aspect-ratio: 16/9){
+    #texteBombardement p{
+        font-size: 1.7vw;
+    }
+}
+@media screen and (min-aspect-ratio: 16/9){
+    #texteBombardement p{
+        font-size: 3vh;
+    }
+}

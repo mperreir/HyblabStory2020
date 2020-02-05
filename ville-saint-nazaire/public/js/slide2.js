@@ -1,9 +1,22 @@
 let initSlide2 = function(){
-  anime({
-    targets: '#img-fini',
-    scale: 1.2,
-    easing: 'easeInOutQuad',
-    direction: 'alternate',
-    loop: true
-  });
-};
+
+    var son = document.querySelector('#audioBombardement');
+    son.play();
+
+    function next3(){
+        mySlidr.slide('page-3');
+        initSlide3();
+    };
+
+    d3.select('#next3').on('click', function(){
+      console.log('3');
+      son.pause();
+      moveDown();
+      initSlide3();
+    });
+
+
+
+    //setTimeout(next3, 16000);
+
+}

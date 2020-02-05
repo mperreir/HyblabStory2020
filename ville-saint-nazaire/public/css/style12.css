@@ -1,0 +1,68 @@
+#page12{
+    background-image: url(../img/fond_choix_decorateur.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#next15-1{
+  position: absolute;
+  left:5%;
+}
+#blackblock12{
+  top: 0%;
+  width: 25%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: -25%;
+  z-index: 10;
+}
+
+#image_bureau12{
+  position: absolute;
+  top:10%;
+  left:-20%;
+  width: 25%;
+  height: auto;
+  z-index: 1;
+}
+
+#image_commission12{
+  position: absolute;
+  top:30%;
+  left:-20%;
+  width: 25%;
+  height: auto;
+  z-index: 2;
+}
+#image_salon12{
+  position: absolute;
+  top:55%;
+  left:-12%;
+  width: 16%;
+  height: auto;
+  z-index: 3;
+}
+
+#texte_slide12{
+    position: absolute;
+    width:68%;
+    height:12%;
+    right:16%;
+    top: 87%;
+    padding : 0.5%
+}
+#texte_slide12 p{
+    font-family:"Parisienne";
+    color:black;
+    text-align: justify;
+}
+@media screen and (max-aspect-ratio: 16/9){
+    #texte_slide12 p{
+        font-size: 1.7vw;
+    }
+}
+@media screen and (min-aspect-ratio: 16/9){
+    #texte_slide12 p{
+        font-size: 3vh;
+    }
+}

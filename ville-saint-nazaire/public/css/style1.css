@@ -1,0 +1,26 @@
+#next2{
+  background-color: inherit;
+  position:absolute;
+  bottom:8%;
+  padding: 0.5% 1%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #265983;
+  color: #265983;
+}
+#page-1{
+  background-image: url('../img/background1.png');
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-aspect-ratio: 16/9){
+    #next2{
+        font-size: 1.8vw;
+    }
+}
+@media screen and (min-aspect-ratio: 16/9){
+    #next2{
+        font-size: 3vh;
+    }
+}
