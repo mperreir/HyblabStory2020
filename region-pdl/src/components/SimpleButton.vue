@@ -1,5 +1,12 @@
 <template>
-    <div class="classic-btn bg-darkblue" :style="{width: width+'%', left: x+'%', top: y+'%'}"><div class="text">{{ text }}</div></div>
+  <div
+    class="classic-btn bg-darkblue"
+    :style="{width: width+'%', left: x+'%', top: y+'%'}"
+  >
+    <div class="text">
+      {{ text }}
+    </div>
+  </div>
 </template>
 
 <script>
@@ -14,7 +21,7 @@ export default {
             default: 100
         },
         x: {
-            type: Number, 
+            type: Number,
             default: 0
         },
         y: {
@@ -36,7 +43,7 @@ export default {
 }
 
 .classic-btn {
-    color: white; 
+    color: white;
     background-color: #00324e;
 
     position: absolute;

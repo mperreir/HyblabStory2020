@@ -8,7 +8,7 @@
       />
       <span
         v-if="popover"
-        class="bg-darkblue cream"
+        class="bg-yellow-orange lightgrey"
         :class="{ popover: popover }"
       >
         <slot />
@@ -90,7 +90,6 @@ export default {
   font-weight: bold;
   border-radius: 5px;
   bottom: 80px;
-  box-shadow: 2px 2px 1.5px rgba(0, 0, 0, 0.3);
   font-size: 25px;
   left: -117px;
   padding: 0 20px;
@@ -105,7 +104,7 @@ export default {
 }
 
 .qs .popover::before {
-  border-top: 7px solid #2c4068;
+  border-top: 7px solid #faaf04;
   border-right: 7px solid transparent;
   border-left: 7px solid transparent;
   bottom: -7px;
