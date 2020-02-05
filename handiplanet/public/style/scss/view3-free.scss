@@ -35,6 +35,7 @@
 
     #view-3-free-red-ring{
       position: absolute;
+      transition: transform ease-in-out;
       top: 20%;
       left: 15%;
       width: 5vh;
@@ -45,6 +46,7 @@
 
     #view-3-free-green-dot{
       position: absolute;
+      transition: transform ease-in-out;
       top: 30%;
       right: 30%;
       width: 4vh;
@@ -55,6 +57,7 @@
 
     #view-3-free-white-ring{
       position: absolute;
+      transition: transform ease-in-out;
       bottom: 40%;
       right: 10%;
       width: 4vh;
@@ -64,6 +67,7 @@
     }
     #view-3-free-green-tiny-dot{
       position: absolute;
+      transition: transform ease-in-out;
       bottom: 5%;
       left: 30%;
       width: 2vh;

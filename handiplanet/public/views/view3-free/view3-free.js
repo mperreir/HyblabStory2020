@@ -31,35 +31,16 @@ class View3Free extends View {
         this.dot2 = document.getElementById('view-3-free-green-dot');
         this.dot3 = document.getElementById('view-3-free-white-ring');
         this.dot4 = document.getElementById('view-3-free-green-tiny-dot');
-
+        
         // Parallax for background elements
-        const vc = document.getElementById('view-container');
-        vc.addEventListener('mousemove', (e) => {
-            var relX = e.pageX - vc.offsetLeft;
-            var relY = e.pageY - vc.offsetTop;
-
-            TweenMax.to(this.dot1, 1, {
-                x: (relX - vc.offsetWidth / 2) / vc.offsetWidth * -150,
-                y: (relY - vc.offsetHeight / 2) / vc.offsetHeight * -50,
-                ease: Power2.easeOut
-            })
-            TweenMax.to(this.dot2, 1, {
-                x: (relX - vc.offsetWidth / 2) / vc.offsetWidth * -50,
-                y: (relY - vc.offsetHeight / 2) / vc.offsetHeight * -75,
-                ease: Power2.easeOut
-            })
-            TweenMax.to(this.dot3, 1, {
-                x: (relX - vc.offsetWidth / 2) / vc.offsetWidth * -100,
-                y: (relY - vc.offsetHeight / 2) / vc.offsetHeight * 150,
-                ease: Power2.easeOut
-            })
-            TweenMax.to(this.dot4, 1, {
-                x: (relX - vc.offsetWidth / 2) / vc.offsetWidth * 50,
-                y: (relY - vc.offsetHeight / 2) / vc.offsetHeight * 100,
-                ease: Power2.easeOut
-            })
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX - window.innerWidth / 2;
+            const y = e.clientY - window.innerHeight / 2;
+            this.dot1.style.transform = `translateX(${x * -0.1}px) translateY(${y * -0.05}px)`;
+            this.dot2.style.transform = `translateX(${x * -0.07}px) translateY(${y * 0.1}px)`;
+            this.dot3.style.transform = `translateX(${x * -0.05}px) translateY(${y * -0.07}px)`;
+            this.dot4.style.transform = `translateX(${x * 0.05}px) translateY(${y * 0.05}px)`;
         });
-
         this.btNext = document.getElementById('view-3-free-next-button');
         this.btNext.addEventListener('click', ()=>{
             this.switchToViewPremium();

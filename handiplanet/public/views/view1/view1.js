@@ -42,21 +42,11 @@ class View1 extends View {
         this.luggage = document.getElementById('view-1-luggage-img');
 
         // Parallax for background elements
-        const vc = document.getElementById('view-container');
-        vc.addEventListener('mousemove', (e)=>{
-            var relX = e.pageX - vc.offsetLeft;
-            var relY = e.pageY - vc.offsetTop;
-
-            TweenMax.to(this.hotel, 1, {
-                x: (relX - vc.offsetWidth/2) / vc.offsetWidth * -25,
-                y: (relY - vc.offsetHeight/2) / vc.offsetHeight * -25,
-                ease: Power2.easeOut
-            })
-            TweenMax.to(this.luggage, 1, {
-                x: (relX - vc.offsetWidth/2) / vc.offsetWidth * -25,
-                y: (relY - vc.offsetHeight/2) / vc.offsetHeight * -25,
-                ease: Power2.easeOut
-            })
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX - window.innerWidth / 2;
+            const y = e.clientY - window.innerHeight / 2;
+            this.hotel.style.transform = `translateX(${x * -0.1}px) translateY(${y * -0.05}px)`;
+            this.luggage.style.transform = `translateX(${x * -0.05}px) translateY(${y * -0.1}px)`;
         });
 
         // Switch color of character
