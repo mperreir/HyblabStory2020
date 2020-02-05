@@ -14,23 +14,49 @@
     margin: 0px 10vw;
     border-bottom: 2px solid #5A8D8C;
     position: relative;
+    display: flex;
+    
+    background-image: url("../../assets/view9/premium/tache.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom -2px center;
+    div:first-of-type {
+      flex: 2;
+      display: flex;
+      img {
+        max-width: 90%;
+        margin: auto;
+        margin-bottom: 5vh;
+        object-fit: contain;
+        object-position: bottom;
+      }
+    }
+    
+    
+    div:last-of-type {
+      flex: 1;
+      display: flex;
 
-    img {
-      position: absolute;
-      height: 70%;
-      width: 100%;
-      bottom: 5%;
-      left: 0px;
-      object-fit: contain;
-      object-position: bottom center;
+      p {
+        margin-top: auto;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #426262;
+
+        em {
+          color: #CB563E;
+        }
+      }
     }
   }
-
+  
   footer {
     width: 100vw;
     height: 20vh;
     position: relative;
-
+    
     #view-9p-next-button {
       position: absolute;
       right: 0px;
