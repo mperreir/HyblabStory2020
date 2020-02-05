@@ -62,18 +62,18 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   top: 8vh;
-  left: 25vw;
+  margin-left: 20vh;
   height: 6vh;
-  width: 50vw;
+  width: 100vh;
   align-items: center;
 }
 
 .progress-line {
   position: absolute;
   top: 10.5vh;
-  left: 26vw;
+  margin-left: 22vh;
   height: 1vh;
-  width: 48vw;
+  width: 96vh;
 }
 
 .percentage {

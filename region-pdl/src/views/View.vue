@@ -16,11 +16,10 @@
 
 <script>
 import ProgressBar from "@/components/ProgressBar.vue";
-import Intro from "@/components/Saynettes/Intro";
-import House from "@/components/Saynettes/House";
-import Carousel from "@/components/carousel/Carousel";
-import CarouselSlide from "@/components/carousel/CarouselSlide";
-import { Scenes } from "@/utils/scenes.js";
+import Intro from "@/components/Saynettes/Intro.vue";
+import House from "@/components/Saynettes/House.vue";
+import Carousel from "@/components/carousel/Carousel.vue";
+import CarouselSlide from "@/components/carousel/CarouselSlide.vue";
 
 export default {
   name: "Views",
@@ -31,21 +30,11 @@ export default {
     CarouselSlide,
     ProgressBar
   },
-  data: () => ({
-    Scenes: Scenes
-  }),
+  data: () => ({}),
   methods: {
     click() {
-      this.$store.dispatch("nextScene", { sceneId: 1 });
+      //this.$store.dispatch("nextScene", { sceneId: 1 });
     }
   }
 };
 </script>
-
-<style scoped>
-.mainScene {
-  text-align: center;
-  margin: auto;
-  height: 100vh;
-}
-</style>
