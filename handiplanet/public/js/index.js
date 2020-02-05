@@ -3,7 +3,7 @@
 * Author: Christophe SONNEVILLE
 * Copyright - 2020 Christophe SONNEVILLE
 */
-view = new View9Premium(document.getElementById('view-container'));
+view = new View12(document.getElementById('view-container'));
 view.load();
 //window.scrollTo(0,0);
 
