@@ -1,23 +1,25 @@
 <template>
-  <div @click="click()">
-    <Carousel>
-      <CarouselSlide :index="0">
-        <Intro />
-      </CarouselSlide>
-      <CarouselSlide :index="1">
-        <House />
-      </CarouselSlide>
-    </Carousel>
+  <div>
+    <div @click="click()">
+      <Carousel>
+        <CarouselSlide :index="0">
+          <Intro />
+        </CarouselSlide>
+        <CarouselSlide :index="1">
+          <House />
+        </CarouselSlide>
+      </Carousel>
+    </div>
+    <ProgressBar v-bind:number="4" />
   </div>
 </template>
 
 <script>
-
-import { mapState } from 'vuex';
+import ProgressBar from "@/components/ProgressBar.vue";
 import Intro from "@/components/Saynettes/Intro";
 import House from "@/components/Saynettes/House";
-import Carousel from "@/components/carousel/Carousel"
-import CarouselSlide from "@/components/carousel/CarouselSlide"
+import Carousel from "@/components/carousel/Carousel";
+import CarouselSlide from "@/components/carousel/CarouselSlide";
 import { Scenes } from "@/utils/scenes.js";
 
 export default {
@@ -26,17 +28,12 @@ export default {
     Intro,
     House,
     Carousel,
-    CarouselSlide
+    CarouselSlide,
+    ProgressBar
   },
   data: () => ({
-    Scenes: Scenes,
+    Scenes: Scenes
   }),
-  computed : {
-    currentScene() {
-      return this.$store.state.currentScene;
-    }
-
-  },
   methods: {
     click() {
       this.$store.dispatch("nextScene", { sceneId: 1 });
@@ -47,39 +44,8 @@ export default {
 
 <style scoped>
 .mainScene {
-  text-align:center;
-  margin:auto;
+  text-align: center;
+  margin: auto;
   height: 100vh;
-}
-
-.swipe-enter-active, .swipe-leave-active {
-  transition: 1s;
-  transform: translateX(50%);
-}
-.swipe-enter, .swipe-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  transition: 1s;
-  transform:translateX(-50%);
-}
-
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0
-}
-
-/* Enter and leave animations can use different */
-/* durations and timing functions.              */
-.slide-fade-enter-active {
-  transition: all .3s ease;
-}
-.slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  opacity: 0;
 }
 </style>

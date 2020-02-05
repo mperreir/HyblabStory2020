@@ -1,17 +1,14 @@
 <template>
   <div>
-    <div class="progress-line bg-lightgrey">
-      <div
-        class="percentage bg-orange"
-        :style="{'height': percentage + '%'}"
-      />
+    <div class="progress-line bg-darkblue">
+      <div class="percentage bg-yellow" :style="{'width': percentage + '%'}" />
     </div>
     <div class="progress">
       <div
         v-for="n in number"
         :key="n"
         class="dot"
-        :class="{current: n === index, 'bg-green': n === index, 'bg-darkblue': n !== index}"
+        :class="{current: n === index && animCurrent, 'bg-green': n === index && animCurrent, 'bg-blue': !animCurrent || n !== index}"
       />
     </div>
   </div>
@@ -21,16 +18,19 @@
 export default {
   name: "ProgressBar",
   props: {
-    number: Number,
-    index: Number
+    number: Number
   },
   data: () => {
     return {
-      percentage: 0
+      percentage: 0,
+      index: 1,
+      animCurrent: true
     };
   },
   watch: {
     index: function() {
+      this.animCurrent = false;
+
       let newPercentage = ((this.index - 1) / (this.number - 1)) * 100;
 
       setInterval(() => {
@@ -41,7 +41,15 @@ export default {
         ) {
           this.percentage += 0.2;
         }
-      }, 1);
+      }, 15);
+    },
+    percentage: function() {
+      if (this.percentage > ((this.index - 1) / (this.number - 1)) * 100 - 2) {
+        this.animCurrent = true;
+      }
+    },
+    "$store.state.currentSceneIndex": function() {
+      this.index++;
     }
   }
 };
@@ -51,27 +59,26 @@ export default {
 .progress {
   position: absolute;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   justify-content: space-between;
-  top: 10vh;
-  left: 10vh;
-  height: 45vh;
-  width: 6vh;
+  top: 8vh;
+  left: 25vw;
+  height: 6vh;
+  width: 50vw;
   align-items: center;
 }
 
 .progress-line {
   position: absolute;
-  top: 12vh;
-  left: 12.5vh;
-  height: 40vh;
-  width: 1vh;
+  top: 10.5vh;
+  left: 26vw;
+  height: 1vh;
+  width: 48vw;
 }
 
 .percentage {
-  width: 100%;
-  bottom: 0;
-  position: absolute;
+  height: 100%;
+  left: 0;
 }
 
 .dot {
