@@ -5,7 +5,52 @@ class Contexte extends View {
         this.load()
         .then(()=>{
             this.view = document.getElementById(this.viewName);
+
+            this.position = 1;
+            this.text1 = document.getElementById('context-1');
+            this.text2 = document.getElementById('context-2');
+            this.text3 = document.getElementById('context-3');
+            this.contact = document.getElementById('contexte-contact');
+            this.contact.addEventListener('click', ()=>{
+                this.contact.className = "contexte-done";
+                this.position = this.position+1;
+                if(this.position == 2){
+                    this.text1.className = "contexte-nonActive";
+                    this.text2.className = "contexte-active";
+                }
+                if(this.position == 3){
+                    this.text2.className = "contexte-nonActive";
+                    this.text3.className = "contexte-active";
+                }
+            });
+            this.reseau = document.getElementById('contexte-reseau');
+            this.reseau.addEventListener('click', ()=>{
+                this.reseau.className = "contexte-done";
+                this.position = this.position+1;
+                if(this.position == 2){
+                    this.text1.className = "contexte-nonActive";
+                    this.text2.className = "contexte-active";
+                }
+                if(this.position == 3){
+                    this.text2.className = "contexte-nonActive";
+                    this.text3.className = "contexte-active";
+                }
+            });
+            this.info = document.getElementById('contexte-info');
+            this.info.addEventListener('click', ()=>{
+                this.info.className = "contexte-done";
+                this.position = this.position+1;
+                if(this.position == 2){
+                    this.text1.className = "contexte-nonActive";
+                    this.text2.className = "contexte-active";
+                }
+                if(this.position == 3){
+                    this.text2.className = "contexte-nonActive";
+                    this.text3.className = "contexte-active";
+                }
+            });
         });
+
     }
 
     
@@ -31,68 +76,4 @@ class Contexte extends View {
         }, 1000);
     }
 
-    linkElements(){
-        // Button to next view
-        this.btNext = document.getElementById('view-1-next-button');
-        this.btNext.addEventListener('click', ()=>{
-            this.btNext.style.transition = 'right 1s';
-            this.btNext.style.right = '-100%';
-            this.switchToView2();
-        });
-
-        // Background elements
-        this.hotel = document.getElementById('view-1-hotel-img');
-        this.luggage = document.getElementById('view-1-luggage-img');
-
-        // Parallax for background elements
-        const vc = document.getElementById('view-container');
-        vc.addEventListener('mousemove', (e)=>{
-            var relX = e.pageX - vc.offsetLeft;
-            var relY = e.pageY - vc.offsetTop;
-
-            TweenMax.to(this.hotel, 1, {
-                x: (relX - vc.offsetWidth/2) / vc.offsetWidth * -25,
-                y: (relY - vc.offsetHeight/2) / vc.offsetHeight * -25,
-                ease: Power2.easeOut
-            })
-            TweenMax.to(this.luggage, 1, {
-                x: (relX - vc.offsetWidth/2) / vc.offsetWidth * -25,
-                y: (relY - vc.offsetHeight/2) / vc.offsetHeight * -25,
-                ease: Power2.easeOut
-            })
-        });
-
-        // Switch color of character
-        this.switchCharButton = document.getElementById('view-1-switch-character');
-        this.switchCharButton.addEventListener('click', () => {
-            this.showSelectChar();
-        });
-
-        // Select color of character
-        this.selectCharContainer = document.getElementById('view-1-select-character');
-        this.caracterImg = document.getElementById('view-1-character-img');
-
-        this.selectCharButtons = document.querySelectorAll('#view-1-select-character li');
-
-        // Change svg of character
-        const srcCharSvg = ['character-white-view1.svg', 'character-view1.svg', 'character-red-view1.svg'];
-        this.selectCharButtons.forEach((li, index) => {
-            li.addEventListener('click', () => {
-                this.caracterImg.src = `/handiplanet/assets/${srcCharSvg[index]}`;
-                this.hideSelectChar();
-            });
-        });
-    }
-
-    showSelectChar() {
-        // Show color selector
-        this.switchCharButton.style.display = 'none';
-        this.selectCharContainer.style.display = 'initial';
-    }
-
-    hideSelectChar() {
-        // Hide color selector
-        this.selectCharContainer.style.display = 'none';
-        this.switchCharButton.style.display = 'initial';
-    }
 }

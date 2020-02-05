@@ -52,16 +52,13 @@
 
     
     #context-text{
+      z-index: 1;
       position: absolute;
       top: 35vh;
-
-      #context-1{
+      .contexte-active{
         display: block;
       }
-      #context-2{
-        display: none;
-      }
-      #context-3{
+      .contexte-nonActive{
         display: none;
       }
     }
@@ -76,6 +73,9 @@
       right: 20%;
       bottom: 1vh;
 
+      .contexte-done{
+        display: none !important; 
+      }
       .contexte-question{
         display: flex;
         flex-direction: columnS;
@@ -86,6 +86,11 @@
         padding-left: 12vw;
         margin-top: 2vh;
         height: 8vh;
+        cursor: pointer;
+
+        &:hover > .contexte-img{
+          box-shadow: 0 0 0 10px white;
+        }
 
         .contexte-choix{
           color: white;
@@ -120,9 +125,7 @@
           font-size: 20px;
           text-align: center;
         }
-          
       }
-
     }
     
 
