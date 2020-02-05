@@ -10,16 +10,79 @@ export default class ViewEcrans extends View {
    */
   constructor (viewEcrans, viewFlemme, viewHarcelement, viewPuberte) {
     super("carousel", document.getElementById("root"));
+    // views
     this.viewEcrans = viewEcrans;
     this.viewFlemme = viewFlemme;
     this.viewHarcelement = viewHarcelement;
     this.viewPuberte = viewPuberte;
+    // arrows
     this.leftArrow = null;
     this.rightArrow = null;
+    // state
+    this.musicOn = true;
+  }
+
+  handleMusicSwitch () {
+    const ir = document.getElementById("switch-active-indicator-right");
+    const il = document.getElementById("switch-active-indicator-left");
+    const i = document.getElementById("switch-active-indicator");
+    const on = document.getElementById("music-on");
+    const off = document.getElementById("music-off");
+
+    document.getElementById("music-switch").addEventListener("click", () => {
+      i.classList.remove("hide");
+      if (this.musicOn) {
+        i.classList.remove("click-left");
+        i.classList.add("click-right");
+        ir.classList.remove("showHover");
+        off.classList.remove("showHover");
+      } else {
+        i.classList.remove("click-right");
+        i.classList.add("click-left");
+        il.classList.remove("showHover");
+        on.classList.remove("showHover");
+      }
+      this.musicOn = !this.musicOn;
+    });
+
+    [ir, off].forEach(el => el.addEventListener("mouseover", () => {
+      if (this.musicOn) {
+        ir.classList.add("showHover");
+        off.classList.add("showHover");
+        i.classList.add("hide");
+      }
+    }));
+
+    [ir, off].forEach(el => el.addEventListener("mouseout", () => {
+      if (this.musicOn) {
+        ir.classList.remove("showHover");
+        off.classList.remove("showHover");
+        i.classList.remove("hide");
+      }
+    }));
+
+    [il, on].forEach(el => el.addEventListener("mouseover", () => {
+      if (!this.musicOn) {
+        il.classList.add("showHover");
+        on.classList.add("showHover");
+        i.classList.add("hide");
+      }
+    }));
+
+    [il, on].forEach(el => el.addEventListener("mouseout", () => {
+      if (!this.musicOn) {
+        il.classList.remove("showHover");
+        on.classList.remove("showHover");
+        i.classList.remove("hide");
+      }
+    }));
   }
 
   linkElements () {
     super.linkElements();
+    this.handleMusicSwitch();
+    // handle back to carousel/root button
+    document.getElementById("carousel-button").style.display = "none";
   }
 
   async load () {

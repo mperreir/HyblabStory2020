@@ -1,0 +1,55 @@
+/* Revenir au choix des portes */
+#playscriptTemplate #carousel-button:hover {
+  cursor: pointer;
+}
+
+#playscriptTemplate #carousel-button:hover > rect {
+  fill: rgb(255, 110, 0);
+  stroke: rgb(255, 110, 0);
+}
+
+#playscriptTemplate #carousel-button:hover path {
+  fill: white;
+}
+
+/* Switch on/off la musique */
+/* click */
+#playscriptTemplate #switch-active-indicator {
+  transition: ease;
+  transition-duration: 0.5s;
+}
+
+#playscriptTemplate #switch-active-indicator.click-left {
+  transform: translateX(0);
+}
+
+#playscriptTemplate #switch-active-indicator.click-right {
+  transform: translateX(45px);
+}
+
+/* hover */
+#playscriptTemplate #music-switch:hover {
+  cursor: pointer;
+}
+
+#playscriptTemplate #switch-active-indicator-right,
+#playscriptTemplate #switch-active-indicator-left {
+  fill: transparent;
+  stroke: transparent;
+}
+
+#playscriptTemplate #switch-active-indicator-right.showHover,
+#playscriptTemplate #switch-active-indicator-left.showHover {
+  fill: rgb(255, 110, 0);
+  stroke: rgb(255, 110, 0);
+}
+
+#playscriptTemplate #music-off.showHover,
+#playscriptTemplate #music-on.showHover {
+  fill: white;
+}
+
+#playscriptTemplate #switch-active-indicator.hide {
+  fill: white;
+  stroke: white;
+}
