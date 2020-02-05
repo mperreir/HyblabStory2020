@@ -3,7 +3,7 @@
 
 	background-image: url(../img/fond_slide11.jpg);
 	background-repeat: no-repeat;
-	background-size:100%;
+	background-size:cover;
 }
 
 #next12-1{
@@ -222,18 +222,50 @@
 
 #page11 p{
 	font-family:Vibur;
-    color: #265984;
-    text-align: justify;
+    color: #92C2D2;
+    text-align:center;
 }
 
 #ecume{
- 
  	position: absolute;
     left:6%;
     top: 75%;
-
-
+    width:28%;
 }
+
+#ecume img{
+	float:left;
+	width:15.5%;
+}
+
+
+#brise{
+	position: absolute;
+    left:38%;
+    top: 75%;
+	width:28%;
+}
+
+#brise img{
+	float:left;
+	width:16%;
+}
+
+#rive{
+	position: absolute;
+    right:7%;
+    top: 75%;
+	width:25%;
+}
+
+
+#rive img{
+	float:left;
+	width:18%;
+}
+
+
+
 
 #survol1:hover p{
 	color:red;
@@ -257,17 +289,6 @@
 }
 
 
-#brise{
-	position: absolute;
-    left:38%;
-    top: 75%;
-}
-
-#rive{
-	position: absolute;
-    right:9%;
-    top: 75%;
-}
 
 
 @media screen and (max-aspect-ratio: 16/9){
@@ -280,5 +301,3 @@
         font-size: 5vh;
     }
 }
-
-
