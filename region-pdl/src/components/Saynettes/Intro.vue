@@ -2,7 +2,7 @@
   <div class="saynette">
     <MaisonSVG class="bg-lightgrey svg" />
     <Cloud1 class="cloud" />
-    <SimpleButton :x="50" :y="50" :width="30" text="Démarrer l'aventure" />>
+    <SimpleButton :x="8" :y="65" :width="25" text="Démarrer l'aventure" />>
   </div>
 </template>
 
