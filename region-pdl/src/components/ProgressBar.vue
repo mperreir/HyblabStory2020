@@ -43,7 +43,7 @@ export default {
           this.percentage += 0.2;
           this.transition = true;
         }
-      }, 1);
+      }, 25);
     },
     percentage: function() {
       if (this.percentage > ((this.index - 1) / (this.number - 1)) * 100 - 2) {

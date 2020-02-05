@@ -2,27 +2,26 @@
   <div class="saynette">
     <Background class="svg" />
     <transition name="bounce">
-      <LittleHouse
-        v-show="indexHouse == 1"
-        class="little"
-      />
+      <LittleHouse v-show="indexHouse == 1" class="little" />
     </transition>
     <transition name="bounce">
-      <MediumHouse
-        v-show="indexHouse == 2"
-        class="medium"
-      />
+      <MediumHouse v-show="indexHouse == 2" class="medium" />
     </transition>
     <transition name="bounce">
-      <BigHouse
-        v-show="indexHouse == 3"
-        class="big"
-      />
+      <BigHouse v-show="indexHouse == 3" class="big" />
     </transition>
-    <Slider
-      class="slider"
-      @input="onChange"
-    />
+    <div class="size">
+      <transition name="bounce">
+        <p v-show="indexHouse == 1" class="text">{{ 50 * indexHouse }}m²</p>
+      </transition>
+      <transition name="bounce">
+        <p v-show="indexHouse == 2" class="text">{{ 50 * indexHouse }}m²</p>
+      </transition>
+      <transition name="bounce">
+        <p v-show="indexHouse == 3" class="text">{{ 50 * indexHouse }}m²</p>
+      </transition>
+    </div>
+    <Slider @input="onChange" class="slider"/>
     <!-- <ul>
       <li>
         <PlusButton class="plus1" @open="closePopover(1)" v-model="closePopover1">
@@ -34,7 +33,7 @@
           <p class="text">2. Ceci est une information sur la transition énergétique</p>
         </PlusButton>
       </li>
-    </ul> -->
+    </ul>-->
   </div>
 </template>
 
@@ -52,7 +51,7 @@ export default {
     LittleHouse,
     MediumHouse,
     BigHouse,
-    Slider,
+    Slider
   },
   data: () => ({
     indexHouse: 1,
@@ -68,18 +67,9 @@ export default {
         case 1:
           this.closePopover1 = false;
           this.closePopover2 = true;
-          this.closePopover3 = true;
-          break;
         case 2:
           this.closePopover2 = false;
           this.closePopover1 = true;
-          this.closePopover3 = true;
-          break;
-        case 3:
-          this.closePopover3 = false;
-          this.closePopover1 = true;
-          this.closePopover2 = true;
-          break;
       }
     }
   }
@@ -114,10 +104,14 @@ export default {
 
 .slider {
   position: absolute;
-  top: 90%;
+  top: 95%;
   left: 33%;
-  display: flex;
-  flex-direction: column;
+}
+
+.size {
+  position: absolute;
+  top: 90%;
+  left: 49%;
 }
 
 ul li {
@@ -144,7 +138,7 @@ ul li .plus3 {
   left: 40vw;
 }
 
-.bounce-enter-active {
+.bounce, .bounce-enter-active {
   animation: bounce-in 0.5s;
 }
 

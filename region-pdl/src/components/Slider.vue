@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p class="text size">
+    <!-- <p class="text size">
       {{ 50 * value }}m²
-    </p>
+    </p> -->
     <div class="slider">
       <Moins
         class="button"
