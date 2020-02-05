@@ -3,70 +3,70 @@
  * Created Date: Wednesday February 5th 2020
  * Author: Pierre Le Guen
  * -----
- * Last Modified: Wednesday, 5th February 2020 10:05:50 pm
+ * Last Modified: Wednesday, 5th February 2020 10:21:50 pm
  * Modified By: Pierre Le Guen
  * -----
  * Copyright (c) 2020 Pierre Le Guen
  */
-#view12 {
+#view12premium {
   width: 100vw;
   height: 100vh;
   position: relative;
   background-color: rgba(20, 155, 96, 0.2);
 }
-#view12 b {
+#view12premium b {
   font-weight: bold;
   color: #CB563E;
 }
-#view12 img {
+#view12premium img {
   width: 8%;
   height: 8%;
   position: absolute;
 }
-#view12 #arobase {
+#view12premium #arobase {
   left: 25%;
   top: 23%;
 }
-#view12 #youtube {
+#view12premium #youtube {
   left: 45%;
   top: 10%;
 }
-#view12 #clock {
+#view12premium #clock {
   left: 65%;
   top: 20%;
 }
-#view12 #facebook {
+#view12premium #facebook {
   left: 70%;
   top: 50%;
 }
-#view12 #instagram {
+#view12premium #instagram {
   left: 67%;
   top: 70%;
 }
-#view12 #mail {
+#view12premium #mail {
   left: 25%;
   top: 73%;
 }
-#view12 #money {
+#view12premium #money {
   left: 20%;
   top: 53%;
 }
-#view12 #phone {
+#view12premium #phone {
   left: 36%;
   top: 67%;
 }
-#view12 #localisation {
+#view12premium #localisation {
   left: 53%;
   top: 65%;
 }
-#view12 #description {
+#view12premium #description {
   position: relative;
   width: 20%;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-#view12 footer #view-12-next-button {
+#view12premium footer #view-12-next-button {
   position: absolute;
   right: 0px;
   background-color: #CB563E;
@@ -83,8 +83,8 @@
   bottom: 4vh;
   transform: translateY(-50%);
 }
-#view12 footer #data {
+#view12premium footer #data {
   color: #FFFFFF;
 }
 
-/*# sourceMappingURL=view12.css.map */
+/*# sourceMappingURL=view12premium.css.map */
