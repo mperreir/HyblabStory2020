@@ -30,7 +30,7 @@
     },
     methods: {
       updateBandWidth () { 
-        this.bandWidthStyle = { width: (window.innerWidth - this.$refs.carousel.offsetWidth)/2+'px' } 
+        this.bandWidthStyle = { width: ((window.innerWidth - this.$refs.carousel.offsetWidth)/2)+1+'px' } 
       },
     }
   }
