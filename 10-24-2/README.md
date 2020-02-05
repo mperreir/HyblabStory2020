@@ -13,3 +13,4 @@ Participants : Pascal Couffin
 - AGR : Cécile Castan, Lucas Roux
 
 - Polytech : Yoann Crouin, Quentin Gastebois, Valentin Gonzales, Xavier Lhinares, Thomas Parpaillon
+

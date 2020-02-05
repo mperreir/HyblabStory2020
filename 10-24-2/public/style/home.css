@@ -1,0 +1,15 @@
+#home #start-button > rect {
+  fill: transparent;
+}
+
+#home #start-button:hover {
+  cursor: pointer;
+}
+
+#home #start-button:hover > rect {
+  fill: rgb(255, 110, 0);
+}
+
+#home #start-button:hover > path {
+  fill: white;
+}
