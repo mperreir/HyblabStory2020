@@ -125,3 +125,30 @@ a{
     box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.3);
   }
 }
+
+@keyframes scrollTransition {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes scrollTransitionInvert {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes scrollTransitionHorizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
