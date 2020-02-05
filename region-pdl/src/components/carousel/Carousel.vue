@@ -19,13 +19,9 @@
 
 <script>
   export default {
-    data() {
-      return {
-        slides: []
-      }
-    },
     data: () => ({
       bandWidthStyle: { width: '100px'},
+      slides: []
     }),
     mounted () {
       this.slides = this.$children
@@ -38,8 +34,8 @@
       window.removeEventListener('resize', this.updateBandWidth);
     },
     methods: {
-      updateBandWidth () { 
-        this.bandWidthStyle = { width: ((window.innerWidth - this.$refs.carousel.offsetWidth)/2)+1+'px' } 
+      updateBandWidth () {
+        this.bandWidthStyle = { width: ((window.innerWidth - this.$refs.carousel.offsetWidth)/2)+1+'px' }
       },
     }
   }

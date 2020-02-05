@@ -1,13 +1,21 @@
 <template>
   <div>
-    <p class="text size">{{ 50 * value }}m²</p>
+    <p class="text size">
+      {{ 50 * value }}m²
+    </p>
     <div class="slider">
       <Moins
         class="button"
         :class="{'spinnin-minus': spinninMinus, minus: clickableMinus}"
         @click="minusClick"
       />
-      <input type="range" min="1" max="3" v-model="value" @input="onValueChange" />
+      <input
+        v-model="value"
+        type="range"
+        min="1"
+        max="3"
+        @input="onValueChange"
+      >
       <Plus
         class="button"
         :class="{'spinnin-plus': spinninPlus, plus: clickablePlus}"

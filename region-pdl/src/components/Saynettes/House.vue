@@ -2,15 +2,27 @@
   <div class="saynette">
     <Background class="svg" />
     <transition name="bounce">
-      <LittleHouse class="little" v-show="indexHouse == 1" />
+      <LittleHouse
+        v-show="indexHouse == 1"
+        class="little"
+      />
     </transition>
     <transition name="bounce">
-      <MediumHouse class="medium" v-show="indexHouse == 2" />
+      <MediumHouse
+        v-show="indexHouse == 2"
+        class="medium"
+      />
     </transition>
     <transition name="bounce">
-      <BigHouse class="big" v-show="indexHouse == 3" />
+      <BigHouse
+        v-show="indexHouse == 3"
+        class="big"
+      />
     </transition>
-    <Slider class="slider" @input="onChange" />
+    <Slider
+      class="slider"
+      @input="onChange"
+    />
     <!-- <ul>
       <li>
         <PlusButton class="plus1" @open="closePopover(1)" v-model="closePopover1">
@@ -32,7 +44,6 @@ import LittleHouse from "@/assets/House/little-house.svg";
 import MediumHouse from "@/assets/House/medium-house.svg";
 import BigHouse from "@/assets/House/big-house.svg";
 import Slider from "@/components/Slider.vue";
-import PlusButton from "@/components/PlusButton.vue";
 
 export default {
   name: "House",
@@ -42,7 +53,6 @@ export default {
     MediumHouse,
     BigHouse,
     Slider,
-    PlusButton
   },
   data: () => ({
     indexHouse: 1,
