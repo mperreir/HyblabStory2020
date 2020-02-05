@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="progress-line bg-darkblue">
-      <div class="percentage bg-yellow" :style="{'width': percentage + '%'}" />
+      <div
+        class="percentage bg-yellow"
+        :style="{'width': percentage + '%'}"
+      />
     </div>
     <div class="progress">
       <div

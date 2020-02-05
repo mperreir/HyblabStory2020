@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div >
+    <div>
       <Carousel>
         <CarouselSlide :index="0">
           <Intro />
@@ -10,7 +10,7 @@
         </CarouselSlide>
       </Carousel>
     </div>
-    <ProgressBar v-bind:number="4" />
+    <ProgressBar :number="4" />
   </div>
 </template>
 
