@@ -1,0 +1,130 @@
+/*
+ * File Created: 2020-01-28 13:52:00
+ * Author: Pierre MAUPIN
+ * Copyright - 2020 Pierre MAUPIN
+ */
+
+#view3-premium {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128, 190, 163, 0.15);
+
+  #view-3-premium-middle {
+    width: 80vw;
+    height: 80vh;
+    margin: 0px 10vw;
+    border-bottom: 2px solid #5A8D8C;
+    position: relative;
+    background-image: url(../../assets/view3/view3-premium-wave.svg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: bottom -2px center;
+
+    img {
+      position: absolute;
+      bottom: -2px;
+    }
+
+    #view-3-premium-pic-group{
+      position: absolute;
+      z-index: 5;
+      max-height: 30%;
+      max-width: 35%;
+      bottom: 20%;
+      right: 50%;
+      display: flex;
+      flex-direction: row;
+      align-content: space-around;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .view-3-premium-group-item{
+      position: relative;
+      width: calc(50% - 40px);
+      margin: 20px;
+    }
+
+    #view-3-premium-red-tiny-dot{
+      position: absolute;
+      bottom: 25%;
+      left: 10%;
+      width: 1.5vh;
+      height: 1.5vh;
+      border-radius: 100%;
+      background-color: #CB563E;
+    }
+
+    #view-3-premium-green-ring{
+      position: absolute;
+      top: 45%;
+      right: 15%;
+      width: 4vh;
+      height: 4vh;
+      border-radius: 100%;
+      border: 1vh solid #71C0A0;
+    }
+
+    #view-3-premium-white-ring{
+      position: absolute;
+      top: 28%;
+      left: 27%;
+      width: 5.5vh;
+      height: 5.5vh;
+      border-radius: 100%;
+      border: 5px solid #ffffff;
+    }
+    #view-3-premium-dot{
+      position: absolute;
+      top: 40%;
+      left: 55%;
+      width: 2vh;
+      height: 2vh;
+      border-radius: 100%;
+      background-color: #F9E9D7;
+    }
+    
+    article {
+      z-index: 7;
+      position: absolute;
+      left: 52.5%;
+      max-width: 25%;
+      bottom: 10%;
+      p{
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 29px;
+        color: #426262;
+      }
+
+      span{
+        color: #cb563e;
+      }
+    }
+  }
+
+  footer {
+    width: 100vw;
+    height: 20vh;
+    position: relative;
+
+    #view-3-premium-next-button {
+      position: absolute;
+      right: 0px;
+      background-color: #CB563E;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 34px;
+      color: #ffffff;
+      border-bottom-left-radius: 50px;
+      border-top-left-radius: 50px;
+      padding: 10px 30px;
+      padding-right: 50px;
+      margin: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

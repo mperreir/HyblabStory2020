@@ -57,7 +57,6 @@ a{
     border-radius: 12.5vw 12.5vw 0 0;
     position: absolute;
     bottom: 0px;
-    cursor: pointer;
 
     width: 25vw;
     height: 12.5vw;
@@ -69,7 +68,7 @@ a{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    animation: pulse 1s infinite alternate ease-out;
+    animation: pulseBeginButton 1s infinite alternate ease-out;
 
     button{
       &:last-of-type{
@@ -116,7 +115,7 @@ a{
   }
 }
 
-@keyframes pulse {
+@keyframes pulseBeginButton {
     
   0% {
     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3);

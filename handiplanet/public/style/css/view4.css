@@ -1,0 +1,127 @@
+/*
+ * File Created: 2020-01-28 13:52:00
+ * Author: Pierre MAUPIN
+ * Copyright - 2020 Pierre MAUPIN
+ */
+#view4 {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+}
+#view4 #view-4-middle {
+  width: 80vw;
+  height: 80vh;
+  margin: 0px 10vw;
+  border-bottom: 2px solid #5A8D8C;
+  position: relative;
+}
+#view4 #view-4-middle img {
+  position: absolute;
+  bottom: -2px;
+}
+#view4 #view-4-middle #view-4-chart-container {
+  position: absolute;
+  right: 50%;
+  bottom: 0%;
+  height: 80%;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+}
+#view4 #view-4-middle #view-4-chart-container #view-4-flex-container {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#view4 #view-4-middle #view-4-chart-container #view-4-flex-container p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #426262;
+}
+#view4 #view-4-middle #view-4-chart-container #view-4-flex-container span {
+  color: #cb563e;
+}
+#view4 #view-4-middle #view-4-chart-container #view-4-flex-container #view-4-free-rect {
+  flex-grow: 2;
+  background-color: #CB563E;
+  margin-right: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+#view4 #view-4-middle #view-4-chart-container #view-4-flex-container #view-4-free-rect p {
+  text-transform: uppercase;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #ffffff;
+}
+#view4 #view-4-middle #view-4-chart-container #view-4-flex-container #view-4-premium-rect {
+  flex-grow: 3;
+  background-color: #5A8D8C;
+  margin-left: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+#view4 #view-4-middle #view-4-chart-container #view-4-flex-container #view-4-premium-rect p {
+  text-transform: uppercase;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #ffffff;
+}
+#view4 #view-4-middle article {
+  z-index: 7;
+  position: absolute;
+  left: 52.5%;
+  max-width: 30%;
+  bottom: 25%;
+}
+#view4 #view-4-middle article p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #426262;
+}
+#view4 #view-4-middle article span {
+  color: #cb563e;
+}
+#view4 footer {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+}
+#view4 footer #view-4-next-button {
+  position: absolute;
+  right: 0px;
+  background-color: #CB563E;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 10px 30px;
+  padding-right: 50px;
+  margin: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=view4.css.map */
