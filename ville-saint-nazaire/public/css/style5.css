@@ -1,5 +1,5 @@
 #page5 {
-	background-image: url("../img/fond_HDV_constrcution.jpg");
+	background-image: url("../img/background.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -20,9 +20,11 @@
 
 }
 
+
+
 #page5 p {
-	font-family:Parisienne;
-    color:black;
+	font-family:Vibur;
+    color:#92C2D2;
     text-align: justify;
 }
 
@@ -30,26 +32,71 @@
     color:red;
 }
 
-#container1-slide5 {
+
+
+
+#container1-slide5 p{
 	position: absolute;
 	left: 24%;
-	top: 10%;
-
+	top: 20%;
 }
 
-#container2-slide5 {
+#container1-slide5 p:hover{
+	left: 27%;
+	top: 20%;
+	transition:0.3s;
+}
+
+#container2-slide5 p{
 	position: absolute;
 	left: 31%;
-	top: 30%;
+	top: 40%;
+}
 
+#container2-slide5 p:hover{
+	left: 34%;
+	top: 40%;
+	transition:0.3s;
 }
 
 
-#container3-slide5 {
+#container3-slide5 p{
 	position: absolute;
 	left: 29%;
-	top: 50%;
+	top: 60%;
 }
+
+#container3-slide5 p:hover{
+	left: 32%;
+	top: 60%;
+	transition:0.3s;
+}
+
+
+
+
+
+
+#container1-slide5 img{
+	position: absolute;
+	left: 14%;
+	top: 17%;
+}
+
+#container2-slide5 img{
+	position: absolute;
+	left: 21%;
+	top: 37%;
+
+}
+
+
+#container3-slide5 img{
+	position: absolute;
+	left: 19%;
+	top: 57%;
+}
+
 
 
 #next6, #next7, #next8{
