@@ -1,0 +1,108 @@
+/*
+* File Created: 2020-02-05 18:20:33
+* Author: Christophe SONNEVILLE
+* Copyright - 2020 Christophe SONNEVILLE
+*/
+#viewremerciements {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+  
+  #view-thanks-middle {
+    width: 80vw;
+    height: 85vh;
+    margin: 10vh 10vw;
+    margin-bottom: 5vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    section:first-of-type {
+      margin-top: auto;
+      display: flex;
+      
+      &>article {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        
+        &>img:first-of-type {
+          margin: 0px auto;
+          height: 14vh;
+          max-width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+
+      .sponsor {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+      
+      .view-thanks-name {
+        display: flex;
+        margin-bottom: 20px;
+        
+        div:first-of-type {
+          margin-right: 2vh;
+          div {
+            border: 1px solid #426262;
+            padding: 10px;
+            border-radius: 50%;
+            img {
+              display: block;
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+        div:last-of-type {
+          flex-grow: 1;
+          display: flex;
+          h1 {
+            margin: auto 0px;
+            font-size: 1.5em;
+            color: #426262;
+
+            em {
+              font-weight: bold;
+            }
+          }
+        }
+        
+      }
+    }
+    
+    section:last-of-type {
+      display: flex;
+      margin-top: 3vh;
+      
+      button {
+        margin: auto;
+        background-color: #CB563E;
+        display: flex;
+        padding: 10px;
+        border-radius: 50px;
+        
+        img {
+          height: 4vh;
+          width: 4vh;
+          margin-right: 2vh;
+        }
+        
+        div {
+          margin: auto 0px;
+          div {
+            font-size: 2em;
+            color: #ffffff;
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: bold;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}

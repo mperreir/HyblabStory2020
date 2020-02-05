@@ -135,6 +135,15 @@ a{
   }
 }
 
+@keyframes scrollTransitionInvert {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 @keyframes scrollTransitionHorizontal {
   0% {
     transform: translateX(0%);
