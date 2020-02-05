@@ -1,17 +1,14 @@
 <template>
   <div>
     <div class="progress-line bg-darkblue">
-      <div
-        class="percentage bg-yellow"
-        :style="{'width': percentage + '%'}"
-      />
+      <div class="percentage bg-yellow" :style="{'width': percentage + '%'}" />
     </div>
     <div class="progress">
       <div
         v-for="n in number"
         :key="n"
         class="dot"
-        :class="{current: n === index && animCurrent, 'bg-green': n === index && animCurrent, 'bg-blue': !animCurrent || n !== index}"
+        :class="{current: n === index && animCurrent, 'bg-lightgreen': n === index && animCurrent, 'bg-blue': !animCurrent || n > index, 'bg-yellow': n < index}"
       />
     </div>
   </div>
@@ -44,7 +41,7 @@ export default {
         ) {
           this.percentage += 0.2;
         }
-      }, 15);
+      }, 1);
     },
     percentage: function() {
       if (this.percentage > ((this.index - 1) / (this.number - 1)) * 100 - 2) {
@@ -64,16 +61,16 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  top: 8vh;
+  top: 5vh;
   margin-left: 20vh;
-  height: 6vh;
+  height: 5vh;
   width: 100vh;
   align-items: center;
 }
 
 .progress-line {
   position: absolute;
-  top: 10.5vh;
+  top: 7vh;
   margin-left: 22vh;
   height: 1vh;
   width: 96vh;
@@ -85,16 +82,15 @@ export default {
 }
 
 .dot {
-  height: 4vh;
-  width: 4vh;
+  height: 3vh;
+  width: 3vh;
   border-radius: 50%;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   animation: animation-dot-reverse 0.4s linear;
 }
 
 .current {
-  height: 6vh;
-  width: 6vh;
+  height: 4vh;
+  width: 4vh;
   animation: animation-dot 0.4s linear;
 }
 

@@ -28,7 +28,12 @@
         </CarouselSlide>
       </Carousel>
     </div>
-    <!-- <ProgressBar v-bind:number="8" /> -->
+    <transition name="fade">
+      <ProgressBar
+        v-if="$store.state.currentSceneIndex !== 0"
+        v-bind:number="$store.state.nbScenes - 1"
+      />
+    </transition>
   </div>
 </template>
 
@@ -58,7 +63,7 @@ export default {
     Quizz,
     Carousel,
     CarouselSlide,
-    ProgressBar,
+    ProgressBar
   },
   data: () => ({}),
   methods: {
@@ -68,3 +73,13 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 3s cubic-bezier(1, 0.01, 0.65, 0.6);
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+</style>
