@@ -1,94 +1,117 @@
+
 #page4 {
-	background-image: url("../img/fond_HDV_constrcution.jpg");
+	background-image: url("../img/fond_rencontre_archi.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: Vibur;
-
-}
-
-#img-journaliste {
-
-}
-
-#img-architecte {
-	position: absolute;
-	width : 30%;
-	height : 40%;
-	top : 60%;
-	left : 70%;
-	z-index: 200;
-	visibility: hidden;
+	color: #255A85;
 
 }
 
 #page4 p {
 	z-index: 200;
-	color : black;
     text-align : center;
     text-align: justify;
     font-style: normal;
 	font-weight: normal;
-/*	background-color: #C4C4C4;
-*/	padding: 2%;
+
 }
 
-
-
-#container-dialogue1 {
+#img-journaliste {
 	position: absolute;
-	width: 55%;
-	height: 10%;
-	left: 40%;
-	top: 10%;
+	width : 13%;
+	height : 40%;
+	top : 58%;
+	left : 1%;
+	z-index: 200;
 	visibility: hidden;
 
 }
 
-#container-dialogue2 {
+#trait-dialogueJ {
+	position: absolute;
+	width: 1%;
+	height: 20%;
+	left: 15%;
+	top: 64%;
+	visibility: hidden;
+
+}
+
+#container-dialogueJ {
+	position: absolute;
+	width: 60%;
+	height: 10%;
+	left: 17%;
+	top: 63%;
+	line-height: 35%;
+	visibility: hidden;
+
+}
+
+
+#img-architecte {
+	position: absolute;
+	width : 30%;
+	height : 40%;
+	top : 57%;
+	left : 77%;
+	z-index: 200;
+	visibility: hidden;
+
+}
+
+
+#trait-dialogueA {
+	position: absolute;
+	width: 1%;
+	height: 15%;
+	left: 84%;
+	top: 66%;
+	visibility: hidden;
+
+}
+
+.container-dialogueA {
 	position: absolute;
 	width: 55%;
 	height: 13%;
-	left: 30%;
-	top: 35%;
-
+	left: 27%;
+	top: 66%;
+	line-height: 35%;
 	visibility: hidden;
-	background-color: #C4C4C4;
 
 }
 
 
-#container-dialogue3 {
-	position: absolute;
-	width: 62%;
-	height: 8%;
-	left: 15%;
-	top: 53%;
-
-	visibility: hidden;
-
-
-}
 
 /* Bouton dialogue suivant */
-#dialogueSuivant {
+.suivant {
 	position: absolute;
-	width: 10%;
-	height: 5%;
-	left: 45%;
 	top: 90%;
-	display: none;
-	background:#f5f5f5;
-	border-radius:2px;
-	border:1px solid #72726E;
-	box-shadow:1px 1px 3px #999;
+}
 
+ #notesSuivantes {
+	position: absolute;
+	left: 65%;
+	padding-top: 0.2%;
+	margin-left: 1%;
+	visibility: hidden;
+}
+
+ #btnSuivant {
+	position: absolute;
+	width: 5%;
+	height: 5%;
+	left: 60%;
+	visibility: hidden;
 }
 
 /* Media queries pour le responsive */
 
 @media screen and (max-aspect-ratio: 16/9){
    
-    #page4 p{
+    #page4 p, #texte{
         font-size: 1.8vw;
     }
 
@@ -102,7 +125,7 @@
 
 @media screen and (min-aspect-ratio: 16/9){
     
-   #page4 p{
+   #page4 p, #texte{
         font-size: 3vh;
     }
 
@@ -111,6 +134,19 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
