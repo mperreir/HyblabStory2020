@@ -5,7 +5,7 @@
     <SimpleText :x="7" :y="43" :width="40">
         Suivez la journée de Monsieur Moreau et Madame Dubois et découvez comment la Région <b>Pays de La Loire</b> les accompagne pour une consommation d'énergie plus verte.
     </SimpleText>
-    <SimpleButton text="Démarrer l'aventure" :width="23" :x="7" :y="58"/>
+    <SimpleButton text="Démarrer l'aventure" :width="23" :x="7" :y="58" @click.native="onNext" />
     <MaisonSVG class="svg"/>
   </div>
 </template>
@@ -39,6 +39,10 @@ export default {
                 animated: true,
                 fadeInRight: true,
             };
+        },
+        onNext() {
+            console.log("ok");
+            this.$store.dispatch("nextScene", {sceneId: 1});
         }
     },
 };
