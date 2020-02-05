@@ -6,7 +6,7 @@
 
 <style>
 html {
-  background-color: #000;
+  background-image: linear-gradient(to top, #f7e999 20%, #99e0f7 50%);
 }
 
 body {

@@ -1,6 +1,6 @@
 <template>
   <div class="saynette">
-    <MaisonSVG class="bg-lightgrey svg" />
+    <MaisonSVG class="svg" />
     <Cloud1 class="cloud" />
   </div>
 </template>
@@ -8,6 +8,7 @@
 <script>
 import MaisonSVG from "@/assets/HOME/HOME FOND_Plan de travail 1.svg";
 import Cloud1 from "@/assets/HOME/Nuage 1Fichier 7.svg";
+
 
 export default {
     name: "Intro",
