@@ -22,7 +22,6 @@ export default class ViewPlayscriptTemplate extends View {
   render (target) {
     super.render(target);
     const container = document.querySelector("#view-container");
-    console.log(container, this.viewToRender);
     this.viewToRender.render(container);
   }
 }

@@ -83,6 +83,9 @@ export default class ViewEcrans extends View {
     this.handleMusicSwitch();
     // handle back to carousel/root button
     document.getElementById("carousel-button").style.display = "none";
+    document.getElementById("carousel-button").addEventListener("click", () => {
+      this.render(document.getElementById("view-container"));
+    });
   }
 
   async load () {
@@ -114,13 +117,14 @@ export default class ViewEcrans extends View {
     $(carousel).slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: false,
+      // autoplay: true,
       arrows: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 1000,
       // eslint-disable-next-line no-undef
       nextArrow: $(this.nextArrow),
       // eslint-disable-next-line no-undef
       prevArrow: $(this.prevArrow)
     });
+    this.carousel = carousel;
   }
 }
