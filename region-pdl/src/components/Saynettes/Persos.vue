@@ -34,7 +34,7 @@ export default {
   methods: {
     onNext(characterName) {
       console.log(characterName + ' a été choisi(e) !');
-      this.$store.dispatch("nextScene", {sceneId: 2});
+      this.$store.dispatch("nextScene", { sceneId: null});
     }
   }
 };
