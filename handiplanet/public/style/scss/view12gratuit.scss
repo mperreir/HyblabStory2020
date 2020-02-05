@@ -1,0 +1,38 @@
+/*
+ * Project: handigo
+ * Created Date: Wednesday February 5th 2020
+ * Author: Pierre Le Guen
+ * -----
+ * Last Modified: Wednesday, 5th February 2020 10:27:50 pm
+ * Modified By: Pierre Le Guen
+ * -----
+ * Copyright (c) 2020 Pierre Le Guen
+ */
+
+#view12gratuit {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(203, 86, 62, 0.20);
+
+    footer {        
+        #view-12-next-button {
+          position: absolute;
+          right: 0px;
+          background-color: #CB563E;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 34px;
+          text-transform: uppercase;
+          color: #ffffff;
+          border-bottom-left-radius: 50px;
+          border-top-left-radius: 50px;
+          padding: 10px 30px;
+          padding-right: 50px;
+          margin: 0px;
+          bottom: 4vh;
+          transform: translateY(-50%);
+        }
+      }
+    
+}
