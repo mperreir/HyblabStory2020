@@ -25,13 +25,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .text {
     margin-top: 6%;
     margin-bottom: 6%;
 
     font-family: 'Avant Garde Bold';
-    font-size: 2.5vh;
+    font-size: 2vh;
     user-select: none;
 }
 
@@ -47,6 +47,7 @@ export default {
 
 .classic-btn:hover {
     background-color: #015787;
+    cursor: pointer;
 }
 
 </style>

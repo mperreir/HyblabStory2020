@@ -1,20 +1,27 @@
 <template>
   <div class="saynette">
+    <TextTitle :x="7" :y="37">La Région Pays de la Loire<br> pour la transition énergétique</TextTitle>
+    <SimpleText :x="7" :y="50" :width="40">
+        Suivez la journée de Monsieur Moreau et Madame Dubois et découvez comment la Région <b>Pays de La Loire</b> les accompagne pour une consommation d'énergie plus verte.
+    </SimpleText>
+    <SimpleButton text="Démarrer l'aventure" :width="23" :x="7" :y="65"/>
     <MaisonSVG class="svg" />
-    <Cloud1 class="cloud" />
   </div>
 </template>
 
 <script>
-import MaisonSVG from "@/assets/HOME/HOME FOND_Plan de travail 1.svg";
-import Cloud1 from "@/assets/HOME/Nuage 1Fichier 7.svg";
-
+import MaisonSVG from "@/assets/HOME/FOND HOME-01.svg";
+import TextTitle from "@/components/TextTitle";
+import SimpleText from "@/components/SimpleText";
+import SimpleButton from "@/components/SimpleButton";
 
 export default {
     name: "Intro",
     components: {
         MaisonSVG,
-        Cloud1,
+        TextTitle,
+        SimpleButton,
+        SimpleText,
     },
     data: () => ({
         classObject: {
