@@ -12,6 +12,9 @@
     <SimpleButton text="Mme Dubois" @click.native="() => { onNext('dubois')}" :width="20" :y="90" :x="20"/>
     <FakePerso class="perso p2"/>
     <SimpleButton text="M. Moreau" @click.native="() => { onNext('moreau')}" :width="20" :y="90" :x="60"/>
+
+  
+    <FakePerso class="boat"/>
   </div>
 </template>
 
@@ -45,7 +48,6 @@ export default {
 .perso {
   position: absolute;
   width: 12%;
-  
 }
 
 .p1 {
@@ -56,6 +58,24 @@ export default {
 .p2 {
   left: 64%;
   top: 45%;
+}
+
+.boat {
+  position: absolute;
+  width: 5%;
+  left: 15%;
+  top: 62%;
+  border: solid 1px red;
+  animation: 1s linear infinite alternate float;
+}
+
+@keyframes float{
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-5%);
+  }
 }
 
 </style>
