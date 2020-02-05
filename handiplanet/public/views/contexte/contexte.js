@@ -49,6 +49,41 @@ class Contexte extends View {
                     this.text3.className = "contexte-active";
                 }
             });
+
+            // Background elements
+        this.dot1 = document.getElementById('contexte-white-ring');
+        this.dot2 = document.getElementById('contexte-green-ring');
+        this.dot3 = document.getElementById('contexte-yellow-tiny-dot');
+        this.dot4 = document.getElementById('contexte-red-tiny-dot');
+
+        // Parallax for background elements
+        const vc = document.getElementById('view-container');
+        vc.addEventListener('mousemove', (e) => {
+            var relX = e.pageX - vc.offsetLeft;
+            var relY = e.pageY - vc.offsetTop;
+
+            TweenMax.to(this.dot1, 1, {
+                x: (relX - vc.offsetWidth / 2) / vc.offsetWidth * -150,
+                y: (relY - vc.offsetHeight / 2) / vc.offsetHeight * -50,
+                ease: Power2.easeOut
+            })
+            TweenMax.to(this.dot2, 1, {
+                x: (relX - vc.offsetWidth / 2) / vc.offsetWidth * -50,
+                y: (relY - vc.offsetHeight / 2) / vc.offsetHeight * -75,
+                ease: Power2.easeOut
+            })
+            TweenMax.to(this.dot3, 1, {
+                x: (relX - vc.offsetWidth / 2) / vc.offsetWidth * -100,
+                y: (relY - vc.offsetHeight / 2) / vc.offsetHeight * 150,
+                ease: Power2.easeOut
+            })
+            TweenMax.to(this.dot4, 1, {
+                x: (relX - vc.offsetWidth / 2) / vc.offsetWidth * 50,
+                y: (relY - vc.offsetHeight / 2) / vc.offsetHeight * 100,
+                ease: Power2.easeOut
+            })
+        });
+
         });
 
     }

@@ -19,6 +19,46 @@
     bottom: -2px;
   }*/
 }
+#contexte #contexte-middle #contexte-red-tiny-dot {
+  position: absolute;
+  z-index: 4;
+  bottom: 25%;
+  left: 85%;
+  width: 1.5vh;
+  height: 1.5vh;
+  border-radius: 100%;
+  background-color: #CB563E;
+}
+#contexte #contexte-middle #contexte-yellow-tiny-dot {
+  position: absolute;
+  z-index: 4;
+  bottom: 75%;
+  left: 45%;
+  width: 1.5vh;
+  height: 1.5vh;
+  border-radius: 100%;
+  background-color: #F9E9D7;
+}
+#contexte #contexte-middle #contexte-green-ring {
+  position: absolute;
+  z-index: 4;
+  top: 45%;
+  right: 15%;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 100%;
+  border: 1vh solid #5A8D8C;
+}
+#contexte #contexte-middle #contexte-white-ring {
+  position: absolute;
+  z-index: 4;
+  bottom: 40%;
+  right: 50%;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 100%;
+  border: 5px solid #ffffff;
+}
 #contexte #contexte-middle #contexte-splash-img {
   z-index: 1;
   max-height: 100%;
