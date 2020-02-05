@@ -8,7 +8,7 @@
         v-for="n in number"
         :key="n"
         class="dot"
-        :class="{current: n === index && animCurrent, 'bg-lightgreen': n === index && animCurrent, 'bg-blue': !animCurrent || n > index, 'bg-yellow': n < index}"
+        :class="{'current bg-lightgreen': n === index && animCurrent, 'bg-yellow': n < index, 'bg-blue': n > index || (!animCurrent && n === index)}"
       />
     </div>
   </div>
@@ -24,7 +24,8 @@ export default {
     return {
       percentage: 0,
       index: 1,
-      animCurrent: true
+      animCurrent: true,
+      transition: false
     };
   },
   watch: {
@@ -40,6 +41,7 @@ export default {
           this.percentage < newPercentage
         ) {
           this.percentage += 0.2;
+          this.transition = true;
         }
       }, 1);
     },
@@ -96,83 +98,83 @@ export default {
 
 @-webkit-keyframes animation-dot-reverse {
   from {
-    height: 6vh;
-    width: 6vh;
-  }
-  to {
     height: 4vh;
     width: 4vh;
+  }
+  to {
+    height: 3vh;
+    width: 3vh;
   }
 }
 @-moz-keyframes animation-dot-reverse {
   from {
-    height: 6vh;
-    width: 6vh;
-  }
-  to {
     height: 4vh;
     width: 4vh;
+  }
+  to {
+    height: 3vh;
+    width: 3vh;
   }
 }
 @-ms-keyframes animation-dot-reverse {
   from {
-    height: 6vh;
-    width: 6vh;
-  }
-  to {
     height: 4vh;
     width: 4vh;
+  }
+  to {
+    height: 3vh;
+    width: 3vh;
   }
 }
 @keyframes animation-dot-reverse {
   from {
-    height: 6vh;
-    width: 6vh;
-  }
-  to {
     height: 4vh;
     width: 4vh;
+  }
+  to {
+    height: 3vh;
+    width: 3vh;
   }
 }
 
 @-webkit-keyframes animation-dot {
   from {
-    height: 4vh;
-    width: 4vh;
+    height: 3vh;
+    width: 3vh;
   }
   to {
-    height: 6vh;
-    width: 6vh;
+    height: 4vh;
+    width: 4vh;
   }
 }
 @-moz-keyframes animation-dot {
   from {
-    height: 4vh;
-    width: 4vh;
+    height: 3vh;
+    width: 3vh;
   }
   to {
-    height: 6vh;
-    width: 6vh;
+    height: 4vh;
+    width: 4vh;
   }
 }
 @-ms-keyframes animation-dot {
   from {
-    height: 4vh;
-    width: 4vh;
+    height: 3vh;
+    width: 3vh;
   }
   to {
-    height: 6vh;
-    width: 6vh;
+    height: 4vh;
+    width: 4vh;
   }
 }
 @keyframes animation-dot {
   from {
-    height: 4vh;
-    width: 4vh;
+    height: 3vh;
+    width: 3vh;
   }
   to {
-    height: 6vh;
-    width: 6vh;
+    height: 4vh;
+    width: 4vh;
   }
 }
 </style>
