@@ -1,6 +1,6 @@
 <template>
   <div class="saynette">
-    <Background class="bg-lightgrey svg" />
+    <Background class="svg" />
     <transition name="bounce">
       <LittleHouse class="little" v-show="indexHouse == 1" />
     </transition>
