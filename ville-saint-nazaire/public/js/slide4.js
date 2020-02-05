@@ -69,12 +69,12 @@ let initSlide4 = function(){
  
 
 
-	// d3.select('#next5').on('click', function(){
-	// 	dialogue3.style.visibility = "hidden";
-	// 	son.pause();
- //  		moveDown();
-	// 	initSlide5();
-	// });
+	d3.select('#next5').on('click', function(){
+		dialogue3.style.visibility = "hidden";
+		son.pause();
+  		moveDown();
+		initSlide5();
+	});
 
 }
 
