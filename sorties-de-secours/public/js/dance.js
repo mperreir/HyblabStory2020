@@ -7,10 +7,9 @@ $(document).ready(function() {
     //console.log('bingo');
   });
 
-  $("#dance-section").css("display", "block");
   $("#dance-section").css("overflow-x", "scroll");
   $('#dance-section').on('mousewheel', function(e, delta) {
     this.scrollLeft -= (delta * 60);
-    e.preventDefault();
+    //e.preventDefault();
   });
 });

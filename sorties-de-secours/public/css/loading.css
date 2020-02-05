@@ -1,11 +1,18 @@
 #loading-section {
-    text-align: center;
+  position: relative;
+  text-align: center;
+  background-color: #1E1E1E;
+}
+
+#sound-content {
+  position: relative;
+  top: 35%;
 }
 
 #sound-icon-wrapper {
-    margin: auto;
-    height: auto;
-    width: 100px;
+  margin: auto;
+  height: auto;
+  width: 100px;
 }
 
 .bar {
@@ -67,7 +74,7 @@
 }
 
 .barDance {
-    fill: black;
+    fill: white;
     border-radius: 5px;
 }
 

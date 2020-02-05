@@ -14,9 +14,4 @@ $(document).ready(function() {
   }, function(){
     $("#menu-dance").css("filter", "brightness(80%)");
   });
-
-  $('.menu-hover').click(function(e){
-      $('.menu-hover').addClass('fullscreen');
-  });
-
 });

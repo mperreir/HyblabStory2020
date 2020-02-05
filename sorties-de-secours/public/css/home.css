@@ -1,19 +1,17 @@
+#home-section {
+	position: relative;
+	background-color: #1E1E1E;
+}
+
 #home-logo {
-	position: fixed;
+	position: absolute;
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-#home-logo-experience {
-	position: fixed;
-	top: 53%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
 #arrow-down {
-	position: fixed;
+	position: absolute;
 	top: 90%;
 	left: 50%;
 	transform: translate(-50%, -50%);
