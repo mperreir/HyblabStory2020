@@ -14,6 +14,10 @@
   margin: 0px 10vw;
   border-bottom: 2px solid #5A8D8C;
   position: relative;
+  background-image: url(../../assets/view11/splash-view11.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: bottom -2px center;
 }
 #view11 #view-11-middle #view-11-premium-red-tiny-dot {
   position: absolute;
@@ -49,13 +53,6 @@
 #view11 #view-11-middle img {
   position: absolute;
   bottom: -2px;
-}
-#view11 #view-11-middle #view-11-splash-img {
-  z-index: 1;
-  max-height: 100%;
-  max-width: 100%;
-  left: 10%;
-  top: 14%;
 }
 #view11 #view-11-middle #view-11-hotelA-img {
   z-index: 5;
