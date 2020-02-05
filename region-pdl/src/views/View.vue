@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div @click="click()">
+    <div >
       <Carousel>
         <CarouselSlide :index="0">
           <Intro />
@@ -29,7 +29,7 @@ export default {
     House,
     Carousel,
     CarouselSlide,
-    ProgressBar
+    ProgressBar,
   },
   data: () => ({
     Scenes: Scenes
