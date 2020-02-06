@@ -1,5 +1,6 @@
 <template>
   <div class="saynette">
+    <Boat class="boat"/>
     <Background class="svg" />
     <TextTitle :y="22" :style="{textAlign: 'center'}" >Qui voulez-vous suivre aujourd'hui ?</TextTitle>
     <SimpleText :y="30" :style="{textAlign: 'center'}" >
@@ -12,9 +13,6 @@
     <SimpleButton text="Mme Dubois" @click.native="() => { onNext('dubois')}" :width="20" :y="90" :x="20"/>
     <FakePerso class="perso p2"/>
     <SimpleButton text="M. Moreau" @click.native="() => { onNext('moreau')}" :width="20" :y="90" :x="60"/>
-
-  
-    <FakePerso class="boat"/>
   </div>
 </template>
 
@@ -24,6 +22,7 @@ import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
 import FakePerso from "@/assets/Persos/PersoFichier 1.svg";
+import Boat from "@/assets/Persos/bateau jauneFichier 4.svg";
 
 export default {
   name: "Persos",
@@ -33,11 +32,12 @@ export default {
     SimpleText,
     SimpleButton,
     FakePerso,
+    Boat,
   },
   methods: {
     onNext(characterName) {
-      console.log(characterName + ' a été choisi(e) !');
       this.$store.dispatch("nextScene", { sceneId: null});
+      this.$store.dispatch("setCharacter", {name: characterName});
     }
   }
 };
@@ -62,19 +62,19 @@ export default {
 
 .boat {
   position: absolute;
-  width: 5%;
-  left: 15%;
-  top: 62%;
-  border: solid 1px red;
-  animation: 1s linear infinite alternate float;
+  width: 8%;
+  left: 11%;
+  top: 66%;
+  animation: 25s linear infinite alternate float;
+  z-index: 0;
 }
 
 @keyframes float{
   from {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
   to {
-    transform: translateY(-5%);
+    transform: translateX(350%);
   }
 }
 
