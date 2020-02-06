@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    currentSceneIndex: 2,
+    currentSceneIndex: 3,
     nbScenes: 8,
     character: null,
   },

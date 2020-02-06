@@ -4,10 +4,20 @@
     <BackgroundLarge :class="{test: true,  moved: carHasStarted}"/>
     
     <div :class="{carStartProposal: true, carStartProposalFade: carHasStarted}">
+      <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">Sur le chemin du travail, {{ character }} observe de nombreux équipements pour la transition énergétique mis en place par la Région Pays de la Loire.</SimpleText>
       <TextTitle :style="{textAlign: 'center'}" :y="40">Démarrer la voiture</TextTitle>
       <SwitchButton :width="10" :x="45" :y="47" v-on:toggle="startCar"/>
     </div>
-    <RollingCar class="car" />
+    
+    <div v-show="carGoesOut">
+      <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">Pendant le trajet, {{ character }} s'aperçoit que la batterie de sa voitures est faible. Nous le retrouverons à borne de rechargement la plus proche !</SimpleText>
+    </div>
+
+    <transition name="nextButtonAppear">
+      <SimpleButton v-if="outButton" text="Continuer l'histoire" :width="23" :x="75" :y="90" @click.native="onNext"/>
+    </transition>
+
+    <RollingCar :class="{car: true, carGoesOut: carGoesOut}" />
   </div>
 </template>
 
@@ -17,6 +27,8 @@ import BackgroundLarge from "@/assets/Car/larger.svg";
 import SwitchButton from "@/components/SwitchButton";
 import RollingCar from "@/assets/Car/voitureFichier 6.svg";
 import TextTitle from "@/components/TextTitle";
+import SimpleText from "@/components/SimpleText";
+import SimpleButton from "@/components/SimpleButton";
 
 export default {
   components: {
@@ -25,14 +37,39 @@ export default {
     BackgroundLarge,
     RollingCar,
     TextTitle,
+    SimpleText,
+    SimpleButton
   },
   data: () => ({
     carHasStarted: false,
+    carGoesOut: false,
+    outButton: false,
   }),
   methods: {
     startCar() {
-      console.log("Car started");
       this.carHasStarted = true;
+      setTimeout(() => {
+        this.carGoesOut = true;
+        setTimeout(() => { this.outButton = true }, 5000)
+      }, 5000)
+    },
+    onNext() {
+      this.$store.dispatch('nextScene', { sceneId: null });
+    }
+  },
+  computed: {
+    character() {
+      const stateChar = this.$store.state.character;
+      console.log(stateChar);
+      if(stateChar == "moreau") {
+        return "M. Moreau";
+      }
+      else if(stateChar == "dubois") {
+        return "Mme Dubois";
+      }
+      else {
+        return "Houston on a un problème";
+      }
     }
   }
 };
@@ -44,7 +81,7 @@ export default {
   height: 100vh;
   left: 0;
 
-  transition: left 10s ease;
+  transition: left 5s ease-in;
 }
 
 .moved {
@@ -56,6 +93,8 @@ export default {
   width: 37%;
   left: 36%;
   top: 70%;
+
+  transition: left 5s linear;
 }
 
 .carStartProposal {
@@ -66,6 +105,18 @@ export default {
 }
 
 .carStartProposalFade {
+  opacity: 0;
+}
+
+.carGoesOut {
+  left: 100%;
+}
+
+
+.nextButtonAppear-enter-active, .nextButtonAppear-leave-active {
+  transition: opacity .5s;
+}
+.nextButtonAppear-enter, .nextButtonAppear-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
 
