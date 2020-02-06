@@ -1,16 +1,27 @@
 /*
- * File Created: 2020-01-28 13:52:00
- * Author: Pierre MAUPIN
- * Copyright - 2020 Pierre MAUPIN
+ * Project: handigo
+ * Created Date: Thursday February 6th 2020
+ * Author: Pierre Le Guen
+ * -----
+ * Last Modified: Thursday, 6th February 2020 4:43:10 pm
+ * Modified By: Pierre Le Guen
+ * -----
+ * Copyright (c) 2020 Pierre Le Guen
  */
-#view7 {
+#view13 {
   width: 100vw;
   height: 100vh;
   background-color: #ffffff;
 }
-#view7 #view-7-middle {
+#view13 #view13-graph {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+}
+#view13 #view-13-middle {
   width: 80vw;
-  height: 80vh;
+  height: 100vh;
   margin: 0px 10vw;
   position: relative;
   display: flex;
@@ -18,24 +29,24 @@
   justify-content: stretch;
   align-items: flex-end;
 }
-#view7 #view-7-middle img {
+#view13 #view-13-middle img {
   position: absolute;
   bottom: -2px;
 }
-#view7 #view-7-middle #view-7-chart-container {
+#view13 #view-13-middle #view-13-chart-container {
   height: 80%;
   flex: 1;
   margin: 0 5vw;
   display: flex;
   flex-direction: row;
 }
-#view7 #view-7-middle #view-7-chart-container #view-7-flex-container {
+#view13 #view-13-middle #view-13-chart-container #view-13-flex-container {
   display: flex;
   flex: 3;
   flex-direction: column;
   flex-wrap: wrap;
 }
-#view7 #view-7-middle #view-7-rond-vert {
+#view13 #view-13-middle #view-13-rond-vert {
   z-index: 7;
   position: absolute;
   margin: 0 5vw;
@@ -45,7 +56,7 @@
   background-color: #5A8D8C;
   align-items: center;
 }
-#view7 #view-7-middle #view-7-rond-vert #view-7-rond-blanc {
+#view13 #view-13-middle #view-13-rond-vert #view-13-rond-blanc {
   z-index: 0;
   position: absolute;
   width: 22vw;
@@ -56,7 +67,7 @@
   top: 4vw;
   left: 4vw;
 }
-#view7 #view-7-middle #view-7-rond-vert #view-7-rond-rouge {
+#view13 #view-13-middle #view-13-rond-vert #view-13-rond-rouge {
   z-index: 0;
   position: absolute;
   width: 28vw;
@@ -67,63 +78,45 @@
   top: 1vw;
   left: 1vw;
 }
-#view7 #view-7-middle #view-7-rond-vert #view-7-pmrtext {
-  z-index: 100 !important;
-  color: #cb563e !important;
-  text-align: center;
-  margin-bottom: 4vw;
-  font-size: 20px;
-}
-#view7 #view-7-middle #view-7-rond-vert #view-7-pmrtext em {
-  font-weight: bold;
-}
-#view7 #view-7-middle #view-7-rond-vert #view-7-nonpmrtext {
-  z-index: 100 !important;
-  color: #5A8D8C !important;
-  text-align: center;
-  padding-top: 4vw;
-  font-size: 20px;
-}
-#view7 #view-7-middle article {
+#view13 #view-13-middle article {
   position: absolute;
   left: 50%;
-  width: 50%;
-  bottom: 5%;
-  z-index: 7;
-  flex: 1;
-  margin: 5vh 5vw 5vh 0;
+  width: 40%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
-#view7 #view-7-middle article p {
+#view13 #view-13-middle article p {
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
   line-height: 29px;
   color: #426262;
 }
-#view7 #view-7-middle article span {
+#view13 #view-13-middle article span {
   color: #cb563e;
 }
-#view7 #view-7-middle article span em {
-  font-size: 30px;
+#view13 #view-13-middle article span em {
+  font-size: 50px;
   font-weight: bold;
 }
-#view7 #view-7-middle article #view-7-source {
+#view13 #view-13-middle article #view-13-source {
   font-size: 10px;
   line-height: 0px !important;
 }
-#view7 footer {
+#view13 footer {
   width: 100vw;
-  height: 20vh;
-  position: relative;
-}
-#view7 footer #view-7-next-button {
   position: absolute;
+  bottom: 5%;
+  right: 0;
+}
+#view13 footer #view-13-next-button {
+  position: absolute;
+  font-family: Nunito;
   right: 0px;
   background-color: #CB563E;
   font-weight: normal;
   font-size: 25px;
   line-height: 34px;
-  text-transform: uppercase;
   color: #ffffff;
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;
@@ -133,5 +126,8 @@
   top: 50%;
   transform: translateY(-50%);
 }
+#view13 footer #view-13-next-button em {
+  font-weight: bold;
+}
 
-/*# sourceMappingURL=view7.css.map */
+/*# sourceMappingURL=view13.css.map */

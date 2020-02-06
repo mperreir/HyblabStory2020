@@ -128,6 +128,7 @@
   position: relative;
 }
 #view1 footer #view-1-next-button {
+  z-index: 10000;
   position: absolute;
   right: 0px;
   background-color: #CB563E;
