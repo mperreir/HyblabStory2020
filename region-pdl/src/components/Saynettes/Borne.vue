@@ -27,10 +27,10 @@
       :moving="carMoving"
       class="car"
     />
-    
+
     <BoatSVG class="boat" />
 
-    <PlusButton
+    <!-- <PlusButton
       v-model="closePopover1"
       class="plus-button"
       @open="closePopover(1)"
@@ -42,7 +42,7 @@
         :chart-data="chartData"
         class="chart"
       />
-    </PlusButton>
+    </PlusButton> -->
     <PlusButton class="plus-button">
       <p class="text">
         Répartition des bornes par département :
@@ -73,7 +73,7 @@ export default {
     PlusButton
   },
   data: () => ({
-    // nextPressed: false,
+    nextPressed: false,
     carMoving: true
   }),
   computed: {
