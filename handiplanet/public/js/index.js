@@ -3,10 +3,9 @@
 * Author: Christophe SONNEVILLE
 * Copyright - 2020 Christophe SONNEVILLE
 */
-
-view = new View1(document.getElementById('view-container'));
-
-window.scrollTo(0,0);
+view = new View12Gratuit(document.getElementById('view-container'));
+view.load();
+//window.scrollTo(0,0);
 
 window.addEventListener('load', function () {
     function scroll(){
