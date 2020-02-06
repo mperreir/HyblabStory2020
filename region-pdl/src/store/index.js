@@ -6,20 +6,27 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     currentSceneIndex: 0,
-    nbScenes: 8
+    nbScenes: 8,
+    character: null,
   },
   mutations: {
-    nextScene(state, sceneId) {
-      if (sceneId === null)
-        state.currentSceneIndex++;
-      else {
-        state.currentSceneIndex += sceneId;
+      nextScene(state, sceneId) {
+        if (sceneId === null)
+          state.currentSceneIndex++;
+        else {
+          state.currentSceneIndex += sceneId;
+        }
+      },
+      setCharacter(state, name) {
+        state.character = name;
       }
-    }
   },
   actions: {
     nextScene({ commit }, { sceneId }) {
       commit('nextScene', sceneId);
+    },
+    setCharacter({ commit }, { name }) {
+      commit('setCharacter', name);
     }
   },
   getters: {
