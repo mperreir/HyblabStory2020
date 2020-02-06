@@ -62,7 +62,7 @@
   left: 5%;
 }
 #view11 #view-11-middle #view-11-hotelB-img {
-  z-index: 5;
+  z-index: 20;
   position: absolute;
   height: 40vh;
   max-width: 100%;
@@ -152,9 +152,30 @@
 #view11 #view-11-middle .view-11-button button:hover {
   transform: scale(1.2, 1.2);
 }
+#view11 #view-11-middle .view-11-button button:hover .view-11-icon {
+  opacity: 100%;
+}
 #view11 #view-11-middle .view-11-button button img {
   position: relative;
   width: 50%;
+}
+#view11 #view-11-middle .view-11-button button .view-11-icon {
+  width: 15%;
+  position: absolute;
+  opacity: 0%;
+  transition: opacity 0.5s;
+}
+#view11 #view-11-middle .view-11-button button .view-11-icon.view-11-1 {
+  top: -10%;
+  right: 35%;
+}
+#view11 #view-11-middle .view-11-button button .view-11-icon.view-11-2 {
+  top: -20%;
+  right: 10%;
+}
+#view11 #view-11-middle .view-11-button button .view-11-icon.view-11-3 {
+  top: -20%;
+  right: -10%;
 }
 #view11 #view-11-middle .view-11-button .view-11-circle {
   width: 20%;

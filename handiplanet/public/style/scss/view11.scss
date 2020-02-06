@@ -68,11 +68,12 @@
       left: 5%;
     }
     #view-11-hotelB-img {
-      z-index: 5;
+      z-index: 20;
       position: absolute;
       height: 40vh;
       max-width: 100%;
-      left: 35%;
+      left: 35%; 
+
     }
     #view-11-vegetation-img {
       z-index: 6;
@@ -167,12 +168,38 @@
   
         &:hover{
           transform: scale(1.2, 1.2);
+          .view-11-icon{
+            opacity: 100%;
+          }
         }
         
         img {
           position: relative;
           width: 50%;
-        }      
+        } 
+        
+        
+      .view-11-icon{
+        width: 15%;
+        position: absolute;
+        opacity: 0%;
+        transition: opacity 0.5s;
+
+        &.view-11-1{
+          top: -10%;
+          right: 35%;
+        }
+        &.view-11-2{
+          top: -20%;
+          right: 10%;
+
+        }
+        &.view-11-3{
+          top: -20%;
+          right: -10%;
+
+        }
+      }
       }
       
   
