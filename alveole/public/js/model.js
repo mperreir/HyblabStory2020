@@ -104,6 +104,7 @@ class ModelIntroSlide extends Observable {
 
   // values
   bool;
+  text;
 
   constructor() {
     super();
@@ -133,6 +134,7 @@ class ModelSlide1 extends Observable {
   instanciated;
   hotel;
   studio;
+  text;
 
   constructor() {
     super();
@@ -213,6 +215,7 @@ class ModelSlide2 extends Observable {
   choice;
   answer;
   instanciated;
+  text;
 
   constructor() {
     super();
@@ -268,6 +271,7 @@ class ModelSlide3 extends Observable {
   // values
   bool;
   instanciated;
+  text;
 
   constructor() {
     super();
@@ -308,6 +312,7 @@ class ModelSlide4 extends Observable {
 
   // values
   bool;
+  text;
 
   constructor() {
     super();
@@ -331,6 +336,7 @@ class ModelSlide5 extends Observable {
 
   // values
   bool;
+  text;
 
   constructor() {
     super();
@@ -354,6 +360,7 @@ class ModelSlide6 extends Observable {
 
   // values
   bool;
+  text;
 
   constructor() {
     super();
@@ -377,6 +384,7 @@ class ModelSlide7 extends Observable {
 
   // values
   bool;
+  text;
 
   constructor() {
     super();
@@ -400,6 +408,7 @@ class ModelSlide8 extends Observable {
 
   // values
   bool;
+  text;
 
   constructor() {
     super();
@@ -423,6 +432,7 @@ class ModelLastSlide extends Observable {
 
   // values
   bool;
+  text;
 
   constructor() {
     super();
