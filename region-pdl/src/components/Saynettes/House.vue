@@ -1,9 +1,10 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
-=======
     <SimpleText
-      :y="30"
+      :y="15"
+      :x="15"
+      :width="70"
       :style="{textAlign: 'center'}"
     >
       <p v-if="$store.state.character === 'dubois'">
@@ -14,7 +15,6 @@
         Il y a peu, M. Moreau a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison. <br>
         Cette  rénovation rendue possible grâce aux aides de la Région, a permis à M. Moreau de faire des économies d’énergie et de participer à la transition écologique de la région.
       </p>
->>>>>>> develop
     </SimpleText>
     <transition name="bounce">
       <LittleHouse
@@ -60,8 +60,6 @@
         </p>
       </transition>
     </div>
-
-=======
     <Slider
       class="slider"
       @input="onChange"
@@ -71,6 +69,7 @@
     <PlusButton
       v-model="closePopover1"
       class="plus1"
+      :width="30"
       @open="closePopover(1)"
     >
       <p class="text">
@@ -84,6 +83,7 @@
     <PlusButton
       v-model="closePopover2"
       class="plus2"
+      :width="30"
       @open="closePopover(2)"
     >
       <p v-if="$store.state.character === 'moreau'">
@@ -102,6 +102,7 @@
       v-show="indexHouse == '1'"
       v-model="closePopover3"
       class="plus3"
+      :width="30"
       @open="closePopover(3)"
     >
       <p>
@@ -113,6 +114,7 @@
       v-show="indexHouse == '2'"
       v-model="closePopover4"
       class="plus4"
+      :width="30"
       @open="closePopover(4)"
     >
       <p>
@@ -124,6 +126,7 @@
       v-show="indexHouse == '3'"
       v-model="closePopover5"
       class="plus5"
+      :width="30"
       @open="closePopover(5)"
     >
       <p>
@@ -131,11 +134,10 @@
         Le gain moyen sur la consommation est de <span class="data">53 % </span> après les travaux.
       </p>
     </PlusButton>
->>>>>>> develop
     <SimpleButton
-      text="Voir la suite"
+      text="Continuer l'histoire"
 
-      :width="20"
+      :width="23"
       :y="90"
       :x="75"
     />
@@ -257,30 +259,30 @@ export default {
 
 .plus1 {
   position: absolute;
-  top: 60vh;
-  left: 40vw;
+  top: 65%;
+  left: 70%;
 }
 
 .plus2 {
   position: absolute;
-  top: 70vh;
-  left: 26vw;
+  top: 70%;
+  left: 35%;
 }
 
 .plus3 {
   position: absolute;
-  top: 75vh;
-  left: 37vw;
+  top: 75%;
+  left: 55%;
 }
 .plus4 {
   position: absolute;
-  top: 72vh;
-  left: 41vw;
+  top: 72%;
+  left: 55%;
 }
 .plus5 {
   position: absolute;
-  top: 75vh;
-  left: 50vw;
+  top: 68%;
+  left: 45%;
 }
 
 .bounce,
