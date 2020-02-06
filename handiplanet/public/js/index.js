@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
         }else large.className = "text";
         
         //mettre les textes en small
-        body.className = "Small";
+        body.className = "body-small";
     }
     function setMedium(){
         if(small.className == "text selected"){
@@ -36,7 +36,7 @@ window.addEventListener('load', function () {
         }else large.className = "text";
         
         //mettre les textes en medium
-        body.className = "Medium";
+        body.className = "body-medium";
     }
     function setLarge(){
         if(small.className == "text selected"){
@@ -48,7 +48,7 @@ window.addEventListener('load', function () {
         }else medium.className = "text";
         
         //mettre les textes en larges
-        body.className = "Large";
+        body.className = "body-large";
     }
     
     function mute(){
