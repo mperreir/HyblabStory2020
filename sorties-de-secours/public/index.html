@@ -5,6 +5,14 @@
   <meta charset="utf-8">
   <title>Hyblab 2020 - Sorties de Secours</title>
 
+  <!-- musique en entrée; il faut cliquer quelque part pour l'activer -->
+  <audio id="generalMusic" src="sons/ambiance3.mp3" loop="true" autoplay="true">
+    <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
+  </audio>
+  <audio id="voice" src="" autoplay>
+    <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
+  </audio>
+
   <!-- jQuery -->
   <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -29,7 +37,11 @@
     <!-- FONTS -->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nimbus-sans-l" type="text/css"/>
 
-    <!-- home -->
+    <!-- SOUND -->
+    <script type="text/javascript" src="js/sound.js"></script>
+
+
+  <!-- home -->
     <link rel="stylesheet" href="css/home.css" />
     <script type="text/javascript" src="js/home.js"></script>
     <link rel="stylesheet" href="css/hamburger.css" />
@@ -202,6 +214,12 @@
             class="section"
             id="music-workshop-section">
 
+        <audio id="vinyl-noise" src="sons/music_workshop/vinyl_noise.m4a" loop volume="2">
+            <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
+        </audio>
+        <audio id="vinyl" src="sons/baloji/Peau de Chagrin Bleu de Nuit.mp3">
+        <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
+        </audio>
       <div id="music-workshop-konva">
 
       </div>
