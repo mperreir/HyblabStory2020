@@ -56,7 +56,7 @@
     }
 
     img {
-      position: absolute;
+      position: relative;
       bottom: -2px;
     }
 
@@ -120,77 +120,91 @@
 
     #view-11-hotel-a-caption{
       position: absolute;
-      top: -15%;
+      top: -5%;
       left: 70%;
     }
 
     #view-11-hotel-b-caption{
       position: absolute;
-      top: -15%;
+      top: -5%;
       left: 70%;
     }
 
-    button{
-      padding: 0px;
-      width: 25%;
-      height: 20%;
-      position: absolute;
-      z-index: 100;
-
-      -webkit-transition: all .4s ease-in-out;
-      -moz-transition: all .4s ease-in-out;
-      -o-transition: all .4s ease-in-out;
-      -ms-transition: all .4s ease-in-out;
-      transition: all .4s ease-in-out;
-
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-
-      &:hover{
-        transform: scale(1.2, 1.2);
-      }
-      
-      img {
-        position: relative;
-        width: 50%;
-      }      
-    }
-    
     #view-11-button-hotel-a{
-      left: 7%;
-      top: 60%;
+      right: -10%;
+      top: -100%;
     }
     #view-11-button-hotel-b{
-      left: 30%;
-      top: 50%;
+      right: 0%;
+      top: -120%;
     }
-
-    .view-11-circle{
-      width: 20%;
+    .view-11-button{      
       position: absolute;
-      right: 15%;
-      box-shadow: 0 0 3px 0 rgb(66, 98, 98);
+      width: 25%;
+      height: 20%;
+      bottom: 0%;
 
-      -webkit-animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-      -moz-animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-      -ms-animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-      animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-      // background-color: #e84c3d;
-      border-radius: 50%;
+      .view-11-bat{
+        width: 100%;
+        height: 100%;
+      }
+
+      button{
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 10000;
+  
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+  
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+  
+        &:hover{
+          transform: scale(1.2, 1.2);
+        }
+        
+        img {
+          position: relative;
+          width: 50%;
+        }      
+      }
+      
+  
+      .view-11-circle{
+        width: 20%;
+        position: absolute;
+        right: 15%;
+        box-shadow: 0 0 3px 0 rgb(66, 98, 98);
+  
+        -webkit-animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+        -moz-animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+        -ms-animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+        animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+        // background-color: #e84c3d;
+        border-radius: 50%;
+      }
+  
+      @-webkit-keyframes view-11-pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+      @-moz-keyframes view-11-pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+      @-ms-keyframes view-11-pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+      @keyframes view-11-pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+  
+      #view-11-circle-a{
+        top: 12%;
+      }
+  
+      #view-11-circle-b{
+        top: 12%;
+      }
+
     }
-
-    @-webkit-keyframes view-11-pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-    @-moz-keyframes view-11-pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-    @-ms-keyframes view-11-pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-    @keyframes view-11-pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-
-    #view-11-circle-a{
-      top: 12%;
-    }
-
-    #view-11-circle-b{
-      top: 12%;
-    }
+    
 
   }
 
