@@ -1,0 +1,14 @@
+<svg id='svg_popup' width="517" height="517" viewBox="0 0 517 517" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_b)">
+<circle cx="258.5" cy="258.5" r="258.5" fill="white" fill-opacity="0.72"/>
+<circle cx="258.5" cy="258.5" r="257" stroke="white" stroke-width="3"/>
+</g>
+<defs>
+<filter id="filter0_b" x="-14" y="-14" width="545" height="545" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="7"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur" result="shape"/>
+</filter>
+</defs>
+</svg>
