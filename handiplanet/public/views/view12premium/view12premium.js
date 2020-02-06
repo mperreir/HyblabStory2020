@@ -3,7 +3,7 @@
  * Created Date: Wednesday February 5th 2020
  * Author: Pierre Le Guen
  * -----
- * Last Modified: Thursday, 6th February 2020 10:23:13 am
+ * Last Modified: Thursday, 6th February 2020 2:24:18 pm
  * Modified By: Pierre Le Guen
  * -----
  * Copyright (c) 2020 Pierre Le Guen
@@ -43,28 +43,28 @@ class View12Premium extends View {
         ease: Power2.easeOut
       })
       TweenMax.to(this.clock, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * 10,
+        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * 20,
         y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * -10,
         ease: Power2.easeOut
       })
       TweenMax.to(this.facebook, 1, {
         x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -10,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * 10,
+        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * 20,
         ease: Power2.easeOut
       })
       TweenMax.to(this.instagram, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -10,
+        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -25,
         y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * -10,
         ease: Power2.easeOut
       })
       TweenMax.to(this.mail, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * 10,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * 10,
+        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * 20,
+        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * -10,
         ease: Power2.easeOut
       })
       TweenMax.to(this.money, 1, {
         x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -10,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * -10,
+        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * -20,
         ease: Power2.easeOut
       })
       TweenMax.to(this.youtube, 1, {
@@ -73,7 +73,7 @@ class View12Premium extends View {
         ease: Power2.easeOut
       })
       TweenMax.to(this.phone, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -10,
+        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -20,
         y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * 10,
         ease: Power2.easeOut
       })
