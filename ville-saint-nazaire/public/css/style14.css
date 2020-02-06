@@ -1,0 +1,77 @@
+#fin-img{
+    position: absolute;
+    width: 4%;
+    left : 90%;
+    top : 78%;
+}
+#fin-texte{
+    position: absolute;
+    left : 87%;
+    top : 87%;
+    font-family: Vibur;
+    color: #92C2D2;
+}
+
+.fin{
+    cursor: pointer;
+}
+
+#img-journaliste14 {
+    position: absolute;
+    width : 13%;
+    height : 40%;
+    top : 58%;
+    left : 1%;
+    z-index: 200;
+}
+#etudiants_agr{
+    position: absolute;
+    left:8%;
+    top:26%
+}
+#agr{
+    width:40vh;
+}
+#etudiants_polytech{
+    position: absolute;
+    left:40%;
+    top:26%
+}
+#polytech{
+    width:35vh;
+    position: relative;
+    left: 7%;
+}
+#etudiants_audencia{
+    position: absolute;
+    right:8%;
+    top:24%
+}
+#audencia{
+    width:40vh;
+}
+#etudiants_audencia div, #etudiants_polytech div,#etudiants_agr div{
+    width: 40vh;
+    height: 50px;
+    text-align: center;
+}
+
+#etudiants_audencia p, #etudiants_polytech p,#etudiants_agr p {
+    font-family: Vibur;
+    color: #255A85;
+}
+
+
+
+
+
+@media screen and (max-aspect-ratio: 16/9){
+    #etudiants_audencia p, #etudiants_polytech p,#etudiants_agr p, #fin-texte{
+        font-size: 2vw;
+    }
+}
+@media screen and (min-aspect-ratio: 16/9){
+    #etudiants_audencia p, #etudiants_polytech p,#etudiants_agr p, #fin-texte{
+        font-size: 3.4vh;
+    }
+}
