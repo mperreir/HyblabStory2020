@@ -44,8 +44,17 @@ body,
   src: url("./fonts/NeoSansStd-Medium.otf");
 }
 
+@font-face {
+  font-family: "Neo Sans Bold";
+  src: url("./fonts/NeoSansPro-Bold.ttf");
+}
+
 .title {
   font-family: "Neo Sans";
+}
+
+.title-bold {
+  font-family: "Neo Sans Bold";
 }
 
 /* --- Police des textes --- */
