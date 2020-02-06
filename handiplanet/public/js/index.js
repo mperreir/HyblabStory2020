@@ -83,8 +83,8 @@ window.addEventListener('load', function () {
             toggle.style.background = '#cb563e';
             cont = true;
             //document.body.style.filter = "grayscale(100%)";
-            document.body.style.filter= "hue-rotate(200deg)";
-            //document.body.style.filter = "contrast(150%)";
+            //document.body.style.filter= "hue-rotate(200deg)";
+            document.body.style.filter = "grayscale(1) contrast(1.25)";
         }
     }
 
