@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
     // set variables for svg elements
-    var circle_size = 30;
-    var random_range = 5;
+    var circle_size = 40;
+    var random_range = 10;
     //var elements_pos = [];
     //var space_between_elements = 10;
 
