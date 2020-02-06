@@ -3,10 +3,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-#next15-1{
+#next13{
   position: absolute;
   left:5%;
 }
+
 #blackblock12{
   top: 0%;
   width: 25%;
@@ -53,7 +54,7 @@
 }
 #texte_slide12 p{
     font-family:"Vibur";
-    color:black;
+    color:#92C2D2;
     text-align: justify;
 }
 @media screen and (max-aspect-ratio: 16/9){
