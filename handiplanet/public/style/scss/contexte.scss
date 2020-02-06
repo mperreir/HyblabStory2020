@@ -202,6 +202,7 @@
     position: relative;
 
     #contexte-next-button {
+      z-index: 10000;
       position: absolute;
       right: 0px;
       background-color: #CB563E;

@@ -105,6 +105,7 @@
   position: relative;
 }
 #view4 footer #view-4-next-button {
+  z-index: 10000;
   position: absolute;
   right: 0px;
   background-color: #CB563E;
