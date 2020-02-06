@@ -30,7 +30,6 @@ function returnSalon12(){
 function myMove12(elem,posInitiale,tailInitiale) {
   var pos = 0;
   var tail = 0;
-  //elem.style.zIndex+=4;
   var id = setInterval(frame, 10);
   function frame() {
     if (pos == -posInitiale) { //condition d'arrêt de la "boucle"
@@ -51,7 +50,6 @@ function myReturn12(elem,posInitiale,widthInit) {
   var id = setInterval(frame, 10);
   function frame() {
     if (pos == -posInitiale) { //condition d'arrêt de la "boucle"
-      //elem.style.zIndex-=4;
       clearInterval(id);
     } else {
       pos--;
