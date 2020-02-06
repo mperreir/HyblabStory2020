@@ -129,7 +129,7 @@
 #app-view #app-overlay #overlay-buttons {
   z-index: 10000;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 5vw;
   transform: translateX(-50%) translateY(-50%);
   display: flex;
@@ -241,7 +241,7 @@
   display: none;
 }
 #app-view #overlay-footer {
-  z-index: 9000;
+  z-index: -1;
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -251,7 +251,6 @@
 }
 #app-view #overlay-footer::after {
   content: "";
-  z-index: 9999;
   border-top: 2px solid #5A8D8C;
   position: absolute;
   top: -2px;
