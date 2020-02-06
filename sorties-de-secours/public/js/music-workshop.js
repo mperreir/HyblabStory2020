@@ -21,10 +21,10 @@ $(document).ready(function() {
     });
 
     var k_vinyl_head = new Konva.Image({
-        x: 945,
-        y: 318,
-        width: 71,
-        height: 671
+        x: 1170,
+        y: 260,
+        width: 284,
+        height: 666
     });
 
     let image_vinyl = new Image();
@@ -39,7 +39,7 @@ $(document).ready(function() {
         let vinyl_head = new Image();
         vinyl_head.onload = () => {
             k_vinyl_head.image(vinyl_head);
-            k_vinyl_head.offset({ x: 35, y: 138 });
+            k_vinyl_head.offset({ x: 150, y: 190 });
 
             group.add(k_vinyl_head);
             layer.add(group);
@@ -62,12 +62,21 @@ $(document).ready(function() {
         mouseDown = true;
         let pos = stage.getPointerPosition();
 
-        let angleDeg = Math.atan2(318 - pos.y, 945 - pos.x) * 180 / Math.PI + 90;
+        let angleDeg = Math.atan2(260 - pos.y, 1170 - pos.x) * 180 / Math.PI + 90;
+        // console.log("angle : " + angleDeg);
 
         if (angleDeg < 0) {
             angleDeg = 0;
         } else if (angleDeg > 50) {
             angleDeg = 50;
+        }
+
+        if (angleDeg >= 15 && angleDeg < 30) {
+            console.log("Musique 1");
+        } else if (angleDeg >= 30 && angleDeg < 40) {
+            console.log("Musique 2");
+        } else if (angleDeg >= 40 && angleDeg < 50) {
+            console.log("Musique 3");
         }
 
         k_vinyl_head.rotation(angleDeg);
