@@ -21,7 +21,12 @@ class Animation extends Interactable {
 
   add_image (image_path) {
     // Images should all be the same size : 1080x720
-    images.push(loadImage(image_path));
+    console.log("Trying to load image at path : "+image_path)
+    try{
+      this.images.push(loadImage(image_path));
+    }catch (exception) {
+      return false;
+    }
   }
 
   auto_add_image () {
@@ -30,6 +35,10 @@ class Animation extends Interactable {
       i++;
     }
     // Done importing
+    if (i==0) {
+      return false;
+    }
+    // return false if there was no animation to be found
   }
 
   // DISPLAYING ----------------------------------------------------------------

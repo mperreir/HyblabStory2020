@@ -39,7 +39,11 @@ class Scene {
   // ADDING NEW ELEMENTS -------------------------------------------------------
 
   new_top_layer (inter) {
-    this.layers.push(inter);
+    try {
+      this.layers.push(inter);
+    } catch (e) {
+      return false;
+    }
   }
 
   new_bottom_layer (inter) {
@@ -52,7 +56,7 @@ class Scene {
 
   auto_add_element () {
     let i = 0;
-    while (this.layers.push(new Animation("../img/stories/" + this.name_histoire + "/" + this.name_scene))) {
+    while (this.new_top_layer(new Animation("../img/stories/" + this.name_histoire + "/" + this.name_scene))) {
       i++;
     }
     if (i == 0) {
