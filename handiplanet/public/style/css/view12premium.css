@@ -74,6 +74,7 @@
   transform: translateX(-50%) translateY(-50%);
 }
 #view12premium footer #view-12-next-button {
+  z-index: 10000;
   position: absolute;
   right: 0px;
   background-color: #CB563E;

@@ -111,6 +111,7 @@
     position: relative;
 
     #view-3-premium-next-button {
+      z-index: 10000;
       position: absolute;
       right: 0px;
       background-color: #CB563E;

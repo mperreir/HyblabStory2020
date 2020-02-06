@@ -8,7 +8,7 @@ window.scrollBarController = new ScrollBarController();
 window.scrollBarController.setPosition(0);
 
 view = new View1(document.getElementById('view-container'));
-
+view.load();
 window.addEventListener('load', function () {
     function scroll(){
         window.scrollTo(0,window.innerHeight);
