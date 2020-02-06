@@ -7,7 +7,7 @@
 window.scrollBarController = new ScrollBarController();
 window.scrollBarController.setPosition(0);
 
-view = new View1(document.getElementById('view-container'));
+view = new View13(document.getElementById('view-container'));
 
 window.addEventListener('load', function () {
     function scroll(){
