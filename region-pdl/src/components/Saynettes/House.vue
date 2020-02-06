@@ -1,7 +1,7 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
-    <SimpleText :y="30" :style="{textAlign: 'center'}">
+    <SimpleText :y="30" :width="25" :x="30" :style="{textAlign: 'center'}">
     <p v-if="$store.state.character === 'dubois'"> Il y a peu, Mme Dubois a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison. 
     <br>Cette  rénovation rendue possible grâce aux aides de la Région, a permis à Mme Dubois de faire des économies d’énergie et de participer à la transition écologique de la région.</p>
      <p v-if="$store.state.character === 'moreau'">Il y a peu, M. Moreau a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison. <br>
@@ -31,12 +31,12 @@
     <Slider @input="onChange" class="slider" />
     <ul>
       <li>
-        <PlusButton class="plus1" @open="closePopover(1)" v-model="closePopover1">
+        <PlusButton class="plus1" :width="25" @open="closePopover(1)" v-model="closePopover1">
           <p class="text">En 2018, <span class = "data"> 1077 maisons </span> ont bénéficié de cette aide à l’isolation.</p>
         </PlusButton>
       </li>
       <li>
-        <PlusButton class="plus2" @open="closePopover(2)" v-model="closePopover2">
+        <PlusButton class="plus2" :width="25" @open="closePopover(2)" v-model="closePopover2">
           <p v-if="$store.state.character === 'moreau'">La maison de M. Moreau  fait <span class = "data"> 50 m². </span> Il a eu le droit à <span class = "data">4000 euros </span> d’aides.</p>
           <p v-if="$store.state.character === 'dubois'" >La maison de Mme Dubois fait <span class = "data"> 150 m². </span> Elle a eu le droit à <span class = "data">4000 euros</span> d’aides.</p>
         </PlusButton>
@@ -44,13 +44,13 @@
       <li>
         
         <p v-show="indexHouse == '1'">
-          <PlusButton class="plus3" @open="closePopover(3)" v-model="closePopover3"> <p>Pour une maison de <span class = "data"> 50 m². </span> Le gain moyen sur la consommation est de <span class = "data">58 % </span> après les travaux.</p></PlusButton>
+          <PlusButton class="plus3" :width="25" @open="closePopover(3)" v-model="closePopover3"> <p>Pour une maison de <span class = "data"> 50 m². </span> Le gain moyen sur la consommation est de <span class = "data">58 % </span> après les travaux.</p></PlusButton>
         </p>
         <p v-show="indexHouse == '2'">
-          <PlusButton class="plus4" @open="closePopover(4)" v-model="closePopover4"><p>Pour une maison de <span class = "data"> 100 m². </span> Le gain moyen sur la consommation est de <span class = "data">51 % </span> après les travaux.</p></PlusButton>
+          <PlusButton class="plus4" :width="25" @open="closePopover(4)" v-model="closePopover4"><p>Pour une maison de <span class = "data"> 100 m². </span> Le gain moyen sur la consommation est de <span class = "data">51 % </span> après les travaux.</p></PlusButton>
         </p>
         <p v-show="indexHouse == '3'">
-          <PlusButton class="plus5" @open="closePopover(5)" v-model="closePopover5"><p> Pour une maison de <span class = "data"> 150 m². </span> Le gain moyen sur la consommation est de <span class = "data">53 % </span> après les travaux.</p></PlusButton>
+          <PlusButton class="plus5" :width="25" @open="closePopover(5)" v-model="closePopover5"><p> Pour une maison de <span class = "data"> 150 m². </span> Le gain moyen sur la consommation est de <span class = "data">53 % </span> après les travaux.</p></PlusButton>
         </p>
        
       </li>
