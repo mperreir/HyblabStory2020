@@ -1,5 +1,5 @@
 #page12{
-    background-image: url(../img/fond_choix_decorateur.png);
+    background-image: url(../img/fond12.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -19,7 +19,7 @@
 
 #image_bureau12{
   position: absolute;
-  top:10%;
+  top:5%;
   left:-20%;
   width: 25%;
   height: auto;
@@ -28,19 +28,19 @@
 
 #image_commission12{
   position: absolute;
-  top:30%;
+  top:25%;
   left:-20%;
   width: 25%;
   height: auto;
-  z-index: 2;
+  z-index: 3;
 }
 #image_salon12{
   position: absolute;
-  top:55%;
+  bottom:10%;
   left:-12%;
   width: 16%;
   height: auto;
-  z-index: 3;
+  z-index: 2;
 }
 
 #texte_slide12{
@@ -52,7 +52,7 @@
     padding : 0.5%
 }
 #texte_slide12 p{
-    font-family:"Parisienne";
+    font-family:"Vibur";
     color:black;
     text-align: justify;
 }

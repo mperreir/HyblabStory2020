@@ -8,29 +8,28 @@ let initSlide9 = function(){
   });
 }
 
-function moveBureau(){
-  myMove(document.getElementById('image_bureau'),-20);
+function moveImage1(){
+  myMove9(document.getElementById('image1_slide9'),-20);
 }
-function moveCommission(){
-  myMove(document.getElementById('image_commission'),-20);
+function moveImage2(){
+  myMove9(document.getElementById('image2_slide9'),-20);
 }
-function moveSalon(){
-  myMove(document.getElementById('image_salon'),-12);
-}
-
-function returnBureau(){
-  myReturn(document.getElementById('image_bureau'),20);
-}
-function returnCommission(){
-  myReturn(document.getElementById('image_commission'),20);
-}
-function returnSalon(){
-  myReturn(document.getElementById('image_salon'),12);
+function moveImage3(){
+  myMove9(document.getElementById('image3_slide9'),-20);
 }
 
+function returnImage1(){
+  myReturn9(document.getElementById('image1_slide9'),20);
+}
+function returnImage2(){
+  myReturn9(document.getElementById('image2_slide9'),20);
+}
+function returnImage3(){
+  myReturn9(document.getElementById('image3_slide9'),20);
+}
 
 
-function myMove(elem,posInitiale) {
+function myMove9(elem,posInitiale) {
   var pos = 0;
   var id = setInterval(frame, 10);
   function frame() {
@@ -44,7 +43,7 @@ function myMove(elem,posInitiale) {
   }
 }
 
-function myReturn(elem,posInitiale) {
+function myReturn9(elem,posInitiale) {
   var pos = 0;
   var id = setInterval(frame, 10);
   function frame() {
