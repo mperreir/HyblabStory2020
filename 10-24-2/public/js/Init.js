@@ -180,7 +180,7 @@ function init_story_pubertyF() {
 
     var scene2 = new Scene(story, "faire_les_courses", 3);
     scene2.add_choice(choice3);
-    var scene3 = new Scene(story, "je_communique_ecouter 10_24", 4);
+    var scene3 = new Scene(story, "je_communique_ecouter_10_24", 4);
 
 
     var choice4 = new Choice();
