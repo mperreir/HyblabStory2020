@@ -74,7 +74,8 @@ class SuperControler {
     modelLastSlide.addObservers(updateLastSlide);
 
     // Mediator of slide model
-    let mediatorSlide = new MediatorSlide(  modelIntroSlide,
+    let mediatorSlide = new MediatorSlide(  modelSlides,
+                                            modelIntroSlide,
                                             modelSlide1,
                                             modelSlide2,
                                             modelSlide3,
@@ -99,7 +100,7 @@ class SuperControler {
 
 class MediatorSlide extends Observer {
 
-  constructor(modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide) {
+  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide) {
 
     super();
 
@@ -114,7 +115,9 @@ class MediatorSlide extends Observer {
       "7": modelSlide7,
       "8": modelSlide8,
       "9": modelLastSlide
-    }
+    };
+
+    this.loadText(this.slides);
   }
 
   update(observable, object) {
@@ -129,6 +132,19 @@ class MediatorSlide extends Observer {
         model.setValue(true);
       }
     }
+  }
+
+  loadText(slides) {
+    $.getJSON("data/text.json", function(data) {
+
+      const entries = Object.entries(data);
+      let count = 0;
+
+      for (const [i, text] of entries) {
+        slides[count].text = text;
+        count++;
+      }
+    });
   }
 }
 
@@ -319,7 +335,6 @@ class UpdateSlide8 extends Observer {
   }
 
   update(observable, object) {
-
   }
 }
 
