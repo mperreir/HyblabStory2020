@@ -26,6 +26,9 @@
         <CarouselSlide :index="7">
           <Quizz />
         </CarouselSlide>
+        <CarouselSlide :index="8">
+          <End />
+        </CarouselSlide>
       </Carousel>
     </div>
     <transition name="fade">
@@ -47,6 +50,7 @@ import Borne from "@/components/Saynettes/Borne.vue";
 import Company from "@/components/Saynettes/Company.vue";
 import School from "@/components/Saynettes/School.vue";
 import Quizz from "@/components/Saynettes/Quizz.vue";
+import End from "@/components/Saynettes/End.vue";
 import Carousel from "@/components/carousel/Carousel.vue";
 import CarouselSlide from "@/components/carousel/CarouselSlide.vue";
 
@@ -63,7 +67,8 @@ export default {
     Quizz,
     Carousel,
     CarouselSlide,
-    ProgressBar
+    ProgressBar,
+    End
   },
   data: () => ({}),
   methods: {
