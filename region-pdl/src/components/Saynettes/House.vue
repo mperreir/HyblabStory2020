@@ -1,11 +1,10 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
-    <TextTitle :y="22" :style="{textAlign: 'center'}">Se loger (aides isolation particuliers)</TextTitle>
     <SimpleText :y="30" :style="{textAlign: 'center'}">
-    <p v-if="$store.state.character === 'dubois' || fakeName ==='dubois'"> Il y a peu, Mme Dubois a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison. 
+    <p v-if="$store.state.character === 'dubois'"> Il y a peu, Mme Dubois a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison. 
     <br>Cette  rénovation rendue possible grâce aux aides de la Région, a permis à Mme Dubois de faire des économies d’énergie et de participer à la transition écologique de la région.</p>
-     <p v-if="$store.state.character === 'moreau' || fakeName ==='moreau'">Il y a peu, M. Moreau a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison. <br>
+     <p v-if="$store.state.character === 'moreau'">Il y a peu, M. Moreau a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison. <br>
      Cette  rénovation rendue possible grâce aux aides de la Région, a permis à M. Moreau de faire des économies d’énergie et de participer à la transition écologique de la région.</p>
      
     </SimpleText>
@@ -38,16 +37,22 @@
       </li>
       <li>
         <PlusButton class="plus2" @open="closePopover(2)" v-model="closePopover2">
-          <p v-if="$store.state.character === 'dubois'">La maison de M. Moreau  fait <span class = "data"> 50 m². </span> Il a eu le droit à <span class = "data">4000 euros </span> d’aides.</p>
-          <p v-if="$store.state.character === 'moreau'" >La maison de Mme Dubois fait <span class = "data"> 150 m². </span> Elle a eu le droit à <span class = "data">4000 euros</span> d’aides.</p>
+          <p v-if="$store.state.character === 'moreau'">La maison de M. Moreau  fait <span class = "data"> 50 m². </span> Il a eu le droit à <span class = "data">4000 euros </span> d’aides.</p>
+          <p v-if="$store.state.character === 'dubois'" >La maison de Mme Dubois fait <span class = "data"> 150 m². </span> Elle a eu le droit à <span class = "data">4000 euros</span> d’aides.</p>
         </PlusButton>
       </li>
       <li>
-        <PlusButton class="plus3" @open="closePopover(3)" v-model="closePopover3">
-          <p v-if="this.indexHouse == '1'">Pour une maison de <span class = "data"> 50 m². </span> Le gain moyen sur la consommation est de <span class = "data">58 % </span> après les travaux.</p>
-          <p v-if="this.indexHouse == '2'" >Pour une maison de <span class = "data"> 100 m². </span> Le gain moyen sur la consommation est de  <span class = "data">51 %</span> après les travaux.</p>
-          <p v-if="this.indexHouse == '3'" >Pour une maison de <span class = "data"> 150 m². </span> Le gain moyen sur la consommation est de <span class = "data">53 %</span> daprès les travaux.</p>
-        </PlusButton>
+        
+        <p v-show="indexHouse == '1'">
+          <PlusButton class="plus3" @open="closePopover(3)" v-model="closePopover3"> <p>Pour une maison de <span class = "data"> 50 m². </span> Le gain moyen sur la consommation est de <span class = "data">58 % </span> après les travaux.</p></PlusButton>
+        </p>
+        <p v-show="indexHouse == '2'">
+          <PlusButton class="plus4" @open="closePopover(4)" v-model="closePopover4"><p>Pour une maison de <span class = "data"> 100 m². </span> Le gain moyen sur la consommation est de <span class = "data">51 % </span> après les travaux.</p></PlusButton>
+        </p>
+        <p v-show="indexHouse == '3'">
+          <PlusButton class="plus5" @open="closePopover(5)" v-model="closePopover5"><p> Pour une maison de <span class = "data"> 150 m². </span> Le gain moyen sur la consommation est de <span class = "data">53 % </span> après les travaux.</p></PlusButton>
+        </p>
+       
       </li>
     </ul>
     <SimpleButton
@@ -90,6 +95,8 @@ export default {
     closePopover1: false,
     closePopover2: false,
     closePopover3:false,
+    closePopover4:false,
+    closePopover5:false,
     fakeName:'moreau'
   }),
   methods: {
@@ -102,16 +109,36 @@ export default {
           this.closePopover1 = false;
           this.closePopover2 = true;
           this.closePopover3 = true;
+          this.closePopover4 = true;
+          this.closePopover5 = true;
           break;
         case 2:
           this.closePopover2 = false;
           this.closePopover1 = true;
           this.closePopover3 = true;
+          this.closePopover4 = true;
+          this.closePopover5 = true;
           break;
         case 3:
           this.closePopover2 = true;
           this.closePopover1 = true;
           this.closePopover3 = false;
+          this.closePopover4 = true;
+          this.closePopover5 = true;
+          break;
+        case 4:
+          this.closePopover2 = true;
+          this.closePopover1 = true;
+          this.closePopover3 = true;
+          this.closePopover4 = false;
+          this.closePopover5 = true;
+          break;
+        case 5:
+          this.closePopover2 = true;
+          this.closePopover1 = true;
+          this.closePopover3 = true;
+          this.closePopover4 = true;
+          this.closePopover5 = false;
           break;
       }
     }
@@ -178,7 +205,17 @@ ul li .plus2 {
 ul li .plus3 {
   position: relative;
   top: 75vh;
-  left: 55vw;
+  left: 37vw;
+}
+ul li .plus4 {
+  position: relative;
+  top: 72vh;
+  left: 41vw;
+}
+ul li .plus5 {
+  position: relative;
+  top: 75vh;
+  left: 50vw;
 }
 
 .bounce,
