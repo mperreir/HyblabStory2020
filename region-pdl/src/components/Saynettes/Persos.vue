@@ -36,8 +36,8 @@ export default {
   },
   methods: {
     onNext(characterName) {
-      console.log(characterName + ' a été choisi(e) !');
       this.$store.dispatch("nextScene", { sceneId: null});
+      this.$store.dispatch("setCharacter", {name: characterName});
     }
   }
 };

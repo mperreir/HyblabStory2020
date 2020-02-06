@@ -36,8 +36,6 @@ export default {
 .text {
     margin-top: 6%;
     margin-bottom: 6%;
-
-    font-family: 'Avant Garde Bold';
     font-size: 2vh;
     user-select: none;
 }
