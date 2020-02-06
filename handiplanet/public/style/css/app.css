@@ -129,7 +129,7 @@
 #app-view #app-overlay #overlay-buttons {
   z-index: 10000;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 5vw;
   transform: translateX(-50%) translateY(-50%);
   display: flex;
@@ -268,6 +268,14 @@
 }
 #app-view:hover > button {
   box-shadow: 50px 50px 0 200px rgba(203, 86, 62, 0.3), 0 0 0 10px rgba(203, 85, 62, 0.363);
+}
+
+#clipper {
+  position: absolute;
+  top: 0;
+  height: 80vh;
+  width: 80vw;
+  margin: 0 10vh;
 }
 
 /*# sourceMappingURL=app.css.map */

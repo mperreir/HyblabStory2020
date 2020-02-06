@@ -17,10 +17,10 @@ class View1 extends View {
         // Création de la prochaine view
         const nextView = new View2(tempDiv);
         await nextView.load();
-        this.view.style.transition = 'transform 1s';
-        tempDiv.style.transition = 'transform 1s';
-        this.view.style.transform = 'translateY(-100%)';
-        tempDiv.style.transform = 'translateY(-100%)';
+        this.view.style.animation = 'scrollTransitionInvert 1s forwards';
+        this.view.style.webkitAnimation = 'scrollTransitionInvert 1s forwards';
+        tempDiv.style.animation = 'scrollTransition 1s forwards';
+        tempDiv.style.webkitAnimation = 'scrollTransition 1s forwards';
         window.scrollBarController.setPosition(1);
         setTimeout(() => {
             tempDiv.replaceWith = nextView.view;
