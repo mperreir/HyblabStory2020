@@ -3,6 +3,7 @@ let initSlide9 = function(){
   d3.select('#next10').on('click', function(){
     console.log('10');
     moveDown();
+    moveRight();
     initSlide10();
   });
 }
