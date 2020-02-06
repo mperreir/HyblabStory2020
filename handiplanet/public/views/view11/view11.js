@@ -22,6 +22,7 @@ class View11 extends View {
         tempDiv.style.transition = 'transform 1s';
         this.view.style.transform = 'translateY(-100%)';
         tempDiv.style.transform = 'translateY(-100%)';
+        window.scrollBarController.setPosition(5);
         setTimeout(() => {
             tempDiv.replaceWith = nextView.view;
             this.view.parentNode.removeChild(this.view);

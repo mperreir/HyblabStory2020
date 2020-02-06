@@ -16,7 +16,6 @@ class View10 extends View {
   }
 
   async switchToContext() {
-    scrollPosition(1);
     // Construction d'une div temporaire positionnée en dehors
     // de l'écran pour faire entrer la prochaine view
     const tempDiv = document.createElement('div');
@@ -36,6 +35,7 @@ class View10 extends View {
     this.view.style.webkitAnimation = 'scrollTransition 1s forwards';
     tempDiv.style.animation = 'scrollTransition 1s forwards';
     tempDiv.style.webkitAnimation = 'scrollTransition 1s forwards';
+    window.scrollBarController.setPosition(4);
     setTimeout(() => {
       document.getElementById('view-container').innerHTML = '';
       document.getElementById('view-container').appendChild(window.contextView.view);

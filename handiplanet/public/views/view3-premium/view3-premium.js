@@ -19,6 +19,7 @@ class View3Premium extends View {
         tempDiv.style.transition = 'transform 1s';
         this.view.style.transform = 'translateY(-100%)';
         tempDiv.style.transform = 'translateY(-100%)';
+        window.scrollBarController.setPosition(1);
         setTimeout(() => {
             tempDiv.replaceWith = nextView.view;
             this.view.parentNode.removeChild(this.view);

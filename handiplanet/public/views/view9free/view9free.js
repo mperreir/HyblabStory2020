@@ -38,6 +38,7 @@ class View9Free extends View {
     this.view.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
     tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
     tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
+    window.scrollBarController.setPosition(4);
     setTimeout(() => {
       document.getElementById('view-container').innerHTML = '';
       document.getElementById('view-container').appendChild(nextView.view);

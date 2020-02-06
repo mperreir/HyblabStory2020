@@ -18,6 +18,7 @@ class View3Free extends View {
         tempDiv.style.transition = 'transform 1s';
         this.view.style.transform = 'translateX(-100%)';
         tempDiv.style.transform = 'translateX(-100%)';
+        window.scrollBarController.setPosition(1);
         setTimeout(() => {
             tempDiv.replaceWith = nextView.view;
             this.view.parentNode.removeChild(this.view);

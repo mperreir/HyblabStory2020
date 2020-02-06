@@ -40,6 +40,7 @@ class View9Premium extends View {
     this.view.style.webkitAnimation = 'scrollTransition 1s forwards';
     tempDiv.style.animation = 'scrollTransition 1s forwards';
     tempDiv.style.webkitAnimation = 'scrollTransition 1s forwards';
+    window.scrollBarController.setPosition(4);
     setTimeout(() => {
       document.getElementById('view-container').innerHTML = '';
       document.getElementById('view-container').appendChild(nextView.view);

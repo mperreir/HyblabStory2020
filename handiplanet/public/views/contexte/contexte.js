@@ -74,7 +74,6 @@ class Contexte extends View {
 
     
     async switchToContact(){
-        scrollPosition(1);
         // Construction d'une div temporaire positionnée en dehors
         // de l'écran pour faire entrer la prochaine view
         const tempDiv = document.createElement('div');
@@ -89,6 +88,7 @@ class Contexte extends View {
         this.view.style.webkitAnimation = 'scrollTransition 1s forwards';
         tempDiv.style.animation = 'scrollTransition 1s forwards';
         tempDiv.style.webkitAnimation = 'scrollTransition 1s forwards';
+        window.scrollBarController.setPosition(3);
         setTimeout(() => {
             document.getElementById('view-container').innerHTML = '';
             document.getElementById('view-container').appendChild(nextView.view);
@@ -97,7 +97,6 @@ class Contexte extends View {
         }, 1000);
     }
     async switchToReseau(){
-        scrollPosition(1);
         // Construction d'une div temporaire positionnée en dehors
         // de l'écran pour faire entrer la prochaine view
         const tempDiv = document.createElement('div');
@@ -112,6 +111,7 @@ class Contexte extends View {
         this.view.style.webkitAnimation = 'scrollTransition 1s forwards';
         tempDiv.style.animation = 'scrollTransition 1s forwards';
         tempDiv.style.webkitAnimation = 'scrollTransition 1s forwards';
+        window.scrollBarController.setPosition(3);
         setTimeout(() => {
             document.getElementById('view-container').innerHTML = '';
             document.getElementById('view-container').appendChild(nextView.view);
@@ -120,7 +120,6 @@ class Contexte extends View {
         }, 1000);
     }
     async switchToInfo(){
-        scrollPosition(1);
         // Construction d'une div temporaire positionnée en dehors
         // de l'écran pour faire entrer la prochaine view
         const tempDiv = document.createElement('div');
@@ -135,6 +134,7 @@ class Contexte extends View {
         this.view.style.webkitAnimation = 'scrollTransition 1s forwards';
         tempDiv.style.animation = 'scrollTransition 1s forwards';
         tempDiv.style.webkitAnimation = 'scrollTransition 1s forwards';
+        window.scrollBarController.setPosition(5);
         setTimeout(() => {
             document.getElementById('view-container').innerHTML = '';
             document.getElementById('view-container').appendChild(nextView.view);
