@@ -125,13 +125,24 @@
     box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
   }
 }
-#app-view #app-overlay #overlay-buttons #text-size {
-  z-index: 1000;
+#app-view #app-overlay #overlay-buttons {
+  z-index: 10000;
+  position: absolute;
+  top: 60%;
+  left: 5vw;
+  transform: translateX(-50%) translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: 80%;
+}
+#app-view #app-overlay #overlay-buttons #text-size {
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 2vh;
 }
 #app-view #app-overlay #overlay-buttons #text-size .text {
   margin-bottom: 4vh;
@@ -140,7 +151,7 @@
   width: 8vh;
   border-radius: calc(8vh / 2);
   color: white;
-  z-index: 1000;
+  z-index: 10000;
   transition: box-shadow 0.5s;
   box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
 }
@@ -178,56 +189,64 @@
 #app-view #app-overlay #overlay-buttons #text-size #large {
   font-size: large;
 }
-#app-view #app-overlay .switch {
-  position: absolute;
+#app-view #app-overlay #overlay-buttons .switch {
+  z-index: 10000;
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 6vh;
 }
-#app-view #app-overlay .switch button {
+#app-view #app-overlay #overlay-buttons .switch button {
   transition: box-shadow 2s;
   width: 8vh;
   height: 8vh;
   background-color: #5a8d8c;
-  z-index: 100000;
+  z-index: 10000;
   border-radius: calc(10vh / 2);
   transition: box-shadow 0.2s;
   box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3), 0 0 0 0px rgba(203, 85, 62, 0.363);
-  padding: 1vh;
+  padding: 1.5vh;
   transition: box-shadow 0.5s;
   box-shadow: 0 0 0 0px rgba(203, 86, 62, 0.3);
 }
-#app-view #app-overlay .switch button:hover {
+#app-view #app-overlay #overlay-buttons .switch button:hover {
   box-shadow: 0 0 0 10px rgba(203, 86, 62, 0.3);
 }
-#app-view #app-overlay .switch button #overlay-contrast-icon {
+#app-view #app-overlay #overlay-buttons .switch button #overlay-contrast-icon {
   height: 100%;
   width: 100%;
   filter: brightness(100);
 }
-#app-view #app-overlay #son button img {
-  z-index: 1000;
-  position: absolute;
-  height: 7vh;
-  width: 7vh;
-  left: 5vh;
-  bottom: 4vh;
+#app-view #app-overlay #overlay-buttons #son {
+  z-index: 10000;
+  padding: 0;
+  margin: 0;
+}
+#app-view #app-overlay #overlay-buttons #son button {
+  z-index: 10000;
+  padding: 0;
+  margin: 0;
+}
+#app-view #app-overlay #overlay-buttons #son button img {
+  height: 8vh;
+  width: 8vh;
   /*&:hover{
     box-shadow: 0 0 0 5px rgba(203, 86, 62, 0.3);
   }*/
 }
-#app-view #app-overlay #son .mute {
+#app-view #app-overlay #overlay-buttons #son .mute {
+  z-index: 10000;
   display: none;
 }
 #app-view #overlay-footer {
-  z-index: 9999;
+  z-index: 9000;
   position: absolute;
   width: 100%;
   bottom: 0;
   left: 0;
   height: 20%;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: #ffffff;
 }
 #app-view #overlay-footer::after {
   content: "";
