@@ -6,7 +6,9 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     currentSceneIndex: 0,
-    nbScenes: 8
+
+    nbScenes: 8,
+    character: ""
   },
   mutations: {
       nextScene(state, sceneId) {
