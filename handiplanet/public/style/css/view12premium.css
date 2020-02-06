@@ -3,7 +3,7 @@
  * Created Date: Wednesday February 5th 2020
  * Author: Pierre Le Guen
  * -----
- * Last Modified: Wednesday, 5th February 2020 10:21:50 pm
+ * Last Modified: Thursday, 6th February 2020 1:53:57 pm
  * Modified By: Pierre Le Guen
  * -----
  * Copyright (c) 2020 Pierre Le Guen
@@ -13,6 +13,13 @@
   height: 100vh;
   position: relative;
   background-color: rgba(20, 155, 96, 0.2);
+}
+#view12premium #fond-payant {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 70%;
+  height: 70%;
 }
 #view12premium b {
   font-weight: bold;
@@ -25,11 +32,11 @@
 }
 #view12premium #arobase {
   left: 25%;
-  top: 23%;
+  top: 27%;
 }
 #view12premium #youtube {
   left: 45%;
-  top: 10%;
+  top: 25%;
 }
 #view12premium #clock {
   left: 65%;
@@ -66,7 +73,8 @@
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-#view12premium footer #view-12-next-button {
+#view12premium footer #view-12p-next-button {
+  z-index: 10000;
   position: absolute;
   right: 0px;
   background-color: #CB563E;

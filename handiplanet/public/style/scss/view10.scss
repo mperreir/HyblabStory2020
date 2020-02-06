@@ -1,33 +1,53 @@
+/*
+ * Project: handigo
+ * Created Date: Wednesday February 5th 2020
+ * Author: Pierre Le Guen
+ * -----
+ * Last Modified: Thursday, 6th February 2020 5:09:26 pm
+ * Modified By: Pierre Le Guen
+ * -----
+ * Copyright (c) 2020 Pierre Le Guen
+ */
+
 #view10 {
-    display: flex;
-    flex-direction: row;
-    position: relative;
     height: 100vh;
     width: 100vw;
+    background-color: #ffffff;
     
-    #view-10-graph_container {
+    #view10-middle{
+        height: 80vh;
+        width: 80vw;
+        margin: 0 10vw;
+        display: flex;
+        flex-direction: row;
         position: relative;
-        margin: 0% 0% 0 10%;
-        #view-10-graph {
-            height: 100%;
-            width: 100%;
-            min-width: 100%;
-        }
-        #view-10-graph_title {
+
+        #view-10-graph_container {
             position: absolute;
-            right: 0;
-            bottom: 55%;
-            font-size: 30px;
-            max-width: 20%;
-            margin: 0;
+            bottom: 5%;
+            height: 70%;
+            width: 60%;
+            #view-10-graph {
+                height: 100%;
+                width: 100%;
+                min-width: 100%;
+            }
+            #view-10-graph_title {
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 30px;
+                max-width: 20%;
+                margin: 0;
+            }
         }
-    }
-    
-    #view-10-data {
-        position: absolute;
-        bottom: 30%;
-        right: 10%;
-        width: 30%;
+        
+        #view-10-data {
+            position: absolute;
+            bottom: 30%;
+            right: 10%;
+            width: 30%;
+        }
     }
     
     footer {
@@ -37,6 +57,7 @@
         margin-top: auto;
         
         #view-10-next-button {
+            z-index: 10000;
             position: absolute;
             right: 0px;
             background-color: #CB563E;

@@ -19,17 +19,20 @@ Copyright - 2020 Christophe SONNEVILLE
     <link rel="stylesheet" href="./style/css/view4.css">
     <link rel="stylesheet" href="./style/css/view5.css">
     <link rel="stylesheet" href="./style/css/view7.css">
+    <link rel="stylesheet" href="./style/css/view6-premium.css">
     <link rel="stylesheet" href="./style/css/view8.css">
+    <link rel="stylesheet" href="./style/css/view6-free.css">
     <link rel="stylesheet" href="./style/css/view9free.css">
     <link rel="stylesheet" href="./style/css/view9premium.css">
     <link rel="stylesheet" href="./style/css/view10.css">
+    <link rel="stylesheet" href="./style/css/view13.css">
     <link rel="stylesheet" href="./style/css/view12premium.css">
     <link rel="stylesheet" href="./style/css/view12gratuit.css">
     <link rel="stylesheet" href="./style/css/textChange.css">
     <link rel="stylesheet" href="./style/css/view11.css">
+    <link rel="stylesheet" href="./style/css/comparatif.css">
     <link rel="stylesheet" href="./style/css/viewremerciements.css">
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
     <script defer src="./js/template.js"></script>
     <script defer src="./js/scrollBar.js"></script>
     <script defer src="./js/view.js"></script>
@@ -40,15 +43,19 @@ Copyright - 2020 Christophe SONNEVILLE
     <script defer src="./views/view3-premium/view3-premium.js"></script>
     <script defer src="./views/view4/view4.js"></script>
     <script defer src="./views/view5/view5.js"></script>
+    <script defer src="./views/view6-free/view6-free.js"></script>
+    <script defer src="./views/view6-premium/view6-premium.js"></script>
     <script defer src="./views/view8/view8.js"></script>
     <script defer src="./views/view7/view7.js"></script>
     <script defer src="./views/view9free/view9free.js"></script>
     <script defer src="./views/view9premium/view9premium.js"></script>
     <script defer src="./views/view10/view10.js"></script>
+    <script defer src="./views/view13/view13.js"></script>
     <script defer src="./views/view12premium/view12premium.js"></script>
     <script defer src="./views/view12gratuit/view12gratuit.js"></script>
     <script defer src="./views/view11/view11.js"></script>
     <script defer src="./views/viewremerciements/viewremerciements.js"></script>
+    <script defer src="./views/comparatif/comparatif.js"></script>
     <script defer src="./js/index.js"></script>
     
     <title>HandiGo</title>
@@ -85,28 +92,29 @@ Copyright - 2020 Christophe SONNEVILLE
           <div class="point" data-place=4></div>
         </div>
 
-        <div id="text-size">
-          <button class="text selected" id="small">Aa</button>
-          <button class="text" id="medium">Aa</button>
-          <button class="text" id="large">Aa</button>
+        <div id="overlay-buttons">
+          <div id="text-size">
+            <button class="text selected" id="small">Aa</button>
+            <button class="text" id="medium">Aa</button>
+            <button class="text" id="large">Aa</button>
+          </div>
+          <div class="switch" id="switch">
+            <button id="tog">
+              <img id="overlay-contrast-icon" src="assets/contrast.svg">
+            </button>      
+          </div>
+          <div id="son">
+            <button id="onB" class="on"><img src="./assets/Son.svg"></button>
+            <button id="muteB" class="mute"><img src="./assets/SonMute.svg"></button>
+           </div>
         </div>
-
-        <div id = "son">
-         <button id="onB" class="on"><img src="./assets/Son.svg"></button>
-         <button id="muteB" class="mute"><img src="./assets/SonMute.svg"></button>
-        </div>
-
-        <!-- <span class="slider round"></span> -->
-        <div class="switch" id="switch">
-          <button id="tog"></button>
-          <p>Changer contraste</p>          
-        </div>
-        
+        <footer id="overlay-footer">
+        </footer>
 
       </div>
 
 
-
+      <div id="clipper"></div>
       <div id="view-container">
         
       </div>

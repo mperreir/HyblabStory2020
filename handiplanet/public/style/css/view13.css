@@ -1,0 +1,133 @@
+/*
+ * Project: handigo
+ * Created Date: Thursday February 6th 2020
+ * Author: Pierre Le Guen
+ * -----
+ * Last Modified: Thursday, 6th February 2020 4:43:10 pm
+ * Modified By: Pierre Le Guen
+ * -----
+ * Copyright (c) 2020 Pierre Le Guen
+ */
+#view13 {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+}
+#view13 #view13-graph {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+}
+#view13 #view-13-middle {
+  width: 80vw;
+  height: 100vh;
+  margin: 0px 10vw;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: flex-end;
+}
+#view13 #view-13-middle img {
+  position: absolute;
+  bottom: -2px;
+}
+#view13 #view-13-middle #view-13-chart-container {
+  height: 80%;
+  flex: 1;
+  margin: 0 5vw;
+  display: flex;
+  flex-direction: row;
+}
+#view13 #view-13-middle #view-13-chart-container #view-13-flex-container {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#view13 #view-13-middle #view-13-rond-vert {
+  z-index: 7;
+  position: absolute;
+  margin: 0 5vw;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 30vw;
+  background-color: #5A8D8C;
+  align-items: center;
+}
+#view13 #view-13-middle #view-13-rond-vert #view-13-rond-blanc {
+  z-index: 0;
+  position: absolute;
+  width: 22vw;
+  height: 22vw;
+  border-radius: 24vw;
+  background-color: white;
+  align-items: center;
+  top: 4vw;
+  left: 4vw;
+}
+#view13 #view-13-middle #view-13-rond-vert #view-13-rond-rouge {
+  z-index: 0;
+  position: absolute;
+  width: 28vw;
+  height: 28vw;
+  border-radius: 28vw;
+  background-color: #cb563e;
+  align-items: center;
+  top: 1vw;
+  left: 1vw;
+}
+#view13 #view-13-middle article {
+  position: absolute;
+  left: 50%;
+  width: 40%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+#view13 #view-13-middle article p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 29px;
+  color: #426262;
+}
+#view13 #view-13-middle article span {
+  color: #cb563e;
+}
+#view13 #view-13-middle article span em {
+  font-size: 50px;
+  font-weight: bold;
+}
+#view13 #view-13-middle article #view-13-source {
+  font-size: 10px;
+  line-height: 0px !important;
+}
+#view13 footer {
+  width: 100vw;
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+}
+#view13 footer #view-13-next-button {
+  position: absolute;
+  font-family: Nunito;
+  right: 0px;
+  background-color: #CB563E;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 34px;
+  color: #ffffff;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 10px 30px;
+  padding-right: 50px;
+  margin: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#view13 footer #view-13-next-button em {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=view13.css.map */

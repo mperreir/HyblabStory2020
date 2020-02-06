@@ -88,11 +88,13 @@
   color: #cb563e;
 }
 #view3-free footer {
+  z-index: 10000;
   width: 100vw;
   height: 20vh;
   position: relative;
 }
 #view3-free footer #view-3-free-next-button {
+  z-index: 10000;
   position: absolute;
   right: 0px;
   background-color: #CB563E;

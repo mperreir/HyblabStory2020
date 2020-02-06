@@ -1,0 +1,156 @@
+/*
+ * File Created: 2020-02-05 20:31
+ * Author: Alban LECUIVRE
+ * Copyright - 2020 Alban LECUIVRE
+ */
+#comparatif {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(203, 86, 62, 0.15);
+}
+#comparatif h1 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 41px;
+  text-transform: uppercase;
+  margin: 0;
+}
+#comparatif #comparatif-middle {
+  width: 80vw;
+  height: 80vh;
+  margin: 0px 10vw;
+  border-bottom: 2px solid #5A8D8C;
+  position: relative;
+  background-image: url(../../assets/comparatif/comparatif-wave.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: bottom -2px center;
+}
+#comparatif #comparatif-middle img {
+  position: absolute;
+  bottom: -2px;
+}
+#comparatif #comparatif-middle ul {
+  margin: 0;
+}
+#comparatif #comparatif-middle #comparatif-red-ring {
+  position: absolute;
+  transition: transform ease-in-out;
+  top: 50%;
+  right: 10%;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 100%;
+  border: 10px solid #CB563E;
+}
+#comparatif #comparatif-middle #comparatif-green-ring {
+  position: absolute;
+  transition: transform ease-in-out;
+  top: 30%;
+  left: 40%;
+  width: 8vh;
+  height: 8vh;
+  border-radius: 100%;
+  border: 5px solid #71C0A0;
+}
+#comparatif #comparatif-middle #comparatif-white-ring {
+  position: absolute;
+  transition: transform ease-in-out;
+  bottom: 50%;
+  left: 10%;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 100%;
+  border: 5px solid #ffffff;
+}
+#comparatif #comparatif-middle #comparatif-green-tiny-dot {
+  position: absolute;
+  transition: transform ease-in-out;
+  bottom: 50%;
+  left: 45%;
+  width: 2vh;
+  height: 2vh;
+  border-radius: 100%;
+  background-color: #5A8D8C;
+}
+#comparatif #comparatif-middle #comparatif-content {
+  z-index: 10;
+  position: absolute;
+  bottom: 0px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+}
+#comparatif #comparatif-middle #comparatif-content .comparatif-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 10px;
+}
+#comparatif #comparatif-middle #comparatif-content #comparatif-free-column h1 {
+  color: #CB563E;
+}
+#comparatif #comparatif-middle #comparatif-content #comparatif-free-column ul {
+  background-color: #CB563E;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 10px 10px 10px 40px;
+}
+#comparatif #comparatif-middle #comparatif-content #comparatif-premium-column h1 {
+  color: #5A8D8C;
+}
+#comparatif #comparatif-middle #comparatif-content #comparatif-premium-column ul {
+  background-color: #5A8D8C;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 10px 10px 10px 40px;
+}
+#comparatif #comparatif-middle #comparatif-content li {
+  list-style-image: url(../../assets/comparatif/comparatif-bullet.svg);
+}
+#comparatif #comparatif-middle #comparatif-content li p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 29px;
+  color: #ffffff;
+}
+#comparatif #comparatif-middle #comparatif-content li p span {
+  font-weight: bold;
+}
+#comparatif footer {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+}
+#comparatif footer #comparatif-next-button {
+  z-index: 10000;
+  position: absolute;
+  right: 0px;
+  background-color: #CB563E;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 34px;
+  color: #ffffff;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 10px 30px;
+  padding-right: 50px;
+  margin: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#comparatif footer #comparatif-next-button span {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=comparatif.css.map */

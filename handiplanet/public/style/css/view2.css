@@ -9,10 +9,9 @@
 }
 #second-view #decor-view-2 {
   height: 80vh;
-  width: 90vw;
-  position: absolute;
-  left: 5vw;
-  bottom: 10vh;
+  width: 80vw;
+  position: relative;
+  margin: 0 10vw;
 }
 #second-view #decor-view-2 p {
   font-family: Nunito;
@@ -134,7 +133,7 @@
 #second-view #decor-view-2 #ecran-container {
   position: absolute;
   left: 20%;
-  bottom: 0%;
+  bottom: -5px;
   width: 40%;
   max-height: 50%;
 }

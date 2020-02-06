@@ -98,11 +98,13 @@
   }
 
   footer {
+    z-index: 10000;
     width: 100vw;
     height: 20vh;
     position: relative;
 
     #view-3-free-next-button {
+      z-index: 10000;
       position: absolute;
       right: 0px;
       background-color: #CB563E;
