@@ -1,8 +1,5 @@
 <template>
   <div>
-    <!-- <p class="text size">
-      {{ 50 * value }}m²
-    </p> -->
     <div class="slider">
       <Moins
         class="button"
@@ -135,8 +132,7 @@ input[type="range"]::-moz-range-thumb {
   width: 2.5vh;
   border-radius: 50%;
   cursor: pointer;
-  background-image: radial-gradient(#f31512 50%, #f99a04 75%);
-  /* box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5); */
+  background: #fff;
   border: none;
 }
 

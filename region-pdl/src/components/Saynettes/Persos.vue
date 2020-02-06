@@ -1,5 +1,6 @@
 <template>
   <div class="saynette">
+    <Boat class="boat"/>
     <Background class="svg" />
     <TextTitle :y="22" :style="{textAlign: 'center'}" >Qui voulez-vous suivre aujourd'hui ?</TextTitle>
     <SimpleText :y="30" :style="{textAlign: 'center'}" >
@@ -8,13 +9,10 @@
       Ils sont très attentifs à leur impact sur l'environnement. Par souci économique <br> et écologique, ils pratiquent le covoiturage pour 
       se rendre sur leur lieu de travail.
     </SimpleText>
-    <FakePerso class="perso p1"/>
+    <PersoFemme class="perso p1"/>
     <SimpleButton text="Mme Dubois" @click.native="() => { onNext('dubois')}" :width="20" :y="90" :x="20"/>
-    <FakePerso class="perso p2"/>
+    <PersoHomme class="perso p2"/>
     <SimpleButton text="M. Moreau" @click.native="() => { onNext('moreau')}" :width="20" :y="90" :x="60"/>
-
-  
-    <FakePerso class="boat"/>
   </div>
 </template>
 
@@ -24,6 +22,9 @@ import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
 import FakePerso from "@/assets/Persos/PersoFichier 1.svg";
+import PersoHomme from "@/assets/Persos/monsieur.svg";
+import PersoFemme from "@/assets/Persos/madame.svg";
+import Boat from "@/assets/Persos/bateau jauneFichier 4.svg";
 
 export default {
   name: "Persos",
@@ -33,6 +34,9 @@ export default {
     SimpleText,
     SimpleButton,
     FakePerso,
+    PersoHomme,
+    PersoFemme,
+    Boat,
   },
   methods: {
     onNext(characterName) {
@@ -47,34 +51,36 @@ export default {
 
 .perso {
   position: absolute;
-  width: 12%;
+
 }
 
 .p1 {
   left: 24%;
-  top: 45%;
+  top: 50%;
+  width: 8%;
 }
 
 .p2 {
   left: 64%;
-  top: 45%;
+  top: 50%;
+  width: 11%;
 }
 
 .boat {
   position: absolute;
-  width: 5%;
-  left: 15%;
-  top: 62%;
-  border: solid 1px red;
-  animation: 1s linear infinite alternate float;
+  width: 8%;
+  left: 11%;
+  top: 66%;
+  animation: 25s linear infinite alternate float;
+  z-index: 0;
 }
 
 @keyframes float{
   from {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
   to {
-    transform: translateY(-5%);
+    transform: translateX(350%);
   }
 }
 

@@ -1,6 +1,13 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
+    <SimpleText :y="30" :style="{textAlign: 'center'}">
+    <p v-if="$store.state.character === 'dubois'"> Il y a peu, Mme Dubois a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison. 
+    <br>Cette  rénovation rendue possible grâce aux aides de la Région, a permis à Mme Dubois de faire des économies d’énergie et de participer à la transition écologique de la région.</p>
+     <p v-if="$store.state.character === 'moreau'">Il y a peu, M. Moreau a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison. <br>
+     Cette  rénovation rendue possible grâce aux aides de la Région, a permis à M. Moreau de faire des économies d’énergie et de participer à la transition écologique de la région.</p>
+     
+    </SimpleText>
     <transition name="bounce">
       <LittleHouse v-show="indexHouse == 1" class="little" />
     </transition>
@@ -21,19 +28,40 @@
         <p v-show="indexHouse == 3" class="text">{{ 50 * indexHouse }}m²</p>
       </transition>
     </div>
-    <Slider @input="onChange" class="slider"/>
-    <!-- <ul>
+    <Slider @input="onChange" class="slider" />
+    <ul>
       <li>
         <PlusButton class="plus1" @open="closePopover(1)" v-model="closePopover1">
-          <p class="text">1. Ceci est une information sur la transition énergétique</p>
+          <p class="text">En 2018, <span class = "data"> 1077 maisons </span> ont bénéficié de cette aide à l’isolation.</p>
         </PlusButton>
       </li>
       <li>
         <PlusButton class="plus2" @open="closePopover(2)" v-model="closePopover2">
-          <p class="text">2. Ceci est une information sur la transition énergétique</p>
+          <p v-if="$store.state.character === 'moreau'">La maison de M. Moreau  fait <span class = "data"> 50 m². </span> Il a eu le droit à <span class = "data">4000 euros </span> d’aides.</p>
+          <p v-if="$store.state.character === 'dubois'" >La maison de Mme Dubois fait <span class = "data"> 150 m². </span> Elle a eu le droit à <span class = "data">4000 euros</span> d’aides.</p>
         </PlusButton>
       </li>
-    </ul>-->
+      <li>
+        
+        <p v-show="indexHouse == '1'">
+          <PlusButton class="plus3" @open="closePopover(3)" v-model="closePopover3"> <p>Pour une maison de <span class = "data"> 50 m². </span> Le gain moyen sur la consommation est de <span class = "data">58 % </span> après les travaux.</p></PlusButton>
+        </p>
+        <p v-show="indexHouse == '2'">
+          <PlusButton class="plus4" @open="closePopover(4)" v-model="closePopover4"><p>Pour une maison de <span class = "data"> 100 m². </span> Le gain moyen sur la consommation est de <span class = "data">51 % </span> après les travaux.</p></PlusButton>
+        </p>
+        <p v-show="indexHouse == '3'">
+          <PlusButton class="plus5" @open="closePopover(5)" v-model="closePopover5"><p> Pour une maison de <span class = "data"> 150 m². </span> Le gain moyen sur la consommation est de <span class = "data">53 % </span> après les travaux.</p></PlusButton>
+        </p>
+       
+      </li>
+    </ul>
+    <SimpleButton
+      text="Voir la suite"
+      
+      :width="20"
+      :y="90"
+      :x="75"
+    />
   </div>
 </template>
 
@@ -43,6 +71,10 @@ import LittleHouse from "@/assets/House/little-house.svg";
 import MediumHouse from "@/assets/House/medium-house.svg";
 import BigHouse from "@/assets/House/big-house.svg";
 import Slider from "@/components/Slider.vue";
+import TextTitle from "@/components/TextTitle";
+import SimpleText from "@/components/SimpleText";
+import SimpleButton from "@/components/SimpleButton";
+import PlusButton from "@/components/PlusButton"
 
 export default {
   name: "House",
@@ -51,12 +83,21 @@ export default {
     LittleHouse,
     MediumHouse,
     BigHouse,
-    Slider
+    Slider,
+    TextTitle,
+    SimpleText,
+    SimpleButton,
+    PlusButton,
+    
   },
   data: () => ({
     indexHouse: 1,
     closePopover1: false,
-    closePopover2: false
+    closePopover2: false,
+    closePopover3:false,
+    closePopover4:false,
+    closePopover5:false,
+    fakeName:'moreau'
   }),
   methods: {
     onChange(value) {
@@ -67,9 +108,38 @@ export default {
         case 1:
           this.closePopover1 = false;
           this.closePopover2 = true;
+          this.closePopover3 = true;
+          this.closePopover4 = true;
+          this.closePopover5 = true;
+          break;
         case 2:
           this.closePopover2 = false;
           this.closePopover1 = true;
+          this.closePopover3 = true;
+          this.closePopover4 = true;
+          this.closePopover5 = true;
+          break;
+        case 3:
+          this.closePopover2 = true;
+          this.closePopover1 = true;
+          this.closePopover3 = false;
+          this.closePopover4 = true;
+          this.closePopover5 = true;
+          break;
+        case 4:
+          this.closePopover2 = true;
+          this.closePopover1 = true;
+          this.closePopover3 = true;
+          this.closePopover4 = false;
+          this.closePopover5 = true;
+          break;
+        case 5:
+          this.closePopover2 = true;
+          this.closePopover1 = true;
+          this.closePopover3 = true;
+          this.closePopover4 = true;
+          this.closePopover5 = false;
+          break;
       }
     }
   }
@@ -122,23 +192,34 @@ ul li {
 
 ul li .plus1 {
   position: relative;
-  top: 20vh;
-  left: 14vw;
+  top: 60vh;
+  left: 40vw;
 }
 
 ul li .plus2 {
   position: relative;
-  top: 38vh;
+  top: 70vh;
   left: 26vw;
 }
 
 ul li .plus3 {
   position: relative;
-  top: 30vh;
-  left: 40vw;
+  top: 75vh;
+  left: 37vw;
+}
+ul li .plus4 {
+  position: relative;
+  top: 72vh;
+  left: 41vw;
+}
+ul li .plus5 {
+  position: relative;
+  top: 75vh;
+  left: 50vw;
 }
 
-.bounce, .bounce-enter-active {
+.bounce,
+.bounce-enter-active {
   animation: bounce-in 0.5s;
 }
 
@@ -185,5 +266,9 @@ ul li .plus3 {
   100% {
     transform: scale(1);
   }
+}
+
+.data {
+  color:red;
 }
 </style>
