@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="app"
-    class="app"
-  >
+  <div id="app" class="app">
     <router-view />
   </div>
 </template>
@@ -14,6 +11,7 @@ html {
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 html,
@@ -61,21 +59,12 @@ body,
 
 /* --- Police des textes --- */
 @font-face {
-  font-family: "Avant Garde";
-  src: url("./fonts/AvantGarde-Demi.otf");
-}
-
-@font-face {
-  font-family: "Avant Garde Bold";
-  src: url("./fonts/AvantGarde-Bold.otf");
+  font-family: "Titillium Web";
+  src: url("./fonts/TitilliumWeb-Regular.ttf");
 }
 
 .text {
-  font-family: "Avant Garde";
-}
-
-.text-bold {
-  font-family: "Avant Garde Bold";
+  font-family: "Titillium Web";
 }
 
 /* --- Couleurs du nuancier --- */
