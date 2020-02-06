@@ -59,8 +59,4 @@ export default {
     transform: translateY(-5%);
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 90ab1f0eb8972c3024a5fce69785346e8a1d2c21
 </style>
