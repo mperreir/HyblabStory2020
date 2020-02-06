@@ -4,7 +4,7 @@
 * Copyright - 2020 Christophe SONNEVILLE
 */
 
-view = new View10(document.getElementById('view-container'));
+view = new View1(document.getElementById('view-container'));
 
 window.addEventListener('load', function () {
     function scroll(){

@@ -36,7 +36,7 @@ class Contexte extends View {
                     this.text2.className = "contexte-nonActive";
                     this.text3.className = "contexte-active";
                 }
-                switchToReseau();
+                this.switchToReseau();
             });
             this.info = document.getElementById('contexte-info');
             this.info.addEventListener('click', ()=>{
@@ -94,8 +94,6 @@ class Contexte extends View {
             document.getElementById('view-container').appendChild(nextView.view);
             this.view.style.animation = '';
             this.view.style.webkitAnimation = '';
-            // this.view.remove();
-            // this.view.parentNode.removeChild(this.view);
         }, 1000);
     }
     async switchToReseau(){
@@ -108,15 +106,17 @@ class Contexte extends View {
         tempDiv.style.top = '100%';
 
         // Création de la prochaine view
-        const nextView = new View2(tempDiv);
-        await nextView.load();
-        this.view.style.transition = 'transform 1s';
-        tempDiv.style.transition = 'transform 1s';
-        this.view.style.transform = 'translateY(-100%)';
-        tempDiv.style.transform = 'translateY(-100%)';
+        const nextView = new View5(tempDiv);
+
+        this.view.style.animation = 'scrollTransition 1s forwards';
+        this.view.style.webkitAnimation = 'scrollTransition 1s forwards';
+        tempDiv.style.animation = 'scrollTransition 1s forwards';
+        tempDiv.style.webkitAnimation = 'scrollTransition 1s forwards';
         setTimeout(() => {
-            tempDiv.replaceWith = nextView.view;
-            this.view.parentNode.removeChild(this.view);
+            document.getElementById('view-container').innerHTML = '';
+            document.getElementById('view-container').appendChild(nextView.view);
+            this.view.style.animation = '';
+            this.view.style.webkitAnimation = '';
         }, 1000);
     }
     async switchToInfo(){

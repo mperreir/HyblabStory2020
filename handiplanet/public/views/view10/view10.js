@@ -28,7 +28,6 @@ class View10 extends View {
     if (!window.contextView) {
       window.contextView = new Contexte(tempDiv);
     } else {
-      console.log(window.contextView.view);
       tempDiv.appendChild(window.contextView.view);
     }
     
