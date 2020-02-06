@@ -14,8 +14,4 @@ $(document).ready(function() {
   }, function(){
     $("#menu-dance").css("filter", "brightness(80%)");
   });
-
-  //const menuSection = document.querySelector("#menu-section");
-  //console.log($("#menu-section").position());
-  //bodyScrollLock.disableBodyScroll(menuSection);
 });
