@@ -23,7 +23,7 @@ header {
   top: 0;
   height: 15%;
   width: 100%;
-  background-color: #black;
+  background-color: black;
 }
 
 #header_brand {
@@ -45,7 +45,7 @@ footer {
   top: 80%;
   height: 20%;
   width: 100%;
-  background-color: #black;
+  background-color: black;
 }
 
 #footer_ellipse {
@@ -79,7 +79,7 @@ footer {
   top: 15%;
   width: 20%;
   height: 65%;
-  background-color: #black;
+  background-color: black;
 }
 
 #right {
@@ -88,7 +88,7 @@ footer {
   width: 20%;
   left: 80%;
   height: 65%;
-  background-color: #black;
+  background-color: black;
 }
 
 #buttonContainers {
@@ -108,7 +108,7 @@ footer {
   width: 60%;
   height: 65%;
   left: 20%;
-  background-color: #black;
+  background-color: black;
 }
 
 .slide1 {
