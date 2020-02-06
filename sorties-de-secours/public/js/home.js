@@ -5,16 +5,10 @@ $(document).ready(function() {
     goToByScroll("loading-section");
   });
 
-<<<<<<< HEAD
   $("#button-start").hover(function() {
     $("#img-start").css("opacity", "1");
   },
   function() {
     $("#img-start").css("opacity", "0");
   });
-
-
-
-=======
->>>>>>> sorties-de-secours
 });
