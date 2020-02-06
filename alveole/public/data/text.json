@@ -30,7 +30,7 @@
   "slide3": {
     "theme": "La voix",
     "speech": "L’intégralité du podcast repose sur la voix. Il est fondamental que celle-ci soit en harmonie avec le contenu.",
-    "question": "Pour enregistrer la voix-off, feriez-vous appel à un professionnel ou à un amateur ?",
+    "question": "Pour enregistrer la voix-off, feriez-vous appel à un professionnel ou à un non-professionnel ?",
     "type": "select",
     "choices": {
       "pro": " Alvéole dispose d’un catalogue vocal aux registres très différents. L’agence vous propose un panel de voix afin de sélectionner la plus adaptée à votre demande.",
@@ -40,8 +40,12 @@
   },
   "slide4": {
     "theme": "Le tournage",
-    "speech": "Après la stratégie, la pratique !",
+    "speech": "Sélectionner les deux étapes qui vous semblent nécessaires et validez.",
     "question": "Connaissez-vous les étapes qui composent un tournage ?",
+    "titres":["Installer le matériel",
+              "faire une répétition",
+              "faire des vocalises",
+              "Placer les interviewés"],
     "type": "checkbox",
     "rule": " Cochez (sélectionner)  les trois étapes qui vous semblent indispensables/ nécessaires.",
     "choices": {
