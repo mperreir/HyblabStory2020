@@ -2,18 +2,21 @@
   <div class="saynette">
     <Background class="svg" />
     <TrainSVG class="train" />
+    <BoatSVG class="boat" />
   </div>
 </template>
 
 <script>
 import Background from "@/assets/Borne/background-borne.svg";
 import TrainSVG from "@/assets/Borne/train.svg";
+import BoatSVG from "@/assets/Persos/bateau jauneFichier 4.svg";
 
 export default {
   name: "Borne",
   components: {
     Background,
-    TrainSVG
+    TrainSVG,
+    BoatSVG
   },
   data: () => ({}),
   methods: {}
@@ -42,10 +45,9 @@ export default {
 
 .boat {
   position: absolute;
-  width: 5%;
-  left: 15%;
-  top: 62%;
-  border: solid 1px red;
+  width: 12%;
+  left: 55%;
+  top: 59%;
   animation: 1s linear infinite alternate float;
 }
 
@@ -57,5 +59,4 @@ export default {
     transform: translateY(-5%);
   }
 }
-
 </style>
