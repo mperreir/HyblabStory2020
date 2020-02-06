@@ -1,24 +1,19 @@
+AOS.init();
+
+/* A DESACTIVER POUR DEVELOPPER TRANQUILLEMENT
+(c'est ce qui force la premiere page au refresh)*/
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 // variables
 var $header_top = $('.header-top');
 var $nav = $('nav');
-var iScrollPos = 0;
 
 // toggle menu
 $header_top.find('a').on('click', function() {
   $(this).parent().toggleClass('open-menu');
 });
-
-function noScroll() {
-  //
-}
-
-function disableScroll() {
-  window.addEventListener('scroll', noScroll);
-}
-
-function enableScroll() {
-  window.removeEventListener('scroll', noScroll);
-}
 
 function goToByScroll(id) {
   $('html,body').animate({
@@ -33,3 +28,7 @@ $body.bind('scroll', function() {
         $body.scrollLeft(0);
     }
 });
+
+/* A DESACTIVER POUR DEVELOPPER TRANQUILLEMENT */
+const homeSection = document.querySelector("#home-section");
+bodyScrollLock.disableBodyScroll(homeSection);

@@ -12,9 +12,8 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
-  <!-- CSS v3.0.8 -->
-  <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.0/vendors/scrolloverflow.min.js"></script>
+  <!-- BSL -->
+  <script src="js/bodyScrollLock.js"></script>
 
   <!-- FontAwesome -->
   <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
@@ -25,6 +24,8 @@
   <!-- CUSTOMS -->
   <link rel="stylesheet" href="css/style.css" />
   <script type="text/javascript" src="js/index.js" defer></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- FONTS -->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nimbus-sans-l" type="text/css"/>
@@ -74,14 +75,34 @@
           <li><a href="#contact" class="menuLink">Contact</a></li>
         </ul>
       </div>
-      <img src='img/logo_sorties_de_secours.png' id='home-logo' />
-      <img src='img/arrow_down.png' id='arrow-down' style="cursor: pointer;"/>
+      <div id="logo-wrapper">
+        <img src='img/logo_sorties_de_secours.png' id='home-logo' />
+        <img src='img/logo_experience.png' id='home-experience' />
+      </div>
+      <!-- <div data-aos="fade-up" id="arrow-aos">
+        <img src='img/arrow_down.png' id="arrow-down"/>
+      </div> -->
+      <!-- <div class="scroll-down" id="mouse-aos">
+        <div class="mousey" id="mouse-down">
+          <div class="scroller"></div>
+        </div>
+      </div> -->
+      <div id="start-experience">
+        <img src="img/yellow-brush.png" id="img-start"/>
+        <div id="button-start"><p id="button-start-text">Commencer l'expérience</p></div>
+      </div>
     </section>
     <!-- END HOME -->
 
     <!-- LOADING -->
     <section class="section" id="loading-section">
-      <div id="sound-content">
+      <div data-aos="fade-up"
+          data-aos-delay="50"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center" id="sound-content">
         <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="128" height="128">
           <g>
             <title>Sound Icon</title>
@@ -102,7 +123,14 @@
 
     <!-- PRESENTATION -->
     <section class="section" id="presentation-section">
-      <img src='img/logo_sorties.png' id='presentation-logo' />
+      <div data-aos="fade-up"
+          data-aos-delay="50"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false" id="aos-logo">
+        <img src='img/logo_sorties.png' id='presentation-logo' />
+      </div>
     </section>
     <!-- END PRESENTATION -->
 
