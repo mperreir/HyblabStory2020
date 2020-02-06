@@ -6,6 +6,14 @@
 	color: #255A85;
 }
 
+#slide10-date {
+	width : 4%;
+	height: 4%;
+	position: absolute;
+	top : 2%;
+	right: 2%;
+}
+
 
 #page10 p {
 	z-index: 200;
@@ -98,12 +106,12 @@
 
  #slide10-btnSuivant {
 	position: absolute;
-	width: 4%;
+	width: 3%;
 	height: 5%;
-	left: 60%;
+	left: 61%;
 }
 
- #slide10-btnSuivant:hover {
+ #slide10-suivant:hover {
 	cursor: pointer;
 }
 

@@ -94,6 +94,21 @@ let initSlide4 = function(){
 	    notesSuivantes.style.visibility = "hidden";
 	}
 
+
+	 d3.select('#slide4-suivant').on('mouseover', function(){
+        anime({
+            targets: '#slide4-notesSuivantes, #slide4-btnSuivant',
+            scale: 1.1
+        });
+    });
+
+    d3.select('#slide4-suivant').on('mouseout', function(){
+        anime({
+            targets:  '#slide4-notesSuivantes, #slide4-btnSuivant',            
+            scale: 1
+        });
+    });
+
 	 d3.select('#next6').on('click', function(){
 	    moveDown();
 	    moveLeft();
@@ -108,6 +123,9 @@ let initSlide4 = function(){
     moveRight();
     initSlide8();
   });
+
+
+
 
 }
 
