@@ -1,3 +1,9 @@
+#page13{
+    background-image: url(../img/fond_conclusion.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #next14-img{
     position: absolute;
     width: 4%;
@@ -33,27 +39,18 @@
     }
 }
 
-#img-journaliste13 {
-    position: absolute;
-    width : 13%;
-    height : 40%;
-    top : 58%;
-    left : 1%;
-    z-index: 200;
-}
-
-#trait-dialogueJ13 {
-    position: absolute;
-    width: 1%;
-    height: 20%;
-    left: 15%;
-    top: 64%;
-}
-
 #texte13 {
     position: absolute;
-    width: 60%;
+    width: 80%;
     height: 10%;
     left: 17%;
-    top: 63%;
+    top: 68%;
+}
+
+#videofin{
+    position: absolute;
+    width : 51%;
+    left:23%;
+    top:12%;
+    cursor : pointer;
 }
