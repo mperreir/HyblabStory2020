@@ -246,7 +246,7 @@
   bottom: 0;
   left: 0;
   height: 20%;
-  background-color: #ffffff;
+  background-color: inherit;
 }
 #app-view #overlay-footer::after {
   content: "";
@@ -259,7 +259,6 @@
 }
 #app-view p {
   font-size: 21px;
-  margin-left: 1vw;
   margin-top: 0px;
   margin-bottom: 0px;
   font-family: Nunito;

@@ -1,13 +1,20 @@
 #view10 {
-    display: flex;
-    flex-direction: row;
-    position: relative;
     height: 100vh;
     width: 100vw;
+    background-color: #ffffff;
     
+    #view10-middle{
+        height: 80vh;
+        width: 80vw;
+        margin: 0 10vw;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
     #view-10-graph_container {
         position: relative;
-        margin: 0% 0% 0 10%;
+        width: 50%;
         #view-10-graph {
             height: 100%;
             width: 100%;
