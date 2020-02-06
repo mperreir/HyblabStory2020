@@ -1,11 +1,18 @@
 #loading-section {
-    text-align: center;
+  position: relative;
+  text-align: center;
+  background-color: #1E1E1E;
+}
+
+#sound-content {
+  position: relative;
+  top: 35%;
 }
 
 #sound-icon-wrapper {
-    margin: auto;
-    height: auto;
-    width: 100px;
+  margin: auto;
+  height: auto;
+  width: 100px;
 }
 
 .bar {
@@ -63,5 +70,32 @@
     animation: child-6 0.5s linear alternate infinite;
 }
 .bar:nth-child(8) {
+    animation: child-7 0.85s linear alternate infinite;
+}
+
+.barDance {
+    fill: white;
+    border-radius: 5px;
+}
+
+.barDance:nth-child(2) {
+    animation: child-1 0.8s linear alternate infinite;
+}
+.barDance:nth-child(3) {
+    animation: child-2 0.6s linear alternate infinite;
+}
+.barDance:nth-child(4) {
+    animation: child-3 0.9s linear alternate infinite;
+}
+.barDance:nth-child(5) {
+    animation: child-4 0.65s linear alternate infinite;
+}
+.barDance:nth-child(6) {
+    animation: child-5 0.75s linear alternate infinite;
+}
+.barDance:nth-child(7) {
+    animation: child-6 0.5s linear alternate infinite;
+}
+.barDance:nth-child(8) {
     animation: child-7 0.85s linear alternate infinite;
 }

@@ -1,19 +1,37 @@
+#dance-section {
+	position: relative;
+	background-color: #1E1E1E;
+}
+
 #dance-wrapper {
-	height: 10000px;
-	width: 100%;
+	height: 100vh;
+	z-index: 1;
 }
 
 #img-dancers {
-	width: 100%;
+	width: 5000px;
+	height: 100%;
 	position: absolute;
 	z-index: 1;
 }
 
 #img-dancers-annotations {
-	width: 100%;
+	width: 5000px;
+	height: 100%;
 	position: absolute;
 	z-index: 2;
 	opacity: 0;
 	transition-property: opacity;
   transition-duration: 1s;
+}
+
+#img-dancers-annotations:hover {
+	opacity: 1;
+}
+
+.sound-icon {
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: 2;
 }

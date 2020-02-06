@@ -49,7 +49,7 @@
   margin-bottom: 5px;
   position: relative;
 
-  background: black;
+  background: white;
   border-radius: 3px;
 
   z-index: 1;
@@ -87,7 +87,7 @@
 
 #categories {
   position: absolute;
-  width: 450px;
+  width: 350px;
   top: -50px;
   right: -50px;
   border: 0;

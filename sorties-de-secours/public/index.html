@@ -10,12 +10,11 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
-  <!-- fullPage.js 2.8.0 -->
   <!-- CSS v3.0.8 -->
   <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.0/vendors/scrolloverflow.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.0/jquery.fullPage.min.js"></script>
 
   <!-- FontAwesome -->
   <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
@@ -32,12 +31,17 @@
 
     <!-- home -->
     <link rel="stylesheet" href="css/home.css" />
+    <script type="text/javascript" src="js/home.js"></script>
     <link rel="stylesheet" href="css/hamburger.css" />
-    <link rel="stylesheet" href="css/choice.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <script type="text/javascript" src="js/menu.js"></script>
     <link rel="stylesheet" href="css/sound.css" />
 
     <!-- loading -->
     <link rel="stylesheet" href="css/loading.css" />
+
+    <!-- Presentation -->
+    <link rel="stylesheet" href="css/presentation.css" />
 
     <!-- expo -->
     <link rel="stylesheet" href="css/expo.css">
@@ -54,11 +58,9 @@
 
 </head>
 <body>
-  <!-- FULLPAGE -->
-  <div id="fullpage">
-
+  <div id="container">
     <!-- HOME -->
-    <section class="vertical-scrolling">
+    <section class ="section" id="home-section">
       <div id="hamburger">
         <input type="checkbox" />
         <span></span>
@@ -66,61 +68,79 @@
         <span></span>
         <ul id="categories">
           <li><a href="#expo" class="menuLink">Exposition</a></li>
-          <li><a href="#dance" class="menuLink">Danse</a></li>
           <li><a href="#music" class="menuLink">Musique</a></li>
+          <li><a href="#dance" class="menuLink">Danse</a></li>
           <li><a href="#about" class="menuLink">A propos</a></li>
           <li><a href="#contact" class="menuLink">Contact</a></li>
         </ul>
       </div>
       <img src='img/logo_sorties_de_secours.png' id='home-logo' />
-      <img src='img/logo_experience.png' id='home-logo-experience' />
-      <a href="#presentation"><img src='img/arrow_down.png' id='arrow-down' /></a>
+      <img src='img/arrow_down.png' id='arrow-down' style="cursor: pointer;"/>
     </section>
     <!-- END HOME -->
 
     <!-- LOADING -->
-    <section class="vertical-scrolling" id="loading-section">
+    <section class="section" id="loading-section">
+      <div id="sound-content">
+        <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="128" height="128">
+          <g>
+            <title>Sound Icon</title>
+            <rect class="bar" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
+            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
+            <rect class="bar" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
+            <rect class="bar" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
+            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
+            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
+            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
+          </g>
+        </svg>
 
-      <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="128" height="128">
-        <g>
-          <title>Sound Icon</title>
-          <rect class="bar" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
-          <rect class="bar" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
-          <rect class="bar" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
-          <rect class="bar" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
-          <rect class="bar" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
-          <rect class="bar" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
-          <rect class="bar" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
-        </g>
-      </svg>
-
-      <p id="soundText">Pour profiter au maximum de cette expérience,<br>veuillez augmenter le volume.</p>
+        <p id="soundText">Pour profiter au maximum de cette expérience,<br>veuillez augmenter le volume.</p>
+      </div>
     </section>
     <!-- END LOADING -->
 
     <!-- PRESENTATION -->
-    <section class="vertical-scrolling" id="presentation-section">
-      <h1>Présentation</h1>
+    <section class="section" id="presentation-section">
+      <img src='img/logo_sorties.png' id='presentation-logo' />
     </section>
     <!-- END PRESENTATION -->
 
-    <!-- CHOICE -->
-    <section class="vertical-scrolling" id="choice-section">
+    <!-- MENU -->
+    <section class="section" id="menu-section">
       <div class="expChoice">
-        <h1>Exposition</h1>
+        <img class="img-menu-crayon" src='img/menu_expo_crayon.png'/></a>
+        <img class="img-menu" id="menu-expo" src='img/menu_expo.png'/>
+        <div class="menu-hover" id="hover-expo" onclick="location.href='#expo';" style="cursor: pointer;">
+          <div class="hover-text-wrapper">
+            <h2>Exposition</h2><h2>Muriel Bordier</h2>
+          </div>
+        </div>
       </div>
       <div class="expChoice">
-        <h1>Danse</h1>
+        <img class="img-menu-crayon" src='img/menu_musique_crayon.png'/>
+        <img class="img-menu" id="menu-music" class="menu-img" src='img/menu_musique.jpg'/>
+        <div class="menu-hover" id="hover-music" onclick="location.href='#music';" style="cursor: pointer;">
+          <div class="hover-text-wrapper">
+            <h2>Musique</h2><h2>Baloji</h2>
+          </div>
+        </div>
       </div>
       <div class="expChoice">
-        <h1>Musique</h1>
+        <img class="img-menu-crayon" src='img/menu_dance_crayon.png'/>
+        <img class="img-menu" id="menu-dance" class="menu-img" src='img/menu_dance.jpg'/>
+        <div class="menu-hover" id="hover-dance" onclick="location.href='#dance';" style="cursor: pointer;">
+          <div class="hover-text-wrapper">
+            <h2>Danse</h2><h2>Mauricio Bergile</h2>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- END CHOICE -->
+    <!-- END MENU -->
 
     <!-- EXPO -->
     <section
-      class="vertical-scrolling"
+      class="section"
       id="expo-section">
 
       <!-- v1 -->
@@ -152,12 +172,26 @@
 
     <!-- DANCE -->
     <section
-      class="vertical-scrolling"
+      class="section"
       id="dance-section">
 
       <div id="dance-wrapper">
         <img src='img/dancers.png' id='img-dancers' />
         <img src="img/dancers-annotations.png" id="img-dancers-annotations" />
+      </div>
+      <div class="sound-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="100" height="80">
+          <g>
+            <title>Sound Icon</title>
+            <rect class="barDance" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
+            <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
+            <rect class="barDance" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
+            <rect class="barDance" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
+            <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
+            <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
+            <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
+          </g>
+        </svg>
       </div>
 
     </section>
@@ -165,7 +199,7 @@
 
     <!-- MUSIC WORKSHOP -->
     <section
-            class="vertical-scrolling"
+            class="section"
             id="music-workshop-section">
 
       <div id="music-workshop-konva">
@@ -174,11 +208,11 @@
 
     </section>
     <!-- END MUSIC WORKSHOP -->
-    
+
   </div>
 
   </div>
-  <!-- END FULLPAGE -->
+  <!-- FIN CONTAINER -->
 </body>
 </html>
 
