@@ -7,20 +7,23 @@ let initSlide4 = function(){
     // Affichage du premier texte après 5s
     setTimeout(playDialogues, 5500);
 
-    var btnSuivant = document.querySelector('#btnSuivant');
-     var notesSuivantes = document.querySelector('#notesSuivantes');
+    var btnSuivant = document.querySelector('#slide4-btnSuivant');
+    var notesSuivantes = document.querySelector('#slide4-notesSuivantes');
     // Code pas très propre --> à changer
-	var dialogue1 = document.querySelector('#container-dialogueJ');
-    var dialogue2 = document.querySelector('#dialogue2');
-    var dialogue3 = document.querySelector('#dialogue3');
-    var dialogue4 = document.querySelector('#dialogue4');
-    var dialogue5 = document.querySelector('#dialogue5');
-    var architecte = document.querySelector('#img-architecte');
-    var journaliste = document.querySelector('#img-journaliste');
-    var trait = document.querySelector('#trait-dialogueJ');
+	var dialogue1 = document.querySelector('#slide4-container-dialogueJ');
+    var dialogue2 = document.querySelector('#slide4-dialogue2');
+    var dialogue3 = document.querySelector('#slide4-dialogue3');
+    var dialogue4 = document.querySelector('#slide4-dialogue4');
+    var dialogue5 = document.querySelector('#slide4-dialogue5');
+    var architecte = document.querySelector('#slide4-img-architecte');
+    var journaliste = document.querySelector('#slide4-img-journaliste');
+    var trait = document.querySelector('#slide4-trait-dialogueJ');
+    var imgHdv1 = document.querySelector('#slide4-img-photo1');
+    var imgHdv2 = document.querySelector('#slide4-img-photo2');
+	
 
    	function playDialogues()
-	{
+	{ 
 		son.pause();
 		// Début du dialogue
 	    dialogue1.style.visibility = "visible";
@@ -31,20 +34,19 @@ let initSlide4 = function(){
 	    journaliste.style.visibility = "visible";
 	    trait.style.visibility = "visible";
 
-	   d3.select('#btnSuivant').on('click', function(){
+	   d3.select('#slide4-suivant').on('click', function(){
 
 	    	if (dialogue1.style.visibility != "hidden") {
 	    		dialogue1.style.visibility = "hidden";
 	    		dialogue2.style.visibility = "visible";
 	    		trait.style.visibility = "hidden";
-	    		trait = document.querySelector('#trait-dialogueA');
+	    		trait = document.querySelector('#slide4-trait-dialogueA');
 	    		trait.style.visibility = "visible";
 	    	}
 
 	    	else if(dialogue2.style.visibility != "hidden") {
 	    		dialogue2.style.visibility = "hidden";
 	    		dialogue3.style.visibility = "visible";
-
 	    	}
 
 	    	else if(dialogue3.style.visibility != "hidden") {
@@ -59,23 +61,56 @@ let initSlide4 = function(){
 	    	}
 	    	else if (dialogue5.style.visibility != "hidden"){
 	    		son.pause();
-  				moveDown();
-				initSlide5();
+  				// moveDown();
+  				loadChoices();
+				//initSlide5();
 	    	}
-
 
 	  });
 	}
- 
 
 
 	d3.select('#next5').on('click', function(){
-		dialogue3.style.visibility = "hidden";
-		son.pause();
-  		moveDown();
-		initSlide5();
+		loadChoices();
+		// dialogue3.style.visibility = "hidden";
+		// son.pause();
+  		// moveDown();
+		// initSlide5();
 	});
 
+	function loadChoices() 
+    {
+    	var choix1 = document.querySelector('#container1-slide5');
+		var choix2 = document.querySelector('#container2-slide5');
+		var choix3 = document.querySelector('#container3-slide5');
+    	choix1.style.visibility = "visible";
+    	choix2.style.visibility = "visible";
+    	choix3.style.visibility = "visible";
+    	imgHdv1.style.visibility = "hidden";
+    	imgHdv2.style.visibility = "hidden";
+    	trait.style.visibility = "hidden";
+    	dialogue5.style.visibility = "hidden";
+    	btnSuivant.style.visibility = "hidden";
+	    notesSuivantes.style.visibility = "hidden";
+	}
+
+	 d3.select('#next6').on('click', function(){
+	    moveDown();
+	    moveLeft();
+	    initSlide6();
+	 });
+	d3.select('#next7').on('click', function(){
+	moveDown();
+	initSlide7();
+	});
+  d3.select('#next8').on('click', function(){
+    moveDown();
+    moveRight();
+    initSlide8();
+  });
+
 }
+
+
 
 

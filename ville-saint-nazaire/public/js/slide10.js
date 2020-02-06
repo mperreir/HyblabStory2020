@@ -15,7 +15,7 @@ let initSlide10 = function(){
 	    	}
 
 	    	else if(dialogueD.style.visibility != "hidden") {
-	    		moveRight();
+	    		moveLeft();
 				initSlide11();
 	    		
 	    	}
@@ -24,7 +24,7 @@ let initSlide10 = function(){
  
 
   d3.select('#next11').on('click', function(){
-    moveRight();
+    moveLeft();
     initSlide11();
   });
 }
