@@ -1,6 +1,14 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
+    <TextTitle :y="22" :style="{textAlign: 'center'}">Qui voulez-vous suivre aujourd'hui ?</TextTitle>
+    <SimpleText :y="30" :style="{textAlign: 'center'}">
+      Madame Dubois et Monsieur Moreau vivent dans la région Pays de Loire.
+      <br />Ils ont tous les deux une maison au coeur d'un quartier plein de verdure.
+      <br />Ils sont très attentifs à leur impact sur l'environnement. Par souci économique
+      <br />et écologique, ils pratiquent le covoiturage pour
+      se rendre sur leur lieu de travail.
+    </SimpleText>
     <transition name="bounce">
       <LittleHouse v-show="indexHouse == 1" class="little" />
     </transition>
@@ -21,8 +29,8 @@
         <p v-show="indexHouse == 3" class="text">{{ 50 * indexHouse }}m²</p>
       </transition>
     </div>
-    <Slider @input="onChange" class="slider"/>
-    <!-- <ul>
+    <Slider @input="onChange" class="slider" />
+    <ul>
       <li>
         <PlusButton class="plus1" @open="closePopover(1)" v-model="closePopover1">
           <p class="text">1. Ceci est une information sur la transition énergétique</p>
@@ -33,7 +41,14 @@
           <p class="text">2. Ceci est une information sur la transition énergétique</p>
         </PlusButton>
       </li>
-    </ul>-->
+    </ul>
+    <SimpleButton
+      text="M. Moreau"
+      @click.native="() => { onNext('moreau')}"
+      :width="20"
+      :y="90"
+      :x="60"
+    />
   </div>
 </template>
 
@@ -43,6 +58,10 @@ import LittleHouse from "@/assets/House/little-house.svg";
 import MediumHouse from "@/assets/House/medium-house.svg";
 import BigHouse from "@/assets/House/big-house.svg";
 import Slider from "@/components/Slider.vue";
+import TextTitle from "@/components/TextTitle";
+import SimpleText from "@/components/SimpleText";
+import SimpleButton from "@/components/SimpleButton";
+import PlusButton from "@/components/PlusButton"
 
 export default {
   name: "House",
@@ -51,7 +70,11 @@ export default {
     LittleHouse,
     MediumHouse,
     BigHouse,
-    Slider
+    Slider,
+    TextTitle,
+    SimpleText,
+    SimpleButton,
+    PlusButton
   },
   data: () => ({
     indexHouse: 1,
@@ -122,8 +145,8 @@ ul li {
 
 ul li .plus1 {
   position: relative;
-  top: 20vh;
-  left: 14vw;
+  top: 50vh;
+  left: 50vh;
 }
 
 ul li .plus2 {
@@ -138,7 +161,8 @@ ul li .plus3 {
   left: 40vw;
 }
 
-.bounce, .bounce-enter-active {
+.bounce,
+.bounce-enter-active {
   animation: bounce-in 0.5s;
 }
 
