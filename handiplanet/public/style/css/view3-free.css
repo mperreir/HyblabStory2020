@@ -88,6 +88,7 @@
   color: #cb563e;
 }
 #view3-free footer {
+  z-index: 10000;
   width: 100vw;
   height: 20vh;
   position: relative;
