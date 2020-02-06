@@ -1,15 +1,18 @@
+// import Interactable from "./Interactable.js"
+
 /* Displays several choices and */
 
-class Choice extends Interactable{
+class Choice extends Interactable {
 
   constructor () {
+    super();
     this.choices = new Array();
   }
 
-  add_choice (text, id_linked_scene) {
+  add_choice (text, id_linked_scene,change_story=false) {
     // text is what is displayed for this choice
     // id_linked_scene is the id of the scene which relates to this choice
-    this.choices.push([text,id_linked_scene]);
+    this.choices.push([text,id_linked_scene,change_story]);
   }
 
   // DISPLAY -------------------------------------------------------------------

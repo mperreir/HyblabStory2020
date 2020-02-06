@@ -1,15 +1,20 @@
+// import Interactable from "./Interactable.js"
+
 /* An animation is a set of images that are displayed one after the other at a certain speed */
+
+
 
 class Animation extends Interactable {
 
   // CONSTRUCTOR ---------------------------------------------------------------
 
   constructor (path) {
+    super();
     this.path = path;
     this.images = new Array();
     this.freq = 24;
 
-    auto_add_image();
+    this.auto_add_image();
   }
 
   // ADDING NEW ELEMENTS -------------------------------------------------------
@@ -21,7 +26,7 @@ class Animation extends Interactable {
 
   auto_add_image () {
     let i = 0;
-    while (add_image(this.path.concat("_",String(i),".png"))) {
+    while (this.add_image(this.path.concat("_",String(i),".png"))) {
       i++;
     }
     // Done importing

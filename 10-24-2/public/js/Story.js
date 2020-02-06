@@ -1,6 +1,5 @@
 /* A story is a set of scenes, one linking to another through user choices */
 
-
 class Story {
 
   // CONSTRUCTOR ---------------------------------------------------------------
@@ -24,7 +23,14 @@ class Story {
 
   // UPDATING ------------------------------------------------------------------
 
+  reinit() {
+    this.current_scene = 0;
+  }
+
   update() {
     this.current_scene = this.scenes.get(this.current_scene).update();
+    if (this.scenes.get(this.current_scene).next_story()) {
+      return this.current_scene;
+    }
   }
 }
