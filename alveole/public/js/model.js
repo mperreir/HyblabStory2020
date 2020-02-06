@@ -135,6 +135,7 @@ class ModelSlide1 extends Observable {
   hotel;
   studio;
   text;
+  pop;
 
   constructor() {
     super();
@@ -142,6 +143,19 @@ class ModelSlide1 extends Observable {
     this.choice;
     this.answer = 'studio';
     this.instanciated = false;
+    this.pop = false;
+  }
+
+  getModalValue() {
+    return this.pop;
+  }
+
+  setModalValue(val) {
+    if (val != this.pop) {
+      this.pop = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
   }
 
   getValue() {
@@ -433,6 +447,29 @@ class ModelLastSlide extends Observable {
   // values
   bool;
   text;
+
+  constructor() {
+    super();
+    this.bool = false;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+}
+
+class ModelPopup extends Observable {
+
+  // values
+  bool;
 
   constructor() {
     super();

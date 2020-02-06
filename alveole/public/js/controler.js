@@ -23,6 +23,14 @@ class SuperControler {
     // Stupid buttons
     var viewStupidButtons = new ViewStupidButtons();
 
+    // Popup
+    var viewPopup = new ViewPopup();
+
+    // ModelPopup
+    let modelPopup = new ModelPopup();
+    let updatePopup = new UpdatePopup(viewPopup, modelSlides);
+    modelPopup.addObservers(updatePopup);
+
     // ModelSlide0
     let modelIntroSlide = new ModelIntroSlide();
     let updateIntroSlide = new UpdateIntroSlide();
@@ -30,7 +38,7 @@ class SuperControler {
 
     // ModelSlide1
     let modelSlide1 = new ModelSlide1();
-    let updateSlide1 = new UpdateSlide1();
+    let updateSlide1 = new UpdateSlide1(modelPopup);
     modelSlide1.addObservers(updateSlide1);
 
     // ModelSlide2
@@ -94,6 +102,10 @@ class SuperControler {
     });
     viewStupidButtons.prev.addEventListener('click', function() {
       modelSlides.prevSlide();
+    });
+    document.getElementById('button-next').addEventListener('click', function() {
+      modelSlides.nextSlide();
+      modelPopup.setValue(false);
     });
   }
 }
@@ -203,21 +215,29 @@ class UpdateIntroSlide extends Observer {
 
 class UpdateSlide1 extends Observer {
 
-  constructor() {
+  constructor(modelPopup) {
     super();
+    this.model = modelPopup;
   }
 
   update(observable, object) {
     let val = observable.getValue();
+
     if (val == true) {
       let hotel = observable.loadHotel();
       let studio = observable.loadStudio();
+      let model = this.model;
+
       hotel.addEventListener('DOMLoaded', function() {
         document.getElementById('svg_hotel').addEventListener('mouseover', function(){
           hotel.play();
         });
         document.getElementById('svg_hotel').addEventListener('mouseout', function(){
           hotel.pause();
+        });
+        document.getElementById('svg_hotel').addEventListener('click', function() {
+          // observable.setModalValue(true);
+          model.setValue(true);
         });
       });
       studio.addEventListener('DOMLoaded', function() {
@@ -226,6 +246,10 @@ class UpdateSlide1 extends Observer {
         });
         document.getElementById('svg_studio').addEventListener('mouseout', function(){
           studio.pause();
+        });
+        document.getElementById('svg_studio').addEventListener('click', function() {
+          // observable.setModalValue(true);
+          model.setValue(true);
         });
       })
     } else if (val == false) {
@@ -346,5 +370,28 @@ class UpdateLastSlide extends Observer {
 
   update(observable, object) {
 
+  }
+}
+
+class UpdatePopup extends Observer {
+
+  constructor(composant, modelSlides) {
+    super();
+    this.composant = composant;
+    this.modelSlides = modelSlides;
+  }
+
+  update(observable, object) {
+    // let val = observable.getModalValue();
+    let val = observable.getValue();
+
+    if (val == true) {
+      console.log(val);
+      this.composant.div.style.visibility = "visible";
+      this.composant.div.style.opacity = 1;
+    } else if (val == false) {
+      this.composant.div.style.visibility = "hidden";
+      this.composant.div.style.opacity = 0;
+    }
   }
 }
