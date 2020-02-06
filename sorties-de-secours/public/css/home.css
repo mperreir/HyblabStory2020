@@ -3,25 +3,61 @@
 	background-color: #1E1E1E;
 }
 
-#home-logo {
-	position: absolute;
-	top: 40%;
+#logo-wrapper {
+	position: relative;
+	top: 35%;
 	left: 50%;
+	width: 100vw;
 	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
-#arrow-down {
+#start-experience {
+	position: relative;
+	text-align: center;
+	top: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#button-start {
 	position: absolute;
-	top: 90%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	opacity: 1;
-	width: 50px;
-	height: 50px;
+	left: 40%;
+	top: 50px;;
+	border-style: solid;
+	border-color: white;
+	text-transform: uppercase;
+	width: 250px;
+	color: white;
+	font-family: "NimbusSanL";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+#img-start {
+	position: relative;
+	top: 0;
+	z-index: 1;
+	opacity: 0;
 	transition-property: opacity;
   transition-duration: 1s;
 }
 
-#arrow-down:hover {
-	opacity: 0.5;
+#button-start-text {
+	margin: 1vw;
+}
+
+#home-logo {
+	position: relative;
+	z-index: 1;
+}
+
+#home-experience {
+	position: absolute;
+	top: -140px;
+	left: 150px;;
+	z-index: 2;
 }

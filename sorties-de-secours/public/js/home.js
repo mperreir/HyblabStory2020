@@ -1,17 +1,16 @@
 $(document).ready(function() {
 
-  $("#arrow-down").click(function(e) {
+  $("#button-start").click(function(e) {
+    bodyScrollLock.enableBodyScroll(homeSection);
     goToByScroll("loading-section");
+
+      set_music_play("generalMusic");
   });
 
-  $("#home-section").scroll(function () {
-    var iCurScrollPos = $(this).scrollTop();
-    if (iCurScrollPos > iScrollPos) {
-        goToByScroll("loading-section");
-    } else {
-       //Scrolling Up
-    }
-    iScrollPos = iCurScrollPos;
-});
-
+  $("#button-start").hover(function() {
+    $("#img-start").css("opacity", "1");
+  },
+  function() {
+    $("#img-start").css("opacity", "0");
+  });
 });
