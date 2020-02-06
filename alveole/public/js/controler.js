@@ -24,12 +24,12 @@ class SuperControler {
     var viewStupidButtons = new ViewStupidButtons();
 
     // Popup
-    var viewPopup = new ViewPopup();
+    var viewModal = new ViewModal();
 
     // ModelPopup
     let modelPopup = new ModelPopup();
-    let updatePopup = new UpdatePopup(viewPopup, modelSlides);
-    modelPopup.addObservers(updatePopup);
+    // let updatePopup = new UpdatePopup(viewModal, modelSlides);
+    // modelPopup.addObservers(updatePopup);
 
     // ModelSlide0
     let modelIntroSlide = new ModelIntroSlide();
@@ -96,6 +96,21 @@ class SuperControler {
                                           );
     modelSlides.addObservers(mediatorSlide);
 
+    let mediatorModal = new MediatorModal(  modelSlides,
+                                            modelIntroSlide,
+                                            modelSlide1,
+                                            modelSlide2,
+                                            modelSlide3,
+                                            modelSlide4,
+                                            modelSlide5,
+                                            modelSlide6,
+                                            modelSlide7,
+                                            modelSlide8,
+                                            modelLastSlide,
+                                            viewModal
+                                          );
+    modelPopup.addObservers(mediatorModal);
+
     // Adding Listenners
     viewStupidButtons.next.addEventListener('click', function() {
       modelSlides.nextSlide();
@@ -112,7 +127,7 @@ class SuperControler {
 
 class MediatorSlide extends Observer {
 
-  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide) {
+  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewModal) {
 
     super();
 
@@ -157,6 +172,51 @@ class MediatorSlide extends Observer {
         count++;
       }
     });
+  }
+}
+
+class MediatorModal extends Observer {
+
+  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewModal) {
+
+      super();
+
+      this.slides = {
+        "0": modelIntroSlide,
+        "1": modelSlide1,
+        "2": modelSlide2,
+        "3": modelSlide3,
+        "4": modelSlide4,
+        "5": modelSlide5,
+        "6": modelSlide6,
+        "7": modelSlide7,
+        "8": modelSlide8,
+        "9": modelLastSlide
+      };
+
+      this.model = modelSlides;
+      this.view = viewModal;
+  }
+
+  update(observable, object) {
+    let val = observable.getValue();
+
+    if (val == true) {
+      let i = this.model.getValue();
+      let choice = this.slides[i].getChoice();
+
+      this.view.title.innerHTML = this.slides[i].text["title"];
+      this.view.mainText.innerHTML = this.slides[i].text["choices"][choice]['main'];
+      this.view.subText.innerHTML = this.slides[i].text["choices"][choice]['sub'];
+
+      this.view.div.style.visibility = "visible";
+      this.view.div.style.opacity = 1;
+    } else if (val == false) {
+      this.view.div.style.visibility = "hidden";
+      this.view.div.style.opacity = 0;
+    } else {
+      console.log("err : value not handled (mediatorModal controler)");
+    }
   }
 }
 
@@ -229,26 +289,26 @@ class UpdateSlide1 extends Observer {
       let model = this.model;
 
       hotel.addEventListener('DOMLoaded', function() {
-        document.getElementById('svg_hotel').addEventListener('mouseover', function(){
+        document.getElementById('svg_hotel').addEventListener('mouseover', function() {
           hotel.play();
         });
-        document.getElementById('svg_hotel').addEventListener('mouseout', function(){
+        document.getElementById('svg_hotel').addEventListener('mouseout', function() {
           hotel.pause();
         });
         document.getElementById('svg_hotel').addEventListener('click', function() {
-          // observable.setModalValue(true);
+          observable.setChoice(0);
           model.setValue(true);
         });
       });
       studio.addEventListener('DOMLoaded', function() {
-        document.getElementById('svg_studio').addEventListener('mouseover', function(){
+        document.getElementById('svg_studio').addEventListener('mouseover', function() {
           studio.play();
         });
-        document.getElementById('svg_studio').addEventListener('mouseout', function(){
+        document.getElementById('svg_studio').addEventListener('mouseout', function() {
           studio.pause();
         });
         document.getElementById('svg_studio').addEventListener('click', function() {
-          // observable.setModalValue(true);
+          observable.setChoice(1);
           model.setValue(true);
         });
       })
@@ -382,7 +442,7 @@ class UpdatePopup extends Observer {
   }
 
   update(observable, object) {
-    // let val = observable.getModalValue();
+
     let val = observable.getValue();
 
     if (val == true) {

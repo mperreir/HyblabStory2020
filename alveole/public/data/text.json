@@ -3,13 +3,19 @@
     "speech": "Vous vous apprêtez à expérimenter la réalisation d’un podcast, du brief à la restitution. Entrez dans l’univers d’Alvéole Média et découvrez leur expertise. Mettez vous dans la peau d’un gérant d’hôtel et testez vos connaissance sur les podcasts !"
   },
   "slide1": {
-    "theme": "Lieux",
+    "title": "Lieu",
     "speech": "Le choix du lieu de tournage a une incidence sur les choix techniques que vous devrez faire par la suite.",
     "question": "Quel lieu privilégierez-vous pour l’enregistrement de votre podcast ?",
     "type": "select",
     "choices": {
-      "hotel": "Le choix de l'hôtel est pertinent si vous faites preuve de prudence lors de l’enregistrement. En effet, il est indispensable de bien isoler la pièce afin de ne pas capter de bruits parasites.",
-      "studio": "Les locaux d’Alvéole Média disposent de studios d'enregistrement sonore isolés, davantage propices à la captation des sons."
+      "hotel": {
+          "main": "Le choix de l'hôtel est pertinent",
+          "sub": "Si vous faites preuve de prudence lors de l’enregistrement. En effet, il est indispensable de bien isoler la pièce afin de ne pas capter de bruits parasites."
+        },
+      "studio": {
+          "main": "Les locaux d’Alvéole Média sont adaptés",
+          "sub": "Ils disposent de studios d'enregistrement sonore isolés,davantage propices à la captation des sons."
+        }
     },
     "answer": "studio"
   },

@@ -220,6 +220,20 @@ class ModelSlide1 extends Observable {
     return this.studio;
   }
 
+  getChoice() {
+    return this.choice;
+  }
+
+  setChoice(val) {
+    if (val == 0) {
+      this.choice = "hotel";
+    } else if (val == 1) {
+      this.choice = "studio";
+    } else {
+      console.log("err : invalid slide 1 choice value");
+    }
+  }
+
 }
 
 class ModelSlide2 extends Observable {
