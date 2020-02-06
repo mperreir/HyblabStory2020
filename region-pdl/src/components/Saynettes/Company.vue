@@ -1,11 +1,10 @@
 <template>
   <div class="saynette">
     <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70" >
-        <p v-if="this.$store.state.character === 'moreau'">L’entreprise de Mme Dubois est engagée pour la transition énergétique et profite des aides de la Région. À présent, l’entreprise crée sa propre énergie verte grâce à la biomasse.  </p>
+        <p v-if="this.$store.state.character === 'dubois'">L’entreprise de Mme Dubois est engagée pour la transition énergétique et profite des aides de la Région. À présent, l’entreprise crée sa propre énergie verte grâce à la biomasse.  </p>
 
         <p v-if="this.$store.state.character === 'moreau'"> À côté de l’école dans laquelle enseigne M. Moreau, se trouve l’entreprise de Mme Dubois. Eux aussi se sont engagés pour la transition énergétique et profitent des aides de la Région. À présent, ils créent leur propre énergie verte grâce à la biomasse. </p>
     </SimpleText>
-    <SimpleButton text="Voir l'école" :width="23" :x="75" :y="92" @click.native="onNextSchool" />
 
     <PlusButton class="plus1" :width="20" @open="closePopover(1)" v-model="closePopover1">
       <p class="text">La <span class = "red">biomasse</span> utilise le méthane produit par la décomposition de déchets ménagers pour chauffer les bâtiments.</p>
@@ -19,6 +18,11 @@
     <PlusButton class="plus4" :width="20" @open="closePopover(4)" v-model="closePopover4">
       <p class="text">En Pays de la Loire, la biomasse produit <span class = "red">651 GWh.</span> Cela équivaut à <span class = "red">56 000 tonnes de pétrole.</span></p>
     </PlusButton>
+
+    <SimpleButton v-if="this.$store.state.character === 'moreau'" text="Voir la suite" :width="23" :x="75" :y="90" @click.native="onNextQuizz" />
+
+    <SimpleButton v-if="this.$store.state.character === 'dubois'" text="Voir l'école" :width="23" :x="75" :y="90" @click.native="onNextSchool" />
+
 
     <CompanySVG class="svg"/>
   </div>
@@ -53,6 +57,11 @@ export default {
         onNextSchool() {
             this.$store.dispatch("nextScene", {sceneId: 1});
         },
+
+        onNextQuizz() {
+            this.$store.dispatch("nextScene", {sceneId: 7});
+        },
+
         closePopover(i) {
         switch (i) {
           case 1:
