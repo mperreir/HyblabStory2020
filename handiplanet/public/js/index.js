@@ -3,7 +3,7 @@
 * Author: Christophe SONNEVILLE
 * Copyright - 2020 Christophe SONNEVILLE
 */
-view = new View1(document.getElementById('view-container'));
+view = new View6Free(document.getElementById('view-container'));
 view.load();
 //window.scrollTo(0,0);
 
@@ -81,8 +81,8 @@ window.addEventListener('load', function () {
             toggle.style.background = '#cb563e';
             cont = true;
             //document.body.style.filter = "grayscale(100%)";
-            document.body.style.filter= "hue-rotate(200deg)";
-            //document.body.style.filter = "contrast(150%)";
+            //document.body.style.filter= "hue-rotate(200deg)";
+            document.body.style.filter = "grayscale(1) contrast(1.25)";
         }
     }
 

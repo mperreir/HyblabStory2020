@@ -1,0 +1,157 @@
+/*
+ * File Created: 2020-02-06 08:02
+ * Author: Alban LECUIVRE
+ * Copyright - 2020 Alban LECUIVRE
+ */
+#view6-free {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(203, 86, 62, 0.15);
+}
+#view6-free #view-6-free-middle {
+  width: 80vw;
+  height: 80vh;
+  margin: 0px 10vw;
+  border-bottom: 2px solid #5A8D8C;
+  position: relative;
+  background-image: url(../../assets/view6/view6-free-wave.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: bottom -2px center;
+}
+#view6-free #view-6-free-middle #view-6-character {
+  z-index: 5;
+  position: absolute;
+  right: 50%;
+  bottom: -2px;
+  height: 70%;
+  max-width: 50%;
+  width: fit-content;
+  display: inline-block;
+}
+#view6-free #view-6-free-middle #view-6-character #view-6-character-body {
+  z-index: 5;
+  height: 100% !important;
+  max-width: 100%;
+  position: relative;
+  object-fit: scale-down;
+  object-position: bottom right;
+}
+#view6-free #view-6-free-middle #view-6-character #view-6-character-arm {
+  z-index: 3;
+  position: absolute;
+  max-height: 75%;
+  max-width: 20%;
+  bottom: 0px;
+  transform: translateX(-100%);
+}
+#view6-free #view-6-free-middle #view-6-character #view-6-small-question-mark {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%) translateY(-50%);
+}
+#view6-free #view-6-free-middle #view-6-character #view-6-medium-question-mark {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+#view6-free #view-6-free-middle #view-6-character #view-6-big-question-mark {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-120%);
+}
+#view6-free #view-6-free-middle #view-6-free-red-ring {
+  z-index: 0;
+  position: absolute;
+  transition: transform ease-in-out;
+  top: 25%;
+  right: 15%;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 100%;
+  border: 5px solid #CB563E;
+}
+#view6-free #view-6-free-middle #view-6-free-green-dot {
+  z-index: 0;
+  position: absolute;
+  transition: transform ease-in-out;
+  bottom: 10%;
+  right: 20%;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 100%;
+  background-color: #426262;
+}
+#view6-free #view-6-free-middle #view-6-free-white-ring {
+  z-index: 0;
+  position: absolute;
+  transition: transform ease-in-out;
+  top: 50%;
+  right: 45%;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 100%;
+  border: 5px solid #ffffff;
+}
+#view6-free #view-6-free-middle #view-6-free-green-tiny-dot {
+  z-index: 0;
+  position: absolute;
+  transition: transform ease-in-out;
+  bottom: 35%;
+  left: 15%;
+  width: 2vh;
+  height: 2vh;
+  border-radius: 100%;
+  background-color: #5A8D8C;
+}
+#view6-free #view-6-free-middle article {
+  z-index: 7;
+  position: absolute;
+  left: 55%;
+  max-width: 25%;
+  bottom: 10%;
+}
+#view6-free #view-6-free-middle article p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #426262;
+}
+#view6-free #view-6-free-middle article span {
+  color: #cb563e;
+}
+#view6-free footer {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+}
+#view6-free footer #view-6-free-next-button {
+  position: absolute;
+  right: 0px;
+  background-color: #CB563E;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 34px;
+  color: #ffffff;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 10px 30px;
+  padding-right: 50px;
+  margin: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#view6-free footer #view-6-free-next-button span {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=view6-free.css.map */
