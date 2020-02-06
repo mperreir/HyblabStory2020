@@ -402,7 +402,7 @@ z-index: 10;
 position: absolute;
 width: 35%;
 height: 35%;
-left: -5%;
+left: 0%;
 top: 50%;
 z-index: 10;
 }
@@ -412,7 +412,7 @@ z-index: 10;
 position: absolute;
 width: 35%;
 height: 35%;
-left: 70%;
+left: 65%;
 top: 50%;
 z-index: 10;
 }
@@ -422,7 +422,7 @@ z-index: 10;
 position: absolute;
 width: 40%;
 height: 10%;
-left: -6%;
+left: -2%;
 top: 85%;
 
 /* sous-titre */
@@ -445,7 +445,7 @@ z-index: 10;
 position: absolute;
 width: 30%;
 height: 10%;
-left: 73%;
+left: 68%;
 top: 85%;
 
 /* sous-titre */
