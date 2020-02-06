@@ -2,13 +2,17 @@ let initSlide13 = function(){
 
   let pause = 0;
   var vid = document.getElementById("videofin");
-  vid.play();
+  var play = document.getElementById("play");
 
-
-  d3.select('.next14').on('click', function(){
+  d3.select('#next14-img').on('click', function(){
     vid.pause();
     moveRight();
     initSlide14();
+  });
+
+  d3.select('#play').on('click', function(){
+    vid.play();
+    play.style.visibility='hidden';
   });
 
   d3.select('#videofin').on('click', function(){
@@ -22,16 +26,16 @@ let initSlide13 = function(){
 
   });
 
-  d3.select('.next14').on('mouseover', function(){
+  d3.select('#next14-img').on('mouseover', function(){
     anime({
-      targets: '#next14-texte, #next14-img',
+      targets: '#next14-img',
       scale: 1.2
     });
   });
 
-  d3.select('.next14').on('mouseout', function(){
+  d3.select('#next14-img').on('mouseout', function(){
     anime({
-      targets: '#next14-texte, #next14-img',
+      targets: '#next14-img',
       scale: 1
     });
   });

@@ -8,17 +8,7 @@
     position: absolute;
     width: 4%;
     left : 90%;
-    top : 78%;
-}
-#next14-texte{
-    position: absolute;
-    left : 87%;
-    top : 87%;
-    font-family: Vibur;
-    color: #92C2D2;
-}
-
-.next14{
+    top : 90%;
     cursor: pointer;
 }
 
@@ -27,6 +17,14 @@
     color: #265984;
 }
 
+#play{
+    position: absolute;
+    width:5%;
+    left:45.5%;
+    top:32%;
+    z-index: 2;
+    cursor: pointer;
+}
 
 @media screen and (max-aspect-ratio: 16/9){
     #texte13, #next14-texte{
@@ -52,5 +50,4 @@
     width : 51%;
     left:23%;
     top:12%;
-    cursor : pointer;
 }
