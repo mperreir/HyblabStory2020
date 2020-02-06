@@ -418,6 +418,9 @@ class ModelSlide4 extends Observable {
       let snap = Snap(div_valide);
       snap.append(data);
     });
+    div_valide.addEventListener('click',function(){
+      console.log('recu');
+    });
     let div_valide_text = document.createElement('div');
     div_valide_text.setAttribute('id','slide4_valide_text');
     container.appendChild(div_valide_text);

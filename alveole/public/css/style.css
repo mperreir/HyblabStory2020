@@ -379,9 +379,9 @@ dessus de l'apect ratio 16/9 */
   /* L’intégralité du podcast repose sur la voix. Il est fondamental que celle-ci soit en harmonie avec le contenu. */
 
 position: absolute;
-width: 135%;
+width: 100%;
 height: 20%;
-left: -15%;
+left: 0%;
 top: 27%;
 
 /* texte */
@@ -634,9 +634,9 @@ position: absolute;
 /* Ellipse 11 */
 
   position: absolute;
-  width: 10%;
-  height: 10%;
-  left: -5%;
+  width: 6%;
+  height: 6%;
+  left: -4%;
   top: 85%;
   z-index: 10;
 
@@ -645,26 +645,26 @@ position: absolute;
 }
 #slide4_checkbox2{
   position: absolute;
-  width: 10%;
-  height: 10%;
-  left: 30%;
+  width: 6%;
+  height: 6%;
+  left: 31%;
   top: 85%;
   /* Note: backdrop-filter has minimal browser support */
 }
 #slide4_checkbox3{
   position: absolute;
-  width: 10%;
-  height: 10%;
-  left: 65%;
+  width: 6%;
+  height: 6%;
+  left: 66%;
   top: 85%;
 
   /* Note: backdrop-filter has minimal browser support */
 }
 #slide4_checkbox4{
   position: absolute;
-  width: 10%;
-  height: 10%;
-  left: 100%;
+  width: 6%;
+  height: 6%;
+  left: 101%;
   top: 85%;
   z-index: 10;
 
@@ -673,8 +673,8 @@ position: absolute;
 #slide4_checkbox{
   left:20%;
   position: absolute;
-  width: 60%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
 }
 #slide4_valide{
   position: absolute;
