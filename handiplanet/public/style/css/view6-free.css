@@ -52,6 +52,11 @@
   left: 0;
   transform: translateX(100%) translateY(-50%);
 }
+#view6-free #view-6-free-middle #view-6-character #view-6-small-question-mark::after {
+  content: url(../../assets/view6/view6-small-question-mark.svg);
+  display: block;
+  animation: view6-yAxis 6s infinite ease-in-out;
+}
 #view6-free #view-6-free-middle #view-6-character #view-6-medium-question-mark {
   z-index: 2;
   position: absolute;
@@ -59,12 +64,22 @@
   right: 0;
   transform: translateX(-50%) translateY(-50%);
 }
+#view6-free #view-6-free-middle #view-6-character #view-6-medium-question-mark::after {
+  content: url(../../assets/view6/view6-medium-question-mark.svg);
+  display: block;
+  animation: view6-yAxis 6s infinite ease-in-out;
+}
 #view6-free #view-6-free-middle #view-6-character #view-6-big-question-mark {
   z-index: 2;
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%) translateY(-120%);
+  transform: translateX(-50%) translateY(-130%);
+}
+#view6-free #view-6-free-middle #view-6-character #view-6-big-question-mark::after {
+  content: url(../../assets/view6/view6-big-question-mark.svg);
+  display: block;
+  animation: view6-yAxis 6s infinite ease-in-out;
 }
 #view6-free #view-6-free-middle #view-6-free-red-ring {
   z-index: 0;
@@ -152,6 +167,18 @@
 #view6-free footer #view-6-free-next-button span {
   font-weight: bold;
   color: #ffffff;
+}
+@keyframes view6-yAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    transform: translateY(25px);
+  }
+}
+@keyframes view6-xAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(25px);
+  }
 }
 
 /*# sourceMappingURL=view6-free.css.map */
