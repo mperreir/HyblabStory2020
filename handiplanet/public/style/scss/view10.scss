@@ -10,31 +10,31 @@
         display: flex;
         flex-direction: row;
         position: relative;
-    }
 
-    #view-10-graph_container {
-        position: relative;
-        width: 50%;
-        #view-10-graph {
-            height: 100%;
-            width: 100%;
-            min-width: 100%;
+        #view-10-graph_container {
+            position: relative;
+            width: 50%;
+            #view-10-graph {
+                height: 100%;
+                width: 100%;
+                min-width: 100%;
+            }
+            #view-10-graph_title {
+                position: absolute;
+                right: 0;
+                bottom: 55%;
+                font-size: 30px;
+                max-width: 20%;
+                margin: 0;
+            }
         }
-        #view-10-graph_title {
+        
+        #view-10-data {
             position: absolute;
-            right: 0;
-            bottom: 55%;
-            font-size: 30px;
-            max-width: 20%;
-            margin: 0;
+            bottom: 30%;
+            right: 10%;
+            width: 30%;
         }
-    }
-    
-    #view-10-data {
-        position: absolute;
-        bottom: 30%;
-        right: 10%;
-        width: 30%;
     }
     
     footer {
