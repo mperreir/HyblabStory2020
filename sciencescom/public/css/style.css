@@ -1,3 +1,10 @@
+/* Polices d'écriture */
+@font-face {
+    font-family: Avenir;
+    src: url("fonts/AvenirLTStd-Medium.otf");
+    font-weight: normal;
+}
+
 /* normalisation des marges et padding pour simplifier le positionnement des éléments */
 * {
     padding: 0;
@@ -13,7 +20,7 @@
 /* Frame */
 
 .frame {
-    height: 300px;
+    height: 100%;
     line-height: 300px;
     overflow: hidden;
 }
@@ -24,6 +31,7 @@
     padding: 0;
     height: 100%;
     font-size: 50px;
+    overflow: hidden;
 }
 
 .frame ul li {
