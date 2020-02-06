@@ -1,21 +1,53 @@
+#logo_hyblab{
+    width: 33.33%;
+    position: absolute;
+    left: 33.33%;
+    top: 5%;
+}
+#logo_oml{
+    position: absolute;
+    width : 12%;
+    top:89%;
+    left:25%
+}
+#logo_nantes{
+    position: absolute;
+    width:13%;
+    left:40%;
+    top:88%
+}
+#logo_opensource{
+    position: absolute;
+    width:4%;
+    top:88%;
+    left:58%
+}
+#logo_cc{
+    position: absolute;
+    width:4%;
+    top:88%;
+    left:65%
+}
+#logo_stnaz{
+    position: absolute;
+    width:10%;
+    top:88%;
+    left:10%
+}
+
 #fin-img{
     position: absolute;
     width: 4%;
     left : 90%;
-    top : 78%;
-}
-#fin-texte{
-    position: absolute;
-    left : 87%;
     top : 87%;
-    font-family: Vibur;
-    color: #92C2D2;
-}
-
-.fin{
     cursor: pointer;
 }
 
+#agr{
+    left: 25%;
+    position: relative;
+    width: 50%;
+}
 #img-journaliste14 {
     position: absolute;
     width : 13%;
@@ -26,33 +58,40 @@
 }
 #etudiants_agr{
     position: absolute;
-    left:8%;
-    top:26%
+    left: 8%;
+    top: 24%;
+    width:20%
 }
-#agr{
-    width:40vh;
-}
+
 #etudiants_polytech{
     position: absolute;
-    left:40%;
-    top:26%
+    width:30%;
+    left:35%;
+    top:25%;
+}
+#univ{
+    top: 5%;
+    width: 45%;
+    position: relative;
 }
 #polytech{
-    width:35vh;
-    position: relative;
-    left: 7%;
+    top:5%;
+    right:0%;
+    width: 45%;
+    position: absolute;
 }
 #etudiants_audencia{
     position: absolute;
-    right:8%;
-    top:24%
+    right: 8%;
+    top: 22%;
+    width: 20%
 }
 #audencia{
-    width:40vh;
+    position: relative;
+    width: 80%;
+    left: 10%;
 }
 #etudiants_audencia div, #etudiants_polytech div,#etudiants_agr div{
-    width: 40vh;
-    height: 50px;
     text-align: center;
 }
 
@@ -61,17 +100,18 @@
     color: #255A85;
 }
 
-
-
+#etudiants_audencia p{
+    margin-top: 17%;
+}
 
 
 @media screen and (max-aspect-ratio: 16/9){
-    #etudiants_audencia p, #etudiants_polytech p,#etudiants_agr p, #fin-texte{
+    #etudiants_audencia p, #etudiants_polytech p,#etudiants_agr p{
         font-size: 2vw;
     }
 }
 @media screen and (min-aspect-ratio: 16/9){
-    #etudiants_audencia p, #etudiants_polytech p,#etudiants_agr p, #fin-texte{
+    #etudiants_audencia p, #etudiants_polytech p,#etudiants_agr p{
         font-size: 3.4vh;
     }
 }
