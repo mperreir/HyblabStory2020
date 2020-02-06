@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     var circle_positions = [];
-    var eraser_size = 70;
+    var eraser_size = 90;
 
     let stage = new Konva.Stage({
         container: 'expo-konva',
@@ -81,6 +81,7 @@ $(document).ready(function() {
         });
         group.draw();
     });
+    
 
 
 });

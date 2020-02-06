@@ -14,7 +14,6 @@
   background-color: #222222;
   z-index: 1000;
 }
-
 .expo-img.discover{
   z-index: 1001;
   /*clip-path: circle(0 at 0 0);*/
