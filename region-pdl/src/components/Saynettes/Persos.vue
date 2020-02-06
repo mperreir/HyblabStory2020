@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     onNext(characterName) {
-      this.$store.dispatch("nextScene", { sceneId: null});
+      this.$store.dispatch("nextScene", { sceneId: 2});
       this.$store.dispatch("setCharacter", {name: characterName});
     }
   }
