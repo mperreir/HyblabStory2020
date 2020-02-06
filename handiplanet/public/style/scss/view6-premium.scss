@@ -1,0 +1,132 @@
+#sixth-view-premium {
+
+    img{
+      position: absolute;
+    }
+    
+    height: 100%;
+    width: 100vw;
+    
+    #decor-view-6 {
+      height: 90vh;
+      width: 90vw;
+      position: absolute;
+      left: 5vw;
+      bottom: 10vh;
+  
+      #fond-view-6-premium{
+          width: 80%;
+          height: 80%;
+          bottom: 0%;
+          left: 10%;
+          position: absolute;
+  
+          background-image: url("../../assets/view6-premium/fond-view-6-premium.svg");
+          background-size: 80%;
+          background-repeat: no-repeat;
+          background-position: bottom center;
+      }
+  
+    }
+  
+    p {
+      position: absolute;
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 29px;
+      color: #426262;
+      max-width: 25%;
+  
+      em{
+        font-weight: bold;
+        color: #CB563E;
+      }
+    }
+  
+    #view6-speech{
+      left: 50%;
+      bottom: 20%;
+      
+    }
+
+    #view6p-container{
+      position: relative;
+      left: 10%;
+      bottom: 0%;
+      width: 20%;
+      height: 50%;
+    }
+
+
+    #view6premium-smartphone {
+        position: absolute; 
+        width: 15%;
+        bottom: 0%;
+        left: 33%;
+        
+    }
+
+    #view6premium-like {
+        bottom: 25%;
+        left: 25%;
+        box-shadow: 0 0 3px 0 rgb(66, 98, 98);
+  
+        -webkit-animation: view6p-pulse 6s infinite ubic-bezier(0, 0.29, 0.13, 0.99);
+        -moz-animation: view6p-pulse 6s infinite cubic-bezier(0, 0.29, 0.13, 0.99);
+        -ms-animation: view6p-pulse 6s infinite cubic-bezier(0, 0.29, 0.13, 0.99);
+        animation: view6p-pulse 6s infinite cubic-bezier(0, 0.29, 0.13, 0.99);
+        // background-color: #e84c3d;
+        width: calc(fit-content - 20px);
+        border-radius: 30px;
+
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        transition: all .1s ease-in-out;
+
+        &:hover{
+          transform: scale(1.2, 1.2);
+          animation: none;
+        }
+
+        &:active{
+          transform: scale(1, 1);
+        }
+    }
+
+    #view6premium-hearts {
+      position: absolute;
+      left: 30%;
+      bottom: 10%;
+      width: 20%;
+    }
+
+    #view6p-circle-1{
+      left: 20%;
+      bottom: 30%;
+    }
+
+    #view6p-circle-2{
+      left: 70%;
+      bottom: 10%;
+    }
+
+    #view6p-circle-3{
+      left: 70%;
+      bottom: 50%;
+    }
+
+    #view6p-like{
+      
+  
+    }
+  
+    @-webkit-keyframes view6p-pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+    @-moz-keyframes view6p-pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+    @-ms-keyframes view6p-pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+    @keyframes view6p-pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+
+  }
