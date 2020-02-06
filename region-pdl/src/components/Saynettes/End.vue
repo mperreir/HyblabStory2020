@@ -7,8 +7,6 @@
       MERCI
     </SimpleText>
 
-  
-    <FakePerso class="boat"/>
   </div>
 </template>
 
@@ -17,7 +15,6 @@ import Background from "@/assets/Persos/background-perso.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
-import FakePerso from "@/assets/Persos/PersoFichier 1.svg";
 
 import LogoRegion from "@/assets/HOME/logo_region.svg";
 import LogoPolytech from "@/components/logo/Polytech.png";
@@ -29,7 +26,6 @@ export default {
     TextTitle,
     SimpleText,
     SimpleButton,
-    FakePerso,
     LogoRegion
   },
   methods: {
@@ -42,39 +38,6 @@ export default {
 
 <style scoped>
 
-
-.perso {
-  position: absolute;
-  width: 12%;
-}
-
-.p1 {
-  left: 24%;
-  top: 45%;
-}
-
-.p2 {
-  left: 64%;
-  top: 45%;
-}
-
-.boat {
-  position: absolute;
-  width: 5%;
-  left: 15%;
-  top: 62%;
-  border: solid 1px red;
-  animation: 1s linear infinite alternate float;
-}
-
-@keyframes float{
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(-5%);
-  }
-}
 .logoRegion {
     position: absolute;
     left: 7%;
