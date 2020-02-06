@@ -3,7 +3,7 @@
  * Created Date: Wednesday February 5th 2020
  * Author: Pierre Le Guen
  * -----
- * Last Modified: Thursday, 6th February 2020 2:33:44 pm
+ * Last Modified: Thursday, 6th February 2020 5:09:26 pm
  * Modified By: Pierre Le Guen
  * -----
  * Copyright (c) 2020 Pierre Le Guen
@@ -23,8 +23,10 @@
         position: relative;
 
         #view-10-graph_container {
-            position: relative;
-            width: 50%;
+            position: absolute;
+            bottom: 5%;
+            height: 70%;
+            width: 60%;
             #view-10-graph {
                 height: 100%;
                 width: 100%;
@@ -33,7 +35,7 @@
             #view-10-graph_title {
                 position: absolute;
                 right: 0;
-                bottom: 55%;
+                top: 0;
                 font-size: 30px;
                 max-width: 20%;
                 margin: 0;
