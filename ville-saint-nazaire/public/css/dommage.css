@@ -1,0 +1,104 @@
+
+#pagedommage{
+
+	background-image: url(img/background.png);
+	background-repeat: no-repeat;
+	background-size:cover;
+
+}
+
+#dommage-img-decorateur {
+	position: absolute;
+	width : 30%;
+	height : 40%;
+	top : 57%;
+	left : 72%;
+	z-index: 200;
+
+}
+
+
+/*#container1_dommage{
+	float:left;
+
+}*/
+
+#container2_dommage{
+	left:40%;
+	top:30%;
+}
+
+.dommage-suivant {
+	position: absolute;
+	top: 90%;
+	
+}
+
+
+ #dommage-btnSuivant {
+	position: absolute;
+	width: 4%;
+	height: 7%;
+	left:55%;
+}
+
+ #dommage-btnSuivant:hover {
+	cursor: pointer;
+}
+
+
+ #dommage-notesSuivantes {
+	position: absolute;
+	left: 61%;
+	padding-top: 0.2%;
+
+}
+
+#maquette1_dommage{
+	margin-top:18%;
+	margin-left:8%;
+	width:26%;
+}
+
+#container1_dommage p{
+	margin-left:15%;
+}
+
+#container1_dommage, #container2_dommage{
+	position: absolute;
+}
+
+#dommage p{
+	color:#255A85;
+	font-family:Vibur;
+}
+
+#text_dommage p{
+	margin-left:15%;
+}
+
+@media screen and (max-aspect-ratio: 16/9){
+   
+    #container1_dommage p, #paraph_dommage p,.dommage-suivant{
+        font-size: 3vw;
+    }
+
+    #text_dommage p{
+		font-size:6vh;
+	}
+
+
+}
+
+
+@media screen and (min-aspect-ratio: 16/9){
+    
+   #container1_dommage p, #paraph_dommage p,.dommage-suivant{
+        font-size: 4vh;
+    }
+
+	#text_dommage p{
+		font-size:9vh;
+	}
+
+}
