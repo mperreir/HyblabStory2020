@@ -26,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="216" column="90" lean-forward="true" selection-start-line="216" selection-start-column="90" selection-end-line="216" selection-end-column="90" />
+            <state relative-caret-position="336">
+              <caret line="213" column="27" lean-forward="true" selection-start-line="213" selection-start-column="27" selection-end-line="213" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -260,12 +260,12 @@
       <workItem from="1579786732825" duration="1178000" />
       <workItem from="1580120945531" duration="8325000" />
       <workItem from="1580199270795" duration="17523000" />
-      <workItem from="1580977751785" duration="16871000" />
+      <workItem from="1580977751785" duration="17108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49696000" />
+    <option name="totallyTimeSpent" value="49933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -655,8 +655,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="216" column="90" lean-forward="true" selection-start-line="216" selection-start-column="90" selection-end-line="216" selection-end-column="90" />
+        <state relative-caret-position="336">
+          <caret line="213" column="27" lean-forward="true" selection-start-line="213" selection-start-column="27" selection-end-line="213" selection-end-column="27" />
         </state>
       </provider>
     </entry>
