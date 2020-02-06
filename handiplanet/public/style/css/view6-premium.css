@@ -86,14 +86,17 @@
 #sixth-view-premium #view6p-circle-1 {
   left: 20%;
   bottom: 30%;
+  animation: yAxis 6s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
 }
 #sixth-view-premium #view6p-circle-2 {
   left: 70%;
   bottom: 10%;
+  animation: xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
 }
 #sixth-view-premium #view6p-circle-3 {
   left: 70%;
   bottom: 50%;
+  animation: xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
 }
 @-webkit-keyframes view6p-pulse {
   to {
@@ -113,6 +116,18 @@
 @keyframes view6p-pulse {
   to {
     box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);
+  }
+}
+@keyframes yAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    transform: translateY(10%);
+  }
+}
+@keyframes xAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(20%);
   }
 }
 

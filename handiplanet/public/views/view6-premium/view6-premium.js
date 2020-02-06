@@ -1,7 +1,6 @@
 class View6Premium extends View {
     constructor(receiver){
         super('view6-premium', receiver);
-        super.load();
 
     }
 
