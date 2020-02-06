@@ -1,3 +1,8 @@
+#dance-section {
+	position: relative;
+	background-color: #1E1E1E;
+}
+
 #dance-wrapper {
 	height: 100vh;
 	z-index: 1;
@@ -5,12 +10,14 @@
 
 #img-dancers {
 	width: 5000px;
+	height: 100%;
 	position: absolute;
 	z-index: 1;
 }
 
 #img-dancers-annotations {
 	width: 5000px;
+	height: 100%;
 	position: absolute;
 	z-index: 2;
 	opacity: 0;
