@@ -131,6 +131,9 @@ body {
 .panel[data-y-pos="-5"] {
     top: 500%;
 }
+.panel[data-y-pos="-6"] {
+    top: 600%;
+}
 .panel[data-y-pos="-1"] {
     top: 100%;
 }

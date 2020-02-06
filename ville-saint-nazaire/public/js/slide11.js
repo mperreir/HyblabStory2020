@@ -29,17 +29,18 @@ let initSlide11 = function(){
 
   d3.select('#next12-1').on('click', function(){
     moveDown();
-    initSlide12();
+    initSlidedommage();
   });
 
   d3.select('#next12-2').on('click', function() {
     moveDown();
-    initSlide12();
+    initSlidedommage();
   });
 
 
   d3.select('#next12-3').on('click', function(){
     moveDown();
-    initSlide12();
+    moveLeft();
+    initSlidebravo();
   });
 }
