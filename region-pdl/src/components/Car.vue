@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CarSVG class="car" />
+    <CarSVG class="car-svg" />
     <WheelSVG class="wheel" :class="{moving: moving}" style="left: 31.1%" />
     <WheelSVG class="wheel" :class="{moving: moving}" style="left: 56.7%" />
   </div>
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped>
-.car {
+.car-svg {
   position: absolute;
   width: 37%;
   left: 30%;

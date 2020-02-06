@@ -2,22 +2,51 @@
   <!-- <div class="saynette" @click="onNext"> -->
   <div class="saynette">
     <Background class="svg" />
-    <SimpleText :x="53" :y="17" :width="41">
+    <SimpleText
+      :x="53"
+      :y="17"
+      :width="41"
+    >
       La Région pose des bornes de recharge de voiture électriques source
       l'entièreté de son territoire. Ainsi, lorsque M. Moreau prend sa
       voiture, il sait qu’il trouvera en moyenne une borne tous les 13 km.
     </SimpleText>
+
     <TrainSVG
       ref="movingTrain"
       class="train"
       :class="{'slow-train': !nextPressed, 'fast-train': nextPressed}"
     />
+    <!-- <TrainSVG
+      ref="movingTrain"
+      class="train"
+    /> -->
+
     <!-- <Car class="car" /> -->
-    <Car :moving="true"/>
+    <Car
+      :moving="carMoving"
+      class="car"
+    />
+    
     <BoatSVG class="boat" />
-    <PlusButton class="plus-button" @open="closePopover(1)" v-model="closePopover1">
-      <p class="text">Répartition des bornes par département :</p>
-      <RenderingChart :chart-data="chartData" class="chart" />
+
+    <PlusButton
+      v-model="closePopover1"
+      class="plus-button"
+      @open="closePopover(1)"
+    >
+      <p class="text">
+        Répartition des bornes par département :
+      </p>
+      <RenderingChart
+        :chart-data="chartData"
+        class="chart"
+      />
+    </PlusButton>
+    <PlusButton class="plus-button">
+      <p class="text">
+        Répartition des bornes par département :
+      </p>
     </PlusButton>
   </div>
 </template>
@@ -30,7 +59,7 @@ import BoatSVG from "@/assets/Persos/bateau jauneFichier 4.svg";
 import PlusButton from "@/components/PlusButton";
 import Car from "@/components/Car";
 
-import RenderingChart from '@/components/Saynettes/RenderingChart';
+// import RenderingChart from '@/components/Saynettes/RenderingChart';
 
 export default {
   name: "Borne",
@@ -40,11 +69,12 @@ export default {
     TrainSVG,
     BoatSVG,
     Car,
-    RenderingChart,
+    // RenderingChart,
     PlusButton
   },
   data: () => ({
-    nextPressed: false
+    // nextPressed: false,
+    carMoving: true
   }),
   computed: {
     chartData() {
@@ -71,6 +101,9 @@ export default {
       }
     }
   },
+  mounted() {
+    this.carMoving = false;
+  },
   methods: {
     onNext() {
       let train = this.$refs.movingTrain.getBoundingClientRect();
@@ -92,9 +125,22 @@ export default {
 </script>
 
 <style scoped>
-/* .car {
+.car {
   z-index: 5;
-} */
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-name: car-arrive;
+}
+
+/* TODO: animation for all browsers */
+@keyframes car-arrive {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
 
 .train {
   position: absolute;
@@ -142,12 +188,12 @@ export default {
   }
 }
 
-.chart {
+/* .chart {
   position: absolute;
   width: 70%;
   left: 5%;
   top: 20%;
-}
+} */
 
 .plus-button {
   position: absolute;
