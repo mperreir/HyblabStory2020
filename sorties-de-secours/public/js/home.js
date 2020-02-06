@@ -5,6 +5,7 @@ $(document).ready(function() {
     goToByScroll("loading-section");
   });
 
+<<<<<<< HEAD
   $("#button-start").hover(function() {
     $("#img-start").css("opacity", "1");
   },
@@ -14,4 +15,6 @@ $(document).ready(function() {
 
 
 
+=======
+>>>>>>> sorties-de-secours
 });
