@@ -11,10 +11,14 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
 
-  <!-- fullPage.js 2.6.6 -->
+  <!-- fullPage.js 2.8.0 -->
   <!-- CSS v3.0.8 -->
   <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.0/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.0/jquery.fullPage.min.js"></script>
+
+  <!-- FontAwesome -->
+  <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
 
   <!-- Konva -->
   <script src="https://unpkg.com/konva@4.0.0/konva.min.js"></script>
@@ -23,8 +27,14 @@
   <link rel="stylesheet" href="css/style.css" />
   <script type="text/javascript" src="js/index.js" defer></script>
 
+    <!-- FONTS -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nimbus-sans-l" type="text/css"/>
+
     <!-- home -->
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/hamburger.css" />
+    <link rel="stylesheet" href="css/choice.css" />
+    <link rel="stylesheet" href="css/sound.css" />
 
     <!-- loading -->
     <link rel="stylesheet" href="css/loading.css" />
@@ -32,7 +42,7 @@
     <!-- expo -->
     <link rel="stylesheet" href="css/expo.css">
     <script type="text/javascript" src="js/expo.js"></script>
-    
+
     <!-- dance -->
     <link rel="stylesheet" href="css/dance.css">
     <script type="text/javascript" src="js/dance.js"></script>
@@ -44,23 +54,27 @@
 
 </head>
 <body>
+  <!-- FULLPAGE -->
   <div id="fullpage">
-    
+
     <!-- HOME -->
     <section class="vertical-scrolling">
-      <div id="home-wrapper">
-
-        <div id="home-logo-wrapper">
-
-          <span id='home-experience'>L'expérience</span>
-
-          <img
-            src='img/logo.png'
-            id='home-logo' />
-
-        </div>
-
+      <div id="hamburger">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="categories">
+          <li><a href="#expo" class="menuLink">Exposition</a></li>
+          <li><a href="#dance" class="menuLink">Danse</a></li>
+          <li><a href="#music" class="menuLink">Musique</a></li>
+          <li><a href="#about" class="menuLink">A propos</a></li>
+          <li><a href="#contact" class="menuLink">Contact</a></li>
+        </ul>
       </div>
+      <img src='img/logo_sorties_de_secours.png' id='home-logo' />
+      <img src='img/logo_experience.png' id='home-logo-experience' />
+      <a href="#presentation"><img src='img/arrow_down.png' id='arrow-down' /></a>
     </section>
     <!-- END HOME -->
 
@@ -84,11 +98,25 @@
     </section>
     <!-- END LOADING -->
 
-    <section class="vertical-scrolling">
-      <h2>fullPage.js</h2>
-      <h3>This is the third section</h3>
+    <!-- PRESENTATION -->
+    <section class="vertical-scrolling" id="presentation-section">
+      <h1>Présentation</h1>
     </section>
+    <!-- END PRESENTATION -->
 
+    <!-- CHOICE -->
+    <section class="vertical-scrolling" id="choice-section">
+      <div class="expChoice">
+        <h1>Exposition</h1>
+      </div>
+      <div class="expChoice">
+        <h1>Danse</h1>
+      </div>
+      <div class="expChoice">
+        <h1>Musique</h1>
+      </div>
+    </section>
+    <!-- END CHOICE -->
 
     <!-- EXPO -->
     <section
@@ -129,7 +157,7 @@
 
       <div id="dance-wrapper">
         <div id="dance-trail-layer">
-          
+
         </div>
       </div>
 
@@ -150,6 +178,8 @@
     
   </div>
 
+  </div>
+  <!-- END FULLPAGE -->
 </body>
 </html>
 
@@ -161,7 +191,7 @@
   </div>
   <div class="horizontal-scrolling">
     <h2>fullPage.js</h2>
-    <h3>This is the second slide</h3> 
+    <h3>This is the second slide</h3>
     <p class="end">Thank you!</p>
   </div>
 </section>

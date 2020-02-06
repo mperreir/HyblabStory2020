@@ -71,11 +71,13 @@ $(document).ready(function() {
             angleDeg = 50;
         }
 
-        if (angleDeg >= 15 && angleDeg < 30) {
+        if (angleDeg < 15 || angleDeg > 50) {
+            console.log("Musique OFF");
+        } else if (angleDeg >= 15 && angleDeg < 30) {
             console.log("Musique 1");
         } else if (angleDeg >= 30 && angleDeg < 40) {
             console.log("Musique 2");
-        } else if (angleDeg >= 40 && angleDeg < 50) {
+        } else if (angleDeg >= 40 && angleDeg <= 50) {
             console.log("Musique 3");
         }
 
