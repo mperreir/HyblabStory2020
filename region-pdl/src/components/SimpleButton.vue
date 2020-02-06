@@ -37,7 +37,7 @@ export default {
 
 .classic-btn {
   position: absolute;
-  border-radius: 10px 10px;
+  border-radius: 10px;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
