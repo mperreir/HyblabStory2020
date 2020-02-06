@@ -1,10 +1,15 @@
+#aos-logo {
+  position: relative;
+  top: 10%;
+}
+
 #presentation-section {
   position: relative;
   background-color: white;
 }
 
 #presentation-logo {
-	position: absolute;
+	position: relative;
 	top: 10%;
 	left: 50%;
 	transform: translate(-50%, -50%);

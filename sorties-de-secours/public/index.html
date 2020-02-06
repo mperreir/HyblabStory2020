@@ -5,6 +5,14 @@
   <meta charset="utf-8">
   <title>Hyblab 2020 - Sorties de Secours</title>
 
+  <!-- musique en entrée; il faut cliquer quelque part pour l'activer -->
+  <audio id="generalMusic" src="sons/ambiance3.mp3" loop="true" autoplay="true">
+    <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
+  </audio>
+  <audio id="voice" src="" autoplay>
+    <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
+  </audio>
+
   <!-- jQuery -->
   <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -12,9 +20,8 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
-  <!-- CSS v3.0.8 -->
-  <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.0/vendors/scrolloverflow.min.js"></script>
+  <!-- BSL -->
+  <script src="js/bodyScrollLock.js"></script>
 
   <!-- FontAwesome -->
   <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
@@ -25,11 +32,17 @@
   <!-- CUSTOMS -->
   <link rel="stylesheet" href="css/style.css" />
   <script type="text/javascript" src="js/index.js" defer></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- FONTS -->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nimbus-sans-l" type="text/css"/>
 
-    <!-- home -->
+    <!-- SOUND -->
+    <script type="text/javascript" src="js/sound.js"></script>
+
+
+  <!-- home -->
     <link rel="stylesheet" href="css/home.css" />
     <script type="text/javascript" src="js/home.js"></script>
     <link rel="stylesheet" href="css/hamburger.css" />
@@ -74,14 +87,29 @@
           <li><a href="#contact" class="menuLink">Contact</a></li>
         </ul>
       </div>
-      <img src='img/logo_sorties_de_secours.png' id='home-logo' />
-      <img src='img/arrow_down.png' id='arrow-down' style="cursor: pointer;"/>
+      <div id="logo-wrapper">
+        <img src='img/logo_sorties_de_secours.png' id='home-logo' />
+        <img src='img/logo_experience.png' id='home-experience' />
+      </div>
+      <!-- <div data-aos="fade-up" id="arrow-aos">
+        <img src='img/arrow_down.png' id="arrow-down"/>
+      </div> -->
+      <div id="start-experience">
+        <img src="img/yellow-brush.png" id="img-start"/>
+        <div id="button-start"><p id="button-start-text">Commencer l'expérience</p></div>
+      </div>
     </section>
     <!-- END HOME -->
 
     <!-- LOADING -->
     <section class="section" id="loading-section">
-      <div id="sound-content">
+      <div data-aos="fade-up"
+          data-aos-delay="50"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center" id="sound-content">
         <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="128" height="128">
           <g>
             <title>Sound Icon</title>
@@ -97,12 +125,31 @@
 
         <p id="soundText">Pour profiter au maximum de cette expérience,<br>veuillez augmenter le volume.</p>
       </div>
+      <div data-aos="fade-up"
+          data-aos-delay="50"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false" id="mouse-aos">
+        <div class="scroll-down">
+          <div class="mousey" id="mouse-down">
+            <div class="scroller"></div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- END LOADING -->
 
     <!-- PRESENTATION -->
     <section class="section" id="presentation-section">
-      <img src='img/logo_sorties.png' id='presentation-logo' />
+      <div data-aos="fade-up"
+          data-aos-delay="50"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false" id="aos-logo">
+        <img src='img/logo_sorties.png' id='presentation-logo' />
+      </div>
     </section>
     <!-- END PRESENTATION -->
 
@@ -187,6 +234,12 @@
             class="section"
             id="music-workshop-section">
 
+        <audio id="vinyl-noise" src="sons/music_workshop/vinyl_noise.m4a" loop volume="2">
+            <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
+        </audio>
+        <audio id="vinyl" src="sons/baloji/Peau de Chagrin Bleu de Nuit.mp3">
+        <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
+        </audio>
       <div id="music-workshop-konva">
 
       </div>
