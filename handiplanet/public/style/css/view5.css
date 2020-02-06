@@ -1,0 +1,160 @@
+#fifth-view {
+  height: 100%;
+  width: 100vw;
+}
+#fifth-view img {
+  position: absolute;
+}
+#fifth-view #decor-view-5 {
+  height: 90vh;
+  width: 90vw;
+  position: absolute;
+  left: 5vw;
+  bottom: 10vh;
+}
+#fifth-view #decor-view-5 #fond-view-5 {
+  width: 80%;
+  height: 80%;
+  bottom: 0%;
+  left: 10%;
+  position: absolute;
+  background-image: url("../../assets/view5/fond-view-5.svg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+#fifth-view p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 29px;
+  color: #426262;
+}
+#fifth-view p {
+  position: absolute;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 29px;
+  color: #426262;
+  margin: 0px !important;
+  bottom: 15%;
+  left: 25%;
+  max-width: 25%;
+}
+#fifth-view p em {
+  font-weight: bold;
+  color: #CB563E;
+}
+#fifth-view #view5-smartphone {
+  right: 15%;
+  bottom: 0%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 15vh;
+}
+#fifth-view #view5-croissant {
+  left: 22%;
+  bottom: 43%;
+  width: 20%;
+}
+#fifth-view #view5-omelette {
+  left: 45%;
+  bottom: 40%;
+  width: 5%;
+}
+#fifth-view #view5-pointille-1 {
+  left: 24%;
+  bottom: 45%;
+  width: 15%;
+}
+#fifth-view #view5-pointille-2 {
+  left: 43%;
+  bottom: 36%;
+  width: 10%;
+}
+#fifth-view #view5-cercle-1 {
+  left: 58%;
+  width: 1%;
+  bottom: 70%;
+}
+#fifth-view #view5-cercle-2 {
+  left: 25%;
+  width: 3%;
+  bottom: 38%;
+}
+#fifth-view #view5-cercle-3 {
+  left: 30%;
+  width: 1%;
+  bottom: 10%;
+}
+#fifth-view #view5-cercle-4 {
+  left: 80%;
+  width: 2%;
+  bottom: 50%;
+}
+#fifth-view button {
+  width: 15%;
+  position: absolute;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#fifth-view button p {
+  position: relative;
+  min-width: 50%;
+}
+#fifth-view button img {
+  position: relative;
+  width: 20%;
+  height: 100%;
+}
+#fifth-view button:hover {
+  transform: scale(1.2, 1.2);
+}
+#fifth-view button img {
+  position: relative;
+  width: 50%;
+}
+#fifth-view #view5-button-hotel-a {
+  left: 33%;
+  top: 20%;
+}
+#fifth-view #view5-button-hotel-b {
+  left: 70%;
+  top: 33%;
+}
+#fifth-view .view5-circle {
+  box-shadow: 0 0 3px 0 #426262;
+  -webkit-animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  border-radius: 50%;
+}
+@-webkit-keyframes pulse-view5 {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+@-moz-keyframes pulse-view5 {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+@-ms-keyframes pulse-view5 {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+@keyframes pulse-view5 {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+
+/*# sourceMappingURL=view5.css.map */

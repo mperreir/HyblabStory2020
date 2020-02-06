@@ -1,0 +1,222 @@
+/*
+ * File Created: 2020-01-28 13:52:00
+ * Author: Pierre MAUPIN
+ * Copyright - 2020 Pierre MAUPIN
+ */
+
+#contexte {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+
+  #contexte-middle {
+    width: 80vw;
+    height: 80vh;
+    margin: 0px 10vw;
+    border-bottom: 2px solid #5A8D8C;
+    position: relative;
+
+    /*img {
+      position: absolute;
+      bottom: -2px;
+    }*/
+
+    #contexte-red-tiny-dot{
+      position: absolute;
+      z-index: 4;
+      bottom: 25%;
+      left: 85%;
+      width: 1.5vh;
+      height: 1.5vh;
+      border-radius: 100%;
+      background-color: #CB563E;
+    }
+    #contexte-yellow-tiny-dot{
+      position: absolute;
+      z-index: 4;
+      bottom: 75%;
+      left: 45%;
+      width: 1.5vh;
+      height: 1.5vh;
+      border-radius: 100%;
+      background-color: #F9E9D7;
+    }
+
+    #contexte-green-ring{
+      position: absolute;
+      z-index: 4;
+      top: 45%;
+      right: 15%;
+      width: 4vh;
+      height: 4vh;
+      border-radius: 100%;
+      border: 1vh solid #5A8D8C;
+    }
+
+    #contexte-white-ring{
+      position: absolute;
+      z-index: 4;
+      bottom: 40%;
+      right: 50%;
+      width: 4vh;
+      height: 4vh;
+      border-radius: 100%;
+      border: 5px solid #ffffff;
+    }
+
+    #contexte-splash-img{
+      z-index: 1;
+      max-height: 100%;
+      max-width: 60%;
+      left: 40%;
+      position: absolute;
+      bottom: -2px;
+    }
+
+    &>div {
+      position: absolute;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      justify-content: flex-start;
+      right: 50%;
+      bottom: -1px;
+      max-height: 70%;
+      max-width: 50%;
+
+      #contexte-character-img {
+        z-index: 5;
+        position: relative;
+        height: 55vh;
+        max-width: 100%;
+      }
+
+    }
+
+    
+    #context-text{
+      z-index: 1;
+      position: absolute;
+      top: 35vh;
+      .contexte-active{
+        display: block;
+      }
+      .contexte-nonActive{
+        display: none;
+      }
+    }
+
+    #contexte-questions{
+      margin-top: 2vh;
+      position: absolute;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      width: 70vw;
+      right: 20%;
+      bottom: 1vh;
+
+      .contexte-done{
+        display: none !important; 
+      }
+      .contexte-question{
+        display: flex;
+        flex-direction: columnS;
+        align-items: center;
+        width: 35vw;
+        background-color: #426262;
+        border-radius: 40px;
+        padding-left: 12vw;
+        margin-top: 2vh;
+        height: 8vh;
+        cursor: pointer;
+
+        &:hover > .contexte-img{
+          box-shadow: 0 0 0 10px white;
+        }
+
+        .contexte-choix{
+          color: white;
+          font-family: Nunito;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 10px;
+          width: 20vw;
+        }
+        .contexte-img{
+          //margin-left: 5vw;
+          background-color: white;
+          border-radius: 4vh;
+          height: 4vh;
+          width: 4vh;
+          box-shadow: 0 0 0 1vh white;
+          align-items: center;
+          
+          img{
+            position: absolute;
+            margin-left: auto;
+            z-index: 100;
+            height: 4vh;
+            width: 4vh;
+            align-items: center;
+          }
+        }
+        #contexte-info-img{
+          font-family: Nunito;
+          color: #426262;
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+    }
+    
+
+    
+
+    
+    article {
+      z-index: 7;
+      position: absolute;
+      left: 55%;
+      max-width: 30%;
+      bottom: 10%;
+      p{
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 29px;
+        color: #426262;
+      }
+
+      span{
+        color: #cb563e;
+      }
+    }
+  }
+
+  footer {
+    width: 100vw;
+    height: 20vh;
+    position: relative;
+
+    #contexte-next-button {
+      position: absolute;
+      right: 0px;
+      background-color: #CB563E;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 34px;
+      text-transform: uppercase;
+      color: #ffffff;
+      border-bottom-left-radius: 50px;
+      border-top-left-radius: 50px;
+      padding: 10px 30px;
+      padding-right: 50px;
+      margin: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

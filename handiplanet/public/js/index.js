@@ -3,16 +3,16 @@
 * Author: Christophe SONNEVILLE
 * Copyright - 2020 Christophe SONNEVILLE
 */
-view = new View12Gratuit(document.getElementById('view-container'));
-view.load();
-//window.scrollTo(0,0);
+
+view = new View1(document.getElementById('view-container'));
 
 window.addEventListener('load', function () {
     function scroll(){
         window.scrollTo(0,window.innerHeight);
     }
-    
+
     function setSmall(){
+        //this.console.log("gds");
         if(medium.className == "text selected"){
             medium.className = "text diselected";
         }else medium.className = "text";
@@ -22,10 +22,7 @@ window.addEventListener('load', function () {
         }else large.className = "text";
         
         //mettre les textes en small
-        for(var i = 0; i < paragraphs.length; i++)
-        {
-            paragraphs[i].style.fontSize = "18px";
-        }
+        body.className = "body-small";
     }
     function setMedium(){
         if(small.className == "text selected"){
@@ -37,10 +34,7 @@ window.addEventListener('load', function () {
         }else large.className = "text";
         
         //mettre les textes en medium
-        for(var i = 0; i < paragraphs.length; i++)
-        {
-            paragraphs[i].style.fontSize = "21px";
-        }
+        body.className = "body-medium";
     }
     function setLarge(){
         if(small.className == "text selected"){
@@ -52,10 +46,7 @@ window.addEventListener('load', function () {
         }else medium.className = "text";
         
         //mettre les textes en larges
-        for(var i = 0; i < paragraphs.length; i++)
-        {
-            paragraphs[i].style.fontSize = "25px";
-        }
+        body.className = "body-large";
     }
     
     function mute(){
@@ -89,12 +80,12 @@ window.addEventListener('load', function () {
             toggle.style.background = '#cb563e';
             cont = true;
             //document.body.style.filter = "grayscale(100%)";
-            document.body.style.filter= "hue-rotate(200deg)";
-            //document.body.style.filter = "contrast(150%)";
+            //document.body.style.filter= "hue-rotate(200deg)";
+            document.body.style.filter = "grayscale(1) contrast(1.25)";
         }
     }
 
-
+    
     var button = document.getElementById('begin-button');
     button.onclick = scroll;
     
@@ -123,6 +114,21 @@ window.addEventListener('load', function () {
     var cont = false;
     switchButton.onclick = contraste;
 
+    const body = this.document.body;
+    text = document.getElementsByClassName('');
 
-    text = document.getElementsByClassName('')
+    var textSize = 1;
+    if(small.className == "text selected"){
+        //this.console.log("gds");
+        textSize = 1;
+        setSmall();
+    }
+    else if(medium.className == "text selected"){
+        textSize = 2;
+        setMedium();
+    }
+    else if(large.className == "text selected"){
+        textSize = 3;
+        setLarge();
+    }
 });	

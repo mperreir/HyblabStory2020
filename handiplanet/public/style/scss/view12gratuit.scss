@@ -3,7 +3,7 @@
  * Created Date: Wednesday February 5th 2020
  * Author: Pierre Le Guen
  * -----
- * Last Modified: Thursday, 6th February 2020 10:58:56 am
+ * Last Modified: Thursday, 6th February 2020 11:25:29 am
  * Modified By: Pierre Le Guen
  * -----
  * Copyright (c) 2020 Pierre Le Guen
@@ -60,7 +60,6 @@
       position: absolute;
       right: 22%;
       top: 55%;
-      width: 3%;
       transform: rotate(-40deg);
       animation: xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
 
@@ -68,6 +67,7 @@
     .interrogation2::after {
       content: url(../../assets/view12/interrogation.svg);
       display: block;
+      zoom: 0.5;
       animation: yAxis 6s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
     }
 
@@ -75,13 +75,13 @@
       position: absolute;
       right: 20%;
       top: 35%;
-      width: 5%;
       animation: xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
     }
     
     .loupe::after {
       content: url(../../assets/view12/loupe.svg);
       display: block;
+      zoom: 0.7;
       animation: yAxis 6s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
     }
     
@@ -114,9 +114,9 @@
     }
     #desc-gratuit {
       position: absolute;
-      right: 15%;
+      right: 5%;
       top: 0%;
-      width: 30%;
+      width: 35%;
     }
 
     footer {          
