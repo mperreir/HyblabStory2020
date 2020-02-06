@@ -18,13 +18,8 @@
 }
 
 
-/*#container1_dommage{
-	float:left;
-
-}*/
-
 #container2_dommage{
-	left:40%;
+	left:45%;
 	top:30%;
 }
 
@@ -55,13 +50,20 @@
 }
 
 #maquette1_dommage{
-	margin-top:18%;
+	margin-top:12%;
 	margin-left:8%;
 	width:26%;
+
 }
 
+
 #container1_dommage p{
-	margin-left:15%;
+	margin-left:12%;
+}
+
+#dmg1 p{
+	margin-left:12%;
+	margin-top:7%;
 }
 
 #container1_dommage, #container2_dommage{
@@ -82,9 +84,13 @@
     #container1_dommage p, #paraph_dommage p,.dommage-suivant{
         font-size: 3vw;
     }
+	
+	#container1_dommage p, #dmg1 p{
+        font-size: 4vw;
+    }
 
     #text_dommage p{
-		font-size:6vh;
+		font-size:6vw;
 	}
 
 
@@ -93,12 +99,16 @@
 
 @media screen and (min-aspect-ratio: 16/9){
     
-   #container1_dommage p, #paraph_dommage p,.dommage-suivant{
+    #paraph_dommage p,.dommage-suivant{
         font-size: 4vh;
     }
+	
+	  #container1_dommage p, #dmg1 p{
+        font-size: 6vh;
+    }
 
-	#text_dommage p{
-		font-size:9vh;
-	}
+		#text_dommage p{
+			font-size:9vh;
+		}
 
 }

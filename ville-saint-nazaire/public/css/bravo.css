@@ -50,18 +50,17 @@
  #bravo-notesSuivantes {
 	position: absolute;
 	left: 61%;
-	padding-top: 0.2%;
 
 }
 
 #maquette1_bravo{
-	margin-top:18%;
+	margin-top:15%;
 	margin-left:8%;
-	width:26%;
+	width:25%;
 }
 
 #container1_bravo p{
-	margin-left:15%;
+	margin-left:12%;
 }
 
 #container1_bravo, #container2_bravo{
@@ -83,8 +82,12 @@
         font-size: 3vw;
     }
 
+    #container1_bravo p{
+        font-size: 4vw;
+    }
+
     #text_bravo p{
-		font-size:6vh;
+		font-size:6vw;
 	}
 
 
@@ -93,8 +96,11 @@
 
 @media screen and (min-aspect-ratio: 16/9){
     
-   #container1_bravo p, #paraph_bravo p,.bravo-suivant{
+    #container1_bravo p, #paraph_bravo p,.bravo-suivant{
         font-size: 4vh;
+    }
+    #container1_bravo p{
+        font-size: 5.5vh;
     }
 
 	#text_bravo p{
