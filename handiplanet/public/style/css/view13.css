@@ -1,16 +1,27 @@
 /*
- * File Created: 2020-01-28 13:52:00
- * Author: Pierre MAUPIN
- * Copyright - 2020 Pierre MAUPIN
+ * Project: handigo
+ * Created Date: Thursday February 6th 2020
+ * Author: Pierre Le Guen
+ * -----
+ * Last Modified: Thursday, 6th February 2020 4:43:10 pm
+ * Modified By: Pierre Le Guen
+ * -----
+ * Copyright (c) 2020 Pierre Le Guen
  */
 #view13 {
   width: 100vw;
   height: 100vh;
   background-color: #ffffff;
 }
+#view13 #view13-graph {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+}
 #view13 #view-13-middle {
   width: 80vw;
-  height: 80vh;
+  height: 100vh;
   margin: 0px 10vw;
   position: relative;
   display: flex;
@@ -71,10 +82,8 @@
   position: absolute;
   left: 50%;
   width: 40%;
-  bottom: 5%;
-  z-index: 7;
-  flex: 1;
-  margin: 5vh 5vw 5vh 0;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 #view13 #view-13-middle article p {
   font-family: Nunito;
@@ -96,8 +105,9 @@
 }
 #view13 footer {
   width: 100vw;
-  height: 20vh;
-  position: relative;
+  position: absolute;
+  bottom: 5%;
+  right: 0;
 }
 #view13 footer #view-13-next-button {
   position: absolute;
