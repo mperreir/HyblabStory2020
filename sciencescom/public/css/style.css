@@ -1,7 +1,7 @@
 /* Polices d'écriture */
 @font-face {
     font-family: Avenir;
-    src: url("fonts/AvenirLTStd-Medium.otf");
+    src: url("../fonts/AvenirLTStd-Medium.otf");
     font-weight: normal;
 }
 
@@ -17,7 +17,44 @@
     margin: 0;
 }
 
+/* Logos */
+#logos {
+    font-size: 35px;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    height: 1em;
+}
+
+.logo {
+    height: 1em;
+    display: inline-block;
+}
+
+.logo-separator {
+    width: 0.4em;
+    display: inline-block;
+}
+
+.horizontal-center {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
 /* Frame */
+.slide {
+    width: 100vw !important;
+    height: 100vh !important;
+    float: left;
+    margin: 0 1px 0 0;
+    padding: 0;
+    background: #333;
+    color: #ddd;
+    text-align: center;
+    cursor: pointer;
+}
 
 .frame {
     height: 100%;
@@ -127,4 +164,40 @@ body {
 
 .pages li.active {
     background: #666;
+}
+
+
+/* Cover */
+#firstpage-slide {
+    background-color: #002B5B;
+}
+
+#never-stop-daring {
+    position: absolute;
+    width: 55vh;
+    top: 15vh
+}
+
+#bottompart{
+    position: absolute;
+    bottom: 104vh;
+}
+
+.indication {
+    font-family: Avenir;
+    color: white;
+    font-size: 30;
+    line-height: normal;
+}
+
+#mouse-scroll-tip img {
+    height: 80px;
+    margin-top: 25px;
+}
+
+#mouse-scroll-tip p {
+    font-family: Avenir;
+    font-size: 13;
+    margin-top: 15px;
+    color: #DD4C73;
 }

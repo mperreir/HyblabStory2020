@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hyblab 2020 Auden'story</title>
-    
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/coverstyle.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/modernizr.js"></script>
     <script src="js/sly.min.js"></script>
@@ -17,15 +17,9 @@
 
 <body>
     <div class="frame oneperframe" id="oneperframe">
-        <ul class="clearfix ">
+        <ul class="clearfix">
 
-            <li class="slide" id="firstpage-slide">
-                <div id="logos">
-                    <img src="img/logo/LOGO_2018_3_CROPPED.png" class="logo" />
-                    <div class="logo-separator"></div>
-                    <img src="img/logo/120_ANS_QUAD_WHITE.png" class="logo" />
-                </div>
-
+            <li class="slide" id="firstpage-slide" style="line-height: 100%;">
                 <img src="img/cover/NEVER_STOP_DARING.png" id="never-stop-daring" class="horizontal-center" />
 
                 <div id="bottompart" class="horizontal-center">
@@ -39,6 +33,12 @@
 
             <%- include('slides/start.ejs') -%>
         </ul>
+    </div>
+
+    <div id="logos">
+        <img src="img/logo/LOGO_2018_3_CROPPED.png" class="logo" />
+        <div class="logo-separator"></div>
+        <img src="img/logo/120_ANS_QUAD_WHITE.png" class="logo" />
     </div>
 </body>
 
