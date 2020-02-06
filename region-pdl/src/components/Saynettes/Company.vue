@@ -24,7 +24,7 @@
     <SimpleButton v-if="this.$store.state.character === 'dubois'" text="Voir l'école" :width="23" :x="75" :y="90" @click.native="onNextSchool" />
 
 
-    <CompanySVG class="svg"/>
+    <CompanySVG class="svg"/>  
   </div>
 </template>
 
@@ -102,25 +102,25 @@ export default {
 
 .plus1 {
   position: absolute;
-  top: 80vh;
-  left: 120vh;
+  top: 80%;
+  left: 85%;
 }
 
 .plus2 {
   position: absolute;
-  top: 45vh;
-  left: 100vh;
+  top: 45%;
+  left: 70%;
 }
 
 .plus3 {
   position: absolute;
-  top: 43vh;
-  left: 19.5vh;
+  top: 43%;
+  left: 13.5%;
 }
 
 .plus4 {
   position: absolute;
-  top: 90vh;
-  left: 19.5vh;
+  top: 90%;
+  left: 13.5%;
 }
 </style>
