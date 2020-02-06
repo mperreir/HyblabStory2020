@@ -18,7 +18,7 @@
   z-index: 10;
 }
 
-#image_bureau{
+#image1{
   position: absolute;
   top:10%;
   left:-20%;
@@ -27,7 +27,7 @@
   z-index: 1;
 }
 
-#image_commission{
+#image2{
   position: absolute;
   top:30%;
   left:-20%;
@@ -35,7 +35,7 @@
   height: auto;
   z-index: 2;
 }
-#image_salon{
+#image3{
   position: absolute;
   top:55%;
   left:-12%;
