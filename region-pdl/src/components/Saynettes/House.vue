@@ -83,7 +83,7 @@
     <PlusButton
       v-model="closePopover2"
       class="plus2"
-      :width="30"
+      :width="35"
       @open="closePopover(2)"
     >
       <p v-if="$store.state.character === 'moreau'">
@@ -102,7 +102,7 @@
       v-show="indexHouse == '1'"
       v-model="closePopover3"
       class="plus3"
-      :width="30"
+      :width="25"
       @open="closePopover(3)"
     >
       <p>
