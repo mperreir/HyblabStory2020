@@ -241,7 +241,7 @@
   display: none;
 }
 #app-view #overlay-footer {
-  z-index: 9000;
+  z-index: -1;
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -251,7 +251,6 @@
 }
 #app-view #overlay-footer::after {
   content: "";
-  z-index: 9999;
   border-top: 2px solid #5A8D8C;
   position: absolute;
   top: -2px;
@@ -268,14 +267,6 @@
 }
 #app-view:hover > button {
   box-shadow: 50px 50px 0 200px rgba(203, 86, 62, 0.3), 0 0 0 10px rgba(203, 85, 62, 0.363);
-}
-
-#clipper {
-  position: absolute;
-  top: 0;
-  height: 80vh;
-  width: 80vw;
-  margin: 0 10vh;
 }
 
 /*# sourceMappingURL=app.css.map */

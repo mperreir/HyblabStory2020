@@ -11,11 +11,7 @@
 
 class View12Gratuit extends View {
   constructor (el) {
-    super('view12gratuit', el || document.getElementById('view-container'))
-    this.load().then(() => {
-      this.view = document.getElementById(this.viewName)
-      this.linkElements()
-    })
+    super('view12gratuit', el)
   }
 
   linkElements () {
@@ -23,15 +19,40 @@ class View12Gratuit extends View {
     this.ellipse = document.getElementById('ellipse')
 
     // Parallax for background elements
-    const vc = document.getElementById('view-container')
-    vc.addEventListener('mousemove', e => {
-      var relX = e.pageX - vc.offsetLeft
-      var relY = e.pageY - vc.offsetTop
-      TweenMax.to(this.ellipse, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * 10,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * 10,
-        ease: Power2.easeOut
-      })
-    })
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX - window.innerWidth / 2;
+      const y = e.clientY - window.innerHeight / 2;
+      this.ellipse.style.transform = `translateX(${x * -0.1}px) translateY(${y * -0.1}px)`;
+    });
+
+    this.btNext = document.getElementById('view-12g-next-button')
+    this.btNext.addEventListener('click', ()=>{
+      this.btNext.style.transition = "opacity 0.2s";
+      this.btNext.style.opacity = "0";
+      this.switchToView12Premium();
+    });
+  }
+
+  async switchToView12Premium(){
+    // Construction d'une div temporaire positionnée en dehors
+    // de l'écran pour faire entrer la prochaine view
+    const tempDiv = document.createElement('div');
+    document.getElementById('view-container').appendChild(tempDiv);
+    tempDiv.style.position = "absolute";
+    tempDiv.style.top = '0';
+    tempDiv.style.right = '100%';
+
+    // Création de la prochaine view
+    const nextView = new View12Premium(tempDiv);
+    await nextView.load();
+    this.view.style.animation = 'scrollTransitionHorizontalInvert 1s forwards';
+    this.view.style.webkitAnimation = 'scrollTransitionHorizontalInvert 1s forwards';
+    tempDiv.style.animation = 'scrollTransitionHorizontalInvert 1s forwards';
+    tempDiv.style.webkitAnimation = 'scrollTransitionHorizontalInvert 1s forwards';
+    window.scrollBarController.setPosition(1);
+    setTimeout(() => {
+        tempDiv.replaceWith = nextView.view;
+        this.view.parentNode.removeChild(this.view);
+    }, 1000);
   }
 }
