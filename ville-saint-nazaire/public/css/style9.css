@@ -3,18 +3,24 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-#next10{
-  position: absolute;
-  bottom:5%;
-  right: 16%;
-}
-#next10 img{
-  
+
+#next10-txt {
+ position: absolute;
+ left: 65%;
+ padding-top: 0.2%;
+ color: #255A85;
+ font-family: "Vibur";
 }
 
-#next10 p{
-  font-family:"Vibur";
-  color:#255A85;
+#next10-img {
+ position: absolute;
+ width: 3%;
+ height: 5%;
+ left: 61%;
+}
+
+#next10:hover {
+ cursor: pointer;
 }
 
 #barre9{
