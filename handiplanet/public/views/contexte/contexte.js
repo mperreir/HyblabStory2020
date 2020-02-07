@@ -9,9 +9,14 @@ class Contexte extends View {
         this.text1 = document.getElementById('context-1');
         this.text2 = document.getElementById('context-2');
         this.text3 = document.getElementById('context-3');
+        this.text4 = document.getElementById('context-4');
         this.photo = document.getElementById('contexte-photo');
+        this.contact = document.getElementById('contexte-contact');
+        this.reseau = document.getElementById('contexte-reseau');
+        this.info = document.getElementById('contexte-info');
+
         this.photo.addEventListener('click', () => {
-            this.contact.className = "contexte-done";
+            this.photo.className = "contexte-done";
             this.position = this.position + 1;
             if (this.position == 2) {
                 this.text1.className = "contexte-nonActive";
@@ -27,7 +32,7 @@ class Contexte extends View {
             }
             this.switchToPhoto();
         });
-        this.contact = document.getElementById('contexte-contact');
+        
         this.contact.addEventListener('click', () => {
             this.contact.className = "contexte-done";
             this.position = this.position + 1;
@@ -45,7 +50,7 @@ class Contexte extends View {
             }
             this.switchToContact();
         });
-        this.reseau = document.getElementById('contexte-reseau');
+        
         this.reseau.addEventListener('click', () => {
             this.reseau.className = "contexte-done";
             this.position = this.position + 1;
@@ -63,7 +68,7 @@ class Contexte extends View {
             }
             this.switchToReseau();
         });
-        this.info = document.getElementById('contexte-info');
+        
         this.info.addEventListener('click', () => {
             this.info.className = "contexte-done";
             this.position = this.position + 1;

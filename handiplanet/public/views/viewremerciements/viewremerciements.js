@@ -65,6 +65,7 @@ class ViewThanks extends View {
   }
 
   async switchToView1() {
+    window.contextView = null;
     transitionHorizontalInvert(this.view, View1);
   }
 }
