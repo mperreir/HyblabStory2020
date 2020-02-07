@@ -14,11 +14,39 @@ function playAnimation(id) {
 }
 
 
-function playAnimationThenNext(id, n = 1) {
-    playAnimation(id);
-    setTimeout(function () {
-        for (i = 0; i < n; i++) {
-            $('#oneperframe').sly('next');
-        }
-    }, 400);
+function nowToSeventies(jumps) {
+    var $video = document.getElementById("doornow");
+
+    $video.playbackRate = 0.5;
+    $video.currentTime = 0;
+    $video.style.visibility = "visible";
+
+    $video.play();
+    $("#decor").fadeOut(1000);
+
+
+    $video.addEventListener('ended', () => {
+        document.getElementById("decor").setAttribute("src", "img/decors/decor2.png");
+
+        var $nextvideo = document.getElementById("door70s_rev");
+        $nextvideo.playbackRate = 0.5;
+        $nextvideo.currentTime = 0;
+        $nextvideo.style.visibility = "visible";
+
+        $video.style.visibility = "hidden";
+
+        $nextvideo.play();
+        $("#decor").fadeIn(1000);
+
+        $nextvideo.addEventListener('ended', () => {
+            $nextvideo.style.visibility = "hidden";
+        }, false);
+
+    }, false);
+
+
+
+    for (i = 0; i < jumps; i++) {
+        $('#oneperframe').sly('next');
+    }
 }

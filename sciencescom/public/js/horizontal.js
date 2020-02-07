@@ -20,7 +20,7 @@ jQuery(function ($) {
             startAt: 0,
             scrollBar: $wrap.find('.scrollbar'),
             scrollBy: 1,
-            speed: 1000,
+            speed: 4000,
             elasticBounds: 1,
             easing: 'easeOutExpo',
             dragHandle: 1,

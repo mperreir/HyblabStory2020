@@ -19,6 +19,23 @@
 
             <div class="wrap" style="width: 100vw; margin: 0;">
 
+
+                <img src="img/decors/decor.png" id="decor" style="width: 100vw; height: 120vh; left: 0; top: -10vh; position: absolute;">
+
+                <video class="dooranimation" id="doornow">
+                    <source src="vid/doornow.webm" type="video/webm">
+                </video>
+                <video class="dooranimation" id="door70s">
+                    <source src="vid/door70s.webm" type="video/webm">
+                </video>
+                <video class="dooranimation" id="door70s_rev">
+                    <source src="vid/door70s_rev.webm" type="video/webm">
+                </video>
+                <video class="dooranimation" id="doornow_rev">
+                    <source src="vid/doornow_rev.webm" type="video/webm">
+                </video>
+
+
                 <div class="frame oneperframe" id="oneperframe" style="overflow: hidden; height: 100%;">
                     <ul class="clearfix" style="transform: translateZ(0px) translateX(0px); width: 1500%;">
                         <%- include('slides/start.ejs') -%>
@@ -37,13 +54,13 @@
                     </ul>
                 </div>
 
-                <div class="scrollbar" style="width:80%; left: 10%; height: 30px; bottom: 40px; position:fixed;">
+                <div class="scrollbar" style="width:80%; left: 10%; height: 30px; bottom: 40px; position:fixed; z-index: 99;">
                     <div class="handle" style="transform: translateZ(0px) translateX(0px); width: 71px;">
                         <div class="mousearea"></div>
                     </div>
                 </div>
 
-                <div id="logos">
+                <div id="logos" style="z-index: 99;">
                     <img src="img/logo/logo_audencia_b.png" class="logo" />
                     <div class="logo-separator"></div>
                     <img src="img/logo/logo_120_b.png" class="logo" />
