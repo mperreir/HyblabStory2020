@@ -93,3 +93,47 @@ class ViewStupidButtons {
     this.right.appendChild(div);
   }
 }
+
+class ViewModal {
+
+  constructor() {
+    this.main = document.querySelector('main');
+    this.div = document.createElement('div');
+    this.div.setAttribute('id', 'modal');
+    this.div.setAttribute('class', 'overlay');
+    this.div.style.visibility = 'hidden';
+
+    this.container = document.createElement('div');
+    this.container.setAttribute('class', 'modal-content');
+
+    this.button = document.createElement('div');
+    this.button.setAttribute('id', 'button-next');
+
+    this.title = document.createElement('div');
+    this.title.setAttribute('id', 'title');
+
+    this.mainText = document.createElement('div');
+    this.mainText.setAttribute('id', 'main_text');
+    this.mainText.setAttribute('class', 'text');
+
+    this.subText = document.createElement('div');
+    this.subText.setAttribute('id', 'sub_text');
+    this.subText.setAttribute('class', 'text');
+
+    Snap.load('data/skip_popup.svg', function(data) {
+      // Adding the ellipse to the div
+      let snap = Snap('#button-next');
+      snap.append(data);
+    });
+
+    this.container.appendChild(this.title);
+    this.container.appendChild(this.mainText);
+    this.container.appendChild(this.subText);
+
+    this.container.appendChild(this.button);
+
+    this.div.appendChild(this.container);
+
+    this.main.appendChild(this.div);
+  }
+}

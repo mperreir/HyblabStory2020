@@ -23,6 +23,14 @@ class SuperControler {
     // Stupid buttons
     var viewStupidButtons = new ViewStupidButtons();
 
+    // Popup
+    var viewModal = new ViewModal();
+
+    // ModelPopup
+    let modelPopup = new ModelPopup();
+    // let updatePopup = new UpdatePopup(viewModal, modelSlides);
+    // modelPopup.addObservers(updatePopup);
+
     // ModelSlide0
     let modelIntroSlide = new ModelIntroSlide();
     let updateIntroSlide = new UpdateIntroSlide();
@@ -30,7 +38,7 @@ class SuperControler {
 
     // ModelSlide1
     let modelSlide1 = new ModelSlide1();
-    let updateSlide1 = new UpdateSlide1();
+    let updateSlide1 = new UpdateSlide1(modelPopup);
     modelSlide1.addObservers(updateSlide1);
 
     // ModelSlide2
@@ -88,6 +96,21 @@ class SuperControler {
                                           );
     modelSlides.addObservers(mediatorSlide);
 
+    let mediatorModal = new MediatorModal(  modelSlides,
+                                            modelIntroSlide,
+                                            modelSlide1,
+                                            modelSlide2,
+                                            modelSlide3,
+                                            modelSlide4,
+                                            modelSlide5,
+                                            modelSlide6,
+                                            modelSlide7,
+                                            modelSlide8,
+                                            modelLastSlide,
+                                            viewModal
+                                          );
+    modelPopup.addObservers(mediatorModal);
+
     // Adding Listenners
     viewStupidButtons.next.addEventListener('click', function() {
       modelSlides.nextSlide();
@@ -95,12 +118,16 @@ class SuperControler {
     viewStupidButtons.prev.addEventListener('click', function() {
       modelSlides.prevSlide();
     });
+    document.getElementById('button-next').addEventListener('click', function() {
+      modelSlides.nextSlide();
+      modelPopup.setValue(false);
+    });
   }
 }
 
 class MediatorSlide extends Observer {
 
-  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide) {
+  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewModal) {
 
     super();
 
@@ -145,6 +172,51 @@ class MediatorSlide extends Observer {
         count++;
       }
     });
+  }
+}
+
+class MediatorModal extends Observer {
+
+  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewModal) {
+
+      super();
+
+      this.slides = {
+        "0": modelIntroSlide,
+        "1": modelSlide1,
+        "2": modelSlide2,
+        "3": modelSlide3,
+        "4": modelSlide4,
+        "5": modelSlide5,
+        "6": modelSlide6,
+        "7": modelSlide7,
+        "8": modelSlide8,
+        "9": modelLastSlide
+      };
+
+      this.model = modelSlides;
+      this.view = viewModal;
+  }
+
+  update(observable, object) {
+    let val = observable.getValue();
+
+    if (val == true) {
+      let i = this.model.getValue();
+      let choice = this.slides[i].getChoice();
+
+      this.view.title.innerHTML = this.slides[i].text["title"];
+      this.view.mainText.innerHTML = this.slides[i].text["choices"][choice]['main'];
+      this.view.subText.innerHTML = this.slides[i].text["choices"][choice]['sub'];
+
+      this.view.div.style.visibility = "visible";
+      this.view.div.style.opacity = 1;
+    } else if (val == false) {
+      this.view.div.style.visibility = "hidden";
+      this.view.div.style.opacity = 0;
+    } else {
+      console.log("err : value not handled (mediatorModal controler)");
+    }
   }
 }
 
@@ -203,29 +275,41 @@ class UpdateIntroSlide extends Observer {
 
 class UpdateSlide1 extends Observer {
 
-  constructor() {
+  constructor(modelPopup) {
     super();
+    this.model = modelPopup;
   }
 
   update(observable, object) {
     let val = observable.getValue();
+
     if (val == true) {
       let hotel = observable.loadHotel();
       let studio = observable.loadStudio();
+      let model = this.model;
+
       hotel.addEventListener('DOMLoaded', function() {
-        document.getElementById('svg_hotel').addEventListener('mouseover', function(){
+        document.getElementById('svg_hotel').addEventListener('mouseover', function() {
           hotel.play();
         });
-        document.getElementById('svg_hotel').addEventListener('mouseout', function(){
+        document.getElementById('svg_hotel').addEventListener('mouseout', function() {
           hotel.pause();
+        });
+        document.getElementById('svg_hotel').addEventListener('click', function() {
+          observable.setChoice(0);
+          model.setValue(true);
         });
       });
       studio.addEventListener('DOMLoaded', function() {
-        document.getElementById('svg_studio').addEventListener('mouseover', function(){
+        document.getElementById('svg_studio').addEventListener('mouseover', function() {
           studio.play();
         });
-        document.getElementById('svg_studio').addEventListener('mouseout', function(){
+        document.getElementById('svg_studio').addEventListener('mouseout', function() {
           studio.pause();
+        });
+        document.getElementById('svg_studio').addEventListener('click', function() {
+          observable.setChoice(1);
+          model.setValue(true);
         });
       })
     } else if (val == false) {
@@ -384,5 +468,27 @@ class UpdateLastSlide extends Observer {
 
   update(observable, object) {
 
+  }
+}
+
+class UpdatePopup extends Observer {
+
+  constructor(composant, modelSlides) {
+    super();
+    this.composant = composant;
+    this.modelSlides = modelSlides;
+  }
+
+  update(observable, object) {
+
+    let val = observable.getValue();
+
+    if (val == true) {
+      this.composant.div.style.visibility = "visible";
+      this.composant.div.style.opacity = 1;
+    } else if (val == false) {
+      this.composant.div.style.visibility = "hidden";
+      this.composant.div.style.opacity = 0;
+    }
   }
 }

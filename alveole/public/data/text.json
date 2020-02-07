@@ -3,76 +3,176 @@
     "speech": "Vous vous apprêtez à expérimenter la réalisation d’un podcast, du brief à la restitution. Entrez dans l’univers d’Alvéole Média et découvrez leur expertise. Mettez vous dans la peau d’un gérant d’hôtel et testez vos connaissance sur les podcasts !"
   },
   "slide1": {
-    "theme": "Lieux",
-    "speech": "Le choix du lieu de tournage a une incidence sur les choix techniques que vous devrez faire par la suite.",
-    "question": "Quel lieu privilégierez-vous pour l’enregistrement de votre podcast ?",
+    "title": "Lieu",
+    "page": {
+      "up": "Lieu",
+      "down": "première journée"
+    },
+    "speech": "Le choix du lieu de tournage a une incidence sur les choix\n techniques que vous devrez faire par la suite.",
+    "question": "Quel lieu privilégierez-vous\n pour l’enregistrement de votre podcast ?",
     "type": "select",
     "choices": {
-      "hotel": "Le choix de l'hôtel est pertinent si vous faites preuve de prudence lors de l’enregistrement. En effet, il est indispensable de bien isoler la pièce afin de ne pas capter de bruits parasites.",
-      "studio": "Les locaux d’Alvéole Média disposent de studios d'enregistrement sonore isolés, davantage propices à la captation des sons."
-    },
-    "answer": "studio"
+      "hotel": {
+          "main": "Le choix de l'hôtel est pertinent",
+          "sub": "Si vous faites preuve de prudence lors de l’enregistrement. En effet, il est indispensable de bien isoler la pièce afin de ne pas capter de bruits parasites."
+        },
+      "studio": {
+          "main": "Les locaux d’Alvéole Média sont adaptés",
+          "sub": "Ils disposent de studios d'enregistrement sonore isolés,davantage propices à la captation des sons."
+        }
+    }
   },
   "slide2": {
-    "theme": "Le micro",
-    "speech": "Le choix du bon micro est primordial dans la réalisation d’un podcast. Il assure une bonne prise de son et permet une meilleure immersion.",
-    "question": "Parmi les trois micros suivants, lequel vous semble plus adapté pour l’enregistrement d’une voix ?",
-    "rule": "Nous vous invitons à tester les différents micros en glissant directement l’embout dans le port.",
-    "type": "drag",
-    "choices": {
-      "micro-cravate": "",
-      "micro-canon": "",
-      "micro-XY": "",
-      "micro-chant": ""
+    "title": "micros",
+    "page": {
+      "up": "Micro",
+      "down": "deuxième journée"
     },
-    "answer": ""
+    "speech": "Le choix du bon micro est primordial dans la réalisation d’un podcast.\nIl assure une bonne prise de son et permet une meilleure immersion.",
+    "question": "Parmi les trois quatres suivants, lequel\n vous semble plus adapté pour l’enregistrement d’une voix ?",
+    "type": "drag",
+    "labels": {
+      "1": "micro-canon directionnel",
+      "2": "micro de reportage md21-u",
+      "3": "micro couple xy: ambiance",
+      "4": "micro-lavalier"
+    },
+    "choices": {
+      "1": {
+        "main": "Il n’y a pas de bonne réponse quant au choix du micro.",
+        "sub": "En effet, il dépend du lieu ou encore des conditions de tournage."
+      }
+    }
   },
   "slide3": {
-    "theme": "La voix",
-    "speech": "L’intégralité du podcast repose sur la voix. Il est fondamental que celle-ci soit en harmonie avec le contenu.",
-    "question": "Pour enregistrer la voix-off, feriez-vous appel à un professionnel ou à un non-professionnel ?",
-    "type": "select",
-    "choices": {
-      "pro": " Alvéole dispose d’un catalogue vocal aux registres très différents. L’agence vous propose un panel de voix afin de sélectionner la plus adaptée à votre demande.",
-      "amateur": "En faisant appel à un amateur pour réaliser une voix-off, la justesse de l’interprétation risque d’être mise en jeu. Ce choix pourrait donc desservir le podcast."
+    "title": "voix-off",
+    "page": {
+      "up": "Voix-off",
+      "down": "deuxième journée"
     },
-    "answer": "professionnel"
+    "speech": "L’intégralité du podcast repose sur la voix.\nIl est fondamental que celle-ci soit en harmonie avec le contenu.",
+    "question": "Pour enregistrer la voix-off, faîtes-vous\nappel à un professionnel ou à un non-professionnel ?",
+    "type": "select",
+    "labels": {
+      "1": "non professionnel",
+      "2": "professionnel"
+    },
+    "choices": {
+      "professionnel": {
+        "main": "Alvéole dispose d’un catalogue vocal aux registres très différents.",
+        "sub": "L’agence vous propose un panel de voix afin de sélectionner la plus adaptée à votre demande."
+      },
+      "non-professionnel": {
+        "main": "la justesse de l’interprétation risque d’être mise en jeu.",
+        "sub": "Ce choix pourrait donc desservir le podcast. C’est pour ça qu’Alvéole dispose d’un catalogue vocal aux registres très différents. L’agence vous propose un panel de voix afin de sélectionner la plus adaptée à votre demande."
+      }
+    }
   },
   "slide4": {
-    "theme": "Le tournage",
-    "speech": "Sélectionner les deux étapes qui vous semblent nécessaires et validez.",
-    "question": "Connaissez-vous les étapes qui composent un tournage ?",
-    "titres":["Installer le matériel",
-              "faire une répétition",
-              "faire des vocalises",
-              "Placer les interviewés"],
-    "type": "checkbox",
-    "rule": " Cochez (sélectionner)  les trois étapes qui vous semblent indispensables/ nécessaires.",
-    "choices": {
-      "1": "Trouver une pièce",
-      "2": "Installer le matériel ",
-      "3": "Placer les interviewés"
+    "title": "Tournage",
+    "page": {
+      "up": "Tournage",
+      "down": "troisième journée"
     },
-    "answer": [1, 2, 3]
+    "speech": "Sélectionnez les deux étapes qui vous semblent nécessaires et validez.",
+    "question": "Connaissez-vous certaines étapes qui composent un tournage ?",
+    "type": "checkbox",
+    "labels": {
+      "1": "installer le matériel",
+      "2": "faire une répétition",
+      "3": "faire des vocalises",
+      "4": "placer les interviewés"
+    },
+    "choices": {
+      "1": {
+        "main": "Placer correctement les interviewés en fonction de l’installation du matériel est primordial afin de garantir une qualité sonore optimale.",
+        "sub": "En revanche faire une répétition et des vocalises n’est pas indispensable."
+      }
+    }
   },
   "slide5" : {
-    "theme": "Le mixage ",
-    "speech": "Le mixage consiste à obtenir un son uniforme, en supprimant les grésillements par exemple. C’est la table de mixage qui permet de mélanger, dissocier et accentuer certains sons.",
-    "rule": "Vous pouvez tester le son à l’aide des différents curseurs et boutons.",
+    "title": "Dérushage",
+    "page": {
+      "up": "dérushage",
+      "down": "quatrième journée"
+    },
+    "question": "Selon-vous, combien de temps dure le dérushage d’une bande son de 10 minutes ?",
+    "speech": "Le dérushage est la première étape du montage. Cette étape consiste à sélectionner les passages qui seront exploités dans le podcast.",
     "type": "drag",
+    "labels": {
+      "1": "20 minutes",
+      "2": "10 minutes",
+      "3": "5 minutes"
+    },
+    "choices": {
+      "1": {
+        "main": "il faut compter en moyenne le double du temps de l’enregistrement.",
+        "sub": "soit 20 minutes de dérushage pour 10 minutes d’enregistrement audio"
+      }
+    },
     "answer": "Pas simple ? développer expertise du monteur : connaît les règles de l’acoustique, le fonctionnement d’un micro dans ses moindres détails, le traitement des sons, un peu l’oreille absolue, sait quel matériel utiliser selon situations."
   },
   "slide6": {
-    "theme": "Choix Podcast ou Capsule sonore ?",
-    "question": "Souhaitez- vous réaliser un podcast ou une capsule sonore ?"
+    "title": "mixage",
+    "page": {
+      "up": "Mixage",
+      "down": "quatrième journée"
+    },
+    "question": "Testez le son SUR LA TABLE DE MIXAGE à l’aide des différents curseurs et boutons.",
+    "choices": {
+      "1": {
+        "main": "le mixage est un processus complexe qui nécessite des connaissances précises.",
+        "sub": "Pierre-Yves Allain, opérateur son pour Alvéole Média maîtrise les règles de l’acoustique à la perfection."
+      }
+    }
   },
   "slide7": {
-    "theme": "Capsule",
-    "question": "Souhaitez- vous bénéficiez d’une aide pour l’installation de la capsule ? ",
-    "answer": "Alvéole Média s’efforce de travailler avec des artisans locaux pour l’installation de ses capsules sonores."
+    "title": "Forme",
+    "page": {
+      "up": "Forme",
+      "down": "cinquième jour"
+    },
+    "speech": "La capsule sonore consiste à intégrer le son à une installation physique. Elle transforme le podcast en véritable installation artistique et permet de mettre en valeur un lieu.",
+    "question": "Sous quelle forme souhaitez-vous réaliser le podcast ?",
+    "labels": {
+      "1": "Podcast Simple",
+      "2": "Capsule"
+    },
+    "choices": {
+      "1": {
+        "main": "La capsule sonore apporte une dimension d'expérience supplémentaire au podcast.",
+        "sub": "Elle permet à l'auditeur de se plonger davantage dans l'histoire racontée."
+      }
+    }
+  },
+  "slide8": {
+    "title": "Conception",
+    "page": {
+      "up": "Conception",
+      "down": "neuvième journée"
+    },
+    "question": "à qui préférez-vous faire appel pour la conception de la capsule sonnore ?",
+    "speech": "L’installation de la capsule sonore nécessite la fabrication d’un support adapté. L’objectif étant de valoriser la création sonore à l’aide d’une infrastructure artistique (en bois par exemple).",
+    "labels": {
+      "1": "à des prestataires de mon propre réseau",
+      "2": "aux artisans du réseau d’alvéole"
+    },
+    "choices": {
+      "1": {
+        "main": "Alvéole Média s’efforce de travailler avec des artisans locaux",
+        "sub": "Pour l’installation de ses capsules sonores (Menuisier ebeniste, Menuisier d'intérieur, Designer sonore) L'aide à l'installation de la capsule sonore permet d'éviter de passer par un prestataire supplémentaire."
+      },
+      "2": {
+        "main": "Alvéole Média s’efforce de travailler avec des artisans locaux",
+        "sub": "Pour l’installation de ses capsules sonores (Menuisier ebeniste, Menuisier d'intérieur, Designer sonore) L'aide à l'installation de la capsule sonore permet d'éviter de passer par un prestataire supplémentaire."
+      }
+    }
   },
   "lastSlide": {
-    "theme": "Conclusion",
+    "theme": "Vous êtes arrivé à la fin du processus de réalisation sonore.",
+    "header-speech": "Lors de votre parcours vous avez pu vous avez pu remarquer que La réalisation d’un podcast est un processus complexe et chronophage. Alvéole Média vous propose un accompagnement personnalisé et adapté à vos besoins.",
+    "center-speech": "Choisissez notre expertise, faites vous entendre autrement !",
+    "footer-speech": "Accedez au site d’alvéole",
     "speech": "La réalisation d’un podcast est un processus complexe et chronophage.\nAlvéole Média vous propose un accompagnement personnalisé et adapté à vos besoins.\nChoisissez notre expertise, faites vous entendre autrement !"
   }
 }
