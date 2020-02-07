@@ -6,7 +6,6 @@
 #view3-free {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(203, 86, 62, 0.15);
 }
 #view3-free #view-3-free-middle {
   width: 80vw;
@@ -14,10 +13,6 @@
   margin: 0px 10vw;
   border-bottom: 2px solid #5A8D8C;
   position: relative;
-  background-image: url(../../assets/view3/view3-free-wave.svg);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: bottom -2px center;
 }
 #view3-free #view-3-free-middle img {
   position: absolute;

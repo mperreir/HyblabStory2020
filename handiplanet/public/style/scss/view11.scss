@@ -7,7 +7,7 @@
 #view11 {
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff;
+  //background-color: #ffffff;
 
   #view-11-middle {
     width: 80vw;
@@ -15,10 +15,6 @@
     margin: 0px 10vw;
     border-bottom: 2px solid #5A8D8C;
     position: relative;
-    background-image: url(../../assets/view11/splash-view11.svg);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: bottom -2px center;
 
     
     #view-11-premium-red-tiny-dot{
@@ -85,14 +81,14 @@
     article {
       z-index: 7;
       position: absolute;
-      left: 58%;
+      left: 65%;
       max-width: 30%;
-      bottom: 8%;
+      bottom: 30%;
       p{
         font-family: Nunito;
         font-style: normal;
         font-weight: normal;
-        font-size: 21px;
+        //font-size: 21px;
         line-height: 29px;
         color: #426262;
       }

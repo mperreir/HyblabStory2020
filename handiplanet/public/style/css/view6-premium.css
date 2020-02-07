@@ -1,29 +1,24 @@
-#sixth-view-premium {
+#view6-premium {
   height: 100%;
   width: 100vw;
 }
-#sixth-view-premium img {
+#view6-premium img {
   position: absolute;
 }
-#sixth-view-premium #decor-view-6 {
-  height: 90vh;
-  width: 90vw;
-  position: absolute;
-  left: 5vw;
-  bottom: 10vh;
+#view6-premium #decor-view-6 {
+  height: 80vh;
+  width: 80vw;
+  position: relative;
+  margin: 0 10vw;
 }
-#sixth-view-premium #decor-view-6 #fond-view-6-premium {
+#view6-premium #decor-view-6 #fond-view-6-premium {
   width: 80%;
   height: 80%;
   bottom: 0%;
   left: 10%;
   position: absolute;
-  background-image: url("../../assets/view6-premium/fond-view-6-premium.svg");
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: bottom center;
 }
-#sixth-view-premium p {
+#view6-premium p {
   position: absolute;
   font-family: Nunito;
   font-style: normal;
@@ -33,110 +28,87 @@
   color: #426262;
   max-width: 25%;
 }
-#sixth-view-premium p em {
+#view6-premium p em {
   font-weight: bold;
   color: #CB563E;
 }
-#sixth-view-premium #view6-speech {
+#view6-premium #view6-speech {
   left: 50%;
   bottom: 20%;
 }
-#sixth-view-premium #view6p-container {
+#view6-premium #view6p-container {
   position: relative;
   left: 10%;
   bottom: 0%;
   width: 20%;
   height: 50%;
 }
-#sixth-view-premium #view6premium-smartphone {
+#view6-premium #view6premium-smartphone {
   position: absolute;
   width: 15%;
   bottom: 0%;
   left: 33%;
 }
-#sixth-view-premium #view6premium-like {
+#view6-premium #view6premium-like {
   bottom: 25%;
   left: 25%;
   box-shadow: 0 0 3px 0 #426262;
-  -webkit-animation: view6p-pulse 6s infinite ubic-bezier(0, 0.29, 0.13, 0.99);
-  -moz-animation: view6p-pulse 6s infinite cubic-bezier(0, 0.29, 0.13, 0.99);
-  -ms-animation: view6p-pulse 6s infinite cubic-bezier(0, 0.29, 0.13, 0.99);
   animation: view6p-pulse 6s infinite cubic-bezier(0, 0.29, 0.13, 0.99);
   width: calc(fit-content - 20px);
   border-radius: 30px;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-#sixth-view-premium #view6premium-like:hover {
+#view6-premium #view6premium-like:hover {
   transform: scale(1.2, 1.2);
   animation: none;
 }
-#sixth-view-premium #view6premium-like:active {
+#view6-premium #view6premium-like:active {
   transform: scale(1, 1);
 }
-#sixth-view-premium #view6premium-hearts {
+#view6-premium #view6premium-hearts {
   position: absolute;
   left: 30%;
   bottom: 10%;
   width: 20%;
 }
-#sixth-view-premium #view6p-circle-1 {
+#view6-premium #view6p-circle-1 {
   left: 20%;
   bottom: 30%;
-  animation: yAxis 6s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  animation: view6-yAxis 6s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
 }
-#sixth-view-premium #view6p-circle-2 {
+#view6-premium #view6p-circle-2 {
   left: 70%;
   bottom: 10%;
-  animation: xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+  animation: view6-xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
 }
-#sixth-view-premium #view6p-circle-3 {
+#view6-premium #view6p-circle-3 {
   left: 70%;
   bottom: 50%;
-  animation: xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
-}
-@-webkit-keyframes view6p-pulse {
-  to {
-    box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);
-  }
-}
-@-moz-keyframes view6p-pulse {
-  to {
-    box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);
-  }
-}
-@-ms-keyframes view6p-pulse {
-  to {
-    box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);
-  }
+  animation: view6-xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
 }
 @keyframes view6p-pulse {
   to {
     box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);
   }
 }
-@keyframes yAxis {
+@keyframes view6-yAxis {
   50% {
     animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
     transform: translateY(10%);
   }
 }
-@keyframes xAxis {
+@keyframes view6-xAxis {
   50% {
     animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
     transform: translateX(20%);
   }
 }
-#sixth-view-premium footer {
+#view6-premium footer {
   width: 100vw;
   height: 20vh;
-  position: absolute;
-  bottom: 0%;
+  position: relative;
 }
-#sixth-view-premium footer #view6p-next-button {
+#view6-premium footer #view6p-next-button {
   z-index: 10000;
   position: absolute;
   right: 0px;
@@ -144,7 +116,6 @@
   font-weight: normal;
   font-size: 25px;
   line-height: 34px;
-  text-transform: uppercase;
   color: #ffffff;
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;

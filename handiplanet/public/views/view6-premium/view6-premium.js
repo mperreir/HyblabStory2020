@@ -10,6 +10,10 @@ class View6Premium extends View {
             this.smartphone.src = "./assets/view6-premium/smartphone-clicked.svg";
         });
 
+        this.btNext = document.getElementById('view6p-next-button');
+        this.btNext.addEventListener('click', () => {
+
+        });
         // Button to next view
         this.btNext = document.getElementById('view6p-next-button');
         this.btNext.addEventListener('click', ()=>{

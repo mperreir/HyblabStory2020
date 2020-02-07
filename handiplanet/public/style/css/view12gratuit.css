@@ -12,7 +12,6 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-  background-color: rgba(203, 86, 62, 0.2);
 }
 #view12gratuit #fond {
   position: absolute;
@@ -23,10 +22,6 @@
   height: 60%;
   border-bottom: 2px solid #5A8D8C;
   position: absolute;
-  background-image: url(../../assets/view12/fond-gratuit.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom -2px center;
 }
 #view12gratuit #femme {
   position: absolute;

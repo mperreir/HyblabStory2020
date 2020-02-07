@@ -17,10 +17,6 @@
   bottom: 0%;
   left: 0%;
   position: absolute;
-  background-image: url("../../assets/view5/fond-view-5.svg");
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: bottom center;
 }
 #view5 p {
   position: absolute;
@@ -30,8 +26,8 @@
   line-height: 29px;
   color: #426262;
   margin: 0px !important;
-  bottom: 5%;
-  left: 25%;
+  bottom: 9%;
+  left: 33%;
   max-width: 25%;
 }
 #view5 p em {
@@ -47,43 +43,47 @@
 }
 #view5 #view5-croissant {
   left: 17%;
-  bottom: 48%;
+  bottom: 43%;
   width: 20%;
 }
 #view5 #view5-omelette {
   left: 40%;
-  bottom: 55%;
+  bottom: 50%;
   width: 5%;
 }
 #view5 #view5-pointille-1 {
   left: 19%;
-  bottom: 52%;
+  bottom: 47%;
   width: 15%;
 }
 #view5 #view5-pointille-2 {
   left: 38%;
-  bottom: 52%;
+  bottom: 47%;
   width: 10%;
 }
 #view5 #view5-cercle-1 {
   left: 58%;
   width: 1%;
   bottom: 70%;
+  animation: xAxis 80s infinite;
 }
 #view5 #view5-cercle-2 {
   left: 18%;
   width: 3%;
   bottom: 38%;
+  animation: yAxis 80s infinite;
 }
 #view5 #view5-cercle-3 {
   left: 20%;
   width: 1%;
   bottom: 10%;
+  animation: xAxis 80s infinite;
 }
 #view5 #view5-cercle-4 {
   left: 60%;
   width: 2%;
   bottom: 50%;
+  animation: yAxis 80s infinite;
 }
 #view5 button {
   width: 15%;
@@ -113,12 +113,12 @@
   width: 50%;
 }
 #view5 #view5-button-hotel-a {
-  left: 30%;
-  bottom: 70%;
+  left: 28%;
+  bottom: 55%;
 }
 #view5 #view5-button-hotel-b {
   left: 65%;
-  bottom: 60%;
+  bottom: 47%;
 }
 #view5 .view5-circle {
   box-shadow: 0 0 3px 0 #426262;
@@ -146,6 +146,18 @@
 @keyframes pulse-view5 {
   to {
     box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+@keyframes yAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    transform: translateY(10px);
+  }
+}
+@keyframes xAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(3%);
   }
 }
 

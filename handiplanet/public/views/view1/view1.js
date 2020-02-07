@@ -2,7 +2,9 @@
 class View1 extends View {
     constructor(receiver){
         super('view1', receiver);
-        super.load();
+        super.load().then(() => {
+            setBackgroundColor('#ffffff');
+        });
     }
 
     
