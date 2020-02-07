@@ -16,14 +16,14 @@ $(document).ready(function() {
   });
 
   var pos = $("#menu-section").position();
-  console.log(pos);
+  //console.log(pos);
   $(window).scroll(function() {
     var scrollPos = $(window).scrollTop();
     if(scrollPos > pos.top) {
       const menuSection = document.querySelector("#menu-section");
       bodyScrollLock.disableBodyScroll(menuSection);
     }
-    console.log(scrollPos);
+    //console.log(scrollPos);
   });
 
 

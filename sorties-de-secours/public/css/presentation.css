@@ -6,6 +6,7 @@
 #presentation-section {
   position: relative;
   background-color: white;
+  height: 110vh;
 }
 
 #presentation-logo {
