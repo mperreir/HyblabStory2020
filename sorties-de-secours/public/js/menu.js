@@ -15,16 +15,6 @@ $(document).ready(function() {
     $("#menu-dance").css("filter", "brightness(80%)");
   });
 
-  var pos = $("#menu-section").position();
-  console.log(pos);
-  $(window).scroll(function() {
-    var scrollPos = $(window).scrollTop();
-    if(scrollPos > pos.top) {
-      const menuSection = document.querySelector("#menu-section");
-      bodyScrollLock.disableBodyScroll(menuSection);
-    }
-    console.log(scrollPos);
-  });
-
+  
 
 });

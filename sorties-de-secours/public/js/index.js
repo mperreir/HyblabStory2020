@@ -1,4 +1,5 @@
 AOS.init();
+$('#container-scrollable').scroll(function () { AOS.refresh(); })
 
 /* A DESACTIVER POUR DEVELOPPER TRANQUILLEMENT
 (c'est ce qui force la premiere page au refresh)*/
@@ -20,14 +21,6 @@ function goToByScroll(id) {
       scrollTop: $("#" + id).offset().top
   }, 400);
 }
-
-//Desactivation du scroll horizontal
-var $body = $(document);
-$body.bind('scroll', function() {
-    if ($body.scrollLeft() !== 0) {
-        $body.scrollLeft(0);
-    }
-});
 
 /*  MUSIC   */
 // enable the first music to play
@@ -63,5 +56,5 @@ function set_music_play(id) {
 }
 
 /* A DESACTIVER POUR DEVELOPPER TRANQUILLEMENT */
-const homeSection = document.querySelector("#home-section");
-bodyScrollLock.disableBodyScroll(homeSection);
+const container = document.querySelector("#container");
+bodyScrollLock.disableBodyScroll(container);
