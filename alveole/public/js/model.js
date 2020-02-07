@@ -294,6 +294,85 @@ class ModelSlide2 extends Observable {
   }
 }
 
+class ModelSlide3 extends Observable {
+
+  // values
+  bool;
+  text;
+  instanciated;
+
+  constructor() {
+    super();
+    this.bool = false;
+    this.instanciated = false;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+
+  loadQuestion(container){
+    let div_question = document.createElement('div');
+    div_question.setAttribute('id','slide3_question');
+    container.appendChild(div_question);
+    div_question.innerHTML = this.text.question;
+  }
+  loadSpeech(container){
+    let div_speech = document.createElement('div');
+    div_speech.setAttribute('id','slide3_speech');
+    container.appendChild(div_speech);
+    div_speech.innerHTML = this.text.speech;
+  }
+  loadIcons(container){
+    let div_bouche1 = document.createElement('div');
+    div_bouche1.setAttribute('id','slide3_bouche1');
+    container.appendChild(div_bouche1);
+    let div_bouche2 = document.createElement('div');
+    div_bouche2.setAttribute('id','slide3_bouche2');
+    container.appendChild(div_bouche2);
+    Snap.load('data/bouche.svg', function(data) {
+      let snap = Snap(div_bouche1);
+      snap.append(data);
+    });
+    Snap.load('data/bouche.svg', function(data) {
+      let snap = Snap(div_bouche2);
+      snap.append(data);
+    });
+  }
+  loadChoices(container){
+    let div_choice1 = document.createElement('div');
+    div_choice1.setAttribute('id','slide3_choice1');
+    container.appendChild(div_choice1);
+    div_choice1.innerHTML = 'NON PROFESSIONNEL';
+    let div_choice2 = document.createElement('div');
+    div_choice2.setAttribute('id','slide3_choice2');
+    container.appendChild(div_choice2);
+    div_choice2.innerHTML = 'PROFESSIONNEL';
+  }
+  load(container){
+    if (this.instanciated == false) {
+      this.loadQuestion(container);
+      this.loadSpeech(container);
+      this.loadIcons(container);
+      this.loadChoices(container);
+      this.instanciated = true;
+    } else {
+      console.log('err : slide3 voix already instanciated');
+    }
+  }
+  setDestroyed() {
+    this.instanciated = false;
+  }
+}
+
 class ModelSlide6 extends Observable {
 
   // values
@@ -362,6 +441,7 @@ class ModelSlide4 extends Observable {
       this.notifyObservers();
     }
   }
+
   loadQuestion(container){
     let div_question = document.createElement('div');
     div_question.setAttribute('id','slide4_question');
@@ -375,14 +455,16 @@ class ModelSlide4 extends Observable {
     container.appendChild(div_speech);
     div_speech.innerHTML = this.text.speech;
   }
+
   loadTitres(container){
-    for(let i=0;i<4;i++){
+    for(let i=1; i<5; i++){
       let div_titre = document.createElement('div');
-      div_titre.setAttribute('id','slide4_titre'+(i+1));
+      div_titre.setAttribute('id','slide4_titre'+(i));
       container.appendChild(div_titre);
-      div_titre.innerHTML = this.text.titres[i];
+      div_titre.innerHTML = this.text.labels[i];
     }
   }
+
   loadAnime(container){
     this.Installer = bodymovin.loadAnimation({
       container : container,
@@ -500,84 +582,7 @@ class ModelSlide5 extends Observable {
   }
 }
 
-class ModelSlide3 extends Observable {
 
-  // values
-  bool;
-  text;
-  instanciated;
-
-  constructor() {
-    super();
-    this.bool = false;
-    this.instanciated = false;
-  }
-
-  getValue() {
-    return this.bool;
-  }
-
-  setValue(val) {
-    if (val != this.bool) {
-      this.bool = val;
-      this.setChanged();
-      this.notifyObservers();
-    }
-  }
-
-  loadQuestion(container){
-    let div_question = document.createElement('div');
-    div_question.setAttribute('id','slide3_question');
-    container.appendChild(div_question);
-    div_question.innerHTML = this.text.question;
-  }
-  loadSpeech(container){
-    let div_speech = document.createElement('div');
-    div_speech.setAttribute('id','slide3_speech');
-    container.appendChild(div_speech);
-    div_speech.innerHTML = this.text.speech;
-  }
-  loadIcons(container){
-    let div_bouche1 = document.createElement('div');
-    div_bouche1.setAttribute('id','slide3_bouche1');
-    container.appendChild(div_bouche1);
-    let div_bouche2 = document.createElement('div');
-    div_bouche2.setAttribute('id','slide3_bouche2');
-    container.appendChild(div_bouche2);
-    Snap.load('data/bouche.svg', function(data) {
-      let snap = Snap(div_bouche1);
-      snap.append(data);
-    });
-    Snap.load('data/bouche.svg', function(data) {
-      let snap = Snap(div_bouche2);
-      snap.append(data);
-    });
-  }
-  loadChoices(container){
-    let div_choice1 = document.createElement('div');
-    div_choice1.setAttribute('id','slide3_choice1');
-    container.appendChild(div_choice1);
-    div_choice1.innerHTML = 'NON PROFESSIONNEL';
-    let div_choice2 = document.createElement('div');
-    div_choice2.setAttribute('id','slide3_choice2');
-    container.appendChild(div_choice2);
-    div_choice2.innerHTML = 'PROFESSIONNEL';
-  }
-  load(container){
-    if (this.instanciated == false) {
-      this.loadQuestion(container);
-      this.loadSpeech(container);
-      this.loadIcons(container);
-      this.loadChoices(container);
-      this.instanciated = true;
-    } else {
-      console.log('err : slide3 voix already instanciated');
-    }
-  }
-  setDestroyed() {
-    this.instanciated = false;
-  }
-}
 
 class ModelSlide7 extends Observable {
 
