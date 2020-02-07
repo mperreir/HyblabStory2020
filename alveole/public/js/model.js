@@ -249,7 +249,7 @@ class ModelSlide2 extends Observable {
     super();
     this.bool = false;
     this.instanciated = false;
-    this.choice;
+    this.choice = 1;
     this.answer;
   }
 
@@ -341,10 +341,12 @@ class ModelSlide4 extends Observable {
   // values
   bool;
   text;
+  choice;
 
   constructor() {
     super();
     this.bool = false;
+    this.choice = 1;
   }
 
   getValue() {
