@@ -143,15 +143,18 @@ window.addEventListener('load', function () {
     const svgElement = document.getElementById('overlay-bg-svg');
     const a = anime({
         targets: svgElement.querySelector('path'),
-        // easing: 'linear',
-        d: paths.map((p) => ({
+        easing: 'linear',
+        d: paths.map((p, i) => ({
             value: p,
-            duration: 6000,
+            duration: i===0 ? 0 : 15*1000,
         })),
         loop: true,
-        delay: 1,
+        // duration: 30000,
+        delay: (el, i) => i == 0 ? 0 : 3000,
+        autoplay: true,
         endDelay: 1,
         startDelay: 1,
+        elasticity: 200,
         direction: 'alternate',
     });
 });	

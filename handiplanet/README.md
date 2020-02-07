@@ -6,7 +6,6 @@
 - [ ] Mise à jour View 10 (par rapport figma)
 - [ ] Corrections view 11 (texte position)
 - [ ] Cohérence entre les vues (ex: taille boutons)
-- [ ] Tache qui bouge
 - [ ] Son
 - [ ] Transitions
 - [ ] Re-vérification Figma pour eventuelles maj
@@ -19,7 +18,7 @@ Sujet : Landing page Premium versus Free
 Nom d'équipe : HandiGo
 
 Participants : 
-
+ 
 - Sciencescom   * Clément Godet
                 * Jean Pechère
 
