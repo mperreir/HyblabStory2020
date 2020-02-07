@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="saynette" @click="onNext"> -->
   <div class="saynette">
     <Background class="svg" />
     <SimpleText
@@ -7,47 +6,42 @@
       :y="17"
       :width="41"
     >
-      La Région pose des bornes de recharge de voiture électriques source
-      l'entièreté de son territoire. Ainsi, lorsque M. Moreau prend sa
-      voiture, il sait qu’il trouvera en moyenne une borne tous les 13 km.
+      <p>
+        Pour accompagner la transition énergétique, la Région participe au
+        déploiement de bornes de recharge pour les véhicules électriques sur
+        l’ensemble du territoire ligérien. Ainsi, lorsque {{ name }} prend sa
+        voiture, il sait qu’il y aura toujours une borne à proximité.
+      </p>
     </SimpleText>
 
     <TrainSVG
+      v-show="!nextInitiated"
       ref="movingTrain"
       class="train"
-      :class="{'slow-train': !nextPressed, 'fast-train': nextPressed}"
     />
-    <!-- <TrainSVG
-      ref="movingTrain"
-      class="train"
-    /> -->
 
-    <!-- <Car class="car" /> -->
-    <Car
-      :moving="carMoving"
-      class="car"
-    />
+    <Car class="car" />
 
     <BoatSVG class="boat" />
 
-    <!-- <PlusButton
-      v-model="closePopover1"
+    <PlusButton
       class="plus-button"
-      @open="closePopover(1)"
+      :width="23"
     >
       <p class="text">
-        Répartition des bornes par département :
-      </p>
-      <RenderingChart
-        :chart-data="chartData"
-        class="chart"
-      />
-    </PlusButton> -->
-    <PlusButton class="plus-button">
-      <p class="text">
-        Répartition des bornes par département :
+        En moyenne, on peut trouver une borne tous les <span class="red">13 km</span> dans toute la région.
       </p>
     </PlusButton>
+
+    <BorneSVG class="borne-svg" />
+
+    <SimpleButton
+      text="Continuer l'histoire"
+      :width="23"
+      :x="75"
+      :y="90"
+      @click.native="onNext"
+    />
   </div>
 </template>
 
@@ -56,10 +50,10 @@ import Background from "@/assets/Borne/background-borne.svg";
 import SimpleText from "@/components/SimpleText";
 import TrainSVG from "@/assets/Borne/train.svg";
 import BoatSVG from "@/assets/Persos/bateau jauneFichier 4.svg";
+import BorneSVG from "@/assets/Borne/borne.svg";
 import PlusButton from "@/components/PlusButton";
+import SimpleButton from "@/components/SimpleButton";
 import Car from "@/components/Car";
-
-// import RenderingChart from '@/components/Saynettes/RenderingChart';
 
 export default {
   name: "Borne",
@@ -69,54 +63,35 @@ export default {
     TrainSVG,
     BoatSVG,
     Car,
-    // RenderingChart,
-    PlusButton
+    PlusButton,
+    SimpleButton,
+    BorneSVG
   },
   data: () => ({
     nextPressed: false,
-    carMoving: true
+    nextInitiated: false
   }),
   computed: {
-    chartData() {
-      return {
-        labels: [
-          'Loire-Atlantique',
-          'Maine-et-Loire',
-          'Mayenne',
-          'Sarthe',
-          'Vendée'
-        ],
-        datasets: [{
-          data: [
-            25, 20, 15, 20, 30
-          ],
-          backgroundColor: [
-            'red',
-            'green',
-            'rgba(231, 76, 60, 1)',
-            'rgba(52, 73, 94, 1)',
-            'rgba(208, 216, 232, 1)'
-          ]
-        }]
-      }
+    name() {
+      return this.$store.state.character === 'dubois' ? 'Mme Dubois' : 'M. Moreau';
     }
-  },
-  mounted() {
-    this.carMoving = false;
   },
   methods: {
     onNext() {
-      let train = this.$refs.movingTrain.getBoundingClientRect();
-      let x = train.x;
-      // this.nextPressed = true;
-      this.$refs.movingTrain.getBoundingClientRect().x = x;
+      if (!this.nextPressed) {
+        this.nextPressed = true;
+        this.goNext();
+      }
+    },
+    goNext() {
       this.$nextTick(() => {
         let train = this.$refs.movingTrain.getBoundingClientRect();
         if(train.x + train.width < 0) {
+          this.nextInitiated = true;
           this.$store.dispatch("nextScene", { sceneId: null});
         }
         else {
-          setTimeout(this.onNext, 100);
+          setTimeout(this.goNext, 100);
         }
       });
     }
@@ -125,23 +100,6 @@ export default {
 </script>
 
 <style scoped>
-.car {
-  z-index: 5;
-  animation-duration: 3s;
-  animation-timing-function: ease-in;
-  animation-name: car-arrive;
-}
-
-/* TODO: animation for all browsers */
-@keyframes car-arrive {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-
 .train {
   position: absolute;
   width: 50%;
@@ -151,23 +109,39 @@ export default {
   animation-name: train-move;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-}
-
-.slow-train {
   animation-duration: 4s;
 }
 
-/* unused */
-.fast-train {
-  animation-duration: 3s;
-}
-
-@keyframes train-move {
+@-webkit-keyframes train-move {
   from {
     transform: translateX(-350%);
+    -ms-transform: translateX(-350%);
+    -moz-transform: translateX(-350%);
+    -webkit-transform: translateX(-350%);
+    -o-transform: translateX(-350%);
   }
   to {
     transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -webkit-transform: translateX(200%);
+    -o-transform: translateX(200%);
+  }
+}
+@keyframes train-move {
+  from {
+    transform: translateX(-350%);
+    -ms-transform: translateX(-350%);
+    -moz-transform: translateX(-350%);
+    -webkit-transform: translateX(-350%);
+    -o-transform: translateX(-350%);
+  }
+  to {
+    transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -webkit-transform: translateX(200%);
+    -o-transform: translateX(200%);
   }
 }
 
@@ -179,26 +153,45 @@ export default {
   animation: 1s ease infinite alternate float;
 }
 
-@keyframes float {
+@-webkit-keyframes float {
   from {
     transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -o-transform: translateY(0%);
   }
   to {
     transform: translateY(-5%);
+    -ms-transform: translateY(-5%);
+    -moz-transform: translateY(-5%);
+    -webkit-transform: translateY(-5%);
+    -o-transform: translateY(-5%);
   }
 }
 
-/* .chart {
-  position: absolute;
-  width: 70%;
-  left: 5%;
-  top: 20%;
-} */
+@keyframes float {
+  from {
+    transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -o-transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-5%);
+    -ms-transform: translateY(-5%);
+    -moz-transform: translateY(-5%);
+    -webkit-transform: translateY(-5%);
+    -o-transform: translateY(-5%);
+  }
+}
 
 .plus-button {
   position: absolute;
-  left: 80%;
-  top: 70%;
+  left: 82%;
+  top: 69%;
+  z-index: 2;
 }
 
 .borne {
@@ -208,5 +201,12 @@ export default {
   position: absolute;
   top: 60%;
   left: 70%;
+}
+
+.borne-svg {
+  position: absolute;
+  top: 70.5%;
+  left: 73%;
+  width: 7%;
 }
 </style>
