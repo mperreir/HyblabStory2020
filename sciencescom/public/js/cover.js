@@ -40,7 +40,7 @@ jQuery(function ($) {
                     }, 300);
                     setTimeout(function () {
                         window.location.href = window.location.href + 'story';
-                    }, 800);
+                    }, 1000);
                 };
 
                 if (this.items[index].el.classList.contains('stop-scroll')) {
