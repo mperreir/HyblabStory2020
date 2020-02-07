@@ -344,7 +344,7 @@ class UpdateSlide2 extends Observer {
   }
 }
 
-class UpdateSlide3 extends Observer {
+class UpdateSlide6 extends Observer {
 
   constructor(composant) {
     super();
@@ -357,13 +357,13 @@ class UpdateSlide3 extends Observer {
     if (val == true) {
 
       let container = document.createElement('div');
-      container.setAttribute('id', 'slide3_mixtable');
+      container.setAttribute('id', 'slide6_mixtable');
       this.composant.appendChild(container);
 
       let micros = observable.loadMixTable(container);
 
     } else if (val == false) {
-       this.composant.querySelector("#slide3_mixtable").remove();
+       this.composant.querySelector("#slide6_mixtable").remove();
        observable.setDestroyed();
     }
   }
@@ -371,11 +371,35 @@ class UpdateSlide3 extends Observer {
 
 class UpdateSlide4 extends Observer {
 
-  constructor() {
+  constructor(composant) {
     super();
+    this.composant = composant;
   }
   update(observable, object) {
+    let val = observable.getValue();
 
+    if (val == true) {
+
+      let container = document.createElement('div');
+      container.setAttribute('id', 'slide4_tournage');
+      this.composant.appendChild(container);
+
+      let animes = observable.load(container,);
+      Object.keys(animes).forEach(function(key){
+        
+        animes[key].addEventListener('DOMLoaded', function() {console.log(animes[key])
+          document.getElementById(key).addEventListener('mouseover', function(){
+            animes[key].play();
+          });
+          document.getElementById(key).addEventListener('mouseout', function(){
+            animes[key].pause();
+          });
+        })
+      });
+    } else if (val == false) {
+       this.composant.querySelector("#slide4_tournage").remove();
+       observable.setDestroyed();
+    }
   }
 }
 
@@ -390,14 +414,28 @@ class UpdateSlide5 extends Observer {
   }
 }
 
-class UpdateSlide6 extends Observer {
+class UpdateSlide3 extends Observer {
 
-  constructor() {
+  constructor(composant) {
     super();
+    this.composant = composant;
   }
 
   update(observable, object) {
+    let val = observable.getValue();
 
+    if (val == true) {
+
+      let container = document.createElement('div');
+      container.setAttribute('id', 'slide3_voix');
+      this.composant.appendChild(container);
+
+      observable.load(container);
+
+    } else if (val == false) {
+       this.composant.querySelector("#slide3_voix").remove();
+       observable.setDestroyed();
+    }
   }
 }
 
