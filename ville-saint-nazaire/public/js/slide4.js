@@ -5,11 +5,11 @@ let initSlide4 = function(){
 
 
     // Affichage du premier texte après 5s
-    setTimeout(playDialogues, 5500);
+    //setTimeout(playDialogues, 5500);
+    setTimeout(playDialogues, 0);
 
     var btnSuivant = document.querySelector('#slide4-btnSuivant');
     var notesSuivantes = document.querySelector('#slide4-notesSuivantes');
-    // Code pas très propre --> à changer
 	var dialogue1 = document.querySelector('#slide4-container-dialogueJ');
     var dialogue2 = document.querySelector('#slide4-dialogue2');
     var dialogue3 = document.querySelector('#slide4-dialogue3');
@@ -20,19 +20,21 @@ let initSlide4 = function(){
     var trait = document.querySelector('#slide4-trait-dialogueJ');
     var imgHdv1 = document.querySelector('#slide4-img-photo1');
     var imgHdv2 = document.querySelector('#slide4-img-photo2');
-	
-
+    var container = document.querySelector('#page4');
+    console.log(dialogue1.offsetHeight);
+    
    	function playDialogues()
 	{ 
 		son.pause();
+
 		// Début du dialogue
 	    dialogue1.style.visibility = "visible";
-	    // $("#container-suivant").show();
 	    btnSuivant.style.visibility = "visible";
 	    notesSuivantes.style.visibility = "visible";
 	    architecte.style.visibility = "visible";
 	    journaliste.style.visibility = "visible";
 	    trait.style.visibility = "visible";
+
 
 	   d3.select('#slide4-suivant').on('click', function(){
 
@@ -40,44 +42,53 @@ let initSlide4 = function(){
 	    		dialogue1.style.visibility = "hidden";
 	    		dialogue2.style.visibility = "visible";
 	    		trait.style.visibility = "hidden";
+	  			
+	  			// Positionnement du trait de dialogue
 	    		trait = document.querySelector('#slide4-trait-dialogueA');
-	    		trait.style.visibility = "visible";
+	    		trait.style.height = (dialogue2.offsetHeight/container.offsetHeight)*100 + "%";
+	    		trait.style.visibility = "visible"; 
 	    	}
 
 	    	else if(dialogue2.style.visibility != "hidden") {
 	    		dialogue2.style.visibility = "hidden";
+
+	    		// Positionnement du trait de dialogue
+	    		trait.style.height = (dialogue3.offsetHeight/container.offsetHeight)*100 + "%";
+	    		console.log(trait.offsetTop);
+	    		trait.style.top = "65%";
+	    		dialogue3.style.top = "65%";
+	    		console.log(trait.offsetTop);
 	    		dialogue3.style.visibility = "visible";
 	    	}
 
 	    	else if(dialogue3.style.visibility != "hidden") {
 	    		dialogue3.style.visibility = "hidden";
+
+	    		// Positionnement du trait de dialogue
+	    		trait.style.height = (dialogue4.offsetHeight/container.offsetHeight)*100 + "%";
+	    		trait.style.top = "65%";
+	    		dialogue4.style.top = "65%";
 	    		dialogue4.style.visibility = "visible";
 	    	}
 
 	    	else if(dialogue4.style.visibility != "hidden") {
 	    		dialogue4.style.visibility = "hidden";
+
+	    		// Positionnement du trait de dialogue
+	    		trait.style.height = (dialogue5.offsetHeight/container.offsetHeight)*100 + "%";
+	    		trait.style.top = "65%";
+	    		dialogue5.style.top = "65%";
 	    		dialogue5.style.visibility = "visible";
-	    		// $("#btnSuivant").hide();
 	    	}
 	    	else if (dialogue5.style.visibility != "hidden"){
 	    		son.pause();
-  				// moveDown();
   				loadChoices();
-				//initSlide5();
 	    	}
 
 	  });
 	}
 
-
-	d3.select('#next5').on('click', function(){
-		loadChoices();
-		// dialogue3.style.visibility = "hidden";
-		// son.pause();
-  		// moveDown();
-		// initSlide5();
-	});
-
+	// Chargements présentation des choix
 	function loadChoices() 
     {
     	var choix1 = document.querySelector('#container1-slide5');
@@ -96,8 +107,8 @@ let initSlide4 = function(){
 	    notesSuivantes.style.visibility = "hidden";
 	}
 
-
-	 d3.select('#slide4-suivant').on('mouseover', function(){
+	// Animations bouton
+	d3.select('#slide4-suivant').on('mouseover', function(){
         anime({
             targets: '#slide4-notesSuivantes, #slide4-btnSuivant',
             scale: 1.1
@@ -111,23 +122,21 @@ let initSlide4 = function(){
         });
     });
 
-	 d3.select('#next6').on('click', function(){
+    // Redirections slides des choix
+	d3.select('#next6').on('click', function(){
 	    moveDown();
 	    moveLeft();
 	    initSlide6();
-	 });
-	d3.select('#next7').on('click', function(){
-	moveDown();
-	initSlide7();
 	});
-  d3.select('#next8').on('click', function(){
-    moveDown();
-    moveRight();
-    initSlide8();
-  });
-
-
-
+	d3.select('#next7').on('click', function(){
+		moveDown();
+		initSlide7();
+	});
+	d3.select('#next8').on('click', function(){
+	    moveDown();
+	    moveRight();
+	    initSlide8();
+	});
 
 }
 
