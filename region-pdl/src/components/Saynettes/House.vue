@@ -136,11 +136,12 @@
     </PlusButton>
     <SimpleButton
       text="Continuer l'histoire"
-
+      @click.native="onNextCar"
       :width="23"
       :y="90"
       :x="75"
     />
+
   </div>
 </template>
 
@@ -180,6 +181,10 @@ export default {
     onChange(value) {
       this.indexHouse = value;
     },
+    onNextCar() {
+            this.$store.dispatch("nextScene", {sceneId: 2});
+        },
+
     closePopover(i) {
       switch (i) {
         case 1:
@@ -247,14 +252,15 @@ export default {
 
 .slider {
   position: absolute;
-  top: 95%;
-  left: 33%;
+  top: 92%;
+  left: 31%;
 }
 
 .size {
   position: absolute;
-  top: 90%;
+  top: 87%;
   left: 49%;
+  font-size: 2vh;
 }
 
 .plus1 {
