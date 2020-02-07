@@ -10,22 +10,23 @@
     </div>
     
     <div v-show="carGoesOut">
-      <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">Pendant le trajet, {{ character }} s'aperçoit que la batterie de sa voitures est faible. Nous le retrouverons à borne de rechargement la plus proche !</SimpleText>
+      <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">Pendant le trajet, {{ character }} s'aperçoit que la batterie de sa voitures est faible. Un passage aux bornes de rechargement s'impose.</SimpleText>
     </div>
 
     <transition name="nextButtonAppear">
       <SimpleButton v-if="outButton" text="Continuer l'histoire" :width="23" :x="75" :y="90" @click.native="onNext"/>
     </transition>
 
-    <RollingCar :class="{car: true, carGoesOut: carGoesOut}" />
+    <Car :moving="carHasStarted" :rollingOut="carGoesOut" />
   </div>
 </template>
 
 <script>
 import Background from "@/assets/Car/background-car.svg";
-import BackgroundLarge from "@/assets/Car/larger.svg";
+import BackgroundLarge from "@/assets/Car/fond_voiture_borne.svg";
 import SwitchButton from "@/components/SwitchButton";
 import RollingCar from "@/assets/Car/voitureFichier 6.svg";
+import Car from "@/components/Car";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
@@ -38,7 +39,8 @@ export default {
     RollingCar,
     TextTitle,
     SimpleText,
-    SimpleButton
+    SimpleButton,
+    Car
   },
   data: () => ({
     carHasStarted: false,
@@ -89,10 +91,7 @@ export default {
 }
 
 .car { 
-  position: absolute;
-  width: 37%;
-  left: 36%;
-  top: 70%;
+  left: 0%;
 
   transition: left 5s linear;
 }

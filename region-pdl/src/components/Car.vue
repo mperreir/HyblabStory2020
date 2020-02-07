@@ -1,8 +1,8 @@
 <template>
   <div>
-    <CarSVG class="car-svg" />
-    <WheelSVG class="wheel" :class="{moving: moving}" style="left: 31.1%" />
-    <WheelSVG class="wheel" :class="{moving: moving}" style="left: 56.7%" />
+    <CarSVG class="car-svg ":class="{rollingOut: rollingOut}"/>
+    <WheelSVG class="wheel left-wheel" :class="{moving: moving, rollingOutLeft: rollingOut}" />
+    <WheelSVG class="wheel right-wheel" :class="{moving: moving, rollingOutRight: rollingOut}" />
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
     WheelSVG,
     CarSVG
   },
-  props: ['moving'],
+  props: ['moving', 'rollingOut'],
   data: () => ({}),
   methods: {}
 };
@@ -28,6 +28,8 @@ export default {
   left: 30%;
   top: 70%;
   z-index: 3;
+
+  transition: left 5s linear;
 }
 
 .wheel {
@@ -35,14 +37,36 @@ export default {
   top: 84.5%;
   width: 7%;
   z-index: 4;
+
+  transition: left 5s linear;
+}
+
+.left-wheel {
+  left: 31.1%;
+}
+
+.right-wheel {
+  left: 56.7%;
 }
 
 .moving {
-  animation: rotating 2s linear infinite;
-  -webkit-animation: rotating 2s linear infinite;
-  -moz-animation: rotating 2s linear infinite;
-  -ms-animation: rotating 2s linear infinite;
-  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite reverse;
+  -webkit-animation: rotating 2s linear infinite reverse;
+  -moz-animation: rotating 2s linear infinite reverse;
+  -ms-animation: rotating 2s linear infinite reverse;
+  -o-animation: rotating 2s linear infinite reverse;
+}
+
+.rollingOut {
+  left: 100%;
+}
+
+.rollingOutLeft {
+  left: 101%;
+}
+
+.rollingOutRight {
+  left: 127%;
 }
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {

@@ -12,7 +12,7 @@
           <House />
         </CarouselSlide>
         <CarouselSlide :index="3">
-          <Car />
+          <Podcast />
         </CarouselSlide>
         <CarouselSlide :index="4">
           <Borne />
@@ -42,7 +42,7 @@ import ProgressBar from "@/components/ProgressBar.vue";
 import Intro from "@/components/Saynettes/Intro.vue";
 import Persos from "@/components/Saynettes/Persos.vue";
 import House from "@/components/Saynettes/House.vue";
-import Car from "@/components/Saynettes/Car.vue";
+import Podcast from "@/components/Saynettes/Podcast.vue";
 import Borne from "@/components/Saynettes/Borne.vue";
 import Company from "@/components/Saynettes/Company.vue";
 import School from "@/components/Saynettes/School.vue";
@@ -56,7 +56,7 @@ export default {
     Intro,
     Persos,
     House,
-    Car,
+    Podcast,
     Borne,
     Company,
     School,
