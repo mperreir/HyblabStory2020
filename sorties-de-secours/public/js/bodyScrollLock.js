@@ -102,8 +102,14 @@
 
       // If previousBodyOverflowSetting is already set, don't set it again.
       if (previousBodyOverflowSetting === undefined) {
-        previousBodyOverflowSetting = document.body.style.overflow;
-        document.body.style.overflow = 'hidden';
+        if(options == undefined || !options.notall) {
+          previousBodyOverflowSetting = document.body.style.overflow;
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'hidden';
+          document.querySelector("#container-non-scrollable").style.overflow = "hidden";
+          document.querySelector("#container-non-scrollable").style.overflow = "scroll";
+        }
       }
     });
   };
@@ -258,4 +264,3 @@
     }
   };
 });
-

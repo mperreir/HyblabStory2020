@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
   $("#button-start").click(function(e) {
-    bodyScrollLock.enableBodyScroll(homeSection);
+    $("#container-scrollable").addClass("container-scrollable");
+    bodyScrollLock.enableBodyScroll(container);
     goToByScroll("loading-section");
-
-      set_music_play("generalMusic");
+    bodyScrollLock.disableBodyScroll(container);
+    $("#container-scrollable").addClass("container-scrollable");
+    set_music_play("generalMusic");
   });
 
   $("#button-start").hover(function() {
