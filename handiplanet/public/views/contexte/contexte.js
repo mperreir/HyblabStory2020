@@ -21,6 +21,10 @@ class Contexte extends View {
                 this.text2.className = "contexte-nonActive";
                 this.text3.className = "contexte-active";
             }
+            if (this.position == 4) {
+                this.text3.className = "contexte-nonActive";
+                this.text4.className = "contexte-active";
+            }
             this.switchToPhoto();
         });
         this.contact = document.getElementById('contexte-contact');
@@ -34,6 +38,10 @@ class Contexte extends View {
             if (this.position == 3) {
                 this.text2.className = "contexte-nonActive";
                 this.text3.className = "contexte-active";
+            }
+            if (this.position == 4) {
+                this.text3.className = "contexte-nonActive";
+                this.text4.className = "contexte-active";
             }
             this.switchToContact();
         });
@@ -49,6 +57,10 @@ class Contexte extends View {
                 this.text2.className = "contexte-nonActive";
                 this.text3.className = "contexte-active";
             }
+            if (this.position == 4) {
+                this.text3.className = "contexte-nonActive";
+                this.text4.className = "contexte-active";
+            }
             this.switchToReseau();
         });
         this.info = document.getElementById('contexte-info');
@@ -62,6 +74,10 @@ class Contexte extends View {
             if (this.position == 3) {
                 this.text2.className = "contexte-nonActive";
                 this.text3.className = "contexte-active";
+            }
+            if (this.position == 4) {
+                this.text3.className = "contexte-nonActive";
+                this.text4.className = "contexte-active";
             }
             this.switchToInfo();
         });
