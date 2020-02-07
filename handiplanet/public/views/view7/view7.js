@@ -2,12 +2,10 @@
 class View7 extends View {
     constructor(receiver){
         super('view7', receiver);
-        super.load();
     }
 
     
     async switchToNextView(){
-        scrollPosition(1);
         // Construction d'une div temporaire positionnée en dehors
         // de l'écran pour faire entrer la prochaine view
         const tempDiv = document.createElement('div');
@@ -17,7 +15,8 @@ class View7 extends View {
         tempDiv.style.left = '100%';
 
         // Création de la prochaine view
-        window.contextView = new Contexte(tempDiv);
+        const nextView = new Contexte(tempDiv);
+        await nextView.load();
         this.view.style.animation = 'scrollTransitionHorizontal 1s forwards';
         this.view.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
         tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
