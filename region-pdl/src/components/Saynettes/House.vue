@@ -174,14 +174,15 @@ export default {
 
 .slider {
   position: absolute;
-  top: 95%;
-  left: 33%;
+  top: 92%;
+  left: 31%;
 }
 
 .size {
   position: absolute;
-  top: 90%;
+  top: 87%;
   left: 49%;
+  font-size: 2vh;
 }
 
 ul li {
