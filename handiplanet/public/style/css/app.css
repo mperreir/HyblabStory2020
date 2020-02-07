@@ -6,6 +6,7 @@
 #app-view {
   position: relative;
   background-color: #ffffff;
+  transition: background-color 1s;
 }
 #app-view #app-overlay {
   position: absolute;
