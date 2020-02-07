@@ -155,3 +155,8 @@ window.addEventListener('load', function () {
         direction: 'alternate',
     });
 });	
+
+function setBackgroundColor(col) {
+    const appView = document.getElementById('app-view');
+    appView.style.backgroundColor = col;
+}
