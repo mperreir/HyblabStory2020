@@ -104,8 +104,8 @@
 
  #slide4-notesSuivantes {
 	position: absolute;
-	left: 60%;
-	top: 90%;
+	left: 66%;
+	top: 89%;
 	padding-top: 0.7%;
 	color: #92C2D3;
 	z-index: 200;
@@ -115,10 +115,10 @@
 
  #slide4-btnSuivant {
 	position: absolute;
-	top: 90%;
+	top: 89%;
 	width: 4%;
 	/*height: 5%;*/
-	left: 54%;
+	left: 60%;
 	visibility: hidden;
 }
 
@@ -224,22 +224,6 @@
 	background-color: transparent;
 	border-style: none;
 }
-/*
-@media screen and (max-aspect-ratio: 16/9){
-   
-    #page5 p{
-        font-size: 2.8vw;
-    }
-}
-
-
-@media screen and (min-aspect-ratio: 16/9){
-    
-   #page5 p{
-        font-size: 4vh;
-    }
-}
-*/
 
 
 
