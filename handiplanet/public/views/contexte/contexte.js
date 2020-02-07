@@ -99,100 +99,16 @@ class Contexte extends View {
     }
 
     async switchToContact() {
-        // Construction d'une div temporaire positionnée en dehors
-        // de l'écran pour faire entrer la prochaine view
-        const tempDiv = document.createElement('div');
-        document.getElementById('view-container').appendChild(tempDiv);
-        tempDiv.style.position = "absolute";
-        tempDiv.style.top = '0';
-        tempDiv.style.left = '100%';
-
-        // Création de la prochaine view
-        const nextView = new View8(tempDiv);
-        await nextView.load();
-        this.view.style.animation = 'scrollTransitionHorizontal 1s forwards';
-        this.view.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
-        tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
-        tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
-        window.scrollBarController.setPosition(3);
-        setTimeout(() => {
-            document.getElementById('view-container').innerHTML = '';
-            document.getElementById('view-container').appendChild(nextView.view);
-            this.view.style.animation = '';
-            this.view.style.webkitAnimation = '';
-        }, 1000);
+        transitionHorizontal(this.view, View8);
     }
     async switchToReseau() {
-        // Construction d'une div temporaire positionnée en dehors
-        // de l'écran pour faire entrer la prochaine view
-        const tempDiv = document.createElement('div');
-        document.getElementById('view-container').appendChild(tempDiv);
-        tempDiv.style.position = "absolute";
-        tempDiv.style.top = '0';
-        tempDiv.style.left = '100%';
-
-        // Création de la prochaine view
-        const nextView = new View5(tempDiv);
-        await nextView.load();
-        this.view.style.animation = 'scrollTransitionHorizontal 1s forwards';
-        this.view.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
-        tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
-        tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
-        window.scrollBarController.setPosition(3);
-        setTimeout(() => {
-            document.getElementById('view-container').innerHTML = '';
-            document.getElementById('view-container').appendChild(nextView.view);
-            this.view.style.animation = '';
-            this.view.style.webkitAnimation = '';
-        }, 1000);
+        transitionHorizontal(this.view, View5);
     }
     async switchToInfo() {
-        // Construction d'une div temporaire positionnée en dehors
-        // de l'écran pour faire entrer la prochaine view
-        const tempDiv = document.createElement('div');
-        document.getElementById('view-container').appendChild(tempDiv);
-        tempDiv.style.position = "absolute";
-        tempDiv.style.top = '0';
-        tempDiv.style.left = '100%';
-
-        // Création de la prochaine view
-        const nextView = new View11(tempDiv);
-        await nextView.load();
-        this.view.style.animation = 'scrollTransitionHorizontal 1s forwards';
-        this.view.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
-        tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
-        tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
-        window.scrollBarController.setPosition(5);
-        setTimeout(() => {
-            document.getElementById('view-container').innerHTML = '';
-            document.getElementById('view-container').appendChild(nextView.view);
-            this.view.style.animation = '';
-            this.view.style.webkitAnimation = '';
-        }, 1000);
+        transitionHorizontal(this.view, View11);
     }
     async switchToPhoto() {
-        // Construction d'une div temporaire positionnée en dehors
-        // de l'écran pour faire entrer la prochaine view
-        const tempDiv = document.createElement('div');
-        document.getElementById('view-container').appendChild(tempDiv);
-        tempDiv.style.position = "absolute";
-        tempDiv.style.top = '0';
-        tempDiv.style.left = '100%';
-
-        // Création de la prochaine view
-        const nextView = new View2(tempDiv);
-        await nextView.load();
-        this.view.style.animation = 'scrollTransitionHorizontal 1s forwards';
-        this.view.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
-        tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
-        tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
-        window.scrollBarController.setPosition(5);
-        setTimeout(() => {
-            document.getElementById('view-container').innerHTML = '';
-            document.getElementById('view-container').appendChild(nextView.view);
-            this.view.style.animation = '';
-            this.view.style.webkitAnimation = '';
-        }, 1000);
+        transitionHorizontal(this.view, View2);
     }
 
 }
