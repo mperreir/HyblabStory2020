@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CarSVG class="car-svg ":class="{rollingOut: rollingOut}"/>
+    <CarSVG class="car-svg " :class="{rollingOut: rollingOut}"/>
     <WheelSVG class="wheel left-wheel" :class="{moving: moving, rollingOutLeft: rollingOut}" />
     <WheelSVG class="wheel right-wheel" :class="{moving: moving, rollingOutRight: rollingOut}" />
   </div>
@@ -50,11 +50,11 @@ export default {
 }
 
 .moving {
-  animation: rotating 2s linear infinite reverse;
-  -webkit-animation: rotating 2s linear infinite reverse;
-  -moz-animation: rotating 2s linear infinite reverse;
-  -ms-animation: rotating 2s linear infinite reverse;
-  -o-animation: rotating 2s linear infinite reverse;
+  animation: rotating 1.6s linear infinite reverse;
+  -webkit-animation: rotating 1.6s linear infinite reverse;
+  -moz-animation: rotating 1.6s linear infinite reverse;
+  -ms-animation: rotating 1.6s linear infinite reverse;
+  -o-animation: rotating 1.6s linear infinite reverse;
 }
 
 .rollingOut {
@@ -71,31 +71,31 @@ export default {
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 
 @keyframes rotating {
   from {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
     -ms-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 </style>
