@@ -14,10 +14,6 @@
   margin: 0px 10vw;
   border-bottom: 2px solid #5A8D8C;
   position: relative;
-  background-image: url(../../assets/view3/view3-premium-wave.svg);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: bottom -2px center;
 }
 #view3-premium #view-3-premium-middle img {
   position: absolute;
