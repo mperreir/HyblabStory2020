@@ -5,9 +5,9 @@
 }
 #texteBombardement{
     position: absolute;
-    width: 53%;
+    width: 65%;
     height: 19%;
-    left: 19%;
+    left: 8%;
     top: 73%;
 }
 
@@ -19,13 +19,13 @@
 #next3-img{
      position: absolute;
      width: 4%;
-     left : 90%;
-     top : 78%;
+     left : 76%;
+     top : 90%;
  }
 #next3-texte{
     position: absolute;
-    left : 87%;
-    top : 87%;
+    left : 82%;
+    top : 91%;
     font-family: Vibur;
     color: #92C2D2;
 }

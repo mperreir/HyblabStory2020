@@ -17,30 +17,30 @@
 
 #slide4-img-photo1 {
 	position: absolute;
-	width: 35%;
-	height: 40%;
-	left: 20%;
-	top: 10%;
-	transform: rotate(-2.18deg);
+	width: 39%;
+	height: 49%;
+	left: 15%;
+	top: 7%;
+	transform: rotate(0deg);
 
 }
 
 #slide4-img-photo2 {
 	position: absolute;
 	width: 32%;
-	height: 35%;
-	left: 54%;
+	height: 39%;
+	left: 52%;
 	top: 13%;
-	transform: rotate(4.04deg);
+	transform: rotate(1.04deg);
 
 }
 
 #slide4-img-journaliste {
 	position: absolute;
-	width : 13%;
-	height : 40%;
+	width : 15%;
+	height : 41%;
 	top : 58%;
-	left : 1%;
+	left : 0%;
 	z-index: 200;
 	visibility: hidden;
 
@@ -49,9 +49,9 @@
 #slide4-trait-dialogueJ {
 	position: absolute;
 	width: 1%;
-	height: 20%;
-	left: 15%;
-	top: 64%;
+	height: 21%;
+	left: 14%;
+	top: 65%;
 	visibility: hidden;
 
 }
@@ -59,22 +59,21 @@
 #slide4-container-dialogueJ {
 	position: absolute;
 	text-align : justify;
-	width: 60%;
+	width: 56%;
 	height: 10%;
 	left: 17%;
-	top: 63%;
-	line-height: 35%;
+	top: 64.8%;
+	line-height: 34%;
 	visibility: hidden;
-
 }
 
 
 #slide4-img-architecte {
 	position: absolute;
-	width : 30%;
+	width : 16%;
 	height : 40%;
-	top : 57%;
-	left : 77%;
+	top : 58%;
+	left : 82%;
 	z-index: 200;
 	visibility: hidden;
 
@@ -85,8 +84,8 @@
 	position: absolute;
 	width: 1%;
 	height: 13%;
-	left: 84%;
-	top: 67%;
+	left: 83%;
+	top: 65%;
 	visibility: hidden;
 
 }
@@ -94,10 +93,10 @@
 .slide4-container-dialogueA {
 	position: absolute;
 	text-align : right;
-	width: 55%;
+	width: 56%;
 	height: 13%;
-	left: 27%;
-	top: 66%;
+	left: 26%;
+	top: 64.7%;
 	line-height: 35%;
 	visibility: hidden;
 
@@ -105,9 +104,9 @@
 
  #slide4-notesSuivantes {
 	position: absolute;
-	left: 65%;
+	left: 60%;
 	top: 90%;
-	padding-top: 0.4%;
+	padding-top: 0.7%;
 	color: #92C2D3;
 	z-index: 200;
 	font-family: Vibur;
@@ -117,9 +116,9 @@
  #slide4-btnSuivant {
 	position: absolute;
 	top: 90%;
-	width: 3%;
-	height: 5%;
-	left: 61%;
+	width: 4%;
+	/*height: 5%;*/
+	left: 54%;
 	visibility: hidden;
 }
 
@@ -145,7 +144,7 @@
 @media screen and (min-aspect-ratio: 16/9){
     
    #page4 p, #slide4-texte{
-        font-size: 3vh;
+        font-size: 3.5vh;
     }
 
     #slide4-dialogueSuivant {
