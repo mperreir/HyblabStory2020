@@ -182,7 +182,7 @@ export default {
       this.indexHouse = value;
     },
     onNextCar() {
-            this.$store.dispatch("nextScene", {sceneId: 2});
+            this.$store.dispatch("nextScene", {sceneId: null});
         },
 
     closePopover(i) {
