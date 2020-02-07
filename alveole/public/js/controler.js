@@ -204,6 +204,7 @@ class MediatorModal extends Observer {
     if (val == true) {
       let i = this.model.getValue();
       let choice = this.slides[i].getChoice();
+      console.log(this.slides[i].text);
 
       this.view.title.innerHTML = this.slides[i].text["title"];
       this.view.mainText.innerHTML = this.slides[i].text["choices"][choice]['main'];
@@ -446,7 +447,6 @@ class UpdatePopup extends Observer {
     let val = observable.getValue();
 
     if (val == true) {
-      console.log(val);
       this.composant.div.style.visibility = "visible";
       this.composant.div.style.opacity = 1;
     } else if (val == false) {
