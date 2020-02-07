@@ -204,7 +204,6 @@ class MediatorModal extends Observer {
     if (val == true) {
       let i = this.model.getValue();
       let choice = this.slides[i].getChoice();
-      console.log(this.slides[i].text);
 
       this.view.title.innerHTML = this.slides[i].text["title"];
       this.view.mainText.innerHTML = this.slides[i].text["choices"][choice]['main'];
