@@ -7,7 +7,7 @@
 #view11 {
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff;
+  //background-color: #ffffff;
 
   #view-11-middle {
     width: 80vw;
@@ -81,14 +81,14 @@
     article {
       z-index: 7;
       position: absolute;
-      left: 58%;
+      left: 65%;
       max-width: 30%;
-      bottom: 8%;
+      bottom: 30%;
       p{
         font-family: Nunito;
         font-style: normal;
         font-weight: normal;
-        font-size: 21px;
+        //font-size: 21px;
         line-height: 29px;
         color: #426262;
       }

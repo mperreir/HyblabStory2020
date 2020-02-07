@@ -6,11 +6,6 @@
 class ViewThanks extends View {
   constructor(el) {
     super('viewremerciements', el || document.getElementById('view-container'));
-    this.load()
-      .then(() => {
-        this.view = document.getElementById(this.viewName);
-        // this.linkElements();
-      });
   }
 
   linkElements() {
@@ -70,25 +65,6 @@ class ViewThanks extends View {
   }
 
   async switchToView1() {
-    scrollPosition(1);
-    // Construction d'une div temporaire positionnée en dehors
-    // de l'écran pour faire entrer la prochaine view
-    const tempDiv = document.createElement('div');
-    document.getElementById('view-container').appendChild(tempDiv);
-    tempDiv.style.position = 'absolute';
-    tempDiv.style.bottom = '100%';
-
-    // Création de la prochaine view
-    const nextView = new View1(tempDiv);
-    await nextView.load();
-    this.view.style.animation = 'scrollTransitionInvert 1s forwards';
-    this.view.style.webkitAnimation = 'scrollTransitionInvert 1s forwards';
-    tempDiv.style.animation = 'scrollTransitionInvert 1s forwards';
-    tempDiv.style.webkitAnimation = 'scrollTransitionInvert 1s forwards';
-    setTimeout(() => {
-      document.getElementById('view-container').innerHTML = '';
-      document.getElementById('view-container').appendChild(nextView.view);
-      this.view.remove();
-    }, 1000);
+    transitionHorizontalInvert(this.view, View1);
   }
 }

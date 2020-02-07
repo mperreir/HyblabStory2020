@@ -4,7 +4,6 @@
 - [ ] 9 premium interactions + fix responsive
 - [ ] 14 remerciements Wendy
 - [ ] Mise à jour View 10 (par rapport figma)
-- [ ] Corrections view 11 (texte position)
 - [ ] Cohérence entre les vues (ex: taille boutons)
 - [ ] Son
 - [ ] Transitions

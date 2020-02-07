@@ -1,4 +1,4 @@
-#sixth-view-premium {
+#view6-premium {
 
     img{
       position: absolute;
@@ -8,11 +8,10 @@
     width: 100vw;
     
     #decor-view-6 {
-      height: 90vh;
-      width: 90vw;
-      position: absolute;
-      left: 5vw;
-      bottom: 10vh;
+      height: 80vh;
+      width: 80vw;
+      position: relative;
+      margin: 0 10vw;
   
       #fond-view-6-premium{
           width: 80%;
@@ -68,18 +67,10 @@
         left: 25%;
         box-shadow: 0 0 3px 0 rgb(66, 98, 98);
   
-        -webkit-animation: view6p-pulse 6s infinite ubic-bezier(0, 0.29, 0.13, 0.99);
-        -moz-animation: view6p-pulse 6s infinite cubic-bezier(0, 0.29, 0.13, 0.99);
-        -ms-animation: view6p-pulse 6s infinite cubic-bezier(0, 0.29, 0.13, 0.99);
         animation: view6p-pulse 6s infinite cubic-bezier(0, 0.29, 0.13, 0.99);
         // background-color: #e84c3d;
         width: calc(fit-content - 20px);
         border-radius: 30px;
-
-        -webkit-transition: all .4s ease-in-out;
-        -moz-transition: all .4s ease-in-out;
-        -o-transition: all .4s ease-in-out;
-        -ms-transition: all .4s ease-in-out;
         transition: all .1s ease-in-out;
 
         &:hover{
@@ -102,19 +93,19 @@
     #view6p-circle-1{
       left: 20%;
       bottom: 30%;
-      animation: yAxis 6s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+      animation: view6-yAxis 6s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
     }
 
     #view6p-circle-2{
       left: 70%;
       bottom: 10%;
-      animation: xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+      animation: view6-xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
     }
 
     #view6p-circle-3{
       left: 70%;
       bottom: 50%;
-      animation: xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+      animation: view6-xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
     }
 
     #view6p-like{
@@ -122,19 +113,16 @@
   
     }
   
-    @-webkit-keyframes view6p-pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
-    @-moz-keyframes view6p-pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
-    @-ms-keyframes view6p-pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
     @keyframes view6p-pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
 
-    @keyframes yAxis {
+    @keyframes view6-yAxis {
       50% {
         animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
         transform: translateY(10%);
       }
     }
     
-    @keyframes xAxis {
+    @keyframes view6-xAxis {
       50% {
         animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
         transform: translateX(20%);
@@ -144,8 +132,7 @@
     footer {
       width: 100vw;
       height: 20vh;
-      position: absolute;
-      bottom: 0%;
+      position: relative;
   
       #view6p-next-button {
         z-index: 10000;
@@ -155,7 +142,6 @@
         font-weight: normal;
         font-size: 25px;
         line-height: 34px;
-        text-transform: uppercase;
         color: #ffffff;
         border-bottom-left-radius: 50px;
         border-top-left-radius: 50px;
@@ -166,5 +152,4 @@
         transform: translateY(-50%);
       }
     }
-
-  }
+}
