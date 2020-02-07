@@ -28,6 +28,13 @@ class Comparatif extends View {
         });
         this.btNext = document.getElementById('comparatif-next-button');
         this.btNext.addEventListener('click', ()=>{
+            this.btNext.style.transition = "opacity 0.2s";
+            this.btNext.style.opacity = "0";
+            this.switchNextView();
         });
+    }
+
+    async switchNextView(){
+        transitionHorizontal(this.view, ViewThanks);
     }
 }
