@@ -21,12 +21,17 @@ async function showContextView(currentView){
         tempDiv.appendChild(window.contextView.view);
         window.contextView.view.style.animation = '';
     }
+    setBackgroundColor('#FFFFFF');
+    showSplash();
     currentView.style.animation = 'scrollTransitionHorizontal 1s forwards';
     currentView.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
     tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
     tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
     setTimeout(() => {
-        tempDiv.replaceWith(window.contextView.view);
+        const viewContainer = document.getElementById('view-container');
+        viewContainer.innerHTML = '';
+        viewContainer.appendChild(window.contextView.view);
+        // tempDiv.replaceWith(window.contextView.view);
         currentView.remove();
     }, 1000);
 }
@@ -39,7 +44,7 @@ async function transitionHorizontal(view, NextView){
     tempDiv.style.position = "absolute";
     tempDiv.style.top = '0';
     tempDiv.style.left = '100%';
-
+    setBackgroundColor('#FFFFFF');
     // Création de la prochaine view
     const nextView = new NextView(tempDiv);
     await nextView.load();
@@ -48,9 +53,22 @@ async function transitionHorizontal(view, NextView){
     tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
     tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
     setTimeout(() => {
-        tempDiv.replaceWith = nextView.view;
+        const viewContainer = document.getElementById('view-container');
+        viewContainer.innerHTML = '';
+        viewContainer.appendChild(nextView.view);
+        // tempDiv.replaceWith = nextView.view;
         view.remove();
     }, 1000);
+}
+
+function hideSplash() {
+    const bgOverlay = document.getElementById('background-overlay');
+    bgOverlay.style.opacity = '0';
+}
+
+function showSplash() {
+    const bgOverlay = document.getElementById('background-overlay');
+    bgOverlay.style.opacity = '1';
 }
 
 async function transitionHorizontalInvert(view, NextView){
@@ -61,6 +79,7 @@ async function transitionHorizontalInvert(view, NextView){
     tempDiv.style.position = "absolute";
     tempDiv.style.top = '0';
     tempDiv.style.right = '100%';
+    setBackgroundColor('#ffffff');
 
     // Création de la prochaine view
     const nextView = new NextView(tempDiv);

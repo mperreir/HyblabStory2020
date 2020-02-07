@@ -22,6 +22,7 @@ class View13 extends View {
     }
 
     linkElements(){
+        hideSplash();
         // Button to next view
         this.btNext = document.getElementById('view-13-next-button');
         this.btNext.addEventListener('click', ()=>{

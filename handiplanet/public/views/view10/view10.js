@@ -15,6 +15,7 @@ class View10 extends View {
   }
 
   linkElements() {
+    hideSplash();
     const nextButton = document.getElementById('view-10-next-button');
     nextButton.addEventListener('click', () => {
       nextButton.style.transition = "opacity 0.2s";

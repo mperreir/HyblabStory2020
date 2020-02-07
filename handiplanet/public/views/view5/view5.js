@@ -1,9 +1,11 @@
 class View5 extends View {
     constructor(receiver){
         super('view5', receiver);
+        
     }
 
     linkElements(){
+        showSplash();
         this.btHotelA = document.getElementById('view5-button-hotel-a');
         this.btHotelA.addEventListener('click', ()=>{
             this.btHotelA.style.transition = "opacity 0.2s";

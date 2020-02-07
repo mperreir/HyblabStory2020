@@ -15,6 +15,8 @@ class View12Premium extends View {
   }
 
   linkElements () {
+    showSplash();
+    setBackgroundColor('#80BEA31A');
     this.btNext = document.getElementById('view-12p-next-button');
     this.btNext.addEventListener('click', ()=>{
       this.btNext.style.transition = "opacity 0.2s";

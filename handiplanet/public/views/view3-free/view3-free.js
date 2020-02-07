@@ -9,7 +9,8 @@ class View3Free extends View {
     }
 
     linkElements() {
-
+        showSplash();
+        setBackgroundColor('#CB563E1A');
         // Background elements
         this.dot1 = document.getElementById('view-3-free-red-ring');
         this.dot2 = document.getElementById('view-3-free-green-dot');

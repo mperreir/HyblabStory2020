@@ -10,6 +10,8 @@ class View3Premium extends View {
     }
 
     linkElements() {
+        showSplash();
+        setBackgroundColor('#80BEA31A');
         // Button to next view
         this.btNext = document.getElementById('view-3-premium-next-button');
         this.btNext.addEventListener('click', ()=>{

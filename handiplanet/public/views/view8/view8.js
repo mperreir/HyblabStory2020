@@ -14,6 +14,7 @@ class View8 extends View {
   }
 
   linkElements() {
+    showSplash();
     this.nextPremiumView = document.getElementById('view-8-circle-b');
     this.nextPremiumView.addEventListener('click', () => {
       this.switchToView9Premium();

@@ -6,6 +6,7 @@ class View2 extends View {
     
     linkElements(){
         setBackgroundColor('#ffffff');
+        showSplash();
         this.btFree = document.getElementById('button-hotel-a');
         this.btFree.addEventListener('click', ()=>{
             this.switchToViewFree();

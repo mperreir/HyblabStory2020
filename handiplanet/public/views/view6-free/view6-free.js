@@ -7,9 +7,12 @@
 class View6Free extends View {
     constructor(receiver) {
         super('view6-free', receiver);
+        
     }
 
     linkElements() {
+        showSplash();
+        setBackgroundColor('#CB563E1A');
         this.arm = document.getElementById("view-6-character-arm");
         // Background elements
         this.dot1 = document.getElementById('view-6-free-red-ring');

@@ -4,6 +4,9 @@ class View6Premium extends View {
     }
 
     linkElements(){
+        showSplash();
+        setBackgroundColor('#80BEA31A');
+        
         this.btn_like = document.getElementById('view6premium-like');
         this.smartphone = document.getElementById('view6premium-smartphone');
         this.btn_like.addEventListener('click', ()=>{

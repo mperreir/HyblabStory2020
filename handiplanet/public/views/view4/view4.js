@@ -10,6 +10,7 @@ class View4 extends View {
     }
 
     linkElements(){
+        hideSplash();
         // Button to next view
         this.btNext = document.getElementById('view-4-next-button');
         this.btNext.addEventListener('click', ()=>{

@@ -20,6 +20,7 @@
   z-index: 999;
 }
 #app-view #app-overlay #background-overlay {
+  transition: opacity 1s;
   position: absolute;
   width: 80vw;
   height: 70vh;

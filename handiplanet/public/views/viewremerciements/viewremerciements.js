@@ -9,6 +9,7 @@ class ViewThanks extends View {
   }
 
   linkElements() {
+    hideSplash();
     this.createName('agr', 'Benoit', 'Frehel');
     this.createName('agr', 'Maéva', 'Pasquier');
 

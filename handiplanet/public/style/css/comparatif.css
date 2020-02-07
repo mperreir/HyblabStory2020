@@ -6,7 +6,6 @@
 #comparatif {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(203, 86, 62, 0.15);
 }
 #comparatif h1 {
   font-family: Nunito;
@@ -23,10 +22,6 @@
   margin: 0px 10vw;
   border-bottom: 2px solid #5A8D8C;
   position: relative;
-  background-image: url(../../assets/comparatif/comparatif-wave.svg);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: bottom -2px center;
 }
 #comparatif #comparatif-middle img {
   position: absolute;

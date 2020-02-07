@@ -9,6 +9,8 @@ class View9Free extends View {
   }
 
   linkElements() {
+    showSplash();
+    setBackgroundColor('#CB563E1A');
     this.nextButton = document.getElementById('view-9f-next-button');
 
     this.nextButton.addEventListener('click', () => {

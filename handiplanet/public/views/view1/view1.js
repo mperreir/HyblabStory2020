@@ -4,6 +4,7 @@ class View1 extends View {
         super('view1', receiver);
         super.load().then(() => {
             setBackgroundColor('#ffffff');
+            showSplash();
         });
     }
 

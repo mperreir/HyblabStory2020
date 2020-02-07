@@ -15,6 +15,8 @@ class View12Gratuit extends View {
   }
 
   linkElements () {
+    showSplash();
+    setBackgroundColor('#CB563E1A');
     // Background elements
     this.ellipse = document.getElementById('ellipse')
 

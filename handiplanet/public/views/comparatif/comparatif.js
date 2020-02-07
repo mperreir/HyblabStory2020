@@ -10,7 +10,8 @@ class Comparatif extends View {
     }
 
     linkElements() {
-
+        showSplash();
+        setBackgroundColor('#ffffff');
         // Background elements
         this.dot1 = document.getElementById('comparatif-red-ring');
         this.dot2 = document.getElementById('comparatif-green-ring');

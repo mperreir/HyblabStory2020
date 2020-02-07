@@ -13,6 +13,7 @@ class View11 extends View {
         transitionHorizontal(this.view, View12Premium);
     }
     linkElements(){
+        showSplash();
         // Background elements
         this.dot1 = document.getElementById('view-11-premium-white-ring');
         this.dot3 = document.getElementById('view-11-premium-green-ring');
