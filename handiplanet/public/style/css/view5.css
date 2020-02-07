@@ -17,10 +17,6 @@
   bottom: 0%;
   left: 0%;
   position: absolute;
-  background-image: url("../../assets/view5/fond-view-5.svg");
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: bottom center;
 }
 #view5 p {
   position: absolute;
