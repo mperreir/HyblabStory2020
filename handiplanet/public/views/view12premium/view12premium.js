@@ -17,10 +17,9 @@ class View12Premium extends View {
   linkElements () {
     showSplash();
     setBackgroundColor('#80BEA31A');
-    this.btNext = document.getElementById('view-12p-next-button');
+    this.btNext = setOverlayButton('Quelques chiffres', true);
     this.btNext.addEventListener('click', ()=>{
-      this.btNext.style.transition = "opacity 0.2s";
-      this.btNext.style.opacity = "0";
+      hideOverlayButton();
       this.switchToView13();
     });
 
@@ -34,63 +33,9 @@ class View12Premium extends View {
     this.youtube = document.getElementById('youtube');
     this.phone = document.getElementById('phone');
     this.localisation = document.getElementById('localisation');
-
-
-    // Parallax for background elements
-    /* const vc = document.getElementById('view-container');
-    vc.addEventListener('mousemove', e => {
-      var relX = e.pageX - vc.offsetLeft
-      var relY = e.pageY - vc.offsetTop
-
-      TweenMax.to(this.arobase, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -10,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * -10,
-        ease: Power2.easeOut
-      })
-      TweenMax.to(this.clock, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * 20,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * -10,
-        ease: Power2.easeOut
-      })
-      TweenMax.to(this.facebook, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -10,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * 20,
-        ease: Power2.easeOut
-      })
-      TweenMax.to(this.instagram, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -25,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * -10,
-        ease: Power2.easeOut
-      })
-      TweenMax.to(this.mail, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * 20,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * -10,
-        ease: Power2.easeOut
-      })
-      TweenMax.to(this.money, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -10,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * -20,
-        ease: Power2.easeOut
-      })
-      TweenMax.to(this.youtube, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * 10,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * 10,
-        ease: Power2.easeOut
-      })
-      TweenMax.to(this.phone, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -20,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * 10,
-        ease: Power2.easeOut
-      })
-      TweenMax.to(this.localisation, 1, {
-        x: ((relX - vc.offsetWidth / 2) / vc.offsetWidth) * -10,
-        y: ((relY - vc.offsetHeight / 2) / vc.offsetHeight) * 10,
-        ease: Power2.easeOut
-      })
-    }) */
   }
 
   async switchToView13(){
     transitionHorizontal(this.view, View13);
-}
+  }
 }

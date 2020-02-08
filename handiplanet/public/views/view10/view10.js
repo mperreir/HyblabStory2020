@@ -16,10 +16,9 @@ class View10 extends View {
 
   linkElements() {
     hideSplash();
-    const nextButton = document.getElementById('view-10-next-button');
+    const nextButton = setOverlayButton('Retrouver Wendy', false);
     nextButton.addEventListener('click', () => {
-      nextButton.style.transition = "opacity 0.2s";
-      nextButton.style.opacity = "0";
+      hideOverlayButton();
       this.switchToContext();
     });
   }

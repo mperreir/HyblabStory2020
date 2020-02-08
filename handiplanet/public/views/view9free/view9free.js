@@ -11,11 +11,10 @@ class View9Free extends View {
   linkElements() {
     showSplash();
     setBackgroundColor('#CB563E1A');
-    this.nextButton = document.getElementById('view-9f-next-button');
+    this.nextButton = setOverlayButton('Voir l\'hôtel du Centre', false);
 
     this.nextButton.addEventListener('click', () => {
-      this.nextButton.style.transition = "opacity 0.2s";
-      this.nextButton.style.opacity = "0";
+      hideOverlayButton();
       this.switchToPremium();
     });
   }

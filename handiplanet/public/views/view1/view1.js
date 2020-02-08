@@ -15,10 +15,9 @@ class View1 extends View {
 
     linkElements(){
         // Button to next view
-        this.btNext = document.getElementById('view-1-next-button');
+        this.btNext = setOverlayButton('Continuer', false);
         this.btNext.addEventListener('click', ()=>{
-            this.btNext.style.transition = "opacity 0.2s";
-            this.btNext.style.opacity = "0";
+            hideOverlayButton();
             this.switchToContext();
         });
 

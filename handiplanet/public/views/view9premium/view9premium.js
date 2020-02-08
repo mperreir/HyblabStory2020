@@ -12,10 +12,9 @@ class View9Premium extends View {
   linkElements() {
     showSplash();
     setBackgroundColor('#80BEA31A');
-    this.nextButton = document.getElementById('view-9p-next-button');
+    this.nextButton = setOverlayButton('Quelques chiffres', true);
     this.nextButton.addEventListener('click', () => {
-      this.nextButton.style.transition = "opacity 0.2s";
-      this.nextButton.style.opacity = "0";
+      hideOverlayButton();
       this.switchToView10();
     });
   }

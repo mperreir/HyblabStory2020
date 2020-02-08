@@ -12,16 +12,10 @@ class View6Premium extends View {
         this.btn_like.addEventListener('click', ()=>{
             this.smartphone.src = "./assets/view6-premium/smartphone-clicked.svg";
         });
-
-        this.btNext = document.getElementById('view6p-next-button');
-        this.btNext.addEventListener('click', () => {
-
-        });
         // Button to next view
-        this.btNext = document.getElementById('view6p-next-button');
+        this.btNext = setOverlayButton('Quelques chiffres', true);
         this.btNext.addEventListener('click', ()=>{
-            this.btNext.style.transition = "opacity 0.2s";
-            this.btNext.style.opacity = "0";
+            hideOverlayButton();
             this.switchView7();
         });
     }

@@ -27,10 +27,9 @@ class Comparatif extends View {
             this.dot3.style.transform = `translateX(${x * -0.05}px) translateY(${y * -0.07}px)`;
             this.dot4.style.transform = `translateX(${x * 0.05}px) translateY(${y * 0.05}px)`;
         });
-        this.btNext = document.getElementById('comparatif-next-button');
+        this.btNext = setOverlayButton('Remerciements', false);
         this.btNext.addEventListener('click', ()=>{
-            this.btNext.style.transition = "opacity 0.2s";
-            this.btNext.style.opacity = "0";
+            hideOverlayButton();
             this.switchNextView();
         });
     }

@@ -18,7 +18,7 @@ class View12Gratuit extends View {
     showSplash();
     setBackgroundColor('#CB563E1A');
     // Background elements
-    this.ellipse = document.getElementById('ellipse')
+    this.ellipse = document.getElementById('ellipse');
 
     // Parallax for background elements
     document.addEventListener('mousemove', (e) => {
@@ -27,10 +27,9 @@ class View12Gratuit extends View {
       this.ellipse.style.transform = `translateX(${x * -0.1}px) translateY(${y * -0.1}px)`;
     });
 
-    this.btNext = document.getElementById('view-12g-next-button')
+    this.btNext = setOverlayButton('Voir l\'hôtel du Centre', false);
     this.btNext.addEventListener('click', ()=>{
-      this.btNext.style.transition = "opacity 0.2s";
-      this.btNext.style.opacity = "0";
+      hideOverlayButton();
       this.switchToView12Premium();
     });
   }

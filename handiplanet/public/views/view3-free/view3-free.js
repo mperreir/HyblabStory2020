@@ -11,6 +11,7 @@ class View3Free extends View {
     linkElements() {
         showSplash();
         setBackgroundColor('#CB563E1A');
+        this.btNext = setOverlayButton('Voir l\'hôtel du Centre', false);
         // Background elements
         this.dot1 = document.getElementById('view-3-free-red-ring');
         this.dot2 = document.getElementById('view-3-free-green-dot');
@@ -26,10 +27,8 @@ class View3Free extends View {
             this.dot3.style.transform = `translateX(${x * -0.05}px) translateY(${y * -0.07}px)`;
             this.dot4.style.transform = `translateX(${x * 0.05}px) translateY(${y * 0.05}px)`;
         });
-        this.btNext = document.getElementById('view-3-free-next-button');
         this.btNext.addEventListener('click', ()=>{
-            this.btNext.style.transition = "opacity 0.2s";
-            this.btNext.style.opacity = "0";
+            hideOverlayButton();
             this.switchToViewPremium();
         });
     }

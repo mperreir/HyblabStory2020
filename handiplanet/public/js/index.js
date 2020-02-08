@@ -138,3 +138,24 @@ function setBackgroundColor(col) {
     const appView = document.getElementById('app-view');
     appView.style.backgroundColor = col;
 }
+
+function setOverlayButton(text, icon) {
+    const button = document.createElement('button');
+    button.id = 'overlay-next-button';
+    button.innerHTML = text;
+    button.style.opacity = '0';
+    button.style.transition = 'opacity 0.2s';
+    const buttonContainer = document.getElementById('overlay-footer');
+    buttonContainer.appendChild(button);
+    button.style.opacity = '1';
+    return button;
+}
+
+function hideOverlayButton() {
+    const button = document.getElementById('overlay-next-button');
+    button.style.transition = "opacity 0.2s";
+    button.style.opacity = "0";
+    setTimeout(() => {
+        button.remove();
+    }, 200);
+}
