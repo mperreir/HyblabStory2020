@@ -2,13 +2,13 @@
   <div class="saynette">
     <Background class="svg" style="display: hidden"/>
     <BackgroundLarge :class="{test: true,  moved: carHasStarted}"/>
-    
+
     <div :class="{carStartProposal: true, carStartProposalFade: carHasStarted}">
       <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">Sur le chemin du travail, {{ character }} observe de nombreux équipements pour la transition énergétique mis en place par la Région Pays de la Loire.</SimpleText>
       <TextTitle :style="{textAlign: 'center'}" :y="40">Démarrer la voiture</TextTitle>
       <SwitchButton :width="10" :x="45" :y="47" v-on:toggle="startCar"/>
     </div>
-    
+
     <div v-show="carGoesOut">
       <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">Pendant le trajet, {{ character }} s'aperçoit que la batterie de sa voitures est faible. Un passage aux bornes de rechargement s'impose.</SimpleText>
     </div>
@@ -25,7 +25,6 @@
 import Background from "@/assets/Car/background-car.svg";
 import BackgroundLarge from "@/assets/Car/fond_voiture_borne.svg";
 import SwitchButton from "@/components/SwitchButton";
-import RollingCar from "@/assets/Car/voitureFichier 6.svg";
 import Car from "@/components/Car";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
@@ -36,7 +35,6 @@ export default {
     Background,
     SwitchButton,
     BackgroundLarge,
-    RollingCar,
     TextTitle,
     SimpleText,
     SimpleButton,
@@ -90,7 +88,7 @@ export default {
   left: -100%;
 }
 
-.car { 
+.car {
   left: 0%;
 
   transition: left 5s linear;
