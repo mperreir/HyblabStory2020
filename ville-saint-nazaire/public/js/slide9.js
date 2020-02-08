@@ -6,7 +6,22 @@ let initSlide9 = function(){
     moveRight();
     initSlide10();
   });
+
+  d3.select('#next10').on('mouseover', function(){
+      anime({
+          targets: '#next10-txt, #next10-img',
+          scale: 1.2
+      });
+  });
+
+  d3.select('#next10').on('mouseout', function(){
+      anime({
+          targets: '#next10-txt, #next10-img',
+          scale: 1
+      });
+  });
 }
+
 
 function moveImage1(){
   myMove9(document.getElementById('image1_slide9'));
