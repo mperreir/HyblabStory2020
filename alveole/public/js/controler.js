@@ -38,7 +38,7 @@ class SuperControler {
 
     // ModelSlide1
     let modelSlide1 = new ModelSlide1();
-    let updateSlide1 = new UpdateSlide1(modelPopup);
+    let updateSlide1 = new UpdateSlide1(modelPopup, viewCenter);
     modelSlide1.addObservers(updateSlide1);
 
     // ModelSlide2
@@ -48,7 +48,7 @@ class SuperControler {
 
     // ModelSlide3
     let modelSlide3 = new ModelSlide3();
-    let updateSlide3 = new UpdateSlide3(viewCenter.div);
+    let updateSlide3 = new UpdateSlide3(modelPopup, viewCenter);
     modelSlide3.addObservers(updateSlide3);
 
     // ModelSlide4
@@ -92,7 +92,8 @@ class SuperControler {
                                             modelSlide6,
                                             modelSlide7,
                                             modelSlide8,
-                                            modelLastSlide
+                                            modelLastSlide,
+                                            viewCenter
                                           );
     modelSlides.addObservers(mediatorSlide);
 
@@ -127,7 +128,7 @@ class SuperControler {
 
 class MediatorSlide extends Observer {
 
-  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewModal) {
+  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewCenter) {
 
     super();
 
@@ -145,6 +146,7 @@ class MediatorSlide extends Observer {
     };
 
     this.loadText(this.slides);
+    this.composant = viewCenter;
   }
 
   update(observable, object) {
@@ -155,8 +157,17 @@ class MediatorSlide extends Observer {
     for (const [i, model] of entries) {
       if (i != val) {
         model.setValue(false);
-      } else {
+      } else if (i == val) {
         model.setValue(true);
+        if (i > 0 && i < 9) {
+          this.composant.question.innerHTML = model.text.question;
+          this.composant.speech.innerHTML = model.text.speech;
+        } else if (i == 9 || i == 0) {
+          this.composant.question.innerHTML = "";
+          this.composant.speech.innerHTML = "";
+        }
+      } else {
+        console.log('err : unhandled value (mediator slide controler)')
       }
     }
   }
@@ -206,6 +217,7 @@ class MediatorModal extends Observer {
       let choice = this.slides[i].getChoice();
 
       this.view.title.innerHTML = this.slides[i].text["title"];
+      console.log(choice);
       this.view.mainText.innerHTML = this.slides[i].text["choices"][choice]['main'];
       this.view.subText.innerHTML = this.slides[i].text["choices"][choice]['sub'];
 
@@ -275,44 +287,72 @@ class UpdateIntroSlide extends Observer {
 
 class UpdateSlide1 extends Observer {
 
-  constructor(modelPopup) {
+  constructor(modelPopup, composant) {
     super();
     this.model = modelPopup;
+    this.composant = composant;
   }
 
   update(observable, object) {
     let val = observable.getValue();
 
+
     if (val == true) {
-      let hotel = observable.loadHotel();
-      let studio = observable.loadStudio();
+      let hotelDiv = document.createElement('div');
+      hotelDiv.setAttribute('id', 'hotel');
+      hotelDiv.setAttribute('class', 'onClick');
+
+      let hotelText = document.createElement('div');
+      hotelText.setAttribute('class', 'slide1Label');
+
+      let studioDiv = document.createElement('div');
+      studioDiv.setAttribute('id', 'studio');
+      studioDiv.setAttribute('class', 'onClick');
+
+      let studioText = document.createElement('div');
+      studioText.setAttribute('class', 'slide1Label');
+
+      hotelDiv.appendChild(hotelText);
+      studioDiv.appendChild(studioText);
+
+      this.composant.div.appendChild(hotelDiv);
+      this.composant.div.appendChild(studioDiv);
+
+      let hotel = observable.loadHotel(hotelDiv);
+      let studio = observable.loadStudio(studioDiv);
       let model = this.model;
 
       hotel.addEventListener('DOMLoaded', function() {
-        document.getElementById('svg_hotel').addEventListener('mouseover', function() {
+        document.getElementById('hotel').addEventListener('mouseover', function() {
           hotel.play();
         });
-        document.getElementById('svg_hotel').addEventListener('mouseout', function() {
+        document.getElementById('hotel').addEventListener('mouseout', function() {
           hotel.pause();
         });
-        document.getElementById('svg_hotel').addEventListener('click', function() {
+        document.getElementById('hotel').addEventListener('click', function() {
           observable.setChoice(0);
           model.setValue(true);
         });
       });
       studio.addEventListener('DOMLoaded', function() {
-        document.getElementById('svg_studio').addEventListener('mouseover', function() {
+        document.getElementById('studio').addEventListener('mouseover', function() {
           studio.play();
         });
-        document.getElementById('svg_studio').addEventListener('mouseout', function() {
+        document.getElementById('studio').addEventListener('mouseout', function() {
           studio.pause();
         });
-        document.getElementById('svg_studio').addEventListener('click', function() {
+        document.getElementById('studio').addEventListener('click', function() {
           observable.setChoice(1);
           model.setValue(true);
         });
-      })
+      });
+
+      hotelText.innerHTML = observable.text.labels[1];
+      studioText.innerHTML = observable.text.labels[2];
+
     } else if (val == false) {
+      document.getElementById('hotel').remove();
+      document.getElementById('studio').remove();
       observable.destroyHotel();
       observable.destroyStudio();
     }
@@ -339,6 +379,63 @@ class UpdateSlide2 extends Observer {
 
     } else if (val == false) {
        this.composant.querySelector("#slide2_micros").remove();
+       observable.setDestroyed();
+    }
+  }
+}
+
+class UpdateSlide3 extends Observer {
+
+  constructor(model, composant) {
+    super();
+    this.model = model;
+    this.composant = composant;
+  }
+
+  update(observable, object) {
+    let val = observable.getValue();
+
+    if (val == true) {
+
+      let container = document.createElement('div');
+      container.setAttribute('id', 'slide3_voix');
+      this.composant.div.appendChild(container);
+
+      let bouche1 = document.createElement('div');
+      bouche1.setAttribute('id', 'bouche1');
+      bouche1.setAttribute('class', 'onClick');
+      let bouche1Text = document.createElement('div');
+      bouche1Text.setAttribute('class', 'slide3Label');
+      bouche1.appendChild(bouche1Text);
+
+      let bouche2 = document.createElement('div');
+      bouche2.setAttribute('id', 'bouche2');
+      bouche2.setAttribute('class', 'onClick');
+      let bouche2Text = document.createElement('div');
+      bouche2Text.setAttribute('class', 'slide3Label');
+      bouche2.appendChild(bouche2Text);
+
+      container.appendChild(bouche1);
+      container.appendChild(bouche2);
+
+      bouche1Text.innerHTML = observable.text.labels[1];
+      bouche2Text.innerHTML = observable.text.labels[2];
+
+      observable.loadIcons(bouche1, bouche2);
+
+      let model = this.model;
+
+      bouche1.addEventListener('click', function() {
+        observable.setChoice(1);
+        model.setValue(true);
+      });
+      bouche2.addEventListener('click', function() {
+        observable.setChoice(2);
+        model.setValue(true);
+      });
+
+    } else if (val == false) {
+       this.composant.div.querySelector("#slide3_voix").remove();
        observable.setDestroyed();
     }
   }
@@ -386,7 +483,7 @@ class UpdateSlide4 extends Observer {
 
       let animes = observable.load(container,);
       Object.keys(animes).forEach(function(key){
-        
+
         animes[key].addEventListener('DOMLoaded', function() {console.log(animes[key])
           document.getElementById(key).addEventListener('mouseover', function(){
             animes[key].play();
@@ -414,30 +511,7 @@ class UpdateSlide5 extends Observer {
   }
 }
 
-class UpdateSlide3 extends Observer {
 
-  constructor(composant) {
-    super();
-    this.composant = composant;
-  }
-
-  update(observable, object) {
-    let val = observable.getValue();
-
-    if (val == true) {
-
-      let container = document.createElement('div');
-      container.setAttribute('id', 'slide3_voix');
-      this.composant.appendChild(container);
-
-      observable.load(container);
-
-    } else if (val == false) {
-       this.composant.querySelector("#slide3_voix").remove();
-       observable.setDestroyed();
-    }
-  }
-}
 
 class UpdateSlide7 extends Observer {
 

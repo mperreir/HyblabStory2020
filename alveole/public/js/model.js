@@ -130,32 +130,17 @@ class ModelSlide1 extends Observable {
   // value
   bool;
   choice;
-  answer;
   instanciated;
   hotel;
   studio;
   text;
-  pop;
 
   constructor() {
     super();
     this.bool = false;
     this.choice;
-    this.answer = 'studio';
     this.instanciated = false;
     this.pop = false;
-  }
-
-  getModalValue() {
-    return this.pop;
-  }
-
-  setModalValue(val) {
-    if (val != this.pop) {
-      this.pop = val;
-      this.setChanged();
-      this.notifyObservers();
-    }
   }
 
   getValue() {
@@ -187,9 +172,9 @@ class ModelSlide1 extends Observable {
     }
   }
 
-  loadHotel() {
+  loadHotel(container) {
     this.hotel = bodymovin.loadAnimation({
-      container : document.getElementById('center'),
+      container : container,
       renderer: 'svg',
       name: 'animation1',
       loop: true,
@@ -204,9 +189,9 @@ class ModelSlide1 extends Observable {
     return this.hotel;
   }
 
-  loadStudio() {
+  loadStudio(container) {
     this.studio = bodymovin.loadAnimation({
-      container : document.getElementById('center'),
+      container : container,
       renderer: 'svg',
       loop: true,
       autoplay: false,
@@ -300,11 +285,13 @@ class ModelSlide3 extends Observable {
   bool;
   text;
   instanciated;
+  choice;
 
   constructor() {
     super();
     this.bool = false;
     this.instanciated = false;
+    this.choice;
   }
 
   getValue() {
@@ -319,55 +306,37 @@ class ModelSlide3 extends Observable {
     }
   }
 
-  loadQuestion(container){
-    let div_question = document.createElement('div');
-    div_question.setAttribute('id','slide3_question');
-    container.appendChild(div_question);
-    div_question.innerHTML = this.text.question;
+  getChoice() {
+    return this.choice;
   }
-  loadSpeech(container){
-    let div_speech = document.createElement('div');
-    div_speech.setAttribute('id','slide3_speech');
-    container.appendChild(div_speech);
-    div_speech.innerHTML = this.text.speech;
-  }
-  loadIcons(container){
-    let div_bouche1 = document.createElement('div');
-    div_bouche1.setAttribute('id','slide3_bouche1');
-    container.appendChild(div_bouche1);
-    let div_bouche2 = document.createElement('div');
-    div_bouche2.setAttribute('id','slide3_bouche2');
-    container.appendChild(div_bouche2);
-    Snap.load('data/bouche.svg', function(data) {
-      let snap = Snap(div_bouche1);
-      snap.append(data);
-    });
-    Snap.load('data/bouche.svg', function(data) {
-      let snap = Snap(div_bouche2);
-      snap.append(data);
-    });
-  }
-  loadChoices(container){
-    let div_choice1 = document.createElement('div');
-    div_choice1.setAttribute('id','slide3_choice1');
-    container.appendChild(div_choice1);
-    div_choice1.innerHTML = 'NON PROFESSIONNEL';
-    let div_choice2 = document.createElement('div');
-    div_choice2.setAttribute('id','slide3_choice2');
-    container.appendChild(div_choice2);
-    div_choice2.innerHTML = 'PROFESSIONNEL';
-  }
-  load(container){
-    if (this.instanciated == false) {
-      this.loadQuestion(container);
-      this.loadSpeech(container);
-      this.loadIcons(container);
-      this.loadChoices(container);
-      this.instanciated = true;
+
+  setChoice(val) {
+    if (val == 1) {
+      this.choice = 1;
+    } else if (val == 2) {
+      this.choice = 2;
     } else {
+      console.log("err : invalid slide 1 choice value");
+    }
+  }
+
+  loadIcons(container1, container2) {
+    if (this.instanciated == false) {
+      Snap.load('data/bouche.svg', function(data) {
+        let snap = Snap(container1);
+        snap.append(data);
+      });
+      Snap.load('data/bouche.svg', function(data) {
+        let snap = Snap(container2);
+        snap.append(data);
+      });
+      this.instanciated = true;
+    }
+    else {
       console.log('err : slide3 voix already instanciated');
     }
   }
+
   setDestroyed() {
     this.instanciated = false;
   }

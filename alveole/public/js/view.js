@@ -56,6 +56,15 @@ class ViewCenter {
     this.div = document.createElement('div');
     this.div.setAttribute('id', 'center');
 
+    this.question = document.createElement('div');
+    this.question.setAttribute('class', 'center_question');
+
+    this.speech = document.createElement('div');
+    this.speech.setAttribute('class', 'center_speech');
+
+    this.div.appendChild(this.question);
+    this.div.appendChild(this.speech);
+
     this.main.appendChild(this.div);
   }
 }
