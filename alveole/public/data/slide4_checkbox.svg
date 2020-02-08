@@ -1,4 +1,4 @@
-<svg width="27" height="27" id="slide4_checkbox" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="27" height="27" class="svg_checkbox" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_b)">
 <circle cx="13.5" cy="13.5" r="13.5" fill="black" fill-opacity="0.19"/>
 <circle cx="13.5" cy="13.5" r="13" stroke="#9E90F2"/>

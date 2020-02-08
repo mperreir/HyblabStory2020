@@ -391,9 +391,9 @@ class ModelSlide4 extends Observable {
     }
   }
 
-  loadAnime(container){
+  loadAnime(container) {
     this.installer = bodymovin.loadAnimation({
-      container : container,
+      container : container[1],
       renderer: 'svg',
       loop: true,
       autoplay: false,
@@ -403,7 +403,7 @@ class ModelSlide4 extends Observable {
       }
     });
     this.repetition = bodymovin.loadAnimation({
-      container : container,
+      container : container[2],
       renderer: 'svg',
       loop: true,
       autoplay: false,
@@ -413,7 +413,7 @@ class ModelSlide4 extends Observable {
       }
     });
     this.vocalise = bodymovin.loadAnimation({
-      container : container,
+      container : container[3],
       renderer: 'svg',
       loop: true,
       autoplay: false,
@@ -423,7 +423,7 @@ class ModelSlide4 extends Observable {
       }
     });
     this.interview = bodymovin.loadAnimation({
-      container : container,
+      container : container[4],
       renderer: 'svg',
       loop: true,
       autoplay: false,
@@ -441,10 +441,11 @@ class ModelSlide4 extends Observable {
   }
 
   loadCheckbox(container) {
-    for (let i=0; i<4; i++) {
+
+    for (let i = 1; i < 5; i++) {
       let div_checkbox = document.createElement('div');
-      div_checkbox.setAttribute('id','slide4_checkbox'+(i+1));
-      container.appendChild(div_checkbox);
+      div_checkbox.setAttribute('class','slide4_checkbox');
+      container[i].appendChild(div_checkbox);
       Snap.load('data/slide4_checkbox.svg', function(data) {
         let snap = Snap(div_checkbox);
         snap.append(data);
@@ -469,10 +470,10 @@ class ModelSlide4 extends Observable {
     div_valide_text.innerHTML = 'valider';
   }
 
-  load(container) {
+  load(container, divs) {
     if (this.instanciated == false) {
-      let animes = this.loadAnime(container);
-      this.loadCheckbox(container);
+      let animes = this.loadAnime(divs);
+      this.loadCheckbox(divs);
       this.loadValide(container);
       this.instanciated = true;
       return animes;

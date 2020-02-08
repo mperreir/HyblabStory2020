@@ -543,291 +543,136 @@ dessus de l'apect ratio 16/9 */
   text-transform: uppercase;
 }
 
-#slide3_choice1 {
-/* Non professionnel */
-
-position: absolute;
-width: 40%;
-height: 10%;
-left: -2%;
-top: 85%;
-
-/* sous-titre */
-font-family: Oswald;
-font-style: normal;
-font-weight: 500;
-font-size: 15%;
-line-height: 27px;
-text-align: center;
-letter-spacing: 0.21em;
-text-transform: uppercase;
-
-color: #FFFFFF;
-z-index: 10;
-
-}
-#slide3_choice2{
-  /* Non professionnel */
-
-position: absolute;
-width: 30%;
-height: 10%;
-left: 68%;
-top: 85%;
-
-/* sous-titre */
-font-family: Oswald;
-font-style: normal;
-font-weight: 500;
-font-size: 15%;
-line-height: 27px;
-text-align: center;
-letter-spacing: 0.21em;
-text-transform: uppercase;
-
-color: #FFFFFF;
-z-index: 10;
-
-}
-
-#slide4_tournage{
+#slide4_tournage {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-#slide4_question{
-  /* Connaissez-vous certaines étapes qui composent un tournage ? */
 
+.slide4Label {
   position: absolute;
-  width: 160%;
-  height: 20%;
-  left: -23%;
   top: 5%;
-
-  /* question  */
-  font-family: Oswald;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20%;
-  line-height: 172%;
-  /* or 40px */
-  text-align: center;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-
-  color: #FFFFFF;
-  z-index: 10;
-
-}
-#slide4_speech{
-  /* Sélectionner les deux étapes qui vous semblent nécessaires et validez. */
-
-  position: absolute;
-  width: 135%;
-  height: 20%;
-  left: -15%;
-  top: 15%;
-
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14%;
-  line-height: 22px;
-  /* identical to box height */
-  text-align: center;
-  letter-spacing: 0.18em;
-
-  color: #BDB4F3;
-  z-index: 10;
-
-}
-#slide4_titre1{
-  /* Installer le matériel */
-
-  position: absolute;
-  width: 30%;
-  height: 10%;
-  left: -15%;
-  top: 30%;
-
-  /* sous-titre */
-  font-family: Oswald;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16%;
-  line-height: 27px;
-  text-align: center;
-  letter-spacing: 0.21em;
-  text-transform: uppercase;
-
-  color: #FFFFFF;
-  z-index: 10;
-}
-#slide4_titre2{
-  position: absolute;
-  width: 30%;
-  height: 10%;
-  left: 20%;
-  top: 30%;
-
-  /* sous-titre */
-  font-family: Oswald;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16%;
-  line-height: 27px;
-  text-align: center;
-  letter-spacing: 0.21em;
-  text-transform: uppercase;
-
-  color: #FFFFFF;
-}
-#slide4_titre3{
-  position: absolute;
-  width: 30%;
-  height: 10%;
-  left: 55%;
-  top: 30%;
-
-  /* sous-titre */
-  font-family: Oswald;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16%;
-  line-height: 27px;
-  text-align: center;
-  letter-spacing: 0.21em;
-  text-transform: uppercase;
-
-  color: #FFFFFF;
-}
-#slide4_titre4{
-  position: absolute;
-  width: 30%;
-  height: 10%;
-  left: 90%;
-  top: 30%;
-
-  /* sous-titre */
-  font-family: Oswald;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16%;
-  line-height: 27px;
-  text-align: center;
-  letter-spacing: 0.21em;
-  text-transform: uppercase;
-
-  color: #FFFFFF;
-  z-index: 10;
-}
-#slide4_installer{
-  /* Composition 2 1 */
-position: absolute;
-  width: 30%!important;
-  height: 30%!important;
-  left: -15%;
-  top: 50%;
-  z-index: 10;
-}
-#slide4_repetition{
-  /* Composition 2 1 */
-position: absolute;
-  width: 30%!important;
-  height: 30%!important;
-  left: 20%;
-  top: 50%;
-
-}
-#slide4_vocalise{
-  /* Composition 2 1 */
-position: absolute;
-  width: 30%!important;
-  height: 30%!important;
-  left: 55%;
-  top: 50%;
-
-}
-#slide4_interview{
-  /* Composition 2 1 */
-position: absolute;
-  width: 30%!important;
-  height: 30%!important;
-  left: 90%;
-  top: 50%;
-  z-index: 10;
-}
-#slide4_checkbox1{
-/* Ellipse 11 */
-
-  position: absolute;
-  width: 6%;
-  height: 6%;
-  left: -4%;
-  top: 85%;
-  z-index: 10;
-
-  /* Note: backdrop-filter has minimal browser support */
-
-}
-#slide4_checkbox2{
-  position: absolute;
-  width: 6%;
-  height: 6%;
-  left: 31%;
-  top: 85%;
-  /* Note: backdrop-filter has minimal browser support */
-}
-#slide4_checkbox3{
-  position: absolute;
-  width: 6%;
-  height: 6%;
-  left: 66%;
-  top: 85%;
-
-  /* Note: backdrop-filter has minimal browser support */
-}
-#slide4_checkbox4{
-  position: absolute;
-  width: 6%;
-  height: 6%;
-  left: 101%;
-  top: 85%;
-  z-index: 10;
-
-  /* Note: backdrop-filter has minimal browser support */
-}
-#slide4_checkbox{
-  left:20%;
-  position: absolute;
+  height: 30%;
   width: 100%;
-  height: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+  z-index: +1;
 }
+
+.slide4Animations {
+  position: absolute;
+  height: 60%;
+  width: 18%;
+}
+
+#etape1 {
+  position: absolute;
+  left: -7%;
+  top: 30%;
+}
+
+#etape2 {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+
+#etape3 {
+  position: absolute;
+  top: 30%;
+  right: 25%;
+}
+
+#etape4 {
+  position: absolute;
+  right: -7%;
+  top: 30%;
+}
+
+#slide4_installer {
+  /* Composition 2 1 */
+  position: absolute;
+  width: 100%!important;
+  height: 50%!important;
+  top: 30%;
+  z-index: 10;
+}
+
+#slide4_repetition {
+  /* Composition 2 1 */
+  position: absolute;
+  width: 100%!important;
+  height: 50%!important;
+  top: 30%;
+  z-index: 10;
+}
+
+#slide4_vocalise {
+  /* Composition 2 1 */
+  position: absolute;
+  width: 100%!important;
+  height: 50%!important;
+  top: 30%;
+  z-index: 10;
+}
+
+#slide4_interview {
+  /* Composition 2 1 */
+  position: absolute;
+  width: 100%!important;
+  height: 50%!important;
+  top: 30%;
+  z-index: 10;
+}
+
+.slide4_checkbox {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 20%;
+  z-index: 10;
+}
+
+.svg_checkbox {
+  position: absolute;
+  height: 50%;
+  bottom: 0%;
+  width: 20%;
+  left: 40%;
+}
+
 #slide4_valide{
   position: absolute;
   width: 10%;
   height: 10%;
-  left: 125%;
+  left: 115%;
   top: 62%;
   z-index: 10;
 }
+
 #slide4_flech{
   position: absolute;
   width: 80%;
   height: 80%;
 }
+
 #slide4_valide_text{
   /* valider */
   position: absolute;
   width: 10%;
   height: 10%;
-  left: 124%;
-  top: 73%;
+  left: 114%;
+  top: 72%;
 
   font-family: Oswald;
   font-style: normal;
   font-weight: 500;
-  font-size: 15%;
+  font-size: 10%;
   line-height: 22px;
   text-align: center;
   letter-spacing: 0.21em;

@@ -459,7 +459,24 @@ class UpdateSlide4 extends Observer {
       container.setAttribute('id', 'slide4_tournage');
       this.composant.appendChild(container);
 
-      let animations = observable.load(container);
+      let divs = {};
+
+      for (let i = 1; i < 5; i++) {
+        let etape = document.createElement('div');
+        etape.setAttribute('id', 'etape'+i);
+        etape.setAttribute('class', 'slide4Animations');
+
+        let text = document.createElement('div');
+        text.setAttribute('class', 'slide4Label');
+        text.innerHTML = observable.text.labels[i];
+
+        etape.appendChild(text);
+
+        container.appendChild(etape);
+        divs[i] = etape;
+      }
+
+      let animations = observable.load(container, divs);
 
       Object.keys(animations).forEach(function(key) {
 
