@@ -440,17 +440,13 @@ class ModelSlide4 extends Observable {
     };
   }
 
-  loadCheckbox(container) {
-
-    for (let i = 1; i < 5; i++) {
-      let div_checkbox = document.createElement('div');
-      div_checkbox.setAttribute('class','slide4_checkbox');
-      container[i].appendChild(div_checkbox);
+  loadCheckbox(checkboxes) {
+    Object.values(checkboxes).forEach( function(checkbox) {
       Snap.load('data/slide4_checkbox.svg', function(data) {
-        let snap = Snap(div_checkbox);
+        let snap = Snap(checkbox);
         snap.append(data);
       });
-    }
+    });
   }
 
   loadValide(container) {
@@ -470,10 +466,10 @@ class ModelSlide4 extends Observable {
     div_valide_text.innerHTML = 'valider';
   }
 
-  load(container, divs) {
+  load(container, divs, checkboxes) {
     if (this.instanciated == false) {
       let animes = this.loadAnime(divs);
-      this.loadCheckbox(divs);
+      this.loadCheckbox(checkboxes);
       this.loadValide(container);
       this.instanciated = true;
       return animes;

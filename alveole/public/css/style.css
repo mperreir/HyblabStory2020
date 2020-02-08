@@ -568,30 +568,27 @@ dessus de l'apect ratio 16/9 */
   position: absolute;
   height: 60%;
   width: 18%;
+  top: 30%;
 }
 
 #etape1 {
   position: absolute;
   left: -7%;
-  top: 30%;
 }
 
 #etape2 {
   position: absolute;
-  top: 30%;
   left: 25%;
 }
 
 #etape3 {
   position: absolute;
-  top: 30%;
   right: 25%;
 }
 
 #etape4 {
   position: absolute;
   right: -7%;
-  top: 30%;
 }
 
 #slide4_installer {
@@ -630,7 +627,7 @@ dessus de l'apect ratio 16/9 */
   z-index: 10;
 }
 
-.slide4_checkbox {
+.slide4_checkbox_empty {
   position: absolute;
   bottom: 0%;
   width: 100%;
@@ -644,6 +641,17 @@ dessus de l'apect ratio 16/9 */
   bottom: 0%;
   width: 20%;
   left: 40%;
+  z-index: 11;
+}
+
+.svg_checkbox_checked {
+  position: absolute;
+  height: 50%;
+  bottom: 0%;
+  width: 20%;
+  left: 40%;
+  fill: #9E90F2;
+  z-index: 11;
 }
 
 #slide4_valide{
