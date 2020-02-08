@@ -3,9 +3,22 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+#next13-img{
+     position: absolute;
+     width: 4%;
+     left : 59%;
+     top : 90%;
+ }
+#next13-txt{
+    position: absolute;
+    left : 65%;
+    top : 92%;
+    font-family: "Vibur";
+    color: #92C2D2;
+}
+
 #next13{
-  position: absolute;
-  left:5%;
+    cursor: pointer;
 }
 
 #blackblock12{
@@ -58,12 +71,12 @@
     text-align: justify;
 }
 @media screen and (max-aspect-ratio: 16/9){
-    #texte_slide12 p{
-        font-size: 1.7vw;
+    #texte_slide12 p, #next13{
+        font-size: 2vw;
     }
 }
 @media screen and (min-aspect-ratio: 16/9){
-    #texte_slide12 p{
-        font-size: 3vh;
+    #texte_slide12 p, #next13{
+        font-size: 3.4vh;
     }
 }

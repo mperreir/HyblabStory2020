@@ -3,24 +3,30 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-#next10{
-  position: absolute;
-  bottom:5%;
-  right: 16%;
-}
-#next10 img{
-  
+
+#next10-img{
+     position: absolute;
+     width: 4%;
+     left : 59%;
+     top : 90%;
+ }
+#next10-txt{
+    position: absolute;
+    left : 65%;
+    top : 92%;
+    font-family: "Vibur";
+    color: #92C2D2;
 }
 
-#next10 p{
-  font-family:"Vibur";
-  color:#255A85;
+#next10{
+    cursor: pointer;
 }
+
 
 #barre9{
   position:absolute;
   bottom:17%;
-  right: 15%;
+  right: 14%;
   height: 15%;
   width: 1%;
 }
@@ -62,9 +68,9 @@
 
 #texte_slide9{
     position: absolute;
-    width:42%;
+    width:45%;
     height:12%;
-    right:17%;
+    right:16%;
     bottom:20%;
     padding : 0.5%
 }
@@ -74,12 +80,12 @@
     text-align: right;
 }
 @media screen and (max-aspect-ratio: 16/9){
-    #texte_slide9 p{
-        font-size: 1.7vw;
+    #texte_slide9 p, #next10-txt{
+        font-size: 2vw;
     }
 }
 @media screen and (min-aspect-ratio: 16/9){
-    #texte_slide9 p{
-        font-size: 3vh;
+    #texte_slide9 p, #next10-txt{
+        font-size: 3.4vh;
     }
 }
