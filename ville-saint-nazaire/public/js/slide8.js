@@ -36,4 +36,10 @@ let initSlide8 = function(){
     moveLeft();
     initSlide9();
   });
+
+  d3.select('#slide8-btnRetour').on('click', function(){
+    moveUp();
+    moveLeft();
+    //initSlide9();
+  });
 }

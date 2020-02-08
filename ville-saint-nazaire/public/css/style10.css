@@ -21,6 +21,45 @@
 	font-weight: normal;
 }
 
+#slide10-img1 {
+	position: absolute;
+	width : 40%;
+	height : 45%;
+	top : 15%;
+	left : 14%;
+	z-index: 200;
+
+}
+
+#slide10-img1:hover {
+	-webkit-transform:scale(1.25); /* Safari et Chrome */
+	-moz-transform:scale(1.25); /* Firefox */
+	-ms-transform:scale(1.25); /* Internet Explorer 9 */
+	-o-transform:scale(1.25); /* Opera */
+	transform:scale(1.25);
+	transition:0.5s;
+}
+
+#slide10-img2 {
+	position: absolute;
+	width : 33%;
+	height : 38%;
+	top : 19.5%;
+	left : 50.7%;
+	z-index: 200;
+
+}
+
+#slide10-img2:hover {
+	-webkit-transform:scale(1.22); /* Safari et Chrome */
+	-moz-transform:scale(1.22); /* Firefox */
+	-ms-transform:scale(1.22); /* Internet Explorer 9 */
+	-o-transform:scale(1.22); /* Opera */
+	transform:scale(1.22);
+	transition:0.5s;
+}
+
+
 #slide10-img-journaliste {
 	position: absolute;
 	width : 15%;
@@ -37,8 +76,6 @@
 	height: 16%;
 	left: 15%;
 	top: 67%;
-	/*visibility: hidden;*/
-
 }
 
  #slide10-container-dialogueJ {
@@ -49,8 +86,6 @@
 	left: 17%;
 	top: 67%;
 	line-height: 35%;
-	/*visibility: hidden;*/
-
 }
 
 
@@ -73,7 +108,6 @@
 	left: 82%;
 	top: 66.5%;
 	visibility: hidden;
-
 }
 
 .slide10-container-dialogueD {
