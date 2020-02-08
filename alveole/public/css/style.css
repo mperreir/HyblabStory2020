@@ -235,17 +235,17 @@ footer {
   background: rgba(0, 0, 0, 0.7);
   visibility: hidden;
   opacity: 0;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(3px);
 }
 
 /* Modal Content/Box */
 .modal-content {
   position: absolute;
   top: 25%;
-  left: 25%;
+  left: 32%;
   width: 36%;
   height: 61%;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72));
+  background: rgba(255, 255, 255, 0.72);
   border: 3px solid #FFFFFF;
   border-radius: 50%;
 }
@@ -267,7 +267,7 @@ footer {
 
 .modal-content #main_text {
   position: absolute;
-  top: 35%;
+  top: 30%;
   width: 90%;
   left: 5%;
   height: 10%;
@@ -283,8 +283,8 @@ footer {
 
 .modal-content #sub_text {
   position: absolute;
-  top: 50%;
-  height: 20%;
+  top: 45%;
+  height: 25%;
   width: 80%;
   left: 10%;
   font-size: 15%;
@@ -297,11 +297,10 @@ footer {
 
 #button-next {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   width: 12%;
   height: 20%;
   left: 44%;
-  z-index: +1;
 }
 
 
