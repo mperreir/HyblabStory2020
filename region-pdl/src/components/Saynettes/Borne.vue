@@ -2,9 +2,10 @@
   <div class="saynette">
     <Background class="svg" />
     <SimpleText
-      :x="53"
-      :y="17"
-      :width="41"
+      :width="70"
+      :x="15"
+      :y="15"
+      :style="{textAlign: 'center'}"
     >
       <p>
         Pour accompagner la transition énergétique, la Région participe au
