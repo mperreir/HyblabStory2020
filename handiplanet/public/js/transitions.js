@@ -16,20 +16,20 @@ async function showContextView(currentView){
 
     // Création de la prochaine view
     let nextView;
-    console.log(window.contextView);
     if(window.contextView == null){
         window.contextView = new Contexte(tempDiv);
         await window.contextView.load();
         nextView = window.contextView;
+        nextView.reloadContext();
     } else {
-        if(window.contextView.choicesRemaining==0){
+        if(window.contextView.questionNumber==4){
             nextView = new Comparatif(tempDiv);
             await nextView.load();
         } else {
             tempDiv.appendChild(window.contextView.view);
-            window.contextView.refreshUI();
             window.contextView.view.style.animation = '';
             nextView = window.contextView;
+            nextView.reloadContext();
         }
     }
     setBackgroundColor('#FFFFFF');
@@ -42,9 +42,11 @@ async function showContextView(currentView){
         const viewContainer = document.getElementById('view-container');
         viewContainer.innerHTML = '';
         viewContainer.appendChild(nextView.view);
-        // tempDiv.replaceWith(window.contextView.view);
         currentView.remove();
         window.currentView = nextView.view;
+        /* tempDiv.replaceWith = nextView.view;
+        currentView.remove();
+        window.currentView = nextView.view; */
     }, 1000);
 }
 
@@ -69,7 +71,7 @@ async function transitionHorizontal(view, NextView){
         const viewContainer = document.getElementById('view-container');
         viewContainer.innerHTML = '';
         viewContainer.appendChild(nextView.view);
-        // tempDiv.replaceWith = nextView.view;
+        //tempDiv.replaceWith = nextView.view;
         view.remove();
         window.currentView = nextView.view;
     }, 1000);
@@ -104,7 +106,10 @@ async function transitionHorizontalInvert(view, NextView){
     tempDiv.style.animation = 'scrollTransitionHorizontalInvert 1s forwards';
     tempDiv.style.webkitAnimation = 'scrollTransitionHorizontalInvert 1s forwards';
     setTimeout(() => {
-        tempDiv.replaceWith = nextView.view;
+        const viewContainer = document.getElementById('view-container');
+        viewContainer.innerHTML = '';
+        viewContainer.appendChild(nextView.view);
+        //tempDiv.replaceWith = nextView.view;
         view.remove();
         window.currentView = nextView.view;
     }, 1000);

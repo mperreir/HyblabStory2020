@@ -5,7 +5,7 @@ Copyright - 2020 Christophe SONNEVILLE
 -->
 <section id="contexte">
   <div id="contexte-middle">
-    <div>
+    <div id="character-container">
       <img src="assets/character-view1.svg" alt="" id="contexte-character-img">
     </div>
 
@@ -15,43 +15,31 @@ Copyright - 2020 Christophe SONNEVILLE
     <div id="contexte-red-tiny-dot"></div>
     <div id="contexte-yellow-tiny-dot"></div>
 
-    <article id="context-text">
-      <p id="context-1" class="contexte-active text-change">Pour commencer mes recherches, <span> je devrais </span> ?</p>
-      <p id="context-2" class="contexte-nonActive text-change">Pour approfondir mes recherches,
-        <span> que me conseilles-tu</span> ?</p id="context-1">
-      <p id="context-3" class="contexte-nonActive text-change">Selon toi,
-        <span> que devrais-je faire ensuite ?</span></p id="context-1">
-      <p id="context-4" class="contexte-nonActive text-change"><span>On a bien avancé</span>, 
-        il ne reste qu’à ...</p id="context-1">
-    </article>
-
-    <div id="contexte-questions">
-    <div class="contexte-question cphoto" id="contexte-photo">
-      <p class="contexte-choix">Visionner les photos de l’hôtel</p>
-      <div class="contexte-img"><img src="assets/context-photo.svg" alt="" id="contexte-photo-img"></div>
+    <div id="answer-container">
+      <article id="context-text">
+        <p id="context-message" class="text-change"></p>
+      </article>
+  
+      <div class="contexte-question" id="contexte-photo">
+        <p>Visionner les photos de l’hôtel</p>
+        <div class="contexte-img"><img src="assets/context-photo.svg" alt="" id="contexte-photo-img"></div>
+      </div>
+  
+      <div class="contexte-question" id="contexte-contact">
+        <p>Prendre contact avec l’hôtel</p>
+        <div class="contexte-img"><img src="assets/context-contact.svg" alt="" id="contexte-contact-img"></div>
+      </div>
+  
+      <div class="contexte-question" id="contexte-reseau">
+        <p>Visiter les réseaux sociaux de l’hôtel</p>
+        <div class="contexte-img"><img src="assets/context-reseau.svg" alt="" id="contexte-resau-img"></div>
+      </div>
+  
+      <div class="contexte-question" id="contexte-info">
+        <p>Voir les informations de l’hôtel</p>
+        <div class="contexte-img"><img src="assets/context-info.svg" alt="" id="contexte-info-img"></div>
+      </div>
     </div>
-    <div class="contexte-question-done" id="contexte-photo-done"></div>
-
-    <div class="contexte-question ccontact" id="contexte-contact">
-      <p class="contexte-choix">Prendre contact avec l’hôtel</p>
-      <div class="contexte-img"><img src="assets/context-contact.svg" alt="" id="contexte-contact-img"></div>
-    </div>
-    <div class="contexte-question-done" id="contexte-contact-done"></div>
-
-    <div class="contexte-question creseau" id="contexte-reseau">
-      <p class="contexte-choix">Visiter les réseaux sociaux de l’hôtel</p>
-      <div class="contexte-img"><img src="assets/context-reseau.svg" alt="" id="contexte-resau-img"></div>
-    </div>
-    <div class="contexte-question-done" id="contexte-reseau-done"></div>
-
-    <div class="contexte-question cinfo" id="contexte-info">
-      <p class="contexte-choix">Voir les informations de l’hôtel</p>
-      <p class="contexte-img" id="contexte-info-img">i</p>
-    </div>
-    <div class="contexte-question-done" id="contexte-info-done"></div>
-    </div>
-
-    
     
   </div>
   <footer>

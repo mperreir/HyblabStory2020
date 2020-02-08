@@ -5,7 +5,6 @@
 */
 window.soundManager = new SoundManager();
 window.scrollBarController = new ScrollBarController();
-window.scrollBarController.setPosition(View1, 0);
 view = new View1(document.getElementById('view-container'));
 
 const paths = [
@@ -57,9 +56,7 @@ window.addEventListener('load', function () {
     }
 
     function contraste(){
-        console.log("t");
         if(cont){
-            console.log("o");
             toggle.style.background = '#5a8d8c';
             cont = false;
             document.body.style.filter = "grayscale(0%)";
@@ -67,7 +64,6 @@ window.addEventListener('load', function () {
             document.body.style.filter = "contrast(100%)";
         }
         else{
-            console.log("n");
             toggle.style.background = '#cb563e';
             cont = true;
             //document.body.style.filter = "grayscale(100%)";

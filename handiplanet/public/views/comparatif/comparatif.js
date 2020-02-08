@@ -35,6 +35,6 @@ class Comparatif extends View {
 
     async switchNextView(){
         transitionHorizontal(this.view, ViewThanks);
-        window.scrollBarController.setPosition(ViewThanks, 5);
+        window.scrollBarController.setPosition(5, ViewThanks);
     }
 }
