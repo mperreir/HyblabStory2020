@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Hyblab 2020 - Sorties de Secours</title>
+  <link rel="icon" type="image/png" href="img/favicon.png" />
 
   <!-- musique en entrée; il faut cliquer quelque part pour l'activer -->
   <audio id="generalMusic" src="sons/ambiance3.mp3" loop="true" autoplay="true">
@@ -21,7 +22,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
   <!-- BSL -->
-  <script src="js/bodyScrollLock.js"></script>
+  <script type="text/javascript" src="js/bodyScrollLock.js"></script>
+
+  <script type="text/javascript" src="js/paper-full.min.js"></script>
+
 
   <!-- FontAwesome -->
   <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
@@ -98,7 +102,9 @@
         </div>
         <div id="home-wrapper">
           <div id="logo-wrapper">
-            <img src='img/logo_sorties_de_secours.png' />
+            <video autoplay muted id="video_logo">
+              <source src="video/logo.mp4" type="video/mp4">
+            </video>
           </div>
           <div id="start-experience">
             <img src="img/yellow-brush.png" id="img-start"/>
@@ -218,25 +224,65 @@
       <section
         class="section"
         id="dance-section">
+        <div id="container-dance-section">
 
-        <div id="dance-wrapper">
-          <img src='img/dancers.png' id='img-dancers' />
-          <img src="img/dancers-annotations.png" id="img-dancers-annotations" />
+          <div id="dance-first-slide">
+            <script type="text/paperscript" canvas="dance-experience" src="js/dance-experience.js"></script>
+            <canvas id="dance-experience" resize="true"></canvas>
+            <img src='img/dancers_1.png' id='img-dancers' />
+            <img src='img/dancers_zoom.png' id='img-dancers-2' />
+            <div class="animated fadeOut" id="mouse-animated-dance">
+              <div class="scroll-down">
+                <div class="mousey-black" id="mouse-down">
+                  <div class="scroller-black"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="dance-second-slide">
+            <img src='img/dancers_zoom.png' id='img-dancers-zoomed' />
+          </div>
+          <div id="dance-third-slide">
+            <div id="left-side-article1">
+              <div id="title-top-left">
+                <h1>La galerie</h1>
+                <h1>Mauricio Bergile</h1>
+              </div>
+              <div id="img-wrapper-article1">
+                <img src='img/dance-article1.png' id='img-article1' />
+              </div>
+              <p id="img-note"><b>Inès Mauricio</b> est une danseuse d’origine suisse.<br />
+                <b>Mackenzy Bergile</b> est lorientais, on l’a vu dans « <i>20 danseurs pour le XXe siècle</i> »<br /> de Boris Charmatz,
+                et on le verra dans son solo «Antienne» au Théâtre de Lorient.<br />
+                <b>Thomas Winter</b> Photographe.</p>
+            </div>
+            <div id="big-title">
+              <h1>La galerie</h1>
+              <h1>Mauricio Bergile</h1>
+            </div>
+            <div id="article1">
+              <div id="article1-title">
+                <h2>Inès Mauricio</h2>
+                <h2>Mackenzy Bergile</h2>
+              </div>
+              <div id="article1-content">
+                <p>Inès Mauricio et Mackenzy Bergile sont amoureux, à l’évidence. Chacun de leurs gestes se dessine dans l’espace
+                comme le complément de l’autre, dans une chorégraphie inconsciente. Placés dans le volume de leur cuisine-atelier-galerie
+                ils sont des œuvres inscrites dans l’espace. Inès et Mackenzy sont traversés par la grâce, la pureté et la sincérité, dans une
+                sorte de confiance en ce qu’ils sont et ce qu’ils font. On entre chez eux et on se transforme en catalyseur, avec ce que l’on
+                est. Avec son corps, son énergie ou ses mots. Entrer dans un lieu recouvert d’un tapis de danse n’est pas anodin, entrer dans
+                un lieu saturé de blanc non plus. On n’est pas la même debout sur le bitume ou sur un tapis de danse blanc.
+                On y devient un point, un contrepoint, un départ, une pièce posée et jouée, un ancrage pour des lignes, une racine
+                pour un mouvement, une énergie, une histoire, des possibles.</p>
+              </div>
+              <div id="article1-signature">
+                <p><b>Isabelle Nivet</b> Avril 2018.<br /><b>Sorties de secours</b></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="sound-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="100" height="80">
-            <g>
-              <title>Sound Icon</title>
-              <rect class="barDance" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
-              <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
-              <rect class="barDance" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
-              <rect class="barDance" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
-              <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
-              <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
-              <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
-            </g>
-          </svg>
-        </div>
+
+
 
       </section>
       <!-- END DANCE -->
