@@ -14,9 +14,14 @@ class Contexte extends View {
         this.contact = document.getElementById('contexte-contact');
         this.reseau = document.getElementById('contexte-reseau');
         this.info = document.getElementById('contexte-info');
+        this.photod = document.getElementById('contexte-photo-done');
+        this.contactd = document.getElementById('contexte-contact-done');
+        this.reseaud = document.getElementById('contexte-reseau-done');
+        this.infod = document.getElementById('contexte-info-done');
 
         this.photo.addEventListener('click', () => {
             this.photo.className = "contexte-done";
+            this.photod.className = "cdone";
             this.position = this.position + 1;
             if (this.position == 2) {
                 this.text1.className = "contexte-nonActive";
@@ -35,6 +40,7 @@ class Contexte extends View {
         
         this.contact.addEventListener('click', () => {
             this.contact.className = "contexte-done";
+            this.contactd.className = "cdone";
             this.position = this.position + 1;
             if (this.position == 2) {
                 this.text1.className = "contexte-nonActive";
@@ -53,6 +59,7 @@ class Contexte extends View {
         
         this.reseau.addEventListener('click', () => {
             this.reseau.className = "contexte-done";
+            this.reseaud.className = "cdone";
             this.position = this.position + 1;
             if (this.position == 2) {
                 this.text1.className = "contexte-nonActive";
@@ -71,6 +78,7 @@ class Contexte extends View {
         
         this.info.addEventListener('click', () => {
             this.info.className = "contexte-done";
+            this.infod.className = "cdone";
             this.position = this.position + 1;
             if (this.position == 2) {
                 this.text1.className = "contexte-nonActive";

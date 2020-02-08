@@ -145,6 +145,18 @@
   margin-right: -3vw;
   background-color: #CB563E;
 }
+#contexte #contexte-middle #contexte-questions .contexte-question-done {
+  display: none;
+  width: 40vw;
+  margin-top: 2vh;
+  height: 8vh;
+}
+#contexte #contexte-middle #contexte-questions .cdone {
+  display: block;
+  width: 40vw;
+  height: 8vh;
+  margin-top: 2vh;
+}
 #contexte #contexte-middle #contexte-questions .contexte-question {
   display: flex;
   flex-direction: columnS;

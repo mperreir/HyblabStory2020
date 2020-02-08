@@ -4,6 +4,7 @@
 - [ ] 9 premium interactions + fix responsive
 - [ ] 14 remerciements Wendy
 - [ ] Mise à jour View 10 (par rapport figma)
+- [ ] texte large sur vue5
 - [ ] Cohérence entre les vues (ex: taille boutons)
 - [ ] Son
 - [ ] Transitions

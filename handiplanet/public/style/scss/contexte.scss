@@ -159,6 +159,19 @@
         }
       }
 
+      .contexte-question-done{
+        display: none;
+        width: 40vw;
+        margin-top: 2vh;
+        height: 8vh;
+      }
+      .cdone{
+        display: block;
+        width: 40vw;
+        height: 8vh;
+        margin-top: 2vh;
+      }
+
       .contexte-question{
         display: flex;
         flex-direction: columnS;
