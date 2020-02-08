@@ -1,4 +1,5 @@
 class View5 extends View {
+    static titre = 'Visiter les réseaux sociaux';
     constructor(receiver){
         super('view5', receiver);
         

@@ -4,6 +4,7 @@
  * Copyright - 2020 Christophe SONNEVILLE
  */
 class View8 extends View {
+  static titre = 'Prendre contact';
   constructor(el) {
     super('view8', el || document.getElementById('view-container'));
     this.load()

@@ -7,9 +7,19 @@
 
 class ScrollBarController {
     constructor() {
+        this.title = document.getElementById('scroll-title');
         this.points = document.getElementsByClassName('point');
         window.savedContextButtons = {};
         window.savedContextQNb = {};
+        this.points[0].addEventListener('mouseover', (e)=>{
+            this.title.style.opacity = '1';
+            this.title.innerHTML = View1.titre;
+            this.title.style.left = `${e.clientX}px`
+            this.title.style.top = `${e.clientY}px`
+        });
+        this.points[0].addEventListener('mouseleave', ()=>{
+            this.title.style.opacity = '0';
+        });
         this.points[0].addEventListener('click', ()=>{
             for(let i=1; i < this.points.length; i++){
                 this.points[i].className = 'point'; 
@@ -29,6 +39,7 @@ class ScrollBarController {
         console.log(position);
         this.points[position].className = 'point selected last';
         if(position>0) this.points[position-1].className = 'point selected';
+        if(position>0) this.defineTitlePoint(position, View);
         if(window.contextView != null) {
             window.savedContextButtons[position] = {...window.contextView.buttons};
             window.savedContextQNb[position] = window.contextView.questionNumber;
@@ -43,6 +54,18 @@ class ScrollBarController {
             this.points[position].className = 'point selected last';
             if(position>0) this.points[position-1].className = 'point selected';
             transitionHorizontalInvert(window.currentView, View);
+        });
+    }
+
+    defineTitlePoint(pos, View){
+        this.points[pos].addEventListener('mouseover', (e)=>{
+            this.title.style.opacity = '1';
+            this.title.innerHTML = View.titre;
+            this.title.style.left = `${e.clientX}px`
+            this.title.style.top = `${e.clientY}px`
+        });
+        this.points[pos].addEventListener('mouseleave', ()=>{
+            this.title.style.opacity = '0';
         });
     }
 }

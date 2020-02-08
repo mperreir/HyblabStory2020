@@ -307,4 +307,16 @@
   box-shadow: 50px 50px 0 200px rgba(203, 86, 62, 0.3), 0 0 0 10px rgba(203, 85, 62, 0.363);
 }
 
+#scroll-title {
+  z-index: 100000;
+  color: #CB563E !important;
+  opacity: 0;
+  transition: opacity 0.5s;
+  font-family: Nunito;
+  font-style: normal;
+  position: absolute;
+  white-space: nowrap;
+  transform: translateX(-100%) translateX(-20px) translateY(-50%);
+}
+
 /*# sourceMappingURL=app.css.map */

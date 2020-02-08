@@ -1,5 +1,6 @@
 
 class View2 extends View {
+    static titre = 'Visionner les photos';
     constructor(receiver){
         super('view2', receiver);
     }

@@ -1,5 +1,6 @@
 
 class View11 extends View {
+    static titre = 'Voir les informations';
     constructor(receiver){
         super('view11', receiver);
         super.load();
