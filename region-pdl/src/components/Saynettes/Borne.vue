@@ -1,7 +1,11 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
-    <SimpleText :x="53" :y="17" :width="41">
+    <SimpleText
+      :x="53"
+      :y="17"
+      :width="41"
+    >
       <p>
         Pour accompagner la transition énergétique, la Région participe au
         déploiement de bornes de recharge pour les véhicules électriques sur
@@ -10,13 +14,20 @@
       </p>
     </SimpleText>
 
-    <TrainSVG v-show="!nextInitiated" ref="movingTrain" class="train" />
+    <TrainSVG
+      v-show="!nextInitiated"
+      ref="movingTrain"
+      class="train"
+    />
 
     <Car class="car" />
 
     <BoatSVG class="boat" />
 
-    <PlusButton class="plus-button" :width="23">
+    <PlusButton
+      class="plus-button"
+      :width="23"
+    >
       <p class="text">
         En moyenne, on peut trouver une borne tous les
         <span class="red">13 km</span> dans toute la région.
@@ -25,7 +36,18 @@
 
     <BorneSVG class="borne-svg" />
 
-    <SimpleButton text="Continuer l'histoire" :width="23" :x="75" :y="90" @click.native="onNext" />
+    <transition
+      name="nextButtonDisppear"
+    >
+      <SimpleButton
+        v-if="!nextPressed"
+        text="Continuer l'histoire"
+        :width="23"
+        :x="75"
+        :y="90"
+        @click.native="onNext"
+      />
+    </transition>
   </div>
 </template>
 
@@ -177,6 +199,13 @@ export default {
   left: 82%;
   top: 69%;
   z-index: 2;
+}
+
+.nextButtonDisppear-enter-active, .nextButtonDisppear-leave-active {
+  transition: opacity 0.5s;
+}
+.nextButtonDisppear-enter, .nextButtonDisppear-leave-to {
+  opacity: 0;
 }
 
 .borne-svg {
