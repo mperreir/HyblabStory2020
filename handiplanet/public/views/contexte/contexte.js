@@ -29,6 +29,8 @@ class Contexte extends View {
         this.text = document.getElementById('context-message');
         this.text.innerHTML = this.textes[0];
 
+        this.persoImg.src = window.colorPersoManager.getAsset().face;
+
         this.photo.addEventListener('click', () => {
             this.buttons[0] = false;
             this.photo.style.display = 'none';

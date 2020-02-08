@@ -45,13 +45,13 @@
 }
 #view6-premium #view6premium-smartphone {
   position: absolute;
-  width: 15%;
+  width: 20%;
   bottom: 0%;
-  left: 33%;
+  left: 25%;
 }
 #view6-premium #view6premium-like {
   bottom: 25%;
-  left: 25%;
+  left: 15%;
   box-shadow: 0 0 3px 0 #426262;
   animation: view6p-pulse 6s infinite cubic-bezier(0, 0.29, 0.13, 0.99);
   width: calc(fit-content - 20px);
@@ -72,8 +72,8 @@
   width: 20%;
 }
 #view6-premium #view6p-circle-1 {
-  left: 20%;
-  bottom: 30%;
+  left: 15%;
+  bottom: 40%;
   animation: view6-yAxis 6s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
 }
 #view6-premium #view6p-circle-2 {

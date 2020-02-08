@@ -32,6 +32,9 @@
   width: 100%;
   height: 100%;
 }
+#app-view #app-overlay #background-overlay svg path {
+  transition: fill 1s ease;
+}
 #app-view #app-overlay header {
   z-index: 999;
   display: flex;

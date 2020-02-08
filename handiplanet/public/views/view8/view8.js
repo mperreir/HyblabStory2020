@@ -25,6 +25,9 @@ class View8 extends View {
     this.nextPremiumView.addEventListener('click', () => {
       this.switchToView9Free();
     });
+
+    this.persoImg = document.getElementById('view-8-perso');
+    this.persoImg.src = window.colorPersoManager.getAsset().face;
   }
 
   async switchToView9Premium() {
