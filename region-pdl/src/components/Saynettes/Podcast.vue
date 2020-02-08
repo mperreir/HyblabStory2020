@@ -68,6 +68,8 @@ import Car from "@/components/Car";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
+import {Howl, Howler} from 'howler';
+
 
 export default {
   components: {
@@ -83,6 +85,7 @@ export default {
     carHasStarted: false,
     carGoesOut: false,
     outButton: false,
+    podcastSong: null,
   }),
   computed: {
     ...mapGetters([
@@ -92,14 +95,20 @@ export default {
   methods: {
     startCar() {
       this.carHasStarted = true;
+      this.podcastSong.play();
       setTimeout(() => {
         this.carGoesOut = true;
         setTimeout(() => { this.outButton = true }, 5000)
-      }, 5000)
+      }, 16000)
     },
     onNext() {
       this.$store.dispatch('nextScene', {});
     }
+  },
+  mounted() {
+    this.podcastSong =  new Howl({
+      src: ["songs/podcast.wav"],
+    });
   }
 };
 </script>
@@ -110,7 +119,7 @@ export default {
   height: 100vh;
   left: 0;
 
-  transition: left 5s ease-in;
+  transition: left 16s ease-in;
 }
 
 .moved {
@@ -120,14 +129,14 @@ export default {
 .car {
   left: 0%;
 
-  transition: left 5s linear;
+  transition: left 16s linear;
 }
 
 .carStartProposal {
   opacity: 1;
-  transition: opacity 2s linear;
-  -moz-transition: opacity 2s linear;
-  -webkit-transition: opacity 2s linear;
+  transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear;
+  -webkit-transition: opacity 1s linear;
 }
 
 .carStartProposalFade {

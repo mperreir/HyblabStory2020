@@ -100,7 +100,7 @@ export default {
 
 .logo-region {
   position: absolute;
-  left: 6%;
+  left: 7%;
   top: 5%;
   width: 16%;
   height: 7%;
