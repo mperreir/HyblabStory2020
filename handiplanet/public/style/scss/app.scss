@@ -38,7 +38,7 @@
       z-index: 999;
       display: flex;
       img {
-        height: 6.5vh;
+        height: 7.5vh;
       }
       
       ul{
@@ -61,7 +61,9 @@
             color: #ffffff;
             margin-right: 0px;
             border-radius: 20px;
+            font-size: 1.4em;
             a{
+              padding: 15px;
               color: #ffffff; 
             }
           }
@@ -281,14 +283,7 @@
           img{
             height: 8vh;
             width : 8vh;
-            /*&:hover{
-              box-shadow: 0 0 0 5px rgba(203, 86, 62, 0.3);
-            }*/
           }
-        }
-        .mute{
-          z-index: 10000;
-          display: none;
         }
       }
     }

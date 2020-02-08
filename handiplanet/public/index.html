@@ -34,6 +34,7 @@ Copyright - 2020 Christophe SONNEVILLE
     <link rel="stylesheet" href="./style/css/comparatif.css">
     <link rel="stylesheet" href="./style/css/viewremerciements.css">
 
+    <script defer src="./js/soundManager.js"></script>
     <script defer src="./js/template.js"></script>
     <script defer src="./js/scrollBar.js"></script>
     <script defer src="./js/transitions.js"></script>
@@ -70,17 +71,23 @@ Copyright - 2020 Christophe SONNEVILLE
 
       <div id="begin-button">
         <h1>Démarrer</h1>
-        <h2>L'experience</h2>
       </div>
-      <div id = "son">
-        <button id="onW" class="on"><img src="./assets/SonW.svg"></button>
-        <button id="muteW" class="mute"><img src="./assets/SonMuteW.svg"></button>
+      <div id="home-text-right">
+        <p>À travers cette expérience,</p>
+        <p>découvrez les avantages de l’accès premium</p>
+        <p>sur notre plateforme.</p>
+      </div>
+      <div id="home-sound">
+        <button id="home-sound-button"><img src="assets/SonW.svg" id="home-sound-img"></button>
+        <div>
+          <p>Il est recommandé d’activer le son.</p>
+        </div>
        </div>
     </section>
     <section id="app-view" class="view">
       <div id="app-overlay">
         <header>
-          <img src="./assets/logo-overlay.png" alt="Logo handiplanete">
+          <img src="./assets/logo-overlay.svg" alt="Logo handiplanete">
           <ul>
             <li><a href="https://handiplanet.com/pro">Souscrire</a></li>
           </ul>
@@ -97,9 +104,9 @@ Copyright - 2020 Christophe SONNEVILLE
 
         <div id="overlay-buttons">
           <div id="text-size">
-            <button class="text selected" id="small">Aa</button>
-            <button class="text" id="medium">Aa</button>
             <button class="text" id="large">Aa</button>
+            <button class="text" id="medium">Aa</button>
+            <button class="text selected" id="small">Aa</button>
           </div>
           <div class="switch" id="switch">
             <button id="tog">
@@ -107,13 +114,12 @@ Copyright - 2020 Christophe SONNEVILLE
             </button>      
           </div>
           <div id="son">
-            <button id="onB" class="on"><img src="./assets/Son.svg"></button>
-            <button id="muteB" class="mute"><img src="./assets/SonMute.svg"></button>
-           </div>
+            <button id="overlay-sound-button"><img src="assets/Son.svg" id="overlay-sound-img"></button>
+          </div>
         </div>
         <div id="background-overlay">
-          <svg viewBox="0 0 827 683" fill="none" id="overlay-bg-svg">
-            <path d="M716.282 681.359H93.5308C139.078 553.463 -33.4378 530.465 7.27275 381.589C47.9833 232.712 183.416 296.459 228.158 238.764C272.899 181.069 164.875 143.951 166.89 69.7145C168.906 -4.52209 295.068 -30.747 335.779 54.7865C376.489 140.32 397.046 112.481 525.224 143.951C653.402 175.421 630.83 294.442 677.183 337.208C723.537 379.975 822.29 374.327 825.918 508.275C828.82 615.434 754.036 668.314 716.282 681.359Z" fill="url(#paint0_linear)" fill-opacity="0.5" stroke="#5A8D8C" stroke-width="2"/>
+          <svg viewBox="0 0 1106 685" fill="none" id="overlay-bg-svg">
+            <path d="M1046.28 690.003H93.5308C139.078 562.107 -33.4378 539.109 7.27275 390.233C47.9833 241.356 250.447 292.129 308.158 247.408C356.89 209.644 354.875 152.595 356.89 78.3585C358.906 4.12191 500.5 -43.5 556.779 63.4305C600.898 147.257 709.5 100.503 835.224 152.595C957.157 203.116 960.83 303.086 1007.18 345.852C1053.54 388.619 1152.29 392.97 1155.92 526.919C1158.82 634.078 1084.04 676.958 1046.28 690.003Z" fill="url(#paint0_linear)" fill-opacity="0.5" stroke="#5A8D8C" stroke-width="2"/>
             <defs>
               <linearGradient id="paint0_linear" x1="413.5" y1="1" x2="413.5" y2="681" gradientUnits="userSpaceOnUse">
                 <stop stop-color="#80BEA3" />
