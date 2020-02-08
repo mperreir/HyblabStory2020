@@ -1,16 +1,16 @@
 <template>
   <div class="saynette">
-    <!-- <Background class="svg" /> -->
+    <Background class="svg" /> 
   </div>
 </template>
 
 <script>
-//import Background from "@/assets/Quizz/background-quizz.svg";
+import Background from "@/assets/Quizz/background-quizz.svg";
 
 export default {
   name: "Quizz",
   components: {
-    //Background
+    Background
   },
   data: () => ({}),
   methods: {}
