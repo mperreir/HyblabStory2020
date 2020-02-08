@@ -133,11 +133,19 @@ window.addEventListener('load', function () {
         elasticity: 200,
         direction: 'alternate',
     });
+
+    
 });	
 
-function setBackgroundColor(col) {
+function setBackgroundColor(col, fill='blue') {
     const appView = document.getElementById('app-view');
     appView.style.backgroundColor = col;
+    const svgElement = document.getElementById('overlay-bg-svg');
+    const pathsElements = svgElement.querySelectorAll('path');
+    for(let i=0;i<pathsElements.length;i++) {
+        const path = pathsElements[i];
+        path.setAttribute('fill', fill === 'blue' ? 'url(#paint0_linear)' : 'url(#paint1_linear)');
+    }
 }
 
 function setOverlayButton(text, icon) {

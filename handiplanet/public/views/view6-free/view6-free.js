@@ -12,7 +12,7 @@ class View6Free extends View {
 
     linkElements() {
         showSplash();
-        setBackgroundColor('#CB563E1A');
+        setBackgroundColor('#CB563E1A', 'red');
         this.arm = document.getElementById("view-6-character-arm");
         this.body = document.getElementById('view-6-character-body');
 

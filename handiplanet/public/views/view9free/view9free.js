@@ -10,7 +10,7 @@ class View9Free extends View {
 
   linkElements() {
     showSplash();
-    setBackgroundColor('#CB563E1A');
+    setBackgroundColor('#CB563E1A', 'red');
     this.nextButton = setOverlayButton('Voir l\'hôtel du Centre', false);
 
     this.nextButton.addEventListener('click', () => {
