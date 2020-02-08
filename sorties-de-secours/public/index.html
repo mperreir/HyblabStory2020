@@ -46,15 +46,20 @@
     <link rel="stylesheet" href="css/home.css" />
     <script type="text/javascript" src="js/home.js"></script>
     <link rel="stylesheet" href="css/hamburger.css" />
-    <link rel="stylesheet" href="css/menu.css" />
     <script type="text/javascript" src="js/menu.js"></script>
     <link rel="stylesheet" href="css/sound.css" />
+
+
 
     <!-- loading -->
     <link rel="stylesheet" href="css/loading.css" />
 
     <!-- Presentation -->
     <link rel="stylesheet" href="css/presentation.css" />
+
+    <!-- Menu -->
+    <link rel="stylesheet" href="css/menu.css" />
+
 
     <!-- expo -->
     <link rel="stylesheet" href="css/expo.css">
@@ -153,66 +158,70 @@
     </section>
     <!-- END PRESENTATION -->
 
+
     <!-- MENU -->
     <section class="section" id="menu-section">
-      <div class="expChoice">
+
+      <div class="expChoice" id="expChoiceExpo">
         <img class="img-menu-crayon" src='img/menu_expo_crayon.png'/></a>
-        <img class="img-menu" id="menu-expo" src='img/menu_expo.png'/>
-        <div class="menu-hover" id="hover-expo" onclick="location.href='#expo';" style="cursor: pointer;">
+        <img class="img-menu" id="menu-expo" src='img/menu_expo.jpg'/>
+        <div class="menu-hover" id="hover-expo">
           <div class="hover-text-wrapper">
-            <h2>Exposition</h2><h2>Muriel Bordier</h2>
+            <img class="menu-workshop-title" id="title-expo" src="img/menu_title_expo.png" alt="La leçon de natation, Muriel Bordier" />
+            <p class="menu-text">Dix grands formats, illustrant avec humour et décalage
+              différentes saynètes aquatiques.<br>
+              Seuls l’architecture et les personnages composent les photographies.<br>
+              Sans jamais être représentée (ou presque), l’eau est suggérée,<br>
+              et la composition de la photographie oscille entre image réelle et tableau.<br><br>
+              <b>Cette série a reçu le Prix EURAZEO 2015.</b></p>
+            <img class="menu-workshop-author" id="author-expo" src="img/menu_auteur_expo.png" alt="Muriel Bordier" />
           </div>
         </div>
       </div>
-      <div class="expChoice">
+
+      <div class="expChoice" id="expChoiceMusique">
         <img class="img-menu-crayon" src='img/menu_musique_crayon.png'/>
         <img class="img-menu" id="menu-music" class="menu-img" src='img/menu_musique.jpg'/>
-        <div class="menu-hover" id="hover-music" onclick="location.href='#music';" style="cursor: pointer;">
+        <div class="menu-hover" id="hover-music">
           <div class="hover-text-wrapper">
-            <h2>Musique</h2><h2>Baloji</h2>
+            <img class="menu-workshop-title" id="title-musique" src="img/menu_title_musique.png" />
+            <p class="menu-text">Dans Sorties de secours, on écrit pas souvent sur la musique, puisqu’on a confié<br>
+              la tache à Radio Balises, mais on aurait aimé chroniquer 137 avenue Kaniama,<br>
+              le nouvel album de <b>Baloji</b>, au printemps dernier, lorsqu’il est sorti.<br>
+              Un album qu’on écoute en boucle et qui nous fait fondre, onduler, groover, frémir, réfléchir,<br>
+              <b>tout ça en même temps.</b></p>
+            <img class="menu-workshop-author" id="author-musique" src="img/menu_auteur_musique.png" alt="Baloji" />
           </div>
         </div>
       </div>
-      <div class="expChoice">
+
+      <div class="expChoice" id="expChoiceDance">
         <img class="img-menu-crayon" src='img/menu_dance_crayon.png'/>
-        <img class="img-menu" id="menu-dance" class="menu-img" src='img/menu_dance.jpg'/>
-        <div class="menu-hover" id="hover-dance" onclick="location.href='#dance';" style="cursor: pointer;">
+        <img class="img-menu" id="menu-dance" class="menu-img" src='img/menu_dance.png'/>
+        <div class="menu-hover" id="hover-dance">
           <div class="hover-text-wrapper">
-            <h2>Danse</h2><h2>Mauricio Bergile</h2>
+            <img class="menu-workshop-title" id="title-danse" src="img/menu_title_danse.png" />
+            <p class="menu-text">Inès Mauricio est une danseuse d’origine suisse. Mackenzy Bergile est lorientais,<br>
+              on l’a vu dans « 20 danseurs pour le XXe siècle » de Boris Charmatz.<br>
+              Mauricio et Bergile parlent d’écologie, demandent si la danse peut interagir avec l’écologie.<br>
+              On pense aussitôt au marcottage et à la merveilleuse multiplication des végétaux,<br>
+              comment les rhizomes s’étendent, comment les graines s’envolent et se déposent,<br>
+              comment la pourriture devient nourriture... <b>Ils demandent ce qu’est l’essentiel.</b></p>
+            <img class="menu-workshop-author" id="author-danse" src="img/menu_auteur_danse.png" alt="Mauricio Bergile" />
           </div>
         </div>
       </div>
+
     </section>
     <!-- END MENU -->
+
 
     <!-- EXPO -->
     <section
       class="section"
       id="expo-section">
 
-      <!-- v1 -->
-      <!-- Image on top -->
-      <!--<img
-        src='img/expo-cover.png'
-        class='expo-img' />
-      <!-- Image to discover -->
-      <!--<img
-        src='img/expo-discover.png'
-        class='expo-img discover' />
-
-      <!-- display discovered area -->
-      <!--<svg width="100" heigth="100">
-        <defs>
-          <clipPath id="expo-clip">
-          </clipPath>
-        </defs>
-      </svg>-->
-
-
-      <!-- v2 -->
-      <div id="expo-konva">
-
-      </div>
+      <div id="expo-konva"></div>
 
     </section>
     <!-- END EXPO -->

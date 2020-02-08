@@ -1,13 +1,14 @@
 #menu-section {
   position: relative;
-  display: table;
 }
 
 .expChoice {
+  cursor: pointer;
   position: relative;
   float: left;
   height: 100vh;
   width: 33.33%;
+  overflow: hidden;
 }
 
 .expChoice a {
@@ -15,42 +16,66 @@
   color: black;
 }
 
+.expChoice#expChoiceExpo {
+  background-color: #FFCB13;
+ }
+.expChoice#expChoiceMusique {
+  background-color: #F46D36;
+}
+.expChoice#expChoiceDance {
+   background-color: #7D98DD;
+}
+
+
 .img-menu {
+  z-index: 1; /* below crayon */
+
+  /* centering with aspect ratio */
   position: absolute;
-  min-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   height: 100%;
-  z-index: 1;
-  transition: transform 1s, filter 1s ease-in-out;
-  transform-origin: center center;
   filter: brightness(80%);
+
 }
 
 .img-menu-crayon {
+  z-index: 2; /* over image */
+
+  /* centering with aspect ratio */
   position: absolute;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   height: 100%;
-  z-index: 2;
 }
 
-#hover-expo {
+.menu-hover {
+  z-index: 3;
+
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 3;
-  opacity: 0;
-	transition-property: opacity;
-  transition-duration: 1.5s;
-  background: #FFCB13;
-  font-size: 30px;
-  line-height: 50px;
-  text-transform: uppercase;
+
+  font-size: 17px;
+  line-height: 26px;
   font-family: "NimbusSanL";
+
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
-#hover-expo:hover {
+.menu-hover:hover {
   opacity: 1;
+}
+
+.menu-hover {
+  text-align: center;
 }
 
 .menu-hover h2:first-child {
@@ -62,52 +87,24 @@
 }
 
 .hover-text-wrapper {
-  margin: 0;
-  position: absolute;
-  top: 45%;
-  left: 5%;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }
 
+#hover-expo {
+  background: #FFCB13;
+}
 #hover-music {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  opacity: 0;
-	transition-property: opacity;
-  transition-duration: 1.5s;
   background: #F46D36;
-  font-size: 30px;
-  line-height: 50px;
-  text-transform: uppercase;
-  font-family: "NimbusSanL";
 }
-
-#hover-music:hover {
-  opacity: 1;
-}
-
 #hover-dance {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  opacity: 0;
-	transition-property: opacity;
-  transition-duration: 1.5s;
   background: #7D98DD;
-  font-size: 30px;
-  line-height: 50px;
-  text-transform: uppercase;
-  font-family: "NimbusSanL";
-}
-
-#hover-dance:hover {
-  opacity: 1;
 }
 
 .fullscreen{
@@ -117,4 +114,84 @@
     position: fixed;
     top: 0;
     left: 0;
- }
+}
+
+.menu-workshop-title#title-musique {
+  width: 178px;
+  height: 65px;
+}
+
+.menu-workshop-title#title-danse {
+  width: 153px;
+  height: 75px;
+}
+
+.menu-workshop-title#title-expo {
+  width: 226px;
+  height: 82px;
+}
+
+.menu-workshop-author#author-expo {
+  width: 395px;
+  height: 158px;
+}
+.menu-workshop-author#author-musique {
+  width: 277px;
+  height: 128px;
+}
+.menu-workshop-author#author-danse {
+  width: 379px;
+  height: 191px;
+}
+
+
+.menu-hover > .hover-text-wrapper > .menu-text {
+  max-height: 0;
+  opacity: 0;
+  margin: 35px;
+}
+
+.expChoiceExpand > .menu-hover > .hover-text-wrapper > .menu-workshop-author {
+  align-self: flex-end;
+  padding-right: 20%;
+  transition: all 1s;
+  transition-delay: 0.25s;
+}
+
+.expChoiceExpand {
+  cursor: default;
+}
+.expChoiceExpand > .menu-hover > .hover-text-wrapper > .menu-text {
+  max-height: 1000px;
+  opacity: 1;
+
+  transition: all 2s;
+  transition-delay: 1.5s;
+}
+.expChoiceExpand > .menu-hover > .hover-text-wrapper > img, .expChoiceExpand > .menu-hover > .hover-text-wrapper > .menu-text {
+  display: block;
+}
+
+.expChoiceExpand > .menu-hover {
+  opacity: 1;
+}
+
+
+.expChoiceExpand {
+  width: 100%;
+  transition: width 2s;
+}
+
+.expChoiceHidden {
+  width: 0;
+  transition: width 2s;
+  overflow: hidden;
+}
+
+.expChoiceHidden > .menu-hover > .hover-text-wrapper > img, .expChoiceHidden > .menu-hover > .hover-text-wrapper > .menu-text {
+  display: none;
+}
+
+.expChoiceHidden > .img-menu-crayon {
+  width: auto;
+}

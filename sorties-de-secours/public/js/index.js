@@ -63,5 +63,5 @@ function set_music_play(id) {
 }
 
 /* A DESACTIVER POUR DEVELOPPER TRANQUILLEMENT */
-const homeSection = document.querySelector("#home-section");
-bodyScrollLock.disableBodyScroll(homeSection);
+/*const homeSection = document.querySelector("#home-section");
+bodyScrollLock.disableBodyScroll(homeSection);*/
