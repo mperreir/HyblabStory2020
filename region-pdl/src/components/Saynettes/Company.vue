@@ -61,7 +61,7 @@
       :width="23"
       :x="75"
       :y="90"
-      @click.native="onNextSchool"
+      @click.native="onNext"
     />
 
     <CompanySVG class="svg" />
@@ -99,13 +99,11 @@ export default {
       }
     },
     methods: {
-        onNextSchool() {
-            this.$store.dispatch("nextScene", {});
+        onNext() {
+          this.$store.dispatch("nextScene", {
+            sceneId: this.getChatacterGender === 'm' ? 2 : 1
+          });
         },
-        onNextQuizz() {
-            this.$store.dispatch("nextScene", {sceneId: 7}); // // TODO: fix this
-        },
-
         closePopover(i) {
         switch (i) {
           case 1:
