@@ -7,6 +7,8 @@
 #sound-content {
   position: relative;
   top: 30%;
+
+  animation-delay: 0.5s;
 }
 
 #sound-icon-wrapper {
@@ -108,7 +110,7 @@
 }
 
 #mouse-down {
-	position: absolute;
+  position: absolute;
 	transform: translate(-50%, -50%);
 	left: 50%;
 }
