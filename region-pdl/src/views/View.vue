@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <div>
       <Carousel>
         <CarouselSlide :index="0">
@@ -28,13 +28,13 @@
         </CarouselSlide>
       </Carousel>
     </div>
+    <LogoRegion class="logo-region" />
     <transition name="fade">
       <ProgressBar
         v-if="$store.state.currentSceneIndex !== 0"
-        v-bind:number="$store.state.nbScenes - 1"
+        :number="$store.state.nbScenes - 1"
       />
     </transition>
-    <LogoRegion class="logoRegion" />
   </div>
 </template>
 
@@ -78,6 +78,10 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+  position: relative;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 3s cubic-bezier(1, 0.01, 0.65, 0.6);
@@ -88,11 +92,10 @@ export default {
   opacity: 0;
 }
 
-.logoRegion {
+.logo-region {
   position: absolute;
-  left: 15%;
-  top: 5%;
-  width: 10%;
-  height: 10%;
+  left: 6%;
+  top: -3%;
+  width: 16%;
 }
 </style>
