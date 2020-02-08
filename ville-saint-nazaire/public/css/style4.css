@@ -6,13 +6,21 @@
 
 }
 
-#slide4-container-dialogueJ p, .slide4-container-dialogueA p, .slide5-container p{
+#slide4-container-dialogueJ p, .slide4-container-dialogueA p{
 	z-index: 200;
     font-style: normal;
 	font-weight: normal;
 	font-family: Vibur;
 	color: #255A85;
 
+}
+
+.slide5-container p{
+	z-index: 200;
+  font-style: normal;
+	font-weight: normal;
+	font-family: Vibur;
+	color: #92C2D2;
 }
 
 #slide4-img-photo1 {
