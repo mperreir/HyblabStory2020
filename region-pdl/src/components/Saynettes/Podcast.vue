@@ -5,7 +5,13 @@
 
     <div :class="{carStartProposal: true, carStartProposalFade: carHasStarted}">
       <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">Sur le chemin du travail, {{ character }} observe de nombreux équipements pour la transition énergétique mis en place par la Région Pays de la Loire.</SimpleText>
+    </div>
+
+    <div :class="{carStartProposal: true, carStartProposalFade: carHasStarted}">
       <TextTitle :style="{textAlign: 'center'}" :y="40">Démarrer la voiture</TextTitle>
+    </div>
+
+    <div :class="{carStartProposal: true, carStartProposalFade: carHasStarted}">
       <SwitchButton :width="10" :x="45" :y="47" v-on:toggle="startCar"/>
     </div>
 
@@ -29,6 +35,8 @@ import Car from "@/components/Car";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
+import {Howl, Howler} from 'howler';
+
 
 export default {
   components: {
@@ -44,14 +52,16 @@ export default {
     carHasStarted: false,
     carGoesOut: false,
     outButton: false,
+    podcastSong: null,
   }),
   methods: {
     startCar() {
       this.carHasStarted = true;
+      this.podcastSong.play();
       setTimeout(() => {
         this.carGoesOut = true;
         setTimeout(() => { this.outButton = true }, 5000)
-      }, 5000)
+      }, 16000)
     },
     onNext() {
       this.$store.dispatch('nextScene', { sceneId: null });
@@ -71,6 +81,12 @@ export default {
         return "Houston on a un problème";
       }
     }
+  },
+  mounted() {
+    this.podcastSong =  new Howl({
+      src: ["songs/podcast.wav"],
+    });
+    console.log(this.podcastSong)
   }
 };
 </script>
@@ -81,7 +97,7 @@ export default {
   height: 100vh;
   left: 0;
 
-  transition: left 5s ease-in;
+  transition: left 16s ease-in;
 }
 
 .moved {
@@ -91,14 +107,14 @@ export default {
 .car {
   left: 0%;
 
-  transition: left 5s linear;
+  transition: left 16s linear;
 }
 
 .carStartProposal {
   opacity: 1;
-  transition: opacity 2s linear;
-  -moz-transition: opacity 2s linear;
-  -webkit-transition: opacity 2s linear;
+  transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear;
+  -webkit-transition: opacity 1s linear;
 }
 
 .carStartProposalFade {
