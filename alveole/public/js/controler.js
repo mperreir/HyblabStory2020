@@ -450,6 +450,7 @@ class UpdateSlide4 extends Observer {
     super();
     this.composant = composant;
   }
+
   update(observable, object) {
     let val = observable.getValue();
 
@@ -459,10 +460,32 @@ class UpdateSlide4 extends Observer {
       container.setAttribute('id', 'slide4_tournage');
       this.composant.appendChild(container);
 
-      let animations = observable.load(container);
+      let divs = {};
 
-      Object.keys(animations).forEach(function(key) {
+      let checkboxes = {};
 
+      for (let i = 1; i < 5; i++) {
+        let etape = document.createElement('div');
+        etape.setAttribute('id', 'etape'+i);
+        etape.setAttribute('class', 'slide4Animations');
+
+        let div_checkbox = document.createElement('div');
+        div_checkbox.setAttribute('class','slide4_checkbox_empty');
+        etape.appendChild(div_checkbox);
+
+        let text = document.createElement('div');
+        text.setAttribute('class', 'slide4Label');
+        text.innerHTML = observable.text.labels[i];
+        etape.appendChild(text);
+
+        container.appendChild(etape);
+        divs[i] = etape;
+        checkboxes[i] = div_checkbox;
+      };
+
+      let animations = observable.load(container, divs, checkboxes);
+
+      Object.keys(animations).forEach( function(key) {
         animations[key].addEventListener('DOMLoaded', function() {
           document.getElementById(key).addEventListener('mouseover', function(){
             animations[key].play();
@@ -470,13 +493,17 @@ class UpdateSlide4 extends Observer {
           document.getElementById(key).addEventListener('mouseout', function(){
             animations[key].pause();
           });
-        })
+        });
       });
+
+      
+
     } else if (val == false) {
       observable.destroy();
       this.composant.querySelector("#slide4_tournage").remove();
     }
   }
+
 }
 
 class UpdateSlide6 extends Observer {
