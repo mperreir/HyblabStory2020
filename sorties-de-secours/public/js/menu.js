@@ -10,10 +10,10 @@ $(document).ready(function() {
   var pos = $("#menu-section").position();
   $(window).scroll(function() {
     var scrollPos = $(window).scrollTop();
-    if(scrollPos > pos.top) {
+    /*if(scrollPos > pos.top) {
       const menuSection = document.querySelector("#menu-section");
-      bodyScrollLock.disableBodyScroll(menuSection);
-      goToByScroll("menu-section");
+      /*bodyScrollLock.disableBodyScroll(menuSection);
+      goToByScroll("menu-section");*/
     }
   });
 

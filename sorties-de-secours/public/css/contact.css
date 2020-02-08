@@ -1,0 +1,47 @@
+#contact-section {
+  position: relative;
+  background-color: #1E1E1E;
+}
+#contact {
+  cursor: pointer;
+  position: relative;
+  float: left;
+  height: 100vh;
+  width: 33.33%;
+  overflow: hidden;
+}
+
+#menu-text {
+position: absolute;
+width: 478px;
+height: 96px;
+left: 239px;
+top: 452px;
+font-family: NimbusSanL;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 24px;
+display: flex;
+align-items: center;
+color: antiquewhite;
+}
+
+#logo-wrapper {
+  position: absolute;
+width: 518.61px;
+height: 305.99px;
+left: 701px;
+top: 30px;
+}
+
+#img-contact-brush {
+  position: absolute;
+  width: 704.68px;
+  height: 724.02px;
+  left: -67px;
+  top: 143.78px;
+
+  background: url(jaune4.png);
+  transform: rotate(-48.26deg);
+}
