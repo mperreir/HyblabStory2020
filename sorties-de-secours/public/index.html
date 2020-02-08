@@ -62,8 +62,11 @@
   <link rel="stylesheet" href="css/expo.css">
   <script type="text/javascript" src="js/expo.js"></script>
 
+    <!-- article -->
+    <link rel="stylesheet" href="css/article.css">
+    <script type="text/javascript" src="js/article.js"></script>
 
-    <!-- Menu -->
+  <!-- Menu -->
     <link rel="stylesheet" href="css/menu.css" />
 
 
@@ -113,17 +116,17 @@
 
       <!-- LOADING -->
       <section class="section" id="loading-section">
-        <div id="sound-content">
+        <div class="sound-content" id="sound-content-loading">
           <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="128" height="128">
             <g>
               <title>Sound Icon</title>
-              <rect class="bar" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
-              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
-              <rect class="bar" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
-              <rect class="bar" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
-              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
-              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
-              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
+              <rect class="bar bar-white" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
+              <rect class="bar bar-white" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
+              <rect class="bar bar-white" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
+              <rect class="bar bar-white" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
+              <rect class="bar bar-white" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
+              <rect class="bar bar-white" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
+              <rect class="bar bar-white" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
             </g>
           </svg>
 
@@ -210,9 +213,72 @@
       class="section"
       id="expo-section">
 
-      <div id="expo-konva"></div>
+<!--      <div id="expo-konva"></div>-->
 
 
+      <!-- START ARTICLE -->
+      <section class="article-container">
+
+        <img class="brush" id="article-expo-yellow1" src="img/brush/yellow1.png" />
+
+        <img class="brush" id="article-expo-orange5" src="img/brush/orange5.png" />
+        <img class="brush" id="article-expo-blue5" src="img/brush/blue5.png" />
+
+        <img class="brush" id="article-expo-blue3" src="img/brush/blue3.png" />
+        <img class="brush" id="article-expo-orange1" src="img/brush/orange1.png" />
+
+        <img class="brush" id="article-expo-yellow5" src="img/brush/yellow5.png" />
+        <img class="brush" id="article-expo-orange6" src="img/brush/orange6.png" />
+
+        <div class="article-wrapper">
+
+          <div class="article-title-wrapper">
+            <p class="article-title">Les Termes</p>
+            <p class="article-author">Muriel Bordier</p>
+          </div>
+
+          <div class="article-img-wrapper">
+            <img class="article-img" src="img/articles/expo/article1.jpeg">
+          </div>
+          <div class="article-text-wrapper">
+            <p class="article-text">Plouf. La plus rigolote, et la moins « chargée » de sens, mais aussi la plus esthétique. Des espaces comme des aérogares futuristes, absolument blancs, et partout de petits personnages qui font penser – mais oui ! – à la pub Kodak de Mondino, et là encore à des wagons de films de SF, à commencer par 2001, l’odyssée de l’espace, à Oblivion, semi-nanar à l’esthétique parfaite et immaculée avec Tom Cruise, à Bienvenue à Gataca, au Meilleur des mondes, à Wall-E.... Des piscines sans eau, des plongeoirs au ras du plafond, des cohortes de baigneurs suspendus sur des rails, c’est un régal de se perdre dans l’examen minutieux de ces photos et de découvrir les surprises qu’y sèment la photographe, dans un gigantesque «Let’s find Momo».</p>
+            <p class="article-text"><i>« Je suis toujours menée par l’idiotie, le non sens, les grosses machineries où l’homme est face à un système qu’il a créé et qu’il subit. Les décors changent mais il y a toujours une aberration ».</i></p>
+            <p class="article-text"><b>Isabelle Nivet</b> Avril 2018. <br><b>Sorties de secours</b></p>
+          </div>
+
+        </div>
+
+        <div class="article-footer">
+          <p><b>Muriel Bordier</b> Photographe et vidéaste.</p>
+          <div class="article-footer-center">
+            <div class="ss-buttons-wrapper ss-buttons-wrapper-hidden">
+              <input class="ss-radio" type="radio" id="expo-ss-1" name="expo-slide-show" checked />
+              <input class="ss-radio" type="radio" id="expo-ss-2" name="expo-slide-show" />
+              <input class="ss-radio" type="radio" id="expo-ss-3" name="expo-slide-show" />
+              <label for="expo-ss-1" class="ss-dot ss-dot-selected" id="dot1"></label>
+              <label for="expo-ss-2" class="ss-dot" id="dot2"></label>
+              <label for="expo-ss-3" class="ss-dot" id="dot3"></label>
+            </div>
+            <p class="article-footer-website">www.murielbordier.com</p>
+          </div>
+          <div class="sound-content article-sound">
+            <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="128" height="128">
+              <g>
+                <title>Sound Icon</title>
+                <rect class="bar bar-dark" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
+                <rect class="bar bar-dark" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
+                <rect class="bar bar-dark" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
+                <rect class="bar bar-dark" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
+                <rect class="bar bar-dark" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
+                <rect class="bar bar-dark" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
+                <rect class="bar bar-dark" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+      </section>
+      <!-- END ARTICLE -->
 
       </section>
       <!-- END EXPO -->

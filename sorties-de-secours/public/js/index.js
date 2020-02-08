@@ -16,7 +16,7 @@ $header_top.find('a').on('click', function() {
 function goToByScroll(id) {
   $('html,body').animate({
       scrollTop: $("#" + id).offset().top
-  }, 400);
+  }, 500);
 }
 
 /*  MUSIC   */

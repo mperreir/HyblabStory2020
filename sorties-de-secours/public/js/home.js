@@ -4,7 +4,7 @@ $(document).ready(function() {
     bodyScrollLock.enableBodyScroll(container);
     goToByScroll("loading-section");
 
-    const soundAnimated = document.querySelector("#sound-content");
+    const soundAnimated = document.querySelector("#sound-content-loading");
     const mouseAnimated = document.querySelector("#mouse-animated");
     soundAnimated.classList.add('animated', 'fadeInUp');
     mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
