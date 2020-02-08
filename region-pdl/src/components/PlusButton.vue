@@ -64,7 +64,7 @@ export default {
   flex-wrap: wrap;
   position: absolute;
   border-radius: 21%;
-  border: 0.3vh solid #fff;
+  border: 0.2vh solid #fff;
   width: 5vh;
 }
 
