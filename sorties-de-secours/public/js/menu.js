@@ -1,4 +1,13 @@
 $(document).ready(function() {
+
+  $(".expChoice").click(function() {
+    $(".expChoice").addClass('expChoiceHidden');
+
+    $(this).removeClass("expChoiceHidden");
+    $(this).addClass("expChoiceExpand");
+  });
+
+
   $("#menu-expo-link").hover(function() {
     $("#menu-expo").css("filter", "brightness(100%)");
   }, function(){
