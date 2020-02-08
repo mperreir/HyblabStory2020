@@ -21,7 +21,7 @@ let initSlide4 = function(){
     var imgHdv1 = document.querySelector('#slide4-img-photo1');
     var imgHdv2 = document.querySelector('#slide4-img-photo2');
     var container = document.querySelector('#page4');
-    console.log(dialogue1.offsetHeight);
+    var positionDialogue;
     
    	function playDialogues()
 	{ 
@@ -37,7 +37,7 @@ let initSlide4 = function(){
 
 
 	   d3.select('#slide4-suivant').on('click', function(){
-
+	   		// Passage au dialogue 2
 	    	if (dialogue1.style.visibility != "hidden") {
 	    		dialogue1.style.visibility = "hidden";
 	    		dialogue2.style.visibility = "visible";
@@ -48,38 +48,40 @@ let initSlide4 = function(){
 	    		trait.style.height = (dialogue2.offsetHeight/container.offsetHeight)*100 + "%";
 	    		trait.style.visibility = "visible"; 
 	    	}
-
+	    	// Passage au dialogue 3
 	    	else if(dialogue2.style.visibility != "hidden") {
 	    		dialogue2.style.visibility = "hidden";
 
-	    		// Positionnement du trait de dialogue
-	    		trait.style.height = (dialogue3.offsetHeight/container.offsetHeight)*100 + "%";
-	    		console.log(trait.offsetTop);
-	    		trait.style.top = "65%";
-	    		dialogue3.style.top = "65%";
-	    		console.log(trait.offsetTop);
+	    		// Positionnement du dialogue
+	    		positionDialogue = (dialogue3.offsetHeight/container.offsetHeight)*100 + "%";
+	    		trait.style.height = positionDialogue;
+	    		trait.style.top = (72 - parseInt(trait.style.height)/2) + "%";
+	    		dialogue3.parentElement.style.top =(72 - parseInt(positionDialogue)/2) + "%";
 	    		dialogue3.style.visibility = "visible";
 	    	}
-
+	    	// Passage au dialogue 4
 	    	else if(dialogue3.style.visibility != "hidden") {
 	    		dialogue3.style.visibility = "hidden";
 
-	    		// Positionnement du trait de dialogue
-	    		trait.style.height = (dialogue4.offsetHeight/container.offsetHeight)*100 + "%";
-	    		trait.style.top = "65%";
-	    		dialogue4.style.top = "65%";
+	    		// Positionnement du dialogue
+	    		positionDialogue = (dialogue4.offsetHeight/container.offsetHeight)*100 + "%";
+	    		trait.style.height = positionDialogue;
+	    		trait.style.top = (72 - parseInt(trait.style.height)/2) + "%";
+	    		dialogue4.parentElement.style.top =(72 - parseInt(positionDialogue)/2) + "%";
 	    		dialogue4.style.visibility = "visible";
 	    	}
-
+	    	// Passage au dialogue 5
 	    	else if(dialogue4.style.visibility != "hidden") {
 	    		dialogue4.style.visibility = "hidden";
 
-	    		// Positionnement du trait de dialogue
-	    		trait.style.height = (dialogue5.offsetHeight/container.offsetHeight)*100 + "%";
-	    		trait.style.top = "65%";
-	    		dialogue5.style.top = "65%";
+	    		// Positionnement du dialogue
+	    		positionDialogue = (dialogue5.offsetHeight/container.offsetHeight)*100 + "%";
+	    		trait.style.height = positionDialogue;
+	    		trait.style.top = (72 - parseInt(trait.style.height)/2) + "%";
+	    		dialogue5.parentElement.style.top =(72 - parseInt(positionDialogue)/2) + "%";
 	    		dialogue5.style.visibility = "visible";
 	    	}
+	    	// Passage à la présentation des choix
 	    	else if (dialogue5.style.visibility != "hidden"){
 	    		son.pause();
   				loadChoices();
@@ -95,9 +97,11 @@ let initSlide4 = function(){
 		var choix2 = document.querySelector('#container2-slide5');
 		var choix3 = document.querySelector('#container3-slide5');
 		var date = document.querySelector('.annee');
+		// On affiche les choix
     	choix1.style.visibility = "visible";
     	choix2.style.visibility = "visible";
     	choix3.style.visibility = "visible";
+    	// On cache les éléments du dialogue précédent
     	date.style.visibility = "hidden";
     	imgHdv1.style.visibility = "hidden";
     	imgHdv2.style.visibility = "hidden";

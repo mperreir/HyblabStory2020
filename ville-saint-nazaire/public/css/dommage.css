@@ -9,56 +9,37 @@
 
 #dommage-img-decorateur {
 	position: absolute;
-	width : 30%;
+	width : 15%;
 	height : 40%;
 	top : 57%;
-	left : 72%;
+	left : 80%;
 	z-index: 200;
 
 }
 
 
 #container2_dommage{
+	position:absolute;
 	left:45%;
 	top:30%;
 }
 
-.dommage-suivant {
-	position: absolute;
-	top: 90%;
-	
-}
-
-
- #dommage-btnSuivant {
-	position: absolute;
-	width: 4%;
-	height: 7%;
-	left:55%;
-}
-
- #dommage-btnSuivant:hover {
-	cursor: pointer;
-}
-
-
- #dommage-notesSuivantes {
-	position: absolute;
-	left: 61%;
-	padding-top: 0.2%;
-
-}
 
 #maquette1_dommage{
-	margin-top:12%;
+	margin-top:3%;
 	margin-left:8%;
 	width:26%;
-
 }
+
+
 
 
 #container1_dommage p{
 	margin-left:12%;
+}
+#container1_dommage{
+	position:absolute;
+	margin-top:10%;
 }
 
 #dmg1 p{
@@ -66,11 +47,8 @@
 	margin-top:7%;
 }
 
-#container1_dommage, #container2_dommage{
-	position: absolute;
-}
 
-#dommage p{
+#container1_dommage p, #container2_dommage p{
 	color:#255A85;
 	font-family:Vibur;
 }
@@ -79,9 +57,36 @@
 	margin-left:15%;
 }
 
+
+
+#nextdmg-img{
+     position: absolute;
+     width: 4%;
+     left : 57%;
+     top : 90%;
+ }
+#nextdmg-texte{
+    position: absolute;
+    left : 64%;
+    top : 91%;
+    font-family: Vibur;
+    color: #92C2D2;
+}
+
+.nextdmg{
+    cursor: pointer;
+}
+
+
+
 @media screen and (max-aspect-ratio: 16/9){
+
+	#nextdmg-texte{
+        font-size: 2vw;
+    }
+
    
-    #container1_dommage p, #paraph_dommage p,.dommage-suivant{
+    #paraph_dommage p,.dommage-suivant{
         font-size: 3vw;
     }
 	
@@ -98,8 +103,12 @@
 
 
 @media screen and (min-aspect-ratio: 16/9){
+
+	#nextdmg-texte{
+        font-size: 3.4vh;
+    }
     
-    #paraph_dommage p,.dommage-suivant{
+    #paraph_dommage p{
         font-size: 4vh;
     }
 	
@@ -107,8 +116,8 @@
         font-size: 6vh;
     }
 
-		#text_dommage p{
-			font-size:9vh;
-		}
+	#text_dommage p{
+		font-size:9vh;
+	}
 
 }
