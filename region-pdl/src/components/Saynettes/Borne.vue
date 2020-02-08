@@ -98,7 +98,9 @@ export default {
         let train = this.$refs.movingTrain.getBoundingClientRect();
         if (train.x + train.width < 0) {
           this.nextInitiated = true;
-          this.$store.dispatch("nextScene", {});
+          this.$store.dispatch("nextScene", {
+            sceneId: this.getChatacterGender === 'm' ? 2 : 1
+          });
         } else {
           setTimeout(this.goNext, 100);
         }
