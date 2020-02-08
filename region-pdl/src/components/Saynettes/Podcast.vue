@@ -109,7 +109,6 @@ export default {
     this.podcastSong =  new Howl({
       src: ["songs/podcast.wav"],
     });
-    console.log(this.podcastSong)
   }
 };
 </script>
