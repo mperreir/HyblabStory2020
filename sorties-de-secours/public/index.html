@@ -6,7 +6,7 @@
   <title>Hyblab 2020 - Sorties de Secours</title>
 
   <!-- musique en entrée; il faut cliquer quelque part pour l'activer -->
-  <audio id="generalMusic" src="sons/ambiance2.mp3" loop="true" autoplay="true">
+  <audio id="generalMusic" src="sons/ambiance3.mp3" loop="true" autoplay="true">
     <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
   </audio>
   <audio id="voice" src="" autoplay>
@@ -31,9 +31,8 @@
 
   <!-- CUSTOMS -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <script type="text/javascript" src="js/index.js" defer></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- FONTS -->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nimbus-sans-l" type="text/css"/>
@@ -72,69 +71,59 @@
 </head>
 <body>
   <div id="container">
-    <!-- HOME -->
-    <section class ="section" id="home-section">
-      <div id="hamburger">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="categories">
-          <li><a href="#expo" class="menuLink">Exposition</a></li>
-          <li><a href="#music" class="menuLink">Musique</a></li>
-          <li><a href="#dance" class="menuLink">Danse</a></li>
-          <li><a href="#about" class="menuLink">A propos</a></li>
-          <li><a href="#contact" class="menuLink">Contact</a></li>
-        </ul>
-      </div>
-      <div id="home-wrapper">
-        <div id="logo-wrapper">
-          <img src='img/logo_sorties_de_secours.png' />
-        </div>
-        <!-- <div data-aos="fade-up" id="arrow-aos">
-          <img src='img/arrow_down.png' id="arrow-down"/>
-        </div> -->
-        <div id="start-experience">
-          <img src="img/yellow-brush.png" id="img-start"/>
-          <div id="button-start"><p id="button-start-text">Commencer l'expérience</p></div>
-        </div>
-      </div>
-    </section>
-    <!-- END HOME -->
 
-    <!-- LOADING -->
-    <section class="section" id="loading-section">
-      <div data-aos="fade-up"
-          data-aos-delay="50"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          data-aos-anchor-placement="top-center" id="sound-content">
-        <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="128" height="128">
-          <g>
-            <title>Sound Icon</title>
-            <rect class="bar" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
-            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
-            <rect class="bar" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
-            <rect class="bar" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
-            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
-            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
-            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
-          </g>
-        </svg>
+    <div class="container-scrollable">
 
-        <p id="soundText">Pour profiter au maximum de cette expérience,<br>veuillez augmenter le volume.</p>
-      </div>
-      <div data-aos="fade-up"
-          data-aos-delay="50"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false" id="mouse-aos">
-        <div class="scroll-down">
-          <div class="mousey" id="mouse-down">
-            <div class="scroller"></div>
+      <!-- HOME -->
+      <section class ="section" id="home-section">
+        <div id="hamburger">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="categories">
+            <li><a href="#expo" class="menuLink">Exposition</a></li>
+            <li><a href="#music" class="menuLink">Musique</a></li>
+            <li><a href="#dance" class="menuLink">Danse</a></li>
+            <li><a href="#about" class="menuLink">A propos</a></li>
+            <li><a href="#contact" class="menuLink">Contact</a></li>
+          </ul>
+        </div>
+        <div id="home-wrapper">
+          <div id="logo-wrapper">
+            <img src='img/logo_sorties_de_secours.png' />
+          </div>
+          <div id="start-experience">
+            <img src="img/yellow-brush.png" id="img-start"/>
+            <div id="button-start"><p id="button-start-text">Commencer l'expérience</p></div>
+          </div>
+        </div>
+      </section>
+      <!-- END HOME -->
+
+      <!-- LOADING -->
+      <section class="section" id="loading-section">
+        <div id="sound-content">
+          <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="128" height="128">
+            <g>
+              <title>Sound Icon</title>
+              <rect class="bar" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
+              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
+              <rect class="bar" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
+              <rect class="bar" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
+              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
+              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
+              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
+            </g>
+          </svg>
+
+          <p id="soundText">Pour profiter au maximum de cette expérience,<br>veuillez augmenter le volume.</p>
+        </div>
+        <div id="mouse-animated">
+          <div class="scroll-down">
+            <div class="mousey" id="mouse-down">
+              <div class="scroller"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -142,12 +131,7 @@
 
       <!-- PRESENTATION -->
       <section class="section" id="presentation-section">
-        <div data-aos="fade-up"
-            data-aos-delay="50"
-            data-aos-duration="500"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="false" id="aos-logo">
+        <div class="animation-fade-up" id="logo-sorties">
           <img src='img/logo_sorties.png' id='presentation-logo' />
         </div>
       </section>
@@ -184,6 +168,7 @@
         </div>
       </section>
       <!-- END MENU -->
+
     </div>
     <!-- END SCROLLABLE -->
 

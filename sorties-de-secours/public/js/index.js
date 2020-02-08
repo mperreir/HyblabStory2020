@@ -1,6 +1,3 @@
-AOS.init();
-$('#container-scrollable').scroll(function () { AOS.refresh(); })
-
 /* A DESACTIVER POUR DEVELOPPER TRANQUILLEMENT
 (c'est ce qui force la premiere page au refresh)*/
 window.onbeforeunload = function () {

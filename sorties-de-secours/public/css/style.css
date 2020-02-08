@@ -13,16 +13,15 @@ body{
     color: black;
 }
 
-/*::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
-}*/
+}
 
 #container {
   position: relative;
 }
 
 .container-scrollable {
-  height: 400vh;
   overflow-x: hidden;
   overflow-y: scroll;
 }

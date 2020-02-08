@@ -1,11 +1,16 @@
 $(document).ready(function() {
 
   $("#button-start").click(function(e) {
-    $("#container-scrollable").addClass("container-scrollable");
     bodyScrollLock.enableBodyScroll(container);
     goToByScroll("loading-section");
+
+    const soundAnimated = document.querySelector("#sound-content");
+    const mouseAnimated = document.querySelector("#mouse-animated");
+    soundAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
+    mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-2s');
     bodyScrollLock.disableBodyScroll(container);
-    $("#container-scrollable").addClass("container-scrollable");
+    mouseAnimated.addEventListener('animationend', function() { bodyScrollLock.enableBodyScroll(container); });
+
     set_music_play("generalMusic");
   });
 
