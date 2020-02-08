@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78ef69d9-d4ba-4d07-b3a3-8dc271dfb2cf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/img/menu_expo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/img/menu_expo_crayon.png" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/img/menu_expo_crayon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/css/loading.css" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/css/loading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/menu.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +22,26 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="166" column="67" selection-start-line="166" selection-start-column="67" selection-end-line="166" selection-end-column="67" />
+            <state relative-caret-position="452">
+              <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loading.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/css/loading.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="145" column="1" lean-forward="true" selection-start-line="145" selection-start-column="1" selection-end-line="145" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/js/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="68" lean-forward="true" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -30,8 +49,8 @@
       <file leaf-file-name="menu.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/css/menu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="1411">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
             </state>
           </provider>
         </entry>
@@ -39,8 +58,8 @@
       <file leaf-file-name="menu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/js/menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -48,8 +67,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="65" column="2" selection-start-line="65" selection-start-column="2" selection-end-line="65" selection-end-column="2" />
+            <state relative-caret-position="255">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -58,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -96,7 +115,12 @@
       <find>absolute</find>
       <find>img-menu</find>
       <find>opacity</find>
+      <find>sound-content</find>
+      <find>#sound-content</find>
       <find>HEAD</find>
+      <find>animated</find>
+      <find>position</find>
+      <find>animate</find>
     </findStrings>
     <replaceStrings>
       <replace>exp-choice</replace>
@@ -112,18 +136,18 @@
         <option value="$PROJECT_DIR$/sorties-de-secours/public/js/dance.js" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/js/loading.j.js" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/js/loading.js" />
-        <option value="$PROJECT_DIR$/sorties-de-secours/public/css/loading.css" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/js/expo.js" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/js/presentation.js" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/js/music-workshop.js" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/js/sound.js" />
-        <option value="$PROJECT_DIR$/sorties-de-secours/public/js/home.js" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/css/music-workshop.css" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/js/index.js" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/css/menuFlex.css" />
-        <option value="$PROJECT_DIR$/sorties-de-secours/public/js/menu.js" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/css/menu.css" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/index.html" />
+        <option value="$PROJECT_DIR$/sorties-de-secours/public/js/menu.js" />
+        <option value="$PROJECT_DIR$/sorties-de-secours/public/js/home.js" />
+        <option value="$PROJECT_DIR$/sorties-de-secours/public/css/loading.css" />
       </list>
     </option>
   </component>
@@ -270,12 +294,12 @@
       <workItem from="1580199270795" duration="17523000" />
       <workItem from="1580977751785" duration="19359000" />
       <workItem from="1581083576721" duration="11925000" />
-      <workItem from="1581159197450" duration="4632000" />
+      <workItem from="1581159197450" duration="7229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68741000" />
+    <option name="totallyTimeSpent" value="71338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -329,11 +353,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/sorties-de-secours/public/js/menu.js</url>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
   </component>
@@ -611,13 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/css/loading.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/js/expo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -649,21 +661,7 @@
     <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="2" selection-start-line="65" selection-start-column="2" selection-end-line="65" selection-end-column="2" />
+          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -674,24 +672,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/js/menu.js">
+    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/css/menu.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="1411">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/css/menu.css">
+    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="255">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/js/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="68" lean-forward="true" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/css/loading.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="145" column="1" lean-forward="true" selection-start-line="145" selection-start-column="1" selection-end-line="145" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="166" column="67" selection-start-line="166" selection-start-column="67" selection-end-line="166" selection-end-column="67" />
+        <state relative-caret-position="452">
+          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
         </state>
       </provider>
     </entry>
