@@ -63,7 +63,10 @@ export default {
       }
     },
     onNext() {
-      this.$store.dispatch("nextScene", { sceneId: 5})
+
+      this.$store.dispatch("nextScene", {
+        sceneId: this.getChatacterGender === 'm' ? -1 : 1
+      })
     }
   }
 }
