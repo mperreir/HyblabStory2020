@@ -63,19 +63,19 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  top: 5vh;
-  margin-left: 20vh;
-  height: 5vh;
-  width: 100vh;
+  top: 7vh;
+  margin-left: 45vh;
+  height: 3vh;
+  width: 70vh;
   align-items: center;
 }
 
 .progress-line {
   position: absolute;
-  top: 7vh;
-  margin-left: 22vh;
-  height: 1vh;
-  width: 96vh;
+  top: 8.2vh;
+  margin-left: 46vh;
+  height: 0.6vh;
+  width: 68vh;
 }
 
 .percentage {
@@ -84,97 +84,97 @@ export default {
 }
 
 .dot {
-  height: 3vh;
-  width: 3vh;
+  height: 2.5vh;
+  width: 2.5vh;
   border-radius: 50%;
   animation: animation-dot-reverse 0.4s linear;
 }
 
 .current {
-  height: 4vh;
-  width: 4vh;
+  height: 3vh;
+  width: 3vh;
   animation: animation-dot 0.4s linear;
 }
 
 @-webkit-keyframes animation-dot-reverse {
   from {
-    height: 4vh;
-    width: 4vh;
-  }
-  to {
     height: 3vh;
     width: 3vh;
+  }
+  to {
+    height: 2.5vh;
+    width: 2.5vh;
   }
 }
 @-moz-keyframes animation-dot-reverse {
   from {
-    height: 4vh;
-    width: 4vh;
-  }
-  to {
     height: 3vh;
     width: 3vh;
+  }
+  to {
+    height: 2.5vh;
+    width: 2.5vh;
   }
 }
 @-ms-keyframes animation-dot-reverse {
   from {
-    height: 4vh;
-    width: 4vh;
-  }
-  to {
     height: 3vh;
     width: 3vh;
+  }
+  to {
+    height: 2.5vh;
+    width: 2.5vh;
   }
 }
 @keyframes animation-dot-reverse {
   from {
-    height: 4vh;
-    width: 4vh;
-  }
-  to {
     height: 3vh;
     width: 3vh;
+  }
+  to {
+    height: 2.5vh;
+    width: 2.5vh;
   }
 }
 
 @-webkit-keyframes animation-dot {
   from {
-    height: 3vh;
-    width: 3vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
   to {
-    height: 4vh;
-    width: 4vh;
+    height: 3vh;
+    width: 3vh;
   }
 }
 @-moz-keyframes animation-dot {
   from {
-    height: 3vh;
-    width: 3vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
   to {
-    height: 4vh;
-    width: 4vh;
+    height: 3vh;
+    width: 3vh;
   }
 }
 @-ms-keyframes animation-dot {
   from {
-    height: 3vh;
-    width: 3vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
   to {
-    height: 4vh;
-    width: 4vh;
+    height: 3vh;
+    width: 3vh;
   }
 }
 @keyframes animation-dot {
   from {
-    height: 3vh;
-    width: 3vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
   to {
-    height: 4vh;
-    width: 4vh;
+    height: 3vh;
+    width: 3vh;
   }
 }
 </style>

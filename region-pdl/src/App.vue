@@ -1,19 +1,17 @@
 <template>
-  <div
-    id="app"
-    class="app"
-  >
+  <div id="app" class="app">
     <router-view />
   </div>
 </template>
 
 <style>
 html {
-  background-image: linear-gradient(to top, #f7e999 20%, #ccf2ff 50%);
+  background-image: linear-gradient(to top, #fcce8fff, #68add9ff 30%);
 }
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 html,
@@ -43,12 +41,12 @@ body,
 /* --- Police des titres --- */
 @font-face {
   font-family: "Neo Sans";
-  src: url("./fonts/NeoSansStd-Medium.otf");
+  src: url("./assets/fonts/NeoSansStd-Medium.otf");
 }
 
 @font-face {
   font-family: "Neo Sans Bold";
-  src: url("./fonts/NeoSansPro-Bold.ttf");
+  src: url("./assets/fonts/NeoSansPro-Bold.ttf");
 }
 
 .title {
@@ -61,21 +59,12 @@ body,
 
 /* --- Police des textes --- */
 @font-face {
-  font-family: "Avant Garde";
-  src: url("./fonts/AvantGarde-Demi.otf");
-}
-
-@font-face {
-  font-family: "Avant Garde Bold";
-  src: url("./fonts/AvantGarde-Bold.otf");
+  font-family: "Titillium Web";
+  src: url("./assets/fonts/TitilliumWeb-Regular.ttf");
 }
 
 .text {
-  font-family: "Avant Garde";
-}
-
-.text-bold {
-  font-family: "Avant Garde Bold";
+  font-family: "Titillium Web";
 }
 
 /* --- Couleurs du nuancier --- */

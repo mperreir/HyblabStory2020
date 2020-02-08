@@ -1,7 +1,7 @@
 <template>
   <div style="{ overflow: hidden; }">
     <div
-      class="blackBand-left"
+      class="black-band black-band-left"
       :style="bandWidthStyle"
     />
     <div
@@ -11,34 +11,37 @@
       <slot />
     </div>
     <div
-      class="blackBand-right"
+      class="black-band black-band-right"
       :style="bandWidthStyle"
     />
   </div>
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      bandWidthStyle: { width: '100px'},
-      slides: []
-    }),
-    mounted () {
-      this.slides = this.$children
-      this.updateBandWidth();
-    },
-    created() {
-      window.addEventListener('resize', this.updateBandWidth);
-    },
-    destroyed() {
-      window.removeEventListener('resize', this.updateBandWidth);
-    },
-    methods: {
-      updateBandWidth () {
-        this.bandWidthStyle = { width: ((window.innerWidth - this.$refs.carousel.offsetWidth)/2)+1+'px' }
-      },
+export default {
+  data: () => ({
+    bandWidthStyle: { width: "100px" },
+    slides: []
+  }),
+  mounted() {
+    this.slides = this.$children;
+    this.updateBandWidth();
+  },
+  created() {
+    window.addEventListener("resize", this.updateBandWidth);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.updateBandWidth);
+  },
+  methods: {
+    updateBandWidth() {
+      this.bandWidthStyle = {
+        width:
+          (window.innerWidth - this.$refs.carousel.offsetWidth) / 2 + 1 + "px"
+      };
     }
   }
+};
 </script>
 
 <style>
@@ -47,21 +50,21 @@
   height: 100vh;
 }
 
-.blackBand-left {
-  position: absolute;
-  left:0;
-  top:0;
+.black-band {
+  /* position: absolute; */
+  position: fixed;
+  top: 0;
   height: 100vh;
   background-color: black;
   z-index: 100;
+
 }
 
-.blackBand-right {
-  position: absolute;
-  right:0;
-  top:0;
-  height: 100vh;
-  background-color: black;
-  z-index: 100;
+.black-band-left {
+  left: 0;
+}
+
+.black-band-right {
+  right: 0;
 }
 </style>

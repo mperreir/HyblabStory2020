@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <div>
       <Carousel>
         <CarouselSlide :index="0">
@@ -12,7 +12,7 @@
           <House />
         </CarouselSlide>
         <CarouselSlide :index="3">
-          <Car />
+          <Podcast />
         </CarouselSlide>
         <CarouselSlide :index="4">
           <Borne />
@@ -31,10 +31,11 @@
         </CarouselSlide>
       </Carousel>
     </div>
+    <LogoRegion class="logo-region" />
     <transition name="fade">
       <ProgressBar
         v-if="$store.state.currentSceneIndex !== 0"
-        v-bind:number="$store.state.nbScenes - 1"
+        :number="$store.state.nbScenes - 1"
       />
     </transition>
   </div>
@@ -42,10 +43,11 @@
 
 <script>
 import ProgressBar from "@/components/ProgressBar.vue";
+import LogoRegion from "@/assets/logo-region.svg";
 import Intro from "@/components/Saynettes/Intro.vue";
 import Persos from "@/components/Saynettes/Persos.vue";
 import House from "@/components/Saynettes/House.vue";
-import Car from "@/components/Saynettes/Car.vue";
+import Podcast from "@/components/Saynettes/Podcast.vue";
 import Borne from "@/components/Saynettes/Borne.vue";
 import Company from "@/components/Saynettes/Company.vue";
 import School from "@/components/Saynettes/School.vue";
@@ -60,7 +62,7 @@ export default {
     Intro,
     Persos,
     House,
-    Car,
+    Podcast,
     Borne,
     Company,
     School,
@@ -68,23 +70,41 @@ export default {
     Carousel,
     CarouselSlide,
     ProgressBar,
-    End
+    End,
+    LogoRegion
+
   },
   data: () => ({}),
   methods: {
     click() {
-      this.$store.dispatch("nextScene", { sceneId: 1 });
+      this.$store.dispatch("nextScene", {});
     }
   }
 };
 </script>
 
 <style scoped>
+.wrapper {
+  position: relative;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 3s cubic-bezier(1, 0.01, 0.65, 0.6);
 }
-.fade-enter, .fade-leave-to {
+
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
+}
+
+.logo-region {
+  position: absolute;
+  left: 6%;
+  top: 5%;
+  width: 16%;
+  height: 7%;
+  border-radius: 1vh;
+  background-color: #fff8;
 }
 </style>

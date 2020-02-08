@@ -1,15 +1,12 @@
 <template>
   <div class="plus-button">
     <span class="qs">
-      <Plus
-        class="plus"
-        :class="{ spinnin: popover, pulse: pulse }"
-        @click="plusOnClick"
-      />
+      <Plus class="plus" :class="{ spinnin: popover, pulse: pulse }" @click="plusOnClick" />
       <span
         v-if="popover"
-        class="bg-yellow-orange lightgrey"
+        class="text"
         :class="{ popover: popover }"
+        :style="{ width: width + 'vh'}"
       >
         <slot />
       </span>
@@ -25,7 +22,7 @@ export default {
   components: {
     Plus
   },
-  props: ["value"],
+  props: ["value", "width"],
   data: () => ({
     popover: false,
     pulse: true
@@ -64,39 +61,33 @@ export default {
 }
 
 .plus {
-  height: 3vw;
-  max-width: auto;
-  border-radius: 50%;
+  flex-wrap: wrap;
+  position: absolute;
+  border-radius: 21%;
+  border: 0.2vh solid #fff;
+  width: 5vh;
 }
 
 .plus:hover {
   cursor: pointer;
 }
 
-.spinnin {
-  animation: spin 0.3s cubic-bezier(0.8, 0.2, 0.6, 0.8);
-}
-
-.pulse {
-  box-shadow: 0 0 0 0 rgb(61, 115, 232);
-  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+.qs {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .qs .popover {
-  opacity: 0.95;
-  font-weight: bold;
-  border-radius: 5px;
-  bottom: 80px;
-  font-size: 25px;
-  left: -117px;
-  padding: 0 20px;
+  opacity: 0.9;
+  bottom: 2vh;
+  font-size: 2.2vh;
+  border-radius: 0.5vh;
+  padding: 1vh 2vh;
+  background-color: #fff;
   position: absolute;
-  width: 250px;
   text-align: center;
-  display: block;
   -webkit-animation: fade-in 0.2s linear 1, move-up 0.2s linear 1;
   -moz-animation: fade-in 0.2s linear 1, move-up 0.2s linear 1;
   -ms-animation: fade-in 0.2s linear 1, move-up 0.2s linear 1;
@@ -104,14 +95,29 @@ export default {
 }
 
 .qs .popover::before {
-  border-top: 7px solid #faaf04;
-  border-right: 7px solid transparent;
-  border-left: 7px solid transparent;
-  bottom: -7px;
+  border-top: 1vh solid #fff;
+  border-right: 0.8vh solid transparent;
+  border-left: 0.8vh solid transparent;
+  bottom: -0.8vh;
   content: "";
   left: 50%;
-  margin-left: -7px;
+  margin-left: -0.8vh;
   position: absolute;
+}
+
+.spinnin {
+  -webkit-animation: spin 0.3s cubic-bezier(0.8, 0.2, 0.6, 0.8);
+  -moz-animation: spin 0.3s cubic-bezier(0.8, 0.2, 0.6, 0.8);
+  -ms-animation: spin 0.3s cubic-bezier(0.8, 0.2, 0.6, 0.8);
+  animation: spin 0.3s cubic-bezier(0.8, 0.2, 0.6, 0.8);
+}
+
+.pulse {
+  box-shadow: 0 0 0 0 #00324e;
+  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
 }
 
 @-webkit-keyframes fade-in {
@@ -149,34 +155,34 @@ export default {
 
 @-webkit-keyframes move-up {
   from {
-    bottom: 70px;
+    bottom: -2vh;
   }
   to {
-    bottom: 80px;
+    bottom: 2vh;
   }
 }
 @-moz-keyframes move-up {
   from {
-    bottom: 70px;
+    bottom: -2vh;
   }
   to {
-    bottom: 80px;
+    bottom: 2vh;
   }
 }
 @-ms-keyframes move-up {
   from {
-    bottom: 70px;
+    bottom: -2vh;
   }
   to {
-    bottom: 80px;
+    bottom: 2vh;
   }
 }
 @keyframes move-up {
   from {
-    bottom: 70px;
+    bottom: -2vh;
   }
   to {
-    bottom: 80px;
+    bottom: 2vh;
   }
 }
 
@@ -215,22 +221,22 @@ export default {
 
 @-webkit-keyframes pulse {
   to {
-    box-shadow: 0 0 0 1.5vw rgba(61, 115, 232, 0);
+    box-shadow: 0 0 0 2vh rgba(61, 115, 232, 0);
   }
 }
 @-moz-keyframes pulse {
   to {
-    box-shadow: 0 0 0 1.5vw rgba(61, 115, 232, 0);
+    box-shadow: 0 0 0 2vh rgba(61, 115, 232, 0);
   }
 }
 @-ms-keyframes pulse {
   to {
-    box-shadow: 0 0 0 1.5vw rgba(61, 115, 232, 0);
+    box-shadow: 0 0 0 2vh rgba(61, 115, 232, 0);
   }
 }
 @keyframes pulse {
   to {
-    box-shadow: 0 0 0 1.5vw rgba(61, 115, 232, 0);
+    box-shadow: 0 0 0 2vh rgba(61, 115, 232, 0);
   }
 }
 </style>
