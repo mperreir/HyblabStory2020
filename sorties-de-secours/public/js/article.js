@@ -10,8 +10,8 @@ $(document).ready(function() {
 
         if (scrollPos > expoArticlePos.top) {
             // expo not selected yet, block scroll
-            bodyScrollLock.disableBodyScroll(expoSection);
-            goToByScroll("expo-section");
+            // bodyScrollLock.disableBodyScroll(expoSection);
+            // goToByScroll("expo-section");
         }
 
     });
