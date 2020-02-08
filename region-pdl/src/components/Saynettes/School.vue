@@ -1,36 +1,33 @@
 <template>
   <div class="saynette">
-    <TextTitle
-      :x="7"
-      :y="15"
-    >
-      Se chauffer (aides isolation professionnelles)
-    </TextTitle>
+    
     <SimpleText
       :x="7"
       :y="25"
       :width="40"
     >
-      <p v-if="getChatacterGender === 'm'">
+      <p v-if="getChatacterGender === 'mme'">
         Juste à côté de l’entreprise dans laquelle travaille Mme Dubois se trouve une école dans laquelle M. Moreau est professeur. Cette année, l’école a bénéficié d’une aide de la Région pour réaliser des travaux d’isolation.
       </p>
-      <p v-if="getChatacterGender === 'mme'">
+      <p v-if="getChatacterGender === 'm'">
         M. Moreau est professeur des écoles. Cette année, son école a bénéficié d’une aide de la Région pour réaliser des travaux d’isolation.
       </p>
     </SimpleText>
     <PlusButton
       v-model="closePopover1"
       class="plus1"
+      :width="30"
       @open="closePopover(1)"
     >
       <p class="text">
-        En 2018, <span class="data"> 140 bâtiments publics </span> ont bénéficié des aides de la Région pour la réhabilitation et la rénovation de leur isolation pour un montant total de 21 millions d’euros.
+        En 2018, <span class="data"> 140 bâtiments publics </span> ont bénéficié des aides de la Région pour la réhabilitation et la rénovation de leur isolation pour un montant total de<br> <span class="data">21 millions d’euros.</span>
       </p>
     </PlusButton>
 
     <PlusButton
       v-model="closePopover2"
       class="plus2"
+      :width="30"
       @open="closePopover(2)"
     >
       <p class="text">
@@ -114,7 +111,7 @@ export default {
 
 .plus2 {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 26%;
 }
 
