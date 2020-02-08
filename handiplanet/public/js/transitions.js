@@ -14,12 +14,20 @@ async function showContextView(currentView){
     tempDiv.style.left = '100%';
 
     // Création de la prochaine view
+    let nextView;
     if(window.contextView == null){
         window.contextView = new Contexte(tempDiv);
         await window.contextView.load();
+        nextView = window.contextView;
     } else {
-        tempDiv.appendChild(window.contextView.view);
-        window.contextView.view.style.animation = '';
+        if(window.contextView.choicesRemaining==0){
+            nextView = new Comparatif(tempDiv);
+            await nextView.load();
+        } else {
+            tempDiv.appendChild(window.contextView.view);
+            window.contextView.view.style.animation = '';
+            nextView = window.contextView;
+        }
     }
     setBackgroundColor('#FFFFFF');
     showSplash();
@@ -30,7 +38,7 @@ async function showContextView(currentView){
     setTimeout(() => {
         const viewContainer = document.getElementById('view-container');
         viewContainer.innerHTML = '';
-        viewContainer.appendChild(window.contextView.view);
+        viewContainer.appendChild(nextView.view);
         // tempDiv.replaceWith(window.contextView.view);
         currentView.remove();
     }, 1000);

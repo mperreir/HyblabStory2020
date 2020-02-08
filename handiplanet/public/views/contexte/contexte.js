@@ -5,6 +5,7 @@ class Contexte extends View {
     }
 
     linkElements() {
+        this.choicesRemaining = 4;
         this.position = 1;
         this.text1 = document.getElementById('context-1');
         this.text2 = document.getElementById('context-2');
@@ -18,6 +19,7 @@ class Contexte extends View {
         this.photo.addEventListener('click', () => {
             this.photo.className = "contexte-done";
             this.position = this.position + 1;
+            this.choicesRemaining--;
             if (this.position == 2) {
                 this.text1.className = "contexte-nonActive";
                 this.text2.className = "contexte-active";
@@ -36,6 +38,7 @@ class Contexte extends View {
         this.contact.addEventListener('click', () => {
             this.contact.className = "contexte-done";
             this.position = this.position + 1;
+            this.choicesRemaining--;
             if (this.position == 2) {
                 this.text1.className = "contexte-nonActive";
                 this.text2.className = "contexte-active";
@@ -54,6 +57,7 @@ class Contexte extends View {
         this.reseau.addEventListener('click', () => {
             this.reseau.className = "contexte-done";
             this.position = this.position + 1;
+            this.choicesRemaining--;
             if (this.position == 2) {
                 this.text1.className = "contexte-nonActive";
                 this.text2.className = "contexte-active";
@@ -72,6 +76,7 @@ class Contexte extends View {
         this.info.addEventListener('click', () => {
             this.info.className = "contexte-done";
             this.position = this.position + 1;
+            this.choicesRemaining--;
             if (this.position == 2) {
                 this.text1.className = "contexte-nonActive";
                 this.text2.className = "contexte-active";

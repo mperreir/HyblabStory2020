@@ -3,8 +3,8 @@
 ## TODO :
 - [ ] 9 premium interactions + fix responsive
 - [ ] 14 remerciements Wendy
-- [ ] Mise à jour View 10 (par rapport figma)
-- [ ] Cohérence entre les vues (ex: taille boutons)
+- [X] Mise à jour View 10 (par rapport figma)
+- [ ] Cohérence entre les vues (ex: taille boutons, positionnement bt continuer)
 - [ ] Son
 - [ ] Transitions
 - [ ] Re-vérification Figma pour eventuelles maj

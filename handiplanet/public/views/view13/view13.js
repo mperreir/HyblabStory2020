@@ -18,7 +18,7 @@ class View13 extends View {
 
     
     async switchToNextView(){
-        transitionHorizontal(this.view, Comparatif);
+        showContextView(this.view);
     }
 
     linkElements(){
