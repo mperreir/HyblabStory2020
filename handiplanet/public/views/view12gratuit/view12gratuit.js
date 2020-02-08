@@ -18,7 +18,9 @@ class View12Gratuit extends View {
     showSplash();
     setBackgroundColor('#CB563E1A');
     // Background elements
-    this.ellipse = document.getElementById('ellipse');
+    this.ellipse = document.getElementById('view-12-ellipse');
+    this.persoImg = document.getElementById('view-12-perso');
+    this.persoImg.src = window.colorPersoManager.getAsset().side;
 
     // Parallax for background elements
     document.addEventListener('mousemove', (e) => {

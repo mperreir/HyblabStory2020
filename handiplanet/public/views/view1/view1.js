@@ -45,11 +45,14 @@ class View1 extends View {
 
         this.selectCharButtons = document.querySelectorAll('#view-1-select-character li');
 
+        window.colorPersoManager.addObserver((asset) => {
+            this.caracterImg.src = asset.face;
+        });
+
         // Change svg of character
-        const srcCharSvg = ['character-white-view1.svg', 'character-view1.svg', 'character-red-view1.svg'];
         this.selectCharButtons.forEach((li, index) => {
             li.addEventListener('click', () => {
-                this.caracterImg.src = `/handiplanet/assets/${srcCharSvg[index]}`;
+                window.colorPersoManager.setSelected(index);
                 this.hideSelectChar();
             });
         });

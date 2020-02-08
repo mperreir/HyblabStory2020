@@ -19,6 +19,9 @@ class Contexte extends View {
         this.contactd = document.getElementById('contexte-contact-done');
         this.reseaud = document.getElementById('contexte-reseau-done');
         this.infod = document.getElementById('contexte-info-done');
+        this.persoImg = document.getElementById('contexte-character-img');
+
+        this.persoImg.src = window.colorPersoManager.getAsset().face;
 
         this.photo.addEventListener('click', () => {
             this.photo.className = "contexte-done";

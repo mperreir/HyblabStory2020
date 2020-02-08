@@ -13,7 +13,7 @@
   height: 100vh;
   position: relative;
 }
-#view12gratuit #fond {
+#view12gratuit #view-12-fond {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -23,48 +23,48 @@
   border-bottom: 2px solid #5A8D8C;
   position: absolute;
 }
-#view12gratuit #femme {
+#view12gratuit #view-12-perso {
   position: absolute;
   bottom: -2px;
   left: 10%;
 }
-#view12gratuit #ordinateur {
+#view12gratuit #view-12-ordinateur {
   position: absolute;
   right: 10%;
   bottom: -2px;
 }
-#view12gratuit .interrogation1 {
+#view12gratuit .view-12-interrogation1 {
   position: absolute;
   right: 10%;
   top: 40%;
   transform: rotate(20deg);
   animation: xAxis 6s infinite cubic-bezier(0.2, 0.01, 0.4, 1);
 }
-#view12gratuit .interrogation1::after {
+#view12gratuit .view-12-interrogation1::after {
   content: url(../../assets/view12/interrogation.svg);
   display: block;
   animation: yAxis 6s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
 }
-#view12gratuit .interrogation2 {
+#view12gratuit .view-12-interrogation2 {
   position: absolute;
   right: 22%;
   top: 55%;
   transform: rotate(-40deg);
   animation: xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
 }
-#view12gratuit .interrogation2::after {
+#view12gratuit .view-12-interrogation2::after {
   content: url(../../assets/view12/interrogation.svg);
   display: block;
   zoom: 0.5;
   animation: yAxis 6s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
 }
-#view12gratuit .loupe {
+#view12gratuit .view-12-loupe {
   position: absolute;
   right: 20%;
   top: 35%;
   animation: xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
 }
-#view12gratuit .loupe::after {
+#view12gratuit .view-12-loupe::after {
   content: url(../../assets/view12/loupe.svg);
   display: block;
   zoom: 0.7;
@@ -82,7 +82,7 @@
     transform: translateX(100px);
   }
 }
-#view12gratuit #ellipse {
+#view12gratuit #view-12-ellipse {
   position: absolute;
   left: 20%;
   top: 0%;
@@ -95,7 +95,7 @@
   font-weight: bold;
   color: #CB563E;
 }
-#view12gratuit #desc-gratuit {
+#view12gratuit #view-12-desc-gratuit {
   position: absolute;
   right: 5%;
   top: 0%;

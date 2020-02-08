@@ -8,6 +8,7 @@ window.scrollBarController = new ScrollBarController();
 window.scrollBarController.setPosition(0);
 
 window.soundManager = new SoundManager();
+window.colorPersoManager = new ColorPersoManager();
 
 view = new View1(document.getElementById('view-container'));
 

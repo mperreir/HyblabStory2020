@@ -14,6 +14,9 @@ class View6Free extends View {
         showSplash();
         setBackgroundColor('#CB563E1A');
         this.arm = document.getElementById("view-6-character-arm");
+        this.body = document.getElementById('view-6-character-body');
+
+        this.body.src = window.colorPersoManager.getAsset().back;
         // Background elements
         this.dot1 = document.getElementById('view-6-free-red-ring');
         this.dot2 = document.getElementById('view-6-free-green-dot');
