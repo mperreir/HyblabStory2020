@@ -31,9 +31,8 @@
 
   <!-- CUSTOMS -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <script type="text/javascript" src="js/index.js" defer></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- FONTS -->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nimbus-sans-l" type="text/css"/>
@@ -53,9 +52,11 @@
 
     <!-- loading -->
     <link rel="stylesheet" href="css/loading.css" />
+    <script type="text/javascript" src="js/loading.js"></script>
 
     <!-- Presentation -->
     <link rel="stylesheet" href="css/presentation.css" />
+    <script type="text/javascript" src="js/presentation.js"></script>
 
     <!-- Menu -->
     <link rel="stylesheet" href="css/menu.css" />
@@ -77,90 +78,75 @@
 </head>
 <body>
   <div id="container">
-    <!-- HOME -->
-    <section class ="section" id="home-section">
-      <div id="hamburger">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="categories">
-          <li><a href="#expo" class="menuLink">Exposition</a></li>
-          <li><a href="#music" class="menuLink">Musique</a></li>
-          <li><a href="#dance" class="menuLink">Danse</a></li>
-          <li><a href="#about" class="menuLink">A propos</a></li>
-          <li><a href="#contact" class="menuLink">Contact</a></li>
-        </ul>
-      </div>
-      <div id="logo-wrapper">
-        <img src='img/logo_sorties_de_secours.png' id='home-logo' />
-        <img src='img/logo_experience.png' id='home-experience' />
-      </div>
-      <!-- <div data-aos="fade-up" id="arrow-aos">
-        <img src='img/arrow_down.png' id="arrow-down"/>
-      </div> -->
-      <div id="start-experience">
-        <img src="img/yellow-brush.png" id="img-start"/>
-        <div id="button-start"><p id="button-start-text">Commencer l'expérience</p></div>
-      </div>
-    </section>
-    <!-- END HOME -->
 
-    <!-- LOADING -->
-    <section class="section" id="loading-section">
-      <div data-aos="fade-up"
-          data-aos-delay="50"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          data-aos-anchor-placement="top-center" id="sound-content">
-        <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="128" height="128">
-          <g>
-            <title>Sound Icon</title>
-            <rect class="bar" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
-            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
-            <rect class="bar" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
-            <rect class="bar" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
-            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
-            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
-            <rect class="bar" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
-          </g>
-        </svg>
+    <div class="container-scrollable">
 
-        <p id="soundText">Pour profiter au maximum de cette expérience,<br>veuillez augmenter le volume.</p>
-      </div>
-      <div data-aos="fade-up"
-          data-aos-delay="50"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false" id="mouse-aos">
-        <div class="scroll-down">
-          <div class="mousey" id="mouse-down">
-            <div class="scroller"></div>
+      <!-- HOME -->
+      <section class ="section" id="home-section">
+        <div id="hamburger">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="categories">
+            <li><a href="#expo" class="menuLink">Exposition</a></li>
+            <li><a href="#music" class="menuLink">Musique</a></li>
+            <li><a href="#dance" class="menuLink">Danse</a></li>
+            <li><a href="#about" class="menuLink">A propos</a></li>
+            <li><a href="#contact" class="menuLink">Contact</a></li>
+          </ul>
+        </div>
+        <div id="home-wrapper">
+          <div id="logo-wrapper">
+            <img src='img/logo_sorties_de_secours.png' />
+          </div>
+          <div id="start-experience">
+            <img src="img/yellow-brush.png" id="img-start"/>
+            <div id="button-start"><p id="button-start-text">Commencer l'expérience</p></div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- END LOADING -->
+      </section>
+      <!-- END HOME -->
 
-    <!-- PRESENTATION -->
-    <section class="section" id="presentation-section">
-      <div data-aos="fade-up"
-          data-aos-delay="50"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false" id="aos-logo">
-        <img src='img/logo_sorties.png' id='presentation-logo' />
-      </div>
-    </section>
-    <!-- END PRESENTATION -->
+      <!-- LOADING -->
+      <section class="section" id="loading-section">
+        <div id="sound-content">
+          <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="128" height="128">
+            <g>
+              <title>Sound Icon</title>
+              <rect class="bar" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
+              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
+              <rect class="bar" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
+              <rect class="bar" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
+              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
+              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
+              <rect class="bar" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
+            </g>
+          </svg>
+
+          <p id="soundText">Pour profiter au maximum de cette expérience,<br>veuillez augmenter le volume.</p>
+        </div>
+        <div id="mouse-animated">
+          <div class="scroll-down">
+            <div class="mousey" id="mouse-down">
+              <div class="scroller"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END LOADING -->
+
+      <!-- PRESENTATION -->
+      <section class="section" id="presentation-section">
+        <div class="animated fadeOut" id="logo-sorties">
+          <img src='img/logo.png' id='presentation-logo' />
+        </div>
+      </section>
+      <!-- END PRESENTATION -->
 
 
-    <!-- MENU -->
-    <section class="section" id="menu-section">
+      <!-- MENU -->
+      <section class="section" id="menu-section">
 
       <div class="expChoice" id="expChoiceExpo">
         <img class="img-menu-crayon" src='img/menu_expo_crayon.png'/></a>
@@ -223,56 +209,57 @@
 
       <div id="expo-konva"></div>
 
-    </section>
-    <!-- END EXPO -->
 
-    <!-- DANCE -->
-    <section
-      class="section"
-      id="dance-section">
 
-      <div id="dance-wrapper">
-        <img src='img/dancers.png' id='img-dancers' />
-        <img src="img/dancers-annotations.png" id="img-dancers-annotations" />
-      </div>
-      <div class="sound-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="100" height="80">
-          <g>
-            <title>Sound Icon</title>
-            <rect class="barDance" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
-            <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
-            <rect class="barDance" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
-            <rect class="barDance" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
-            <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
-            <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
-            <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
-          </g>
-        </svg>
-      </div>
+      </section>
+      <!-- END EXPO -->
 
-    </section>
-    <!-- END DANCE -->
+      <!-- DANCE -->
+      <section
+        class="section"
+        id="dance-section">
 
-    <!-- MUSIC WORKSHOP -->
-    <section
-            class="section"
-            id="music-workshop-section">
+        <div id="dance-wrapper">
+          <img src='img/dancers.png' id='img-dancers' />
+          <img src="img/dancers-annotations.png" id="img-dancers-annotations" />
+        </div>
+        <div class="sound-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="sound-icon-wrapper" viewBox="0 0 50 50" width="100" height="80">
+            <g>
+              <title>Sound Icon</title>
+              <rect class="barDance" height="4" width="1" rx="0.5" transform="translate(10 0)"></rect>
+              <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(14 0)"></rect>
+              <rect class="barDance" height="4" width="1" rx="0.5" transform="translate(18 0)"></rect>
+              <rect class="barDance" height="10" width="1" rx="0.5" transform="translate(22 0)"></rect>
+              <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(26 0)"></rect>
+              <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(30 0)"></rect>
+              <rect class="barDance" height="20" width="1" rx="0.5" transform="translate(34 0)"></rect>
+            </g>
+          </svg>
+        </div>
 
-        <audio id="vinyl-noise" src="sons/music_workshop/vinyl_noise.m4a" loop volume="2">
-            <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
-        </audio>
-        <audio id="vinyl" src="sons/baloji/Peau de Chagrin Bleu de Nuit.mp3">
-        <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
-        </audio>
-      <div id="music-workshop-konva">
+      </section>
+      <!-- END DANCE -->
 
-      </div>
+      <!-- MUSIC WORKSHOP -->
+      <section
+              class="section"
+              id="music-workshop-section">
 
-    </section>
-    <!-- END MUSIC WORKSHOP -->
+          <audio id="vinyl-noise" src="sons/music_workshop/vinyl_noise.m4a" loop volume="2">
+              <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
+          </audio>
+          <audio id="vinyl" src="sons/baloji/Peau de Chagrin Bleu de Nuit.mp3">
+          <p>Votre navigateur ne prend pas en charge le son. Veuillez changez de navigateur afin de profiter d'une expérience optimale.</p>
+          </audio>
+        <div id="music-workshop-konva">
 
-  </div>
+        </div>
 
+      </section>
+      <!-- END MUSIC WORKSHOP -->
+    </div>
+    <!-- END NON SCROLLABLE -->
   </div>
   <!-- FIN CONTAINER -->
 </body>
