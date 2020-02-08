@@ -1,6 +1,5 @@
 <template>
   <div class="saynette">
-    <LogoRegion class="logoRegion" />
     <TextTitle :x="7" :y="30">
       La Région Pays de la Loire
       <br />pour la transition énergétique
@@ -21,7 +20,6 @@ import MaisonSVG from "@/assets/Home/FOND HOME-01.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
-import LogoRegion from "@/assets/logo-region.svg";
 
 export default {
   name: "Intro",
@@ -29,8 +27,7 @@ export default {
     MaisonSVG,
     TextTitle,
     SimpleButton,
-    SimpleText,
-    LogoRegion
+    SimpleText
   },
   methods: {
     onNext() {
@@ -39,12 +36,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.logoRegion {
-  position: absolute;
-  left: 7%;
-  top: 4%;
-  width: 15%;
-}
-</style>

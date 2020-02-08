@@ -31,19 +31,15 @@
 <script>
 import CompanySVG from "@/assets/Company/FOND ENTREPRISE-01.svg"
 import PlusButton from "@/components/PlusButton";
-import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
-import LogoRegion from "@/assets/logo-region.svg";
 
 export default {
     name: "Intro",
     components: {
         CompanySVG,
-        TextTitle,
         SimpleButton,
         SimpleText,
-        LogoRegion,
         PlusButton,
     },
     data: () => ({

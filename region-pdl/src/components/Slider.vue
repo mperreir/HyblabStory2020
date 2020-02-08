@@ -82,7 +82,6 @@ input[type="range"] {
   -webkit-appearance: none;
   background-color: #00324e;
   height: 0.6vh;
-  border-radius: 5px;
   margin: 0 3vh;
   width: 45vh;
 }

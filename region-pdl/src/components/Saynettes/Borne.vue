@@ -1,11 +1,7 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
-    <SimpleText
-      :x="53"
-      :y="17"
-      :width="41"
-    >
+    <SimpleText :x="53" :y="17" :width="41">
       <p>
         Pour accompagner la transition énergétique, la Région participe au
         déploiement de bornes de recharge pour les véhicules électriques sur
@@ -14,34 +10,22 @@
       </p>
     </SimpleText>
 
-    <TrainSVG
-      v-show="!nextInitiated"
-      ref="movingTrain"
-      class="train"
-    />
+    <TrainSVG v-show="!nextInitiated" ref="movingTrain" class="train" />
 
     <Car class="car" />
 
     <BoatSVG class="boat" />
 
-    <PlusButton
-      class="plus-button"
-      :width="23"
-    >
+    <PlusButton class="plus-button" :width="23">
       <p class="text">
-        En moyenne, on peut trouver une borne tous les <span class="red">13 km</span> dans toute la région.
+        En moyenne, on peut trouver une borne tous les
+        <span class="red">13 km</span> dans toute la région.
       </p>
     </PlusButton>
 
     <BorneSVG class="borne-svg" />
 
-    <SimpleButton
-      text="Continuer l'histoire"
-      :width="23"
-      :x="75"
-      :y="90"
-      @click.native="onNext"
-    />
+    <SimpleButton text="Continuer l'histoire" :width="23" :x="75" :y="90" @click.native="onNext" />
   </div>
 </template>
 
@@ -73,7 +57,9 @@ export default {
   }),
   computed: {
     name() {
-      return this.$store.state.character === 'dubois' ? 'Mme Dubois' : 'M. Moreau';
+      return this.$store.state.character === "dubois"
+        ? "Mme Dubois"
+        : "M. Moreau";
     }
   },
   methods: {
@@ -86,11 +72,10 @@ export default {
     goNext() {
       this.$nextTick(() => {
         let train = this.$refs.movingTrain.getBoundingClientRect();
-        if(train.x + train.width < 0) {
+        if (train.x + train.width < 0) {
           this.nextInitiated = true;
-          this.$store.dispatch("nextScene", { sceneId: null});
-        }
-        else {
+          this.$store.dispatch("nextScene", { sceneId: null });
+        } else {
           setTimeout(this.goNext, 100);
         }
       });
@@ -192,15 +177,6 @@ export default {
   left: 82%;
   top: 69%;
   z-index: 2;
-}
-
-.borne {
-  width: 72px;
-  height: 135px;
-
-  position: absolute;
-  top: 60%;
-  left: 70%;
 }
 
 .borne-svg {

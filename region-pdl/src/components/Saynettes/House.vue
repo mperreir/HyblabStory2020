@@ -260,7 +260,7 @@ export default {
   position: absolute;
   top: 87%;
   left: 49%;
-  font-size: 2vh;
+  font-size: 2.2vh;
 }
 
 .plus1 {

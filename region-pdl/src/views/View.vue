@@ -34,11 +34,13 @@
         v-bind:number="$store.state.nbScenes - 1"
       />
     </transition>
+    <LogoRegion class="logoRegion" />
   </div>
 </template>
 
 <script>
 import ProgressBar from "@/components/ProgressBar.vue";
+import LogoRegion from "@/assets/logo-region.svg";
 import Intro from "@/components/Saynettes/Intro.vue";
 import Persos from "@/components/Saynettes/Persos.vue";
 import House from "@/components/Saynettes/House.vue";
@@ -63,7 +65,8 @@ export default {
     Quizz,
     Carousel,
     CarouselSlide,
-    ProgressBar
+    ProgressBar,
+    LogoRegion
   },
   data: () => ({}),
   methods: {
@@ -79,7 +82,17 @@ export default {
 .fade-leave-active {
   transition: opacity 3s cubic-bezier(1, 0.01, 0.65, 0.6);
 }
-.fade-enter, .fade-leave-to {
+
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
+}
+
+.logoRegion {
+  position: absolute;
+  left: 15%;
+  top: 5%;
+  width: 10%;
+  height: 10%;
 }
 </style>

@@ -26,7 +26,7 @@ export default {
 <style scoped>
 .innerContent {
   position: absolute;
-  font-size: 2vh;
+  font-size: 2.2vh;
   line-height: 3vh;
 }
 </style>

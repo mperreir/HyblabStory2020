@@ -37,11 +37,11 @@ export default {
 
 .classic-btn {
   position: absolute;
-  border-radius: 10px;
+  border-radius: 1vh;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  border: 2px solid #fff;
+  border: 0.3vh solid #fff;
 }
 
 .classic-btn:hover {

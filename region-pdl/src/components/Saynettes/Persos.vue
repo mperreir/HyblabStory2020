@@ -10,26 +10,26 @@
       <br />et écologique, ils pratiquent le covoiturage pour
       se rendre sur leur lieu de travail.
     </SimpleText>
-    <PersoFemme class="perso p1" :class="{ grow: animDubois }" />
     <SimpleButton
       text="Mme Dubois"
       @mouseover.native="animDubois = true"
       @mouseleave.native="animDubois = false"
       @click.native="() => { onNext('dubois')}"
       :width="20"
-      :y="90"
+      :y="45"
       :x="20"
     />
-    <PersoHomme class="perso p2" :class="{ grow: animMoreau }" />
+    <PersoFemme class="perso p1" :class="{ grow: animDubois }" />
     <SimpleButton
       text="M. Moreau"
       @mouseover.native="animMoreau = true"
       @mouseleave.native="animMoreau = false"
       @click.native="() => { onNext('moreau')}"
       :width="20"
-      :y="90"
+      :y="45"
       :x="60"
     />
+    <PersoHomme class="perso p2" :class="{ grow: animMoreau }" />
   </div>
 </template>
 
@@ -77,13 +77,13 @@ export default {
 
 .p1 {
   left: 24%;
-  top: 50%;
+  top: 58%;
   width: 8%;
 }
 
 .p2 {
   left: 64%;
-  top: 50%;
+  top: 58%;
   width: 11%;
 }
 

@@ -64,7 +64,7 @@ export default {
   flex-wrap: wrap;
   position: absolute;
   border-radius: 21%;
-  border: 2px solid #fff;
+  border: 0.3vh solid #fff;
   width: 5vh;
 }
 
@@ -82,8 +82,8 @@ export default {
 .qs .popover {
   opacity: 0.9;
   bottom: 2vh;
-  font-size: 2vh;
-  border-radius: 5px;
+  font-size: 2.2vh;
+  border-radius: 0.5vh;
   padding: 1vh 2vh;
   background-color: #fff;
   position: absolute;
@@ -95,13 +95,13 @@ export default {
 }
 
 .qs .popover::before {
-  border-top: 7px solid #fff;
-  border-right: 7px solid transparent;
-  border-left: 7px solid transparent;
-  bottom: -7px;
+  border-top: 1vh solid #fff;
+  border-right: 0.8vh solid transparent;
+  border-left: 0.8vh solid transparent;
+  bottom: -0.8vh;
   content: "";
   left: 50%;
-  margin-left: -7px;
+  margin-left: -0.8vh;
   position: absolute;
 }
 
