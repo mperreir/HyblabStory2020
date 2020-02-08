@@ -27,6 +27,7 @@ class Contexte extends View {
         this.reseau = document.getElementById('contexte-reseau');
         this.info = document.getElementById('contexte-info');
         this.text = document.getElementById('context-message');
+        this.persoImg = document.getElementById('contexte-character-img');
         this.text.innerHTML = this.textes[0];
 
         this.persoImg.src = window.colorPersoManager.getAsset().face;
