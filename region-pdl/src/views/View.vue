@@ -71,7 +71,7 @@ export default {
   data: () => ({}),
   methods: {
     click() {
-      this.$store.dispatch("nextScene", { sceneId: 1 });
+      this.$store.dispatch("nextScene", {});
     }
   }
 };

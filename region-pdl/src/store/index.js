@@ -11,11 +11,7 @@ export default new Vuex.Store({
   },
   mutations: {
     nextScene(state, sceneId) {
-      if (sceneId === null)
-        state.currentSceneIndex++;
-      else {
-        state.currentSceneIndex += sceneId;
-      }
+      state.currentSceneIndex += sceneId;
     },
     setCharacter(state, name) {
       state.character = name;
@@ -23,7 +19,7 @@ export default new Vuex.Store({
   },
   actions: {
     nextScene({ commit }, { sceneId }) {
-      commit('nextScene', sceneId);
+      commit('nextScene', sceneId || 1);
     },
     setCharacter({ commit }, { name }) {
       commit('setCharacter', name);

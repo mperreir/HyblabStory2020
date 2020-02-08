@@ -57,11 +57,10 @@ export default {
     },
     methods: {
         onNextSchool() {
-            this.$store.dispatch("nextScene", {sceneId: 1});
+            this.$store.dispatch("nextScene", {});
         },
-
         onNextQuizz() {
-            this.$store.dispatch("nextScene", {sceneId: 7});
+            this.$store.dispatch("nextScene", {sceneId: 7}); // // TODO: fix this
         },
 
         closePopover(i) {

@@ -98,7 +98,7 @@ export default {
         let train = this.$refs.movingTrain.getBoundingClientRect();
         if (train.x + train.width < 0) {
           this.nextInitiated = true;
-          this.$store.dispatch("nextScene", { sceneId: null });
+          this.$store.dispatch("nextScene", {});
         } else {
           setTimeout(this.goNext, 100);
         }

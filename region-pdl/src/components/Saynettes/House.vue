@@ -189,7 +189,7 @@ export default {
       this.indexHouse = value;
     },
     onNextCar() {
-            this.$store.dispatch("nextScene", {sceneId: null});
+            this.$store.dispatch("nextScene", {});
         },
 
     closePopover(i) {
