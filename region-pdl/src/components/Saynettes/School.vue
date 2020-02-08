@@ -2,8 +2,8 @@
   <div class="saynette">
   <TextTitle :x="7" :y="15">Se chauffer (aides isolation professionnelles)</TextTitle>
     <SimpleText :x="7" :y="25" :width="40">
-        <p v-if="$store.state.character === 'dubois'" >Juste à côté de l’entreprise dans laquelle travaille Mme Dubois se trouve une école dans laquelle M. Moreau est professeur. Cette année, l’école a bénéficié d’une aide de la Région pour réaliser des travaux d’isolation.  </p>
-        <p v-if="$store.state.character === 'moreau'" >M. Moreau est professeur des écoles. Cette année, son école a bénéficié d’une aide de la Région pour réaliser des travaux d’isolation. </p>    
+        <p v-if="getChatacterGender === 'm'" >Juste à côté de l’entreprise dans laquelle travaille Mme Dubois se trouve une école dans laquelle M. Moreau est professeur. Cette année, l’école a bénéficié d’une aide de la Région pour réaliser des travaux d’isolation.  </p>
+        <p v-if="getChatacterGender === 'mme'" >M. Moreau est professeur des écoles. Cette année, son école a bénéficié d’une aide de la Région pour réaliser des travaux d’isolation. </p>
     </SimpleText>
     <ul>
       <li>
@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 import Background from "@/assets/School/background-school.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
@@ -42,6 +44,11 @@ export default {
     closePopover1: false,
     closePopover2: false,
   }),
+  computed: {
+    ...mapGetters([
+      'getChatacterGender'
+    ])
+  },
   methods: {
     closePopover(i) {
       switch(i) {
