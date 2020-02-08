@@ -34,7 +34,7 @@ import PlusButton from "@/components/PlusButton";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
-import LogoRegion from "@/assets/HOME/logo_region.svg";
+import LogoRegion from "@/assets/logo-region.svg";
 
 export default {
     name: "Intro",
