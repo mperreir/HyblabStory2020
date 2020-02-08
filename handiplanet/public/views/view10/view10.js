@@ -18,7 +18,6 @@ class View10 extends View {
     hideSplash();
     const nextButton = setOverlayButton('Retrouver Wendy', false);
     nextButton.addEventListener('click', () => {
-      hideOverlayButton();
       this.switchToContext();
     });
   }

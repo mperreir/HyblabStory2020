@@ -74,7 +74,7 @@
     #scroll-point{
       position: absolute;
       right: 5vw;
-      top: 60vh;
+      top: 55vh;
       transform: translateY(-50%);
 
       .point{
@@ -84,8 +84,7 @@
         border-radius: calc(1.25vh / 2);
         background-color: #5a8d8c;
         border: 0.5vh solid #5a8d8c;
-        margin-bottom: 10vh;
-        cursor: pointer;
+        margin-bottom: 8vh;
         
         
         &:last-of-type{
@@ -105,7 +104,7 @@
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          height: 5vh;
+          height: 4vh;
           width: 0.15vw;
           background-color: #5a8d8c;
           top: calc(100% + 0.5vh);
@@ -117,14 +116,14 @@
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          height: 5vh;
+          height: 4vh;
           width: 0.15vw;
           background-color: #5a8d8c;
           bottom: calc(100% + 0.5vh);
         }
       }
       .selected{
-        
+        cursor: pointer;
         border: 0.5vh solid #cb563e !important ; 
         background-color: #cb563e;
 

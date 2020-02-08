@@ -26,7 +26,6 @@ class View13 extends View {
         // Button to next view
         this.btNext = setOverlayButton('Retrouver Wendy', false);
         this.btNext.addEventListener('click', ()=>{
-            hideOverlayButton();
             this.switchToNextView();
         });
     }

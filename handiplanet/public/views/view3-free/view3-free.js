@@ -28,7 +28,6 @@ class View3Free extends View {
             this.dot4.style.transform = `translateX(${x * 0.05}px) translateY(${y * 0.05}px)`;
         });
         this.btNext.addEventListener('click', ()=>{
-            hideOverlayButton();
             this.switchToViewPremium();
         });
     }

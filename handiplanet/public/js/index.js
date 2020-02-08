@@ -3,12 +3,9 @@
 * Author: Christophe SONNEVILLE
 * Copyright - 2020 Christophe SONNEVILLE
 */
-
-window.scrollBarController = new ScrollBarController();
-window.scrollBarController.setPosition(0);
-
 window.soundManager = new SoundManager();
-
+window.scrollBarController = new ScrollBarController();
+window.scrollBarController.setPosition(View1, 0);
 view = new View1(document.getElementById('view-container'));
 
 const paths = [
@@ -164,9 +161,11 @@ function setOverlayButton(text, icon) {
 
 function hideOverlayButton() {
     const button = document.getElementById('overlay-next-button');
-    button.style.transition = "opacity 0.2s";
-    button.style.opacity = "0";
-    setTimeout(() => {
-        button.remove();
-    }, 200);
+    if(button != null){
+        button.style.transition = "opacity 0.2s";
+        button.style.opacity = "0";
+        setTimeout(() => {
+            button.remove();
+        }, 200);
+    }
 }

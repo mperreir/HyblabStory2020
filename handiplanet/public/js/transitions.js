@@ -5,6 +5,7 @@
  */
 
 async function showContextView(currentView){
+    hideOverlayButton();
     // Construction d'une div temporaire positionnée en dehors
     // de l'écran pour faire entrer la prochaine view
     const tempDiv = document.createElement('div');
@@ -15,6 +16,7 @@ async function showContextView(currentView){
 
     // Création de la prochaine view
     let nextView;
+    console.log(window.contextView);
     if(window.contextView == null){
         window.contextView = new Contexte(tempDiv);
         await window.contextView.load();
@@ -25,6 +27,7 @@ async function showContextView(currentView){
             await nextView.load();
         } else {
             tempDiv.appendChild(window.contextView.view);
+            window.contextView.refreshUI();
             window.contextView.view.style.animation = '';
             nextView = window.contextView;
         }
@@ -41,10 +44,12 @@ async function showContextView(currentView){
         viewContainer.appendChild(nextView.view);
         // tempDiv.replaceWith(window.contextView.view);
         currentView.remove();
+        window.currentView = nextView.view;
     }, 1000);
 }
 
 async function transitionHorizontal(view, NextView){
+    hideOverlayButton();
     // Construction d'une div temporaire positionnée en dehors
     // de l'écran pour faire entrer la prochaine view
     const tempDiv = document.createElement('div');
@@ -66,6 +71,7 @@ async function transitionHorizontal(view, NextView){
         viewContainer.appendChild(nextView.view);
         // tempDiv.replaceWith = nextView.view;
         view.remove();
+        window.currentView = nextView.view;
     }, 1000);
 }
 
@@ -80,6 +86,7 @@ function showSplash() {
 }
 
 async function transitionHorizontalInvert(view, NextView){
+    hideOverlayButton();
     // Construction d'une div temporaire positionnée en dehors
     // de l'écran pour faire entrer la prochaine view
     const tempDiv = document.createElement('div');
@@ -99,5 +106,6 @@ async function transitionHorizontalInvert(view, NextView){
     setTimeout(() => {
         tempDiv.replaceWith = nextView.view;
         view.remove();
+        window.currentView = nextView.view;
     }, 1000);
 }

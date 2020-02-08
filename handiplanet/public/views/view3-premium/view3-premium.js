@@ -15,7 +15,6 @@ class View3Premium extends View {
         // Button to next view
         this.btNext = setOverlayButton('Quelques chiffres', true);
         this.btNext.addEventListener('click', ()=>{
-            hideOverlayButton();
             this.switchToView4();
         });
         // Background elements
