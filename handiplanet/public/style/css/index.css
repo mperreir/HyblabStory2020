@@ -1,8 +1,8 @@
 /*
- * File Created: 2020-01-27 13:18:42
- * Author: Christophe SONNEVILLE
- * Copyright - 2020 Christophe SONNEVILLE
- */
+* File Created: 2020-01-27 13:18:42
+* Author: Christophe SONNEVILLE
+* Copyright - 2020 Christophe SONNEVILLE
+*/
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
 * {
   scroll-behavior: smooth;
@@ -48,6 +48,39 @@ a {
   max-width: 60%;
   max-height: 60%;
 }
+#home-view #home-text-right {
+  position: absolute;
+  bottom: 2vw;
+  right: 2vw;
+  width: 30vw;
+  text-align: right;
+  color: #ffffff;
+  font-size: 1.4em;
+  line-height: 30px;
+}
+#home-view #home-text-right p {
+  margin: 0px;
+}
+#home-view #home-sound {
+  position: absolute;
+  bottom: 2vw;
+  left: 2vw;
+  width: 30vw;
+  color: #ffffff;
+  font-size: 1.4em;
+  display: flex;
+}
+#home-view #home-sound > div {
+  display: flex;
+}
+#home-view #home-sound > div p {
+  margin: auto 0px;
+}
+#home-view #home-sound button img {
+  width: 45px;
+  height: 45px;
+  display: block;
+}
 #home-view #begin-button {
   cursor: pointer;
   border-radius: 12.5vw 12.5vw 0 0;
@@ -80,14 +113,9 @@ a {
 #home-view #begin-button h1 {
   font-weight: 600;
   margin-top: auto;
-  padding-top: 20px;
-  margin-bottom: 8px;
-  font-size: calc(1.1vw + 1.1vh);
-}
-#home-view #begin-button h2 {
   margin-bottom: auto;
-  font-size: calc(0.8vw + 0.8vh);
-  font-weight: 200;
+  padding-top: 20px;
+  font-size: calc(1.1vw + 1.1vh);
 }
 @media screen and (min-width: 1400px) {
   #home-view #begin-button {

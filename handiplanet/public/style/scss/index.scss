@@ -1,8 +1,8 @@
 /*
- * File Created: 2020-01-27 13:18:42
- * Author: Christophe SONNEVILLE
- * Copyright - 2020 Christophe SONNEVILLE
- */
+* File Created: 2020-01-27 13:18:42
+* Author: Christophe SONNEVILLE
+* Copyright - 2020 Christophe SONNEVILLE
+*/
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 
@@ -51,16 +51,55 @@ a{
     max-width: 60%;
     max-height: 60%;
   }
-
+  
+  #home-text-right {
+    position: absolute;
+    bottom: 2vw;
+    right: 2vw;
+    width: 30vw;
+    text-align: right;
+    color: #ffffff;
+    font-size: 1.4em;
+    line-height: 30px;
+    p {
+      margin: 0px;
+    }
+  }
+  
+  #home-sound {
+    position: absolute;
+    bottom: 2vw;
+    left: 2vw;
+    width: 30vw;
+    color: #ffffff;
+    font-size: 1.4em;
+    display: flex;
+    
+    
+    &>div {
+      display: flex;
+      p {
+        margin: auto 0px;
+      }
+    }
+    button {
+      img {
+        width: 45px;
+        height: 45px;
+        display: block
+      }
+    }
+  }
+  
   #begin-button{
     cursor: pointer;
     border-radius: 12.5vw 12.5vw 0 0;
     position: absolute;
     bottom: 0px;
-
+    
     width: 25vw;
     height: 12.5vw;
-
+    
     background-color: #ffffff;
     padding: 10px;
     margin-left: 50vw;
@@ -69,14 +108,14 @@ a{
     display: flex;
     flex-direction: column;
     animation: pulseBeginButton 1s infinite alternate ease-out;
-
+    
     button{
       &:last-of-type{
-         padding-top: 1vh;
+        padding-top: 1vh;
       }
       padding-top: 4vh;
     }
-
+    
     h1, h2{
       margin: 0px;
       
@@ -85,27 +124,21 @@ a{
       text-transform: uppercase;
       color: #5A8D8C;
     }
-
+    
     h1{
       font-weight: 600;
       margin-top: auto;
+      margin-bottom: auto;
       padding-top: 20px;
-      margin-bottom: 8px;
       font-size: calc(1.1vw + 1.1vh);
     }
-
-    h2{
-      margin-bottom: auto;
-      font-size: calc(0.8vw + 0.8vh);
-      font-weight: 200;
-    }
-
+    
     @media screen and (min-width: 1400px) {
       width: 300px;
       height: 150px;
       border-radius: 150px 150px 0 0;
     }
-
+    
     @media screen and (max-width: 1000px) {
       width: 230px;
       height: 115px;
@@ -116,7 +149,7 @@ a{
 }
 
 @keyframes pulseBeginButton {
-    
+  
   0% {
     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3);
   }

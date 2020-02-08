@@ -37,7 +37,7 @@
   display: flex;
 }
 #app-view #app-overlay header img {
-  height: 6.5vh;
+  height: 7.5vh;
 }
 #app-view #app-overlay header ul {
   z-index: 1000;
@@ -60,8 +60,10 @@
   color: #ffffff;
   margin-right: 0px;
   border-radius: 20px;
+  font-size: 1.4em;
 }
 #app-view #app-overlay header ul li:last-of-type a {
+  padding: 15px;
   color: #ffffff;
 }
 #app-view #app-overlay #scroll-point {
@@ -246,13 +248,6 @@
 #app-view #app-overlay #overlay-buttons #son button img {
   height: 8vh;
   width: 8vh;
-  /*&:hover{
-    box-shadow: 0 0 0 5px rgba(203, 86, 62, 0.3);
-  }*/
-}
-#app-view #app-overlay #overlay-buttons #son .mute {
-  z-index: 10000;
-  display: none;
 }
 #app-view #overlay-footer {
   z-index: -1;
