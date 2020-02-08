@@ -300,10 +300,10 @@
 
   #overlay-next-button {
     z-index: 10000 !important;
-    background-color: red;
     position: absolute;
     right: 0px;
     top: 50%;
+    display: flex;
     transform: translateY(-50%);
     background-color: #CB563E;
     font-weight: normal;
@@ -315,6 +315,22 @@
     border-top-left-radius: 50px;
     padding: 10px 30px;
     padding-right: 50px;
+    padding-left: 10px;
+
+    img {
+      width: 45px;
+      height: 45px;
+    }
+
+    &>div {
+      height: 45px;
+      margin-left: 20px;
+      display: flex;
+
+      div {
+        margin: auto 0px;
+      }
+    }
   }
 }
 #overlay-footer::after{

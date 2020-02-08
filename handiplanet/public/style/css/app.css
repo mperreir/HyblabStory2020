@@ -259,10 +259,10 @@
 }
 #app-view #overlay-footer #overlay-next-button {
   z-index: 10000 !important;
-  background-color: red;
   position: absolute;
   right: 0px;
   top: 50%;
+  display: flex;
   transform: translateY(-50%);
   background-color: #CB563E;
   font-weight: normal;
@@ -274,6 +274,19 @@
   border-top-left-radius: 50px;
   padding: 10px 30px;
   padding-right: 50px;
+  padding-left: 10px;
+}
+#app-view #overlay-footer #overlay-next-button img {
+  width: 45px;
+  height: 45px;
+}
+#app-view #overlay-footer #overlay-next-button > div {
+  height: 45px;
+  margin-left: 20px;
+  display: flex;
+}
+#app-view #overlay-footer #overlay-next-button > div div {
+  margin: auto 0px;
 }
 #app-view #overlay-footer::after {
   content: "";

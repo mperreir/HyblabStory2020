@@ -141,8 +141,19 @@ function setBackgroundColor(col) {
 
 function setOverlayButton(text, icon) {
     const button = document.createElement('button');
+    
+    const textContainer = document.createElement('div');
+    const textElement = document.createElement('div');
     button.id = 'overlay-next-button';
-    button.innerHTML = text;
+    textElement.innerHTML = text;
+    if (icon) {
+        const icon = document.createElement('img');
+        icon.src = 'assets/nextButtonIcon.svg';
+        button.appendChild(icon);
+    }
+    textContainer.appendChild(textElement);
+    button.appendChild(textContainer);
+
     button.style.opacity = '0';
     button.style.transition = 'opacity 0.2s';
     const buttonContainer = document.getElementById('overlay-footer');
