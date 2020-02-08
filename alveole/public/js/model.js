@@ -342,6 +342,140 @@ class ModelSlide3 extends Observable {
   }
 }
 
+class ModelSlide4 extends Observable {
+
+  // values
+  bool;
+  text;
+  instanciated;
+  choice;
+
+  constructor() {
+    super();
+    this.bool = false;
+    this.instanciated = false;
+    this.choice = 1;
+  }
+
+  getValue() {
+    return this.bool;
+  }
+
+  setValue(val) {
+    if (val != this.bool) {
+      this.bool = val;
+      this.setChanged();
+      this.notifyObservers();
+    }
+  }
+
+  loadAnime(container){
+    this.installer = bodymovin.loadAnimation({
+      container : container,
+      renderer: 'svg',
+      loop: true,
+      autoplay: false,
+      path: 'data/tournage-1.json',
+      rendererSettings: {
+        id: 'slide4_installer'
+      }
+    });
+    this.repetition = bodymovin.loadAnimation({
+      container : container,
+      renderer: 'svg',
+      loop: true,
+      autoplay: false,
+      path: 'data/tournage-2.json',
+      rendererSettings: {
+        id: 'slide4_repetition'
+      }
+    });
+    this.vocalise = bodymovin.loadAnimation({
+      container : container,
+      renderer: 'svg',
+      loop: true,
+      autoplay: false,
+      path: 'data/tournage-3.json',
+      rendererSettings: {
+        id: 'slide4_vocalise'
+      }
+    });
+    this.interview = bodymovin.loadAnimation({
+      container : container,
+      renderer: 'svg',
+      loop: true,
+      autoplay: false,
+      path: 'data/tournage-4.json',
+      rendererSettings: {
+        id: 'slide4_interview'
+      }
+    });
+    return {
+      'slide4_installer': this.installer,
+      'slide4_repetition': this.repetition,
+      'slide4_vocalise': this.vocalise,
+      'slide4_interview': this.interview
+    };
+  }
+
+  loadCheckbox(container) {
+    for (let i=0; i<4; i++) {
+      let div_checkbox = document.createElement('div');
+      div_checkbox.setAttribute('id','slide4_checkbox'+(i+1));
+      container.appendChild(div_checkbox);
+      Snap.load('data/slide4_checkbox.svg', function(data) {
+        let snap = Snap(div_checkbox);
+        snap.append(data);
+      });
+    }
+  }
+
+  loadValide(container) {
+    let div_valide = document.createElement('div');
+    div_valide.setAttribute('id','slide4_valide');
+    container.appendChild(div_valide);
+    Snap.load('data/tournage_valide.svg', function(data) {
+      let snap = Snap(div_valide);
+      snap.append(data);
+    });
+    div_valide.addEventListener('click', function() {
+      console.log('recu');
+    });
+    let div_valide_text = document.createElement('div');
+    div_valide_text.setAttribute('id','slide4_valide_text');
+    container.appendChild(div_valide_text);
+    div_valide_text.innerHTML = 'valider';
+  }
+
+  load(container) {
+    if (this.instanciated == false) {
+      let animes = this.loadAnime(container);
+      this.loadCheckbox(container);
+      this.loadValide(container);
+      this.instanciated = true;
+      return animes;
+    } else {
+      console.log('err : slide4 tournage table already instanciated');
+    }
+  }
+
+  destroy() {
+    if (this.instanciated == true) {
+      this.installer.destroy();
+      this.repetition.destroy();
+      this.vocalise.destroy();
+      this.interview.destroy();
+      this.instanciated = false;
+    } else {
+      console.log('err : not instanciated');
+    }
+  }
+
+  setDestroyed() {
+    this.instanciated = false;
+  }
+}
+
 class ModelSlide6 extends Observable {
 
   // values
@@ -384,148 +518,7 @@ class ModelSlide6 extends Observable {
   }
 }
 
-class ModelSlide4 extends Observable {
 
-  // values
-  bool;
-  text;
-  instanciated;
-  choice;
-
-  constructor() {
-    super();
-    this.bool = false;
-    this.instanciated = false;
-    this.choice = 1;
-  }
-
-  getValue() {
-    return this.bool;
-  }
-
-  setValue(val) {
-    if (val != this.bool) {
-      this.bool = val;
-      this.setChanged();
-      this.notifyObservers();
-    }
-  }
-
-  loadQuestion(container){
-    let div_question = document.createElement('div');
-    div_question.setAttribute('id','slide4_question');
-    container.appendChild(div_question);
-    div_question.innerHTML = this.text.question;
-  }
-
-  loadSpeech(container){
-    let div_speech = document.createElement('div');
-    div_speech.setAttribute('id','slide4_speech');
-    container.appendChild(div_speech);
-    div_speech.innerHTML = this.text.speech;
-  }
-
-  loadTitres(container){
-    for(let i=1; i<5; i++){
-      let div_titre = document.createElement('div');
-      div_titre.setAttribute('id','slide4_titre'+(i));
-      container.appendChild(div_titre);
-      div_titre.innerHTML = this.text.labels[i];
-    }
-  }
-
-  loadAnime(container){
-    this.Installer = bodymovin.loadAnimation({
-      container : container,
-      renderer: 'svg',
-      loop: true,
-      autoplay: false,
-      path: 'data/tournage-1.json',
-      rendererSettings: {
-        id: 'slide4_installer'
-      }
-    });
-    this.Repetition = bodymovin.loadAnimation({
-      container : container,
-      renderer: 'svg',
-      loop: true,
-      autoplay: false,
-      path: 'data/tournage-2.json',
-      rendererSettings: {
-        id: 'slide4_repetition'
-      }
-    });
-    this.Vocalise = bodymovin.loadAnimation({
-      container : container,
-      renderer: 'svg',
-      loop: true,
-      autoplay: false,
-      path: 'data/tournage-3.json',
-      rendererSettings: {
-        id: 'slide4_vocalise'
-      }
-    });
-    this.Interview = bodymovin.loadAnimation({
-      container : container,
-      renderer: 'svg',
-      loop: true,
-      autoplay: false,
-      path: 'data/tournage-4.json',
-      rendererSettings: {
-        id: 'slide4_interview'
-      }
-    });
-    return {'slide4_installer':this.Installer,
-            'slide4_repetition':this.Repetition,
-            'slide4_vocalise':this.Vocalise,
-            'slide4_interview':this.Interview};
-  }
-  loadCheckbox(container){
-      for(let i=0;i<4;i++){
-        let div_checkbox = document.createElement('div');
-        div_checkbox.setAttribute('id','slide4_checkbox'+(i+1));
-        container.appendChild(div_checkbox);
-        Snap.load('data/tournage_ronde.svg', function(data) {
-          let snap = Snap(div_checkbox);
-          snap.append(data);
-        });
-      }
-  }
-  loadValide(container){
-    let div_valide = document.createElement('div');
-    div_valide.setAttribute('id','slide4_valide');
-    container.appendChild(div_valide);
-    Snap.load('data/tournage_valide.svg', function(data) {
-      let snap = Snap(div_valide);
-      snap.append(data);
-    });
-    div_valide.addEventListener('click',function(){
-      console.log('recu');
-    });
-    let div_valide_text = document.createElement('div');
-    div_valide_text.setAttribute('id','slide4_valide_text');
-    container.appendChild(div_valide_text);
-    div_valide_text.innerHTML = 'valider';
-  }
-  load(container){
-    if (this.instanciated == false) {
-      this.loadQuestion(container);
-      this.loadSpeech(container);
-      this.loadTitres(container);
-      let animes = this.loadAnime(container);
-      this.loadCheckbox(container);
-      this.loadValide(container);
-      this.instanciated = true;
-      return animes;
-    } else {
-      console.log('err : slide4 tournage table already instanciated');
-    }
-  }
-
-  setDestroyed() {
-    this.instanciated = false;
-  }
-}
 
 class ModelSlide5 extends Observable {
 
