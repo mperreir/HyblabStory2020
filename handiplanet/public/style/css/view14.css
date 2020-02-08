@@ -1,0 +1,40 @@
+/*
+* Project: handigo
+* Created Date: Wednesday February 5th 2020
+* Author: Pierre Le Guen
+* -----
+* Last Modified: Thursday, 6th February 2020 1:53:57 pm
+* Modified By: Pierre Le Guen
+* -----
+* Copyright (c) 2020 Pierre Le Guen
+*/
+#view14 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+#view14 #view-14-middle {
+  position: absolute;
+  width: 80vw;
+  height: 60vh;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+#view14 #view-14-middle #view-14-perso {
+  position: absolute;
+  bottom: 0;
+}
+#view14 #view-14-middle #view-14-text {
+  position: absolute;
+  width: 40%;
+  bottom: 20%;
+  right: 10%;
+}
+#view14 #view-14-middle .view-14-bold {
+  color: #CB563E;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+/*# sourceMappingURL=view14.css.map */
