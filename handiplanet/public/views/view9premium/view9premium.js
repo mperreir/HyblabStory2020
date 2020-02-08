@@ -14,7 +14,6 @@ class View9Premium extends View {
     setBackgroundColor('#80BEA31A');
     this.nextButton = setOverlayButton('Quelques chiffres', true);
     this.nextButton.addEventListener('click', () => {
-      hideOverlayButton();
       this.switchToView10();
     });
   }

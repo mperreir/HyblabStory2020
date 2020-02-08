@@ -31,7 +31,6 @@ class View12Gratuit extends View {
 
     this.btNext = setOverlayButton('Voir l\'hôtel du Centre', false);
     this.btNext.addEventListener('click', ()=>{
-      hideOverlayButton();
       this.switchToView12Premium();
     });
   }

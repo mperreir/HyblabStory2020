@@ -5,6 +5,7 @@
  */
 
 async function showContextView(currentView){
+    hideOverlayButton();
     // Construction d'une div temporaire positionnée en dehors
     // de l'écran pour faire entrer la prochaine view
     const tempDiv = document.createElement('div');
@@ -19,14 +20,16 @@ async function showContextView(currentView){
         window.contextView = new Contexte(tempDiv);
         await window.contextView.load();
         nextView = window.contextView;
+        nextView.reloadContext();
     } else {
-        if(window.contextView.choicesRemaining==0){
+        if(window.contextView.questionNumber==4){
             nextView = new Comparatif(tempDiv);
             await nextView.load();
         } else {
             tempDiv.appendChild(window.contextView.view);
             window.contextView.view.style.animation = '';
             nextView = window.contextView;
+            nextView.reloadContext();
         }
     }
     setBackgroundColor('#FFFFFF');
@@ -39,12 +42,16 @@ async function showContextView(currentView){
         const viewContainer = document.getElementById('view-container');
         viewContainer.innerHTML = '';
         viewContainer.appendChild(nextView.view);
-        // tempDiv.replaceWith(window.contextView.view);
         currentView.remove();
+        window.currentView = nextView.view;
+        /* tempDiv.replaceWith = nextView.view;
+        currentView.remove();
+        window.currentView = nextView.view; */
     }, 1000);
 }
 
 async function transitionHorizontal(view, NextView){
+    hideOverlayButton();
     // Construction d'une div temporaire positionnée en dehors
     // de l'écran pour faire entrer la prochaine view
     const tempDiv = document.createElement('div');
@@ -64,8 +71,9 @@ async function transitionHorizontal(view, NextView){
         const viewContainer = document.getElementById('view-container');
         viewContainer.innerHTML = '';
         viewContainer.appendChild(nextView.view);
-        // tempDiv.replaceWith = nextView.view;
+        //tempDiv.replaceWith = nextView.view;
         view.remove();
+        window.currentView = nextView.view;
     }, 1000);
 }
 
@@ -80,6 +88,7 @@ function showSplash() {
 }
 
 async function transitionHorizontalInvert(view, NextView){
+    hideOverlayButton();
     // Construction d'une div temporaire positionnée en dehors
     // de l'écran pour faire entrer la prochaine view
     const tempDiv = document.createElement('div');
@@ -97,7 +106,11 @@ async function transitionHorizontalInvert(view, NextView){
     tempDiv.style.animation = 'scrollTransitionHorizontalInvert 1s forwards';
     tempDiv.style.webkitAnimation = 'scrollTransitionHorizontalInvert 1s forwards';
     setTimeout(() => {
-        tempDiv.replaceWith = nextView.view;
+        const viewContainer = document.getElementById('view-container');
+        viewContainer.innerHTML = '';
+        viewContainer.appendChild(nextView.view);
+        //tempDiv.replaceWith = nextView.view;
         view.remove();
+        window.currentView = nextView.view;
     }, 1000);
 }

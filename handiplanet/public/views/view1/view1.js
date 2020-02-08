@@ -1,5 +1,6 @@
 
 class View1 extends View {
+    static titre = 'Introduction';
     constructor(receiver){
         super('view1', receiver);
         super.load().then(() => {
@@ -17,7 +18,6 @@ class View1 extends View {
         // Button to next view
         this.btNext = setOverlayButton('Continuer', false);
         this.btNext.addEventListener('click', ()=>{
-            hideOverlayButton();
             this.switchToContext();
         });
 

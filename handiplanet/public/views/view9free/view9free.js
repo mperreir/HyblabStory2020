@@ -14,7 +14,6 @@ class View9Free extends View {
     this.nextButton = setOverlayButton('Voir l\'hôtel du Centre', false);
 
     this.nextButton.addEventListener('click', () => {
-      hideOverlayButton();
       this.switchToPremium();
     });
   }

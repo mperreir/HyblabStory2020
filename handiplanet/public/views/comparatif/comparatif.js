@@ -29,12 +29,12 @@ class Comparatif extends View {
         });
         this.btNext = setOverlayButton('Remerciements', false);
         this.btNext.addEventListener('click', ()=>{
-            hideOverlayButton();
             this.switchNextView();
         });
     }
 
     async switchNextView(){
         transitionHorizontal(this.view, ViewThanks);
+        window.scrollBarController.setPosition(5, ViewThanks);
     }
 }

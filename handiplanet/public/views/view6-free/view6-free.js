@@ -37,7 +37,6 @@ class View6Free extends View {
         });
         this.btNext = setOverlayButton('Voir l\'hôtel du Centre', false);
         this.btNext.addEventListener('click', ()=>{
-            hideOverlayButton();
             this.switchToViewPremium();
         });
     }

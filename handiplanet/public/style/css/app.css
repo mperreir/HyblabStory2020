@@ -72,7 +72,7 @@
 #app-view #app-overlay #scroll-point {
   position: absolute;
   right: 5vw;
-  top: 60vh;
+  top: 55vh;
   transform: translateY(-50%);
 }
 #app-view #app-overlay #scroll-point .point {
@@ -82,8 +82,7 @@
   border-radius: calc(1.25vh / 2);
   background-color: #5a8d8c;
   border: 0.5vh solid #5a8d8c;
-  margin-bottom: 10vh;
-  cursor: pointer;
+  margin-bottom: 8vh;
 }
 #app-view #app-overlay #scroll-point .point:last-of-type::after {
   display: none;
@@ -96,7 +95,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  height: 5vh;
+  height: 4vh;
   width: 0.15vw;
   background-color: #5a8d8c;
   top: calc(100% + 0.5vh);
@@ -106,12 +105,13 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  height: 5vh;
+  height: 4vh;
   width: 0.15vw;
   background-color: #5a8d8c;
   bottom: calc(100% + 0.5vh);
 }
 #app-view #app-overlay #scroll-point .selected {
+  cursor: pointer;
   border: 0.5vh solid #cb563e !important;
   background-color: #cb563e;
 }
@@ -308,6 +308,18 @@
 }
 #app-view:hover > button {
   box-shadow: 50px 50px 0 200px rgba(203, 86, 62, 0.3), 0 0 0 10px rgba(203, 85, 62, 0.363);
+}
+
+#scroll-title {
+  z-index: 100000;
+  color: #CB563E !important;
+  opacity: 0;
+  transition: opacity 0.5s;
+  font-family: Nunito;
+  font-style: normal;
+  position: absolute;
+  white-space: nowrap;
+  transform: translateX(-100%) translateX(-20px) translateY(-50%);
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -15,7 +15,6 @@ class View6Premium extends View {
         // Button to next view
         this.btNext = setOverlayButton('Quelques chiffres', true);
         this.btNext.addEventListener('click', ()=>{
-            hideOverlayButton();
             this.switchView7();
         });
     }

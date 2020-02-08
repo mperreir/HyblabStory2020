@@ -1,105 +1,58 @@
 
 class Contexte extends View {
+    textes = {
+        0: 'Pour commencer mes recherches, <span>je devrais ?</span>',
+        1: 'Pour approfondir mes recherches,<br><span>que me conseilles-tu ?</span>',
+        2: 'Selon toi, <span>que devrais-je faire</span> ensuite ?',
+        3: '<span>On a bien avancé,</span> il ne reste qu\'à'
+    };
+
     constructor(receiver) {
         super('contexte', receiver);
+        this.questionNumber = 0;
+        this.buttons = [true, true, true, true];
+    }
+
+    reloadContext(){
+        this.text.innerHTML = this.textes[this.questionNumber];
+        if(this.buttons[0]) this.photo.style.display = 'flex';
+        if(this.buttons[1]) this.contact.style.display = 'flex';
+        if(this.buttons[2]) this.reseau.style.display = 'flex';
+        if(this.buttons[3]) this.info.style.display = 'flex';
     }
 
     linkElements() {
-        this.choicesRemaining = 4;
-        this.position = 1;
-        this.text1 = document.getElementById('context-1');
-        this.text2 = document.getElementById('context-2');
-        this.text3 = document.getElementById('context-3');
-        this.text4 = document.getElementById('context-4');
         this.photo = document.getElementById('contexte-photo');
         this.contact = document.getElementById('contexte-contact');
         this.reseau = document.getElementById('contexte-reseau');
         this.info = document.getElementById('contexte-info');
-        this.photod = document.getElementById('contexte-photo-done');
-        this.contactd = document.getElementById('contexte-contact-done');
-        this.reseaud = document.getElementById('contexte-reseau-done');
-        this.infod = document.getElementById('contexte-info-done');
+        this.text = document.getElementById('context-message');
         this.persoImg = document.getElementById('contexte-character-img');
+        this.text.innerHTML = this.textes[0];
 
         this.persoImg.src = window.colorPersoManager.getAsset().face;
 
         this.photo.addEventListener('click', () => {
-            this.photo.className = "contexte-done";
-            this.photod.className = "cdone";
-            this.position = this.position + 1;
-            this.choicesRemaining--;
-            if (this.position == 2) {
-                this.text1.className = "contexte-nonActive";
-                this.text2.className = "contexte-active";
-            }
-            if (this.position == 3) {
-                this.text2.className = "contexte-nonActive";
-                this.text3.className = "contexte-active";
-            }
-            if (this.position == 4) {
-                this.text3.className = "contexte-nonActive";
-                this.text4.className = "contexte-active";
-            }
+            this.buttons[0] = false;
+            this.photo.style.display = 'none';
             this.switchToPhoto();
         });
         
         this.contact.addEventListener('click', () => {
-            this.contact.className = "contexte-done";
-            this.contactd.className = "cdone";
-            this.position = this.position + 1;
-            this.choicesRemaining--;
-            if (this.position == 2) {
-                this.text1.className = "contexte-nonActive";
-                this.text2.className = "contexte-active";
-            }
-            if (this.position == 3) {
-                this.text2.className = "contexte-nonActive";
-                this.text3.className = "contexte-active";
-            }
-            if (this.position == 4) {
-                this.text3.className = "contexte-nonActive";
-                this.text4.className = "contexte-active";
-            }
+            this.buttons[1] = false;
+            this.contact.style.display = 'none';
             this.switchToContact();
         });
         
         this.reseau.addEventListener('click', () => {
-            this.reseau.className = "contexte-done";
-            this.reseaud.className = "cdone";
-            this.position = this.position + 1;
-            this.choicesRemaining--;
-            if (this.position == 2) {
-                this.text1.className = "contexte-nonActive";
-                this.text2.className = "contexte-active";
-            }
-            if (this.position == 3) {
-                this.text2.className = "contexte-nonActive";
-                this.text3.className = "contexte-active";
-            }
-            if (this.position == 4) {
-                this.text3.className = "contexte-nonActive";
-                this.text4.className = "contexte-active";
-            }
+            this.buttons[2] = false;
+            this.reseau.style.display = 'none';
             this.switchToReseau();
         });
         
         this.info.addEventListener('click', () => {
-            this.info.className = "contexte-done";
-            this.infod.className = "cdone";
-            this.position = this.position + 1;
-            this.choicesRemaining--;
-            if (this.position == 2) {
-                this.text1.className = "contexte-nonActive";
-                this.text2.className = "contexte-active";
-            }
-            if (this.position == 3) {
-                this.text2.className = "contexte-nonActive";
-                this.text3.className = "contexte-active";
-            }
-            if (this.position == 4) {
-                this.text3.className = "contexte-nonActive";
-                this.text4.className = "contexte-active";
-            }
+            this.buttons[3] = false;
+            this.info.style.display = 'none';
             this.switchToInfo();
         });
 
@@ -120,16 +73,24 @@ class Contexte extends View {
     }
 
     async switchToContact() {
+        this.updateContexte(View8);
         transitionHorizontal(this.view, View8);
     }
     async switchToReseau() {
+        this.updateContexte(View5);
         transitionHorizontal(this.view, View5);
     }
     async switchToInfo() {
+        this.updateContexte(View11);
         transitionHorizontal(this.view, View11);
     }
     async switchToPhoto() {
+        this.updateContexte(View2);
         transitionHorizontal(this.view, View2);
     }
 
+    async updateContexte(View){
+        this.questionNumber++;
+        window.scrollBarController.setPosition(this.questionNumber, View);
+    }
 }
