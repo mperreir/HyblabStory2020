@@ -31,7 +31,7 @@ let initSlide8 = function(){
         });
     });
 
-  d3.select('#next9-3').on('click', function(){
+  d3.select('#slide8-suivant').on('click', function(){
     moveDown();
     moveLeft();
     initSlide9();
