@@ -20,4 +20,8 @@ $(document).ready(function() {
   function() {
     $("#img-start").css("opacity", "0");
   });
+
+
+  /*var video_logo = document.getElementById("video_logo");
+  video_logo.play();*/
 });

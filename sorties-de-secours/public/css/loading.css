@@ -135,11 +135,30 @@
     opacity: 0.85;
     box-sizing: content-box;
 }
+.mousey-black {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 3px solid #000;
+  border-radius: 25px;
+  opacity: 0.85;
+  box-sizing: content-box;
+}
 .scroller {
   width: 3px;
   height: 10px;
   border-radius: 25%;
   background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+.scroller-black {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #000;
   animation-name: scroll;
   animation-duration: 2.2s;
   animation-timing-function: cubic-bezier(.15,.41,.69,.94);
