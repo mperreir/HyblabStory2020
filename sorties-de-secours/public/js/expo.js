@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     var circle_positions = [];
-    var eraser_size = 50;
+    var eraser_size = 90;
 
     let stage = new Konva.Stage({
         container: 'expo-konva',
@@ -9,9 +9,10 @@ $(document).ready(function() {
         height: window.innerHeight
     });
 
+    let layer_premier_rang = new Konva.Layer();
     let layer_cover = new Konva.Layer();
     let layer_discover = new Konva.Layer();
-    stage.add(layer_cover, layer_discover);
+    stage.add(layer_cover, layer_discover, layer_premier_rang);
 
     let group = new Konva.Group({
         clipFunc: function(ctx) {
@@ -22,6 +23,22 @@ $(document).ready(function() {
         },
         draggable: false
     });
+
+    // PREMIER RANG
+    let image_premier_rang = new Image();
+    image_premier_rang.onload = () => {
+        let k_image_premier_rang = new Konva.Image({
+            x: 0,
+            y: 0,
+            image: image_premier_rang,
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
+
+        layer_premier_rang.add(k_image_premier_rang);
+        layer_premier_rang.batchDraw();
+    };
+    image_premier_rang.src = 'img/expo_premier_rang.png';
 
     // cover
     let image_cover = new Image();
@@ -56,6 +73,7 @@ $(document).ready(function() {
 
     };
     image_cover.src = 'img/expo-cover.png';
+
 
 
     // EVENTS
