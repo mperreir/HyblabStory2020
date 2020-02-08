@@ -7,11 +7,11 @@
       :width="70"
       :style="{textAlign: 'center'}"
     >
-      <p v-if="$store.state.character === 'dubois'">
+      <p v-if="getChatacterGender === 'mme'">
         Il y a peu, Mme Dubois a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison.
         <br>Cette  rénovation rendue possible grâce aux aides de la Région, a permis à Mme Dubois de faire des économies d’énergie et de participer à la transition écologique de la région.
       </p>
-      <p v-if="$store.state.character === 'moreau'">
+      <p v-if="getChatacterGender === 'm'">
         Il y a peu, M. Moreau a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison. <br>
         Cette  rénovation rendue possible grâce aux aides de la Région, a permis à M. Moreau de faire des économies d’énergie et de participer à la transition écologique de la région.
       </p>
@@ -86,11 +86,11 @@
       :width="35"
       @open="closePopover(2)"
     >
-      <p v-if="$store.state.character === 'moreau'">
+      <p v-if="getChatacterGender === 'm'">
         La maison de M. Moreau  fait <span class="data"> 50 m².
         </span> Il a eu le droit à <span class="data">4000 euros </span> d’aides.
       </p>
-      <p v-if="$store.state.character === 'dubois'">
+      <p v-if="getChatacterGender === 'mme'">
         La maison de Mme Dubois fait <span class="data"> 150 m².
         </span> Elle a eu le droit à <span class="data">4000 euros</span> d’aides.
       </p>
@@ -146,6 +146,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 import Background from "@/assets/House/background-house.svg";
 import LittleHouse from "@/assets/House/little-house.svg";
 import MediumHouse from "@/assets/House/medium-house.svg";
@@ -177,6 +179,11 @@ export default {
     closePopover5:false,
     fakeName:'moreau'
   }),
+  computed: {
+    ...mapGetters([
+      'getChatacterGender'
+    ])
+  },
   methods: {
     onChange(value) {
       this.indexHouse = value;

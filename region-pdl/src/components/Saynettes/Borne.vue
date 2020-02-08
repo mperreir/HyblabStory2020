@@ -10,8 +10,8 @@
       <p>
         Pour accompagner la transition énergétique, la Région participe au
         déploiement de bornes de recharge pour les véhicules électriques sur
-        l’ensemble du territoire ligérien. Ainsi, lorsque {{ name }} prend sa
-        voiture, il sait qu’il y aura toujours une borne à proximité.
+        l’ensemble du territoire ligérien. Ainsi, lorsque {{ getChatacter }} prend sa
+        voiture, {{ getChatacterGender === 'm' ? 'il' : 'elle' }} sait qu’il y aura toujours une borne à proximité.
       </p>
     </SimpleText>
 
@@ -53,6 +53,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 import Background from "@/assets/Borne/background-borne.svg";
 import SimpleText from "@/components/SimpleText";
 import TrainSVG from "@/assets/Borne/train.svg";
@@ -79,11 +81,10 @@ export default {
     nextInitiated: false
   }),
   computed: {
-    name() {
-      return this.$store.state.character === "dubois"
-        ? "Mme Dubois"
-        : "M. Moreau";
-    }
+    ...mapGetters([
+      'getChatacter',
+      'getChatacterGender'
+    ])
   },
   methods: {
     onNext() {

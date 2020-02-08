@@ -1,9 +1,9 @@
 <template>
   <div class="saynette">
     <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70" >
-        <p v-if="this.$store.state.character === 'dubois'">L’entreprise de Mme Dubois est engagée pour la transition énergétique et profite des aides de la Région. À présent, l’entreprise crée sa propre énergie verte grâce à la biomasse.  </p>
+        <p v-if="getChatacterGender === 'mme'">L’entreprise de Mme Dubois est engagée pour la transition énergétique et profite des aides de la Région. À présent, l’entreprise crée sa propre énergie verte grâce à la biomasse.  </p>
 
-        <p v-if="this.$store.state.character === 'moreau'"> À côté de l’école dans laquelle enseigne M. Moreau, se trouve l’entreprise de Mme Dubois. Eux aussi se sont engagés pour la transition énergétique et profitent des aides de la Région. À présent, ils créent leur propre énergie verte grâce à la biomasse. </p>
+        <p v-if="getChatacterGender === 'm'"> À côté de l’école dans laquelle enseigne M. Moreau, se trouve l’entreprise de Mme Dubois. Eux aussi se sont engagés pour la transition énergétique et profitent des aides de la Région. À présent, ils créent leur propre énergie verte grâce à la biomasse. </p>
     </SimpleText>
 
     <PlusButton class="plus1" :width="20" @open="closePopover(1)" v-model="closePopover1">
@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 import CompanySVG from "@/assets/Company/FOND ENTREPRISE-01.svg"
 import PlusButton from "@/components/PlusButton";
 import SimpleText from "@/components/SimpleText";
@@ -48,7 +50,11 @@ export default {
             closePopover3:false,
             closePopover4:false,
     }),
-
+    computed: {
+      ...mapGetters([
+        'getChatacterGender'
+      ])
+    },
     methods: {
         onNextSchool() {
             this.$store.dispatch("nextScene", {sceneId: 1});

@@ -10,16 +10,16 @@ export default new Vuex.Store({
     character: ""
   },
   mutations: {
-      nextScene(state, sceneId) {
-        if (sceneId === null)
-          state.currentSceneIndex++;
-        else {
-          state.currentSceneIndex += sceneId;
-        }
-      },
-      setCharacter(state, name) {
-        state.character = name;
+    nextScene(state, sceneId) {
+      if (sceneId === null)
+        state.currentSceneIndex++;
+      else {
+        state.currentSceneIndex += sceneId;
       }
+    },
+    setCharacter(state, name) {
+      state.character = name;
+    }
   },
   actions: {
     nextScene({ commit }, { sceneId }) {
@@ -30,7 +30,16 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    //insert getters here if needed
+    getChatacter: state => {
+      return state.character === "dubois"
+        ? "Mme Dubois"
+        : "M. Moreau";
+    },
+    getChatacterGender: state => {
+      return state.character === "dubois"
+        ? "mme"
+        : "m";
+    }
   },
   modules: {}
 });
