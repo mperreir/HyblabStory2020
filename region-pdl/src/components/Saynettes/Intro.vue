@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import MaisonSVG from "@/assets/Home/FOND HOME-01.svg";
+import MaisonSVG from "@/assets/HOME/FOND HOME-01.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
