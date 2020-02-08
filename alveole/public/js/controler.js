@@ -253,9 +253,12 @@ class UpdateSlide2 extends Observer {
 
       let micros = observable.loadMicros(container);
 
+      //observable.loadWires(micros);
+
     } else if (val == false) {
        this.composant.querySelector("#slide2_micros").remove();
        observable.setDestroyed();
+       //observable.deleteWires();
     }
   }
 }

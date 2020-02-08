@@ -223,6 +223,7 @@ class ModelSlide2 extends Observable {
     this.instanciated = false;
     this.choice;
     this.answer;
+    this.wires;
   }
 
   getValue() {
@@ -238,12 +239,19 @@ class ModelSlide2 extends Observable {
   }
 
   loadMicros(container) {
+
     if (this.instanciated == false) {
+
       Snap.load('data/micro_cravate.svg', function(data) {
         let snap = Snap(container);
         snap.append(data);
+        let children = snap.children();
       });
       Snap.load('data/micro_canon.svg', function(data) {
+        let snap = Snap(container);
+        snap.append(data);
+      });
+      Snap.load('data/plug.svg', function(data) {
         let snap = Snap(container);
         snap.append(data);
       });
@@ -256,9 +264,23 @@ class ModelSlide2 extends Observable {
         snap.append(data);
       });
       this.instanciated = true;
-    } else {
+    }
+    else {
       console.log('err : slide2 micros already instanciated');
     }
+  }
+
+  loadWires(micros){
+    let that = this;
+    planck.testbed(function(testbed) {
+      that.wires = new Rope();
+      return that.wires.world;
+    });
+    return this.wires;
+  }
+
+  deleteWires(){
+
   }
 
   setDestroyed() {

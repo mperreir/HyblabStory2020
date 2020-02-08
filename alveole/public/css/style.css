@@ -134,11 +134,27 @@ footer {
 
 #slide2_micros {
   position: absolute;
-  height: 100%;
+  height: 80%;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+}
+
+#slide2_micros>*:nth-child(1) {
+    align-self: flex-end;
+    transform: scale(0.3);
+}
+
+#slide2_micros>*:nth-child(3) {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20%;
+  transform: scale(0.7);
+}
+
+#slide2_micros>*:nth-child(5) {
+    align-self: flex-end;
 }
 
 .slide2 {
