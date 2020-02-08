@@ -55,7 +55,7 @@
 import Background from "@/assets/Borne/background-borne.svg";
 import SimpleText from "@/components/SimpleText";
 import TrainSVG from "@/assets/Borne/train.svg";
-import BoatSVG from "@/assets/Persos/bateau jauneFichier 4.svg";
+import BoatSVG from "@/assets/boat.svg";
 import BorneSVG from "@/assets/Borne/borne.svg";
 import PlusButton from "@/components/PlusButton";
 import SimpleButton from "@/components/SimpleButton";

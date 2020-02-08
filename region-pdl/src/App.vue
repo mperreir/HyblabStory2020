@@ -41,12 +41,12 @@ body,
 /* --- Police des titres --- */
 @font-face {
   font-family: "Neo Sans";
-  src: url("./fonts/NeoSansStd-Medium.otf");
+  src: url("./assets/fonts/NeoSansStd-Medium.otf");
 }
 
 @font-face {
   font-family: "Neo Sans Bold";
-  src: url("./fonts/NeoSansPro-Bold.ttf");
+  src: url("./assets/fonts/NeoSansPro-Bold.ttf");
 }
 
 .title {
@@ -60,7 +60,7 @@ body,
 /* --- Police des textes --- */
 @font-face {
   font-family: "Titillium Web";
-  src: url("./fonts/TitilliumWeb-Regular.ttf");
+  src: url("./assets/fonts/TitilliumWeb-Regular.ttf");
 }
 
 .text {

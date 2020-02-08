@@ -38,10 +38,9 @@ import Background from "@/assets/Persos/background-perso.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
-import FakePerso from "@/assets/Persos/PersoFichier 1.svg";
-import PersoHomme from "@/assets/Persos/monsieur.svg";
-import PersoFemme from "@/assets/Persos/madame.svg";
-import Boat from "@/assets/Persos/bateau jauneFichier 4.svg";
+import PersoHomme from "@/assets/Persos/man.svg";
+import PersoFemme from "@/assets/Persos/woman.svg";
+import Boat from "@/assets/boat.svg";
 
 export default {
   name: "Persos",
@@ -50,7 +49,6 @@ export default {
     TextTitle,
     SimpleText,
     SimpleButton,
-    FakePerso,
     PersoHomme,
     PersoFemme,
     Boat
