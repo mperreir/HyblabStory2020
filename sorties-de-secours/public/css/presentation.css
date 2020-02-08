@@ -1,19 +1,11 @@
 #logo-sorties {
   position: relative;
-  top: 10%;
+  text-align: center;
+  top: 0;
 }
 
 #presentation-section {
   position: relative;
-  background-color: white;
+  background-color: #1E1E1E;
   height: 110vh;
-}
-
-#presentation-logo {
-	position: relative;
-	top: 10%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-  width: 275px;
-  height: 95px;
 }

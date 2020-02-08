@@ -6,8 +6,9 @@ $(document).ready(function() {
 
     const soundAnimated = document.querySelector("#sound-content");
     const mouseAnimated = document.querySelector("#mouse-animated");
-    soundAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
-    mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-2s');
+    $("#sound-content").css("animation-delay", "0.5s");
+    soundAnimated.classList.add('animated', 'fadeInUp');
+    mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
     bodyScrollLock.disableBodyScroll(container);
     mouseAnimated.addEventListener('animationend', function() { bodyScrollLock.enableBodyScroll(container); });
 
