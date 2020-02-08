@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78ef69d9-d4ba-4d07-b3a3-8dc271dfb2cf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/css/menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/css/music-workshop.css" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/css/music-workshop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/img/menu_dance.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/img/menu_expo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/img/menu_musique.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/img/menu_musique.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/img/menu_expo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/img/menu_expo_crayon.png" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/img/menu_expo_crayon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/menu.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,20 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
+            <state relative-caret-position="222">
+              <caret line="166" column="67" selection-start-line="166" selection-start-column="67" selection-end-line="166" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="menu.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/css/menu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="80" column="28" lean-forward="true" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+            <state relative-caret-position="317">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
             </state>
           </provider>
         </entry>
@@ -88,7 +82,6 @@
       <find>batch</find>
       <find>k_vinyl_head</find>
       <find>console.log</find>
-      <find>HEAD</find>
       <find>generalMusic</find>
       <find>$(document).scrollTop()</find>
       <find>&gt;&gt;&gt;</find>
@@ -103,6 +96,7 @@
       <find>absolute</find>
       <find>img-menu</find>
       <find>opacity</find>
+      <find>HEAD</find>
     </findStrings>
     <replaceStrings>
       <replace>exp-choice</replace>
@@ -128,8 +122,8 @@
         <option value="$PROJECT_DIR$/sorties-de-secours/public/js/index.js" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/css/menuFlex.css" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/js/menu.js" />
-        <option value="$PROJECT_DIR$/sorties-de-secours/public/index.html" />
         <option value="$PROJECT_DIR$/sorties-de-secours/public/css/menu.css" />
+        <option value="$PROJECT_DIR$/sorties-de-secours/public/index.html" />
       </list>
     </option>
   </component>
@@ -276,12 +270,12 @@
       <workItem from="1580199270795" duration="17523000" />
       <workItem from="1580977751785" duration="19359000" />
       <workItem from="1581083576721" duration="11925000" />
-      <workItem from="1581159197450" duration="3777000" />
+      <workItem from="1581159197450" duration="4632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67886000" />
+    <option name="totallyTimeSpent" value="68741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -687,17 +681,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/index.html">
+    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/css/menu.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
+        <state relative-caret-position="317">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/css/menu.css">
+    <entry file="file://$PROJECT_DIR$/sorties-de-secours/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="80" column="28" lean-forward="true" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+        <state relative-caret-position="222">
+          <caret line="166" column="67" selection-start-line="166" selection-start-column="67" selection-end-line="166" selection-end-column="67" />
         </state>
       </provider>
     </entry>
