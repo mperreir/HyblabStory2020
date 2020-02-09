@@ -1,22 +1,40 @@
 <template>
   <div class="saynette">
-    <TextTitle :y="12" :style="{textAlign: 'center'}">Bilan de consommation d’énergie</TextTitle>
+    <TextTitle
+      :y="12"
+      :style="{textAlign: 'center'}"
+    >
+      Bilan de consommation d’énergie
+    </TextTitle>
 
-    <SimpleText :style="{textAlign: 'center'}" :y="20">
+    <SimpleText
+      :style="{textAlign: 'center'}"
+      :y="20"
+    >
       <p>
         <b>Grâce à tous les dispositifs et les aides mises en place par la Région,</b> M. Moreau et Mme Dubois
-        <br />font des
+        <br>font des
         <b>économies</b> et
         <b>réduisent</b> leur impact sur l’environnement en utilisant des énergies plus vertes et durables.
-        <br />Et maintenant, un petit quiz pour tester vos connaissances ?
+        <br>Et maintenant, un petit quiz pour tester vos connaissances ?
       </p>
     </SimpleText>
 
-    <SimpleText :style="{textAlign: 'center'}" :width="23.5" :x="5.5" :y="37">
+    <SimpleText
+      :style="{textAlign: 'center'}"
+      :width="23.5"
+      :x="5.5"
+      :y="37"
+    >
       <p>Qui peut bénéficier des aides régionales pour la rénovation énergétique ?</p>
     </SimpleText>
 
-    <SimpleText :style="{textAlign: 'center'}" :y="37" :width="23.5" :x="38">
+    <SimpleText
+      :style="{textAlign: 'center'}"
+      :y="37"
+      :width="23.5"
+      :x="38"
+    >
       <p>
         En moyenne, à quelle distance
         se situe une borne de chargement
@@ -24,7 +42,12 @@
       </p>
     </SimpleText>
 
-    <SimpleText :style="{textAlign: 'center'}" :width="23.5" :x="71" :y="39">
+    <SimpleText
+      :style="{textAlign: 'center'}"
+      :width="23.5"
+      :x="71"
+      :y="39"
+    >
       <p>La biomasse sert le plus souvent à :</p>
     </SimpleText>
 
@@ -33,46 +56,46 @@
         <QuizzButton
           id="11"
           text="Professionnels et particuliers"
-          @click.native="() => { onSelectFirstQuestion(1)}"
           :selected="selected11"
           :answer="q1a1"
+          @click.native="() => { onSelectFirstQuestion(1)}"
         />
         <QuizzButton
           id="12"
           text="Particuliers uniquement"
-          @click.native="() => { onSelectFirstQuestion(2)}"
           :selected="selected12"
           :answer="'waiting'"
+          @click.native="() => { onSelectFirstQuestion(2)}"
         />
         <QuizzButton
           id="13"
           text="Professionnels uniquement"
-          @click.native="() => { onSelectFirstQuestion(3)}"
           :selected="selected13"
           :answer="'waiting'"
+          @click.native="() => { onSelectFirstQuestion(3)}"
         />
       </div>
       <div class="column">
         <QuizzButton
           id="21"
           text="33 km"
-          @click.native="() => { onSelectSecondQuestion(1)}"
           :selected="selected21"
           :answer="'waiting'"
+          @click.native="() => { onSelectSecondQuestion(1)}"
         />
         <QuizzButton
           id="22"
           text="13 km"
-          @click.native="() => { onSelectSecondQuestion(2)}"
           :selected="selected22"
           :answer="q2a2"
+          @click.native="() => { onSelectSecondQuestion(2)}"
         />
         <QuizzButton
           id="23"
           text="53 km"
-          @click.native="() => { onSelectSecondQuestion(3)}"
           :selected="selected23"
           :answer="'waiting'"
+          @click.native="() => { onSelectSecondQuestion(3)}"
         />
       </div>
       <div class="column">
@@ -80,23 +103,23 @@
           id="31"
           color="red"
           text="Eclairer"
-          @click.native="() => { onSelectThirdQuestion(1)}"
           :selected="selected31"
           :answer="'waiting'"
+          @click.native="() => { onSelectThirdQuestion(1)}"
         />
         <QuizzButton
           id="32"
           text="Se déplacer"
-          @click.native="() => { onSelectThirdQuestion(2)}"
           :selected="selected32"
           :answer="'waiting'"
+          @click.native="() => { onSelectThirdQuestion(2)}"
         />
         <QuizzButton
           id="33"
           text="Chauffer"
-          @click.native="() => { onSelectThirdQuestion(3)}"
           :selected="selected33"
           :answer="q3a3"
+          @click.native="() => { onSelectThirdQuestion(3)}"
         />
       </div>
     </div>
@@ -115,10 +138,10 @@
       <SimpleButton
         v-if="validate"
         text="Terminer l'histoire"
-        @click.native="onNext"
         :width="23"
         :y="92"
         :x="75"
+        @click.native="onNext"
       />
     </transition>
 
@@ -128,7 +151,8 @@
 
 <script>
 import SimpleText from "@/components/SimpleText";
-import Background from "@/assets/Quizz/background-quizz.svg";
+import Background from "@/assets/Quizz/Planche7-Quizzsimple-StyleIntegré-07.svg";
+// import Background from "@/assets/Quizz/background-quizz.svg";
 import TextTitle from "@/components/TextTitle";
 import QuizzButton from "@/components/QuizzButton";
 import SimpleButton from "@/components/SimpleButton";

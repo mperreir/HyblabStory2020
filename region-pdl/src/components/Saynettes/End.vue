@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import Background from "@/assets/Persos/background-perso.svg";
+import Background from "@/assets/End/bg-end.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
