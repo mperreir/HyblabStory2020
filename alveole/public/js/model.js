@@ -251,28 +251,27 @@ class ModelSlide2 extends Observable {
     }
   }
 
-  loadMicros(container) {
+  loadMicros(container, divs) {
 
     if (this.instanciated == false) {
 
-      Snap.load('data/micro_cravate.svg', function(data) {
-        let snap = Snap(container);
-        snap.append(data);
-        let children = snap.children();
-      });
       Snap.load('data/micro_canon.svg', function(data) {
-        let snap = Snap(container);
+        let snap = Snap(divs[0]);
         snap.append(data);
       });
-      Snap.load('data/plug.svg', function(data) {
-        let snap = Snap(container);
-        snap.append(data);
-      });
-      Snap.load('data/micro_chant.svg', function(data) {
-        let snap = Snap(container);
+      Snap.load('data/micro_reportage.svg', function(data) {
+        let snap = Snap(divs[1]);
         snap.append(data);
       });
       Snap.load('data/micro_XY.svg', function(data) {
+        let snap = Snap(divs[2]);
+        snap.append(data);
+      });
+      Snap.load('data/micro_cravate.svg', function(data) {
+        let snap = Snap(divs[3]);
+        snap.append(data);
+      });
+      Snap.load('data/plug.svg', function(data) {
         let snap = Snap(container);
         snap.append(data);
       });

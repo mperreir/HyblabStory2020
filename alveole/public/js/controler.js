@@ -375,9 +375,20 @@ class UpdateSlide2 extends Observer {
       container.setAttribute('id', 'slide2_micros');
       this.composant.appendChild(container);
 
-      let micros = observable.loadMicros(container);
+      let divs = [];
 
-      //observable.loadWires(micros);
+      for (let micro in observable.text['labels']){
+        let div = document.createElement('div');
+        div.className = 'micro';
+        container.appendChild(div);
+        let text_micro = document.createElement('div');
+        text_micro.className = 'micro_name';
+        text_micro.innerHTML = observable.text['labels'][micro];
+        div.appendChild(text_micro);
+        divs.push(div);
+      }
+
+      let micros = observable.loadMicros(container, divs);
 
     } else if (val == false) {
        this.composant.querySelector("#slide2_micros").remove();
