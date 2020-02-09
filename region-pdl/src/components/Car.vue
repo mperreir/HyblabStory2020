@@ -1,22 +1,33 @@
 <template>
   <div>
-    <CarSVG class="car-svg " :class="{rollingOut: rollingOut}"/>
+    <CarBodySVG class="car-svg " :class="{rollingOut: rollingOut}"/>
+    <!-- <CarGirlSVG v-if="getChatacterGender === 'mme'" class="car-svg " :class="{rollingOut: rollingOut}"/>
+    <CarBoySVG v-else class="car-svg " :class="{rollingOut: rollingOut}"/> -->
     <WheelSVG class="wheel left-wheel" :class="{moving: moving, rollingOutLeft: rollingOut}" />
     <WheelSVG class="wheel right-wheel" :class="{moving: moving, rollingOutRight: rollingOut}" />
   </div>
 </template>
 
 <script>
-import CarSVG from "@/assets/Car/car-body.svg";
+import { mapGetters } from "vuex";
+
+// import CarBoySVG from "@/assets/Car/car-boy.svg";
+// import CarGirlSVG from "@/assets/Car/car-girl.svg";
+import CarBodySVG from "@/assets/Car/car-body.svg";
 import WheelSVG from "@/assets/Car/wheel.svg";
 
 export default {
   components: {
     WheelSVG,
-    CarSVG
+    CarBodySVG,
+    // CarGirlSVG,
+    // CarBoySVG
   },
   props: ['moving', 'rollingOut'],
   data: () => ({}),
+  computed: {
+    ...mapGetters(["getChatacterGender"])
+  },
   methods: {}
 };
 </script>
