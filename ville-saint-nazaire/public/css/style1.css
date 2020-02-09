@@ -1,9 +1,12 @@
 #next2{
   background-color: inherit;
   position:absolute;
-  bottom: 8%;
-  left: 33%;
-  width: 34%;
+  bottom:8%;
+  padding: 0.5% 1%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #265983;
+  color: #265983;
 }
 #page-1{
   background-image: url('../img/background1.png');
