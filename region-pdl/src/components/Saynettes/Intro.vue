@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import Background from "@/assets/background-intro.svg";
+import Background from "@/assets/Home/background-home.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
