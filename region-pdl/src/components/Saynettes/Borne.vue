@@ -34,6 +34,8 @@
         @click.native="onNext"
       />
     </transition>
+
+    <TreeSVG class="tree-svg" />
   </div>
 </template>
 
@@ -41,6 +43,7 @@
 import { mapGetters } from "vuex";
 
 import Background from "@/assets/Borne/background-borne.svg";
+import TreeSVG from "@/assets/tree.svg";
 import SimpleText from "@/components/SimpleText";
 import TrainSVG from "@/assets/Borne/train.svg";
 import BoatSVG from "@/assets/boat.svg";
@@ -59,7 +62,8 @@ export default {
     Car,
     PlusButton,
     SimpleButton,
-    BorneSVG
+    BorneSVG,
+    TreeSVG
   },
   data: () => ({
     nextPressed: false,
@@ -200,6 +204,13 @@ export default {
   position: absolute;
   top: 70.5%;
   left: 73%;
+  width: 7%;
+}
+
+.tree-svg {
+  position: absolute;
+  top: 67.5%;
+  left: -1%;
   width: 7%;
 }
 </style>
