@@ -1,5 +1,4 @@
 #page10 {
-	background-image: url("../img/fond_slide10.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: Vibur;
@@ -38,6 +37,7 @@
 	-o-transform:scale(1.25); /* Opera */
 	transform:scale(1.25);
 	transition:0.5s;
+	z-index:400;
 }
 
 #slide10-img2 {

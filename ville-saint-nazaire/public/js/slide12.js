@@ -8,14 +8,14 @@ let initSlide12 = function(){
 
   d3.select('#next13').on('mouseover', function(){
       anime({
-          targets: '#next13-txt, #next13-img',
+          targets: '#next13-img',
           scale: 1.2
       });
   });
 
   d3.select('#next13').on('mouseout', function(){
       anime({
-          targets: '#next13-txt, #next13-img',
+          targets: '#next13-img',
           scale: 1
       });
   });
