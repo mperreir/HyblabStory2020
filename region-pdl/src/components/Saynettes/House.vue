@@ -40,14 +40,12 @@
       </transition>
     </div>
     <Slider class="slider" @input="onChange" />
-
     <PlusButton v-model="closePopover1" class="plus1" :width="30" @open="closePopover(1)">
       <p class="text">
         En 2018,
         <span class="data">1077 maisons</span> ont bénéficié de cette aide à l’isolation.
       </p>
     </PlusButton>
-
     <PlusButton v-model="closePopover2" class="plus2" :width="35" @open="closePopover(2)">
       <p v-if="getChatacterGender === 'm'">
         La maison de M. Moreau fait
@@ -60,7 +58,6 @@
         <span class="data">4000 euros</span> d’aides.
       </p>
     </PlusButton>
-
     <PlusButton
       v-show="indexHouse == '1'"
       v-model="closePopover3"

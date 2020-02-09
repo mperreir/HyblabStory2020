@@ -1,45 +1,23 @@
 <template>
   <div class="saynette">
-    <Background
-      class="svg"
-      style="display: hidden"
-    />
+    <Background class="svg" style="display: hidden" />
     <BackgroundLarge :class="{test: true, moved: carHasStarted}" />
-
     <div :class="{carStartProposal: true, carStartProposalFade: carHasStarted}">
-      <SimpleText
-        :style="{textAlign: 'center'}"
-        :x="15"
-        :y="15"
-        :width="70"
-      >
-        Sur le chemin du travail, {{ getChatacter }} observe de nombreux équipements pour la transition énergétique mis en place par la Région Pays de la Loire.
+      <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
+        Sur le chemin du travail, {{ getChatacter }} observe de nombreux équipements
+        pour la
+        <br />
+        <b>transition énergétique qui ont bénéficié d'un financement régional.</b>
       </SimpleText>
-      <TextTitle
-        :style="{textAlign: 'center'}"
-        :y="40"
-      >
-        Démarrer la voiture
-      </TextTitle>
-      <SwitchButton
-        :width="10"
-        :x="45"
-        :y="47"
-        @toggle="startCar"
-      />
+      <TextTitle :style="{textAlign: 'center'}" :y="40">Démarrer la voiture</TextTitle>
+      <SwitchButton :width="10" :x="45" :y="47" @toggle="startCar" />
     </div>
-
     <div v-show="carGoesOut">
-      <SimpleText
-        :style="{textAlign: 'center'}"
-        :x="15"
-        :y="15"
-        :width="70"
-      >
-        Pendant le trajet, {{ getChatacter }} s'aperçoit que la batterie de sa voitures est faible. Un passage aux bornes de rechargement s'impose.
+      <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
+        Pendant le trajet, {{ getChatacter }} s'aperçoit que la batterie de sa voiture est faible.
+        <br />Un passage aux bornes de rechargement s'impose.
       </SimpleText>
     </div>
-
     <transition name="nextButtonAppear">
       <SimpleButton
         v-if="outButton"
@@ -50,16 +28,12 @@
         @click.native="onNext"
       />
     </transition>
-
-    <Car
-      :moving="carHasStarted"
-      :rolling-out="carGoesOut"
-    />
+    <Car :moving="carHasStarted" :rolling-out="carGoesOut" />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 import Background from "@/assets/empty-background.svg";
 import BackgroundLarge from "@/assets/Car/fond_voiture_borne.svg";
@@ -68,8 +42,7 @@ import Car from "@/components/Car";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
-import {Howl, Howler} from 'howler';
-
+import { Howl, Howler } from "howler";
 
 export default {
   components: {
@@ -85,12 +58,10 @@ export default {
     carHasStarted: false,
     carGoesOut: false,
     outButton: false,
-    podcastSong: null,
+    podcastSong: null
   }),
   computed: {
-    ...mapGetters([
-      'getChatacter',
-    ])
+    ...mapGetters(["getChatacter"])
   },
   methods: {
     startCar() {
@@ -98,16 +69,18 @@ export default {
       this.podcastSong.play();
       setTimeout(() => {
         this.carGoesOut = true;
-        setTimeout(() => { this.outButton = true }, 5000)
-      }, 16000)
+        setTimeout(() => {
+          this.outButton = true;
+        }, 5000);
+      }, 16000);
     },
     onNext() {
-      this.$store.dispatch('nextScene', {});
+      this.$store.dispatch("nextScene", {});
     }
   },
   mounted() {
-    this.podcastSong =  new Howl({
-      src: ["sounds/podcast.wav"],
+    this.podcastSong = new Howl({
+      src: ["sounds/podcast.wav"]
     });
   }
 };
@@ -147,12 +120,11 @@ export default {
   left: 100%;
 }
 
-
-.nextButtonAppear-enter-active, .nextButtonAppear-leave-active {
-  transition: opacity .5s;
+.nextButtonAppear-enter-active,
+.nextButtonAppear-leave-active {
+  transition: opacity 0.5s;
 }
 .nextButtonAppear-enter, .nextButtonAppear-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-
 </style>
