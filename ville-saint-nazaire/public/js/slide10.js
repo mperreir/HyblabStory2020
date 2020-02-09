@@ -63,14 +63,14 @@ let initSlide10 = function(){
 
 	 d3.select('#slide10-suivant').on('mouseover', function(){
         anime({
-            targets: '#slide10-notesSuivantes, #slide10-btnSuivant',
+            targets: '#slide10-btnSuivant',
             scale: 1.1
         });
     });
 
     d3.select('#slide10-suivant').on('mouseout', function(){
         anime({
-            targets:  '#slide10-notesSuivantes, #slide10-btnSuivant',            
+            targets:  '#slide10-btnSuivant',
             scale: 1
         });
     });

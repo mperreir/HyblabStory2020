@@ -1,7 +1,6 @@
 let initSlide9 = function(){
 
   d3.select('#next10').on('click', function(){
-    console.log('10');
     moveDown();
     moveRight();
     initSlide10();
@@ -9,14 +8,14 @@ let initSlide9 = function(){
 
   d3.select('#next10').on('mouseover', function(){
       anime({
-          targets: '#next10-txt, #next10-img',
+          targets: '#next10-img',
           scale: 1.2
       });
   });
 
   d3.select('#next10').on('mouseout', function(){
       anime({
-          targets: '#next10-txt, #next10-img',
+          targets: '#next10-img',
           scale: 1
       });
   });

@@ -1,7 +1,6 @@
 
 #pagebravo{
 
-	background-image: url(img/background.png);
 	background-repeat: no-repeat;
 	background-size:cover;
 
@@ -55,16 +54,17 @@
 
 
 #nextbravo-img{
-     position: absolute;
-     width: 4%;
-     left : 57%;
-     top : 90%;
+    position: absolute;
+    top: 89%;
+    width: 4%;
+    left: 60%;
  }
 #nextbravo-texte{
     position: absolute;
-    left : 64%;
-    top : 91%;
-    font-family: Vibur;
+    left: 66%;
+    top: 89%;
+    padding-top: 0.7%;
+    font-family: "Vibur";
     color: #92C2D2;
 }
 

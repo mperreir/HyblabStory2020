@@ -160,8 +160,8 @@ let initSlide4 = function(){
 		var date = document.querySelector('.annee');
 		// On affiche les choix
     	choix1.style.visibility = "visible";
-    	choix2.style.visibility = "visible";
-    	choix3.style.visibility = "visible";
+		choix2.style.visibility = "visible";
+		choix3.style.visibility = "visible";
     	// On cache les éléments du dialogue précédent
     	date.style.visibility = "hidden";
     	imgHdv1.style.visibility = "hidden";
@@ -175,14 +175,14 @@ let initSlide4 = function(){
 	// Animations bouton
 	d3.select('#slide4-suivant').on('mouseover', function(){
         anime({
-            targets: '#slide4-notesSuivantes, #slide4-btnSuivant',
+            targets: '#slide4-btnSuivant',
             scale: 1.1
         });
     });
 
     d3.select('#slide4-suivant').on('mouseout', function(){
         anime({
-            targets:  '#slide4-notesSuivantes, #slide4-btnSuivant',            
+            targets:  '#slide4-btnSuivant',
             scale: 1
         });
     });
