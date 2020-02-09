@@ -1,0 +1,80 @@
+#page-3{
+    position: relative;
+}
+
+#cartes{
+    position: absolute;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+}
+
+.carte{
+    position: absolute;
+    opacity: 0;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+}
+
+#carte1905{
+    opacity:1;
+}
+
+/* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+form{
+    position : relative;
+    z-index: 10;
+    right:0%;
+    width:12%;
+    float:right;
+}
+
+form>label{
+    vertical-align:middle;
+    font-family: Vibur;
+    color: #265984;
+}
+
+.next4{
+    visibility:hidden;
+    cursor:pointer;
+}
+#next4-img{
+    position: absolute;
+    width: 4%;
+    left : 76%;
+    top : 90%;
+    visibility:hidden;
+}
+#next4-texte{
+    position: absolute;
+    left : 82%;
+    top : 91%;
+    font-family: Vibur;
+    color: #92C2D2;
+    visibility:hidden;
+}
+
+@media screen and (max-aspect-ratio: 16/9){
+    label, #next4-texte{
+        font-size: 2vw;
+    }
+}
+@media screen and (min-aspect-ratio: 16/9){
+    label, #next4-texte{
+        font-size: 3.4vh;
+    }
+}
