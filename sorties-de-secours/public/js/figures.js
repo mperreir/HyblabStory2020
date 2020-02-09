@@ -20,6 +20,7 @@ $(document).ready(function() {
 
             // let modulo = numberRange;
             let dataFigure = json['figures'][rangeId];
+            console.log(rangeId);
             let nb =  json['figures'][rangeId]['number'];
             let des =  json['figures'][rangeId]['description'];
             let item =  json['figures'][rangeId]['item'];
