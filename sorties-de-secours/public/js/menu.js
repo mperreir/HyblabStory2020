@@ -30,9 +30,12 @@ $(document).ready(function() {
         mouseAnimatedMusic.classList.add('fadeInUp');
         mouseAnimatedDance.classList.remove('fadeOut');
         mouseAnimatedDance.classList.add('fadeInUp');
-
-        canScroll = true;
       }, 5000);
+
+      setTimeout(function() {
+        canScroll = true;
+      }, 2500);
+
       $(window).scroll(function(e) {
         if (!canScroll) {
           $('html, body').stop().animate({
@@ -53,7 +56,7 @@ $(document).ready(function() {
 
           switch(expId) {
             case "expChoiceMusique":
-            top = $('#music-workshop-section').offset().top;
+            top = $('#music-section').offset().top;
             break;
             case "expChoiceDance":
             top = $('#dance-section').offset().top;
@@ -91,16 +94,11 @@ $(document).ready(function() {
                     $("#img-dancers-3").css("opacity", "1");
                     mouseAnimatedDance.addEventListener('animationend', function() { endAnimationDance = true; });
                     if(endAnimationDance) {
-                      this.scrollLeft -= (delta * 10);
+                      initArticle('dance');
                     }
                   }
                   //e.preventDefault();
                 });
-
-              } else if (expId === "expChoiceExpo") {
-
-                initArticle('expo');
-
               }
 
             });
