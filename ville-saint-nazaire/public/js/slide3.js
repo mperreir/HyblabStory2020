@@ -19,6 +19,15 @@ function fadeIn(id){
   //l'image
   let image = document.getElementById("carte" + id);
   image.style.opacity = "1";
+  var texte1=document.getElementById("premierTexte");
+  var texte2=document.getElementById("deuxiemeTexte");
+  if(id<1944){
+    texte1.style.opacity = "1";
+    texte2.style.opacity = "0";
+  } else {
+    texte1.style.opacity = "0";
+    texte2.style.opacity = "1";
+  }
   if (id=="1957"){
     var suiteTexte = document.getElementById("next4-texte");
     var suiteImage = document.getElementById("next4-img");
@@ -40,10 +49,6 @@ function fadeOut(id){
 
 let initSlide3 = function(){
   initForm();
-  /*d3.select('#next4').on('click', function(){
-    moveRight();
-    initSlide4();
-  });*/
   d3.select('#next4').on('click', function(){
     moveRight();
     initSlide4();
@@ -51,7 +56,7 @@ let initSlide3 = function(){
 
   d3.select('#next4').on('mouseover', function(){
       anime({
-          targets: '#next4-texte, #next4-img',
+          targets: '##next4-img',
           scale: 1.2
       });
   });
@@ -59,7 +64,7 @@ let initSlide3 = function(){
   
   d3.select('#next4').on('mouseout', function(){
       anime({
-          targets: '#next4-texte, #next4-img',
+          targets: '#next4-img',
           scale: 1
       });
   });
