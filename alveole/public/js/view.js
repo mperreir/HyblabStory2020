@@ -26,11 +26,13 @@ class ViewFooter {
     this.div = document.createElement('div');
     this.div.setAttribute('id', 'footer_ellipse');
 
+    this.text = document.createElement('div');
+    this.text.setAttribute('id', 'footer_text');
+
+    this.div.appendChild(this.text);
     footer.appendChild(this.div);
 
     Snap.load('data/footer_ellipse.svg', function(data) {
-
-      // Adding the ellipse to the div
       let snap = Snap('#footer_ellipse');
       snap.append(data);
     });

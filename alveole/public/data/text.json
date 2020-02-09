@@ -1,6 +1,10 @@
 {
   "introSlide": {
-    "speech": "Vous vous apprêtez à expérimenter la réalisation d’un podcast, du brief à la restitution. Entrez dans l’univers d’Alvéole Média et découvrez leur expertise. Mettez vous dans la peau d’un gérant d’hôtel et testez vos connaissance sur les podcasts !"
+    "speech": "Vous vous apprêtez à expérimenter la réalisation d’un podcast, du brief à la restitution. Entrez dans l’univers d’Alvéole Média et découvrez leur expertise. Mettez vous dans la peau d’un gérant d’hôtel et testez vos connaissance sur les podcasts !",
+    "page": {
+      "up": "Brief",
+      "down": "durée totale<br>de la réalisation"
+    }
   },
   "slide1": {
     "title": "Lieu",

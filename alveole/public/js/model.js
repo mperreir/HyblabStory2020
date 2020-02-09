@@ -22,6 +22,8 @@ class ModelSlide extends Observable {
   // Model value
   obj;
   value;
+  current_text;
+  text;
 
   constructor() {
     super();
@@ -77,26 +79,14 @@ class ModelSlide extends Observable {
     }
   }
 
-  getFooterValues() {
-    let footValues = {
-      "1": null,
-      "2": null,
-      "3": null
+  setFooterText(val) {
+    if (this.current_text != val) {
+      this.current_text = val;
     }
+  }
 
-    if (this.value != undefined) {
-      if (this.value == 0) {
-        // if first slide return empty object
-      } else if (this.value == this.obj.length - 1) {
-        footValues[1] = this.obj[this.value - 1];
-        footValues[2] = this.obj[this.value];
-      } else {
-        footValues[1] = this.obj[this.value - 1];
-        footValues[2] = this.obj[this.value];
-        footValues[3] = this.obj[this.value + 1];
-      }
-    }
-    return footValues;
+  getFooterText() {
+    return this.current_text;
   }
 }
 
