@@ -51,7 +51,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import CompanySVG from "@/assets/Company/FOND ENTREPRISE-01.svg";
+import CompanySVG from "@/assets/Company/background-company.svg";
 import PlusButton from "@/components/PlusButton";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
