@@ -31,26 +31,31 @@
 }
 #view4 #view-4-middle #view-4-chart-container #view-4-flex-container {
   display: flex;
-  flex: 3;
+  flex: 4;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: stretch;
 }
 #view4 #view-4-middle #view-4-chart-container #view-4-flex-container p {
   font-family: Nunito;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 30px;
   line-height: 29px;
   color: #426262;
+  align-self: center;
 }
 #view4 #view-4-middle #view-4-chart-container #view-4-flex-container span {
   color: #cb563e;
 }
 #view4 #view-4-middle #view-4-chart-container #view-4-flex-container #view-4-free-rect {
-  flex-grow: 2;
+  height: 70%;
   background-color: #CB563E;
   margin-right: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
@@ -70,6 +75,7 @@
   margin-left: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
@@ -87,11 +93,20 @@
   z-index: 7;
   flex: 1;
   margin: 5vh 5vw 5vh 0;
+  transform: translateY(-25%);
 }
 #view4 #view-4-middle article p {
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
+  line-height: 29px;
+  color: #426262;
+}
+#view4 #view-4-middle article cite {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 12px;
   line-height: 29px;
   color: #426262;
 }

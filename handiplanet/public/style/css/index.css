@@ -59,6 +59,7 @@ a {
   line-height: 30px;
 }
 #home-view #home-text-right p {
+  font-size: medium;
   margin: 0px;
 }
 #home-view #home-sound {
@@ -75,6 +76,7 @@ a {
 }
 #home-view #home-sound > div p {
   margin: auto 0px;
+  font-size: medium;
 }
 #home-view #home-sound button img {
   width: 45px;
