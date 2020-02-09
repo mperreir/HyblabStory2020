@@ -6,5 +6,7 @@ window.onload = function(){
   superControler = new SuperControler(modelSlide);
 
   // Initialization
-  modelSlide.setValue(0); // Do not remove, important
+  // modelSlide.initialize();
+  superControler.loadSlideMediator().then(() => modelSlide.setValue(0)); // Do not remove, important
+
 }

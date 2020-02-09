@@ -8,8 +8,7 @@ class SuperControler {
 
     // Footer
     var viewFooter = new ViewFooter();
-    let updateFooter = new UpdateFooter(viewFooter.div);
-    modelSlides.addObservers(updateFooter);
+    let updateFooter = new UpdateFooter(viewFooter);
 
     // Center
     var viewCenter = new ViewCenter();
@@ -31,8 +30,6 @@ class SuperControler {
 
     // ModelPopup
     let modelPopup = new ModelPopup();
-    // let updatePopup = new UpdatePopup(viewModal, modelSlides);
-    // modelPopup.addObservers(updatePopup);
 
     // ModelSlide0
     let modelIntroSlide = new ModelIntroSlide();
@@ -66,17 +63,17 @@ class SuperControler {
 
     // ModelSlide6
     let modelSlide6 = new ModelSlide6();
-    let updateSlide6 = new UpdateSlide6(viewCenter.div);
+    let updateSlide6 = new UpdateSlide6(modelPopup, viewCenter);
     modelSlide6.addObservers(updateSlide6);
 
     // ModelSlide7
     let modelSlide7 = new ModelSlide7();
-    let updateSlide7 = new UpdateSlide7(viewCenter.div);
+    let updateSlide7 = new UpdateSlide7(modelPopup, modelSlides, viewCenter);
     modelSlide7.addObservers(updateSlide7);
 
     // ModelSlide8
     let modelSlide8 = new ModelSlide8();
-    let updateSlide8 = new UpdateSlide8();
+    let updateSlide8 = new UpdateSlide8(viewCenter);
     modelSlide8.addObservers(updateSlide8);
 
     // ModelLastSlide
@@ -85,7 +82,7 @@ class SuperControler {
     modelLastSlide.addObservers(updateLastSlide);
 
     // Mediator of slide model
-    let mediatorSlide = new MediatorSlide(  modelSlides,
+    this.mediatorSlide = new MediatorSlide(  modelSlides,
                                             modelIntroSlide,
                                             modelSlide1,
                                             modelSlide2,
@@ -98,7 +95,8 @@ class SuperControler {
                                             modelLastSlide,
                                             viewCenter
                                           );
-    modelSlides.addObservers(mediatorSlide);
+    modelSlides.addObservers(this.mediatorSlide);
+    modelSlides.addObservers(updateFooter);
 
     let mediatorModal = new MediatorModal(  modelSlides,
                                             modelIntroSlide,
@@ -142,11 +140,16 @@ class SuperControler {
       modelPopup.setValue(false);
     });
   }
+
+  loadSlideMediator() {
+    return this.mediatorSlide.loadText();
+  }
+
 }
 
 class MediatorSlide extends Observer {
 
-  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewCenter) {
+   constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewCenter) {
 
     super();
 
@@ -163,8 +166,9 @@ class MediatorSlide extends Observer {
       "9": modelLastSlide
     };
 
-    this.loadText(this.slides);
+    // this.loadText();
     this.composant = viewCenter;
+    this.modelSlides = modelSlides;
   }
 
   update(observable, object) {
@@ -183,21 +187,20 @@ class MediatorSlide extends Observer {
         } else if (i == 0) {
           this.composant.question.innerHTML = "";
           this.composant.speech.innerHTML = "";
+          this.modelSlides.setFooterText(model.text.page);
         }
       } else {
-        console.log('err : unhandled value (mediator slide controler)')
+        console.log('err : unhandled value (mediator slide controler)');
       }
     }
   }
 
-  loadText(slides) {
-    $.getJSON("data/text.json", function(data) {
-
+  loadText() {
+    return fetchJSON("data/text.json").then( (data) => {
       const entries = Object.entries(data);
       let count = 0;
-
       for (const [i, text] of entries) {
-        slides[count].text = text;
+        this.slides[count].text = text;
         count++;
       }
     });
@@ -311,20 +314,18 @@ class MediatorConclusion extends Observer {
 
 class UpdateFooter extends Observer {
 
-  constructor(div, svg) {
+  constructor(composant) {
     super();
-    this.div = div;
-    this.svg = svg;
+    this.composant = composant;
   }
 
   update(observable, object) {
     let val = observable.getValue();
-    if (val == 0 || val == observable.obj.length - 1) {
-      this.div.style.visibility = 'hidden';
-    } else if (val > 0 || val < observable.obj.length - 1) {
-      this.div.style.visibility = 'visible';
-      let titles = Object.values(observable.getFooterValues()).toString();
-      document.getElementById('footer_titles').textContent = titles;
+    if (val == observable.obj.length - 1) {
+      this.composant.div.style.visibility = 'hidden';
+    } else if (val >= 0 || val < observable.obj.length - 1) {
+      this.composant.div.style.visibility = 'visible';
+      this.composant.text.innerHTML = observable.getFooterText()["down"];
     } else {
       console.log("err : value not handled (updateFooter observer)");
     }
@@ -341,9 +342,9 @@ class UpdateHeader extends Observer {
 
   update(observable, object) {
     let val = observable.getValue();
-    if (val == 0 || val == observable.obj.length - 1) {
+    if (val == observable.obj.length - 1) {
       this.composant.style.visibility = 'hidden';
-    } else if (val > 0 || val < observable.obj.length - 1) {
+    } else if (val >= 0 || val < observable.obj.length - 1) {
       this.composant.style.visibility = 'visible';
     } else {
       console.log("err : value not handled (updateFooter observer)");
@@ -380,14 +381,14 @@ class UpdateSlide1 extends Observer {
       hotelDiv.setAttribute('class', 'onClick');
 
       let hotelText = document.createElement('div');
-      hotelText.setAttribute('class', 'slide1Label');
+      hotelText.setAttribute('class', 'slide1Label unselectable');
 
       let studioDiv = document.createElement('div');
       studioDiv.setAttribute('id', 'studio');
       studioDiv.setAttribute('class', 'onClick');
 
       let studioText = document.createElement('div');
-      studioText.setAttribute('class', 'slide1Label');
+      studioText.setAttribute('class', 'slide1Label unselectable');
 
       hotelDiv.appendChild(hotelText);
       studioDiv.appendChild(studioText);
@@ -495,14 +496,14 @@ class UpdateSlide3 extends Observer {
       bouche1.setAttribute('id', 'bouche1');
       bouche1.setAttribute('class', 'onClick');
       let bouche1Text = document.createElement('div');
-      bouche1Text.setAttribute('class', 'slide3Label');
+      bouche1Text.setAttribute('class', 'slide3Label unselectable');
       bouche1.appendChild(bouche1Text);
 
       let bouche2 = document.createElement('div');
       bouche2.setAttribute('id', 'bouche2');
       bouche2.setAttribute('class', 'onClick');
       let bouche2Text = document.createElement('div');
-      bouche2Text.setAttribute('class', 'slide3Label');
+      bouche2Text.setAttribute('class', 'slide3Label unselectable');
       bouche2.appendChild(bouche2Text);
 
       container.appendChild(bouche1);
@@ -564,6 +565,7 @@ class UpdateSlide4 extends Observer {
 
       let div_valide_text = document.createElement('div');
       div_valide_text.setAttribute('id','slide4_valide_text');
+      div_valide_text.setAttribute('class', 'unselectable');
       container.appendChild(div_valide_text);
       div_valide_text.innerHTML = 'valider';
 
@@ -581,7 +583,7 @@ class UpdateSlide4 extends Observer {
         etape.appendChild(div_checkbox);
 
         let text = document.createElement('div');
-        text.setAttribute('class', 'slide4Label');
+        text.setAttribute('class', 'slide4Label unselectable');
         text.innerHTML = observable.text.labels[i];
         etape.appendChild(text);
 
@@ -633,11 +635,10 @@ class UpdateSlide5 extends Observer {
       for (let i = 1; i < 4; i++) {
         let label = document.createElement('div');
         label.setAttribute('id', 'slide5_' + i + '_label');
-        label.setAttribute('class', 'slide5Label');
+        label.setAttribute('class', 'slide5Label unselectable');
         label.innerHTML = observable.text.labels[i];
         container.appendChild(label);
       }
-
     } else if (val == false) {
       this.composant.div.querySelector('#slide5_derush').remove();
     }
@@ -646,8 +647,9 @@ class UpdateSlide5 extends Observer {
 
 class UpdateSlide6 extends Observer {
 
-  constructor(composant) {
+  constructor(model, composant) {
     super();
+    this.model = model;
     this.composant = composant;
   }
 
@@ -658,13 +660,15 @@ class UpdateSlide6 extends Observer {
 
       let container = document.createElement('div');
       container.setAttribute('id', 'slide6_mixtable');
-      this.composant.appendChild(container);
+      this.composant.div.appendChild(container);
 
       let micros = observable.loadMixTable(container);
 
     } else if (val == false) {
-       this.composant.querySelector("#slide6_mixtable").remove();
+       this.composant.div.querySelector("#slide6_mixtable").remove();
        observable.setDestroyed();
+    } else {
+      console.log('err : unhandled slide 6 value');
     }
   }
 }
@@ -673,22 +677,77 @@ class UpdateSlide6 extends Observer {
 
 class UpdateSlide7 extends Observer {
 
-  constructor() {
+  constructor(model, slides, composant) {
     super();
+    this.model = model;
+    this.slides = slides;
+    this.composant = composant;
   }
 
   update(observable, object) {
+    let val = observable.getValue();
 
+    if (val == true) {
+
+      let container = document.createElement('div');
+      container.setAttribute('id', 'slide7_choice');
+      this.composant.div.appendChild(container);
+
+      let divs = {};
+
+      for (let i = 1; i < 3; i++) {
+        let div = document.createElement('div');
+        div.setAttribute('id', 'slide7_' + i + '_choice');
+        let label = document.createElement('div');
+        label.setAttribute('class', 'slide7Label unselectable');
+
+        label.innerHTML = observable.text.labels[i];
+
+        div.appendChild(label);
+        container.appendChild(div);
+        divs[i] = div;
+      }
+
+      let animations = observable.getAnimations(divs);
+
+      animations[1].addEventListener('DOMLoaded', () => {
+        document.getElementById('slide7_ondes').addEventListener('click', () => {
+          this.slides.setValue(9);
+        })
+      });
+      animations[2].addEventListener('DOMLoaded', () => {
+        document.getElementById('slide7_casque').addEventListener('click', () => {
+          this.model.setValue(true);
+        })
+      });
+
+    } else if (val == false) {
+      observable.setDestroyed();
+      this.composant.div.querySelector('#slide7_choice').remove();
+    } else {
+      console.log('err : unhandled slide 7 value');
+    }
   }
 }
 
 class UpdateSlide8 extends Observer {
 
-  constructor() {
+  constructor(model, composant) {
     super();
+    this.model = model;
+    this.composant = composant;
   }
 
   update(observable, object) {
+    let val = observable.getValue();
+
+    if (val == true) {
+
+    } else if (val == false) {
+
+    } else {
+      console.log('err : unhandled slide 8 value');
+    }
   }
 }
 
