@@ -1,102 +1,65 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
-    <SimpleText
-      :y="15"
-      :x="15"
-      :width="70"
-      :style="{textAlign: 'center'}"
-    >
-      <p v-if="getChatacterGender === 'mme'">
-        Il y a peu, Mme Dubois a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison.
-        <br>Cette  rénovation rendue possible grâce aux aides de la Région, a permis à Mme Dubois de faire des économies d’énergie et de participer à la transition écologique de la région.
-      </p>
-      <p v-if="getChatacterGender === 'm'">
-        Il y a peu, M. Moreau a fait appel à la Région afin d’obtenir des aides pour refaire l’isolation de sa maison. <br>
-        Cette  rénovation rendue possible grâce aux aides de la Région, a permis à M. Moreau de faire des économies d’énergie et de participer à la transition écologique de la région.
-      </p>
+    <SimpleText :y="15" :x="15" :width="70" :style="{textAlign: 'center'}">
+      <span v-if="getChatacterGender === 'mme'">
+        Il y a peu, Mme Dubois a fait appel à la Région afin
+        <b>d’obtenir des aides pour améliorer l’isolation</b> de sa maison.
+        Cette rénovation, rendue possible
+        <b>grâce aux aides de la Région</b>, a permis à Mme Dubois
+        <br />de faire des
+        <b>économies d’énergie</b> et de participer à la transition écologique de la région.
+      </span>
+      <span v-if="getChatacterGender === 'm'">
+        Il y a peu, M. Moreau a fait appel à la Région afin
+        <b>d’obtenir des aides pour améliorer l’isolation</b> de sa maison.
+        Cette rénovation, rendue possible
+        <b>grâce aux aides de la Région</b>, a permis à M. Moreau
+        <br />de faire des
+        <b>économies d’énergie</b> et de participer à la transition écologique de la région.
+      </span>
     </SimpleText>
     <transition name="bounce">
-      <LittleHouse
-        v-show="indexHouse == 1"
-        class="little"
-      />
+      <LittleHouse v-show="indexHouse == 1" class="little" />
     </transition>
     <transition name="bounce">
-      <MediumHouse
-        v-show="indexHouse == 2"
-        class="medium"
-      />
+      <MediumHouse v-show="indexHouse == 2" class="medium" />
     </transition>
     <transition name="bounce">
-      <BigHouse
-        v-show="indexHouse == 3"
-        class="big"
-      />
+      <BigHouse v-show="indexHouse == 3" class="big" />
     </transition>
     <div class="size">
       <transition name="bounce">
-        <p
-          v-show="indexHouse == 1"
-          class="text"
-        >
-          {{ 50 * indexHouse }}m²
-        </p>
+        <p v-show="indexHouse == 1" class="text">{{ 50 * indexHouse }}m²</p>
       </transition>
       <transition name="bounce">
-        <p
-          v-show="indexHouse == 2"
-          class="text"
-        >
-          {{ 50 * indexHouse }}m²
-        </p>
+        <p v-show="indexHouse == 2" class="text">{{ 50 * indexHouse }}m²</p>
       </transition>
       <transition name="bounce">
-        <p
-          v-show="indexHouse == 3"
-          class="text"
-        >
-          {{ 50 * indexHouse }}m²
-        </p>
+        <p v-show="indexHouse == 3" class="text">{{ 50 * indexHouse }}m²</p>
       </transition>
     </div>
-    <Slider
-      class="slider"
-      @input="onChange"
-    />
+    <Slider class="slider" @input="onChange" />
 
-
-    <PlusButton
-      v-model="closePopover1"
-      class="plus1"
-      :width="30"
-      @open="closePopover(1)"
-    >
+    <PlusButton v-model="closePopover1" class="plus1" :width="30" @open="closePopover(1)">
       <p class="text">
-        En 2018, <span class="data"> 1077 maisons </span> ont bénéficié de cette aide à l’isolation.
+        En 2018,
+        <span class="data">1077 maisons</span> ont bénéficié de cette aide à l’isolation.
       </p>
     </PlusButton>
 
-
-
-
-    <PlusButton
-      v-model="closePopover2"
-      class="plus2"
-      :width="35"
-      @open="closePopover(2)"
-    >
+    <PlusButton v-model="closePopover2" class="plus2" :width="35" @open="closePopover(2)">
       <p v-if="getChatacterGender === 'm'">
-        La maison de M. Moreau  fait <span class="data"> 50 m².
-        </span> Il a eu le droit à <span class="data">4000 euros </span> d’aides.
+        La maison de M. Moreau fait
+        <span class="data">50 m².</span> Il a eu le droit à
+        <span class="data">4000 euros</span> d’aides.
       </p>
       <p v-if="getChatacterGender === 'mme'">
-        La maison de Mme Dubois fait <span class="data"> 150 m².
-        </span> Elle a eu le droit à <span class="data">4000 euros</span> d’aides.
+        La maison de Mme Dubois fait
+        <span class="data">150 m².</span> Elle a eu le droit à
+        <span class="data">4000 euros</span> d’aides.
       </p>
     </PlusButton>
-
-
 
     <PlusButton
       v-show="indexHouse == '1'"
@@ -106,8 +69,10 @@
       @open="closePopover(3)"
     >
       <p>
-        Pour une maison de <span class="data"> 50 m². </span>
-        Le gain moyen sur la consommation est de <span class="data">58 % </span> après les travaux.
+        Pour une maison de
+        <span class="data">50 m².</span>
+        Le gain moyen sur la consommation est de
+        <span class="data">58 %</span> après les travaux.
       </p>
     </PlusButton>
     <PlusButton
@@ -118,8 +83,10 @@
       @open="closePopover(4)"
     >
       <p>
-        Pour une maison de <span class="data"> 100 m². </span>
-        Le gain moyen sur la consommation est de <span class="data">51 % </span> après les travaux.
+        Pour une maison de
+        <span class="data">100 m².</span>
+        Le gain moyen sur la consommation est de
+        <span class="data">51 %</span> après les travaux.
       </p>
     </PlusButton>
     <PlusButton
@@ -130,8 +97,10 @@
       @open="closePopover(5)"
     >
       <p>
-        Pour une maison de <span class="data"> 150 m². </span>
-        Le gain moyen sur la consommation est de <span class="data">53 % </span> après les travaux.
+        Pour une maison de
+        <span class="data">150 m².</span>
+        Le gain moyen sur la consommation est de
+        <span class="data">53 %</span> après les travaux.
       </p>
     </PlusButton>
     <SimpleButton
@@ -141,12 +110,11 @@
       :y="90"
       :x="75"
     />
-
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 import Background from "@/assets/House/background-house.svg";
 import LittleHouse from "@/assets/House/little-house.svg";
@@ -155,7 +123,7 @@ import BigHouse from "@/assets/House/big-house.svg";
 import Slider from "@/components/Slider.vue";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
-import PlusButton from "@/components/PlusButton"
+import PlusButton from "@/components/PlusButton";
 
 export default {
   name: "House",
@@ -167,30 +135,27 @@ export default {
     Slider,
     SimpleText,
     SimpleButton,
-    PlusButton,
-
+    PlusButton
   },
   data: () => ({
     indexHouse: 1,
     closePopover1: false,
     closePopover2: false,
-    closePopover3:false,
-    closePopover4:false,
-    closePopover5:false,
-    fakeName:'moreau'
+    closePopover3: false,
+    closePopover4: false,
+    closePopover5: false,
+    fakeName: "moreau"
   }),
   computed: {
-    ...mapGetters([
-      'getChatacterGender'
-    ])
+    ...mapGetters(["getChatacterGender"])
   },
   methods: {
     onChange(value) {
       this.indexHouse = value;
     },
     onNextCar() {
-            this.$store.dispatch("nextScene", {});
-        },
+      this.$store.dispatch("nextScene", {});
+    },
 
     closePopover(i) {
       switch (i) {
@@ -349,6 +314,6 @@ export default {
 }
 
 .data {
-  color:red;
+  color: red;
 }
 </style>
