@@ -96,7 +96,6 @@ export default {
   transition: opacity 3s cubic-bezier(0.6, 0.65, 0, 1);
 }
 
-
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
