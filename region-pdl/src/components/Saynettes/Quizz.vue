@@ -146,12 +146,17 @@
     </transition>
 
     <Background class="svg" />
+    <RoadSVG v-if="getChatacterGender === 'mme'" class="road-svg" />
+
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 import SimpleText from "@/components/SimpleText";
 import Background from "@/assets/Quizz/bg-quizz.svg";
+import RoadSVG from "@/assets/road.svg";
 import TextTitle from "@/components/TextTitle";
 import QuizzButton from "@/components/QuizzButton";
 import SimpleButton from "@/components/SimpleButton";
@@ -163,7 +168,11 @@ export default {
     SimpleText,
     TextTitle,
     QuizzButton,
-    SimpleButton
+    SimpleButton,
+    RoadSVG
+  },
+  computed: {
+    ...mapGetters(["getChatacterGender"])
   },
   data: () => ({
     //Handle if answer is true or not
@@ -293,5 +302,12 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+.road-svg {
+  position: absolute;
+  left: 0.5%;
+  width: 7%;
+  top: 92.5%;
 }
 </style>
