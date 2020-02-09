@@ -38,6 +38,7 @@
 	-o-transform:scale(1.25); /* Opera */
 	transform:scale(1.25);
 	transition:0.5s;
+	z-index:2;
 
 }
 
@@ -142,7 +143,6 @@
 	position: absolute;
 	top: 89%;
 	width: 4%;
-	/*height: 5%;*/
 	left: 60%;
 	visibility: hidden;
 }
