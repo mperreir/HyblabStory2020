@@ -4,11 +4,12 @@ $(document).ready(function() {
 
     var menuFixed = false;
     var $exp_selected = undefined;
-    var canScroll = false;
     var countScroll = 0;
     let isExperience = true;
 
     $(".expChoice").click(function() {
+        var canScroll = false;
+
         // bodyScrollLock.enableBodyScroll(menuSection); // enable to avoid mousewheel event
 
         $(".expChoice").addClass('expChoiceHidden');
@@ -42,7 +43,7 @@ $(document).ready(function() {
 
                 switch(expId) {
                     case "expChoiceMusique":
-                        top = $('#music-workshop-section').offset().top;
+                        top = $('#music-section').offset().top;
                         break;
                     case "expChoiceDance":
                         top = $('#dance-section').offset().top;
@@ -74,14 +75,18 @@ $(document).ready(function() {
                             $('#dance-section').on('mousewheel', function(e, delta) {
                                 if(!isExperience) {
                                     $("#img-dancers-2").css("opacity", "1");
-                                    /*this.scrollLeft -= (delta * 60);*/
+                                    // this.scrollLeft += (delta * 60);
+
+                                    initArticle('dance');
                                 }
                                 //e.preventDefault();
                             });
 
                         } else if (expId === "expChoiceExpo") {
 
-                            initArticle('expo');
+                        } else if (expId === "expChoiceMusique") {
+
+                            initArticle('music');
 
                         }
 
