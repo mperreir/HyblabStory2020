@@ -138,7 +138,7 @@ export default {
 .boat {
   position: absolute;
   width: 8%;
-  left: 11%;
+  left: 15%;
   top: 66%;
   -webkit-animation: float 25s linear infinite alternate;
   -moz-animation: float 25s linear infinite alternate;
