@@ -41,7 +41,7 @@
     "type": "drag",
     "labels": {
       "1": "micro-canon<br>directionnel",
-      "2": "micro de reportage<br>md21-u",
+      "2": "micro de<br>reportage md21-u",
       "3": "micro couple<br>xy: ambiance",
       "4": "micro-lavalier"
     },
@@ -50,7 +50,8 @@
         "main": "Il n’y a pas de bonne réponse quant au choix du micro.",
         "sub": "En effet, il dépend du lieu ou encore des conditions de tournage."
       }
-    }
+    },
+    "plug": "Branchez ici<br>et cliquez sur le micro<br>de votre choix"
   },
   "slide3": {
     "title": "voix-off",
