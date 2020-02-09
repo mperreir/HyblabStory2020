@@ -42,7 +42,7 @@ import Car from "@/components/Car";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
-import { Howl, Howler } from "howler";
+import { Howl } from "howler";
 
 export default {
   components: {
