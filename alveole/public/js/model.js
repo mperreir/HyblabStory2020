@@ -265,6 +265,7 @@ class ModelSlide2 extends Observable {
         let snap = Snap(container);
         snap.append(data);
       });
+      
       this.instanciated = true;
     }
     else {

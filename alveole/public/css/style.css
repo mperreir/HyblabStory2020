@@ -127,6 +127,7 @@ footer {
   position: relative;
   width: 50px;
   height: 30px;
+  z-index: 11;
 }
 
 #center {
@@ -178,45 +179,81 @@ footer {
 
 #slide2_micros {
   position: absolute;
-  height: 80%;
+  height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 
 .micro {
-  transform: scale(0.5);
-  height: 100%;
-  width: 20%;
-
-}
-
-.micro_name {
-  transform: scale(0.5);
-}
-
-#slide2_micros>*:nth-child(1) {
-}
-
-#slide2_micros>*:nth-child(2) {
-}
-
-#slide2_micros>*:nth-child(3) {
-}
-
-#slide2_micros>*:nth-child(4) {
-}
-
-#slide2_micros>*:nth-child(5) {
   position: absolute;
-  align-self: center;
+  height: 40%;
+  width: 20%;
+  z-index: 1;
 }
 
-.slide2 {
-  height: 50%;
-  width: 50%;
+.slide2Label {
+  position: absolute;
+  top: 0;
+  height: 30%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+#slide2_1_micro {
+  position: absolute;
+  left: -10%;
+  top: 70%;
+}
+
+#svg_micro-canon {
+  position: absolute;
+  top: 30%;
+  height: 40%;
+  width: 100%;
+}
+
+#slide2_2_micro {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+#svg_micro-reportage {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 30%;
+}
+
+#slide2_3_micro {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+}
+
+#svg_micro-couple {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 30%;
+}
+
+#slide2_4_micro {
+  position: absolute;
+  right: -10%;
+  top: 70%;
+}
+
+#svg_micro-cravate {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 20%;
 }
 
 .slide2 .st0 {
@@ -231,6 +268,36 @@ footer {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
+}
+
+#slide2_plug {
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  width: 30%;
+  height: 20%;
+}
+
+#svg_plug {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  left: 35%;
+  height: 40%;
+}
+
+#slide2_plugLabel {
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+  color: #9E90F2;
 }
 
 #slide3_mixtable {

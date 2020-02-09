@@ -43,7 +43,7 @@ class SuperControler {
 
     // ModelSlide2
     let modelSlide2 = new ModelSlide2();
-    let updateSlide2 = new UpdateSlide2(viewCenter.div);
+    let updateSlide2 = new UpdateSlide2(modelPopup, viewCenter);
     modelSlide2.addObservers(updateSlide2);
 
     // ModelSlide3
@@ -184,6 +184,7 @@ class MediatorSlide extends Observer {
         if (i > 0 && i < 9) {
           this.composant.question.innerHTML = model.text.question;
           this.composant.speech.innerHTML = model.text.speech;
+          this.modelSlides.setFooterText(model.text.page);
         } else if (i == 0) {
           this.composant.question.innerHTML = "";
           this.composant.speech.innerHTML = "";
@@ -439,8 +440,9 @@ class UpdateSlide1 extends Observer {
 
 class UpdateSlide2 extends Observer {
 
-  constructor(composant) {
+  constructor(model, composant) {
     super();
+    this.model = model;
     this.composant = composant;
   }
 
@@ -451,25 +453,40 @@ class UpdateSlide2 extends Observer {
 
       let container = document.createElement('div');
       container.setAttribute('id', 'slide2_micros');
-      this.composant.appendChild(container);
+      this.composant.div.appendChild(container);
+
 
       let divs = [];
 
-      for (let micro in observable.text['labels']){
+      for (let micro in observable.text['labels']) {
         let div = document.createElement('div');
-        div.className = 'micro';
+        div.setAttribute('id', 'slide2_' + micro + '_micro');
+        div.setAttribute('class', 'micro');
         container.appendChild(div);
+
         let text_micro = document.createElement('div');
-        text_micro.className = 'micro_name';
+        text_micro.setAttribute('class', 'slide2Label unselectable');
         text_micro.innerHTML = observable.text['labels'][micro];
+
         div.appendChild(text_micro);
         divs.push(div);
       }
 
-      let micros = observable.loadMicros(container, divs);
+      let plug = document.createElement('div');
+      plug.setAttribute('id', 'slide2_plug');
+
+      let text = document.createElement('div');
+      text.setAttribute('id', 'slide2_plugLabel');
+      text.setAttribute('class', 'unselectable');
+      text.innerHTML = observable.text.plug;
+
+      container.appendChild(plug);
+      plug.appendChild(text);
+
+      let micros = observable.loadMicros(plug, divs);
 
     } else if (val == false) {
-       this.composant.querySelector("#slide2_micros").remove();
+       this.composant.div.querySelector("#slide2_micros").remove();
        observable.setDestroyed();
     }
   }
