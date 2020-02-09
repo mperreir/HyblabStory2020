@@ -2,13 +2,11 @@
   <div class="saynette">
     <Boat class="boat" />
     <Background class="svg" />
-    <TextTitle :y="22" :style="{textAlign: 'center'}">Qui voulez-vous suivre aujourd'hui ?</TextTitle>
-    <SimpleText :y="30" :style="{textAlign: 'center'}">
-      Madame Dubois et Monsieur Moreau vivent dans la région Pays de Loire.
-      <br />Ils ont tous les deux une maison au coeur d'un quartier plein de verdure.
-      <br />Ils sont très attentifs à leur impact sur l'environnement. Par souci économique
-      <br />et écologique, ils pratiquent le covoiturage pour
-      se rendre sur leur lieu de travail.
+    <TextTitle :y="18" :style="{textAlign: 'center'}">Qui voulez-vous suivre aujourd'hui ?</TextTitle>
+    <SimpleText :y="27" :style="{textAlign: 'center'}">
+      Madame Dubois et Monsieur Moreau sont voisins et vivent dans la région des Pays de la Loire.
+      <br />Ils sont très attentifs à leur impact sur l'environnement et pratiquent le covoiturage
+      <br />pour se rendre sur leur lieu de travail.
     </SimpleText>
     <SimpleButton
       text="Mme Dubois"
