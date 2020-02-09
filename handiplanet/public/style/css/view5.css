@@ -87,7 +87,6 @@
   animation: yAxis 80s infinite;
 }
 #view5 button {
-  width: 15%;
   position: absolute;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -101,53 +100,19 @@
   position: relative;
   min-width: 50%;
 }
-#view5 button img {
+#view5 button .view5-circle {
   position: relative;
-  width: 20%;
-  height: 100%;
 }
 #view5 button:hover {
   transform: scale(1.2, 1.2);
 }
-#view5 button img {
-  position: relative;
-  width: 50%;
-}
 #view5 #view5-button-hotel-a {
-  left: 28%;
-  bottom: 55%;
+  left: 32%;
+  bottom: 50%;
 }
 #view5 #view5-button-hotel-b {
-  left: 65%;
-  bottom: 47%;
-}
-#view5 .view5-circle {
-  box-shadow: 0 0 3px 0 #426262;
-  -webkit-animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
-  -moz-animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
-  -ms-animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
-  animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
-  border-radius: 50%;
-}
-@-webkit-keyframes pulse-view5 {
-  to {
-    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-  }
-}
-@-moz-keyframes pulse-view5 {
-  to {
-    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-  }
-}
-@-ms-keyframes pulse-view5 {
-  to {
-    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-  }
-}
-@keyframes pulse-view5 {
-  to {
-    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-  }
+  left: 67%;
+  bottom: 45%;
 }
 @keyframes yAxis {
   50% {

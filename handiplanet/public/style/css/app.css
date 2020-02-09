@@ -322,4 +322,20 @@
   transform: translateX(-100%) translateX(-20px) translateY(-50%);
 }
 
+.circle {
+  cursor: pointer;
+  border-radius: 50%;
+  height: 10vh;
+  width: 10vh;
+  background-color: #ffffff;
+  border: 4vh solid #CB563E;
+  box-shadow: 0 0 3px 0 #CB563E;
+  animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(203, 86, 62, 0);
+  }
+}
+
 /*# sourceMappingURL=app.css.map */

@@ -105,19 +105,16 @@
   }
 
   button{
-    width: 15%;
+    //width: 15%;
     // bottom: 50%;
     position: absolute;
-
     p{
       position: relative;
       min-width: 50%;
     }
 
-    img{
+    .view5-circle{
       position: relative;
-      width: 20%;
-      height: 100%;  
     }
 
     -webkit-transition: all .4s ease-in-out;
@@ -132,40 +129,17 @@
     &:hover{
       transform: scale(1.2, 1.2);
     }
-    
-    img {
-      position: relative;
-      width: 50%;
-    }
   }
 
   #view5-button-hotel-a {
-    left: 28%;  
-    bottom: 55%;
+    left: 32%;  
+    bottom: 50%;
   }
 
   #view5-button-hotel-b {
-    left: 65%;  
-    bottom: 47%;
+    left: 67%;  
+    bottom: 45%;
   }
-
-  .view5-circle{
-    box-shadow: 0 0 3px 0 rgb(66, 98, 98);
-
-    -webkit-animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
-    -moz-animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
-    -ms-animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
-    animation: pulse-view5 2s infinite cubic-bezier(0.66, 0, 0, 1);
-    // background-color: #e84c3d;
-    border-radius: 50%;
-
-  }
-
-  @-webkit-keyframes pulse-view5 {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-  @-moz-keyframes pulse-view5 {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-  @-ms-keyframes pulse-view5 {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-  @keyframes pulse-view5 {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-
   @keyframes yAxis {
     50% {
       animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);

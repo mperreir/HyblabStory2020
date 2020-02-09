@@ -47,6 +47,12 @@
         height: 50%;
         left: -20%;
         bottom: 5%;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        &:hover{
+          transform: scale(1.1, 1.1);
+        }
+
         #view-8-hotel-a {
           width: 100% !important;
           height: 100% !important;
@@ -55,7 +61,6 @@
         }
 
         #view-8-circle-a {
-          max-width: 30%;
           position: absolute;
           top: 0px;
           left: 5%;
@@ -75,6 +80,12 @@
         height: 50%;
         right: -30%;
         top: 5%;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        &:hover{
+          transform: scale(1.1, 1.1);
+        }
+
         #view-8-hotel-b {
           width: 100% !important;
           height: 100% !important;
@@ -87,7 +98,6 @@
           top: 0px;
           right: 5%;
           transform: translateX(50%) translateY(-50%);
-          max-width: 30%;
         }
 
         #view-8-b-caption {
@@ -95,13 +105,6 @@
           top: 40%;
           right: -25%;
         }
-      }
-
-      .view-8-circle {
-        cursor: pointer;
-        border-radius: 50%;
-        box-shadow: 0 0 3px 0 rgb(66, 98, 98);
-        animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
       }
 
       figcaption {
@@ -120,8 +123,6 @@
           color: #CB563E;
         }
       }
-
-      @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
     }
   }
 }

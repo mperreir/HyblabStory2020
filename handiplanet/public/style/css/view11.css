@@ -172,35 +172,8 @@
   right: -10%;
 }
 #view11 #view-11-middle .view-11-button .view-11-circle {
-  width: 20%;
   position: absolute;
-  right: 15%;
-  box-shadow: 0 0 3px 0 #426262;
-  -webkit-animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-  -moz-animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-  -ms-animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-  animation: view-11-pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-  border-radius: 50%;
-}
-@-webkit-keyframes view-11-pulse {
-  to {
-    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-  }
-}
-@-moz-keyframes view-11-pulse {
-  to {
-    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-  }
-}
-@-ms-keyframes view-11-pulse {
-  to {
-    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-  }
-}
-@keyframes view-11-pulse {
-  to {
-    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-  }
+  right: 5%;
 }
 #view11 #view-11-middle .view-11-button #view-11-circle-a {
   top: 12%;
