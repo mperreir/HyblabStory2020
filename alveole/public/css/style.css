@@ -283,6 +283,8 @@ footer {
   font-style: normal;
   font-weight: normal;
   text-align: center;
+  line-height: 22px;
+  letter-spacing: 0.16em;
   color: #000;
 }
 
@@ -735,4 +737,40 @@ dessus de l'apect ratio 16/9 */
   width: 100%;
   height: 70%;
   top: 30%;
+}
+
+#slide7_choice {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide7Label {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15%;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+#slide7_1_choice {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 45%;
+  left: -0%;
+}
+
+#slide7_2_choice {
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  top: 35%;
+  right: 10%;
 }

@@ -577,10 +577,14 @@ class ModelSlide7 extends Observable {
   // values
   bool;
   text;
+  choice;
+  instanciated;
 
   constructor() {
     super();
     this.bool = false;
+    this.instanciated = false;
+    this.choice = 1;
   }
 
   getValue() {
@@ -592,6 +596,64 @@ class ModelSlide7 extends Observable {
       this.bool = val;
       this.setChanged();
       this.notifyObservers();
+    }
+  }
+
+  getChoice() {
+    return this.choice;
+  }
+
+  setChoice(val) {
+  }
+
+  loadAnime(containers) {
+    if (this.instanciated == false) {
+
+      this.podcast = bodymovin.loadAnimation({
+        container : containers[1],
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'data/ondes.json',
+        rendererSettings: {
+          id: 'slide7_ondes',
+          className: 'animation'
+        }
+      });
+      this.casque = bodymovin.loadAnimation({
+        container : containers[2],
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'data/casque.json',
+        rendererSettings: {
+          id: 'slide7_casque',
+          className: 'animation'
+        }
+      });
+      this.instanciated = true;
+    }
+    else {
+      console.log('err : slide7 voix already instanciated');
+    }
+  }
+
+  getAnimations(containers) {
+    if (this.instanciated == false) {
+      this.loadAnime(containers);
+      return { "1": this.podcast, "2": this.casque};
+    } else {
+      console.log('err : slide7 voix already instanciated');
+    }
+  }
+
+  setDestroyed() {
+    if (this.instanciated == true) {
+      this.casque.destroy();
+      this.podcast.destroy();
+      this.instanciated = false;
+    } else {
+      console.log('err : not instanciated');
     }
   }
 }

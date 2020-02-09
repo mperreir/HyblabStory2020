@@ -28,8 +28,6 @@ class SuperControler {
 
     // ModelPopup
     let modelPopup = new ModelPopup();
-    // let updatePopup = new UpdatePopup(viewModal, modelSlides);
-    // modelPopup.addObservers(updatePopup);
 
     // ModelSlide0
     let modelIntroSlide = new ModelIntroSlide();
@@ -63,17 +61,17 @@ class SuperControler {
 
     // ModelSlide6
     let modelSlide6 = new ModelSlide6();
-    let updateSlide6 = new UpdateSlide6(viewCenter.div);
+    let updateSlide6 = new UpdateSlide6(modelPopup, viewCenter);
     modelSlide6.addObservers(updateSlide6);
 
     // ModelSlide7
     let modelSlide7 = new ModelSlide7();
-    let updateSlide7 = new UpdateSlide7(viewCenter.div);
+    let updateSlide7 = new UpdateSlide7(modelPopup, modelSlides, viewCenter);
     modelSlide7.addObservers(updateSlide7);
 
     // ModelSlide8
     let modelSlide8 = new ModelSlide8();
-    let updateSlide8 = new UpdateSlide8(viewCenter.div);
+    let updateSlide8 = new UpdateSlide8(viewCenter);
     modelSlide8.addObservers(updateSlide8);
 
     // ModelLastSlide
@@ -549,7 +547,6 @@ class UpdateSlide5 extends Observer {
         label.innerHTML = observable.text.labels[i];
         container.appendChild(label);
       }
-
     } else if (val == false) {
       this.composant.div.querySelector('#slide5_derush').remove();
     }
@@ -558,8 +555,9 @@ class UpdateSlide5 extends Observer {
 
 class UpdateSlide6 extends Observer {
 
-  constructor(composant) {
+  constructor(model, composant) {
     super();
+    this.model = model;
     this.composant = composant;
   }
 
@@ -570,13 +568,15 @@ class UpdateSlide6 extends Observer {
 
       let container = document.createElement('div');
       container.setAttribute('id', 'slide6_mixtable');
-      this.composant.appendChild(container);
+      this.composant.div.appendChild(container);
 
       let micros = observable.loadMixTable(container);
 
     } else if (val == false) {
-       this.composant.querySelector("#slide6_mixtable").remove();
+       this.composant.div.querySelector("#slide6_mixtable").remove();
        observable.setDestroyed();
+    } else {
+      console.log('err : unhandled slide 6 value');
     }
   }
 }
@@ -585,22 +585,77 @@ class UpdateSlide6 extends Observer {
 
 class UpdateSlide7 extends Observer {
 
-  constructor() {
+  constructor(model, slides, composant) {
     super();
+    this.model = model;
+    this.slides = slides;
+    this.composant = composant;
   }
 
   update(observable, object) {
+    let val = observable.getValue();
 
+    if (val == true) {
+
+      let container = document.createElement('div');
+      container.setAttribute('id', 'slide7_choice');
+      this.composant.div.appendChild(container);
+
+      let divs = {};
+
+      for (let i = 1; i < 3; i++) {
+        let div = document.createElement('div');
+        div.setAttribute('id', 'slide7_' + i + '_choice');
+        let label = document.createElement('div');
+        label.setAttribute('class', 'slide7Label');
+
+        label.innerHTML = observable.text.labels[i];
+
+        div.appendChild(label);
+        container.appendChild(div);
+        divs[i] = div;
+      }
+
+      let animations = observable.getAnimations(divs);
+
+      animations[1].addEventListener('DOMLoaded', () => {
+        document.getElementById('slide7_ondes').addEventListener('click', () => {
+          this.slides.setValue(9);
+        })
+      });
+      animations[2].addEventListener('DOMLoaded', () => {
+        document.getElementById('slide7_casque').addEventListener('click', () => {
+          this.model.setValue(true);
+        })
+      });
+
+    } else if (val == false) {
+      observable.setDestroyed();
+      this.composant.div.querySelector('#slide7_choice').remove();
+    } else {
+      console.log('err : unhandled slide 7 value');
+    }
   }
 }
 
 class UpdateSlide8 extends Observer {
 
-  constructor() {
+  constructor(model, composant) {
     super();
+    this.model = model;
+    this.composant = composant;
   }
 
   update(observable, object) {
+    let val = observable.getValue();
+
+    if (val == true) {
+
+    } else if (val == false) {
+
+    } else {
+      console.log('err : unhandled slide 8 value');
+    }
   }
 }
 
