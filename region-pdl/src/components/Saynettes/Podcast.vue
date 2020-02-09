@@ -36,7 +36,7 @@
 import { mapGetters } from "vuex";
 
 import Background from "@/assets/empty-background.svg";
-import BackgroundLarge from "@/assets/Car/fond_voiture_borne.svg";
+import BackgroundLarge from "@/assets/Car/bg-car.svg";
 import SwitchButton from "@/components/SwitchButton";
 import Car from "@/components/Car";
 import TextTitle from "@/components/TextTitle";
