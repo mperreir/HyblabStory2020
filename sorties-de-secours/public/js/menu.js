@@ -99,9 +99,6 @@ $(document).ready(function() {
                                     }
                                     //e.preventDefault();
                                 });
-                            } else if (expId === "expChoiceExpo") {
-                            } else if (expId === "expChoiceMusique") {
-                                initArticle('music');
                             }
 
                         });

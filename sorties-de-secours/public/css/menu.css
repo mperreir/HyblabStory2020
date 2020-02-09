@@ -67,6 +67,7 @@
   transition: opacity 3s;
 
   height: 100%;
+  width: 40vw;
 }
 
 .menu-hover {
