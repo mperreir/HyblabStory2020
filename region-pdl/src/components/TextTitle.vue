@@ -27,5 +27,6 @@ export default {
 .innerContent {
   position: absolute;
   font-size: 4vh;
+  line-height: 5.5vh;
 }
 </style>

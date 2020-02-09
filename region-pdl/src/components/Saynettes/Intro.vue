@@ -2,15 +2,15 @@
   <div class="saynette">
     <TextTitle
       :x="7"
-      :y="30"
+      :y="20"
     >
       La Région Pays de la Loire
       <br>pour la transition énergétique
     </TextTitle>
     <SimpleText
       :x="7"
-      :y="43"
-      :width="40"
+      :y="35"
+      :width="45"
     >
       Suivez la journée de Monsieur Moreau et Madame Dubois
       <br>et découvrez comment la
