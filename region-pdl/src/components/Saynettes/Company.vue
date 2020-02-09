@@ -3,14 +3,20 @@
     <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
       <span v-if="getChatacterGender === 'mme'">
         L’entreprise de Mme Dubois est engagée pour la transition énergétique et profite des aides de la Région.
-        <br />À présent, l’entreprise crée sa propre énergie verte
-        <b>grâce à la biomasse</b>.
+        <br />À présent, l’entreprise crée sa
+        <b>
+          propre énergie verte
+          grâce à la biomasse
+        </b>.
       </span>
       <span v-if="getChatacterGender === 'm'">
         À côté de l’école dans laquelle enseigne M. Moreau, se trouve l’entreprise de Mme Dubois.
         <br />Elle est engagée pour la transition énergétique et profite des aides de la Région.
-        <br />À présent, elle crée sa propre énergie verte
-        <b>grâce à la biomasse</b>.
+        <br />À présent, elle crée sa
+        <b>
+          propre énergie verte
+          grâce à la biomasse
+        </b>.
       </span>
     </SimpleText>
     <PlusButton v-model="closePopover1" class="plus1" :width="20" @open="closePopover(1)">

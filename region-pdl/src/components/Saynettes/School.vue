@@ -1,58 +1,49 @@
 <template>
   <div class="saynette">
-    
-    <SimpleText
-      :x="7"
-      :y="25"
-      :width="40"
-    >
+    <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
       <p v-if="getChatacterGender === 'mme'">
-        Juste à côté de l’entreprise dans laquelle travaille Mme Dubois se trouve une école dans laquelle M. Moreau est professeur. Cette année, l’école a bénéficié d’une aide de la Région pour réaliser des travaux d’isolation.
+        Juste à côté de l’entreprise dans laquelle travaille Mme Dubois,
+        se trouve une école dans laquelle M. Moreau est professeur.
+        Cette année, l’école a bénéficié d’une
+        <br />
+        <b>aide de la Région</b> pour réaliser
+        <b>des travaux d’isolation</b>.
       </p>
       <p v-if="getChatacterGender === 'm'">
-        M. Moreau est professeur des écoles. Cette année, son école a bénéficié d’une aide de la Région pour réaliser des travaux d’isolation.
+        M. Moreau est professeur des écoles. Cette année, son école a bénéficié
+        <br />
+        <b>d’une aide de la Région</b> pour réaliser
+        <b>des travaux d’isolation</b>.
       </p>
     </SimpleText>
-    <PlusButton
-      v-model="closePopover1"
-      class="plus1"
-      :width="30"
-      @open="closePopover(1)"
-    >
+    <PlusButton v-model="closePopover1" class="plus1" :width="30" @open="closePopover(1)">
       <p class="text">
-        En 2018, <span class="data"> 140 bâtiments publics </span> ont bénéficié des aides de la Région pour la réhabilitation et la rénovation de leur isolation pour un montant total de<br> <span class="data">21 millions d’euros.</span>
+        En 2018,
+        <span class="data">140 bâtiments publics</span> ont bénéficié des aides de la Région pour la réhabilitation et la rénovation de leur isolation pour un montant total de
+        <br />
+        <span class="data">21 millions d’euros.</span>
       </p>
     </PlusButton>
 
-    <PlusButton
-      v-model="closePopover2"
-      class="plus2"
-      :width="30"
-      @open="closePopover(2)"
-    >
+    <PlusButton v-model="closePopover2" class="plus2" :width="30" @open="closePopover(2)">
       <p class="text">
-        En 2018, l’école de M. Moreau a pu toucher <span class="data"> 84 400 € </span> d’aides de la part de la Région.
+        En 2018, l’école de M. Moreau a pu toucher
+        <span class="data">84 400 €</span> d’aides de la part de la Région.
       </p>
     </PlusButton>
 
-    <SimpleButton
-      :text="nextButtonText"
-      :width="23"
-      :x="75"
-      :y="90"
-      @click.native="onNext"
-    />
+    <SimpleButton :text="nextButtonText" :width="23" :x="75" :y="90" @click.native="onNext" />
     <Background class="svg" />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 import Background from "@/assets/School/background-school.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
-import SimpleButton from "@/components/SimpleButton"
+import SimpleButton from "@/components/SimpleButton";
 import PlusButton from "@/components/PlusButton";
 
 export default {
@@ -66,19 +57,19 @@ export default {
   },
   data: () => ({
     closePopover1: false,
-    closePopover2: false,
+    closePopover2: false
   }),
   computed: {
-    ...mapGetters([
-      'getChatacterGender'
-    ]),
+    ...mapGetters(["getChatacterGender"]),
     nextButtonText() {
-      return this.getChatacterGender === 'm' ? 'Voir l\'entreprise' : 'Voir la suite';
+      return this.getChatacterGender === "m"
+        ? "Voir l'entreprise"
+        : "Voir la suite";
     }
   },
   methods: {
     closePopover(i) {
-      switch(i) {
+      switch (i) {
         case 1:
           this.closePopover1 = false;
           this.closePopover2 = true;
@@ -91,11 +82,11 @@ export default {
     },
     onNext() {
       this.$store.dispatch("nextScene", {
-        sceneId: this.getChatacterGender === 'm' ? -1 : 1
+        sceneId: this.getChatacterGender === "m" ? -1 : 1
       });
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -122,7 +113,6 @@ export default {
 }
 
 .data {
-  color : red;
+  color: red;
 }
-
 </style>
