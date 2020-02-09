@@ -49,7 +49,7 @@ main {
   top: 0%;
 }
 
-#header_brand
+#svg_brand
   .st0{fill:#FFFFFF;}
 
 #svg_brand {
@@ -183,27 +183,40 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+}
+
+.micro {
+  transform: scale(0.5);
+  height: 100%;
+  width: 20%;
+
+}
+
+.micro_name {
+  transform: scale(0.5);
 }
 
 #slide2_micros>*:nth-child(1) {
-    align-self: flex-end;
-    transform: scale(0.3);
+}
+
+#slide2_micros>*:nth-child(2) {
 }
 
 #slide2_micros>*:nth-child(3) {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 20%;
-  transform: scale(0.7);
+}
+
+#slide2_micros>*:nth-child(4) {
 }
 
 #slide2_micros>*:nth-child(5) {
-    align-self: flex-end;
+  position: absolute;
+  align-self: center;
 }
 
 .slide2 {
-  height: 20%;
-  width: 20%;
+  height: 50%;
+  width: 50%;
 }
 
 .slide2 .st0 {
@@ -486,7 +499,7 @@ dessus de l'apect ratio 16/9 */
 
 
 /* Text style */
-.center_question {
+.center_question, .theme {
   position: absolute;
   width: 100%;
   height: 15%;
@@ -516,6 +529,54 @@ dessus de l'apect ratio 16/9 */
   text-align: center;
   letter-spacing: 0.24em;
   color: #BDB4F3;
+}
+
+.center_speech1 {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: 0%;
+  top: 15%;
+  font-family: Open sans; /*Google font*/
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10%;
+  line-height: 172%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  color: #BDB4F3;
+}
+
+.center_speech2 {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  left: 0%;
+  top: 60%;
+  font-family: Oswald; /*Google font*/
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15%;
+  line-height: 172%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.footer_speech {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  left: 0%;
+  top: 90%;
+  font-family: Oswald; /*Google font*/
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15%;
+  line-height: 172%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
 }
 
 #slide3_voix {
@@ -792,4 +853,17 @@ dessus de l'apect ratio 16/9 */
   height: 50%;
   top: 35%;
   right: 10%;
+}
+
+#soundcloud{
+  position:absolute;
+  align-self: center;
+  top: 70%;
+  left: 15%;
+  width: 70%;
+  height: 15%;
+}
+
+#sources_arrow {
+  position: absolute;
 }
