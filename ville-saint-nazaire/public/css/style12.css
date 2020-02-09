@@ -1,12 +1,27 @@
 #page12{
-    background-image: url(../img/fond_choix_decorateur.png);
+    background-image: url(../img/fond12.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-#next15-1{
-  position: absolute;
-  left:5%;
+#next13-img{
+    position: absolute;
+    top: 89%;
+    width: 4%;
+    left: 60%;
+ }
+#next13-txt{
+    position: absolute;
+    left: 66%;
+    top: 89%;
+    padding-top: 0.7%;
+    font-family: "Vibur";
+    color: #92C2D2;
 }
+
+#next13{
+    cursor: pointer;
+}
+
 #blackblock12{
   top: 0%;
   width: 25%;
@@ -19,7 +34,7 @@
 
 #image_bureau12{
   position: absolute;
-  top:10%;
+  top:5%;
   left:-20%;
   width: 25%;
   height: auto;
@@ -28,19 +43,19 @@
 
 #image_commission12{
   position: absolute;
-  top:30%;
+  top:25%;
   left:-20%;
   width: 25%;
   height: auto;
-  z-index: 2;
+  z-index: 3;
 }
 #image_salon12{
   position: absolute;
-  top:55%;
+  bottom:10%;
   left:-12%;
   width: 16%;
   height: auto;
-  z-index: 3;
+  z-index: 2;
 }
 
 #texte_slide12{
@@ -48,21 +63,21 @@
     width:68%;
     height:12%;
     right:16%;
-    top: 87%;
+    bottom: 10%;
     padding : 0.5%
 }
 #texte_slide12 p{
-    font-family:"Parisienne";
-    color:black;
+    font-family:"Vibur";
+    color:#255A85;
     text-align: justify;
 }
 @media screen and (max-aspect-ratio: 16/9){
-    #texte_slide12 p{
-        font-size: 1.7vw;
+    #texte_slide12 p, #next13{
+        font-size: 2vw;
     }
 }
 @media screen and (min-aspect-ratio: 16/9){
-    #texte_slide12 p{
-        font-size: 3vh;
+    #texte_slide12 p, #next13{
+        font-size: 3.4vh;
     }
 }
