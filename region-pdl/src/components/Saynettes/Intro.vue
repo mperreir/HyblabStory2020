@@ -46,7 +46,8 @@ export default {
   top: 55%;
   left: 24%;
   width: 12%;
-  overflow: visible
+  overflow: visible;
+  pointer-events: none;
 }
 
 .poly {
