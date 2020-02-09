@@ -116,11 +116,4 @@ export default {
 .data {
   color: red;
 }
-
-.road-svg {
-  position: absolute;
-  left: -1%;
-  width: 9.3%;
-  top: 86.7%;
-}
 </style>

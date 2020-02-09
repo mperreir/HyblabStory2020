@@ -46,6 +46,7 @@
     </PlusButton>
     <SimpleButton :text="nextButtonText" :width="23" :x="75" :y="90" @click.native="onNext" />
     <CompanySVG class="svg" />
+    <RoadSVG v-if="getChatacterGender === 'mme'" class="road-svg" />
   </div>
 </template>
 
@@ -55,6 +56,7 @@ import CompanySVG from "@/assets/Company/background-company.svg";
 import PlusButton from "@/components/PlusButton";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
+import RoadSVG from "@/assets/road.svg";
 
 export default {
   name: "Intro",
@@ -62,6 +64,7 @@ export default {
     CompanySVG,
     SimpleButton,
     SimpleText,
+    RoadSVG,
     PlusButton
   },
   data: () => ({

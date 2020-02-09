@@ -38,6 +38,13 @@ body,
   height: 100%;
 }
 
+.road-svg {
+  position: absolute;
+  left: -1%;
+  width: 9.3%;
+  top: 86.7%;
+}
+
 /* --- Police des titres --- */
 @font-face {
   font-family: "Neo Sans";
