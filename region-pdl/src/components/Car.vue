@@ -50,11 +50,11 @@ export default {
 }
 
 .moving {
-  animation: rotating 1.6s linear infinite reverse;
-  -webkit-animation: rotating 1.6s linear infinite reverse;
-  -moz-animation: rotating 1.6s linear infinite reverse;
-  -ms-animation: rotating 1.6s linear infinite reverse;
-  -o-animation: rotating 1.6s linear infinite reverse;
+  animation: rotating 3s linear infinite reverse;
+  -webkit-animation: rotating 3s linear infinite reverse;
+  -moz-animation: rotating 3s linear infinite reverse;
+  -ms-animation: rotating 3s linear infinite reverse;
+  -o-animation: rotating 3s linear infinite reverse;
 }
 
 .rollingOut {

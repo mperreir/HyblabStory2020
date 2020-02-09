@@ -1,34 +1,21 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
-    <SimpleText
-      :width="70"
-      :x="15"
-      :y="15"
-      :style="{textAlign: 'center'}"
-    >
-      <p>
-        Pour accompagner la transition énergétique, la Région participe au
-        déploiement de bornes de recharge pour les véhicules électriques sur
-        l’ensemble du territoire ligérien. Ainsi, lorsque {{ getChatacter }} prend sa
-        voiture, {{ getChatacterGender === 'm' ? 'il' : 'elle' }} sait qu’il y aura toujours une borne à proximité.
-      </p>
+    <SimpleText :width="70" :x="15" :y="15" :style="{textAlign: 'center'}">
+      Pour accompagner la transition énergétique, la Région participe au
+      déploiement de bornes de recharge pour véhicules électriques sur
+      l’ensemble du territoire ligérien. Ainsi, lorsque {{ getChatacter }} prend sa
+      voiture, {{ getChatacterGender === 'm' ? 'il' : 'elle' }} sait qu’il y aura toujours une
+      <b>borne à proximité</b>.
     </SimpleText>
 
-    <TrainSVG
-      v-show="!nextInitiated"
-      ref="movingTrain"
-      class="train"
-    />
+    <TrainSVG v-show="!nextInitiated" ref="movingTrain" class="train" />
 
     <Car class="car" />
 
     <BoatSVG class="boat" />
 
-    <PlusButton
-      class="plus-button"
-      :width="23"
-    >
+    <PlusButton class="plus-button" :width="23">
       <p class="text">
         En moyenne, on peut trouver une borne tous les
         <span class="red">13 km</span> dans toute la région.
@@ -37,9 +24,7 @@
 
     <BorneSVG class="borne-svg" />
 
-    <transition
-      name="nextButtonDisppear"
-    >
+    <transition name="nextButtonDisppear">
       <SimpleButton
         v-if="!nextPressed"
         text="Continuer l'histoire"
@@ -53,7 +38,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 import Background from "@/assets/Borne/background-borne.svg";
 import SimpleText from "@/components/SimpleText";
@@ -81,10 +66,7 @@ export default {
     nextInitiated: false
   }),
   computed: {
-    ...mapGetters([
-      'getChatacter',
-      'getChatacterGender'
-    ])
+    ...mapGetters(["getChatacter", "getChatacterGender"])
   },
   methods: {
     onNext() {
@@ -98,7 +80,9 @@ export default {
         let train = this.$refs.movingTrain.getBoundingClientRect();
         if (train.x + train.width < 0) {
           this.nextInitiated = true;
-          this.$store.dispatch("nextScene", { sceneId: null });
+          this.$store.dispatch("nextScene", {
+            sceneId: this.getChatacterGender === "m" ? 2 : 1
+          });
         } else {
           setTimeout(this.goNext, 100);
         }
@@ -203,10 +187,12 @@ export default {
   z-index: 2;
 }
 
-.nextButtonDisppear-enter-active, .nextButtonDisppear-leave-active {
+.nextButtonDisppear-enter-active,
+.nextButtonDisppear-leave-active {
   transition: opacity 0.5s;
 }
-.nextButtonDisppear-enter, .nextButtonDisppear-leave-to {
+.nextButtonDisppear-enter,
+.nextButtonDisppear-leave-to {
   opacity: 0;
 }
 

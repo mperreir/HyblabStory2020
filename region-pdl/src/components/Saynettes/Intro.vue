@@ -1,29 +1,16 @@
 <template>
   <div class="saynette">
-    <TextTitle
-      :x="7"
-      :y="30"
-    >
-      La Région Pays de la Loire
-      <br>pour la transition énergétique
+    <TextTitle :x="7" :y="20">
+      La Région des Pays de la Loire
+      <br />pour la transition énergétique
     </TextTitle>
-    <SimpleText
-      :x="7"
-      :y="43"
-      :width="40"
-    >
+    <SimpleText :x="7" :y="35" :width="45">
       Suivez la journée de Monsieur Moreau et Madame Dubois
-      <br>et découvrez comment la
-      <b>Région Pays de La Loire</b>
-      <br>les accompagne pour une consommation d'énergie plus verte.
+      <br />et découvrez comment la
+      <b>Région des Pays de la Loire</b>
+      <br />les accompagne pour réduire leur impact énergétique et construire un avenir plus vert.
     </SimpleText>
-    <SimpleButton
-      text="Démarrer l'aventure"
-      :width="23"
-      :x="7"
-      :y="58"
-      @click.native="onNext"
-    />
+    <SimpleButton text="Démarrer l'aventure" :width="23" :x="7" :y="58" @click.native="onNext" />
     <MaisonSVG class="svg" />
   </div>
 </template>
@@ -44,7 +31,7 @@ export default {
   },
   methods: {
     onNext() {
-      this.$store.dispatch("nextScene", { sceneId: 1 });
+      this.$store.dispatch("nextScene", {});
     }
   }
 };

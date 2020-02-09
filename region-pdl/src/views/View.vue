@@ -26,13 +26,16 @@
         <CarouselSlide :index="7">
           <Quizz />
         </CarouselSlide>
+        <CarouselSlide :index="8">
+          <End />
+        </CarouselSlide>
       </Carousel>
     </div>
     <LogoRegion class="logo-region" />
     <transition name="fade">
       <ProgressBar
-        v-if="$store.state.currentSceneIndex !== 0"
-        :number="$store.state.nbScenes - 1"
+        v-if="$store.state.currentSceneIndex > 0 && $store.state.currentSceneIndex < $store.state.nbScenes - 1"
+        :number="$store.state.nbScenes - 2"
       />
     </transition>
   </div>
@@ -49,6 +52,7 @@ import Borne from "@/components/Saynettes/Borne.vue";
 import Company from "@/components/Saynettes/Company.vue";
 import School from "@/components/Saynettes/School.vue";
 import Quizz from "@/components/Saynettes/Quizz.vue";
+import End from "@/components/Saynettes/End.vue";
 import Carousel from "@/components/carousel/Carousel.vue";
 import CarouselSlide from "@/components/carousel/CarouselSlide.vue";
 
@@ -66,12 +70,14 @@ export default {
     Carousel,
     CarouselSlide,
     ProgressBar,
+    End,
     LogoRegion
+
   },
   data: () => ({}),
   methods: {
     click() {
-      this.$store.dispatch("nextScene", { sceneId: 1 });
+      this.$store.dispatch("nextScene", {});
     }
   }
 };
@@ -82,10 +88,14 @@ export default {
   position: relative;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 3s cubic-bezier(1, 0.01, 0.65, 0.6);
+.fade-enter-active {
+  transition: opacity 3s cubic-bezier(1, 0, 0.65, 0.6);
 }
+
+.fade-leave-active {
+  transition: opacity 3s cubic-bezier(0.6, 0.65, 0, 1);
+}
+
 
 .fade-enter,
 .fade-leave-to {
@@ -94,13 +104,11 @@ export default {
 
 .logo-region {
   position: absolute;
-  left: 6%;
+  left: 7%;
   top: 5%;
   width: 16%;
   height: 7%;
-  border-radius: 10px;
-  border-radius: 17px;
-  background-color: #fff9;
-  /* background-color: #ffffffd1; */
+  border-radius: 1vh;
+  background-color: #fff8;
 }
 </style>

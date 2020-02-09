@@ -51,7 +51,12 @@ export default {
       }
     },
     "$store.state.currentSceneIndex": function() {
-      this.index++;
+      if (
+        this.$store.state.currentSceneIndex <
+        this.$store.state.nbScenes - 1
+      ) {
+        this.index++;
+      }
     }
   }
 };
@@ -63,19 +68,19 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  top: 3vh;
+  top: 7vh;
   margin-left: 45vh;
-  height: 5vh;
-  width: 40vh;
+  height: 3vh;
+  width: 70vh;
   align-items: center;
 }
 
 .progress-line {
   position: absolute;
-  top: 5.3vh;
+  top: 8.2vh;
   margin-left: 46vh;
-  height: 0.35vh;
-  width: 38.5vh;
+  height: 0.6vh;
+  width: 68vh;
 }
 
 .percentage {
@@ -84,97 +89,97 @@ export default {
 }
 
 .dot {
-  height: 1.5vh;
-  width: 1.5vh;
+  height: 2.5vh;
+  width: 2.5vh;
   border-radius: 50%;
   animation: animation-dot-reverse 0.4s linear;
 }
 
 .current {
-  height: 2vh;
-  width: 2vh;
+  height: 3vh;
+  width: 3vh;
   animation: animation-dot 0.4s linear;
 }
 
 @-webkit-keyframes animation-dot-reverse {
   from {
-    height: 2vh;
-    width: 2vh;
+    height: 3vh;
+    width: 3vh;
   }
   to {
-    height: 1.5vh;
-    width: 1.5vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
 }
 @-moz-keyframes animation-dot-reverse {
   from {
-    height: 2vh;
-    width: 2vh;
+    height: 3vh;
+    width: 3vh;
   }
   to {
-    height: 1.5vh;
-    width: 1.5vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
 }
 @-ms-keyframes animation-dot-reverse {
   from {
-    height: 2vh;
-    width: 2vh;
+    height: 3vh;
+    width: 3vh;
   }
   to {
-    height: 1.5vh;
-    width: 1.5vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
 }
 @keyframes animation-dot-reverse {
   from {
-    height: 2vh;
-    width: 2vh;
+    height: 3vh;
+    width: 3vh;
   }
   to {
-    height: 1.5vh;
-    width: 1.5vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
 }
 
 @-webkit-keyframes animation-dot {
   from {
-    height: 1.5vh;
-    width: 1.5vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
   to {
-    height: 2vh;
-    width: 2vh;
+    height: 3vh;
+    width: 3vh;
   }
 }
 @-moz-keyframes animation-dot {
   from {
-    height: 1.5vh;
-    width: 1.5vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
   to {
-    height: 2vh;
-    width: 2vh;
+    height: 3vh;
+    width: 3vh;
   }
 }
 @-ms-keyframes animation-dot {
   from {
-    height: 1.5vh;
-    width: 1.5vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
   to {
-    height: 2vh;
-    width: 2vh;
+    height: 3vh;
+    width: 3vh;
   }
 }
 @keyframes animation-dot {
   from {
-    height: 1.5vh;
-    width: 1.5vh;
+    height: 2.5vh;
+    width: 2.5vh;
   }
   to {
-    height: 2vh;
-    width: 2vh;
+    height: 3vh;
+    width: 3vh;
   }
 }
 </style>
