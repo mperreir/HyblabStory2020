@@ -282,19 +282,6 @@ class ModelSlide2 extends Observable {
     }
   }
 
-  loadWires(micros){
-    let that = this;
-    planck.testbed(function(testbed) {
-      that.wires = new Rope();
-      return that.wires.world;
-    });
-    return this.wires;
-  }
-
-  deleteWires(){
-
-  }
-
   setDestroyed() {
     this.instanciated = false;
   }
@@ -640,6 +627,17 @@ class ModelLastSlide extends Observable {
       this.setChanged();
       this.notifyObservers();
     }
+  }
+
+  loadContent(div) {
+    Snap.load('data/header_brand.svg', function(data) {
+      let snap = Snap(div.children[1]);
+      snap.append(data);
+    });
+    Snap.load('data/tournage_valide.svg', function(data) {
+      let snap = Snap(div.children[3]);
+      snap.append(data);
+    });
   }
 }
 

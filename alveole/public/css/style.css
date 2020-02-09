@@ -40,7 +40,7 @@ main {
   top: 0%;
 }
 
-#header_brand
+#svg_brand
   .st0{fill:#FFFFFF;}
 
 #svg_brand {
@@ -478,7 +478,7 @@ dessus de l'apect ratio 16/9 */
 
 
 /* Text style */
-.center_question {
+.center_question, .theme {
   position: absolute;
   width: 100%;
   height: 15%;
@@ -508,6 +508,54 @@ dessus de l'apect ratio 16/9 */
   text-align: center;
   letter-spacing: 0.24em;
   color: #BDB4F3;
+}
+
+.center_speech1 {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: 0%;
+  top: 15%;
+  font-family: Open sans; /*Google font*/
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10%;
+  line-height: 172%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  color: #BDB4F3;
+}
+
+.center_speech2 {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  left: 0%;
+  top: 60%;
+  font-family: Oswald; /*Google font*/
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15%;
+  line-height: 172%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.footer_speech {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  left: 0%;
+  top: 90%;
+  font-family: Oswald; /*Google font*/
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15%;
+  line-height: 172%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
 }
 
 #slide3_voix {
@@ -748,4 +796,13 @@ dessus de l'apect ratio 16/9 */
   width: 100%;
   height: 70%;
   top: 30%;
+}
+
+#soundcloud{
+  position:absolute;
+  align-self: center;
+  top: 70%;
+  left: 15%;
+  width: 70%;
+  height: 15%;
 }

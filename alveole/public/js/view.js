@@ -146,3 +146,38 @@ class ViewModal {
     this.main.appendChild(this.div);
   }
 }
+
+class ViewCenterConclusion {
+
+  constructor() {
+    this.main = document.querySelector('main');
+    this.div = document.createElement('div');
+    this.div.setAttribute('id', 'center');
+    this.div.style.visibility = 'hidden';
+
+    this.theme = document.createElement('div');
+    this.theme.setAttribute('class', 'theme');
+
+    this.center_speech1 = document.createElement('div');
+    this.center_speech1.setAttribute('class', 'center_speech1');
+
+    this.center_speech2 = document.createElement('div');
+    this.center_speech2.setAttribute('class', 'center_speech2');
+
+    this.footer_speech = document.createElement('div');
+    this.footer_speech.setAttribute('class', 'footer_speech');
+
+    this.div.appendChild(this.theme);
+    this.div.appendChild(this.center_speech1);
+    this.div.appendChild(this.center_speech2);
+    this.div.appendChild(this.footer_speech);
+
+    let that = this;
+    Snap.load('data/tournage_valide.svg', function(data) {
+      let snap = Snap(that.div.children[4]);
+      snap.append(data);
+    });
+
+    this.main.appendChild(this.div);
+  }
+}

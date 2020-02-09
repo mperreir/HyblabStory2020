@@ -26,6 +26,9 @@ class SuperControler {
     // Popup
     var viewModal = new ViewModal();
 
+    //Conclusion
+    var viewCenterConclusion = new ViewCenterConclusion();
+
     // ModelPopup
     let modelPopup = new ModelPopup();
     // let updatePopup = new UpdatePopup(viewModal, modelSlides);
@@ -73,12 +76,12 @@ class SuperControler {
 
     // ModelSlide8
     let modelSlide8 = new ModelSlide8();
-    let updateSlide8 = new UpdateSlide8(viewCenter.div);
+    let updateSlide8 = new UpdateSlide8();
     modelSlide8.addObservers(updateSlide8);
 
     // ModelLastSlide
     let modelLastSlide = new ModelLastSlide();
-    let updateLastSlide = new UpdateLastSlide();
+    let updateLastSlide = new UpdateLastSlide(viewCenterConclusion);
     modelLastSlide.addObservers(updateLastSlide);
 
     // Mediator of slide model
@@ -111,6 +114,21 @@ class SuperControler {
                                             viewModal
                                           );
     modelPopup.addObservers(mediatorModal);
+
+    let mediatorConclusion = new MediatorConclusion(  modelSlides,
+                                            modelIntroSlide,
+                                            modelSlide1,
+                                            modelSlide2,
+                                            modelSlide3,
+                                            modelSlide4,
+                                            modelSlide5,
+                                            modelSlide6,
+                                            modelSlide7,
+                                            modelSlide8,
+                                            modelLastSlide,
+                                            viewCenterConclusion
+                                          );
+    modelSlides.addObservers(mediatorConclusion);
 
     // Adding Listenners
     viewStupidButtons.next.addEventListener('click', function() {
@@ -162,7 +180,7 @@ class MediatorSlide extends Observer {
         if (i > 0 && i < 9) {
           this.composant.question.innerHTML = model.text.question;
           this.composant.speech.innerHTML = model.text.speech;
-        } else if (i == 9 || i == 0) {
+        } else if (i == 0) {
           this.composant.question.innerHTML = "";
           this.composant.speech.innerHTML = "";
         }
@@ -229,6 +247,65 @@ class MediatorModal extends Observer {
     } else {
       console.log("err : value not handled (mediatorModal controler)");
     }
+  }
+}
+
+class MediatorConclusion extends Observer {
+
+  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewCenterConclusion) {
+
+    super();
+
+    this.slides = {
+      "0": modelIntroSlide,
+      "1": modelSlide1,
+      "2": modelSlide2,
+      "3": modelSlide3,
+      "4": modelSlide4,
+      "5": modelSlide5,
+      "6": modelSlide6,
+      "7": modelSlide7,
+      "8": modelSlide8,
+      "9": modelLastSlide
+    };
+
+    this.loadText(this.slides);
+    this.model = modelSlides;
+    this.composant = viewCenterConclusion;
+  }
+
+  update(observable, object) {
+    let val = observable.getValue();
+
+    const entries = Object.entries(this.slides);
+
+    for (const [i, model] of entries) {
+      if (i != val) {
+        model.setValue(false);
+      }
+      else if (i == val) {
+        model.setValue(true);
+        if (i == 9) {
+          this.composant.theme.innerHTML = model.text["theme"];
+          this.composant.center_speech1.innerHTML = model.text["header-speech"];
+          this.composant.center_speech2.innerHTML = model.text["center-speech"];
+          this.composant.footer_speech.innerHTML = model.text["footer-speech"];
+        }
+      }
+    }
+  }
+
+  loadText(slides) {
+    $.getJSON("data/text.json", function(data) {
+
+      const entries = Object.entries(data);
+      let count = 0;
+
+      for (const [i, text] of entries) {
+        slides[count].text = text;
+        count++;
+      }
+    });
   }
 }
 
@@ -617,12 +694,28 @@ class UpdateSlide8 extends Observer {
 
 class UpdateLastSlide extends Observer {
 
-  constructor() {
+  constructor(composant) {
     super();
+    this.composant = composant;
   }
 
   update(observable, object) {
 
+    let val = observable.getValue();
+
+    if (val == true) {
+      this.composant.div.style.visibility = "visible";
+      observable.loadContent(this.composant.div);
+      this.frame = document.createElement('iframe');
+      this.frame.setAttribute('src', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/685582138&amp;color=807aa7');
+      this.frame.setAttribute('id', 'soundcloud');
+      this.composant.div.appendChild(this.frame);
+      this.arrow = document.createElement('div');
+      this.composant.div.appendChild(this.arrow);
+    } else if (val == false) {
+      this.composant.div.removeChild(this.frame);
+      this.composant.div.style.visibility = "hidden";
+    }
   }
 }
 
