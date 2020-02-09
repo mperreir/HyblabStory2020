@@ -59,6 +59,21 @@ $(document).ready(function() {
                   goToByScroll("dance-section");
                   $("#dance-first-slide").css("background-color", "white");
                   $("#img-dancers").css("opacity", "1");
+                  setTimeout(function() {
+                    const mouseAnimated = document.querySelector("#mouse-animated-dance");
+                    mouseAnimated.classList.remove('fadeOut');
+                    mouseAnimated.classList.add('fadeInUp');
+                    isExperience = false;
+                  }, 10000);
+                  $('#dance-section').on('mousewheel', function(e, delta) {
+                    if(!isExperience) {
+                      $("#img-dancers-2").css("opacity", "1");
+                      /*this.scrollLeft -= (delta * 60);*/
+                    }
+
+
+                    //e.preventDefault();
+                  });
                 }
               });
               countScroll++;

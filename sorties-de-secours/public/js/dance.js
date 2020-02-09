@@ -19,22 +19,4 @@ $(document).ready(function() {
     }
   });
 
-  $('#dance-section').on('mousewheel', function(e, delta) {
-    setTimeout(function() {
-      const mouseAnimated = document.querySelector("#mouse-animated-dance");
-      mouseAnimated.classList.remove('fadeOut');
-      mouseAnimated.classList.add('fadeInUp');
-      isExperience = false;
-    }, 10000);
-    if(!isExperience) {
-      $("#img-dancers-2").css("opacity", "1");
-      /*this.scrollLeft -= (delta * 60);*/
-    }
-
-
-    //e.preventDefault();
-  });
-
 });
-
-/* DANCE EXPERIENCE */
