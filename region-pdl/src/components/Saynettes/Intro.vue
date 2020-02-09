@@ -4,7 +4,7 @@
       :x="7"
       :y="20"
     >
-      La Région Pays de la Loire
+      La Région des Pays de la Loire
       <br>pour la transition énergétique
     </TextTitle>
     <SimpleText
@@ -14,8 +14,8 @@
     >
       Suivez la journée de Monsieur Moreau et Madame Dubois
       <br>et découvrez comment la
-      <b>Région Pays de La Loire</b>
-      <br>les accompagne pour une consommation d'énergie plus verte.
+      <b>Région des Pays de La Loire</b>
+      <br>les accompagne pour réduire leur impact énergétique et construire un avenir plus vert.
     </SimpleText>
     <SimpleButton
       text="Démarrer l'aventure"
