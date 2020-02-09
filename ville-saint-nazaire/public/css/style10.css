@@ -147,7 +147,7 @@
 	left: 60%;
 }
 
- #slide10-suivant:hover {
+ #slide10-suivant:hover, #slide10-img1:hover, #slide10-img2:hover {
 	cursor: pointer;
 }
 

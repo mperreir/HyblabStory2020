@@ -173,7 +173,8 @@ transition:0.5s;
 
 }
 
- #slide8-suivant:hover, #slide8-btnRetour:hover {
+ #slide8-suivant:hover, #slide8-btnRetour:hover, #slide8-img1:hover, #slide8-img2:hover,
+ #slide8-img3:hover, #slide8-img4:hover, #slide8-img5:hover {
 	cursor: pointer;
 }
 
