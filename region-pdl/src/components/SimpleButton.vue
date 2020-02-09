@@ -41,7 +41,6 @@ export default {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  /*border: 0.3vh solid #fff;*/
 }
 
 .classic-btn:hover {

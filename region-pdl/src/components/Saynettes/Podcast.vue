@@ -107,7 +107,7 @@ export default {
   },
   mounted() {
     this.podcastSong =  new Howl({
-      src: ["songs/podcast.wav"],
+      src: ["sounds/podcast.wav"],
     });
   }
 };

@@ -63,9 +63,9 @@ export default {
 .plus {
   flex-wrap: wrap;
   position: absolute;
-  border-radius: 21%;
-  border: 0.2vh solid #fff;
+  border-radius: 1vh;
   width: 5vh;
+  border: 0.3vh solid #fff;
 }
 
 .plus:hover {

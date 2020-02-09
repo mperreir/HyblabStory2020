@@ -51,7 +51,10 @@ export default {
       }
     },
     "$store.state.currentSceneIndex": function() {
-      if(this.$store.state.currentSceneIndex < this.$store.state.nbScenes - 1) {
+      if (
+        this.$store.state.currentSceneIndex <
+        this.$store.state.nbScenes - 1
+      ) {
         this.index++;
       }
     }
