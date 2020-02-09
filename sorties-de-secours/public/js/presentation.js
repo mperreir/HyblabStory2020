@@ -44,18 +44,30 @@ $(document).ready(function() {
     storedPosBottom = scrollPosBottom;
   });
 
+  let presentationFixed = true;
+
   $(window).scroll(function(e) {
 
     let scrollPos = $(window).scrollTop();
 
-    if (scrollPos > presPos.top - 500) {
+    let presentationSection = $("#presentation-section");
+    if (scrollPos > presPos.top - 400 && presentationFixed) {
       e.preventDefault();
-      let presentationSection = $("#presentation-section");
-      /*bodyScrollLock.disableBodyScroll(presentationSection);
+      bodyScrollLock.disableBodyScroll(presentationSection);
       $('html,body').animate({
           scrollTop: $("#presentation-section").offset().top
-      }, 400);*/
+      }, 200);
+      setTimeout(function() {
+        bodyScrollLock.clearAllBodyScrollLocks();
+        presentationFixed = false;
+      }, 2000);
+      setTimeout(function() {
+        let endPresentation = document.getElementById("end-presentation");
+        endPresentation.classList.remove('fadeOut');
+        endPresentation.classList.add('fadeInUp');
+      }, 1);
     }
+
 
   });
 

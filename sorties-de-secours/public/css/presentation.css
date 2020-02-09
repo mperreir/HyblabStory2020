@@ -11,10 +11,9 @@
 
 #end-presentation {
   position: absolute;
-  bottom: 5%;
+  width: 100%;
   text-align: center;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 5%;
 }
 
 #text-end-presentation {
