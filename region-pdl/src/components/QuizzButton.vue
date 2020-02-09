@@ -1,7 +1,7 @@
 <template>
   <div
     class="quizz-button"
-    :class="{ 'bg-lightblue': answer !== 'vrai' && selected, 'bg-darkblue': !selected, 'bg-green': answer === 'vrai' && selected }"
+    :class="{ 'bg-lightblue': answer !== 'vrai' && selected, 'bg-darkblue': answer !== 'vrai' && !selected, 'bg-green': answer === 'vrai' && selected, 'bg-lightgreen': answer === 'vrai' && !selected }"
     :style="{ selected: selected, answer: '' }"
   >
     <div class="text">{{ text }}</div>
