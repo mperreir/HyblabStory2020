@@ -49,7 +49,6 @@
     <link rel="stylesheet" href="css/home.css" />
     <script type="text/javascript" src="js/home.js"></script>
     <link rel="stylesheet" href="css/hamburger.css" />
-    <script type="text/javascript" src="js/menu.js"></script>
     <link rel="stylesheet" href="css/sound.css" />
 
 
@@ -72,11 +71,13 @@
 
   <!-- Menu -->
     <link rel="stylesheet" href="css/menu.css" />
+  <script type="text/javascript" src="js/menu.js"></script>
 
 
 
 
-    <!-- dance -->
+
+  <!-- dance -->
     <link rel="stylesheet" href="css/dance.css">
     <script type="text/javascript" src="js/dance.js"></script>
 
@@ -206,6 +207,13 @@
               comment les rhizomes s’étendent, comment les graines s’envolent et se déposent,<br>
               comment la pourriture devient nourriture... <b>Ils demandent ce qu’est l’essentiel.</b></p>
             <img class="menu-workshop-author" id="author-danse" src="img/menu_auteur_danse.png" alt="Mauricio Bergile" />
+            <div class="animated fadeOut" id="mouse-animated-menuDance">
+              <div class="scroll-down">
+                <div class="mousey-black" id="mouse-down">
+                  <div class="scroller-black"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -219,13 +227,13 @@
       class="section"
       id="expo-section">
 
-<!--      <div id="expo-konva"></div>-->
+      <!--<div id="expo-konva"></div>-->
 
 
       <!-- START ARTICLE -->
-      <section class="article-container">
+      <section class="article-container" id="article-container-expo">
 
-        <img class="brush" id="article-expo-yellow1" src="img/brush/yellow1.png" />
+        <img class="brush brush-show" id="article-expo-yellow1" src="img/brush/yellow1.png" />
 
         <img class="brush" id="article-expo-orange5" src="img/brush/orange5.png" />
         <img class="brush" id="article-expo-blue5" src="img/brush/blue5.png" />
@@ -238,7 +246,7 @@
 
         <div class="article-wrapper">
 
-          <div class="article-title-wrapper">
+          <div class="article-title-wrapper" id="article-title-wrapper-expo">
             <p class="article-title">Les Termes</p>
             <p class="article-author">Muriel Bordier</p>
           </div>
@@ -247,8 +255,9 @@
             <img class="article-img" id="article-img-expo3" src="img/articles/expo/article3.jpeg">
             <img class="article-img" id="article-img-expo2" src="img/articles/expo/article2.jpeg">
             <img class="article-img" id="article-img-expo1" src="img/articles/expo/article1.jpeg">
+            <img class="article-img article-img-crayon" id="article-img-crayon-expo" src="img/articles/expo/crayon.png">
           </div>
-          <div class="article-text-wrapper">
+          <div class="article-text-wrapper" id="article-text-wrapper-expo">
             <p class="article-text">Plouf. La plus rigolote, et la moins « chargée » de sens, mais aussi la plus esthétique. Des espaces comme des aérogares futuristes, absolument blancs, et partout de petits personnages qui font penser – mais oui ! – à la pub Kodak de Mondino, et là encore à des wagons de films de SF, à commencer par 2001, l’odyssée de l’espace, à Oblivion, semi-nanar à l’esthétique parfaite et immaculée avec Tom Cruise, à Bienvenue à Gataca, au Meilleur des mondes, à Wall-E.... Des piscines sans eau, des plongeoirs au ras du plafond, des cohortes de baigneurs suspendus sur des rails, c’est un régal de se perdre dans l’examen minutieux de ces photos et de découvrir les surprises qu’y sèment la photographe, dans un gigantesque «Let’s find Momo».</p>
             <p class="article-text"><i>« Je suis toujours menée par l’idiotie, le non sens, les grosses machineries où l’homme est face à un système qu’il a créé et qu’il subit. Les décors changent mais il y a toujours une aberration ».</i></p>
             <p class="article-text"><b>Isabelle Nivet</b> Avril 2018. <br><b>Sorties de secours</b></p>
@@ -259,7 +268,7 @@
         <div class="article-footer">
           <p><b>Muriel Bordier</b> Photographe et vidéaste.</p>
           <div class="article-footer-center">
-            <div class="ss-buttons-wrapper ss-buttons-wrapper-hidden">
+            <div class="ss-buttons-wrapper ss-buttons-wrapper-hidden" id="ss-buttons-wrapper-expo">
               <input class="ss-radio" type="radio" id="expo-ss-1" name="expo-slide-show" checked />
               <input class="ss-radio" type="radio" id="expo-ss-2" name="expo-slide-show" />
               <input class="ss-radio" type="radio" id="expo-ss-3" name="expo-slide-show" />

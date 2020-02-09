@@ -203,3 +203,8 @@
 .expChoiceOut > .menu-hover > .hover-text-wrapper > .menu-workshop-author {
   transition-delay: 0.5s;
 }
+
+#mouse-animated-menuDance {
+  position: absolute;
+  bottom: 20%;
+}
