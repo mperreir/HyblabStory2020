@@ -1,12 +1,15 @@
 .article-container {
+    position: relative;
     /*width: 100%;*/
     height: calc(100% - 300px);
     padding: 150px;
     background-color: #F6F5F5;
+
+    transition: height 0.5s, padding 0.5s;
 }
 
 .article-wrapper {
-    position: relative;
+    /*position: relative;*/
 
     display: flex;
     flex-direction: row;
@@ -30,6 +33,8 @@
     line-height: 70px;
     text-transform: uppercase;
     font-style: normal;
+
+    transition: all 1s;
 }
 .article-author {
     font-weight: bold;
@@ -63,11 +68,14 @@
     z-index: 6;
 
     width: 100%;
+    max-height: 75%;
     padding-left: 50px;
 
     text-align: justify;
     text-justify: inter-word;
     font-family: "Nimbus Sans L";
+
+    transition: width 1s, padding 1s;
 }
 
 .article-text {
@@ -111,9 +119,18 @@
 
 /* BRUSH */
 .brush {
+    /*visibility: hidden;*/
     z-index: 5;
     position: absolute;
     transform: translateX(-50%);
+    opacity: 0;
+
+    transition: opacity 0.75s;
+}
+
+.brush-show {
+    /*visibility: visible;*/
+    opacity: 1;
 }
 
 #article-expo-yellow1 {
@@ -194,12 +211,6 @@
     background-color: #1E1E1E;
 }
 
-.ss-buttons-wrapper .ss-dot:hover {
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.9);
-    transition: .25s
-}
-
 .ss-buttons-wrapper {
     opacity: 1;
     visibility: visible;
@@ -209,4 +220,50 @@
 .ss-buttons-wrapper.ss-buttons-wrapper-hidden {
     opacity: 0;
     visibility: hidden;
+}
+
+/* Full screen slide show */
+.article-title-wrapper-fullscreen {
+    top: 71px;
+    left: 150px;
+
+    font-size: 30px;
+    line-height: 35px;
+
+    transform: translate(0, 0);
+}
+.article-text-wrapper-hidden {
+    width: 0;
+    visibility: hidden;
+    padding: 0;
+}
+
+.article-img-hidden {
+    transform: translate(-200%, -50%);
+    transition: transform 1s;
+}
+
+/* previous slide */
+.article-img-show {
+    transform: translate(-50%, -50%);
+    transition: transform 1s;
+}
+
+.article-img-fullscreen {
+    width: 100vw;
+}
+.article-img-wrapper-fullscreen {
+
+}
+.article-container-fullscreen {
+    padding: 0;
+    height: 100vh;
+}
+.article-img-crayon {
+    opacity: 0;
+}
+.article-img-crayon-show {
+    opacity: 1;
+    transition: opacity 0.5s;
+    transition-delay: 0.5s;
 }

@@ -13,10 +13,10 @@ $header_top.find('a').on('click', function() {
   $(this).parent().toggleClass('open-menu');
 });
 
-function goToByScroll(id) {
+function goToByScroll(id, speed) {
   $('html,body').stop().animate({
       scrollTop: $("#" + id).offset().top
-  }, 500);
+  }, speed);
 }
 
 /*  MUSIC   */
