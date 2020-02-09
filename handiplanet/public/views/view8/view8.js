@@ -16,12 +16,12 @@ class View8 extends View {
 
   linkElements() {
     showSplash();
-    this.nextPremiumView = document.getElementById('view-8-circle-b');
+    this.nextPremiumView = document.getElementById('view-8-hotelb-container');
     this.nextPremiumView.addEventListener('click', () => {
       this.switchToView9Premium();
     });
 
-    this.nextPremiumView = document.getElementById('view-8-circle-a');
+    this.nextPremiumView = document.getElementById('view-8-hotela-container');
     this.nextPremiumView.addEventListener('click', () => {
       this.switchToView9Free();
     });

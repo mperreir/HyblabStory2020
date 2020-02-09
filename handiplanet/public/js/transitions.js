@@ -23,7 +23,7 @@ async function showContextView(currentView){
         nextView.reloadContext();
     } else {
         if(window.contextView.questionNumber==4){
-            nextView = new Comparatif(tempDiv);
+            nextView = new View14(tempDiv);
             await nextView.load();
         } else {
             tempDiv.appendChild(window.contextView.view);
