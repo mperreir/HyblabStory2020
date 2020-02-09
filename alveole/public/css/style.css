@@ -922,15 +922,138 @@ dessus de l'apect ratio 16/9 */
   right: 10%;
 }
 
-#soundcloud{
-  position:absolute;
-  align-self: center;
-  top: 70%;
+#lastSlide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#title {
+  position: absolute;
+  top: 0;
+  height: 10%;
+  left: -10%;
+  width: 120%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+#speech {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10%;
+  text-align: center;
+  letter-spacing: 0.18em;
+}
+
+#logo_alveole {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  width: 10%;
+  height: 20%;
+}
+
+#logo_alveole #svg_brand {
+  position: absolute;
+  width: 100%:
+}
+
+#motto {
+  position: absolute;
+  top: 60%;
+  left: 0%;
+  width: 100%;
+  height: 20%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+#soundcloud {
+  position: absolute;
+  top: 80%;
   left: 15%;
   width: 70%;
   height: 15%;
+  border: none;
 }
 
-#sources_arrow {
+#alveole {
   position: absolute;
+  bottom: -15%;
+  width: 66%;
+  left: 17%;
+  height: 7%;
+  z-index: 1;
+}
+
+#website {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  left: 0%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+#fleche_website {
+  position: absolute;
+  right: 5%;
+  height: 100%;
+}
+
+#sources {
+  position: absolute;
+  right: -20%;
+  width: 10%;
+  height: 15%;
+  bottom: -22%;
+  z-index: 1;
+}
+
+#fleche_sources {
+  position: absolute;
+  left: 30%;
+  width: 40%;
+  height: 50%;
+}
+
+#sourceLabel {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10%;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.21em;
+}
+
+#soundcloud .cookiePolicy {
+  visibility: hidden!important;
+  display: none!important;
 }

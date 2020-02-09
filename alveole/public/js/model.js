@@ -74,6 +74,8 @@ class ModelSlide extends Observable {
   prevSlide() {
     if (this.value > 0) {
       this.setValue(this.value - 1);
+    } else if (this.value == 0) {
+      this.setValue(9);
     } else {
       console.log("err: out of range");
     }
@@ -265,7 +267,7 @@ class ModelSlide2 extends Observable {
         let snap = Snap(container);
         snap.append(data);
       });
-      
+
       this.instanciated = true;
     }
     else {
@@ -664,10 +666,12 @@ class ModelLastSlide extends Observable {
   // values
   bool;
   text;
+  instanciated;
 
   constructor() {
     super();
     this.bool = false;
+    this.instanciated = false;
   }
 
   getValue() {
@@ -682,15 +686,36 @@ class ModelLastSlide extends Observable {
     }
   }
 
-  loadContent(div) {
-    Snap.load('data/header_brand.svg', function(data) {
-      let snap = Snap(div.children[1]);
-      snap.append(data);
-    });
-    Snap.load('data/tournage_valide.svg', function(data) {
-      let snap = Snap(div.children[3]);
-      snap.append(data);
-    });
+  loadContent(div1, div2, div3) {
+    if (this.instanciated == false) {
+      Snap.load('data/header_brand.svg', function(data) {
+        let snap = Snap(div1);
+        snap.append(data);
+      });
+      Snap.load('data/fleche.svg', (data) => {
+        let snap = Snap(div2);
+        data.node.id = 'fleche_website';
+        data.node.addEventListener('click', () => {
+          window.open(this.text.url);
+        });
+        snap.append(data);
+      });
+      Snap.load('data/fleche.svg', function(data) {
+        let snap = Snap(div3);
+        data.node.id = 'fleche_sources';
+        data.node.addEventListener('click', () => {
+          console.log('sources');
+        });
+        snap.append(data);
+      });
+      this.instanciated = true;
+    } else {
+      console.log('err : already instanciated');
+    }
+  }
+
+  setDestroyed() {
+    this.instanciated = false;
   }
 }
 
