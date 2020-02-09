@@ -14,7 +14,7 @@ $header_top.find('a').on('click', function() {
 });
 
 function goToByScroll(id) {
-  $('html,body').animate({
+  $('html,body').stop().animate({
       scrollTop: $("#" + id).offset().top
   }, 500);
 }
@@ -53,5 +53,5 @@ function set_music_play(id) {
 }
 
 /* A DESACTIVER POUR DEVELOPPER TRANQUILLEMENT */
-/*const container = document.querySelector("#container");
-bodyScrollLock.disableBodyScroll(container);*/
+const container = document.querySelector("#container");
+bodyScrollLock.disableBodyScroll(container);

@@ -4,7 +4,8 @@ $(document).ready(function() {
 
     var menuFixed = false;
     var $exp_selected = undefined;
-    // var scrollDone = false;
+    var canScroll = false;
+    var countScroll = 0;
 
     $(".expChoice").click(function() {
         bodyScrollLock.enableBodyScroll(menuSection);
@@ -15,35 +16,54 @@ $(document).ready(function() {
         $exp_selected.removeClass("expChoiceHidden");
         $exp_selected.addClass("expChoiceExpand");
 
-
+        let mouseAnimated = undefined;
+        setTimeout(function() {
+          mouseAnimated = document.querySelector("#mouse-animated-menuDance");
+          mouseAnimated.classList.remove('fadeOut');
+          mouseAnimated.classList.add('fadeInUp');
+          canScroll = true;
+        }, 5000);
         $(window).scroll(function(e) {
-            // if (!scrollDone) {
-
+          if (!canScroll) {
+            $('html, body').stop().animate({
+              scrollTop: $("#menu-section").offset().top
+            }, 0);
+          } else if (countScroll < 1) {
+            mouseAnimated.classList.remove('fadeInUp');
+            mouseAnimated.classList.add('fadeOut');
+            $('html, body').stop().animate({
+              scrollTop: $("#menu-section").offset().top
+            }, 0);
             let expId = $exp_selected.attr('id');
-                console.log(expId);
+            let top = 0;
 
-                let top = 0;
-                switch(expId) {
-                    case "expChoiceMusique":
-                        top = $('#music-workshop-section').offset().top;
-                        break;
-                    case "expChoiceDance":
-                        top = $('#dance-section').offset().top;
-                        break;
-                    case "expChoiceExpo":
-                        top = $('#expo-section').offset().top;
-                        break;
+            switch(expId) {
+              case "expChoiceMusique":
+                top = $('#music-workshop-section').offset().top;
+                break;
+              case "expChoiceDance":
+                top = $('#dance-section').offset().top;
+                break;
+              case "expChoiceExpo":
+                top = $('#expo-section').offset().top;
+                break;
+            }
+            $exp_selected.addClass("expChoiceOut");
+            setTimeout(function() {
+              $('html, body').animate({
+                scrollTop: top
+              }, 0, function () {
+                // Transition Experience Dance
+                if(expId == "expChoiceDance") {
+                  bodyScrollLock.disableBodyScroll("#container");
+                  goToByScroll("dance-section");
+                  $("#dance-first-slide").css("background-color", "white");
+                  $("#img-dancers").css("opacity", "1");
                 }
-                $exp_selected.addClass("expChoiceOut");
-                setTimeout(function() {
-                    $('html, body').animate({
-                            scrollTop: top
-                        },
-                        0,
-                        function () {
-                            console.log("callback");
-                        });
-                }, 750);
+              });
+              countScroll++;
+            }, 1000);
+          }
 
         });
 
