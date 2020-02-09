@@ -152,7 +152,7 @@
 
 <script>
 import SimpleText from "@/components/SimpleText";
-import Background from "@/assets/Quizz/bg-quizz.svg";
+import Background from "@/assets/Quizz/background-quizz.svg";
 import TextTitle from "@/components/TextTitle";
 import QuizzButton from "@/components/QuizzButton";
 import SimpleButton from "@/components/SimpleButton";

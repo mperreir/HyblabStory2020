@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import Background from "@/assets/End/bg-end.svg";
+import Background from "@/assets/End/background-end.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import LogoPolytech from "@/assets/End/logo-polytech.svg";
