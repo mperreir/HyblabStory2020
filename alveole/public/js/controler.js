@@ -3,8 +3,6 @@ class SuperControler {
   constructor(modelSlides) {
     // Header
     let viewHeader = new ViewHeader();
-    let updateHeader = new UpdateHeader(modelSlides, viewHeader.div);
-    modelSlides.addObservers(updateHeader);
 
     // Footer
     var viewFooter = new ViewFooter();
@@ -78,7 +76,7 @@ class SuperControler {
 
     // ModelLastSlide
     let modelLastSlide = new ModelLastSlide();
-    let updateLastSlide = new UpdateLastSlide(viewCenterConclusion);
+    let updateLastSlide = new UpdateLastSlide(viewCenter);
     modelLastSlide.addObservers(updateLastSlide);
 
     // Mediator of slide model
@@ -189,6 +187,9 @@ class MediatorSlide extends Observer {
           this.composant.question.innerHTML = "";
           this.composant.speech.innerHTML = "";
           this.modelSlides.setFooterText(model.text.page);
+        } else if (i == 9) {
+          this.composant.question.innerHTML = "";
+          this.composant.speech.innerHTML = "";
         }
       } else {
         console.log('err : unhandled value (mediator slide controler)');
@@ -327,26 +328,6 @@ class UpdateFooter extends Observer {
     } else if (val >= 0 || val < observable.obj.length - 1) {
       this.composant.div.style.visibility = 'visible';
       this.composant.text.innerHTML = observable.getFooterText()["down"];
-    } else {
-      console.log("err : value not handled (updateFooter observer)");
-    }
-  }
-}
-
-class UpdateHeader extends Observer {
-
-  constructor(model, composant) {
-    super();
-    this.model = model;
-    this.composant = composant;
-  }
-
-  update(observable, object) {
-    let val = observable.getValue();
-    if (val == observable.obj.length - 1) {
-      this.composant.style.visibility = 'hidden';
-    } else if (val >= 0 || val < observable.obj.length - 1) {
-      this.composant.style.visibility = 'visible';
     } else {
       console.log("err : value not handled (updateFooter observer)");
     }
@@ -780,15 +761,75 @@ class UpdateLastSlide extends Observer {
     let val = observable.getValue();
 
     if (val == true) {
-      this.composant.div.style.visibility = "visible";
-      observable.loadContent(this.composant.div);
-      this.frame = document.createElement('iframe');
-      this.frame.setAttribute('src', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/685582138&amp;color=807aa7');
-      this.frame.setAttribute('id', 'soundcloud');
-      this.composant.div.appendChild(this.frame);
+
+      let container = document.createElement('div');
+      container.setAttribute('id', 'lastSlide');
+
+      let title = document.createElement('div');
+      title.setAttribute('id', 'title');
+      title.setAttribute('class', 'unselectable');
+
+      title.innerHTML = observable.text.title;
+
+      let speech = document.createElement('div');
+      speech.setAttribute('id', 'speech');
+      speech.setAttribute('class', 'unselectable');
+
+      speech.innerHTML = observable.text.speech;
+
+      let logo = document.createElement('div');
+      logo.setAttribute('id', 'logo_alveole');
+
+      let motto = document.createElement('div');
+      motto.setAttribute('id', 'motto');
+      motto.setAttribute('class', 'unselectable');
+
+      motto.innerHTML = observable.text.motto;
+
+      let soundcloud = document.createElement('div');
+      soundcloud.setAttribute('id', 'soundcloud');
+
+      let alveole = document.createElement('div');
+      alveole.setAttribute('id', 'alveole');
+
+      let website = document.createElement('div');
+      website.setAttribute('id', 'website');
+      website.setAttribute('class', 'unselectable');
+
+      website.innerHTML = observable.text.website;
+
+      alveole.appendChild(website);
+
+      let sources = document.createElement('div');
+      sources.setAttribute('id', 'sources');
+
+      let validate = document.createElement('div');
+      validate.setAttribute('id', 'sourceLabel');
+      validate.setAttribute('class', 'unselectable');
+      validate.innerHTML = 'sources';
+
+      sources.appendChild(validate);
+
+      this.composant.div.appendChild(container);
+
+      container.appendChild(title);
+      container.appendChild(speech);
+      container.appendChild(logo);
+      container.appendChild(motto);
+      container.appendChild(soundcloud);
+      container.appendChild(alveole);
+      container.appendChild(sources);
+
+      observable.loadContent(logo, alveole, sources);
+
+      let frame = document.createElement('iframe');
+      frame.setAttribute('src', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/685582138&amp;color=807aa7');
+      frame.setAttribute('id', 'soundcloud');
+      container.appendChild(frame);
+
     } else if (val == false) {
-      this.composant.div.removeChild(this.frame);
-      this.composant.div.style.visibility = "hidden";
+      this.composant.div.querySelector('#lastSlide').remove();
+      observable.setDestroyed();
     }
   }
 }

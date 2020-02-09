@@ -179,9 +179,10 @@
     }
   },
   "lastSlide": {
-    "theme": "Vous êtes arrivé à la <span style='color:#BDB4F3'>fin du processus</span> de réalisation sonore.",
-    "header-speech": "Lors de votre parcours vous avez pu vous avez pu remarquer<br>que La réalisation d’un podcast est un <span style='color:#BDB4F3'>processus complexe et chronophage</span>.<br>Alvéole Média vous propose un accompagnement personnalisé<br>et adapté à vos besoins.",
-    "center-speech": "Choisissez notre expertise, faites vous entendre autrement !",
-    "footer-speech": "Accedez au site d’alvéole"
+    "title": "Vous êtes arrivé à la <span style='color:#BDB4F3'>fin du processus</span> de réalisation sonore.",
+    "speech": "Lors de votre parcours vous avez pu vous avez pu remarquer<br>que La réalisation d’un podcast est un <span style='color:#BDB4F3'>processus complexe et chronophage</span>.<br>Alvéole Média vous propose un accompagnement personnalisé<br>et adapté à vos besoins.",
+    "motto": "Choisissez notre expertise,<br><span style='color:#BDB4F3'>faites vous entendre autrement !</span>",
+    "website": "Accedez au site d’alvéole",
+    "url": "http://alveole.media"
   }
 }
