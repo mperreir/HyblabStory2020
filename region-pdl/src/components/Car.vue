@@ -1,8 +1,7 @@
 <template>
   <div>
-    <CarBodySVG class="car-svg " :class="{rollingOut: rollingOut}"/>
-    <!-- <CarGirlSVG v-if="getChatacterGender === 'mme'" class="car-svg " :class="{rollingOut: rollingOut}"/>
-    <CarBoySVG v-else class="car-svg " :class="{rollingOut: rollingOut}"/> -->
+    <CarGirlSVG v-if="getChatacterGender === 'mme'" class="car-svg" :class="{rollingOut: rollingOut}"/>
+    <CarBoySVG v-else class="car-svg car-svg-boy" :class="{rollingOut: rollingOut}"/>
     <WheelSVG class="wheel left-wheel" :class="{moving: moving, rollingOutLeft: rollingOut}" />
     <WheelSVG class="wheel right-wheel" :class="{moving: moving, rollingOutRight: rollingOut}" />
   </div>
@@ -11,17 +10,15 @@
 <script>
 import { mapGetters } from "vuex";
 
-// import CarBoySVG from "@/assets/Car/car-boy.svg";
-// import CarGirlSVG from "@/assets/Car/car-girl.svg";
-import CarBodySVG from "@/assets/Car/car-body.svg";
+import CarBoySVG from "@/assets/Car/car-boy.svg";
+import CarGirlSVG from "@/assets/Car/car-girl.svg";
 import WheelSVG from "@/assets/Car/wheel.svg";
 
 export default {
   components: {
     WheelSVG,
-    CarBodySVG,
-    // CarGirlSVG,
-    // CarBoySVG
+    CarGirlSVG,
+    CarBoySVG
   },
   props: ['moving', 'rollingOut'],
   data: () => ({}),
@@ -41,6 +38,12 @@ export default {
   z-index: 3;
 
   transition: left 5s linear;
+}
+
+.car-svg-boy {
+  width: 40%;
+  left: 28.5%;
+  top: 67%;
 }
 
 .wheel {
