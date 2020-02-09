@@ -1,6 +1,9 @@
 #logo-sorties {
-  text-align: center;
-  top: 0;
+  position: absolute;
+  left: 0;
+  top: 20%;
+
+  z-index: 2;
 }
 
 #presentation-section {
@@ -28,4 +31,31 @@
 
 #arrow-down-presentation {
   margin-top: 20px;
+}
+
+.scroll-right {
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  overflow: hidden;
+  position: absolute;
+  height: 57px;
+
+  z-index: 1;
+}
+.scroll-right marquee {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "NimbusSanL";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 57px;
+  white-space: nowrap;
+
+  height: 57px;
+  color: #F6F5F5;
+
 }
