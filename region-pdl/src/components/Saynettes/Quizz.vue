@@ -146,6 +146,7 @@
     </transition>
 
     <Background class="svg" />
+
   </div>
 </template>
 
@@ -163,7 +164,7 @@ export default {
     SimpleText,
     TextTitle,
     QuizzButton,
-    SimpleButton
+    SimpleButton,
   },
   data: () => ({
     //Handle if answer is true or not

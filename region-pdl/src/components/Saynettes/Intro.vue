@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Background from "@/assets/background-intro.svg";
+import Background from "@/assets/Home/background-home.svg";
 import Tree from "@/assets/Home/tree-home.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
@@ -51,12 +51,36 @@ export default {
 
 .poly {
   transform: translateY(0) rotate(-0.5deg);
-  /* -webkit-animation: anim 1s linear infinite;
-  -moz-animation: anim 1s linear infinite;
-  -ms-animation: anim 1s linear infinite; */
+  -webkit-animation: anim 2s ease-in-out infinite alternate;
+  -moz-animation: anim 2s ease-in-out infinite alternate;
+  -ms-animation: anim 2s ease-in-out infinite alternate;
   animation: anim 2s ease-in-out infinite alternate;
 }
 
+@-webkit-keyframes anim {
+  form {
+    transform: translateY(0) rotate(-0.5deg);
+  }
+  from {
+    transform: translateY(1vh) rotate(0.5deg);
+  }
+}
+@-moz-keyframes anim {
+  form {
+    transform: translateY(0) rotate(-0.5deg);
+  }
+  from {
+    transform: translateY(1vh) rotate(0.5deg);
+  }
+}
+@-ms-keyframes anim {
+  form {
+    transform: translateY(0) rotate(-0.5deg);
+  }
+  from {
+    transform: translateY(1vh) rotate(0.5deg);
+  }
+}
 @keyframes anim {
   form {
     transform: translateY(0) rotate(-0.5deg);
