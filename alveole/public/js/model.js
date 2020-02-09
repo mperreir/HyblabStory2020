@@ -383,6 +383,14 @@ class ModelSlide4 extends Observable {
     return this.bool;
   }
 
+  getChoice() {
+    return this.choice;
+  }
+
+  setChoice(val) {
+
+  }
+
   setValue(val) {
     if (val != this.bool) {
       this.bool = val;
@@ -399,7 +407,8 @@ class ModelSlide4 extends Observable {
       autoplay: false,
       path: 'data/tournage-1.json',
       rendererSettings: {
-        id: 'slide4_installer'
+        id: 'slide4_installer',
+        className:'animation'
       }
     });
     this.repetition = bodymovin.loadAnimation({
@@ -409,7 +418,8 @@ class ModelSlide4 extends Observable {
       autoplay: false,
       path: 'data/tournage-2.json',
       rendererSettings: {
-        id: 'slide4_repetition'
+        id: 'slide4_repetition',
+        className:'animation'
       }
     });
     this.vocalise = bodymovin.loadAnimation({
@@ -419,7 +429,8 @@ class ModelSlide4 extends Observable {
       autoplay: false,
       path: 'data/tournage-3.json',
       rendererSettings: {
-        id: 'slide4_vocalise'
+        id: 'slide4_vocalise',
+        className:'animation'
       }
     });
     this.interview = bodymovin.loadAnimation({
@@ -429,7 +440,8 @@ class ModelSlide4 extends Observable {
       autoplay: false,
       path: 'data/tournage-4.json',
       rendererSettings: {
-        id: 'slide4_interview'
+        id: 'slide4_interview',
+        className:'animation'
       }
     });
     return {
@@ -445,32 +457,27 @@ class ModelSlide4 extends Observable {
       Snap.load('data/slide4_checkbox.svg', function(data) {
         let snap = Snap(checkbox);
         snap.append(data);
+        data.node.addEventListener('click', function(e) {
+          $(this).toggleClass('svg_checkbox_checked');
+          $(this).parent().parent().find(".animation").toggleClass('animation_checked');
+          $(this).parent().parent().find(".slide4Label").toggleClass('slide4Label_checked');
+        });
       });
     });
   }
 
-  loadValide(container) {
-    let div_valide = document.createElement('div');
-    div_valide.setAttribute('id','slide4_valide');
-    container.appendChild(div_valide);
+  loadValide(div_valide) {
     Snap.load('data/tournage_valide.svg', function(data) {
       let snap = Snap(div_valide);
       snap.append(data);
     });
-    div_valide.addEventListener('click', function() {
-      console.log('recu');
-    });
-    let div_valide_text = document.createElement('div');
-    div_valide_text.setAttribute('id','slide4_valide_text');
-    container.appendChild(div_valide_text);
-    div_valide_text.innerHTML = 'valider';
   }
 
-  load(container, divs, checkboxes) {
+  load(container, divs, checkboxes, div_valide) {
     if (this.instanciated == false) {
       let animes = this.loadAnime(divs);
       this.loadCheckbox(checkboxes);
-      this.loadValide(container);
+      this.loadValide(div_valide);
       this.instanciated = true;
       return animes;
     } else {

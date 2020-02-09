@@ -53,12 +53,12 @@ class SuperControler {
 
     // ModelSlide4
     let modelSlide4 = new ModelSlide4();
-    let updateSlide4 = new UpdateSlide4(viewCenter.div);
+    let updateSlide4 = new UpdateSlide4(modelPopup, viewCenter);
     modelSlide4.addObservers(updateSlide4);
 
     // ModelSlide5
     let modelSlide5 = new ModelSlide5();
-    let updateSlide5 = new UpdateSlide5(viewCenter.div);
+    let updateSlide5 = new UpdateSlide5(modelPopup, viewCenter);
     modelSlide5.addObservers(updateSlide5);
 
     // ModelSlide6
@@ -382,7 +382,6 @@ class UpdateSlide2 extends Observer {
     } else if (val == false) {
        this.composant.querySelector("#slide2_micros").remove();
        observable.setDestroyed();
-       //observable.deleteWires();
     }
   }
 }
@@ -446,8 +445,9 @@ class UpdateSlide3 extends Observer {
 
 class UpdateSlide4 extends Observer {
 
-  constructor(composant) {
+  constructor(model, composant) {
     super();
+    this.model = model;
     this.composant = composant;
   }
 
@@ -458,7 +458,26 @@ class UpdateSlide4 extends Observer {
 
       let container = document.createElement('div');
       container.setAttribute('id', 'slide4_tournage');
-      this.composant.appendChild(container);
+      this.composant.div.appendChild(container);
+
+      let div_valide = document.createElement('div');
+      div_valide.setAttribute('id','slide4_valide');
+      container.appendChild(div_valide);
+
+      div_valide.addEventListener('click', () => {
+        let checked = document.getElementsByClassName('slide4Label_checked');
+        if (checked.length >= 1) {
+          observable.setChoice();
+          this.model.setValue(true);
+        } else {
+          console.log('err : expeted checked animation');
+        }
+      });
+
+      let div_valide_text = document.createElement('div');
+      div_valide_text.setAttribute('id','slide4_valide_text');
+      container.appendChild(div_valide_text);
+      div_valide_text.innerHTML = 'valider';
 
       let divs = {};
 
@@ -470,7 +489,7 @@ class UpdateSlide4 extends Observer {
         etape.setAttribute('class', 'slide4Animations');
 
         let div_checkbox = document.createElement('div');
-        div_checkbox.setAttribute('class','slide4_checkbox_empty');
+        div_checkbox.setAttribute('class','slide4_checkbox');
         etape.appendChild(div_checkbox);
 
         let text = document.createElement('div');
@@ -483,7 +502,7 @@ class UpdateSlide4 extends Observer {
         checkboxes[i] = div_checkbox;
       };
 
-      let animations = observable.load(container, divs, checkboxes);
+      let animations = observable.load(container, divs, checkboxes, div_valide);
 
       Object.keys(animations).forEach( function(key) {
         animations[key].addEventListener('DOMLoaded', function() {
@@ -496,14 +515,45 @@ class UpdateSlide4 extends Observer {
         });
       });
 
-      
-
     } else if (val == false) {
       observable.destroy();
-      this.composant.querySelector("#slide4_tournage").remove();
+      this.composant.div.querySelector("#slide4_tournage").remove();
     }
   }
 
+}
+
+
+
+class UpdateSlide5 extends Observer {
+
+  constructor(model, composant) {
+    super();
+    this.model = model;
+    this.composant = composant;
+  }
+
+  update(observable, object) {
+    let val = observable.getValue();
+
+    if (val == true) {
+
+      let container = document.createElement('div');
+      container.setAttribute('id', 'slide5_derush');
+      this.composant.div.appendChild(container);
+
+      for (let i = 1; i < 4; i++) {
+        let label = document.createElement('div');
+        label.setAttribute('id', 'slide5_' + i + '_label');
+        label.setAttribute('class', 'slide5Label');
+        label.innerHTML = observable.text.labels[i];
+        container.appendChild(label);
+      }
+
+    } else if (val == false) {
+      this.composant.div.querySelector('#slide5_derush').remove();
+    }
+  }
 }
 
 class UpdateSlide6 extends Observer {
@@ -528,19 +578,6 @@ class UpdateSlide6 extends Observer {
        this.composant.querySelector("#slide6_mixtable").remove();
        observable.setDestroyed();
     }
-  }
-}
-
-
-
-class UpdateSlide5 extends Observer {
-
-  constructor() {
-    super();
-  }
-
-  update(observable, object) {
-
   }
 }
 

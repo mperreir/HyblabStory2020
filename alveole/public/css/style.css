@@ -235,26 +235,27 @@ footer {
   background: rgba(0, 0, 0, 0.7);
   visibility: hidden;
   opacity: 0;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(2px);
+  z-index: 1;
 }
 
 /* Modal Content/Box */
 .modal-content {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   top: 25%;
   left: 32%;
   width: 36%;
   height: 61%;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.6);
   border: 3px solid #FFFFFF;
   border-radius: 50%;
 }
 
 .modal-content #title {
-  position: absolute;
-  top: 15%;
-  width: 100%;
-  height: 20%;
   font-size: 20%;
   font-family: Oswald;
   font-style: normal;
@@ -266,11 +267,6 @@ footer {
 }
 
 .modal-content #main_text {
-  position: absolute;
-  top: 30%;
-  width: 90%;
-  left: 5%;
-  height: 10%;
   font-size: 13%;
   font-family: Oswald;
   font-style: normal;
@@ -282,11 +278,6 @@ footer {
 }
 
 .modal-content #sub_text {
-  position: absolute;
-  top: 45%;
-  height: 25%;
-  width: 80%;
-  left: 10%;
   font-size: 15%;
   font-family: Open Sans;
   font-style: normal;
@@ -296,7 +287,7 @@ footer {
 }
 
 #button-next {
-  position: absolute;
+  flex: shrink;
   bottom: 5%;
   width: 12%;
   height: 20%;
@@ -305,7 +296,6 @@ footer {
 
 
 #svg_skip {
-  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -478,7 +468,7 @@ dessus de l'apect ratio 16/9 */
 .center_question {
   position: absolute;
   width: 100%;
-  height: 20%;
+  height: 15%;
   left: 0%;
   top: 0%;
   font-family: Oswald; /*Google font*/
@@ -496,7 +486,7 @@ dessus de l'apect ratio 16/9 */
   width: 100%;
   height: 20%;
   left: 0%;
-  top: 20%;
+  top: 15%;
   font-family: Open sans; /*Google font*/
   font-style: normal;
   font-weight: 500;
@@ -552,7 +542,7 @@ dessus de l'apect ratio 16/9 */
 .slide4Label {
   position: absolute;
   top: 5%;
-  height: 30%;
+  height: 25%;
   width: 100%;
   font-family: Oswald;
   font-style: normal;
@@ -561,6 +551,23 @@ dessus de l'apect ratio 16/9 */
   text-align: center;
   letter-spacing: 0.21em;
   text-transform: uppercase;
+  color: #fff;
+  z-index: +1;
+}
+
+.slide4Label_checked {
+  position: absolute;
+  top: 5%;
+  height: 25%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+  color: #9E90F2;
   z-index: +1;
 }
 
@@ -569,6 +576,16 @@ dessus de l'apect ratio 16/9 */
   height: 60%;
   width: 18%;
   top: 30%;
+}
+
+.animation, .animation *{
+  fill: #fff;
+  stroke: #fff;
+}
+
+.animation_checked, .animation_checked *{
+  fill: #9E90F2;
+  stroke: #9E90F2;
 }
 
 #etape1 {
@@ -597,7 +614,7 @@ dessus de l'apect ratio 16/9 */
   width: 100%!important;
   height: 50%!important;
   top: 30%;
-  z-index: 10;
+  z-index: 1;
 }
 
 #slide4_repetition {
@@ -606,7 +623,7 @@ dessus de l'apect ratio 16/9 */
   width: 100%!important;
   height: 50%!important;
   top: 30%;
-  z-index: 10;
+  z-index: 1;
 }
 
 #slide4_vocalise {
@@ -615,7 +632,7 @@ dessus de l'apect ratio 16/9 */
   width: 100%!important;
   height: 50%!important;
   top: 30%;
-  z-index: 10;
+  z-index: 1;
 }
 
 #slide4_interview {
@@ -624,15 +641,15 @@ dessus de l'apect ratio 16/9 */
   width: 100%!important;
   height: 50%!important;
   top: 30%;
-  z-index: 10;
+  z-index: 1;
 }
 
-.slide4_checkbox_empty {
+.slide4_checkbox {
   position: absolute;
   bottom: 0%;
   width: 100%;
   height: 20%;
-  z-index: 10;
+  z-index: 1;
 }
 
 .svg_checkbox {
@@ -641,7 +658,7 @@ dessus de l'apect ratio 16/9 */
   bottom: 0%;
   width: 20%;
   left: 40%;
-  z-index: 11;
+  z-index: 1;
 }
 
 .svg_checkbox_checked {
@@ -651,7 +668,7 @@ dessus de l'apect ratio 16/9 */
   width: 20%;
   left: 40%;
   fill: #9E90F2;
-  z-index: 11;
+  z-index: 1;
 }
 
 #slide4_valide{
@@ -660,7 +677,7 @@ dessus de l'apect ratio 16/9 */
   height: 10%;
   left: 115%;
   top: 62%;
-  z-index: 10;
+  z-index: 1;
 }
 
 #slide4_flech{
@@ -686,5 +703,36 @@ dessus de l'apect ratio 16/9 */
   letter-spacing: 0.21em;
 
   color: #FFFFFF;
-  z-index: 10;
+  z-index: 1;
+}
+
+.slide5Label {
+  position: absolute;
+  top: 50%;
+  width: 20%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20%;
+  line-height: 172%;
+  text-align: center;
+}
+
+#slide5_1_label {
+  left: 0;
+}
+
+#slide5_2_label {
+  left: 40%;
+}
+
+#slide5_3_label {
+  right: 0;
+}
+
+#slide6_mixtable {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  top: 30%;
 }
