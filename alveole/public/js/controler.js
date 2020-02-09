@@ -710,8 +710,6 @@ class UpdateLastSlide extends Observer {
       this.frame.setAttribute('src', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/685582138&amp;color=807aa7');
       this.frame.setAttribute('id', 'soundcloud');
       this.composant.div.appendChild(this.frame);
-      this.arrow = document.createElement('div');
-      this.composant.div.appendChild(this.arrow);
     } else if (val == false) {
       this.composant.div.removeChild(this.frame);
       this.composant.div.style.visibility = "hidden";

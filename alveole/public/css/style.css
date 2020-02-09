@@ -806,3 +806,7 @@ dessus de l'apect ratio 16/9 */
   width: 70%;
   height: 15%;
 }
+
+#sources_arrow {
+  position: absolute;
+}

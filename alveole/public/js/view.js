@@ -167,16 +167,20 @@ class ViewCenterConclusion {
     this.footer_speech = document.createElement('div');
     this.footer_speech.setAttribute('class', 'footer_speech');
 
+    this.arrow = document.createElement('div');
+    this.arrow.setAttribute('id', 'sources_arrow');
+    this.arrow.innerHTML = 'sources'
+    let that = this;
+    Snap.load('data/tournage_valide.svg', function(data) {
+      let snap = Snap(that.arrow);
+      snap.append(data);
+    });
+
     this.div.appendChild(this.theme);
     this.div.appendChild(this.center_speech1);
     this.div.appendChild(this.center_speech2);
     this.div.appendChild(this.footer_speech);
-
-    let that = this;
-    Snap.load('data/tournage_valide.svg', function(data) {
-      let snap = Snap(that.div.children[4]);
-      snap.append(data);
-    });
+    this.div.appendChild(this.arrow);
 
     this.main.appendChild(this.div);
   }
