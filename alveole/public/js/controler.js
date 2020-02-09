@@ -8,8 +8,7 @@ class SuperControler {
 
     // Footer
     var viewFooter = new ViewFooter();
-    let updateFooter = new UpdateFooter(viewFooter.div);
-    modelSlides.addObservers(updateFooter);
+    let updateFooter = new UpdateFooter(viewFooter);
 
     // Center
     var viewCenter = new ViewCenter();
@@ -80,7 +79,7 @@ class SuperControler {
     modelLastSlide.addObservers(updateLastSlide);
 
     // Mediator of slide model
-    let mediatorSlide = new MediatorSlide(  modelSlides,
+    this.mediatorSlide = new MediatorSlide(  modelSlides,
                                             modelIntroSlide,
                                             modelSlide1,
                                             modelSlide2,
@@ -93,7 +92,8 @@ class SuperControler {
                                             modelLastSlide,
                                             viewCenter
                                           );
-    modelSlides.addObservers(mediatorSlide);
+    modelSlides.addObservers(this.mediatorSlide);
+    modelSlides.addObservers(updateFooter);
 
     let mediatorModal = new MediatorModal(  modelSlides,
                                             modelIntroSlide,
@@ -122,11 +122,16 @@ class SuperControler {
       modelPopup.setValue(false);
     });
   }
+
+  loadSlideMediator() {
+    return this.mediatorSlide.loadText();
+  }
+
 }
 
 class MediatorSlide extends Observer {
 
-  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewCenter) {
+   constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewCenter) {
 
     super();
 
@@ -143,8 +148,9 @@ class MediatorSlide extends Observer {
       "9": modelLastSlide
     };
 
-    this.loadText(this.slides);
+    // this.loadText();
     this.composant = viewCenter;
+    this.modelSlides = modelSlides;
   }
 
   update(observable, object) {
@@ -160,24 +166,25 @@ class MediatorSlide extends Observer {
         if (i > 0 && i < 9) {
           this.composant.question.innerHTML = model.text.question;
           this.composant.speech.innerHTML = model.text.speech;
+          this.modelSlides.setFooterText(model.text.page);
         } else if (i == 9 || i == 0) {
           this.composant.question.innerHTML = "";
           this.composant.speech.innerHTML = "";
+          console.log(model);
+          this.modelSlides.setFooterText(model.text.page);
         }
       } else {
-        console.log('err : unhandled value (mediator slide controler)')
+        console.log('err : unhandled value (mediator slide controler)');
       }
     }
   }
 
-  loadText(slides) {
-    $.getJSON("data/text.json", function(data) {
-
+  loadText() {
+    return fetchJSON("data/text.json").then( (data) => {
       const entries = Object.entries(data);
       let count = 0;
-
       for (const [i, text] of entries) {
-        slides[count].text = text;
+        this.slides[count].text = text;
         count++;
       }
     });
@@ -232,20 +239,18 @@ class MediatorModal extends Observer {
 
 class UpdateFooter extends Observer {
 
-  constructor(div, svg) {
+  constructor(composant) {
     super();
-    this.div = div;
-    this.svg = svg;
+    this.composant = composant;
   }
 
   update(observable, object) {
     let val = observable.getValue();
-    if (val == 0 || val == observable.obj.length - 1) {
-      this.div.style.visibility = 'hidden';
-    } else if (val > 0 || val < observable.obj.length - 1) {
-      this.div.style.visibility = 'visible';
-      let titles = Object.values(observable.getFooterValues()).toString();
-      document.getElementById('footer_titles').textContent = titles;
+    if (val == observable.obj.length - 1) {
+      this.composant.div.style.visibility = 'hidden';
+    } else if (val >= 0 || val < observable.obj.length - 1) {
+      this.composant.div.style.visibility = 'visible';
+      this.composant.text.innerHTML = observable.getFooterText()["down"];
     } else {
       console.log("err : value not handled (updateFooter observer)");
     }
@@ -262,9 +267,9 @@ class UpdateHeader extends Observer {
 
   update(observable, object) {
     let val = observable.getValue();
-    if (val == 0 || val == observable.obj.length - 1) {
+    if (val == observable.obj.length - 1) {
       this.composant.style.visibility = 'hidden';
-    } else if (val > 0 || val < observable.obj.length - 1) {
+    } else if (val >= 0 || val < observable.obj.length - 1) {
       this.composant.style.visibility = 'visible';
     } else {
       console.log("err : value not handled (updateFooter observer)");

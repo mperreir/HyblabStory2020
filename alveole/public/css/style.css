@@ -51,8 +51,8 @@ main {
 
 footer {
   position: absolute;
-  top: 80%;
-  height: 20%;
+  top: 86%;
+  height: 14%;
   width: 100%;
   background-color: black;
 }
@@ -70,9 +70,19 @@ footer {
   left: 0;
 }
 
-#svg_ellipse text {
+#footer_text {
   position: absolute;
-  left: 50%;
+  height: 40%;
+  width: 40%;
+  left: 30%;
+  top: 40%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 #svg_ellipse_big_circle {
