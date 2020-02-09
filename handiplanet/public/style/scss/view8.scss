@@ -15,6 +15,17 @@
     border-bottom: 2px solid #5A8D8C;
     position: relative;
 
+    #view-8-text {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+
+      em{
+        font-weight: bold;
+        color: #CB563E;
+      }
+    }
+
     #view-8-computer-container {
       position: absolute;
       bottom: 0px;

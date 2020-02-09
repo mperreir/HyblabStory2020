@@ -90,7 +90,7 @@ window.addEventListener('load', function () {
 
     const toggle = document.getElementById('tog');
     const switchButton = document.getElementById('switch');
-    const cont = false;
+    let cont = false;
     switchButton.onclick = contraste;
 
     const body = this.document.body;
@@ -167,7 +167,7 @@ function setOverlayButton(text, icon) {
 
 function hideOverlayButton() {
     const button = document.getElementById('overlay-next-button');
-    if(button != null){
+    if (button != null){
         button.style.transition = "opacity 0.2s";
         button.style.opacity = "0";
         setTimeout(() => {
