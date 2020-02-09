@@ -63,12 +63,12 @@
     },
     "choices": {
       "2": {
-        "main": "Alvéole dispose d’un catalogue vocal aux registres très différents.",
-        "sub": "L’agence vous propose un panel de voix afin de sélectionner la plus adaptée à votre demande."
+        "main": "Alvéole dispose d’un catalogue<br>vocal aux registres très différents.",
+        "sub": "L’agence vous propose un panel<br>de voix afin de sélectionner la plus adaptée<br>à votre demande."
       },
       "1": {
-        "main": "la justesse de l’interprétation risque d’être mise en jeu.",
-        "sub": "Ce choix pourrait donc desservir le podcast. C’est pour ça qu’Alvéole dispose d’un catalogue vocal aux registres très différents. L’agence vous propose un panel de voix afin de sélectionner la plus adaptée à votre demande."
+        "main": "la justesse de l’interprétation<br>risque d’être mise en jeu.",
+        "sub": "Ce choix pourrait donc desservir<br>le podcast. C’est pour ça qu’Alvéole<br>dispose d’un catalogue vocal<br>aux registres très différents.<br>L’agence vous propose un panel<br>de voix afin de sélectionner la plus<br>adaptée à votre demande."
       }
     }
   },
@@ -89,8 +89,8 @@
     },
     "choices": {
       "1": {
-        "main": "Placer correctement les interviewés en fonction de l’installation du matériel est primordial afin de garantir une qualité sonore optimale.",
-        "sub": "En revanche faire une répétition et des vocalises n’est pas indispensable."
+        "main": "Placer correctement les interviewés<br>en fonction de l’installation<br>du matériel est primordial afin<br>de garantir une qualité sonore optimale.",
+        "sub": "En revanche faire une répétition et des<br>vocalises n’est pas indispensable."
       }
     }
   },
@@ -104,9 +104,9 @@
     "speech": "Le dérushage est la première étape du montage. Cette étape consiste à sélectionner<br>les passages qui seront exploités dans le podcast.",
     "type": "drag",
     "labels": {
-      "1": "20 minutes",
+      "1": "5 minutes",
       "2": "10 minutes",
-      "3": "5 minutes"
+      "3": "20 minutes"
     },
     "choices": {
       "1": {
