@@ -94,16 +94,15 @@
       <!-- HOME -->
       <section class ="section" id="home-section">
         <div id="hamburger">
-          <input type="checkbox" />
+          <input type="checkbox" id="hamburger-checkbox"/>
           <span></span>
           <span></span>
           <span></span>
           <ul id="categories">
-            <li><a href="#expo" class="menuLink">Exposition</a></li>
-            <li><a href="#music" class="menuLink">Musique</a></li>
-            <li><a href="#dance" class="menuLink">Danse</a></li>
-            <li><a href="#about" class="menuLink">A propos</a></li>
-            <li><a href="#contact" class="menuLink">Contact</a></li>
+            <li><p class="menuLink" id="link-presentation">À propos</p></li>
+            <li><p class="menuLink" id="link-menu">Expériences</p></li>
+            <li><p class="menuLink" id="link-figures">Quelques chiffres</p></li>
+            <li><p class="menuLink" id="link-contact">Contact</p></li>
           </ul>
         </div>
         <div id="home-wrapper">
@@ -307,6 +306,8 @@
             <canvas id="dance-experience" resize="true"></canvas>
             <img src='img/dancers_1.png' id='img-dancers' />
             <img src='img/dancers_zoom.png' id='img-dancers-2' />
+            <img src='img/dancers_crayons.png' id='img-dancers-3' />
+            <div id="hover-dancers-crayons"></div>
             <div class="animated fadeOut" id="mouse-animated-dance">
               <div class="scroll-down">
                 <div class="mousey-black" id="mouse-down">

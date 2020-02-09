@@ -6,6 +6,8 @@ $(document).ready(function() {
     var $exp_selected = undefined;
     var canScroll = false;
     var countScroll = 0;
+    let isExperience = true;
+    let endAnimationDance = false;
 
     $(".expChoice").click(function() {
         bodyScrollLock.enableBodyScroll(menuSection);
@@ -60,7 +62,7 @@ $(document).ready(function() {
                   $("#dance-first-slide").css("background-color", "white");
                   $("#img-dancers").css("opacity", "1");
                   setTimeout(function() {
-                    const mouseAnimated = document.querySelector("#mouse-animated-dance");
+                    let mouseAnimated = document.querySelector("#mouse-animated-dance");
                     mouseAnimated.classList.remove('fadeOut');
                     mouseAnimated.classList.add('fadeInUp');
                     isExperience = false;
@@ -68,7 +70,14 @@ $(document).ready(function() {
                   $('#dance-section').on('mousewheel', function(e, delta) {
                     if(!isExperience) {
                       $("#img-dancers-2").css("opacity", "1");
-                      /*this.scrollLeft -= (delta * 60);*/
+                      let mouseAnimatedDance = document.querySelector("#mouse-animated-dance");
+                      mouseAnimatedDance.classList.remove('fadeInUp');
+                      mouseAnimatedDance.classList.add('fadeOut');
+                      $("#img-dancers-3").css("opacity", "1");
+                      mouseAnimatedDance.addEventListener('animationend', function() { endAnimationDance = true; });
+                      if(endAnimationDance) {
+                        this.scrollLeft -= (delta * 10);
+                      }
                     }
 
 
