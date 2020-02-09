@@ -16,6 +16,10 @@
         <b>des travaux d’isolation</b>.
       </p>
     </SimpleText>
+    <SimpleText :x="48" :y="67.6" :width="45">
+      ÉCOLE
+    </SimpleText>
+
     <PlusButton v-model="closePopover1" class="plus1" :width="30" @open="closePopover(1)">
       <p class="text">
         En 2018,
