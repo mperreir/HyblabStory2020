@@ -34,6 +34,7 @@
 
     <SimpleButton :text="nextButtonText" :width="23" :x="75" :y="90" @click.native="onNext" />
     <Background class="svg" />
+    <RoadSVG v-if="getChatacterGender === 'm'" class="road-svg" />
   </div>
 </template>
 
@@ -41,6 +42,7 @@
 import { mapGetters } from "vuex";
 
 import Background from "@/assets/School/background-school.svg";
+import RoadSVG from "@/assets/road.svg";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
 import PlusButton from "@/components/PlusButton";
@@ -51,7 +53,8 @@ export default {
     Background,
     SimpleText,
     PlusButton,
-    SimpleButton
+    SimpleButton,
+    RoadSVG
   },
   data: () => ({
     closePopover1: false,
@@ -112,5 +115,12 @@ export default {
 
 .data {
   color: red;
+}
+
+.road-svg {
+  position: absolute;
+  left: -1%;
+  width: 9.3%;
+  top: 86.7%;
 }
 </style>

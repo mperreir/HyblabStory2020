@@ -295,11 +295,4 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
-
-.road-svg {
-  position: absolute;
-  left: 0.5%;
-  width: 7%;
-  top: 92.5%;
-}
 </style>
