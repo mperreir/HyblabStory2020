@@ -23,16 +23,16 @@
     <PlusButton v-model="closePopover1" class="plus1" :width="30" @open="closePopover(1)">
       <p class="text">
         En 2018,
-        <span class="data">140 bâtiments publics</span> ont bénéficié des aides de la Région pour la réhabilitation et la rénovation de leur isolation pour un montant total de
+        <span class="red">140 bâtiments publics</span> ont bénéficié des aides de la Région pour la réhabilitation et la rénovation de leur isolation pour un montant total de
         <br />
-        <span class="data">21 millions d’euros.</span>
+        <span class="red">21 millions d’euros.</span>
       </p>
     </PlusButton>
 
     <PlusButton v-model="closePopover2" class="plus2" :width="30" @open="closePopover(2)">
       <p class="text">
         En 2018, l’école de M. Moreau a pu toucher
-        <span class="data">84 400 €</span> d’aides de la part de la Région.
+        <span class="red">84 400 €</span> d’aides de la part de la Région.
       </p>
     </PlusButton>
 
@@ -110,9 +110,5 @@ export default {
   position: absolute;
   top: 30%;
   left: 40%;
-}
-
-.data {
-  color: red;
 }
 </style>

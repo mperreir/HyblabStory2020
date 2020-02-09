@@ -43,19 +43,19 @@
     <PlusButton v-model="closePopover1" class="plus1" :width="30" @open="closePopover(1)">
       <p class="text">
         En 2018,
-        <span class="data">1077 maisons</span> ont bénéficié de cette aide à l’isolation.
+        <span class="red">1077 maisons</span> ont bénéficié de cette aide à l’isolation.
       </p>
     </PlusButton>
     <PlusButton v-model="closePopover2" class="plus2" :width="35" @open="closePopover(2)">
       <p v-if="getChatacterGender === 'm'">
         La maison de M. Moreau fait
-        <span class="data">50 m².</span> Il a eu le droit à
-        <span class="data">4000 euros</span> d’aides.
+        <span class="red">50 m².</span> Il a eu le droit à
+        <span class="red">4000 euros</span> d’aides.
       </p>
       <p v-if="getChatacterGender === 'mme'">
         La maison de Mme Dubois fait
-        <span class="data">150 m².</span> Elle a eu le droit à
-        <span class="data">4000 euros</span> d’aides.
+        <span class="red">150 m².</span> Elle a eu le droit à
+        <span class="red">4000 euros</span> d’aides.
       </p>
     </PlusButton>
     <PlusButton
@@ -67,9 +67,9 @@
     >
       <p>
         Pour une maison de
-        <span class="data">50 m².</span>
+        <span class="red">50 m².</span>
         Le gain moyen sur la consommation est de
-        <span class="data">58 %</span> après les travaux.
+        <span class="red">58 %</span> après les travaux.
       </p>
     </PlusButton>
     <PlusButton
@@ -81,9 +81,9 @@
     >
       <p>
         Pour une maison de
-        <span class="data">100 m².</span>
+        <span class="red">100 m².</span>
         Le gain moyen sur la consommation est de
-        <span class="data">51 %</span> après les travaux.
+        <span class="red">51 %</span> après les travaux.
       </p>
     </PlusButton>
     <PlusButton
@@ -95,9 +95,9 @@
     >
       <p>
         Pour une maison de
-        <span class="data">150 m².</span>
+        <span class="red">150 m².</span>
         Le gain moyen sur la consommation est de
-        <span class="data">53 %</span> après les travaux.
+        <span class="red">53 %</span> après les travaux.
       </p>
     </PlusButton>
     <SimpleButton
@@ -308,9 +308,5 @@ export default {
   100% {
     transform: scale(1);
   }
-}
-
-.data {
-  color: red;
 }
 </style>
