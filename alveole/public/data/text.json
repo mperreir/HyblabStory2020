@@ -18,7 +18,7 @@
     "choices": {
       "hotel": {
           "main": "Le choix de l'hôtel est pertinent",
-          "sub": "Si vous faites preuve de prudence lors de l’enregistrement. En effet, il est indispensable de bien isoler la pièce afin de ne pas capter de bruits parasites."
+          "sub": "Si vous faites preuve de prudence<br>lors de l’enregistrement.<br>En effet, il est indispensable de bien<br>isoler la pièce afin de ne pas capter<br>de bruits parasites."
         },
       "studio": {
           "main": "Les locaux d’Alvéole Média sont adaptés",
