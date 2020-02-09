@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  let presPos = $("#presentation-section").position();
+
   var presentationPosTop = {
     top: $('#presentation-section').offset().top,
     bottom: $('#presentation-section').offset().top + $('#presentation-section').height()
@@ -40,6 +42,21 @@ $(document).ready(function() {
     }
     storedPosTop = scrollPosTop;
     storedPosBottom = scrollPosBottom;
+  });
+
+  $(window).scroll(function(e) {
+
+    let scrollPos = $(window).scrollTop();
+
+    if (scrollPos > presPos.top - 500) {
+      e.preventDefault();
+      let presentationSection = $("#presentation-section");
+      /*bodyScrollLock.disableBodyScroll(presentationSection);
+      $('html,body').animate({
+          scrollTop: $("#presentation-section").offset().top
+      }, 400);*/
+    }
+
   });
 
 });

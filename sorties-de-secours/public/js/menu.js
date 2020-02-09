@@ -20,9 +20,9 @@ $(document).ready(function() {
       $exp_selected.removeClass("expChoiceHidden");
       $exp_selected.addClass("expChoiceExpand");
 
-      let mouseAnimatedExpo = document.querySelector("#mouse-animated-menuExpo");;
-      let mouseAnimatedMusic = document.querySelector("#mouse-animated-menuMusic");;
-      let mouseAnimatedDance = document.querySelector("#mouse-animated-menuDance");;
+      let mouseAnimatedExpo = document.querySelector("#mouse-animated-menuExpo");
+      let mouseAnimatedMusic = document.querySelector("#mouse-animated-menuMusic");
+      let mouseAnimatedDance = document.querySelector("#mouse-animated-menuDance");
       setTimeout(function() {
         mouseAnimatedExpo.classList.remove('fadeOut');
         mouseAnimatedExpo.classList.add('fadeInUp');
