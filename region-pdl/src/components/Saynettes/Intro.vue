@@ -1,22 +1,35 @@
 <template>
   <div class="saynette">
-    <TextTitle :x="7" :y="20">
+    <Background class="svg" />
+    <TextTitle
+      :x="7"
+      :y="20"
+    >
       La Région des Pays de la Loire
-      <br />pour la transition énergétique
+      <br>pour la transition énergétique
     </TextTitle>
-    <SimpleText :x="7" :y="35" :width="45">
+    <SimpleText
+      :x="7"
+      :y="35"
+      :width="45"
+    >
       Suivez la journée de Monsieur Moreau et Madame Dubois
-      <br />et découvrez comment la
+      <br>et découvrez comment la
       <b>Région des Pays de la Loire</b>
-      <br />les accompagne pour réduire leur impact énergétique et construire un avenir plus vert.
+      <br>les accompagne pour réduire leur impact énergétique et construire un avenir plus vert.
     </SimpleText>
-    <SimpleButton text="Démarrer l'aventure" :width="23" :x="7" :y="58" @click.native="onNext" />
-    <MaisonSVG class="svg" />
+    <SimpleButton
+      text="Démarrer l'aventure"
+      :width="23"
+      :x="7"
+      :y="58"
+      @click.native="onNext"
+    />
   </div>
 </template>
 
 <script>
-import MaisonSVG from "@/assets/Home/FOND HOME-01.svg";
+import Background from "@/assets/background-intro.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
@@ -24,7 +37,7 @@ import SimpleButton from "@/components/SimpleButton";
 export default {
   name: "Intro",
   components: {
-    MaisonSVG,
+    Background,
     TextTitle,
     SimpleButton,
     SimpleText
