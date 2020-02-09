@@ -170,7 +170,6 @@ class MediatorSlide extends Observer {
         } else if (i == 9 || i == 0) {
           this.composant.question.innerHTML = "";
           this.composant.speech.innerHTML = "";
-          console.log(model);
           this.modelSlides.setFooterText(model.text.page);
         }
       } else {
@@ -306,14 +305,14 @@ class UpdateSlide1 extends Observer {
       hotelDiv.setAttribute('class', 'onClick');
 
       let hotelText = document.createElement('div');
-      hotelText.setAttribute('class', 'slide1Label');
+      hotelText.setAttribute('class', 'slide1Label unselectable');
 
       let studioDiv = document.createElement('div');
       studioDiv.setAttribute('id', 'studio');
       studioDiv.setAttribute('class', 'onClick');
 
       let studioText = document.createElement('div');
-      studioText.setAttribute('class', 'slide1Label');
+      studioText.setAttribute('class', 'slide1Label unselectable');
 
       hotelDiv.appendChild(hotelText);
       studioDiv.appendChild(studioText);
@@ -410,14 +409,14 @@ class UpdateSlide3 extends Observer {
       bouche1.setAttribute('id', 'bouche1');
       bouche1.setAttribute('class', 'onClick');
       let bouche1Text = document.createElement('div');
-      bouche1Text.setAttribute('class', 'slide3Label');
+      bouche1Text.setAttribute('class', 'slide3Label unselectable');
       bouche1.appendChild(bouche1Text);
 
       let bouche2 = document.createElement('div');
       bouche2.setAttribute('id', 'bouche2');
       bouche2.setAttribute('class', 'onClick');
       let bouche2Text = document.createElement('div');
-      bouche2Text.setAttribute('class', 'slide3Label');
+      bouche2Text.setAttribute('class', 'slide3Label unselectable');
       bouche2.appendChild(bouche2Text);
 
       container.appendChild(bouche1);
@@ -479,6 +478,7 @@ class UpdateSlide4 extends Observer {
 
       let div_valide_text = document.createElement('div');
       div_valide_text.setAttribute('id','slide4_valide_text');
+      div_valide_text.setAttribute('class', 'unselectable');
       container.appendChild(div_valide_text);
       div_valide_text.innerHTML = 'valider';
 
@@ -496,7 +496,7 @@ class UpdateSlide4 extends Observer {
         etape.appendChild(div_checkbox);
 
         let text = document.createElement('div');
-        text.setAttribute('class', 'slide4Label');
+        text.setAttribute('class', 'slide4Label unselectable');
         text.innerHTML = observable.text.labels[i];
         etape.appendChild(text);
 
@@ -548,7 +548,7 @@ class UpdateSlide5 extends Observer {
       for (let i = 1; i < 4; i++) {
         let label = document.createElement('div');
         label.setAttribute('id', 'slide5_' + i + '_label');
-        label.setAttribute('class', 'slide5Label');
+        label.setAttribute('class', 'slide5Label unselectable');
         label.innerHTML = observable.text.labels[i];
         container.appendChild(label);
       }
@@ -612,7 +612,7 @@ class UpdateSlide7 extends Observer {
         let div = document.createElement('div');
         div.setAttribute('id', 'slide7_' + i + '_choice');
         let label = document.createElement('div');
-        label.setAttribute('class', 'slide7Label');
+        label.setAttribute('class', 'slide7Label unselectable');
 
         label.innerHTML = observable.text.labels[i];
 

@@ -28,6 +28,7 @@ class ViewFooter {
 
     this.text = document.createElement('div');
     this.text.setAttribute('id', 'footer_text');
+    this.text.setAttribute('class', 'unselectable');
 
     this.div.appendChild(this.text);
     footer.appendChild(this.div);
@@ -59,10 +60,10 @@ class ViewCenter {
     this.div.setAttribute('id', 'center');
 
     this.question = document.createElement('div');
-    this.question.setAttribute('class', 'center_question');
+    this.question.setAttribute('class', 'center_question unselectable');
 
     this.speech = document.createElement('div');
-    this.speech.setAttribute('class', 'center_speech');
+    this.speech.setAttribute('class', 'center_speech unselectable');
 
     this.div.appendChild(this.question);
     this.div.appendChild(this.speech);
@@ -91,11 +92,11 @@ class ViewStupidButtons {
     div.setAttribute('id', 'buttonContainers');
 
     this.prev = document.createElement('button');
-    this.prev.setAttribute('class', 'stupidButton');
+    this.prev.setAttribute('class', 'stupidButton unselectable');
     this.prev.innerHTML = "prev";
 
     this.next = document.createElement('button');
-    this.next.setAttribute('class', 'stupidButton');
+    this.next.setAttribute('class', 'stupidButton unselectable');
     this.next.innerHTML = "next";
 
     div.appendChild(this.prev);
@@ -122,14 +123,15 @@ class ViewModal {
 
     this.title = document.createElement('div');
     this.title.setAttribute('id', 'title');
+    this.title.setAttribute('class', 'unselectable');
 
     this.mainText = document.createElement('div');
     this.mainText.setAttribute('id', 'main_text');
-    this.mainText.setAttribute('class', 'text');
+    this.mainText.setAttribute('class', 'text unselectable');
 
     this.subText = document.createElement('div');
     this.subText.setAttribute('id', 'sub_text');
-    this.subText.setAttribute('class', 'text');
+    this.subText.setAttribute('class', 'text unselectable');
 
     Snap.load('data/skip_popup.svg', function(data) {
       // Adding the ellipse to the div
