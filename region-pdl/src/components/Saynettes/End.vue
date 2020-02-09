@@ -48,7 +48,6 @@
 import Background from "@/assets/End/bg-end.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
-import SimpleButton from "@/components/SimpleButton";
 import LogoPolytech from "@/assets/End/logo-polytech.svg";
 
 export default {
@@ -57,7 +56,6 @@ export default {
     Background,
     TextTitle,
     SimpleText,
-    SimpleButton,
     LogoPolytech
   },
   methods: {

@@ -32,7 +32,7 @@
       </p>
     </PlusButton>
 
-    <SimpleButton :text="nextButtonText" :width="23" :x="75" :y="90" @click.native="onNext" />
+    <SimpleButton text="Continuer l'histoire" :width="23" :x="75" :y="90" @click.native="onNext" />
     <Background class="svg" />
     <RoadSVG v-if="getChatacterGender === 'm'" class="road-svg" />
   </div>
@@ -61,12 +61,7 @@ export default {
     closePopover2: false
   }),
   computed: {
-    ...mapGetters(["getChatacterGender"]),
-    nextButtonText() {
-      return this.getChatacterGender === "m"
-        ? "Voir l'entreprise"
-        : "Voir la suite";
-    }
+    ...mapGetters(["getChatacterGender"])
   },
   methods: {
     closePopover(i) {

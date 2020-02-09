@@ -44,7 +44,7 @@
         <span class="red">56 000 tonnes de pétrole.</span>
       </p>
     </PlusButton>
-    <SimpleButton :text="nextButtonText" :width="23" :x="75" :y="90" @click.native="onNext" />
+    <SimpleButton text="Continuer l'histoire" :width="23" :x="75" :y="90" @click.native="onNext" />
     <CompanySVG class="svg" />
     <RoadSVG v-if="getChatacterGender === 'mme'" class="road-svg" />
   </div>
@@ -74,12 +74,7 @@ export default {
     closePopover4: false
   }),
   computed: {
-    ...mapGetters(["getChatacterGender"]),
-    nextButtonText() {
-      return this.getChatacterGender === "mme"
-        ? "Voir l'école"
-        : "Voir la suite";
-    }
+    ...mapGetters(["getChatacterGender"])
   },
   methods: {
     onNext() {
