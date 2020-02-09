@@ -54,6 +54,21 @@
   height: 100%;
 }
 
+.hachure {
+  z-index: 3; /* over image */
+
+  /* centering with aspect ratio */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  transition: opacity 3s;
+
+  height: 100%;
+}
+
 .menu-hover {
   z-index: 3;
 
@@ -204,6 +219,14 @@
   transition-delay: 0.5s;
 }
 
+#mouse-animated-menuExpo {
+  position: absolute;
+  bottom: 20%;
+}
+#mouse-animated-menuMusic {
+  position: absolute;
+  bottom: 20%;
+}
 #mouse-animated-menuDance {
   position: absolute;
   bottom: 20%;
