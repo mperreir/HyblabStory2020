@@ -146,17 +146,13 @@
     </transition>
 
     <Background class="svg" />
-    <RoadSVG v-if="getChatacterGender === 'mme'" class="road-svg" />
 
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-
 import SimpleText from "@/components/SimpleText";
-import Background from "@/assets/Quizz/bg-quizz.svg";
-import RoadSVG from "@/assets/road.svg";
+import Background from "@/assets/Quizz/bg-quizz-2.svg";
 import TextTitle from "@/components/TextTitle";
 import QuizzButton from "@/components/QuizzButton";
 import SimpleButton from "@/components/SimpleButton";
@@ -169,10 +165,6 @@ export default {
     TextTitle,
     QuizzButton,
     SimpleButton,
-    RoadSVG
-  },
-  computed: {
-    ...mapGetters(["getChatacterGender"])
   },
   data: () => ({
     //Handle if answer is true or not
