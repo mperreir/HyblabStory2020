@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $("#button-start").click(function(e) {
     bodyScrollLock.enableBodyScroll(container);
-    goToByScroll("loading-section");
+    goToByScroll("loading-section", 500);
 
     const soundAnimated = document.querySelector("#sound-content-loading");
     const mouseAnimated = document.querySelector("#mouse-animated");

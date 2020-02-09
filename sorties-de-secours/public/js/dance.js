@@ -9,7 +9,7 @@ $(document).ready(function() {
   $(window).scroll(function() {
     if($(window).scrollTop() > dancePosTop.top) {
       bodyScrollLock.disableBodyScroll("#container");
-      goToByScroll("dance-section");
+      goToByScroll("dance-section", 0);
       $("#dance-first-slide").css("background-color", "white");
       setTimeout(function() {
         const mouseAnimated = document.querySelector("#mouse-animated-dance");

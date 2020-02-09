@@ -18,31 +18,26 @@ $(document).ready(function() {
 
         $(window).scroll(function(e) {
             // if (!scrollDone) {
+            e.preventDefault();
 
             let expId = $exp_selected.attr('id');
                 console.log(expId);
 
-                let top = 0;
+                let section;
                 switch(expId) {
                     case "expChoiceMusique":
-                        top = $('#music-workshop-section').offset().top;
+                        section = 'music-workshop-section';
                         break;
                     case "expChoiceDance":
-                        top = $('#dance-section').offset().top;
+                        section = 'dance-section';
                         break;
                     case "expChoiceExpo":
-                        top = $('#expo-section').offset().top;
+                        section = 'expo-section';
                         break;
                 }
                 $exp_selected.addClass("expChoiceOut");
                 setTimeout(function() {
-                    $('html, body').animate({
-                            scrollTop: top
-                        },
-                        0,
-                        function () {
-                            console.log("callback");
-                        });
+                    goToByScroll(section, 0);
                 }, 750);
 
         });
@@ -60,7 +55,7 @@ $(document).ready(function() {
 
             e.preventDefault();
             bodyScrollLock.disableBodyScroll(menuSection);
-            goToByScroll("menu-section");
+            goToByScroll("menu-section", 400);
         } /*else {
             let top = $('#menu-section').offset().top;
             $('html, body').animate({
