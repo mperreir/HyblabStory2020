@@ -140,7 +140,7 @@ function nextSlide(sectionName) {
     let slideFrom = currentSlide;
     currentSlide++;
     if (currentSlide > 4) {
-        goBackToMenu();
+        goBackToMenu(sectionName);
     }
     if (slideFrom !== currentSlide) {
         goFromTo(sectionName, slideFrom, currentSlide);
@@ -227,10 +227,36 @@ function animateBrush(sectionName, id) {
 
 }
 
-function goBackToMenu() {
+function goBackToMenu(sectionName) {
     /* go to menu and remove style */
     goToByScroll('menu-section', 0);
     $('.expChoice').removeClass("expChoiceHidden");
     $('.expChoice').removeClass("expChoiceExpand");
     $('.expChoice').removeClass("expChoiceOut");
+
+    switch (sectionName) {
+      case "expo":
+        $("#hover-expo").removeClass("menu-hover");
+        $("#expChoiceExpo").unbind('click');
+        $("#hachure-expo").css("opacity", "1");
+        $("#hachure-expo").css("cursor", "auto");
+        break;
+      case "music":
+        $("#hover-music").removeClass("menu-hover");
+        $("#expChoiceMusique").unbind('click');
+        $("#hachure-music").css("opacity", "1");
+        $("#hachure-music").css("cursor", "auto");
+        break;
+      case "dance":
+        $("#hover-dance").removeClass("menu-hover");
+        $("#expChoiceDance").unbind('click');
+        $("#hachure-dance").css("opacity", "1");
+        $("#hachure-dance").css("cursor", "auto");
+        break;
+    }
+
+    /* reset parameters*/
+    currentSlide = 0;
+    scrollRecently = false;
+
 }

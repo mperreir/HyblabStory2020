@@ -95,16 +95,15 @@
       <!-- HOME -->
       <section class ="section" id="home-section">
         <div id="hamburger">
-          <input type="checkbox" />
+          <input type="checkbox" id="hamburger-checkbox"/>
           <span></span>
           <span></span>
           <span></span>
           <ul id="categories">
-            <li><a href="#expo" class="menuLink">Exposition</a></li>
-            <li><a href="#music" class="menuLink">Musique</a></li>
-            <li><a href="#dance" class="menuLink">Danse</a></li>
-            <li><a href="#about" class="menuLink">A propos</a></li>
-            <li><a href="#contact" class="menuLink">Contact</a></li>
+              <li><p class="menuLink" id="link-presentation">À propos</p></li>
+              <li><p class="menuLink" id="link-menu">Expériences</p></li>
+              <li><p class="menuLink" id="link-figures">Quelques chiffres</p></li>
+              <li><p class="menuLink" id="link-contact">Contact</p></li>
           </ul>
         </div>
         <div id="home-wrapper">
@@ -162,6 +161,8 @@
       <section class="section" id="menu-section">
 
       <div class="expChoice" id="expChoiceExpo">
+          <img class="hachure" src="img/hachure_expo.png" id="hachure-expo">
+
         <img class="img-menu-crayon" src='img/menu_expo_crayon.png'/></a>
         <img class="img-menu" id="menu-expo" src='img/menu_expo.png'/>
         <div class="menu-hover" id="hover-expo">
@@ -174,11 +175,20 @@
               et la composition de la photographie oscille entre image réelle et tableau.<br><br>
               <b>Cette série a reçu le Prix EURAZEO 2015.</b></p>
             <img class="menu-workshop-author" id="author-expo" src="img/menu_auteur_expo.png" alt="Muriel Bordier" />
+            <div class="animated fadeOut" id="mouse-animated-menuExpo">
+              <div class="scroll-down">
+                <div class="mousey-black" id="mouse-down">
+                  <div class="scroller-black"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="expChoice" id="expChoiceMusique">
+          <img class="hachure" src="img/hachure_music.png" id="hachure-music">
+
         <img class="img-menu-crayon" src='img/menu_musique_crayon.png'/>
         <img class="img-menu" id="menu-music" class="menu-img" src='img/menu_musique.jpg'/>
         <div class="menu-hover" id="hover-music">
@@ -190,11 +200,20 @@
               Un album qu’on écoute en boucle et qui nous fait fondre, onduler, groover, frémir, réfléchir,<br>
               <b>tout ça en même temps.</b></p>
             <img class="menu-workshop-author" id="author-musique" src="img/menu_auteur_musique.png" alt="Baloji" />
+            <div class="animated fadeOut" id="mouse-animated-menuMusic">
+              <div class="scroll-down">
+                <div class="mousey-black" id="mouse-down">
+                  <div class="scroller-black"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="expChoice" id="expChoiceDance">
+          <img class="hachure" src="img/hachure_dance.png" id="hachure-dance">
+
         <img class="img-menu-crayon" src='img/menu_dance_crayon.png'/>
         <img class="img-menu" id="menu-dance" class="menu-img" src='img/menu_dance.png'/>
         <div class="menu-hover" id="hover-dance">
@@ -251,9 +270,9 @@
           </div>
 
           <div class="article-img-wrapper ">
-            <img class="article-img" id="article-img-expo3" src="img/articles/expo/article3.jpeg">
-            <img class="article-img" id="article-img-expo2" src="img/articles/expo/article2.jpeg">
-            <img class="article-img" id="article-img-expo1" src="img/articles/expo/article1.jpeg">
+            <img class="article-img" id="article-img-expo3" src="img/articles/expo/article3.png">
+            <img class="article-img" id="article-img-expo2" src="img/articles/expo/article2.png">
+            <img class="article-img" id="article-img-expo1" src="img/articles/expo/article1.png">
             <img class="article-img article-img-crayon" id="article-img-crayon-expo" src="img/articles/expo/crayon.png">
           </div>
           <div class="article-text-wrapper" id="article-text-wrapper-expo">
@@ -384,6 +403,8 @@
             <canvas id="dance-experience" resize="true"></canvas>
             <img src='img/dancers_1.png' id='img-dancers' />
             <img src='img/dancers_zoom.png' id='img-dancers-2' />
+            <img src='img/dancers_crayons.png' id='img-dancers-3' />
+            <div id="hover-dancers-crayons"></div>
             <div class="animated fadeOut" id="mouse-animated-dance">
               <div class="scroll-down">
                 <div class="mousey-black" id="mouse-down">
@@ -487,21 +508,32 @@
       <!-- END MUSIC WORKSHOP -->
     </div>
     <!-- END NON SCROLLABLE -->
+
+    <section class="section" id="figures-section">
+        <div class="textFigure">
+            <div id="modify">
+                <p id="le_figure">15</p>
+                <div id="contentFigure">
+                    <p id="light">Florian</p>
+                    <p id="bolder">Daniel</p>
+                </div>
+            </div>
+            <span>4</span>
+            <span>5</span>
+            <span>20</span>
+            <span>31</span>
+            <span>224</span>
+            <span>300</span>
+            <span>600</span>
+            <span>12 000</span>
+            <span>27 209</span>
+            <input type="range" id="range" min="0" max="540" value="0" step="1">
+        </div>
+    </section>
+
   </div>
   <!-- FIN CONTAINER -->
+
+
 </body>
 </html>
-
-<!-- EXEMPLE HORIZONTAL SCROLLING
-<section class="vertical-scrolling">
-  <div class="horizontal-scrolling">
-    <h2>fullPage.js</h2>
-    <h3>This is the fifth section and it contains the first slide (actually section == first slide)</h3>
-  </div>
-  <div class="horizontal-scrolling">
-    <h2>fullPage.js</h2>
-    <h3>This is the second slide</h3>
-    <p class="end">Thank you!</p>
-  </div>
-</section>
--->

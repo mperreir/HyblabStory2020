@@ -11,9 +11,13 @@ $(document).ready(function() {
   };
 
   $(window).scroll(function() {
-    if($(window).scrollTop() >= dancePosTop.top && $(window).scrollTop() < musicPosTop.top - 100) {
-      console.log("YOUPIII");
-    }
+
+  });
+
+  $("#hover-dancers-crayons").hover(function() {
+    $("#img-dancers-3").css("transform", "scale(1.05)");
+  }, function() {
+    $("#img-dancers-3").css("transform", "scale(1)");
   });
 
 });

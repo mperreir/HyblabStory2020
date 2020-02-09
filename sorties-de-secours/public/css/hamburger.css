@@ -19,10 +19,11 @@
   font-family: "NimbusSanL";
 
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .menuLink:hover {
-  color: #FD9645;
+  color: #FFCB13;
 }
 
 
@@ -87,7 +88,7 @@
 
 #categories {
   position: absolute;
-  width: 350px;
+  width: 400px;
   top: -50px;
   right: -50px;
   border: 0;
