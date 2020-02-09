@@ -41,7 +41,6 @@
 import { mapGetters } from "vuex";
 
 import Background from "@/assets/School/background-school.svg";
-import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
 import PlusButton from "@/components/PlusButton";
@@ -50,7 +49,6 @@ export default {
   name: "School",
   components: {
     Background,
-    TextTitle,
     SimpleText,
     PlusButton,
     SimpleButton
