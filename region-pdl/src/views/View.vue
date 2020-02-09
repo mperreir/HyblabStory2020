@@ -34,8 +34,8 @@
     <LogoRegion class="logo-region" />
     <transition name="fade">
       <ProgressBar
-        v-if="$store.state.currentSceneIndex !== 0"
-        :number="$store.state.nbScenes - 1"
+        v-if="$store.state.currentSceneIndex > 0 && $store.state.currentSceneIndex < $store.state.nbScenes - 1"
+        :number="$store.state.nbScenes - 2"
       />
     </transition>
   </div>
@@ -88,10 +88,14 @@ export default {
   position: relative;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 3s cubic-bezier(1, 0.01, 0.65, 0.6);
+.fade-enter-active {
+  transition: opacity 3s cubic-bezier(1, 0, 0.65, 0.6);
 }
+
+.fade-leave-active {
+  transition: opacity 3s cubic-bezier(0.6, 0.65, 0, 1);
+}
+
 
 .fade-enter,
 .fade-leave-to {
