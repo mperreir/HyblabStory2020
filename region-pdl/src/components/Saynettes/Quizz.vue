@@ -2,7 +2,7 @@
   <div class="saynette">
     <TextTitle :y="12" :style="{textAlign: 'center'}">Bilan de consommation d’énergie</TextTitle>
 
-    <SimpleText :style="{textAlign: 'center'}" y="20">
+    <SimpleText :style="{textAlign: 'center'}" :y="20">
       <p>
         <b>Grâce à tous les dispositifs et les aides mises en place par la Région,</b> M. Moreau et Mme Dubois
         <br />font des
