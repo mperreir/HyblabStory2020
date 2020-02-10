@@ -426,3 +426,21 @@
     transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 /* END DANCE */
+
+.article-arrow-down {
+	position: absolute;
+	bottom: 0;
+	left: 40%;
+	width: 400px;
+	height: 100px;
+
+
+	z-index: 300;
+}
+
+.article-arrow-down-img {
+    position: absolute;
+    top: 75% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+}

@@ -172,6 +172,15 @@ function goFromTo(sectionName, slideFrom, slideTo) {
 
         $arrowRight.addClass("article-arrow-hidden");
         $arrowLeft.addClass("article-arrow-hidden");
+
+
+        let articleArrowDown = document.querySelector("#article-arrow-down-"+sectionName);
+        articleArrowDown.classList.remove('fadeOut');
+        articleArrowDown.classList.add('fadeInUp');
+        // mouseAnimatedExpo.addEventListener('animationend', function() {
+        //     initArticle('expo');
+        // });
+
     } else {
         $articleContainer.removeClass("article-container-fullscreen");
         $articleImgCrayon.removeClass("article-img-crayon-show");
