@@ -32,34 +32,39 @@
             "item" : "DE RÉDACTRICES"
         },
         "2":{
-            "number" : "224",
-            "description" : "C’EST LE NOMBRE",
-            "item" : "DE NUMÉROS PARUS"
+          "number" : "20",
+          "description" : "ANS",
+          "item" : "DÉJÀ"
         },
+
         "3":{
-            "number" : "20",
-            "description" : "ANS",
-            "item" : "DÉJÀ"
+          "number" : "31",
+          "description" : "UN AGENDA MENSUEL",
+          "item" : "DU PREMIER AU DERNIER JOUR"
         },
         "4":{
-            "number" : "300",
-            "description" : "ÉVÉNEMENTS COUVERTS",
-            "item" : "PAR MOIS"
+          "number" : "224",
+          "description" : "C’EST LE NOMBRE",
+          "item" : "DE NUMÉROS PARUS"
+
         },
         "5":{
-            "number" : "600",
-            "description" : "POINTS DE DISTRIBUTION",
-            "item" : "PRÉCIS ET ÉVOLUTIFS"
+          "number" : "300",
+          "description" : "ÉVÉNEMENTS COUVERTS",
+          "item" : "PAR MOIS"
+
         },
         "6":{
-            "number" : "12 000",
-            "description" : "EXEMPLAIRES",
-            "item" : "PAR NUMÉRO"
+          "number" : "600",
+          "description" : "POINTS DE DISTRIBUTION",
+          "item" : "PRÉCIS ET ÉVOLUTIFS"
+
         },
         "7":{
-            "number" : "31",
-            "description" : "UN AGENDA MENSUEL",
-            "item" : "DU PREMIER AU DERNIER JOUR"
+          "number" : "12 000",
+          "description" : "EXEMPLAIRES",
+          "item" : "PAR NUMÉRO"
+
         },
         "8":{
             "number" : "27 209",

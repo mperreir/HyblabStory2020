@@ -197,9 +197,14 @@
 }
 
 #mouse-animated-dance {
-	position: relative;
-	bottom: 20%;
+	position: absolute;
+	top: 380px;
+	left: 70%;
 	width: 100vw;
+	height: 100px;
+
+	text-align: left;
+
 	z-index: 200;
 }
 
@@ -213,4 +218,35 @@
 	position: absolute;
 	top: 350px;
 	right: 100px;
+}
+
+#scroll-down-endDance {
+	position: absolute;
+	width: 30%;
+	height: 50px;
+	left: 0;
+	top: 25%;
+	text-align: center;
+	bottom: inherit;
+	transform: inherit;
+
+  z-index: 9999;
+}
+
+#scroll-down-endDance-span {
+	font-family: "NimbusSanL";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 10px;
+
+  text-transform: uppercase;
+
+  color: black;
+}
+
+#scroll-down-endDance-img {
+	position: absolute;
+	top: 20px;
+	left: 46%;
 }

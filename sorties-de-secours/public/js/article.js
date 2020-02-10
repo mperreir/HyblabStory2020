@@ -36,6 +36,7 @@ let $articleDanceBlue1;
 
 let currentSlide = 0;
 let scrollRecently = false;
+let articleReady = false;
 
 /* JQuery elements */
 let $articleContainer;
@@ -45,6 +46,9 @@ let $slideFrom;
 let $articleTextWrapper;
 let $articleTitleWrapper;
 let $ssButtonsWrapper;
+
+/* sound */
+let soundPlaying = false;
 
 function initArticle(sectionName) {
 
@@ -88,7 +92,7 @@ function initArticle(sectionName) {
 
     $('#' + sectionName + '-section').on('mousewheel', function(event, delta) {
 
-        if (!scrollRecently) {
+        if (!scrollRecently && articleReady) {
 
             if (event.deltaY < 0) {
                 nextSlide(sectionName);
@@ -101,6 +105,17 @@ function initArticle(sectionName) {
         triggeredScroll();
 
     });
+
+    // lunch sound
+    if (!soundPlaying) {
+        playSound(sectionName);
+        soundPlaying = true;
+    }
+
+    // wait end of animation to start scrolling
+    setTimeout(function () {
+        articleReady = true;
+    }, 2000);
 
     /* start auto scroll if screen size is too small */
     // console.log($articleTextWrapper.prop('scrollHeight'));
@@ -316,6 +331,10 @@ function goBackToMenu(sectionName) {
             $("#expChoiceDance").unbind('click');
             $("#hachure-dance").css("opacity", "1");
             $("#hachure-dance").css("cursor", "auto");
+
+            set_music_pause("danceMusic");
+            set_music_play("generalMusic");
+            set_music_volume("generalMusic", 0.1);
             break;
     }
     let expoDone = (document.getElementById("hachure-expo").style.opacity == 1);
@@ -327,8 +346,35 @@ function goBackToMenu(sectionName) {
         }, 2000);
     }
 
-    /* reset parameters*/
+    /* reset parameters */
     currentSlide = 0;
     scrollRecently = false;
+    soundPlaying = false;
+    articleReady= false;
+
+}
+
+function playSound(sectionName) {
+
+    // set_music_pause("generalMusic");
+    set_music_volume("generalMusic", 0.05);
+
+    if (sectionName === "expo") {
+        change_music("voice", "sounds/expo/article.m4a");
+        set_music_volume("voice", 0.4);
+        set_music_volume("generalMusic", 0.05);
+    } else if (sectionName === "music") {
+        set_music_play("generalMusic");
+        change_music("voice", "sounds/music_workshop/article.mp3");
+        set_music_volume("voice", 0.4);
+        set_music_volume("generalMusic", 0.05);
+    } else if (sectionName === "dance") {
+        change_music("voice", "sounds/dance/article.m4a");
+        set_music_volume("voice", 0.4);
+        set_music_volume("danceMusic", 0.2);
+        setTimeout(function() {
+          set_music_volume("danceMusic", 0.1);
+        }, 2000);
+    }
 
 }

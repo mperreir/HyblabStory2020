@@ -1,6 +1,7 @@
+let oldNumber = -1;
+
 $(document).ready(function() {
     $.getJSON("data/resources.json", function(json) {
-        console.log(typeof $('#range').val());
         $('#range').on('input', function () {
             let step = 61;
 
@@ -28,6 +29,13 @@ $(document).ready(function() {
             $('#le_figure').text(nb);
             $('#light').text(des);
             $('#bolder').text(item);
+
+            if (oldNumber !== nb) {
+                set_music_volume("generalMusic", 0.05);
+                change_music("voice", "sounds/numbers/"+nb+".mp3");
+                oldNumber = nb;
+            }
+
         });
     });
 });
