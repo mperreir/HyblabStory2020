@@ -31,7 +31,6 @@ tant qu'on est en dessous de l'apect ratio 16/9 */
         height: calc(100 * 9vw / 16);
     }
     section{
-        margin-top: calc((100vh - 100 * 9vw / 16) / 2);
         width: 100vw;
         height: calc(100 * 9vw / 16);
     }
@@ -90,7 +89,6 @@ body {
     transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
 .panel {
-    height: 100vh;
     position: absolute;
     transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
     will-change: transform;

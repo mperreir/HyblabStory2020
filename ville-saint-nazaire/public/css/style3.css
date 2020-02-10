@@ -58,7 +58,7 @@ form>label{
     visibility:hidden;
 }
 
-p {
+#page3 p {
     font-family: Vibur;
     font-style: normal;
     font-weight: normal;
@@ -84,12 +84,12 @@ p {
 }
 
 @media screen and (max-aspect-ratio: 16/9){
-    label, #next4-texte{
+    #page3 label, #next4-texte{
         font-size: 3vw;
     }
 }
 @media screen and (min-aspect-ratio: 16/9){
-    p, label, #next4-texte{
+    #page3 p, #page3 label, #next4-texte{
         font-size: 5vh;
     }
 }
