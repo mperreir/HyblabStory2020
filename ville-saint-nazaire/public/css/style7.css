@@ -73,8 +73,39 @@
 }
 
 
+.imageBouton7{
+    position: absolute;
+	  width:5%;
+}
+.imageBouton7:hover {
+	-webkit-transform:scale(1.25); /* Safari et Chrome */
+	-moz-transform:scale(1.25); /* Firefox */
+	-ms-transform:scale(1.25); /* Internet Explorer 9 */
+	-o-transform:scale(1.25); /* Opera */
+	transform:scale(1.25);
+	transition:0.5s;
+}
 
+#imagebtn17{
+    top:35%;
+	  left:19%;
+}
+#imagebtn27{
+    top:48%;
+	left:36%;
+}
+#imagebtn37{
+    top:30%;
+	  left:53%;
+}
+#imagebtn47{
+    top:17%;
+	  left:62%;
+}
 
+#texte-27, #texte-37, #texte-47{
+	visibility:hidden;
+}
 
  #slide7-suivant:hover, #slide7-btnRetour:hover {
 	cursor: pointer;
