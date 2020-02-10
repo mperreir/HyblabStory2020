@@ -34,5 +34,21 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+#view9premium #view-9p-middle #view9p-bulle1 {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+}
+#view9premium #view-9p-middle #view9p-bulle2 {
+  position: absolute;
+  left: 80%;
+  top: 80%;
+}
+#view9premium #view-9p-middle #view9p-bulle3 {
+  position: absolute;
+  left: 30%;
+  top: 90%;
+  z-index: -2;
+}
 
 /*# sourceMappingURL=view9premium.css.map */

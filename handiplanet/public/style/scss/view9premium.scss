@@ -37,5 +37,24 @@
         margin-bottom: auto;
       }
     }
+
+    #view9p-bulle1{
+      position: absolute;
+      left: 50%;
+      top: 20%;
+    }
+
+    #view9p-bulle2{
+      position: absolute;
+      left: 80%;
+      top: 80%;
+    }
+
+    #view9p-bulle3{
+      position: absolute;
+      left: 30%;
+      top: 90%;
+      z-index: -2;
+    }
   }
 }
