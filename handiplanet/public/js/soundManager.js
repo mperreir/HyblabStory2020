@@ -14,7 +14,13 @@ class SoundManager {
     this.hoverSound = this.hoverSound.bind(this);
     this.homeButton.addEventListener('mouseenter', this.hoverSound);
     this.overlayButton.addEventListener('mouseenter', this.hoverSound);
-    this.setSoundActivated(true);
+    
+    const savedSound = localStorage.getItem('SOUND_ACTIVATED');
+    if (savedSound !== null) {
+      this.setSoundActivated(savedSound === 'true');
+    } else {
+      this.setSoundActivated(true);
+    }
   }
 
   toggleSound() {
@@ -40,6 +46,7 @@ class SoundManager {
       this.homeButtonImg.src = 'assets/SonMuteW.svg';
       this.overlayButtonImg.src = 'assets/SonMute.svg';
     }
+    localStorage.setItem('SOUND_ACTIVATED', state);
   }
 
   async play(file) {

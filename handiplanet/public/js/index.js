@@ -14,14 +14,32 @@ const paths = [
 'M1042.4 683.09H89.6465C-53.2773 617 11.5631 490.5 45.2225 448C109.818 366.438 11.5632 312 11.5632 239.589C11.5632 167.178 72.7226 25.5 360.563 150.004C530.977 223.716 656.063 -103.5 852.063 36.4994C917.654 83.3496 899.913 204.54 949.901 239.589C993.401 270.089 1059.8 256.089 1093.11 323.589C1143.71 426.089 1010.6 479.244 996.615 545.089C984.615 601.589 1003.3 649.594 1042.4 683.09Z'
 ];
 
-window.addEventListener('load', function () {
+window.addEventListener('load', () => {
+    const paragraphs = document.getElementsByTagName("p");
+    const toggle = document.getElementById('tog');
+    const switchButton = document.getElementById('switch');
+    const beginButton = document.getElementById('begin-button');
+    const small = document.getElementById('small');
+    const medium = document.getElementById('medium');
+    const large = document.getElementById('large');
+    const savedFontSize = localStorage.getItem('FONT_SIZE');
+    let cont = false;
+    const savedContrast = localStorage.getItem('CONTRAST');
+    const body = this.document.body;
+    let textSize = 1;
+    const svgElement = document.getElementById('overlay-bg-svg');
+    const homeRecommandationSound = document.getElementById('home-recommandation-sound');
+    const homeTextRight = document.getElementById('home-text-right');
+    const homeLogo = document.getElementById('home-logo-handiplanet');
+    const subscribeLink = document.getElementById('overlay-subscribe-link');
+
     function scroll(){
         window.scrollTo(0,window.innerHeight);
         view.play();
     }
 
     function setSmall(){
-        //this.console.log("gds");
+        localStorage.setItem('FONT_SIZE', 'small');
         if(medium.className == "text selected"){
             medium.className = "text diselected";
         }else medium.className = "text";
@@ -34,6 +52,7 @@ window.addEventListener('load', function () {
         body.className = "body-small";
     }
     function setMedium(){
+        localStorage.setItem('FONT_SIZE', 'medium');
         if(small.className == "text selected"){
             small.className = "text diselected";
         }else small.className = "text";
@@ -46,6 +65,7 @@ window.addEventListener('load', function () {
         body.className = "body-medium";
     }
     function setLarge(){
+        localStorage.setItem('FONT_SIZE', 'large');
         if(small.className == "text selected"){
             small.className = "text diselected";
         }else small.className = "text";
@@ -58,51 +78,61 @@ window.addEventListener('load', function () {
         body.className = "body-large";
     }
 
-    function contraste(){
-        if(cont){
+    function contraste(c){
+        if(!c){
             toggle.style.background = '#5a8d8c';
             cont = false;
             document.body.style.filter = "grayscale(0%)";
             document.body.style.filter= "hue-rotate(0deg)";
             document.body.style.filter = "contrast(100%)";
-        }
-        else{
+        } else{
             toggle.style.background = '#cb563e';
             cont = true;
             document.body.style.filter = "grayscale(1) contrast(1.25)";
         }
+        localStorage.setItem('CONTRAST', c);
+    }
+
+    function toggleContrast() {
+        contraste(!cont);
     }
 
     
-    const beginButton = document.getElementById('begin-button');
+    
     beginButton.onclick = scroll;
     beginButton.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/Demarrer.mp3');
     });
     
-    const small = document.getElementById('small');
+    
     small.onclick = setSmall;
     small.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/small.mp3');
     });
-    const medium = document.getElementById('medium');
+    
     medium.onclick = setMedium;
     medium.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/medium.mp3');
     });
-    const large = document.getElementById('large');
+    
     large.onclick = setLarge;
     large.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/large.mp3');
     });
     
 
-    const paragraphs = document.getElementsByTagName("p");
+    if (savedFontSize === 'large') setLarge();
+    else if (savedFontSize === 'medium') setMedium();
+    else setSmall();
 
-    const toggle = document.getElementById('tog');
-    const switchButton = document.getElementById('switch');
-    let cont = false;
-    switchButton.onclick = contraste;
+    if (savedContrast === 'true') contraste(true);
+    else contraste(false);
+
+
+    
+
+    
+    switchButton.onclick = toggleContrast;
     switchButton.addEventListener('mouseenter', () => {
         if (cont) {
             window.soundManager.play('sound/hover/contrast_disable.mp3');
@@ -110,11 +140,9 @@ window.addEventListener('load', function () {
             window.soundManager.play('sound/hover/contrast_enable.mp3');
         }
     });
-
-    const body = this.document.body;
+    
     text = document.getElementsByClassName('');
-
-    let textSize = 1;
+    
     if(small.className == "text selected"){
         textSize = 1;
         setSmall();
@@ -127,9 +155,8 @@ window.addEventListener('load', function () {
         textSize = 3;
         setLarge();
     }
-
-    const svgElement = document.getElementById('overlay-bg-svg');
-    const a = anime({
+    
+    anime({
         targets: svgElement.querySelector('path'),
         easing: 'linear',
         d: paths.map((p, i) => ({
@@ -145,22 +172,19 @@ window.addEventListener('load', function () {
         elasticity: 200,
         direction: 'alternate',
     });
-
-    const homeRecommandationSound = document.getElementById('home-recommandation-sound');
+    
     homeRecommandationSound.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/sound_recommandation.mp3');
     });
     
-    const homeTextRight = document.getElementById('home-text-right');
     homeTextRight.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/home_text_right.mp3');
     });
-    const homeLogo = document.getElementById('home-logo-handiplanet');
+    
     homeLogo.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/slogan.mp3');
     });
-
-    const subscribeLink = document.getElementById('overlay-subscribe-link');
+    
     subscribeLink.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/Souscrire.mp3');
     });
