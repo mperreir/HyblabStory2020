@@ -41,6 +41,7 @@ Copyright - 2020 Christophe SONNEVILLE
     <script defer src="./js/scrollBar.js"></script>
     <script defer src="./js/transitions.js"></script>
     <script defer src="./js/view.js"></script>
+    <script defer src="./js/bodymovin.js"></script>
     <script defer src="./views/view1/view1.js"></script>
     <script defer src="./views/view2/view2.js"></script>
     <script defer src="./views/contexte/contexte.js"></script>
@@ -64,13 +65,13 @@ Copyright - 2020 Christophe SONNEVILLE
     <script defer src="./views/comparatif/comparatif.js"></script>
     <script defer src="./js/anime.min.js"></script>
     <script defer src="./js/index.js"></script>
-    
+
     <title>HandiGo</title>
 
   </head>
   <body>
     <section id="home-view" class="view">
-      <img src="./assets/logo-home-view.svg" alt="Logo handi planete" id="home-logo-handiplanet">
+      <div id="home-logo-handiplanet"> </div>
 
       <div id="begin-button">
         <h1>Démarrer</h1>
@@ -115,9 +116,9 @@ Copyright - 2020 Christophe SONNEVILLE
           <div class="switch" id="switch">
             <button id="tog">
               <img id="overlay-contrast-icon" src="assets/contrast.svg">
-            </button>      
+            </button>
           </div>
-          
+
         </div>
         <div id="background-overlay">
           <svg viewBox="0 0 1157 685" fill="none" id="overlay-bg-svg">

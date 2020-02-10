@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
         if(large.className == "text selected"){
             large.className = "text diselected";
         }else large.className = "text";
-        
+
         //mettre les textes en small
         body.className = "body-small";
     }
@@ -60,7 +60,7 @@ window.addEventListener('load', () => {
         if(large.className == "text selected"){
             large.className = "text diselected";
         }else large.className = "text";
-        
+
         //mettre les textes en medium
         body.className = "body-medium";
     }
@@ -73,7 +73,7 @@ window.addEventListener('load', () => {
         if(medium.className == "text selected"){
             medium.className = "text diselected";
         }else medium.className = "text";
-        
+
         //mettre les textes en larges
         body.className = "body-large";
     }
@@ -97,29 +97,29 @@ window.addEventListener('load', () => {
         contraste(!cont);
     }
 
-    
-    
+
+
     beginButton.onclick = scroll;
     beginButton.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/Demarrer.mp3');
     });
-    
-    
+
+
     small.onclick = setSmall;
     small.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/small.mp3');
     });
-    
+
     medium.onclick = setMedium;
     medium.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/medium.mp3');
     });
-    
+
     large.onclick = setLarge;
     large.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/large.mp3');
     });
-    
+
 
     if (savedFontSize === 'large') setLarge();
     else if (savedFontSize === 'medium') setMedium();
@@ -129,9 +129,9 @@ window.addEventListener('load', () => {
     else contraste(false);
 
 
-    
 
-    
+
+
     switchButton.onclick = toggleContrast;
     switchButton.addEventListener('mouseenter', () => {
         if (cont) {
@@ -140,9 +140,9 @@ window.addEventListener('load', () => {
             window.soundManager.play('sound/hover/contrast_enable.mp3');
         }
     });
-    
+
     text = document.getElementsByClassName('');
-    
+
     if(small.className == "text selected"){
         textSize = 1;
         setSmall();
@@ -155,7 +155,7 @@ window.addEventListener('load', () => {
         textSize = 3;
         setLarge();
     }
-    
+
     anime({
         targets: svgElement.querySelector('path'),
         easing: 'linear',
@@ -172,23 +172,23 @@ window.addEventListener('load', () => {
         elasticity: 200,
         direction: 'alternate',
     });
-    
+
     homeRecommandationSound.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/sound_recommandation.mp3');
     });
-    
+
     homeTextRight.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/home_text_right.mp3');
     });
-    
+
     homeLogo.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/slogan.mp3');
     });
-    
+
     subscribeLink.addEventListener('mouseenter', () => {
         window.soundManager.play('sound/hover/Souscrire.mp3');
     });
-});	
+});
 
 function setBackgroundColor(col, fill='blue') {
     const appView = document.getElementById('app-view');
@@ -204,7 +204,7 @@ function setBackgroundColor(col, fill='blue') {
 function setOverlayButton(text, icon, sound) {
     hideOverlayButton();
     const button = document.createElement('button');
-    
+
     const textContainer = document.createElement('div');
     const textElement = document.createElement('div');
     button.id = 'overlay-next-button';
@@ -240,3 +240,10 @@ function hideOverlayButton() {
         }, 200);
     }
 }
+const animation = lottie.loadAnimation({
+    container: document.getElementById('home-logo-handiplanet'), // Required
+    path: './assets/logo.json', // Required
+    renderer: 'svg', // Required
+    loop: false, // Optional
+    autoplay: true, // Optional
+});
