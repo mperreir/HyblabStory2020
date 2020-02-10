@@ -79,8 +79,6 @@ let initSlide7 = function(){
 
   d3.select('#slide7-btnRetour').on('click', function(){
     moveUp();
-    moveLeft();
-    //initSlide9();
   });
 }
 

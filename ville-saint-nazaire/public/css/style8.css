@@ -117,11 +117,11 @@
 }
 
 #slide8-img1:hover {
--webkit-transform:scale(1.35); /* Safari et Chrome */
--moz-transform:scale(1.35); /* Firefox */
--ms-transform:scale(1.35); /* Internet Explorer 9 */
--o-transform:scale(1.35); /* Opera */
-transform:scale(1.35);
+-webkit-transform:scale(1.30); /* Safari et Chrome */
+-moz-transform:scale(1.30); /* Firefox */
+-ms-transform:scale(1.30); /* Internet Explorer 9 */
+-o-transform:scale(1.30); /* Opera */
+transform:scale(1.30);
 transition:0.5s;
 }
 
@@ -135,11 +135,11 @@ transition:0.5s;
 }
 
 #slide8-img2:hover {
--webkit-transform:scale(1.40); /* Safari et Chrome */
--moz-transform:scale(1.40); /* Firefox */
--ms-transform:scale(1.40); /* Internet Explorer 9 */
--o-transform:scale(1.40); /* Opera */
-transform:scale(1.40);
+-webkit-transform:scale(1.30); /* Safari et Chrome */
+-moz-transform:scale(1.30); /* Firefox */
+-ms-transform:scale(1.30); /* Internet Explorer 9 */
+-o-transform:scale(1.30); /* Opera */
+transform:scale(1.30);
 transition:0.5s;
 	z-index:400;
 }
@@ -157,11 +157,11 @@ transition:0.5s;
 
 
 #slide8-img3:hover {
--webkit-transform:scale(1.40); /* Safari et Chrome */
--moz-transform:scale(1.40); /* Firefox */
--ms-transform:scale(1.40); /* Internet Explorer 9 */
--o-transform:scale(1.40); /* Opera */
-transform:scale(1.40);
+-webkit-transform:scale(1.30); /* Safari et Chrome */
+-moz-transform:scale(1.30); /* Firefox */
+-ms-transform:scale(1.30); /* Internet Explorer 9 */
+-o-transform:scale(1.30); /* Opera */
+transform:scale(1.30);
 transition:0.5s;
 	z-index:400;
 }
@@ -198,11 +198,11 @@ transition:0.5s;
 }
 
 #slide8-img5:hover {
--webkit-transform:scale(1.40); /* Safari et Chrome */
--moz-transform:scale(1.40); /* Firefox */
--ms-transform:scale(1.40); /* Internet Explorer 9 */
--o-transform:scale(1.40); /* Opera */
-transform:scale(1.40);
+-webkit-transform:scale(1.30); /* Safari et Chrome */
+-moz-transform:scale(1.30); /* Firefox */
+-ms-transform:scale(1.30); /* Internet Explorer 9 */
+-o-transform:scale(1.30); /* Opera */
+transform:scale(1.30);
 transition:0.5s;
 	z-index:400;
 

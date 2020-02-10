@@ -22,7 +22,7 @@ let initSlide4 = function(){
 			}
 		  	timeOut = setTimeout(function() {
 		      showLetters(id);
-		    }, 40)
+		    }, 25)
 		  cptLettre++;
 		}
 	  else
@@ -34,8 +34,8 @@ let initSlide4 = function(){
 	
 
     // Affichage du premier texte après 5s
-    //setTimeout(playDialogues, 5500);
-    setTimeout(playDialogues, 0);
+    setTimeout(playDialogues, 3500);
+    //setTimeout(playDialogues, 0);
 
     var btnSuivant = document.querySelector('#slide4-btnSuivant');
     var notesSuivantes = document.querySelector('#slide4-notesSuivantes');
@@ -158,6 +158,18 @@ let initSlide4 = function(){
 		var choix2 = document.querySelector('#container2-slide5');
 		var choix3 = document.querySelector('#container3-slide5');
 		var date = document.querySelector('.annee');
+
+		// Agrandissement des personnages
+		architecte.style.width = 22 + "%";
+		architecte.style.height = 53 + "%";
+		architecte.style.top = 43 + "%";
+		architecte.style.left = 75.5 + "%";
+
+		journaliste.style.width = 22 + "%";
+		journaliste.style.height = 55 + "%";
+		journaliste.style.top = 44 + "%";
+		journaliste.style.left = 0 + "%";
+
 		// On affiche les choix
     	choix1.style.visibility = "visible";
 		choix2.style.visibility = "visible";
@@ -188,16 +200,16 @@ let initSlide4 = function(){
     });
 
     // Redirections slides des choix
-	d3.select('#next6').on('click', function(){
+	d3.select('#container1-slide5').on('click', function(){
 	    moveDown();
 	    moveLeft();
 	    initSlide6();
 	});
-	d3.select('#next7').on('click', function(){
+	d3.select('#container2-slide5').on('click', function(){
 		moveDown();
 		initSlide7();
 	});
-	d3.select('#next8').on('click', function(){
+	d3.select('#container3-slide5').on('click', function(){
 	    moveDown();
 	    moveRight();
 	    initSlide8();
