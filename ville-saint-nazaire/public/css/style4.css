@@ -147,7 +147,7 @@
 	visibility: hidden;
 }
 
- #slide4-suivant:hover, #slide4-img-photo2:hover, #slide4-img-photo1:hover {
+ #slide4-suivant:hover {
 	cursor: pointer;
 }
 /* Media queries pour le responsive */
