@@ -124,6 +124,11 @@ $(document).ready(function() {
             setTimeout(function () {
                 expoFinished = true;
             }, 2500);
+
+            change_music("voice", "sounds/expo/experience.m4a");
+            set_music_volume("voice", 1);
+            set_music_volume("generalMusic", 0.2);
+
         }
     });
 

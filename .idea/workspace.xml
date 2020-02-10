@@ -3,7 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="ac9d4dd8-92c6-4591-b43f-ebe54ec00b1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/expo.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/expo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/music-workshop.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/music-workshop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/sound.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/sound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/ambiance.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/ambiance2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/ambiance3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/baloji/L’Hiver Indien.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/baloji/Peau de Chagrin Bleu de Nuit.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/music_workshop/vinyl_noise.m4a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/voices/music_workshop.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/voices/music_workshop_old.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/voices/presentation.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/voices/presentation_old.mp3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +87,7 @@
       <workItem from="1581159197450" duration="16408000" />
       <workItem from="1581242622692" duration="39501000" />
       <workItem from="1581325611711" duration="10588000" />
-      <workItem from="1581336216605" duration="4281000" />
+      <workItem from="1581336216605" duration="7550000" />
     </task>
     <servers />
   </component>
@@ -88,9 +103,13 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1581256298856" />
-    <state x="685" y="151" width="704" height="807" key="find.popup" timestamp="1581344150161">
+    <state x="647" y="170" width="683" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1581346886392">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="685" y="151" width="704" height="807" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1581344150161" />
+    <state x="647" y="170" width="683" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1581346886392" />
+    <state x="685" y="151" width="704" height="807" key="find.popup" timestamp="1581347640702">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="685" y="151" width="704" height="807" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1581347640702" />
   </component>
 </project>

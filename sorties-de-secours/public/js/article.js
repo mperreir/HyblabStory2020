@@ -46,6 +46,9 @@ let $articleTextWrapper;
 let $articleTitleWrapper;
 let $ssButtonsWrapper;
 
+/* sound */
+let soundPlaying = false;
+
 function initArticle(sectionName) {
 
     //expo brushes
@@ -101,6 +104,12 @@ function initArticle(sectionName) {
         triggeredScroll();
 
     });
+
+    // lunch sound
+    if (!soundPlaying) {
+        playSound(sectionName);
+        soundPlaying = true;
+    }
 
     /* start auto scroll if screen size is too small */
     // console.log($articleTextWrapper.prop('scrollHeight'));
@@ -327,8 +336,29 @@ function goBackToMenu(sectionName) {
         }, 2000);
     }
 
-    /* reset parameters*/
+    /* reset parameters */
     currentSlide = 0;
     scrollRecently = false;
+    soundPlaying = false;
+
+}
+
+function playSound(sectionName) {
+
+    // set_music_pause("generalMusic");
+    set_music_volume("generalMusic", 0.2);
+
+    if (sectionName === "expo") {
+        change_music("voice", "sounds/expo/article.m4a");
+        set_music_volume("generalMusic", 0.2);
+    } else if (sectionName === "music") {
+        set_music_play("generalMusic");
+        change_music("voice", "sounds/music_workshop/article.mp3");
+        set_music_volume("generalMusic", 0.2);
+    } else if (sectionName === "dance") {
+        change_music("voice", "sounds/dance/article.m4a");
+        set_music_volume("voice", 1);
+        set_music_volume("generalMusic", 0.2);
+    }
 
 }
