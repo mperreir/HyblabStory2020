@@ -39,6 +39,9 @@ async function showContextView(currentView){
     tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
     tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
     setTimeout(() => {
+        if (window.contextView.questionNumber !== 4) {
+            setOverlayButton('Déja convaincu ?', false, 'sound/hover/convaincu.mp3');
+        }
         const viewContainer = document.getElementById('view-container');
         viewContainer.innerHTML = '';
         viewContainer.appendChild(nextView.view);

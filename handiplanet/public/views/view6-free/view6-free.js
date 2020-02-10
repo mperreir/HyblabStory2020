@@ -35,7 +35,7 @@ class View6Free extends View {
             this.dot4.style.transform = `translateX(${x * 0.05}px) translateY(${y * 0.05}px)`;
             this.arm.style.transform = `translateX(-100%) rotate(${angle}deg)`;
         });
-        this.btNext = setOverlayButton('Voir l\'hôtel du Centre', false);
+        this.btNext = setOverlayButton('Voir l\'hôtel du Centre', false, 'sound/hover/voir_hotel_centre.mp3');
         this.btNext.addEventListener('click', ()=>{
             this.switchToViewPremium();
         });

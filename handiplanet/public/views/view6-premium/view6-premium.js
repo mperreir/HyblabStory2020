@@ -13,7 +13,7 @@ class View6Premium extends View {
             this.smartphone.src = "./assets/view6-premium/smartphone-clicked.svg";
         });
         // Button to next view
-        this.btNext = setOverlayButton('Quelques chiffres', true);
+        this.btNext = setOverlayButton('Quelques chiffres', true, 'sound/hover/chiffres.mp3');
         this.btNext.addEventListener('click', ()=>{
             this.switchView7();
         });

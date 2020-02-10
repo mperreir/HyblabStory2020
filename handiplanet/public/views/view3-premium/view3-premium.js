@@ -13,7 +13,7 @@ class View3Premium extends View {
         showSplash();
         setBackgroundColor('#80BEA31A');
         // Button to next view
-        this.btNext = setOverlayButton('Quelques chiffres', true);
+        this.btNext = setOverlayButton('Quelques chiffres', true, 'sound/hover/chiffres.mp3');
         this.btNext.addEventListener('click', ()=>{
             this.switchToView4();
         });

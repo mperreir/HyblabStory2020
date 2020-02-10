@@ -12,7 +12,7 @@ class View4 extends View {
     linkElements(){
         hideSplash();
         // Button to next view
-        this.btNext = setOverlayButton('Retrouver Wendy', false);
+        this.btNext = setOverlayButton('Retrouver Wendy', false, 'sound/hover/go_to_wendy.mp3');
         this.btNext.addEventListener('click', ()=>{
             this.switchToNextView();
         });

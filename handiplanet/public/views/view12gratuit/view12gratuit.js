@@ -29,7 +29,7 @@ class View12Gratuit extends View {
       this.ellipse.style.transform = `translateX(${x * -0.1}px) translateY(${y * -0.1}px)`;
     });
 
-    this.btNext = setOverlayButton('Voir l\'hôtel du Centre', false);
+    this.btNext = setOverlayButton('Voir l\'hôtel du Centre', false, 'sound/hover/voir_hotel_centre.mp3');
     this.btNext.addEventListener('click', ()=>{
       this.switchToView12Premium();
     });

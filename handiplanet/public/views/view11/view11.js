@@ -37,6 +37,13 @@ class View11 extends View {
         this.btB.addEventListener('click',()=>{
             this.switchToView12Premium();
         });
+
+        this.btA.addEventListener('mouseenter', () => {
+            window.soundManager.play('sound/hover/hotel_chateau.mp3');
+        });
+        this.btB.addEventListener('mouseenter', () => {
+            window.soundManager.play('sound/hover/hotel_centre.mp3');
+        });
     }
 
     play() {

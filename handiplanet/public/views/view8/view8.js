@@ -21,9 +21,16 @@ class View8 extends View {
       this.switchToView9Premium();
     });
 
-    this.nextPremiumView = document.getElementById('view-8-hotela-container');
-    this.nextPremiumView.addEventListener('click', () => {
+    this.nextFreeView = document.getElementById('view-8-hotela-container');
+    this.nextFreeView.addEventListener('click', () => {
       this.switchToView9Free();
+    });
+
+    this.nextFreeView.addEventListener('mouseenter', () => {
+      window.soundManager.play('sound/hover/hotel_chateau.mp3');
+    });
+    this.nextPremiumView.addEventListener('mouseenter', () => {
+      window.soundManager.play('sound/hover/hotel_centre.mp3');
     });
 
     this.persoImg = document.getElementById('view-8-perso');

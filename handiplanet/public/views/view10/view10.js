@@ -16,7 +16,7 @@ class View10 extends View {
 
   linkElements() {
     hideSplash();
-    const nextButton = setOverlayButton('Retrouver Wendy', false);
+    const nextButton = setOverlayButton('Retrouver Wendy', false, 'sound/hover/go_to_wendy.mp3');
     nextButton.addEventListener('click', () => {
       this.switchToContext();
     });

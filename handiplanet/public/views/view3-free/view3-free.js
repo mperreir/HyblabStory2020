@@ -11,7 +11,7 @@ class View3Free extends View {
     linkElements() {
         showSplash();
         setBackgroundColor('#CB563E1A', 'red');
-        this.btNext = setOverlayButton('Voir l\'hôtel du Centre', false);
+        this.btNext = setOverlayButton('Voir l\'hôtel du Centre', false, 'sound/hover/voir_hotel_centre.mp3');
         // Background elements
         this.dot1 = document.getElementById('view-3-free-red-ring');
         this.dot2 = document.getElementById('view-3-free-green-dot');

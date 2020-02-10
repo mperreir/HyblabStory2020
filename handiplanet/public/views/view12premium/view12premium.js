@@ -17,7 +17,7 @@ class View12Premium extends View {
   linkElements () {
     showSplash();
     setBackgroundColor('#80BEA31A');
-    this.btNext = setOverlayButton('Quelques chiffres', true);
+    this.btNext = setOverlayButton('Quelques chiffres', true, 'sound/hover/chiffres.mp3');
     this.btNext.addEventListener('click', ()=>{
       this.switchToView13();
     });

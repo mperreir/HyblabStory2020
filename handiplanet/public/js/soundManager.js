@@ -10,12 +10,21 @@ class SoundManager {
     });
     this.overlayButton.addEventListener('click', () => {
       this.toggleSound();
-    })
+    });
+    this.hoverSound = this.hoverSound.bind(this);
+    this.homeButton.addEventListener('mouseenter', this.hoverSound);
+    this.overlayButton.addEventListener('mouseenter', this.hoverSound);
     this.setSoundActivated(true);
   }
 
   toggleSound() {
     this.setSoundActivated(!this.isSoundActivated);
+  }
+
+  hoverSound() {
+    if (this.isSoundActivated) {
+      window.soundManager.play('sound/hover/sound_disable.mp3');
+    }
   }
 
   setSoundActivated(state) {
@@ -33,20 +42,24 @@ class SoundManager {
     }
   }
 
-  play(file) {
+  async play(file) {
     if (!this.audio) {
       this.audio = new Audio(file);
     } else {
-      this.audio.pause();
+      this.pause();
       this.audio.src = file;
+      this.audio.load();
     }
-    this.audio.load();
     this.audio.muted = !this.isSoundActivated;
-    this.audio.play();
+    this.audio.play().catch(() => {});
   }
 
-  pause() {
+  async pause() {
     if (this.audio) {
+      if (this.playPromise) {
+        const res = await this.playPromise;
+        this.playPromise = null;
+      }
       this.audio.pause();
     }
   }

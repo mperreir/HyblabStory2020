@@ -20,7 +20,7 @@ class View1 extends View {
 
     linkElements(){
         // Button to next view
-        this.btNext = setOverlayButton('Continuer', false);
+        this.btNext = setOverlayButton('Continuer', false, 'sound/hover/Continuer.mp3');
         this.btNext.addEventListener('click', ()=>{
             this.switchToContext();
         });
@@ -58,6 +58,10 @@ class View1 extends View {
             li.addEventListener('click', () => {
                 window.colorPersoManager.setSelected(index);
                 this.hideSelectChar();
+            });
+            li.addEventListener('mouseenter', () => {
+                const sounds = ['sound/hover/Blanc.mp3', 'sound/hover/Vert.mp3', 'sound/hover/Rouge.mp3'];
+                window.soundManager.play(sounds[index]);
             });
         });
     }

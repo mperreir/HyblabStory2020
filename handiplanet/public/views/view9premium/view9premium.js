@@ -12,7 +12,7 @@ class View9Premium extends View {
   linkElements() {
     showSplash();
     setBackgroundColor('#80BEA31A');
-    this.nextButton = setOverlayButton('Quelques chiffres', true);
+    this.nextButton = setOverlayButton('Quelques chiffres', true, 'sound/hover/chiffres.mp3');
     this.nextButton.addEventListener('click', () => {
       this.switchToView10();
     });

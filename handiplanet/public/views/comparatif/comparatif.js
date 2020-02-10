@@ -27,7 +27,7 @@ class Comparatif extends View {
             this.dot3.style.transform = `translateX(${x * -0.05}px) translateY(${y * -0.07}px)`;
             this.dot4.style.transform = `translateX(${x * 0.05}px) translateY(${y * 0.05}px)`;
         });
-        this.btNext = setOverlayButton('Remerciements', false);
+        this.btNext = setOverlayButton('Remerciements', false, 'sound/hover/Remerciements.mp3');
         this.btNext.addEventListener('click', ()=>{
             this.switchNextView();
         });

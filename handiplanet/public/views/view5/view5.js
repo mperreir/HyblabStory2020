@@ -19,6 +19,12 @@ class View5 extends View {
             this.btHotelB.style.opacity = "0";
             this.switchToView6Premium();
         });
+        this.btHotelA.addEventListener('mouseenter', () => {
+            window.soundManager.play('sound/hover/hotel_chateau.mp3');
+        });
+        this.btHotelB.addEventListener('mouseenter', () => {
+            window.soundManager.play('sound/hover/hotel_centre.mp3');
+        });
     }
 
     async switchToView6Free(){

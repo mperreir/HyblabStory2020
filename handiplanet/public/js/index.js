@@ -69,22 +69,32 @@ window.addEventListener('load', function () {
         else{
             toggle.style.background = '#cb563e';
             cont = true;
-            //document.body.style.filter = "grayscale(100%)";
-            //document.body.style.filter= "hue-rotate(200deg)";
             document.body.style.filter = "grayscale(1) contrast(1.25)";
         }
     }
 
     
-    const button = document.getElementById('begin-button');
-    button.onclick = scroll;
+    const beginButton = document.getElementById('begin-button');
+    beginButton.onclick = scroll;
+    beginButton.addEventListener('mouseenter', () => {
+        window.soundManager.play('sound/hover/Demarrer.mp3');
+    });
     
     const small = document.getElementById('small');
     small.onclick = setSmall;
+    small.addEventListener('mouseenter', () => {
+        window.soundManager.play('sound/hover/small.mp3');
+    });
     const medium = document.getElementById('medium');
     medium.onclick = setMedium;
+    medium.addEventListener('mouseenter', () => {
+        window.soundManager.play('sound/hover/medium.mp3');
+    });
     const large = document.getElementById('large');
     large.onclick = setLarge;
+    large.addEventListener('mouseenter', () => {
+        window.soundManager.play('sound/hover/large.mp3');
+    });
     
 
     const paragraphs = document.getElementsByTagName("p");
@@ -93,6 +103,13 @@ window.addEventListener('load', function () {
     const switchButton = document.getElementById('switch');
     let cont = false;
     switchButton.onclick = contraste;
+    switchButton.addEventListener('mouseenter', () => {
+        if (cont) {
+            window.soundManager.play('sound/hover/contrast_disable.mp3');
+        } else {
+            window.soundManager.play('sound/hover/contrast_enable.mp3');
+        }
+    });
 
     const body = this.document.body;
     text = document.getElementsByClassName('');
@@ -129,7 +146,24 @@ window.addEventListener('load', function () {
         direction: 'alternate',
     });
 
+    const homeRecommandationSound = document.getElementById('home-recommandation-sound');
+    homeRecommandationSound.addEventListener('mouseenter', () => {
+        window.soundManager.play('sound/hover/sound_recommandation.mp3');
+    });
     
+    const homeTextRight = document.getElementById('home-text-right');
+    homeTextRight.addEventListener('mouseenter', () => {
+        window.soundManager.play('sound/hover/home_text_right.mp3');
+    });
+    const homeLogo = document.getElementById('home-logo-handiplanet');
+    homeLogo.addEventListener('mouseenter', () => {
+        window.soundManager.play('sound/hover/slogan.mp3');
+    });
+
+    const subscribeLink = document.getElementById('overlay-subscribe-link');
+    subscribeLink.addEventListener('mouseenter', () => {
+        window.soundManager.play('sound/hover/Souscrire.mp3');
+    });
 });	
 
 function setBackgroundColor(col, fill='blue') {
@@ -143,7 +177,7 @@ function setBackgroundColor(col, fill='blue') {
     }
 }
 
-function setOverlayButton(text, icon) {
+function setOverlayButton(text, icon, sound) {
     hideOverlayButton();
     const button = document.createElement('button');
     
@@ -159,6 +193,11 @@ function setOverlayButton(text, icon) {
     textContainer.appendChild(textElement);
     button.appendChild(textContainer);
 
+    /*if (sound) {
+        button.addEventListener('mouseenter', () => {
+            window.soundManager.play(sound);
+        });
+    }*/
     button.style.opacity = '0';
     button.style.transition = 'opacity 0.2s';
     const buttonContainer = document.getElementById('overlay-footer');
@@ -169,7 +208,7 @@ function setOverlayButton(text, icon) {
 
 function hideOverlayButton() {
     const button = document.getElementById('overlay-next-button');
-    if (button != null){
+    if (button){
         button.style.transition = "opacity 0.2s";
         button.style.opacity = "0";
         setTimeout(() => {

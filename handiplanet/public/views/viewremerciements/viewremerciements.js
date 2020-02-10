@@ -37,6 +37,9 @@ class ViewThanks extends View {
     replayButton.addEventListener('click', () => {
       this.switchToView1();
     });
+    replayButton.addEventListener('mouseenter', () => {
+      window.soundManager.play('sound/hover/replay.mp3');
+    });
   }
 
   createName(icon, firstname, lastname) {

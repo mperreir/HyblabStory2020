@@ -40,7 +40,7 @@ class View14 extends View {
 
     });
 
-    this.btNext = setOverlayButton('Regardons pourquoi ...', false);
+    this.btNext = setOverlayButton('Regardons pourquoi ...', false, 'sound/hover/Regardons_pourquoi.mp3');
     this.btNext.addEventListener('click', ()=>{
       hideOverlayButton();
       this.switchToComparatif();
