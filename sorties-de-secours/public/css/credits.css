@@ -106,6 +106,21 @@
   left: 1204px;
   top: 513px;
 }
+
+#noms > a {
+    position: absolute;
+    vertical-align:top;
+    font-family: NimbusSanL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E1E1E;
+}
 .ligne_verticale1
 {
   position: absolute;
@@ -125,20 +140,6 @@
     top: 500px;
     border: 1px solid #969696;
     transform: rotate(90deg);
-}
-#logo-audencia{
-    width:90%;
-    height:auto;
-}
-
-#logo-agr {
-    width: 60%;
-    height:auto;
-}
-
-#logo-polytech {
-    width:85%;
-    height:auto;
 }
 
 .logos-partenaires {
