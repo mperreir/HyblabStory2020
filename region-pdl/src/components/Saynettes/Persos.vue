@@ -84,54 +84,42 @@ export default {
 }
 
 .grow {
-  -webkit-animation: grow 1s linear infinite reverse;
-  -moz-animation: grow 1s linear infinite reverse;
-  -ms-animation: grow 1s linear infinite reverse;
-  animation: grow 1s linear infinite reverse;
+  -webkit-animation: grow 0.5s linear infinite alternate;
+  -moz-animation: grow 0.5s linear infinite alternate;
+  -ms-animation: grow 0.5s linear infinite alternate;
+  animation: grow 0.5s linear infinite alternate;
 }
 
 @-webkit-keyframes grow {
-  0% {
+  from {
     transform: scale(1);
   }
-  50% {
+  to {
     transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 @-moz-keyframes grow {
-  0% {
+  from {
     transform: scale(1);
   }
-  50% {
+  to {
     transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 @-ms-keyframes grow {
-  0% {
+  from {
     transform: scale(1);
   }
-  50% {
+  to {
     transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 @keyframes grow {
-  0% {
+  from {
     transform: scale(1);
   }
-  50% {
+  to {
     transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 

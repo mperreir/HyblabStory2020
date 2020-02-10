@@ -11,14 +11,20 @@
       <b>Région des Pays de la Loire</b>
       <br />les accompagne pour réduire leur impact énergétique et construire un avenir plus vert.
     </SimpleText>
+    <SimpleText :x="11" :y="51" :width="50">
+      Pour une expérience plus immersive, vous pouvez activer le
+      <b>son.</b>
+    </SimpleText>
     <SimpleButton text="Démarrer l'aventure" :width="23" :x="7" :y="58" @click.native="onNext" />
     <Tree class="tree" />
+    <Speaker class="speaker" />
   </div>
 </template>
 
 <script>
 import Background from "@/assets/Home/background-home.svg";
 import Tree from "@/assets/Home/tree-home.svg";
+import Speaker from "@/assets/Home/volume.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
@@ -28,6 +34,7 @@ export default {
   components: {
     Background,
     Tree,
+    Speaker,
     TextTitle,
     SimpleButton,
     SimpleText
@@ -56,6 +63,14 @@ export default {
   -moz-animation: anim 2s ease-in-out infinite alternate;
   -ms-animation: anim 2s ease-in-out infinite alternate;
   animation: anim 2s ease-in-out infinite alternate;
+}
+
+.speaker {
+  position: absolute;
+  top: 51.5%;
+  left: 7.5%;
+  width: 2%;
+  fill: #00324e;
 }
 
 @-webkit-keyframes anim {
