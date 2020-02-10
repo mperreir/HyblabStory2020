@@ -22,14 +22,15 @@ let initSlide12 = function(){
 }
 
 function moveBureau12(){
-  myMove12(document.getElementById('image_bureau12'),-20,25,'#texte_slide12_bureau');
-}
-function moveSalon12(){
-  myMove12(document.getElementById('image_salon12'),-12,16,'#texte_slide12_salon');
+  myMove12(document.getElementById('image_bureau12'),-20,25,'#texte_slide12_bureau',65);
 }
 function moveCommission12(){
-  myMove12(document.getElementById('image_commission12'),-20,25,'#texte_slide12_commission');
+  myMove12(document.getElementById('image_commission12'),-20,25,'#texte_slide12_commission',44);
 }
+function moveSalon12(){
+  myMove12(document.getElementById('image_salon12'),-12,16,'#texte_slide12_salon',55);
+}
+
 
 
 function returnBureau12(){
@@ -43,7 +44,7 @@ function returnSalon12(){
 }
 
 //fonctions déplacement image slide 12
-function myMove12(elem,posInitiale,tailInitiale,choix) {
+function myMove12(elem,posInitiale,tailInitiale,choix,tt) {
   var pos = 0;
   var tail = 0;
   var id = setInterval(frame, 10);
@@ -51,6 +52,7 @@ function myMove12(elem,posInitiale,tailInitiale,choix) {
   var texte = document.querySelector(choix);
   vide.style.visibility='hidden';
   texte.style.visibility = 'visible';
+  texte.style.width=tt + '%';
   function frame() {
     if (pos == -posInitiale) { //condition d'arrêt de la "boucle"
       clearInterval(id);
@@ -72,6 +74,7 @@ function myReturn12(elem,posInitiale,widthInit,choix) {
   var texte = document.querySelector(choix);
   vide.style.visibility='visible';
   texte.style.visibility = 'hidden';
+  vide.style.width='55%';
   function frame() {
     if (pos == -posInitiale) { //condition d'arrêt de la "boucle"
       clearInterval(id);
