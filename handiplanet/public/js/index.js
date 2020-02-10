@@ -80,7 +80,7 @@ window.addEventListener('load', () => {
 
     function contraste(c){
         if(!c){
-            toggle.style.background = '#5a8d8c';
+            toggle.style.background = '#426262';
             cont = false;
             document.body.style.filter = "grayscale(0%)";
             document.body.style.filter= "hue-rotate(0deg)";

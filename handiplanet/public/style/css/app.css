@@ -59,7 +59,7 @@
   font-weight: lighter;
 }
 #app-view #app-overlay header ul li:last-of-type {
-  background-color: #5A8D8C;
+  background-color: #426262;
   color: #ffffff;
   margin-right: 0px;
   border-radius: 20px;
@@ -148,9 +148,9 @@
 #app-view #app-overlay #overlay-buttons {
   z-index: 10000;
   position: absolute;
-  top: 14vh;
+  top: 50vh;
   left: 2vw;
-  bottom: 2vw;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -169,7 +169,7 @@
 }
 #app-view #app-overlay #overlay-buttons #text-size .text {
   margin-bottom: 4vh;
-  background-color: #5a8d8c;
+  background-color: #426262;
   height: 8vh;
   width: 8vh;
   border-radius: calc(8vh / 2);
@@ -224,7 +224,7 @@
   transition: box-shadow 2s;
   width: 8vh;
   height: 8vh;
-  background-color: #5a8d8c;
+  background-color: #426262;
   z-index: 10000;
   border-radius: calc(10vh / 2);
   transition: box-shadow 0.2s;
@@ -241,20 +241,6 @@
   width: 100%;
   filter: brightness(100);
 }
-#app-view #app-overlay #overlay-buttons #son {
-  z-index: 10000;
-  padding: 0;
-  margin: 0;
-}
-#app-view #app-overlay #overlay-buttons #son button {
-  z-index: 10000;
-  padding: 0;
-  margin: 0;
-}
-#app-view #app-overlay #overlay-buttons #son button img {
-  height: 8vh;
-  width: 8vh;
-}
 #app-view #overlay-footer {
   position: absolute;
   width: 100%;
@@ -262,6 +248,24 @@
   left: 0;
   height: 20%;
   background-color: inherit;
+}
+#app-view #overlay-footer #son {
+  z-index: 10000;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 2vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#app-view #overlay-footer #son button {
+  z-index: 10000;
+  padding: 0;
+  margin: 0;
+}
+#app-view #overlay-footer #son button img {
+  height: 8vh;
+  width: 8vh;
 }
 #app-view #overlay-footer #overlay-next-button {
   z-index: 10000 !important;
@@ -280,6 +284,10 @@
   padding: 10px 30px;
   padding-right: 50px;
   padding-left: 10px;
+}
+#app-view #overlay-footer #overlay-next-button:hover > div {
+  transition: margin-right 0.2s;
+  margin-right: 20px;
 }
 #app-view #overlay-footer #overlay-next-button img {
   width: 45px;

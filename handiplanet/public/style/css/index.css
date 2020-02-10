@@ -43,7 +43,7 @@ a {
   position: relative;
   z-index: 1000;
 }
-#home-view img {
+#home-view > img {
   margin: auto;
   max-width: 60%;
   max-height: 60%;
@@ -78,10 +78,15 @@ a {
   margin: auto 0px;
   font-size: medium;
 }
+#home-view #home-sound button {
+  padding: 0px;
+  width: 8vh;
+  height: 8vh;
+  margin-right: 20px;
+}
 #home-view #home-sound button img {
-  width: 45px;
-  height: 45px;
-  display: block;
+  width: 100%;
+  height: 100%;
 }
 #home-view #begin-button {
   cursor: pointer;
