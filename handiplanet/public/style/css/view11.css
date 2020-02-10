@@ -99,11 +99,12 @@
 #view11 #view-11-middle #view-11-hotel-a-caption {
   position: absolute;
   left: 0%;
+  top: -10%;
   transform: translateX(100%);
 }
 #view11 #view-11-middle #view-11-hotel-b-caption {
   position: absolute;
-  left: 0%;
+  left: 10%;
   transform: translateX(100%);
 }
 #view11 #view-11-middle #view-11-button-hotel-a {

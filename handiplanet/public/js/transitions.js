@@ -40,7 +40,10 @@ async function showContextView(currentView){
     tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
     setTimeout(() => {
         if (window.contextView.questionNumber !== 4) {
-            setOverlayButton('Déja convaincu ?', false, 'sound/hover/convaincu.mp3');
+            const nextButton = setOverlayButton('Déja convaincu ?', false, 'sound/hover/convaincu.mp3');
+            nextButton.addEventListener('click', () => {
+                window.open('https://handiplanet.com/pro', '_blank');
+            });
         }
         const viewContainer = document.getElementById('view-container');
         viewContainer.innerHTML = '';
@@ -48,6 +51,7 @@ async function showContextView(currentView){
         currentView.remove();
         window.currentView = nextView.view;
         nextView.play();
+        nextView.runAnim();
     }, 1000);
 }
 
@@ -76,6 +80,7 @@ async function transitionHorizontal(view, NextView){
         view.remove();
         window.currentView = nextView.view;
         nextView.play();
+        nextView.runAnim();
     }, 1000);
 }
 
@@ -115,5 +120,6 @@ async function transitionHorizontalInvert(view, NextView){
         view.remove();
         window.currentView = nextView.view;
         nextView.play();
+        nextView.runAnim();
     }, 1000);
 }

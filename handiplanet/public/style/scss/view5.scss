@@ -44,21 +44,31 @@
     left: 17%;
     bottom: 43%;
     width: 20%;
+    border: 1px dashed grey;
+    border-radius: 50%;
+    border-bottom-right-radius: 0px;
+    
   }
 
   #view5-omelette{
-    left: 40%;
-    bottom: 50%;
-    width: 5%;
+    left: 50%;
+    bottom: 40%;
+    width: 15%;
+    object-fit: scale-down;
+    border: 1px dashed grey;
+    border-radius: 50%;
+    border-bottom-left-radius: 0px;
   }
 
   #view5-pointille-1{
+    object-fit: none;
     left: 19%;
     bottom: 47%;
     width: 15%;
   }
 
   #view5-pointille-2{
+    object-fit: none;
     left: 38%;
     bottom: 47%;
     width: 10%;

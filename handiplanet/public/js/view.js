@@ -17,4 +17,6 @@ class View {
 
     play() {}
 
+    runAnim() {}
+
 }

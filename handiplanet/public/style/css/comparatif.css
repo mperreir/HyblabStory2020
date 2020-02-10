@@ -109,6 +109,7 @@
 }
 #comparatif #comparatif-middle #comparatif-content li {
   list-style-image: url(../../assets/comparatif/comparatif-bullet.svg);
+  margin-bottom: 5px;
 }
 #comparatif #comparatif-middle #comparatif-content li p {
   font-family: Nunito;

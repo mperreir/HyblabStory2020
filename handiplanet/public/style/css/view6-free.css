@@ -124,19 +124,8 @@
   z-index: 7;
   position: absolute;
   left: 55%;
-  max-width: 25%;
+  max-width: 45%;
   bottom: 10%;
-}
-#view6-free #view-6-free-middle article p {
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 21px;
-  line-height: 29px;
-  color: #426262;
-}
-#view6-free #view-6-free-middle article span {
-  color: #cb563e;
 }
 @keyframes view6-yAxis {
   50% {

@@ -21,4 +21,11 @@ class View4 extends View {
     play() {
         window.soundManager.play('sound/Data_1.mp3');
     }
+
+    runAnim() {
+        const premiumRect = document.getElementById('view-4-premium-rect');
+        const freeRect = document.getElementById('view-4-free-rect');
+        premiumRect.className = 'premium-rect-anim';
+        freeRect.className = 'free-rect-anim';
+    }
 }

@@ -73,8 +73,8 @@
 }
 #view8 #view-8-middle #view-8-computer-container #view-8-hotela-container #view-8-a-caption {
   position: absolute;
-  top: -30%;
-  left: 20%;
+  top: -40%;
+  left: 0%;
 }
 #view8 #view-8-middle #view-8-computer-container #view-8-hotelb-container {
   position: absolute;
@@ -103,7 +103,7 @@
 #view8 #view-8-middle #view-8-computer-container #view-8-hotelb-container #view-8-b-caption {
   position: absolute;
   top: 40%;
-  right: -25%;
+  right: -45%;
 }
 #view8 #view-8-middle #view-8-computer-container figcaption {
   font-family: Nunito;
