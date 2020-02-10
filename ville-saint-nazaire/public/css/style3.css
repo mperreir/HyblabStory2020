@@ -116,12 +116,12 @@ form>label{
 }
 
 @media screen and (max-aspect-ratio: 16/9){
-    #page3 label, #next4-texte{
+    #premierTexte, #deuxiemeTexte, #page3 label, #next4-texte{
         font-size: 3vw;
     }
 }
 @media screen and (min-aspect-ratio: 16/9){
-    #premierTexte, #deuxiemeTexte, label, #next4-texte{
+    #premierTexte, #deuxiemeTexte, #page3 label, #next4-texte{
         font-size: 5vh;
     }
 }
