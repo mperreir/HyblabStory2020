@@ -114,11 +114,27 @@ $(document).ready(function() {
 
                 group.add(k_vinyl_head);
                 layer.add(group);
-
-                // layer.add(k_vinyl_head);
                 layer.batchDraw();
             };
             vinyl_head.src = 'img/experience/music/vinyl_head.png';
+
+            // text
+            let instructionText = new Konva.Text({
+                x: 5 - ( ( (stageHeight*1920) / 1080) - ((stageHeight*1920) / 810) ) / 2,
+                y: stage.height() / 2,
+                text: 'Déplacez la tête de lecture\net lancez le son de Baloji.',
+                fontSize: 30,
+                fontFamily: 'NimbusSanL',
+            });
+
+            // to align text in the middle of the screen, we can set the
+            // shape offset to the center of the text shape after instantiating it
+            instructionText.offset({
+                x: instructionText.width() / 2,
+                y: instructionText.height() / 2
+            });
+            layer.add(instructionText);
+            layer.batchDraw();
 
         };
         vinyl.src = 'img/experience/music/vinyl2.png';

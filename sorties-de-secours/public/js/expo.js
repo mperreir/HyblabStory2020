@@ -74,6 +74,24 @@ $(document).ready(function() {
         };
         image_discover.src = 'img/expo-discover.png';
 
+        // text
+        let instructionText = new Konva.Text({
+            x: stage.width() / 2,
+            y: stage.height() / 2,
+            text: 'Gommez pour révéler.',
+            fontSize: 30,
+            fontFamily: 'NimbusSanL',
+        });
+
+        // to align text in the middle of the screen, we can set the
+        // shape offset to the center of the text shape after instantiating it
+        instructionText.offset({
+            x: instructionText.width() / 2,
+            y: instructionText.height() / 2
+        });
+        layer_cover.add(instructionText);
+        layer_cover.batchDraw();
+
     };
     image_cover.src = 'img/expo-cover.png';
 
