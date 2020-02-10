@@ -69,7 +69,9 @@
     overflow: hidden;
 }
 .article-img {
-    height: 100%;
+    min-width: 100%;
+    height: auto;
+
     position: absolute;
     left: 50%;
     top: 50%;
@@ -89,6 +91,10 @@
 
     text-align: justify;
     text-justify: inter-word;
+    font-size: 18px;
+    line-height: 130%;
+    font-style: normal;
+    font-weight: normal;
     font-family: "Nimbus Sans L";
 
     transition: width 1s, padding 1s;
@@ -107,6 +113,9 @@
 
     height: 75px;
     padding: 25px 0 50px 0;
+
+    font-size: 16px;
+    line-height: 19px;
 
     font-family: "Nimbus Sans L";
 }
