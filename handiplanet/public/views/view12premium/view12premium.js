@@ -37,4 +37,8 @@ class View12Premium extends View {
   async switchToView13(){
     transitionHorizontal(this.view, View13);
   }
+
+  play() {
+    window.soundManager.play('sound/Choix_2_informations.mp3');
+  }
 }

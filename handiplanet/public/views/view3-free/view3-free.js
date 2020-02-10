@@ -31,4 +31,8 @@ class View3Free extends View {
             this.switchToViewPremium();
         });
     }
+
+    play() {
+        window.soundManager.play('sound/Choix_1_photos.mp3');
+    }
 }

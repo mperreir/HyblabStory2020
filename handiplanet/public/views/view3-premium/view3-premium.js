@@ -33,4 +33,8 @@ class View3Premium extends View {
             this.dot4.style.transform = `translateX(${x * 0.05}px) translateY(${y * 0.05}px)`;
         });
     }
+
+    play() {
+        window.soundManager.play('sound/Choix_2_photos.mp3');
+    }
 }

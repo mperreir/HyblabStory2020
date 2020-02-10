@@ -37,4 +37,8 @@ class View8 extends View {
   async switchToView9Free() {
     transitionHorizontal(this.view, View9Free);
   }
+
+  play() {
+    window.soundManager.play('sound/Question_contact.mp3');
+  }
 }

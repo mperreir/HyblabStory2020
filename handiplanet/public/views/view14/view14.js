@@ -50,4 +50,8 @@ class View14 extends View {
   async switchToComparatif(){
     transitionHorizontal(this.view, Comparatif);
   }
+
+  play() {
+    window.soundManager.play('sound/Remerciements_de_Wendy.mp3');
+  }
 }

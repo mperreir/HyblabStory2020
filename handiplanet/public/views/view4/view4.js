@@ -17,4 +17,8 @@ class View4 extends View {
             this.switchToNextView();
         });
     }
+
+    play() {
+        window.soundManager.play('sound/Data_1.mp3');
+    }
 }

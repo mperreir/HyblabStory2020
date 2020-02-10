@@ -22,4 +22,8 @@ class View6Premium extends View {
     async switchView7(){
         transitionHorizontal(this.view, View7);
     }
+
+    play() {
+        window.soundManager.play('sound/Choix_2_liens_externes.mp3');
+    }
 }

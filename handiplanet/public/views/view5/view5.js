@@ -27,4 +27,8 @@ class View5 extends View {
     async switchToView6Premium(){
         transitionHorizontal(this.view, View6Premium);
     }
+
+    play() {
+        window.soundManager.play('sound/Question_liens_externes.mp3');
+    }
 }

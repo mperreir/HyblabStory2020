@@ -18,6 +18,10 @@ class View2 extends View {
         });
     }
 
+    play() {
+        window.soundManager.play('sound/Question_photos.mp3');
+    }
+
     async switchToViewFree() {
         transitionHorizontal(this.view, View3Free);
     }

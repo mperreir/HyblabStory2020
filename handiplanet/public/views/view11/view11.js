@@ -39,4 +39,8 @@ class View11 extends View {
         });
     }
 
+    play() {
+        window.soundManager.play('sound/Question_informations.mp3');
+    }
+
 }

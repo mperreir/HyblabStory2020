@@ -25,4 +25,8 @@ class View10 extends View {
   async switchToContext() {
     showContextView(this.view);
   }
+
+  play() {
+    window.soundManager.play('sound/Data_2.mp3');
+  }
 }

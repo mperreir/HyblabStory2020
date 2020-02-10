@@ -7,6 +7,13 @@ class Contexte extends View {
         3: '<span>On a bien avancé,</span> il ne reste qu\'à'
     };
 
+    sounds = [
+        'sound/context_1.mp3',
+        'sound/context_2.mp3',
+        'sound/context_3.mp3',
+        'sound/context_4.mp3',
+    ];
+
     constructor(receiver) {
         super('contexte', receiver);
         this.questionNumber = 0;
@@ -19,6 +26,10 @@ class Contexte extends View {
         if(this.buttons[1]) this.contact.style.display = 'flex';
         if(this.buttons[2]) this.reseau.style.display = 'flex';
         if(this.buttons[3]) this.info.style.display = 'flex';
+    }
+
+    play() {
+        window.soundManager.play(this.sounds[this.questionNumber]);
     }
 
     linkElements() {

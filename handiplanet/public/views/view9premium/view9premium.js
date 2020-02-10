@@ -21,4 +21,8 @@ class View9Premium extends View {
   async switchToView10() {
     transitionHorizontal(this.view, View10);
   }
+
+  play() {
+    window.soundManager.play('sound/Choix_2_contact.mp3');
+  }
 }

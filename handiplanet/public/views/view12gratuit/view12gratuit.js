@@ -38,4 +38,8 @@ class View12Gratuit extends View {
   async switchToView12Premium(){
     transitionHorizontalInvert(this.view, View12Premium);
   }
+
+  play() {
+    window.soundManager.play('sound/Choix_1_informations.mp3');
+  }
 }

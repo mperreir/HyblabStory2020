@@ -21,4 +21,8 @@ class View9Free extends View {
   async switchToPremium() {
     transitionHorizontalInvert(this.view, View9Premium);
   }
+
+  play() {
+    window.soundManager.play('sound/Choix_1_contact.mp3');
+  }
 }

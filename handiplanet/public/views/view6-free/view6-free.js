@@ -44,4 +44,8 @@ class View6Free extends View {
     async switchToViewPremium(){
         transitionHorizontalInvert(this.view, View6Premium);
     }
+
+    play() {
+        window.soundManager.play('sound/Choix_1_liens_externes.mp3');
+    }
 }
