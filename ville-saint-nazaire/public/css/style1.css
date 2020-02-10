@@ -4,6 +4,7 @@
   bottom:8%;
   width:34%;
   left:33%;
+  cursor:pointer;
 }
 #page-1{
   background-image: url('../img/background1.png');
