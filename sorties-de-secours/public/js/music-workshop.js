@@ -120,17 +120,18 @@ $(document).ready(function() {
 
             // text
             let instructionText = new Konva.Text({
-                x: 5 - ( ( (stageHeight*1920) / 1080) - ((stageHeight*1920) / 810) ) / 2,
+                x: 15,
                 y: stage.height() / 2,
                 text: 'Déplacez la tête de lecture\net lancez le son de Baloji.',
                 fontSize: 30,
                 fontFamily: 'NimbusSanL',
+                lineHeight: 1.2
             });
 
             // to align text in the middle of the screen, we can set the
             // shape offset to the center of the text shape after instantiating it
             instructionText.offset({
-                x: instructionText.width() / 2,
+                x: 0,
                 y: instructionText.height() / 2
             });
             layer.add(instructionText);
