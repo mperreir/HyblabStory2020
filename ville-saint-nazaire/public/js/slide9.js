@@ -51,9 +51,9 @@ function myMove9(elem) {
     if (pos == 20) { //condition d'arrêt de la "boucle"
       clearInterval(id);
     } else {
+      elem.style.borderStyle='none';
       pos++;
       tail=tail+15/20;
-      //elem.style.top = (pos+30) + '%'';//déplacement vers le bas
       elem.style.left = (pos-20) + '%';//déplacement vers la gauche
       elem.style.width = (tail+25) + '%';
     }
@@ -67,10 +67,10 @@ function myReturn9(elem) {
   function frame() {
     if (pos == -20) { //condition d'arrêt de la "boucle"
       clearInterval(id);
+      elem.style.borderStyle='solid';
     } else {
       pos--;
       tail=tail-15/20;
-      //elem.style.top = (pos+30) + '%';//déplacement vers le bas
       elem.style.left = (pos) + '%';//déplacement vers la gauche
       elem.style.width = (tail+40) + '%';
     }
