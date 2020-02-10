@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
   let presPos = $("#presentation-section").position();
+  let menuPos = $("#menu-section").position();
 
   var presentationPosTop = {
     top: $('#presentation-section').offset().top,
@@ -51,9 +52,10 @@ $(document).ready(function() {
     let scrollPos = $(window).scrollTop();
 
     let presentationSection = $("#presentation-section");
-    if (scrollPos > presPos.top - 400 && presentationFixed) {
+    if (scrollPos > presPos.top - 400 && presentationFixed && scrollPos < menuPos.top - 100) {
       e.preventDefault();
       bodyScrollLock.disableBodyScroll(presentationSection);
+      console.log("J'ANIME");
       $('html,body').animate({
           scrollTop: $("#presentation-section").offset().top
       }, 200);

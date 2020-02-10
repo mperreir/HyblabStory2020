@@ -104,7 +104,7 @@ $(document).ready(function() {
                   mouseAnimatedDance.classList.remove('fadeOut');
                   mouseAnimatedDance.classList.add('fadeInUp');
                   isExperience = false;
-                }, 10000);
+                }, 5000);
 
                 $('#dance-section').on('mousewheel', function(e, delta) {
                   if(!isExperience) {
