@@ -5,35 +5,19 @@ $(document).ready(function() {
     bottom: $('#dance-section').offset().top + $('#dance-section').height()
   };
 
+  var musicPosTop = {
+    top: $('#music-section').offset().top,
+    bottom: $('#music-section').offset().top + $('#music-section').height()
+  };
 
   $(window).scroll(function() {
-    if($(window).scrollTop() > dancePosTop.top) {
-      bodyScrollLock.disableBodyScroll("#container");
-      goToByScroll("dance-section");
-      $("#dance-first-slide").css("background-color", "white");
-      setTimeout(function() {
-        const mouseAnimated = document.querySelector("#mouse-animated-dance");
-        mouseAnimated.classList.remove('fadeOut');
-        mouseAnimated.classList.add('fadeInUp');
-        isExperience = false;
-      }, 10000);
-    }
+
   });
 
-  let isExperience = true;
-
-
-
-  $('#dance-section').on('mousewheel', function(e, delta) {
-    if(!isExperience) {
-      $("#img-dancers-2").css("opacity", "1");
-      /*this.scrollLeft -= (delta * 60);*/
-    }
-
-
-    //e.preventDefault();
+  $("#hover-dancers-crayons").hover(function() {
+    $("#img-dancers-3").css("transform", "scale(1.05)");
+  }, function() {
+    $("#img-dancers-3").css("transform", "scale(1)");
   });
 
 });
-
-/* DANCE EXPERIENCE */

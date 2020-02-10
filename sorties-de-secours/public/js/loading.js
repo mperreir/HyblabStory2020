@@ -10,7 +10,7 @@ $(document).ready(function() {
     bottom: $(document).height() - $('#loading-section').offset().top - $('#loading-section').height()
   };
 
-  const soundAnimated = document.querySelector("#sound-content");
+  const soundAnimated = document.querySelector("#sound-content-loading");
   const mouseAnimated = document.querySelector("#mouse-animated");
 
   let storedPosTop = 0;

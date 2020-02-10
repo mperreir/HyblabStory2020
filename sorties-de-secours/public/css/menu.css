@@ -1,5 +1,6 @@
 #menu-section {
   position: relative;
+  z-index: 10;
 }
 
 .expChoice {
@@ -8,7 +9,7 @@
   float: left;
   height: 100vh;
   width: 33.33%;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .expChoice a {
@@ -51,6 +52,22 @@
   transform: translate(-50%, -50%);
 
   height: 100%;
+}
+
+.hachure {
+  z-index: 3; /* over image */
+
+  /* centering with aspect ratio */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  transition: opacity 3s;
+
+  height: 100%;
+  width: 40vw;
 }
 
 .menu-hover {
@@ -151,13 +168,13 @@
   margin: 35px;
 }
 
+/* Make exp menu expand to full page */
 .expChoiceExpand > .menu-hover > .hover-text-wrapper > .menu-workshop-author {
   align-self: flex-end;
   padding-right: 20%;
   transition: all 1s;
   transition-delay: 0.25s;
 }
-
 .expChoiceExpand {
   cursor: default;
 }
@@ -168,30 +185,42 @@
   transition: all 2s;
   transition-delay: 1.5s;
 }
-.expChoiceExpand > .menu-hover > .hover-text-wrapper > img, .expChoiceExpand > .menu-hover > .hover-text-wrapper > .menu-text {
+.expChoiceExpand > .menu-hover > .hover-text-wrapper > img,
+.expChoiceExpand > .menu-hover > .hover-text-wrapper > .menu-text {
   display: block;
 }
-
 .expChoiceExpand > .menu-hover {
   opacity: 1;
 }
-
-
 .expChoiceExpand {
   width: 100%;
   transition: width 2s;
 }
 
+/* Make exp menu collapse to 0 */
 .expChoiceHidden {
   width: 0;
   transition: width 2s;
-  overflow: hidden;
 }
-
 .expChoiceHidden > .menu-hover > .hover-text-wrapper > img, .expChoiceHidden > .menu-hover > .hover-text-wrapper > .menu-text {
   display: none;
 }
 
-.expChoiceHidden > .img-menu-crayon {
-  width: auto;
+/* Make exp menu transition to workshop*/
+.expChoiceOut > .menu-hover > .hover-text-wrapper > .menu-workshop-title,
+.expChoiceOut > .menu-hover > .hover-text-wrapper > .menu-workshop-author,
+.expChoiceOut > .menu-hover > .hover-text-wrapper > .menu-text {
+  transform: translateX(-100vw);
+  transition: transform 0.75s ease-out;
+}
+.expChoiceOut > .menu-hover > .hover-text-wrapper > .menu-text {
+  transition-delay: 0.25s;
+}
+.expChoiceOut > .menu-hover > .hover-text-wrapper > .menu-workshop-author {
+  transition-delay: 0.5s;
+}
+
+#mouse-animated-menuExpo, #mouse-animated-menuMusic, #mouse-animated-menuDance {
+  position: absolute;
+  bottom: 20%;
 }

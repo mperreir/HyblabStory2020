@@ -4,7 +4,7 @@
   background-color: #1E1E1E;
 }
 
-#sound-content {
+.sound-content {
   position: relative;
   top: 30%;
 
@@ -17,7 +17,7 @@
   width: 100px;
 }
 
-.bar {
+.bar-white {
     fill: white;
     border-radius: 5px;
 }
@@ -110,8 +110,8 @@
 }
 
 #mouse-down {
-  position: absolute;
-	transform: translate(-50%, -50%);
+    position: absolute;
+    transform: translate(-50%, -50%);
 	left: 50%;
 }
 
@@ -127,13 +127,13 @@
   height: 55px;
 }
 .mousey {
-  width: 3px;
-  padding: 10px 15px;
-  height: 35px;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  opacity: 0.85;
-  box-sizing: content-box;
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.85;
+    box-sizing: content-box;
 }
 .mousey-black {
   width: 3px;

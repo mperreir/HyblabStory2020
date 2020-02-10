@@ -19,7 +19,7 @@
 	overflow-y: hidden;
 	overflow-x: scroll;
 
-  transition: background-color 3s;
+  transition: background-color 8s;
 }
 
 #img-dancers {
@@ -28,6 +28,9 @@
 	width: 100%;
 	height: 100%;
 	z-index: 100;
+
+	opacity: 0;
+	transition: opacity 2s;
 }
 
 #img-dancers-2 {
@@ -35,10 +38,32 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	z-index: 9999;
+	z-index: 200;
 	opacity: 0;
 
 	transition: opacity 1.5s;
+}
+
+#img-dancers-3 {
+	left: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 400;
+	opacity: 0;
+
+	transition: opacity 1.5s;
+	transition: all .3s ease-in-out;
+}
+
+#hover-dancers-crayons {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 50vw;
+	height: 75vh;
+
+	z-index: 9999;
 }
 
 #dance-second-slide {
@@ -165,5 +190,5 @@
 	position: relative;
 	bottom: 20%;
 	width: 100vw;
-	z-index: 9999;
+	z-index: 200;
 }

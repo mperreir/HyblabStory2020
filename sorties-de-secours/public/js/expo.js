@@ -1,3 +1,5 @@
+var expoFinished = false;
+
 $(document).ready(function() {
 
     var circle_positions = [];
@@ -25,9 +27,10 @@ $(document).ready(function() {
     });
 
     // PREMIER RANG
+    let k_image_premier_rang = new Konva.Image();
     let image_premier_rang = new Image();
     image_premier_rang.onload = () => {
-        let k_image_premier_rang = new Konva.Image({
+        k_image_premier_rang = new Konva.Image({
             x: 0,
             y: 0,
             image: image_premier_rang,
@@ -74,9 +77,45 @@ $(document).ready(function() {
     };
     image_cover.src = 'img/expo-cover.png';
 
+    // ANIMATIONS
+    let stageWidth = stage.width();
+
+    var anim_premier_rang_coming = new Konva.Animation(function(frame) {
+        let position = frame.time - stageWidth;
+        if (position >= 0) {
+            position = 0;
+            anim_premier_rang_coming.stop();
+        }
+        k_image_premier_rang.x(position);
+    }, layer_premier_rang);
+
+    var anim_premier_rang_going = new Konva.Animation(function(frame) {
+        let position = frame.time * 1.5;
+        if (position >= stageWidth) {
+            position = stageWidth;
+            anim_premier_rang_going.stop();
+        }
+        k_image_premier_rang.x(position);
+    }, layer_premier_rang);
 
 
     // EVENTS
+    $(window).scroll(function() {
+        if ($(document).scrollTop() >= $('#expo-section').offset().top - 50) {
+            anim_premier_rang_coming.start();
+            setTimeout(function () {
+                expoFinished = true;
+            }, 2500);
+        }
+    });
+
+    $('#expo-section').on('mousewheel', function () {
+        if (expoFinished) {
+            anim_premier_rang_going.start();
+            initArticle('expo');
+        }
+    });
+
     var mouseDown = false;
 
     stage.on('mousedown touchstart', function() {
@@ -99,6 +138,5 @@ $(document).ready(function() {
         });
         group.draw();
     });
-
 
 });

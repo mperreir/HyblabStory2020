@@ -2,9 +2,9 @@ $(document).ready(function() {
 
   $("#button-start").click(function(e) {
     bodyScrollLock.enableBodyScroll(container);
-    goToByScroll("loading-section");
+    goToByScroll("loading-section", 500);
 
-    const soundAnimated = document.querySelector("#sound-content");
+    const soundAnimated = document.querySelector("#sound-content-loading");
     const mouseAnimated = document.querySelector("#mouse-animated");
     soundAnimated.classList.add('animated', 'fadeInUp');
     mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
@@ -12,6 +12,28 @@ $(document).ready(function() {
     mouseAnimated.addEventListener('animationend', function() { bodyScrollLock.enableBodyScroll(container); });
 
     set_music_play("generalMusic");
+  });
+
+  $("#link-presentation").click(function(e) {
+    document.getElementById("hamburger-checkbox").checked = false;
+    bodyScrollLock.enableBodyScroll(container);
+    goToByScroll("presentation-section");
+
+    const soundAnimated = document.querySelector("#sound-content-loading");
+    const mouseAnimated = document.querySelector("#mouse-animated");
+    soundAnimated.classList.add('animated', 'fadeInUp');
+    mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
+  });
+
+  $("#link-menu").click(function(e) {
+    document.getElementById("hamburger-checkbox").checked = false;
+    bodyScrollLock.enableBodyScroll(container);
+    goToByScroll("menu-section");
+
+    const soundAnimated = document.querySelector("#sound-content-loading");
+    const mouseAnimated = document.querySelector("#mouse-animated");
+    soundAnimated.classList.add('animated', 'fadeInUp');
+    mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
   });
 
   $("#button-start").hover(function() {
