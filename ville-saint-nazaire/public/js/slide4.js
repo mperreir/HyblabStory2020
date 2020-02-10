@@ -22,7 +22,7 @@ let initSlide4 = function(){
 			}
 		  	timeOut = setTimeout(function() {
 		      showLetters(id);
-		    }, 40)
+		    }, 25)
 		  cptLettre++;
 		}
 	  else
@@ -34,7 +34,7 @@ let initSlide4 = function(){
 	
 
     // Affichage du premier texte après 5s
-    setTimeout(playDialogues, 5500);
+    setTimeout(playDialogues, 3500);
     //setTimeout(playDialogues, 0);
 
     var btnSuivant = document.querySelector('#slide4-btnSuivant');
