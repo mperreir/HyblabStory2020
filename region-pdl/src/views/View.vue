@@ -55,8 +55,10 @@ import Quizz from "@/components/Saynettes/Quizz.vue";
 import End from "@/components/Saynettes/End.vue";
 import Carousel from "@/components/carousel/Carousel.vue";
 import CarouselSlide from "@/components/carousel/CarouselSlide.vue";
+import {Howl, Howler} from 'howler';
 
 export default {
+  
   name: "Views",
   components: {
     Intro,
@@ -79,6 +81,14 @@ export default {
     click() {
       this.$store.dispatch("nextScene", {});
     }
+  },
+  mounted() {
+      const sound = new Howl({
+        src: ['sounds/countryside.mp3'],
+        loop: true,
+        volume: 0.4,
+      });
+      sound.play();
   }
 };
 </script>
