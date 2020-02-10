@@ -169,12 +169,8 @@
     },
     "choices": {
       "1": {
-        "main": "Alvéole Média s’efforce de travailler avec des artisans locaux",
-        "sub": "Pour l’installation de ses capsules sonores (Menuisier ebeniste, Menuisier d'intérieur, Designer sonore) L'aide à l'installation de la capsule sonore permet d'éviter de passer par un prestataire supplémentaire."
-      },
-      "2": {
-        "main": "Alvéole Média s’efforce de travailler avec des artisans locaux",
-        "sub": "Pour l’installation de ses capsules sonores (Menuisier ebeniste, Menuisier d'intérieur, Designer sonore) L'aide à l'installation de la capsule sonore permet d'éviter de passer par un prestataire supplémentaire."
+        "main": "Alvéole Média s’efforce<br>de travailler avec des artisans locaux",
+        "sub": "Pour l’installation de ses capsules<br>sonores (Menuisier ebeniste, Menuisier<br> d'intérieur, Designer sonore)<br>L'aide à l'installation de la capsule<br>sonore permet d'éviter de passer<br>par un prestataire supplémentaire."
       }
     }
   },
