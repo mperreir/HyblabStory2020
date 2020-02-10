@@ -1,31 +1,37 @@
 import Component from "../../js/Component.js";
 import Porte from "./Porte/Porte.js"
 import Arrivee from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import PorteClaque from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import ViewDerniereTentative from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import ViewPremierChoix from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import FewHoursBefore from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import FlashBack from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import FinHistoire from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import Lendemain from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
 
 export default class Harcelement extends Component {
-  constructor(OnStart) {
+  constructor(onStart) {
     super();
-    this.OnStart = OnStart;
+    this.onStart = onStart;
     this.section = document.createElement("section");
     this.section.setAttribute("id", "harcelement");
-    this.discussion = new ViewDiscussion();
     this.porte = new Porte({
-      arrivee: this.arrivee.bind(this),
+      arrivee: this.goToArriveeEnfant.bind(this),
       onStart
     });
     this.arrivee = new Arrivee();
-    this.porteClaque = new PorteClaque();
-    this.premierChoix = new PremierChoix({
+    /*this.porteClaque = new PorteClaque();
+    this.premierChoix = new ViewPremierChoix({
       onGoToViewDiscussion: this.goToViewDiscussion.bind(this)
     });
-    this.derniereTentative = new DerniereTentative({
+    /*this.derniereTentative = new ViewDerniereTentative({
       onGoToViewDiscussion: this.goToViewDiscussion.bind(this)
     });
     this.fewHoursBefore = new FewHoursBefore();
     this.flashBack = new FlashBack();
     this.finHistoire = new FinHistoire();
     this.lendemain = new Lendemain();
-    
+    */
   }
 
 
@@ -53,7 +59,7 @@ export default class Harcelement extends Component {
     this.porteClaque.componentWillUnmount();
     this.premierChoix.render(this.section);
   }
-
+  /*
   goToDernièreTentative(){
     this.premierChoix.componentWillUnmount();
     this.derniereTentative.render(this.section);
@@ -93,25 +99,20 @@ export default class Harcelement extends Component {
       this.goToArriveeEnfant(e);
     }, 3000);
   }
+  */
 
-  goToViewDiscussion(e) {
-    this.PremierChoix.componentWillUnmount();
-    this.discussion.render(this.section);
-    e.preventDefault();
-  }
 
   async load() {
     await Promise.all([
       this.porte.load(),
       this.arrivee.load(),
-      this.discussion.load(),
-      this.porteClaque.load(),
+      /*this.porteClaque.load(),
       this.premierChoix.load(),
       this.derniereTentative.load(),
       this.fewHoursBefore.load(),
       this.flashBack.load(),
       this.finHistoire.load(),
-      this.lendemain.load()
+      this.lendemain.load()*/
     ]);
   }
 
