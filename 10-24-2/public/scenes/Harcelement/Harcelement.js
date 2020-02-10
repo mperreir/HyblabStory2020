@@ -18,6 +18,14 @@ export default class Harcelement extends Component {
     this.premierChoix = new PremierChoix({
       onGoToViewDiscussion: this.goToViewDiscussion.bind(this)
     });
+    this.derniereTentative = new DerniereTentative({
+      onGoToViewDiscussion: this.goToViewDiscussion.bind(this)
+    });
+    this.fewHoursBefore = new FewHoursBefore();
+    this.flashBack = new FlashBack();
+    this.finHistoire = new FinHistoire();
+    this.lendemain = new Lendemain();
+    
   }
 
 
@@ -27,14 +35,15 @@ export default class Harcelement extends Component {
     this.arrivee.render(this.section);
     e.preventDefault();
     setTimeout(() => {
-      this.goToClaquePorte();
+      this.goToClaquePorte(e);
     }, 3000);
   }
 
-  goToArriveeEnfant(){
+  goToClaquePorte(e){
     this.onStart(this);
     this.arrivee.componentWillUnmount();
     this.porteClaque.render(this.section);
+    e.preventDefault();
     setTimeout(() => {
       this.goToPremierChoix();
     }, 3000);
@@ -45,10 +54,48 @@ export default class Harcelement extends Component {
     this.premierChoix.render(this.section);
   }
 
+  goToDernièreTentative(){
+    this.premierChoix.componentWillUnmount();
+    this.derniereTentative.render(this.section);
+  }
 
+  goToFewHoursBefore(e){
+    this.onStart(this);
+    this.derniereTentative.componentWillUnmount();
+    this.fewHoursBefore.render(this.section);
+    e.preventDefault();
+    setTimeout(() => {
+      this.goToFlashBack(e);
+    }, 3000);
+  }
+
+  goToFlashBack(e){
+    this.onStart(this);
+    this.fewHoursBefore.componentWillUnmount();
+    this.flashBack.render(this.section);
+    e.preventDefault();
+    setTimeout(() => {
+      this.goToFinHistoire(e);
+    }, 3000);
+  }
+
+  goToFinHistoire(e){
+    //je sais pas
+  }
+
+  gotoLendemain(e){
+    this.onStart(this);
+    this.premierChoix.componentWillUnmount();
+    //ou derniereTentative mais je sais pas comment faire
+    this.lendemain.render(this.section);
+    e.preventDefault();
+    setTimeout(() => {
+      this.goToArriveeEnfant(e);
+    }, 3000);
+  }
 
   goToViewDiscussion(e) {
-    this.culotte.componentWillUnmount();
+    this.PremierChoix.componentWillUnmount();
     this.discussion.render(this.section);
     e.preventDefault();
   }
@@ -56,9 +103,15 @@ export default class Harcelement extends Component {
   async load() {
     await Promise.all([
       this.porte.load(),
-      this.culotte.load(),
+      this.arrivee.load(),
       this.discussion.load(),
-      this.atable.load()
+      this.porteClaque.load(),
+      this.premierChoix.load(),
+      this.derniereTentative.load(),
+      this.fewHoursBefore.load(),
+      this.flashBack.load(),
+      this.finHistoire.load(),
+      this.lendemain.load()
     ]);
   }
 

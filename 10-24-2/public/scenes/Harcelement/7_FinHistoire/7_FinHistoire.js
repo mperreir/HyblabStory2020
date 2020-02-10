@@ -1,6 +1,6 @@
 import Component from "../../../js/Component.js";
 
-export default class Lendemain extends Component {
+export default class FinHistoire extends Component {
   constructor() {
     super();
     this.html = "";
@@ -8,7 +8,7 @@ export default class Lendemain extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-2/scenes/Harcelement/Lendemain/Lendemain.html"
+      "/10-24-2/scenes/Harcelement/7_FinHistoire/7_FinHistoire.html"
     );
   }
 
