@@ -15,6 +15,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+
+    #view-thanks-replay {
+      bottom: -70%;
+      position: relative;
+    }
     
     section:first-of-type {
       margin-top: auto;

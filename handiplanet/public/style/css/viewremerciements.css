@@ -16,6 +16,10 @@
   display: flex;
   flex-direction: column;
 }
+#viewremerciements #view-thanks-middle #view-thanks-replay {
+  bottom: -70%;
+  position: relative;
+}
 #viewremerciements #view-thanks-middle section:first-of-type {
   margin-top: auto;
   display: flex;
