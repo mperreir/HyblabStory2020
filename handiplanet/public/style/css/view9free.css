@@ -44,5 +44,25 @@
   position: relative;
   margin: 0px !important;
 }
+#view9free #view-9f-middle #view9f-bulle1 {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+}
+#view9free #view-9f-middle #view9f-bulle2 {
+  position: absolute;
+  left: 80%;
+  top: 80%;
+}
+#view9free #view-9f-middle #view9f-bulle3 {
+  position: absolute;
+  left: 30%;
+  top: 90%;
+}
+#view9free #view-9f-middle #view9f-bulle4 {
+  position: absolute;
+  left: 80%;
+  top: 30%;
+}
 
 /*# sourceMappingURL=view9free.css.map */
