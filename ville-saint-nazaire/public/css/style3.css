@@ -43,6 +43,8 @@ form>label{
 .imageBouton{
     position: absolute;
     right:3.5%;
+    width:5%;
+    cursor:pointer;
 }
 .imageBouton:hover {
 	-webkit-transform:scale(1.25); /* Safari et Chrome */
