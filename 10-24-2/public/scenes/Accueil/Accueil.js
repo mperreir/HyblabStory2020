@@ -1,0 +1,35 @@
+import Component from "../../js/Component.js";
+import Carousel from "../Carousel/Carousel.js";
+
+export default class Home extends Component {
+  constructor() {
+    super();
+    this.html = "";
+    this.carouselC = new Carousel();
+  }
+
+  async load() {
+    const promises = await Promise.all([
+      this.loadHTML("/10-24-2/scenes/Accueil/Accueil.html"),
+      this.carouselC.load()
+    ]);
+    this.html = promises[0];
+  }
+
+  componentDidMount() {
+    document
+      .querySelector("#commencer-experience > button")
+      .addEventListener("click", () =>
+        this.carouselC.render(document.getElementById("root"))
+      );
+  }
+
+  /**
+   *
+   * @param {HTMLElement} target
+   */
+  render(target) {
+    this.renderHtmlInTarget(target, this.html);
+    this.componentDidMount();
+  }
+}

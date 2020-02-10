@@ -1,0 +1,80 @@
+#playscriptTemplate {
+  padding: 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#carousel > div {
+  height: 100%;
+}
+
+/* Logo */
+
+#logo-carousel {
+  width: 79px;
+  height: 71px;
+  align-self: center;
+}
+
+/* Bottom controls */
+
+#bottom-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+#music-switch {
+  width: 86.5px;
+  height: 39px;
+}
+
+.social-network-button {
+  width: 37.5px;
+  height: 37.5px;
+}
+
+#social-networks {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#choix-portes {
+  display: none;
+}
+
+/* Carousel */
+
+#carousel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 520px; */
+  width: auto;
+}
+
+#carousel {
+  height: 100%;
+  width: calc(100% - 110px);
+  position: relative;
+}
+
+.arrow {
+  width: 55px;
+  height: 74px;
+}
+
+.arrow:hover path {
+  stroke: rgb(255, 110, 0);
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+/* Carousel button */
+button {
+  width: 263px;
+}

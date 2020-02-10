@@ -1,0 +1,3 @@
+.svg-button:hover > path:nth-of-type(2) {
+  stroke: white;
+}

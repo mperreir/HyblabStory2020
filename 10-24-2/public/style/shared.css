@@ -1,3 +1,10 @@
+/* Omnes Semibold font */
+@import url(http://db.onlinewebfonts.com/c/827efd408950e4d94af5e60b9a37c5b8?family=Omnes+Semibold);
+html * {
+  font-size: 17px;
+  font-family: "Omnes Semibold";
+}
+
 html,
 body {
   width: 100%;
@@ -18,6 +25,11 @@ svg {
   width: 100%;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+}
+
 #root {
   width: 100%;
   height: 100%;
@@ -26,6 +38,31 @@ svg {
 #root > * {
   width: 100%;
   height: 100%;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+/* Text buttons */
+button {
+  width: 263px;
+  padding: 10px;
+  border-radius: 151px;
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+}
+
+button:hover {
+  border-color: rgb(255, 110, 0);
+  background-color: rgb(255, 110, 0);
+  color: white;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
 }
 
 /* Social networks */
@@ -49,4 +86,9 @@ svg {
 #facebook-button:hover path,
 #instagram-button:hover path {
   fill: white;
+}
+
+.social-network-button {
+  width: 37.5px;
+  height: 37.5px;
 }
