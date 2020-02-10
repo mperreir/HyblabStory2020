@@ -18,6 +18,7 @@
   #view13-graph {
     left: 50%;
     top: 50%;
+    height: 80%; // Prevents bad render
     transform: translateX(-50%) translateY(-50%);
     position: absolute;
   }
