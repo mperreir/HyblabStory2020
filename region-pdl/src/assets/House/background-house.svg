@@ -1,1 +1,1487 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1024"><title>Décor-maison</title><g id="fond"><path d="M-1926.76,832.32s313.33-40.58,861.62-36.19,928.23-18,1348.59-10.4,584.84,12.77,1251.93-1c1136.77-23.38,1188,66.93,310.7,89.89s-1453,7.14-2284.54,10.28S-1926.76,832.32-1926.76,832.32Z" style="fill:#80bbde"/><path d="M-2399.84,890.83c4.53-3,9-6.15,13.37-9.33,23.47-17,102.28-68.29,218.65-84.78,140.24-19.88,214.59,21.6,365.7-7.58s291.35.94,361.47,7.58S-1180.94,856-1045.9,858.6-497.63,783-378.16,788.41-211,791.84,25.18,907.91c0,0-211.46,87.16-530.89,81.71C-822.49,984.21-2623.82,1040.19-2399.84,890.83Z" style="fill:#e5eec9"/><path d="M1414.79,802.67s313.32-40.58,861.61-36.19,928.24-18,1348.6-10.4,696.94,7.25,696.94,7.25l294-35.39a730.9,730.9,0,0,1,133-3.8l535.63,35.55q15.21,1,30.45,1.21l626.86,8.49,1095.33,4.1,166,.62L7948,780.67a950.79,950.79,0,0,1,116.45,8.18l587.75,77.8c-203.55,5.33-586,69.43-1050.5,69.51-1537.52.28-4060-83.28-4698.65-80.87C2071.51,858.44,1414.79,802.67,1414.79,802.67Z" style="fill:#80bbde"/><path d="M3.82,871.76h0c307.14-119.87,575.33-16,693-63.34,114.14-45.95,413.12,29.6,564.23.41s291.36.94,361.48,7.58,259.7,59.3,394.75,61.91,343.7-69.81,463.16-64.34c92.83,4.25,489.95-58.07,601.83,11.12,38.17,23.6,128.39,85.26-117.27,74,0,0-88.1,115.79-407.54,110.34C2240.65,1004,185.66,1070.34,3.82,871.76Z" style="fill:#e5eec9"/><path d="M8652.23,866.65c-100.14,9.72-1421.09,21-1548.91,21-158.45,0-810.14,7.5-932.62-5.73-724.86-78.35-3263.1-75.91-3814.12-30.84-142,11.61-696.57-15.57-1004.39,4.4S844.3,842.2,598,835.33,83.68,877.11-162.57,878.55s-593.77-16.38-1086.28-23-946.53-20.19-946.53-20.19c-364.78,0-566.79,107-686.82,117.33v72.2l12963.66,1V868.19C10080.37,868.3,8653.32,866.55,8652.23,866.65Z" style="fill:#c5e567"/><rect x="1211.39" y="638.53" width="70.58" height="183.23" style="fill:#8dc2e2"/><rect id="fenetre" x="1222.41" y="652.83" width="11.85" height="160.58" style="fill:#cae2f1"/><rect id="fenetre-2" data-name="fenetre" x="1240.63" y="652.83" width="11.85" height="160.58" style="fill:#cae2f1"/><rect id="fenetre-3" data-name="fenetre" x="1258.85" y="652.83" width="11.85" height="160.58" style="fill:#cae2f1"/><rect x="1070.64" y="642.05" width="75.59" height="186.77" style="fill:#b0d5eb"/><rect id="fenetre-4" data-name="fenetre" x="1078.33" y="651.24" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-5" data-name="fenetre" x="1094.57" y="651.24" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-6" data-name="fenetre" x="1110.82" y="651.24" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-7" data-name="fenetre" x="1127.06" y="651.24" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-8" data-name="fenetre" x="1078.33" y="672.74" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-9" data-name="fenetre" x="1094.57" y="672.74" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-10" data-name="fenetre" x="1110.82" y="672.74" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-11" data-name="fenetre" x="1127.06" y="672.74" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-12" data-name="fenetre" x="1078.33" y="694.23" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-13" data-name="fenetre" x="1094.57" y="694.23" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-14" data-name="fenetre" x="1110.82" y="694.23" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-15" data-name="fenetre" x="1127.06" y="694.23" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-16" data-name="fenetre" x="1078.33" y="715.73" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-17" data-name="fenetre" x="1094.57" y="715.73" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-18" data-name="fenetre" x="1110.82" y="715.73" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-19" data-name="fenetre" x="1127.06" y="715.73" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-20" data-name="fenetre" x="1078.33" y="737.22" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-21" data-name="fenetre" x="1094.57" y="737.22" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-22" data-name="fenetre" x="1110.82" y="737.22" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-23" data-name="fenetre" x="1127.06" y="737.22" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-24" data-name="fenetre" x="1078.33" y="758.72" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-25" data-name="fenetre" x="1094.57" y="758.72" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-26" data-name="fenetre" x="1110.82" y="758.72" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-27" data-name="fenetre" x="1127.06" y="758.72" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-28" data-name="fenetre" x="1078.33" y="780.21" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-29" data-name="fenetre" x="1094.57" y="780.21" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-30" data-name="fenetre" x="1110.82" y="780.21" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-31" data-name="fenetre" x="1127.06" y="780.21" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-32" data-name="fenetre" x="1078.33" y="801.71" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-33" data-name="fenetre" x="1094.57" y="801.71" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-34" data-name="fenetre" x="1110.82" y="801.71" width="10.56" height="16" style="fill:#cae2f1"/><rect id="fenetre-35" data-name="fenetre" x="1127.06" y="801.71" width="10.56" height="16" style="fill:#cae2f1"/><rect x="1130.32" y="570.82" width="92.42" height="269.49" style="fill:#8dc2e2"/><rect id="fenetre-36" data-name="fenetre" x="1139.73" y="584.08" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-37" data-name="fenetre" x="1159.59" y="584.08" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-38" data-name="fenetre" x="1179.44" y="584.08" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-39" data-name="fenetre" x="1199.3" y="584.08" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-40" data-name="fenetre" x="1139.73" y="615.1" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-41" data-name="fenetre" x="1159.59" y="615.1" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-42" data-name="fenetre" x="1179.44" y="615.1" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-43" data-name="fenetre" x="1199.3" y="615.1" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-44" data-name="fenetre" x="1139.73" y="646.11" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-45" data-name="fenetre" x="1159.59" y="646.11" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-46" data-name="fenetre" x="1179.44" y="646.11" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-47" data-name="fenetre" x="1199.3" y="646.11" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-48" data-name="fenetre" x="1139.73" y="677.13" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-49" data-name="fenetre" x="1159.59" y="677.13" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-50" data-name="fenetre" x="1179.44" y="677.13" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-51" data-name="fenetre" x="1199.3" y="677.13" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-52" data-name="fenetre" x="1139.73" y="708.14" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-53" data-name="fenetre" x="1159.59" y="708.14" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-54" data-name="fenetre" x="1179.44" y="708.14" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-55" data-name="fenetre" x="1199.3" y="708.14" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-56" data-name="fenetre" x="1139.73" y="739.16" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-57" data-name="fenetre" x="1159.59" y="739.16" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-58" data-name="fenetre" x="1179.44" y="739.16" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-59" data-name="fenetre" x="1199.3" y="739.16" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-60" data-name="fenetre" x="1139.73" y="770.17" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-61" data-name="fenetre" x="1159.59" y="770.17" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-62" data-name="fenetre" x="1179.44" y="770.17" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-63" data-name="fenetre" x="1199.3" y="770.17" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-64" data-name="fenetre" x="1139.73" y="801.19" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-65" data-name="fenetre" x="1159.59" y="801.19" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-66" data-name="fenetre" x="1179.44" y="801.19" width="12.91" height="23.09" style="fill:#cae2f1"/><rect id="fenetre-67" data-name="fenetre" x="1199.3" y="801.19" width="12.91" height="23.09" style="fill:#cae2f1"/></g><g id="ECOLE"><rect x="197.11" y="671.99" width="54.17" height="157.94" style="fill:#8dc2e2"/><rect id="fenetre-68" data-name="fenetre" x="202.62" y="679.77" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-69" data-name="fenetre" x="214.26" y="679.77" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-70" data-name="fenetre" x="225.9" y="679.77" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-71" data-name="fenetre" x="237.54" y="679.77" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-72" data-name="fenetre" x="202.62" y="697.94" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-73" data-name="fenetre" x="214.26" y="697.94" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-74" data-name="fenetre" x="225.9" y="697.94" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-75" data-name="fenetre" x="237.54" y="697.94" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-76" data-name="fenetre" x="202.62" y="716.12" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-77" data-name="fenetre" x="214.26" y="716.12" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-78" data-name="fenetre" x="225.9" y="716.12" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-79" data-name="fenetre" x="237.54" y="716.12" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-80" data-name="fenetre" x="202.62" y="734.3" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-81" data-name="fenetre" x="214.26" y="734.3" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-82" data-name="fenetre" x="225.9" y="734.3" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-83" data-name="fenetre" x="237.54" y="734.3" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-84" data-name="fenetre" x="202.62" y="752.48" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-85" data-name="fenetre" x="214.26" y="752.48" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-86" data-name="fenetre" x="225.9" y="752.48" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-87" data-name="fenetre" x="237.54" y="752.48" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-88" data-name="fenetre" x="202.62" y="770.65" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-89" data-name="fenetre" x="214.26" y="770.65" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-90" data-name="fenetre" x="225.9" y="770.65" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-91" data-name="fenetre" x="237.54" y="770.65" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-92" data-name="fenetre" x="202.62" y="788.83" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-93" data-name="fenetre" x="214.26" y="788.83" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-94" data-name="fenetre" x="225.9" y="788.83" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-95" data-name="fenetre" x="237.54" y="788.83" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-96" data-name="fenetre" x="202.62" y="807.01" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-97" data-name="fenetre" x="214.26" y="807.01" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-98" data-name="fenetre" x="225.9" y="807.01" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-99" data-name="fenetre" x="237.54" y="807.01" width="7.56" height="13.53" style="fill:#cae2f1"/><rect x="310.91" y="670.48" width="54.17" height="157.94" style="fill:#8dc2e2"/><rect id="fenetre-100" data-name="fenetre" x="316.42" y="678.25" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-101" data-name="fenetre" x="328.06" y="678.25" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-102" data-name="fenetre" x="339.7" y="678.25" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-103" data-name="fenetre" x="351.34" y="678.25" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-104" data-name="fenetre" x="316.42" y="696.43" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-105" data-name="fenetre" x="328.06" y="696.43" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-106" data-name="fenetre" x="339.7" y="696.43" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-107" data-name="fenetre" x="351.34" y="696.43" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-108" data-name="fenetre" x="316.42" y="714.61" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-109" data-name="fenetre" x="328.06" y="714.61" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-110" data-name="fenetre" x="339.7" y="714.61" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-111" data-name="fenetre" x="351.34" y="714.61" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-112" data-name="fenetre" x="316.42" y="732.79" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-113" data-name="fenetre" x="328.06" y="732.79" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-114" data-name="fenetre" x="339.7" y="732.79" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-115" data-name="fenetre" x="351.34" y="732.79" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-116" data-name="fenetre" x="316.42" y="750.96" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-117" data-name="fenetre" x="328.06" y="750.96" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-118" data-name="fenetre" x="339.7" y="750.96" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-119" data-name="fenetre" x="351.34" y="750.96" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-120" data-name="fenetre" x="316.42" y="769.14" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-121" data-name="fenetre" x="328.06" y="769.14" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-122" data-name="fenetre" x="339.7" y="769.14" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-123" data-name="fenetre" x="351.34" y="769.14" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-124" data-name="fenetre" x="316.42" y="787.32" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-125" data-name="fenetre" x="328.06" y="787.32" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-126" data-name="fenetre" x="339.7" y="787.32" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-127" data-name="fenetre" x="351.34" y="787.32" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-128" data-name="fenetre" x="316.42" y="805.49" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-129" data-name="fenetre" x="328.06" y="805.49" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-130" data-name="fenetre" x="339.7" y="805.49" width="7.56" height="13.53" style="fill:#cae2f1"/><rect id="fenetre-131" data-name="fenetre" x="351.34" y="805.49" width="7.56" height="13.53" style="fill:#cae2f1"/><rect x="239.73" y="597.41" width="87.21" height="239.71" style="fill:#8dc2e2"/><rect id="fenetre-132" data-name="fenetre" x="248.6" y="609.21" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-133" data-name="fenetre" x="267.34" y="609.21" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-134" data-name="fenetre" x="286.08" y="609.21" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-135" data-name="fenetre" x="304.82" y="609.21" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-136" data-name="fenetre" x="248.6" y="636.8" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-137" data-name="fenetre" x="267.34" y="636.8" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-138" data-name="fenetre" x="286.08" y="636.8" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-139" data-name="fenetre" x="304.82" y="636.8" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-140" data-name="fenetre" x="248.6" y="664.39" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-141" data-name="fenetre" x="267.34" y="664.39" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-142" data-name="fenetre" x="286.08" y="664.39" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-143" data-name="fenetre" x="304.82" y="664.39" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-144" data-name="fenetre" x="248.6" y="691.98" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-145" data-name="fenetre" x="267.34" y="691.98" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-146" data-name="fenetre" x="286.08" y="691.98" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-147" data-name="fenetre" x="304.82" y="691.98" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-148" data-name="fenetre" x="248.6" y="719.56" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-149" data-name="fenetre" x="267.34" y="719.56" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-150" data-name="fenetre" x="286.08" y="719.56" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-151" data-name="fenetre" x="304.82" y="719.56" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-152" data-name="fenetre" x="248.6" y="747.15" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-153" data-name="fenetre" x="267.34" y="747.15" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-154" data-name="fenetre" x="286.08" y="747.15" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-155" data-name="fenetre" x="304.82" y="747.15" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-156" data-name="fenetre" x="248.6" y="774.74" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-157" data-name="fenetre" x="267.34" y="774.74" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-158" data-name="fenetre" x="286.08" y="774.74" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-159" data-name="fenetre" x="304.82" y="774.74" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-160" data-name="fenetre" x="248.6" y="802.33" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-161" data-name="fenetre" x="267.34" y="802.33" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-162" data-name="fenetre" x="286.08" y="802.33" width="12.18" height="20.54" style="fill:#cae2f1"/><rect id="fenetre-163" data-name="fenetre" x="304.82" y="802.33" width="12.18" height="20.54" style="fill:#cae2f1"/><rect x="186.45" y="825.06" width="2.89" height="21.49" style="fill:#5e7e8f"/><polygon points="187.89 771.19 187.89 825.06 171.34 825.06 187.89 771.19" style="fill:#9db56b"/><polyline points="204.44 824.9 187.89 771.02 187.89 824.9" style="fill:#b6c891"/><rect x="1006.03" y="825.99" width="2.89" height="21.49" style="fill:#5e7e8f"/><polygon points="1007.47 772.11 1007.47 825.99 990.92 825.99 1007.47 772.11" style="fill:#9db56b"/><polyline points="1024.03 825.82 1007.47 771.95 1007.47 825.82" style="fill:#b6c891"/><rect x="1370.64" y="805.26" width="2.89" height="21.49" style="fill:#5e7e8f"/><polygon points="1372.09 751.39 1372.09 805.26 1355.53 805.26 1372.09 751.39" style="fill:#9db56b"/><polyline points="1388.64 805.1 1372.09 751.22 1372.09 805.1" style="fill:#b6c891"/><rect x="33.33" y="813.62" width="19.89" height="140.26" style="fill:#5e7e8f"/><polygon points="43.28 462.05 43.28 813.62 -70.61 813.62 43.28 462.05" style="fill:#9db56b"/><polyline points="157.16 812.54 43.28 460.96 43.28 812.54" style="fill:#b6c891"/><path d="M375.64,795.94s-5.63-.68-7.53,10.91c-1.72,10.48,3.45,12.34,7.53,12.34Z" style="fill:#9db56b"/><path d="M375.64,795.94s5.62-.68,7.52,10.91c1.72,10.48-3.45,12.34-7.52,12.34Z" style="fill:#b6c891"/><rect x="374.82" y="819.19" width="1.65" height="10.07" style="fill:#5e7e8f"/><path d="M1282,795.61s-5.63-.68-7.53,10.91c-1.72,10.48,3.45,12.34,7.53,12.34Z" style="fill:#9db56b"/><path d="M1282,795.61s5.62-.68,7.52,10.91c1.72,10.48-3.45,12.34-7.52,12.34Z" style="fill:#b6c891"/><rect x="1281.15" y="818.86" width="1.65" height="10.07" style="fill:#5e7e8f"/><path d="M1041,785.67s-5.62-.68-7.53,10.91c-1.72,10.48,3.46,12.34,7.53,12.34Z" style="fill:#9db56b"/><path d="M1041,785.67s5.63-.68,7.53,10.91c1.72,10.48-3.46,12.34-7.53,12.34Z" style="fill:#b6c891"/><rect x="1040.19" y="808.92" width="1.65" height="10.07" style="fill:#5e7e8f"/><path d="M163.47,807.57s-5.62-.68-7.52,10.91c-1.72,10.48,3.45,12.34,7.52,12.34Z" style="fill:#9db56b"/><path d="M163.47,807.57s5.63-.68,7.53,10.91c1.72,10.48-3.46,12.34-7.53,12.34Z" style="fill:#b6c891"/><rect x="162.66" y="830.82" width="1.65" height="10.07" style="fill:#5e7e8f"/><path d="M391.74,799.84s-3.83-.47-5.12,7.42c-1.17,7.13,2.35,8.39,5.12,8.39Z" style="fill:#9db56b"/><path d="M391.74,799.84s3.82-.47,5.12,7.42c1.17,7.13-2.35,8.39-5.12,8.39Z" style="fill:#b6c891"/><rect x="391.18" y="815.65" width="1.12" height="6.85" style="fill:#5e7e8f"/><path d="M1323.34,568s-54.82-6.62-73.36,106.32c-16.76,102.11,33.69,120.25,73.36,120.25Z" style="fill:#9db56b"/><path d="M1323.34,568s54.81-6.62,73.35,106.32c16.76,102.11-33.68,120.25-73.35,120.25Z" style="fill:#b6c891"/><rect x="1315.41" y="794.58" width="16.09" height="98.11" style="fill:#5e7e8f"/><path d="M1422.12,768.36s-6.94-.83-9.29,13.46c-2.12,12.93,4.26,15.23,9.29,15.23Z" style="fill:#9db56b"/><path d="M1422.12,768.36s6.94-.83,9.28,13.46c2.12,12.93-4.26,15.23-9.28,15.23Z" style="fill:#b6c891"/><rect x="1421.11" y="797.05" width="2.04" height="12.42" style="fill:#5e7e8f"/><path d="M1397.08,788.15s-3.47-.42-4.65,6.73c-1.06,6.46,2.14,7.61,4.65,7.61Z" style="fill:#9db56b"/><path d="M1397.08,788.15s3.47-.42,4.64,6.73c1.06,6.46-2.13,7.61-4.64,7.61Z" style="fill:#b6c891"/><rect x="1396.58" y="802.49" width="1.02" height="6.21" style="fill:#5e7e8f"/></g><g id="panneau_photovoltaique" data-name="panneau photovoltaique"><g id="photovoltaique"><path d="M4423.65,1024.08l-3100.31,0h0A125.69,125.69,0,0,1,1449,898.34l2848.93,0a125.69,125.69,0,0,1,125.69,125.69Z" style="fill:#79787d"/><path d="M1378.28,1024s-2.9-78.3,63.65-78.88,2880,0,2880,0,54.41,8.54,51.85,82.69" style="fill:none;stroke:#fff;stroke-miterlimit:5;stroke-width:3px;stroke-dasharray:80"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Calque_1"
+   data-name="Calque 1"
+   viewBox="0 0 1440 1024"
+   version="1.1"
+   sodipodi:docname="a.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata240">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview238"
+     showgrid="false"
+     inkscape:zoom="0.23046875"
+     inkscape:cx="720"
+     inkscape:cy="512"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Calque_1" />
+  <defs
+     id="defs8">
+    <clipPath
+       id="clip-path">
+      <rect
+         x="4320.14"
+         y="0.64"
+         width="1438.91"
+         height="1022.91"
+         style="fill:none"
+         id="rect2" />
+    </clipPath>
+    <clipPath
+       id="clip-path-2">
+      <rect
+         x="0.44"
+         y="-52.11"
+         width="1439.15"
+         height="1076.22"
+         style="fill:none"
+         id="rect5" />
+    </clipPath>
+  </defs>
+  <title
+     id="title10">Tiens Julien-partie1</title>
+  <g
+     style="clip-path:url(#clip-path)"
+     clip-path="url(#clip-path)"
+     id="g13">
+    <path
+       id="path88"
+       d="M8639.6,824.1c-318.24,3.16-845,.08-1438.91,0-1344.39-.2-2517.52,9.52-2865-1.8q-15.21-.49-30.42.37c-187.31,10.81-1214.17,13.58-1513.44,33-307.82,20-507.89-13.37-754.19-20.24S1523.24,877.21,1277,878.65s-593.77-16.38-1086.28-23-946.53-20.19-946.53-20.19c-364.78,0-566.79,107-686.82,117.33V1025L11521,1026V868.29c-1.09.11-1428.14-1.64-1429.23-1.54-100.1,9.72-1324.37-42.65-1452.19-42.65"
+       style="fill:#c5e567" />
+  </g>
+  <g
+     style="clip-path:url(#clip-path-2)"
+     clip-path="url(#clip-path-2)"
+     id="g230">
+    <path
+       id="path4"
+       d="M-1926.75,832.85s313.33-40.58,861.62-36.19,928.23-18,1348.59-10.4,584.84,12.77,1251.93-1c1136.77-23.38,1188,66.93,310.7,89.89s-1453,7.14-2284.54,10.28S-1926.75,832.85-1926.75,832.85Z"
+       style="fill:#80bbde" />
+    <path
+       id="path6"
+       d="M-2399.83,891.36c4.53-3,9-6.15,13.37-9.33,23.47-17,102.28-68.29,218.65-84.78,140.24-19.88,214.59,21.6,365.7-7.58s291.35.94,361.47,7.58,259.71,59.28,394.75,61.88,548.27-75.6,667.74-70.19S-211,792.37,25.19,908.44c0,0-211.46,87.16-530.89,81.71C-822.48,984.74-2623.81,1040.72-2399.83,891.36Z"
+       style="fill:#e5eec9" />
+    <path
+       id="path8"
+       d="M1414.8,803.2s313.32-40.58,861.61-36.19,928.24-18,1348.6-10.4S4322,763.86,4322,763.86l294-35.39a732.49,732.49,0,0,1,133-3.8l535.63,35.55q15.21,1,30.45,1.21l626.86,8.49L7037.22,774l166,.62L7948,781.2a952.78,952.78,0,0,1,116.45,8.18l587.75,77.8c-203.55,5.33-586,69.43-1050.5,69.51-1537.52.28-4060-83.28-4698.65-80.87C2071.52,859,1414.8,803.2,1414.8,803.2Z"
+       style="fill:#80bbde" />
+    <path
+       id="path10"
+       d="M3.83,872.29h0c307.14-119.87,575.33-16,693-63.34,114.14-46,413.12,29.6,564.23.41s291.36.94,361.48,7.58,259.7,59.3,394.75,61.91S2361,809,2480.45,814.51c92.83,4.25,490-58.07,601.83,11.12,38.17,23.6,128.39,85.26-117.27,74,0,0-88.1,115.79-407.54,110.34C2240.66,1004.53,185.67,1070.87,3.83,872.29Z"
+       style="fill:#e5eec9" />
+    <path
+       id="path12"
+       d="M8652.24,867.18c-100.13,9.72-1421.09,21-1548.91,21-158.45,0-810.14,7.5-932.62-5.73-724.86-78.35-3263.1-75.91-3814.12-30.84C2214.59,863.22,1660,836,1352.2,856S844.31,842.73,598,835.86,83.69,877.64-162.56,879.08s-593.77-16.38-1086.28-23-946.53-20.19-946.53-20.19c-364.78,0-566.79,107-686.82,117.33v72.2l12963.66,1V868.72C10080.38,868.83,8653.33,867.08,8652.24,867.18Z"
+       style="fill:#c5e567" />
+    <rect
+       id="rect14"
+       x="1211.4"
+       y="639.06"
+       width="70.58"
+       height="183.23"
+       style="fill:#8dc2e2" />
+    <rect
+       id="fenetre-880"
+       x="1222.42"
+       y="653.36"
+       width="11.85"
+       height="160.58"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-2-3"
+       x="1240.64"
+       y="653.36"
+       width="11.85"
+       height="160.58"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-3-3"
+       x="1258.86"
+       y="653.36"
+       width="11.85"
+       height="160.58"
+       style="fill:#cae2f1" />
+    <rect
+       id="rect19-9"
+       x="1070.65"
+       y="642.58"
+       width="75.59"
+       height="186.77"
+       style="fill:#b0d5eb" />
+    <rect
+       id="fenetre-4-5"
+       x="1078.34"
+       y="651.77"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-5-1"
+       x="1094.58"
+       y="651.77"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-6-7"
+       x="1110.83"
+       y="651.77"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-7-5"
+       x="1127.07"
+       y="651.77"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-8-1"
+       x="1078.34"
+       y="673.27"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-9-5"
+       x="1094.58"
+       y="673.27"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-10-7"
+       x="1110.83"
+       y="673.27"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-11-5"
+       x="1127.07"
+       y="673.27"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-12-3"
+       x="1078.34"
+       y="694.76"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-13-7"
+       x="1094.58"
+       y="694.76"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-14-9"
+       x="1110.83"
+       y="694.76"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-15-1"
+       x="1127.07"
+       y="694.76"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-16-8"
+       x="1078.34"
+       y="716.26"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-17-5"
+       x="1094.58"
+       y="716.26"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-18-8"
+       x="1110.83"
+       y="716.26"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-19-8"
+       x="1127.07"
+       y="716.26"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-20-6"
+       x="1078.34"
+       y="737.75"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-21-7"
+       x="1094.58"
+       y="737.75"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-22-9"
+       x="1110.83"
+       y="737.75"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-23-1"
+       x="1127.07"
+       y="737.75"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-24-7"
+       x="1078.34"
+       y="759.25"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-25-8"
+       x="1094.58"
+       y="759.25"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-26-8"
+       x="1110.83"
+       y="759.25"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-27-6"
+       x="1127.07"
+       y="759.25"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-28-9"
+       x="1078.34"
+       y="780.74"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-29-3"
+       x="1094.58"
+       y="780.74"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-30-9"
+       x="1110.83"
+       y="780.74"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-31-8"
+       x="1127.07"
+       y="780.74"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-32-9"
+       x="1078.34"
+       y="802.24"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-33-7"
+       x="1094.58"
+       y="802.24"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-34-7"
+       x="1110.83"
+       y="802.24"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-35-0"
+       x="1127.07"
+       y="802.24"
+       width="10.56"
+       height="16"
+       style="fill:#cae2f1" />
+    <rect
+       id="rect53-4"
+       x="1130.33"
+       y="571.35"
+       width="92.42"
+       height="269.49"
+       style="fill:#8dc2e2" />
+    <rect
+       id="fenetre-36-2"
+       x="1139.74"
+       y="584.61"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-37-9"
+       x="1159.6"
+       y="584.61"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-38-8"
+       x="1179.45"
+       y="584.61"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-39-9"
+       x="1199.31"
+       y="584.61"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-40-7"
+       x="1139.74"
+       y="615.63"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-41-5"
+       x="1159.6"
+       y="615.63"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-42-2"
+       x="1179.45"
+       y="615.63"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-43-7"
+       x="1199.31"
+       y="615.63"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-44-4"
+       x="1139.74"
+       y="646.64"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-45-2"
+       x="1159.6"
+       y="646.64"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-46-5"
+       x="1179.45"
+       y="646.64"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-47-7"
+       x="1199.31"
+       y="646.64"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-48-0"
+       x="1139.74"
+       y="677.66"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-49-0"
+       x="1159.6"
+       y="677.66"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-50-8"
+       x="1179.45"
+       y="677.66"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-51-7"
+       x="1199.31"
+       y="677.66"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-52-2"
+       x="1139.74"
+       y="708.67"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-53-2"
+       x="1159.6"
+       y="708.67"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-54-3"
+       x="1179.45"
+       y="708.67"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-55-9"
+       x="1199.31"
+       y="708.67"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-56-7"
+       x="1139.74"
+       y="739.69"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-57-8"
+       x="1159.6"
+       y="739.69"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-58-2"
+       x="1179.45"
+       y="739.69"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-59-7"
+       x="1199.31"
+       y="739.69"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-60-6"
+       x="1139.74"
+       y="770.7"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-61-3"
+       x="1159.6"
+       y="770.7"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-62-8"
+       x="1179.45"
+       y="770.7"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-63-0"
+       x="1199.31"
+       y="770.7"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-64-3"
+       x="1139.74"
+       y="801.72"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-65-2"
+       x="1159.6"
+       y="801.72"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-66-9"
+       x="1179.45"
+       y="801.72"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <rect
+       id="fenetre-67"
+       x="1199.31"
+       y="801.72"
+       width="12.91"
+       height="23.09"
+       style="fill:#cae2f1" />
+    <g
+       id="ECOLE-3">
+      <rect
+         id="rect88"
+         x="197.12"
+         y="672.52"
+         width="54.17"
+         height="157.94"
+         style="fill:#8dc2e2" />
+      <rect
+         id="fenetre-68"
+         x="202.63"
+         y="680.3"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-69"
+         x="214.27"
+         y="680.3"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-70"
+         x="225.91"
+         y="680.3"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-71"
+         x="237.55"
+         y="680.3"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-72"
+         x="202.63"
+         y="698.47"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-73"
+         x="214.27"
+         y="698.47"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-74"
+         x="225.91"
+         y="698.47"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-75"
+         x="237.55"
+         y="698.47"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-76"
+         x="202.63"
+         y="716.65"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-77"
+         x="214.27"
+         y="716.65"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-78"
+         x="225.91"
+         y="716.65"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-79"
+         x="237.55"
+         y="716.65"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-80"
+         x="202.63"
+         y="734.83"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-81"
+         x="214.27"
+         y="734.83"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-82"
+         x="225.91"
+         y="734.83"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-83"
+         x="237.55"
+         y="734.83"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-84"
+         x="202.63"
+         y="753.01"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-85"
+         x="214.27"
+         y="753.01"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-86"
+         x="225.91"
+         y="753.01"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-87"
+         x="237.55"
+         y="753.01"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-88"
+         x="202.63"
+         y="771.18"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-89"
+         x="214.27"
+         y="771.18"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-90"
+         x="225.91"
+         y="771.18"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-91"
+         x="237.55"
+         y="771.18"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-92"
+         x="202.63"
+         y="789.36"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-93"
+         x="214.27"
+         y="789.36"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-94"
+         x="225.91"
+         y="789.36"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-95"
+         x="237.55"
+         y="789.36"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-96"
+         x="202.63"
+         y="807.54"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-97"
+         x="214.27"
+         y="807.54"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-98"
+         x="225.91"
+         y="807.54"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-99"
+         x="237.55"
+         y="807.54"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="rect122"
+         x="310.92"
+         y="671.01"
+         width="54.17"
+         height="157.94"
+         style="fill:#8dc2e2" />
+      <rect
+         id="fenetre-100"
+         x="316.43"
+         y="678.78"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-101"
+         x="328.07"
+         y="678.78"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-102"
+         x="339.71"
+         y="678.78"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-103"
+         x="351.35"
+         y="678.78"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-104"
+         x="316.43"
+         y="696.96"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-105"
+         x="328.07"
+         y="696.96"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-106"
+         x="339.71"
+         y="696.96"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-107"
+         x="351.35"
+         y="696.96"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-108"
+         x="316.43"
+         y="715.14"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-109"
+         x="328.07"
+         y="715.14"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-110"
+         x="339.71"
+         y="715.14"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-111"
+         x="351.35"
+         y="715.14"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-112"
+         x="316.43"
+         y="733.32"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-113"
+         x="328.07"
+         y="733.32"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-114"
+         x="339.71"
+         y="733.32"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-115"
+         x="351.35"
+         y="733.32"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-116"
+         x="316.43"
+         y="751.49"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-117"
+         x="328.07"
+         y="751.49"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-118"
+         x="339.71"
+         y="751.49"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-119"
+         x="351.35"
+         y="751.49"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-120"
+         x="316.43"
+         y="769.67"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-121"
+         x="328.07"
+         y="769.67"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-122"
+         x="339.71"
+         y="769.67"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-123"
+         x="351.35"
+         y="769.67"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-124"
+         x="316.43"
+         y="787.85"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-125"
+         x="328.07"
+         y="787.85"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-126"
+         x="339.71"
+         y="787.85"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-127"
+         x="351.35"
+         y="787.85"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-128"
+         x="316.43"
+         y="806.02"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-129"
+         x="328.07"
+         y="806.02"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-130"
+         x="339.71"
+         y="806.02"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-131"
+         x="351.35"
+         y="806.02"
+         width="7.56"
+         height="13.53"
+         style="fill:#cae2f1" />
+      <rect
+         id="rect156"
+         x="239.74"
+         y="597.94"
+         width="87.21"
+         height="239.71"
+         style="fill:#8dc2e2" />
+      <rect
+         id="fenetre-132"
+         x="248.61"
+         y="609.74"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-133"
+         x="267.35"
+         y="609.74"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-134"
+         x="286.09"
+         y="609.74"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-135"
+         x="304.83"
+         y="609.74"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-136"
+         x="248.61"
+         y="637.33"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-137"
+         x="267.35"
+         y="637.33"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-138"
+         x="286.09"
+         y="637.33"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-139"
+         x="304.83"
+         y="637.33"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-140"
+         x="248.61"
+         y="664.92"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-141"
+         x="267.35"
+         y="664.92"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-142"
+         x="286.09"
+         y="664.92"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-143"
+         x="304.83"
+         y="664.92"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-144"
+         x="248.61"
+         y="692.51"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-145"
+         x="267.35"
+         y="692.51"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-146"
+         x="286.09"
+         y="692.51"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-147"
+         x="304.83"
+         y="692.51"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-148"
+         x="248.61"
+         y="720.09"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-149"
+         x="267.35"
+         y="720.09"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-150"
+         x="286.09"
+         y="720.09"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-151"
+         x="304.83"
+         y="720.09"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-152"
+         x="248.61"
+         y="747.68"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-153"
+         x="267.35"
+         y="747.68"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-154"
+         x="286.09"
+         y="747.68"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-155"
+         x="304.83"
+         y="747.68"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-156"
+         x="248.61"
+         y="775.27"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-157"
+         x="267.35"
+         y="775.27"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-158"
+         x="286.09"
+         y="775.27"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-159"
+         x="304.83"
+         y="775.27"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-160"
+         x="248.61"
+         y="802.86"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-161"
+         x="267.35"
+         y="802.86"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-162"
+         x="286.09"
+         y="802.86"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="fenetre-163"
+         x="304.83"
+         y="802.86"
+         width="12.18"
+         height="20.54"
+         style="fill:#cae2f1" />
+      <rect
+         id="rect190"
+         x="186.46"
+         y="825.59"
+         width="2.89"
+         height="21.49"
+         style="fill:#5e7e8f" />
+      <polygon
+         id="polygon192"
+         points="187.9 771.73 187.9 825.6 171.35 825.6 187.9 771.73"
+         style="fill:#9db56b" />
+      <polyline
+         id="polyline194"
+         points="204.45 825.43 187.9 771.55 187.9 825.43"
+         style="fill:#b6c891" />
+      <rect
+         id="rect196"
+         x="1006.04"
+         y="826.52"
+         width="2.89"
+         height="21.49"
+         style="fill:#5e7e8f" />
+      <polygon
+         id="polygon198"
+         points="1007.48 772.64 1007.48 826.52 990.93 826.52 1007.48 772.64"
+         style="fill:#9db56b" />
+      <polyline
+         id="polyline200"
+         points="1024.04 826.36 1007.48 772.49 1007.48 826.36"
+         style="fill:#b6c891" />
+      <rect
+         id="rect202"
+         x="1370.65"
+         y="805.79"
+         width="2.89"
+         height="21.49"
+         style="fill:#5e7e8f" />
+      <polygon
+         id="polygon204"
+         points="1372.1 751.92 1372.1 805.79 1355.54 805.79 1372.1 751.92"
+         style="fill:#9db56b" />
+      <polyline
+         id="polyline206"
+         points="1388.65 805.63 1372.1 751.75 1372.1 805.63"
+         style="fill:#b6c891" />
+      <rect
+         id="rect208"
+         x="33.34"
+         y="814.15"
+         width="19.89"
+         height="140.26"
+         style="fill:#5e7e8f" />
+      <polygon
+         id="polygon210"
+         points="43.29 462.58 43.29 814.15 -70.6 814.15 43.29 462.58"
+         style="fill:#9db56b" />
+      <polyline
+         id="polyline212"
+         points="157.17 813.08 43.29 461.5 43.29 813.08"
+         style="fill:#b6c891" />
+      <path
+         id="path214"
+         d="M375.65,796.47s-5.63-.68-7.53,10.91c-1.72,10.48,3.45,12.34,7.53,12.34Z"
+         style="fill:#9db56b" />
+      <path
+         id="path216"
+         d="M375.65,796.47s5.62-.68,7.52,10.91c1.72,10.48-3.45,12.34-7.52,12.34Z"
+         style="fill:#b6c891" />
+      <rect
+         id="rect218"
+         x="374.83"
+         y="819.72"
+         width="1.65"
+         height="10.07"
+         style="fill:#5e7e8f" />
+      <path
+         id="path220"
+         d="M1282,796.14s-5.63-.68-7.53,10.91c-1.72,10.48,3.45,12.34,7.53,12.34Z"
+         style="fill:#9db56b" />
+      <path
+         id="path222"
+         d="M1282,796.14s5.62-.68,7.52,10.91c1.72,10.48-3.45,12.34-7.52,12.34Z"
+         style="fill:#b6c891" />
+      <rect
+         id="rect224"
+         x="1281.16"
+         y="819.39"
+         width="1.65"
+         height="10.07"
+         style="fill:#5e7e8f" />
+      <path
+         id="path226"
+         d="M1041,786.2s-5.62-.68-7.53,10.91c-1.72,10.48,3.46,12.34,7.53,12.34Z"
+         style="fill:#9db56b" />
+      <path
+         id="path228"
+         d="M1041,786.2s5.63-.68,7.53,10.91c1.72,10.48-3.46,12.34-7.53,12.34Z"
+         style="fill:#b6c891" />
+      <rect
+         id="rect230"
+         x="1040.2"
+         y="809.45"
+         width="1.65"
+         height="10.07"
+         style="fill:#5e7e8f" />
+      <path
+         id="path232"
+         d="M163.48,808.1s-5.62-.68-7.52,10.91c-1.72,10.48,3.45,12.34,7.52,12.34Z"
+         style="fill:#9db56b" />
+      <path
+         id="path234"
+         d="M163.48,808.1s5.63-.68,7.53,10.91c1.72,10.48-3.46,12.34-7.53,12.34Z"
+         style="fill:#b6c891" />
+      <rect
+         id="rect236"
+         x="162.67"
+         y="831.35"
+         width="1.65"
+         height="10.07"
+         style="fill:#5e7e8f" />
+      <path
+         id="path238"
+         d="M391.75,800.37s-3.83-.47-5.12,7.42c-1.17,7.13,2.35,8.39,5.12,8.39Z"
+         style="fill:#9db56b" />
+      <path
+         id="path240"
+         d="M391.75,800.37s3.82-.47,5.12,7.42c1.17,7.13-2.35,8.39-5.12,8.39Z"
+         style="fill:#b6c891" />
+      <rect
+         id="rect242"
+         x="391.19"
+         y="816.18"
+         width="1.12"
+         height="6.85"
+         style="fill:#5e7e8f" />
+      <path
+         id="path244"
+         d="M1323.35,568.53s-54.82-6.62-73.36,106.32C1233.23,777,1283.68,795.1,1323.35,795.1Z"
+         style="fill:#9db56b" />
+      <path
+         id="path246"
+         d="M1323.35,568.53s54.81-6.62,73.35,106.32C1413.46,777,1363,795.1,1323.35,795.1Z"
+         style="fill:#b6c891" />
+      <rect
+         id="rect248"
+         x="1315.42"
+         y="795.11"
+         width="16.09"
+         height="98.11"
+         style="fill:#5e7e8f" />
+      <path
+         id="path250"
+         d="M1422.13,768.89s-6.94-.83-9.29,13.46c-2.12,12.93,4.26,15.23,9.29,15.23Z"
+         style="fill:#9db56b" />
+      <path
+         id="path252"
+         d="M1422.13,768.89s6.94-.83,9.28,13.46c2.12,12.93-4.26,15.23-9.28,15.23Z"
+         style="fill:#b6c891" />
+      <rect
+         id="rect254"
+         x="1421.12"
+         y="797.58"
+         width="2.04"
+         height="12.42"
+         style="fill:#5e7e8f" />
+      <path
+         id="path256"
+         d="M1397.09,788.68s-3.47-.42-4.65,6.73c-1.06,6.46,2.14,7.61,4.65,7.61Z"
+         style="fill:#9db56b" />
+      <path
+         id="path258"
+         d="M1397.09,788.68s3.47-.42,4.64,6.73c1.06,6.46-2.13,7.61-4.64,7.61Z"
+         style="fill:#b6c891" />
+      <rect
+         id="rect260"
+         x="1396.59"
+         y="803.02"
+         width="1.02"
+         height="6.21"
+         style="fill:#5e7e8f" />
+    </g>
+    <g
+       id="panneau_photovoltaique"
+       data-name="panneau photovoltaique">
+      <g
+         id="photovoltaique">
+        <path
+           id="path263"
+           d="M4423.66,1024.61H1323.35A125.7,125.7,0,0,1,1449,898.87h2849a125.69,125.69,0,0,1,125.69,125.69Z"
+           style="fill:#79787d" />
+        <path
+           id="path265"
+           d="M1378.29,1024.53s-2.9-78.3,63.65-78.88,2880,0,2880,0,54.41,8.54,51.85,82.69"
+           style="fill:none;stroke:#fff;stroke-miterlimit:5;stroke-width:3px;stroke-dasharray:80" />
+      </g>
+    </g>
+  </g>
+</svg>

@@ -34,8 +34,6 @@
         @click.native="onNext"
       />
     </transition>
-
-    <TreeSVG class="tree-svg" />
   </div>
 </template>
 
@@ -43,7 +41,6 @@
 import { mapGetters } from "vuex";
 
 import Background from "@/assets/Borne/background-borne.svg";
-import TreeSVG from "@/assets/tree.svg";
 import SimpleText from "@/components/SimpleText";
 import TrainSVG from "@/assets/Borne/train.svg";
 import BoatSVG from "@/assets/boat.svg";
@@ -62,8 +59,7 @@ export default {
     Car,
     PlusButton,
     SimpleButton,
-    BorneSVG,
-    TreeSVG
+    BorneSVG
   },
   data: () => ({
     nextPressed: false,
@@ -88,7 +84,7 @@ export default {
             sceneId: this.getCharacterGender === "m" ? 2 : 1
           });
         } else {
-          setTimeout(this.goNext, 100);
+          setTimeout(this.goNext, 200);
         }
       });
     }
@@ -106,39 +102,39 @@ export default {
   animation-name: train-move;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-duration: 10s;
+  animation-duration: 4s;
 }
 
 @-webkit-keyframes train-move {
   from {
-    transform: translateX(-350%);
-    -ms-transform: translateX(-350%);
-    -moz-transform: translateX(-350%);
-    -webkit-transform: translateX(-350%);
-    -o-transform: translateX(-350%);
+    transform: translateX(-400%);
+    -ms-transform: translateX(-400%);
+    -moz-transform: translateX(-400%);
+    -webkit-transform: translateX(-400%);
+    -o-transform: translateX(-400%);
   }
   to {
-    transform: translateX(2000%);
-    -ms-transform: translateX(2000%);
-    -moz-transform: translateX(2000%);
-    -webkit-transform: translateX(2000%);
-    -o-transform: translateX(2000%);
+    transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -webkit-transform: translateX(200%);
+    -o-transform: translateX(200%);
   }
 }
 @keyframes train-move {
   from {
-    transform: translateX(-350%);
-    -ms-transform: translateX(-350%);
-    -moz-transform: translateX(-350%);
-    -webkit-transform: translateX(-350%);
-    -o-transform: translateX(-350%);
+    transform: translateX(-400%);
+    -ms-transform: translateX(-400%);
+    -moz-transform: translateX(-400%);
+    -webkit-transform: translateX(-400%);
+    -o-transform: translateX(-400%);
   }
   to {
-    transform: translateX(2000%);
-    -ms-transform: translateX(2000%);
-    -moz-transform: translateX(2000%);
-    -webkit-transform: translateX(2000%);
-    -o-transform: translateX(2000%);
+    transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -webkit-transform: translateX(200%);
+    -o-transform: translateX(200%);
   }
 }
 

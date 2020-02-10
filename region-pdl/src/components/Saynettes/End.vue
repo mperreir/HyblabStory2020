@@ -57,11 +57,6 @@ export default {
     TextTitle,
     SimpleText,
     LogoPolytech
-  },
-  methods: {
-    onNext(characterName) {
-      this.$store.dispatch("nextScene", { sceneId: null });
-    }
   }
 };
 </script>
