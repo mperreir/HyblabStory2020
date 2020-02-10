@@ -15,6 +15,10 @@
     margin: 0px 10vw;
     border-bottom: 2px solid #5A8D8C;
     position: relative;
+    background-image: url("../../assets/view11/Vegetation-view11.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom -4px center;
 
     
     #view-11-premium-red-tiny-dot{
@@ -84,18 +88,6 @@
       left: 65%;
       max-width: 30%;
       bottom: 30%;
-      p{
-        font-family: Nunito;
-        font-style: normal;
-        font-weight: normal;
-        //font-size: 21px;
-        line-height: 29px;
-        color: #426262;
-      }
-
-      span{
-        color: #cb563e;
-      }
     }
 
     figcaption {

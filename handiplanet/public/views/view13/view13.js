@@ -18,6 +18,8 @@ class View13 extends View {
 
     
     async switchToNextView(){
+        const borderBottom = document.getElementById('overlay-footer');
+        borderBottom.className = '';
         showContextView(this.view);
     }
 
@@ -28,6 +30,8 @@ class View13 extends View {
         this.btNext.addEventListener('click', ()=>{
             this.switchToNextView();
         });
+        const borderBottom = document.getElementById('overlay-footer');
+        borderBottom.className = 'hide-after';
     }
 
     play() {
