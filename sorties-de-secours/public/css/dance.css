@@ -192,3 +192,15 @@
 	width: 100vw;
 	z-index: 200;
 }
+
+#dance-text-instruction {
+	font-family: 'NimbusSanL';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 57px;
+
+	position: absolute;
+	top: 350px;
+	right: 100px;
+}

@@ -1,29 +1,38 @@
 // BRUSHES
-    //expo
-    let $articleExpoYellow1;
+//expo
+let $articleExpoYellow1;
 
-    let $articleExpoOrange5;
-    let $articleExpoBlue5;
+let $articleExpoOrange5;
+let $articleExpoBlue5;
 
-    let $articleExpoBlue3;
-    let $articleExpoOrange1;
+let $articleExpoBlue3;
+let $articleExpoOrange1;
 
-    let $articleExpoYellow5;
-    let $articleExpoOrange6;
+let $articleExpoYellow5;
+let $articleExpoOrange6;
 
-    // music
-    let $articleMusicBlue2;
-    let $articleMusicOrange4;
+// music
+let $articleMusicBlue2;
+let $articleMusicOrange4;
 
-    let $articleMusicBlue5;
-    let $articleMusicYellow4;
+let $articleMusicBlue5;
+let $articleMusicYellow4;
 
-    let $articleMusicYellow3;
-    let $articleMusicOrange3;
+let $articleMusicYellow3;
+let $articleMusicOrange3;
 
-    let $articleMusicYellow6;
-    let $articleMusicBlue6;
+let $articleMusicYellow6;
+let $articleMusicBlue6;
 
+// dance
+let $articleDanceBlue4;
+let $articleDanceYellow4a;
+let $articleDanceOrange2;
+let $articleDanceYellow2;
+let $articleDanceBlue5;
+let $articleDanceOrange6;
+let $articleDanceYellow4b;
+let $articleDanceBlue1;
 
 let currentSlide = 0;
 let scrollRecently = false;
@@ -57,6 +66,16 @@ function initArticle(sectionName) {
     $articleMusicOrange3 = $("#article-music-orange3");
     $articleMusicYellow6 = $("#article-music-yellow6");
     $articleMusicBlue6 = $("#article-music-blue6");
+
+    // dance brushes
+    $articleDanceBlue4 = $("#article-dance-blue4");
+    $articleDanceYellow4a = $("#article-dance-yellow4a");
+    $articleDanceOrange2 = $("#article-dance-orange2");
+    $articleDanceYellow2 = $("#article-dance-yellow2");
+    $articleDanceBlue5 = $("#article-dance-blue5");
+    $articleDanceOrange6 = $("#article-dance-orange6");
+    $articleDanceYellow4b = $("#article-dance-yellow4b");
+    $articleDanceBlue1 = $("#article-dance-blue1");
 
     // JQuery elements
     $articleContainer = $('#article-container-' + sectionName);
@@ -235,6 +254,39 @@ function animateBrush(sectionName, id) {
                 break;
         }
 
+    } else if (sectionName === "dance") {
+
+        $articleDanceBlue4.removeClass('brush-show');
+        $articleDanceYellow4a.removeClass('brush-show');
+        $articleDanceOrange2.removeClass('brush-show');
+        $articleDanceYellow2.removeClass('brush-show');
+        $articleDanceBlue5.removeClass('brush-show');
+        $articleDanceOrange6.removeClass('brush-show');
+        $articleDanceYellow4b.removeClass('brush-show');
+        $articleDanceBlue1.removeClass('brush-show');
+
+        switch (id) {
+            case 0:
+                $articleDanceBlue4.addClass('brush-show');
+                $articleDanceYellow4a.addClass('brush-show');
+                break;
+            case 1:
+                $articleDanceOrange2.addClass('brush-show');
+                $articleDanceYellow2.addClass('brush-show');
+                break;
+            case 2:
+                $articleDanceBlue5.addClass('brush-show');
+                $articleDanceOrange6.addClass('brush-show');
+                break;
+            case 3:
+                $articleDanceYellow4b.addClass('brush-show');
+                $articleDanceBlue1.addClass('brush-show');
+                break;
+            case 4:
+            default:
+                break;
+        }
+
     }
 
 }
@@ -247,32 +299,32 @@ function goBackToMenu(sectionName) {
     $('.expChoice').removeClass("expChoiceOut");
 
     switch (sectionName) {
-      case "expo":
-        $("#hover-expo").removeClass("menu-hover");
-        $("#expChoiceExpo").unbind('click');
-        $("#hachure-expo").css("opacity", "1");
-        $("#hachure-expo").css("cursor", "auto");
-        break;
-      case "music":
-        $("#hover-music").removeClass("menu-hover");
-        $("#expChoiceMusique").unbind('click');
-        $("#hachure-music").css("opacity", "1");
-        $("#hachure-music").css("cursor", "auto");
-        break;
-      case "dance":
-        $("#hover-dance").removeClass("menu-hover");
-        $("#expChoiceDance").unbind('click');
-        $("#hachure-dance").css("opacity", "1");
-        $("#hachure-dance").css("cursor", "auto");
-        break;
+        case "expo":
+            $("#hover-expo").removeClass("menu-hover");
+            $("#expChoiceExpo").unbind('click');
+            $("#hachure-expo").css("opacity", "1");
+            $("#hachure-expo").css("cursor", "auto");
+            break;
+        case "music":
+            $("#hover-music").removeClass("menu-hover");
+            $("#expChoiceMusique").unbind('click');
+            $("#hachure-music").css("opacity", "1");
+            $("#hachure-music").css("cursor", "auto");
+            break;
+        case "dance":
+            $("#hover-dance").removeClass("menu-hover");
+            $("#expChoiceDance").unbind('click');
+            $("#hachure-dance").css("opacity", "1");
+            $("#hachure-dance").css("cursor", "auto");
+            break;
     }
     let expoDone = (document.getElementById("hachure-expo").style.opacity == 1);
     let musicDone = (document.getElementById("hachure-music").style.opacity == 1);
     let danceDone = (document.getElementById("hachure-dance").style.opacity == 1);
     if(expoDone && musicDone && danceDone) {
-      setTimeout(function() {
-        goToByScroll('figures-section', 500);
-      }, 2000);
+        setTimeout(function() {
+            goToByScroll('figures-section', 500);
+        }, 2000);
     }
 
     /* reset parameters*/
