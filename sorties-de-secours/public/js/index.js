@@ -21,7 +21,6 @@ function goToByScroll(id, speed) {
 
 /*  MUSIC   */
 function change_music(id, path) {
-    console.log('change music');
     document.getElementById(id).pause();
     document.getElementById(id).setAttribute('src', path);
     document.getElementById(id).load();
@@ -33,12 +32,10 @@ function change_music(id, path) {
 }
 
 function set_music_volume(id, volume) {
-    console.log('set music volume');
     document.getElementById(id).volume = volume;
 }
 
 function set_music_pause(id) {
-    console.log('set music pause');
     document.getElementById(id).pause();
 }
 
@@ -53,7 +50,6 @@ function set_music_pause_and_stop(id) {
 }
 
 function set_music_play(id) {
-    console.log('set music play');
     if (!musicMuted) {
         document.getElementById(id).play();
     } else if (!playingSoundList.includes(id)) {

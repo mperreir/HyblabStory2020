@@ -76,7 +76,7 @@ $(document).ready(function() {
             || scrollPos >= music_workshop.bottom) {
             set_music_pause("vinyl");
             set_music_pause("vinyl-noise");
-            
+
             set_music_play("generalMusic");
         }
 
@@ -94,7 +94,6 @@ $(document).ready(function() {
 
             ["generalMusic", "voice", "ambianceExpo", "danceMusic", "vinyl-noise", "vinyl"].forEach((id) => {
                 if (!document.getElementById(id).paused) {
-                    console.log(id + " is paused : " + document.getElementById(id).paused);
                     playingSoundList.push(id);
                     set_music_pause(id);
                 }
