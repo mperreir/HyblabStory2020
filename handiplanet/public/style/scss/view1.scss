@@ -1,47 +1,47 @@
 /*
- * File Created: 2020-01-28 13:52:00
- * Author: Pierre MAUPIN
- * Copyright - 2020 Pierre MAUPIN
- */
+* File Created: 2020-01-28 13:52:00
+* Author: Pierre MAUPIN
+* Copyright - 2020 Pierre MAUPIN
+*/
 .body-small{
   .text-change{
-  font-size: 18px;
+    font-size: 18px;
   }
 }
 .body-medium{
   .text-change{
-  font-size: 21px;
+    font-size: 21px;
   }
 }
 .body-large{
   .text-change{
-  font-size: 24px;
+    font-size: 24px;
   }
 }
 
 #view1 {
   width: 100vw;
   height: 100vh;
-
+  
   #view-1-middle {
     width: 80vw;
     height: 80vh;
     margin: 0px 10vw;
     border-bottom: 2px solid #5A8D8C;
     position: relative;
-
+    
     img {
       position: absolute;
       bottom: -2px;
     }
-
+    
     #view-1-splash-img{
       z-index: 1;
       max-height: 100%;
       max-width: 60%;
       left: 40%;
     }
-
+    
     &>div {
       position: absolute;
       display: flex;
@@ -52,14 +52,14 @@
       bottom: -1px;
       max-height: 70%;
       max-width: 50%;
-
+      
       #view-1-character-img {
         z-index: 5;
         position: relative;
         height: 55vh;
         max-width: 100%;
       }
-
+      
       .view-1-switch-character {
         z-index: 6;
         position: absolute;
@@ -69,38 +69,50 @@
         background-color: #426262;
         border-radius: 50px;
         color: #ffffff;
-        padding: 10px 15px;
+        padding: 10px 10px;
       }
-  
+      
       #view-1-select-character {
         z-index: 6;
-        ul {
-          list-style: none;
-          padding: 0px;
+        height: fit-content;
+        display: flex;
+        span {
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          border-radius: 30px;
+          background-color: red;
           margin: 0px;
-          li {
-            display: inline-block;
-            height: 30px;
-            width: 30px;
-            border-radius: 15px;
-            background-color: red;
-  
-            &:nth-of-type(1) {
-              background-color: #ffffff;
+          margin-right: 10px;
+          box-sizing: content-box;
+          background-clip: padding-box;
+          
+          &:nth-of-type(1) {
+            background-color: #ffffff;
+
+            &:hover {
+              border: 3px solid rgba(255, 255, 255, 0.3);
             }
-  
-            &:nth-of-type(2) {
-              background-color: #80BEA3;
+          }
+          
+          &:nth-of-type(2) {
+            background-color: #80BEA3;
+            &:hover {
+              border: 3px solid rgba(128, 190, 163, 0.3);
             }
-  
-            &:nth-of-type(3) {
-              background-color: #CB563E;
+          }
+          
+          &:nth-of-type(3) {
+            background-color: #CB563E;
+            margin-right: 0px;
+            &:hover {
+              border: 3px solid rgba(203, 85, 62, 0.3);
             }
           }
         }
       }
     }
-
+    
     #view-1-hotel-img {
       position: absolute;
       max-height: 20%;
@@ -108,7 +120,7 @@
       top: 30%;
       left: 20%;
     }
-
+    
     #view-1-luggage-img {
       position: absolute;
       max-height: 20%;
@@ -131,7 +143,7 @@
         line-height: 29px;
         color: #426262;
       }
-
+      
       span{
         color: #cb563e;
       }

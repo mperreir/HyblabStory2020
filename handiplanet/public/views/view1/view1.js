@@ -41,7 +41,7 @@ class View1 extends View {
         this.selectCharContainer = document.getElementById('view-1-select-character');
         this.caracterImg = document.getElementById('view-1-character-img');
 
-        this.selectCharButtons = document.querySelectorAll('#view-1-select-character li');
+        this.selectCharButtons = document.querySelectorAll('#view-1-select-character span');
 
         window.colorPersoManager.addObserver((asset) => {
             this.caracterImg.src = asset.face;
