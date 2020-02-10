@@ -152,6 +152,8 @@ $(document).ready(function() {
     var music_playing = 0;
     group.on('dragmove', function() {
 
+        stage.container().style.cursor = 'move';
+
         // remove instructions
         if (!textAnimStarted) {
             textAnim.start();
@@ -217,6 +219,18 @@ $(document).ready(function() {
         layer.batchDraw();
     });
 
+    group.on('dragend', function() {
+        stage.container().style.cursor = 'pointer';
+    });
+
+    k_vinyl_head.on('mouseenter', function() {
+        stage.container().style.cursor = 'pointer';
+    });
+    k_vinyl_head.on('mouseleave', function() {
+        stage.container().style.cursor = 'default';
+    });
+
+
     // ANIMATIONS
     let amplitude = 2;
     let period = 5000;
@@ -240,8 +254,8 @@ $(document).ready(function() {
             textAnim.stop();
         }
     }, layer);
-    // EVENTS
 
+    // EVENTS
     setTimeout(function () {
         musicFinished = true;
     }, 2500);
