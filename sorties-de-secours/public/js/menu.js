@@ -42,12 +42,33 @@ $(document).ready(function() {
             scrollTop: $("#menu-section").offset().top
           }, 0);
         } else if (countScroll < 1) {
-          mouseAnimatedExpo.classList.remove('fadeInUp');
-          mouseAnimatedExpo.classList.add('fadeOut');
-          mouseAnimatedMusic.classList.remove('fadeInUp');
-          mouseAnimatedMusic.classList.add('fadeOut');
-          mouseAnimatedDance.classList.remove('fadeInUp');
-          mouseAnimatedDance.classList.add('fadeOut');
+          if(mouseAnimatedExpo.classList.contains("fadeOut")) {
+            setTimeout(function() {
+              mouseAnimatedExpo.classList.remove('fadeInUp');
+              mouseAnimatedExpo.classList.add('fadeOut');
+            }, 7000);
+          } else {
+            mouseAnimatedExpo.classList.remove('fadeInUp');
+            mouseAnimatedExpo.classList.add('fadeOut');
+          }
+          if(mouseAnimatedMusic.classList.contains("fadeOut")) {
+            setTimeout(function() {
+              mouseAnimatedMusic.classList.remove('fadeInUp');
+              mouseAnimatedMusic.classList.add('fadeOut');
+            }, 7000);
+          } else {
+            mouseAnimatedMusic.classList.remove('fadeInUp');
+            mouseAnimatedMusic.classList.add('fadeOut');
+          }
+          if(mouseAnimatedDance.classList.contains("fadeOut")) {
+            setTimeout(function() {
+              mouseAnimatedDance.classList.remove('fadeInUp');
+              mouseAnimatedDance.classList.add('fadeOut');
+            }, 7000);
+          } else {
+            mouseAnimatedDance.classList.remove('fadeInUp');
+            mouseAnimatedDance.classList.add('fadeOut');
+          }
           $('html, body').stop().animate({
             scrollTop: $("#menu-section").offset().top
           }, 0);
