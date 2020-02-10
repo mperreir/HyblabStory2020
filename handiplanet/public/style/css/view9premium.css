@@ -32,13 +32,7 @@
 }
 #view9premium #view-9p-middle div:last-of-type p {
   margin-top: auto;
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: bold;
-  color: #426262;
-}
-#view9premium #view-9p-middle div:last-of-type p em {
-  color: #CB563E;
+  margin-bottom: auto;
 }
 
 /*# sourceMappingURL=view9premium.css.map */

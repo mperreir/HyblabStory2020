@@ -22,10 +22,11 @@
         position: relative;
         
         #view-10-graph_container {
-            position: absolute;
-            bottom: 5%;
-            height: 70%;
-            width: 60%;
+            // position: absolute;
+            // bottom: 5%;
+            // height: 70%;
+            width: 100%;
+            position: relative;
             #view-10-graph {
                 height: 100%;
                 width: 100%;
@@ -42,10 +43,17 @@
         }
         
         #view-10-data {
-            position: absolute;
-            bottom: 30%;
-            right: 10%;
-            width: 30%;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+
+            p:first-of-type {
+                margin-top: auto;
+            }
+
+            p:last-of-type {
+                margin-bottom: auto;
+            }
         }
     }
 }

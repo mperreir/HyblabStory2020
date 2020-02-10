@@ -24,14 +24,10 @@
   position: absolute;
 }
 #second-view #decor-view-2 #speech {
-  max-width: 25%;
-  right: 20%;
+  max-width: 23%;
+  right: 13%;
   bottom: 15%;
   position: absolute;
-}
-#second-view #decor-view-2 #speech em {
-  font-weight: bold;
-  color: #CB563E;
 }
 #second-view #decor-view-2 figcaption {
   font-family: Nunito;
@@ -109,15 +105,15 @@
 }
 #second-view #decor-view-2 #circle-a {
   position: absolute;
-  right: 0%;
-  top: 0%;
-  transform: translateX(-50%);
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%) translateY(-50%);
 }
 #second-view #decor-view-2 #circle-b {
   position: absolute;
   right: 0%;
   top: 0%;
-  transform: translateX(-50%) translateY(50%);
+  transform: translateX(-50%) translateY(70%);
 }
 #second-view #decor-view-2 #button-hotel-a {
   left: -40%;

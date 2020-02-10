@@ -76,18 +76,8 @@
   z-index: 7;
   position: absolute;
   left: 52.5%;
-  max-width: 25%;
+  max-width: 47%;
   bottom: 10%;
-}
-#view3-premium #view-3-premium-middle article p {
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 29px;
-  color: #426262;
-}
-#view3-premium #view-3-premium-middle article span {
-  color: #cb563e;
 }
 
 /*# sourceMappingURL=view3-premium.css.map */

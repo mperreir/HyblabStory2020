@@ -21,10 +21,8 @@
   position: relative;
 }
 #view10 #view10-middle #view-10-graph_container {
-  position: absolute;
-  bottom: 5%;
-  height: 70%;
-  width: 60%;
+  width: 100%;
+  position: relative;
 }
 #view10 #view10-middle #view-10-graph_container #view-10-graph {
   height: 100%;
@@ -40,10 +38,15 @@
   margin: 0;
 }
 #view10 #view10-middle #view-10-data {
-  position: absolute;
-  bottom: 30%;
-  right: 10%;
-  width: 30%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#view10 #view10-middle #view-10-data p:first-of-type {
+  margin-top: auto;
+}
+#view10 #view10-middle #view-10-data p:last-of-type {
+  margin-bottom: auto;
 }
 
 /*# sourceMappingURL=view10.css.map */

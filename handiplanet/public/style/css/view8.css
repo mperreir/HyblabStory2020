@@ -16,8 +16,9 @@
 }
 #view8 #view-8-middle #view-8-text {
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  right: 20px;
+  bottom: 20px;
+  max-width: 30%;
 }
 #view8 #view-8-middle #view-8-text em {
   font-weight: bold;
@@ -26,10 +27,10 @@
 #view8 #view-8-middle #view-8-computer-container {
   position: absolute;
   bottom: 0px;
-  left: 50%;
+  left: 40%;
   transform: translateX(-50%);
   width: 50%;
-  height: 60%;
+  height: 70%;
   display: inline-block;
 }
 #view8 #view-8-middle #view-8-computer-container #view-8-perso {

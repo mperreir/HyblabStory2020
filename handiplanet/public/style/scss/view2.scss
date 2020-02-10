@@ -27,13 +27,8 @@
       }
 
       #speech {
-        em {
-          font-weight: bold;
-          color: #CB563E;
-        }
-
-        max-width: 25%;
-        right: 20%;
+        max-width: 23%;
+        right: 13%;
         bottom: 15%;
         position: absolute;
 
@@ -113,16 +108,16 @@
 
       #circle-a{
         position: absolute;
-        right: 0%;
-        top: 0%;
-        transform: translateX(-50%);
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%) translateY(-50%);
       }
 
       #circle-b{
         position: absolute;
         right: 0%;
         top: 0%;
-        transform: translateX(-50%) translateY(50%);
+        transform: translateX(-50%) translateY(70%);
       }
 
       #button-hotel-a {

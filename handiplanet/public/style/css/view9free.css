@@ -40,19 +40,9 @@
 }
 #view9free #view-9f-middle section article:last-of-type p {
   margin: auto;
-  text-align: justify;
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 29px;
-  color: #426262;
   top: 25%;
   position: relative;
   margin: 0px !important;
-}
-#view9free #view-9f-middle section article:last-of-type p em {
-  font-weight: bold;
-  color: #CB563E;
 }
 
 /*# sourceMappingURL=view9free.css.map */

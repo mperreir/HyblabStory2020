@@ -35,13 +35,6 @@
       bottom: -2px;
     }
     
-    #view-1-splash-img{
-      z-index: 1;
-      max-height: 100%;
-      max-width: 60%;
-      left: 40%;
-    }
-    
     &>div {
       position: absolute;
       display: flex;
@@ -135,18 +128,6 @@
       left: 55%;
       max-width: 30%;
       bottom: 10%;
-      p{
-        font-family: Nunito;
-        font-style: normal;
-        font-weight: normal;
-        //font-size: 21px;
-        line-height: 29px;
-        color: #426262;
-      }
-      
-      span{
-        color: #cb563e;
-      }
     }
   }
 }
