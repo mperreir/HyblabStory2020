@@ -10,14 +10,14 @@ let initSlidedommage = function(){
 
   d3.select('.nextdmg').on('mouseover', function(){
         anime({
-            targets: '#nextdmg-texte, #nextdmg-img',
+            targets: '#nextdmg-img',
             scale: 1.2
         });
     });
 
     d3.select('.nextdmg').on('mouseout', function(){
         anime({
-            targets: '#nextdmg-texte, #nextdmg-img',
+            targets: '#nextdmg-img',
             scale: 1
         });
     });

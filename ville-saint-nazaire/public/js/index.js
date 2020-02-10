@@ -43,7 +43,6 @@ function setPos(){
 }
 
 setPos();
-console.log(pos_x,pos_y);
 
 function moveUp(){
   addClass(wrap, 'animate');

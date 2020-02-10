@@ -3,6 +3,12 @@ let initSlide2 = function(){
     var son = document.querySelector('#audioBombardement');
     son.play();
 
+    son.volume = 0.1;
+    setInterval(() =>  {
+        if(son.volume <= 0.9){
+            son.volume += 0.1;}
+        }, 1000);
+
     function next3(){
         mySlidr.slide('page-3');
         initSlide3();
@@ -16,14 +22,14 @@ let initSlide2 = function(){
 
     d3.select('.next3').on('mouseover', function(){
         anime({
-            targets: '#next3-texte, #next3-img',
+            targets: '#next3-img',
             scale: 1.2
         });
     });
 
     d3.select('.next3').on('mouseout', function(){
         anime({
-            targets: '#next3-texte, #next3-img',
+            targets: '#next3-img',
             scale: 1
         });
     });

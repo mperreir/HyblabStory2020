@@ -1,6 +1,5 @@
 #page4 {
-/*	background-image: url("../img/fond_rencontre_archi.png");
-*/	background-image: url("../img/background.png");
+	background-image: url("../img/background.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -17,7 +16,7 @@
 
 .slide5-container p{
 	z-index: 200;
-  font-style: normal;
+  	font-style: normal;
 	font-weight: normal;
 	font-family: Vibur;
 	color: #92C2D2;
@@ -29,7 +28,17 @@
 	height: 49%;
 	left: 15%;
 	top: 7%;
-	transform: rotate(0deg);
+}
+
+#slide4-img-photo1:hover {
+
+	-webkit-transform:scale(1.25); /* Safari et Chrome */
+	-moz-transform:scale(1.25); /* Firefox */
+	-ms-transform:scale(1.25); /* Internet Explorer 9 */
+	-o-transform:scale(1.25); /* Opera */
+	transform:scale(1.25);
+	transition:0.5s;
+	z-index:2;
 
 }
 
@@ -39,7 +48,16 @@
 	height: 39%;
 	left: 52%;
 	top: 13%;
-	transform: rotate(1.04deg);
+}
+
+#slide4-img-photo2:hover {
+
+	-webkit-transform:scale(1.25); /* Safari et Chrome */
+	-moz-transform:scale(1.25); /* Firefox */
+	-ms-transform:scale(1.25); /* Internet Explorer 9 */
+	-o-transform:scale(1.25); /* Opera */
+	transform:scale(1.25);
+	transition:0.5s;
 
 }
 
@@ -125,12 +143,11 @@
 	position: absolute;
 	top: 89%;
 	width: 4%;
-	/*height: 5%;*/
 	left: 60%;
 	visibility: hidden;
 }
 
- #slide4-suivant:hover {
+ #slide4-suivant:hover, #slide4-img-photo2:hover, #slide4-img-photo1:hover {
 	cursor: pointer;
 }
 /* Media queries pour le responsive */

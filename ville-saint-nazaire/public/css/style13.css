@@ -22,7 +22,7 @@
     width:5%;
     left:45.5%;
     top:32%;
-    z-index: 2;
+    z-index: 20;
     cursor: pointer;
 }
 
@@ -50,4 +50,37 @@
     width : 51%;
     left:23%;
     top:12%;
+    z-index:10;
+}
+
+#degaulle{
+    position: absolute;
+    width :30%;
+    left:-1%;
+    top:10%
+}
+
+#degaulle:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    transition:0.5s;
+    z-index:20;
+}
+#maries{
+    position: absolute;
+    width:25%;
+    left:73%;
+    top:28%
+}
+#maries:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    transition:0.5s;
+    z-index:20;
 }

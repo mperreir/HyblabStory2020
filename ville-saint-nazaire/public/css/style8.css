@@ -84,6 +84,15 @@
 	z-index: 200;
 }
 
+#slide8-img1:hover {
+-webkit-transform:scale(1.35); /* Safari et Chrome */
+-moz-transform:scale(1.35); /* Firefox */
+-ms-transform:scale(1.35); /* Internet Explorer 9 */
+-o-transform:scale(1.35); /* Opera */
+transform:scale(1.35);
+transition:0.5s;
+}
+
 #slide8-img2 {
 	position: absolute;
 	width: 37%;
@@ -92,6 +101,17 @@
 	top: 15%;
 
 }
+
+#slide8-img2:hover {
+-webkit-transform:scale(1.40); /* Safari et Chrome */
+-moz-transform:scale(1.40); /* Firefox */
+-ms-transform:scale(1.40); /* Internet Explorer 9 */
+-o-transform:scale(1.40); /* Opera */
+transform:scale(1.40);
+transition:0.5s;
+	z-index:400;
+}
+
 
 #slide8-img3 {
 	position: absolute;
@@ -103,6 +123,16 @@
 
 }
 
+#slide8-img3:hover {
+-webkit-transform:scale(1.40); /* Safari et Chrome */
+-moz-transform:scale(1.40); /* Firefox */
+-ms-transform:scale(1.40); /* Internet Explorer 9 */
+-o-transform:scale(1.40); /* Opera */
+transform:scale(1.40);
+transition:0.5s;
+	z-index:400;
+}
+
 #slide8-img4 {
 	position: absolute;
 	width: 25%;
@@ -110,6 +140,17 @@
 	left: 63%;
 	top: 30.5%;
 	z-index: 195;
+
+}
+
+#slide8-img4:hover {
+-webkit-transform:scale(1.25); /* Safari et Chrome */
+-moz-transform:scale(1.25); /* Firefox */
+-ms-transform:scale(1.25); /* Internet Explorer 9 */
+-o-transform:scale(1.25); /* Opera */
+transform:scale(1.25);
+transition:0.5s;
+	z-index:400;
 
 }
 
@@ -123,7 +164,20 @@
 
 }
 
- #slide8-suivant:hover, #slide8-btnRetour:hover {
+#slide8-img5:hover {
+-webkit-transform:scale(1.40); /* Safari et Chrome */
+-moz-transform:scale(1.40); /* Firefox */
+-ms-transform:scale(1.40); /* Internet Explorer 9 */
+-o-transform:scale(1.40); /* Opera */
+transform:scale(1.40);
+transition:0.5s;
+	z-index:400;
+
+
+}
+
+ #slide8-suivant:hover, #slide8-btnRetour:hover, #slide8-img1:hover, #slide8-img2:hover,
+ #slide8-img3:hover, #slide8-img4:hover, #slide8-img5:hover {
 	cursor: pointer;
 }
 

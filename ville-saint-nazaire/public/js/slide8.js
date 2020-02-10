@@ -3,14 +3,14 @@ let initSlide8 = function(){
 	// Animations bouton suivant
 	d3.select('#slide8-suivant').on('mouseover', function(){
         anime({
-            targets: '#slide8-notesSuivantes, #slide8-btnSuivant',
+            targets: '#slide8-btnSuivant',
             scale: 1.1
         });
     });
 
     d3.select('#slide8-suivant').on('mouseout', function(){
         anime({
-            targets:  '#slide8-notesSuivantes, #slide8-btnSuivant',            
+            targets:  '#slide8-btnSuivant',
             scale: 1
         });
     });
@@ -35,5 +35,11 @@ let initSlide8 = function(){
     moveDown();
     moveLeft();
     initSlide9();
+  });
+
+  d3.select('#slide8-btnRetour').on('click', function(){
+    moveUp();
+    moveLeft();
+    //initSlide9();
   });
 }

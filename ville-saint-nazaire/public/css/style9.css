@@ -5,15 +5,16 @@
 }
 
 #next10-img{
-     position: absolute;
-     width: 4%;
-     left : 59%;
-     top : 90%;
+    position: absolute;
+    top: 89%;
+    width: 4%;
+    left: 60%;
  }
 #next10-txt{
     position: absolute;
-    left : 65%;
-    top : 92%;
+    left: 66%;
+    top: 89%;
+    padding-top: 0.7%;
     font-family: "Vibur";
     color: #92C2D2;
 }
