@@ -82,6 +82,18 @@ function initArticle(sectionName) {
         triggeredScroll();
 
     });
+
+    /* start auto scroll if screen size is too small */
+    // console.log($articleTextWrapper.prop('scrollHeight'));
+    // console.log($articleTextWrapper.height());
+    // if ($articleTextWrapper.prop('scrollHeight') > $articleTextWrapper.height()) {
+    //     // your element have overflow
+    //     console.log('SCROLL AUTO !');
+    //     $articleTextWrapper.
+    // } else {
+    //     // your element doesn't have overflow
+    //     console.log('pas de scroll necessaire');
+    // }
 }
 
 function triggeredScroll() {

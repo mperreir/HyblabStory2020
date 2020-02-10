@@ -17,7 +17,7 @@
 }
 
 .article-wrapper {
-    /*position: relative;*/
+    position: relative;
 
     display: flex;
     flex-direction: row;
@@ -39,7 +39,7 @@
 .article-title-wrapper {
     position: absolute;
     left: 50%;
-    top: 13%;
+    top: 0;
     transform: translate(-50%, -50%);
 
     z-index: 6;
@@ -96,6 +96,8 @@
     font-style: normal;
     font-weight: normal;
     font-family: "Nimbus Sans L";
+
+    /*overflow: scroll;*/
 
     transition: width 1s, padding 1s;
 }
@@ -183,8 +185,8 @@
 
 /* Full screen slide show */
 .article-title-wrapper-fullscreen {
-    top: 71px;
-    left: 150px;
+    top: -80px;
+    left: 0;
 
     font-size: 30px;
     line-height: 35px;
