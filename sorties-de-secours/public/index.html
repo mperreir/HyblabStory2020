@@ -23,7 +23,6 @@
 
   <!-- BSL -->
   <script type="text/javascript" src="js/bodyScrollLock.js"></script>
-
   <script type="text/javascript" src="js/paper-full.min.js"></script>
 
 
@@ -69,15 +68,12 @@
     <link rel="stylesheet" href="css/article.css">
     <script type="text/javascript" src="js/article.js"></script>
 
-  <!-- Menu -->
+    <!-- Menu -->
     <link rel="stylesheet" href="css/menu.css" />
-  <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
 
 
-
-
-
-  <!-- dance -->
+    <!-- dance -->
     <link rel="stylesheet" href="css/dance.css">
     <script type="text/javascript" src="js/dance.js"></script>
 
@@ -89,6 +85,9 @@
     <!-- figures panel -->
     <link rel="stylesheet" href="css/figures.css">
     <script type="text/javascript" src="js/figures.js"></script>
+
+    <!-- contact -->
+    <link rel="stylesheet" href="css/contact.css">
 
 </head>
 <body>
@@ -520,65 +519,119 @@
       </section>
       <!-- END MUSIC WORKSHOP -->
 
+      <!-- NUMBER -->
 
+
+
+      <section class="section" id="figures-section">
+        <div class="textFigure">
+          <div id="modify">
+            <p id="le_figure">15</p>
+            <div id="contentFigure">
+              <p id="light">Florian</p>
+              <p id="bolder">Daniel</p>
+              <!-- END NON SCROLLABLE -->
+            </div>
+          </div>
+          <span>4</span>
+          <span>5</span>
+          <span>20</span>
+          <span>31</span>
+          <span>224</span>
+          <span>300</span>
+          <span>600</span>
+          <span>12 000</span>
+          <span>27 209</span>
+          <input type="range" id="range" min="0" max="540" value="0" step="1">
+        </div>
+      </section>
+      <!-- END NUMBER -->
 
 
       <!-- CONTACT -->
-      <section
-              class="section"
-              id="contact-section">
-                <img id="img-contact-brush"src='img/contact-brush.png'/>
-                <p id="menu-text">Sorties de secours est un créateur d’émotion, un <br>
-                  média indépendant, un acteur culturel local. <br>
-                  Faites vous aussi, partie de l’expérience Sorties de Secours, <br>
-                  et devenez à votre tour créateur d’émotions.,<br>
-                  </p>
-                <div id="logo-wrapper">
-                  <img src='img/logo_sorties_de_secours.png' />
-                </div>
-
+      <section class="section" id="contact-section">
+        <div>
+          <img class="logo-contact-wrapper" src='img/logo_sorties_de_secours.png' />
+        </div>
+               <div id="menu-text">
+                <p >Sorties de secours est un <b> créateur d’émotion</b>,  un <b> média indépendant</b>,
+                un <b>acteur culturel local</b>.
+                Faites vous aussi, partie de l’expérience Sorties de Secours,
+                et devenez à votre tour créateur d’émotions.
+                </p>
               </div>
-      </section>
-      <!-- END CONTACT -->
 
-      <!-- CREDIT -->
-      <section
-              class="section"
-              id="credit-section">
 
-        <div id="music-workshop-konva">
+            <div id="contact-content">
+              <div id="title-contact">
+                <p>ENVIE D'EN SAVOIR PLUS?</p>
+                <b>CONTACTEZ-NOUS</b>
+              <br/><br/>
+              </div>
+              <table>
+                <tr>
+                  <th class="table_title"> Téléphone:</thclass="title">
+                  <td id="texTel" contentEditable="true"></td>
+                </tr>
+                <tr>
+                <tr>
+                  <th class="table_title">Mail:</th>
+                  <td id="textMail" contentEditable="true"></td>
+                </tr>
+                <tr>
+                <tr>
+                  <th class="table_title">Nom:</th>
+                  <td id="textNom" contentEditable="true"></td>
+                </tr>
+                <tr>
+                <tr>
+                  <th class="table_title">Prénom:</th>
+                  <td id="textPrenom" contentEditable="true"></td>
+                </tr>
+                <tr>
+                <tr>
+                  <th class="table_title">Object:</th>
+                  <td id="textObject" contentEditable="true"></td>
+                </tr>
+                <tr>
 
-        </div>
+                <tr>
+                </tr>
 
-      </section>
-      <!-- END CREDIT -->
-    </div>
 
-    <section class="section" id="figures-section">
-        <div class="textFigure">
-            <div id="modify">
-                <p id="le_figure">15</p>
-                <div id="contentFigure">
-                    <p id="light">Florian</p>
-                    <p id="bolder">Daniel</p>
-                    <!-- END NON SCROLLABLE -->
-                </div>
+              </table>
+              <table>
+                <tr>
+                  <th class="table_title">
+                    Message:
+                  </th>
+                </tr>
+                <tr>
+                  <th id="textMessage" class="table_message" contenteditable="true">
+                  </th>
+                </tr>
+              </table>
+              <button id="btnSend">Envoyer</button>
             </div>
-            <span>4</span>
-            <span>5</span>
-            <span>20</span>
-            <span>31</span>
-            <span>224</span>
-            <span>300</span>
-            <span>600</span>
-            <span>12 000</span>
-            <span>27 209</span>
-            <input type="range" id="range" min="0" max="540" value="0" step="1">
-        </div>
+
+
+
+            <div id="isabelle-contact">
+              <p><b>Isabelle Nivet</b><br />
+              cestparla@sortiesdesecours.com</p>
+            </div>
+            <div id="sds-contact">
+              <p><b>Sorties de Secours</b><br />
+              La Colloc 42 avenue de la Perrière 56100 Lorient<br />
+              N° de siret: 822 764 379 </p>
+            </div>
     </section>
+    <!-- END CONTACT -->
+
+
   </div>
   <!-- FIN CONTAINER -->
-
+  </div>
 
 </body>
 </html>

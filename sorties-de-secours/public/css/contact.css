@@ -2,45 +2,119 @@
   position: relative;
   background-color: #1E1E1E;
 }
-#contact {
-  cursor: pointer;
-  position: relative;
-  float: left;
-  height: 100vh;
-  width: 33.33%;
-  overflow: hidden;
-}
 
 #menu-text {
-position: absolute;
-width: 478px;
-height: 96px;
-left: 239px;
-top: 452px;
-font-family: NimbusSanL;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 24px;
-display: flex;
-align-items: center;
-color: antiquewhite;
+  position: absolute;
+  width: 481px;
+  height: 92px;
+  left: 413px;
+  top: 507px;
+  font-family: NimbusSanL;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  color: #F6F5F5;
 }
 
-#logo-wrapper {
-  position: absolute;
-width: 518.61px;
-height: 305.99px;
-left: 701px;
-top: 30px;
+img.logo-contact-wrapper {
+  display: block;
+  width: 518.61px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  top: 20px;
 }
 
-#img-contact-brush {
+#contact-content{
   position: absolute;
-  width: 704.68px;
-  height: 724.02px;
-  left: -67px;
-  top: 143.78px;
-  background: url(contact-brush.png);
-  transform: rotate(-48.26deg);
+  left: 1200px;
+  top: 300px;
+  height: 402px;
+}
+
+#title-contact{
+  font-family: NimbusSanL;
+  font-style: normal;
+  font-weight: normal;
+  color: #F6F5F5;
+}
+
+
+table{
+  width: 100%;
+  text-align: left;
+  font-size: medium;
+}
+
+table, tr{
+  border: 1px solid white;
+  margin: 0 auto;
+  font-size: medium;
+  border-collapse: collapse;
+}
+
+th{
+  line-height: 200%;
+}
+
+.table_message{
+  height: 150px;
+  vertical-align: top;
+}
+
+
+.table_title{
+  width: 25%;
+  font-weight: 500;
+  color: #F6F5F5;
+  font-family: NimbusSanL;
+}
+
+#btnSend{
+  background-color: #1E1E1E;
+  color: white;
+  padding: 8px 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+#btnSend:hover {background-color: #373837}
+
+#btnSend:active {
+  background-color: #373837;
+  box-shadow: 0 2px #666;
+  transform: translateY(1px);
+}
+
+#isabelle-contact{
+  position: absolute;
+  width: 681px;
+  height: 60px;
+  left: 72px;
+  top: 856px;
+  font-family: NimbusSanL;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #F6F5F5;
+}
+#sds-contact{
+  position: absolute;
+  width: 636px;
+  height: 79px;
+  left: 72px;
+  top: 942px;
+  font-family: NimbusSanL;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #F6F5F5;
+
 }
