@@ -4,7 +4,7 @@ class Contexte extends View {
         0: 'Pour commencer mes recherches, <span>je devrais ?</span>',
         1: 'Pour approfondir mes recherches,<br><span>que me conseilles-tu ?</span>',
         2: 'Selon toi, <span>que devrais-je faire</span> ensuite ?',
-        3: '<span>On a bien avancé,</span> il ne reste qu\'à'
+        3: '<span>On a bien avancé,</span> il ne reste qu\'à...'
     };
 
     sounds = [

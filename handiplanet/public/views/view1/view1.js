@@ -37,12 +37,6 @@ class View1 extends View {
             this.luggage.style.transform = `translateX(${x * -0.05}px) translateY(${y * -0.1}px)`;
         });
 
-        // Switch color of character
-        this.switchCharButton = document.getElementById('view-1-switch-character');
-        this.switchCharButton.addEventListener('click', () => {
-            this.showSelectChar();
-        });
-
         // Select color of character
         this.selectCharContainer = document.getElementById('view-1-select-character');
         this.caracterImg = document.getElementById('view-1-character-img');
@@ -57,24 +51,11 @@ class View1 extends View {
         this.selectCharButtons.forEach((li, index) => {
             li.addEventListener('click', () => {
                 window.colorPersoManager.setSelected(index);
-                this.hideSelectChar();
             });
             li.addEventListener('mouseenter', () => {
                 const sounds = ['sound/hover/Blanc.mp3', 'sound/hover/Vert.mp3', 'sound/hover/Rouge.mp3'];
                 window.soundManager.play(sounds[index]);
             });
         });
-    }
-
-    showSelectChar() {
-        // Show color selector
-        this.switchCharButton.style.display = 'none';
-        this.selectCharContainer.style.display = 'initial';
-    }
-
-    hideSelectChar() {
-        // Hide color selector
-        this.selectCharContainer.style.display = 'none';
-        this.switchCharButton.style.display = 'initial';
     }
 }

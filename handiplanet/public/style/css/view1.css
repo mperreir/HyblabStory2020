@@ -66,7 +66,6 @@
 }
 #view1 #view-1-middle > div #view-1-select-character {
   z-index: 6;
-  display: none;
 }
 #view1 #view-1-middle > div #view-1-select-character ul {
   list-style: none;
