@@ -107,7 +107,7 @@
 	visibility:hidden;
 }
 
- #slide7-suivant:hover, #slide7-btnRetour:hover {
+ #slide7-suivant:hover, #slide7-btnRetour:hover, #imagebtn17, #imagebtn27, #imagebtn37, #imagebtn47 {
 	cursor: pointer;
 }
 
