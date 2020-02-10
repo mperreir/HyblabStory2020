@@ -93,34 +93,17 @@
   #view6p-circle-1{
     left: 15%;
     bottom: 40%;
-    animation: view6-yAxis 6s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
   }
   
   #view6p-circle-2{
     left: 70%;
     bottom: 10%;
-    animation: view6-xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
   }
   
   #view6p-circle-3{
     left: 70%;
     bottom: 50%;
-    animation: view6-xAxis 6s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
   }
   
   @keyframes view6p-pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
-  
-  @keyframes view6-yAxis {
-    50% {
-      animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
-      transform: translateY(10%);
-    }
-  }
-  
-  @keyframes view6-xAxis {
-    50% {
-      animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
-      transform: translateX(20%);
-    }
-  }
 }

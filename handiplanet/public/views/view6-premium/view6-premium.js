@@ -17,6 +17,18 @@ class View6Premium extends View {
         this.btNext.addEventListener('click', ()=>{
             this.switchView7();
         });
+
+        this.circle1 = document.getElementById('view6p-circle-1');
+        this.circle2 = document.getElementById('view6p-circle-2');
+        this.circle3 = document.getElementById('view6p-circle-3');
+
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX - window.innerWidth / 2;
+            const y = e.clientY - window.innerHeight / 2;
+            this.circle1.style.transform = `translateX(${x * -0.1}px) translateY(${y * -0.05}px)`;
+            this.circle2.style.transform = `translateX(${x * -0.05}px) translateY(${y * -0.1}px)`;
+            this.circle3.style.transform = `translateX(${x * 0.08}px) translateY(${y * 0.05}px)`;
+        });
     }
 
     async switchView7(){
