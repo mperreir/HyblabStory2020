@@ -1,44 +1,70 @@
-import View from "../../js/View.js";
-import ViewLendemain from "./lendemain/lendemain.js";
+import Component from "../../js/Component.js";
+import Porte from "./Porte/Porte.js"
+import Arrivee from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
 
-export default class ViewHarcelement extends View {
-  constructor() {
-    super("harcelement", document.getElementById("root"));
-  }
-
-  async load() {
-    await super.load();
-    this.porte = await this.loadHTML("/10-24-2/scenes/Harcelement/porte.html");
-    this.lendemain = new ViewLendemain();
-    await this.lendemain.load();
-    // await Promise.all([super.load(), this.porte, this.lendemain]);
-  }
-
-  linkElements() {
-    document
-      .getElementById("harcelement")
-      .addEventListener("click", () => console.log("toc"));
-    document.getElementById("harcelement").addEventListener("click", () => {
-      document.getElementById("carousel-button").style.display = "block";
-      document.getElementById("harcelement").innerHTML = "";
-      this.lendemain.render(document.getElementById("harcelement"));
+export default class Harcelement extends Component {
+  constructor(OnStart) {
+    super();
+    this.OnStart = OnStart;
+    this.section = document.createElement("section");
+    this.section.setAttribute("id", "harcelement");
+    this.discussion = new ViewDiscussion();
+    this.porte = new Porte({
+      arrivee: this.arrivee.bind(this),
+      onStart
+    });
+    this.arrivee = new Arrivee();
+    this.porteClaque = new PorteClaque();
+    this.premierChoix = new PremierChoix({
+      onGoToViewDiscussion: this.goToViewDiscussion.bind(this)
     });
   }
 
-  /**
-   *
-   * @param {HTMLElement} target
-   */
+
+  goToArriveeEnfant(e){
+    this.onStart(this);
+    this.porte.componentWillUnmount();
+    this.arrivee.render(this.section);
+    e.preventDefault();
+    setTimeout(() => {
+      this.goToClaquePorte();
+    }, 3000);
+  }
+
+  goToArriveeEnfant(){
+    this.onStart(this);
+    this.arrivee.componentWillUnmount();
+    this.porteClaque.render(this.section);
+    setTimeout(() => {
+      this.goToPremierChoix();
+    }, 3000);
+  }
+
+  goToPremierChoix(){
+    this.porteClaque.componentWillUnmount();
+    this.premierChoix.render(this.section);
+  }
+
+
+
+  goToViewDiscussion(e) {
+    this.culotte.componentWillUnmount();
+    this.discussion.render(this.section);
+    e.preventDefault();
+  }
+
+  async load() {
+    await Promise.all([
+      this.porte.load(),
+      this.culotte.load(),
+      this.discussion.load(),
+      this.atable.load()
+    ]);
+  }
+
   render(target) {
-    const parser = new DOMParser();
-    var sectionEl = parser.parseFromString(this.htmlText, "text/html").body
-      .firstChild;
-    sectionEl.appendChild(
-      parser.parseFromString(this.porte, "text/html").body.firstChild
-    );
-    target.innerHTML = "";
-    target.appendChild(sectionEl);
-    console.log(target);
-    this.linkElements();
+    this.renderHtmlInTarget(target, this.section);
+    this.porte.render(this.section);
+    this.componentDidMount();
   }
 }
