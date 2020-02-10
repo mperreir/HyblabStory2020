@@ -268,7 +268,10 @@ $(document).ready(function() {
 
             vinylAnim.stop();
             vinylCenterAnim.stop();
-            initArticle('music');
+            let mouseAnimatedMusic = document.querySelector("#mouse-animated-music");
+            mouseAnimatedMusic.classList.remove('fadeInUp');
+            mouseAnimatedMusic.classList.add('fadeOut');
+            mouseAnimatedMusic.addEventListener('animationend', function() { initArticle('music'); });
         }
     });
 

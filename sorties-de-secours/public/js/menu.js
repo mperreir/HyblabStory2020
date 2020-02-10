@@ -93,15 +93,17 @@ $(document).ready(function() {
             }, 0, function () {
               // Transition Experience Dance
               bodyScrollLock.disableBodyScroll("#container"); // enable to avoid mousewheel event
-
               if(expId === "expChoiceDance") {
 
                 // sound
                 change_music("voice", "sounds/dance/experience.mp3");
-                set_music_volume("voice", 1);
+                set_music_volume("voice", 0.4);
 
                 change_music("danceMusic", "sounds/dance/music.mp3");
-                set_music_volume("danceMusic", 1);
+                set_music_volume("danceMusic", 0.2);
+                setTimeout(function() {
+                  set_music_volume("danceMusic", 0.4);
+                }, 15500);
 
                 set_music_pause("generalMusic");
 
@@ -129,13 +131,24 @@ $(document).ready(function() {
                   }
                   //e.preventDefault();
                 });
-              } else if (expId === "expChoiceMusique") {
+              } else if(expId === "expChoiceMusique") {
                 set_music_pause("generalMusic");
 
                 change_music("voice", 'sounds/music_workshop/experience.mp3');
-                set_music_volume("voice", 1);
+                set_music_volume("voice", 0.4);
 
                 set_music_play("vinyl-noise");
+                setTimeout(function() {
+                  let mouseAnimatedMusic = document.querySelector("#mouse-animated-music");
+                  mouseAnimatedMusic.classList.remove('fadeOut');
+                  mouseAnimatedMusic.classList.add('fadeInUp');
+                }, 5000);
+              } else if(expId === "expChoiceExpo") {
+                setTimeout(function() {
+                  let mouseAnimatedExpo = document.querySelector("#mouse-animated-expo");
+                  mouseAnimatedExpo.classList.remove('fadeOut');
+                  mouseAnimatedExpo.classList.add('fadeInUp');
+                }, 5000);
               }
 
             });

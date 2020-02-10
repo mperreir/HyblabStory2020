@@ -223,4 +223,6 @@
 #mouse-animated-menuExpo, #mouse-animated-menuMusic, #mouse-animated-menuDance {
   position: absolute;
   bottom: 20%;
+  width: 100%;
+  text-align: center;
 }

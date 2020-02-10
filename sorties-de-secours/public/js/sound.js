@@ -38,18 +38,16 @@ $(document).ready(function() {
         if (   scrollPos >= loading.top - pxBeforeTop
             && scrollPos < loading.bottom ) {
             set_music_pause("voice");
-
-            set_music_volume("generalMusic", 1);
-            set_music_play("generalMusic");
         }
 
         // presentation
         if (   scrollPos >= presentation.top - pxBeforeTop
             && scrollPos < presentation.bottom ) {
-            set_music_volume("generalMusic", 0.3);
 
             if (presentation.playing) {
                 set_music_play("voice");
+                set_music_volume("voice", 0.4);
+                set_music_volume("generalMusic", 0.05);
             } else {
                 change_music("voice", 'sounds/voices/presentation.mp3');
                 presentation.playing = true;
@@ -60,7 +58,7 @@ $(document).ready(function() {
         if (    scrollPos >= menu.top - pxBeforeTop
             &&  scrollPos < menu.bottom) {
             set_music_pause("voice");
-            set_music_volume("generalMusic", 1);
+            set_music_volume("generalMusic", 0.1);
         }
 
         // // music_workshop

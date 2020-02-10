@@ -126,10 +126,11 @@ $(document).ready(function() {
             }, 2500);
 
             change_music("voice", "sounds/expo/experience.m4a");
-            set_music_volume("voice", 1);
-            set_music_volume("generalMusic", 0.2);
+            set_music_volume("voice", 0.3);
+            set_music_volume("generalMusic", 0.02);
 
             set_music_play("ambianceExpo");
+            set_music_volume("ambianceExpo", 0.04);
         }
     });
 
@@ -138,7 +139,10 @@ $(document).ready(function() {
             set_music_pause("ambianceExpo");
 
             anim_premier_rang_going.start();
-            initArticle('expo');
+            let mouseAnimatedExpo = document.querySelector("#mouse-animated-expo");
+            mouseAnimatedExpo.classList.remove('fadeInUp');
+            mouseAnimatedExpo.classList.add('fadeOut');
+            mouseAnimatedExpo.addEventListener('animationend', function() { initArticle('expo'); });
         }
     });
 

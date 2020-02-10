@@ -1,6 +1,6 @@
 #expo-section {
 	position: relative;
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 .expo-wrapper {
@@ -19,4 +19,46 @@
   z-index: 1001;
   /*clip-path: circle(0 at 0 0);*/
    clip-path: url(#expo-clip);
+}
+
+#mouse-animated-expo {
+	position: absolute;
+	bottom: 2%;
+	left: 40%;
+	width: 400px;
+	height: 100px;
+
+
+	z-index: 300;
+}
+
+#scroll-down-endExpo {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	left: 0;
+	top: 0;
+	text-align: center;
+	bottom: inherit;
+	transform: inherit;
+
+  z-index: 9999;
+}
+
+#scroll-down-endExpo-span {
+	font-family: "NimbusSanL";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 10px;
+
+  text-transform: uppercase;
+
+  color: black;
+}
+
+#scroll-down-endExpo-img {
+	position: absolute;
+	top: 20px;
+	left: 44%;
 }

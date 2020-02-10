@@ -338,7 +338,7 @@ function goBackToMenu(sectionName) {
 
             set_music_pause("danceMusic");
             set_music_play("generalMusic");
-            set_music_volume("generalMusic", 1);
+            set_music_volume("generalMusic", 0.1);
             break;
     }
     let expoDone = (document.getElementById("hachure-expo").style.opacity == 1);
@@ -361,19 +361,24 @@ function goBackToMenu(sectionName) {
 function playSound(sectionName) {
 
     // set_music_pause("generalMusic");
-    set_music_volume("generalMusic", 0.2);
+    set_music_volume("generalMusic", 0.05);
 
     if (sectionName === "expo") {
         change_music("voice", "sounds/expo/article.m4a");
-        set_music_volume("generalMusic", 0.2);
+        set_music_volume("voice", 0.4);
+        set_music_volume("generalMusic", 0.05);
     } else if (sectionName === "music") {
         set_music_play("generalMusic");
         change_music("voice", "sounds/music_workshop/article.mp3");
-        set_music_volume("generalMusic", 0.2);
+        set_music_volume("voice", 0.4);
+        set_music_volume("generalMusic", 0.05);
     } else if (sectionName === "dance") {
         change_music("voice", "sounds/dance/article.m4a");
-        set_music_volume("voice", 1);
-        set_music_volume("generalMusic", 0.2);
+        set_music_volume("voice", 0.4);
+        set_music_volume("danceMusic", 0.2);
+        setTimeout(function() {
+          set_music_volume("danceMusic", 0.1);
+        }, 2000);
     }
 
 }

@@ -12,6 +12,7 @@ $(document).ready(function() {
     mouseAnimated.addEventListener('animationend', function() { bodyScrollLock.enableBodyScroll(container); });
 
     set_music_play("generalMusic");
+    set_music_volume("generalMusic", 0.1);
   });
 
   $("#link-presentation").click(function(e) {
