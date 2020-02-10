@@ -1,3 +1,6 @@
+var musicMuted = false;
+var playingSoundList = [];
+
 $(document).ready(function() {
 
     const pxBeforeTop = 50;
@@ -80,5 +83,51 @@ $(document).ready(function() {
         }
 
     });
+
+    // on sound-content click
+    let $soundContent = $('.sound-content');
+
+    $(".sound-content > svg").click(function() {
+
+        if (!musicMuted) {
+            $soundContent.addClass("sound-content-mute");
+
+            console.log(document.getElementById("generalMusic").paused);
+            console.log(document.getElementById("voice").paused);
+            console.log(document.getElementById("ambianceExpo").paused);
+            console.log(document.getElementById("danceMusic").paused);
+            console.log(document.getElementById("vinyl-noise").paused);
+            console.log(document.getElementById("vinyl").paused);
+
+            set_music_pause("generalMusic");
+            set_music_pause("voice");
+            set_music_pause("ambianceExpo");
+            set_music_pause("danceMusic");
+            set_music_pause("vinyl-noise");
+            set_music_pause("vinyl");
+
+            musicMuted = true;
+        } else {
+            $soundContent.removeClass("sound-content-mute");
+
+            console.log(document.getElementById("generalMusic").paused);
+            console.log(document.getElementById("voice").paused);
+            console.log(document.getElementById("ambianceExpo").paused);
+            console.log(document.getElementById("danceMusic").paused);
+            console.log(document.getElementById("vinyl-noise").paused);
+            console.log(document.getElementById("vinyl").paused);
+
+            set_music_play("generalMusic");
+            set_music_play("voice");
+            set_music_play("ambianceExpo");
+            set_music_play("danceMusic");
+            set_music_play("vinyl-noise");
+            set_music_play("vinyl");
+
+            musicMuted = false;
+        }
+
+    });
+
 
 });
