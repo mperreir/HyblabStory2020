@@ -1,40 +1,22 @@
 <template>
   <div class="saynette">
-    <TextTitle
-      :y="12"
-      :style="{textAlign: 'center'}"
-    >
-      Bilan de consommation d’énergie
-    </TextTitle>
+    <TextTitle :y="12" :style="{textAlign: 'center'}">Bilan de consommation d’énergie</TextTitle>
 
-    <SimpleText
-      :style="{textAlign: 'center'}"
-      :y="20"
-    >
+    <SimpleText :style="{textAlign: 'center'}" :y="20">
       <p>
         <b>Grâce à tous les dispositifs et les aides mises en place par la Région,</b> M. Moreau et Mme Dubois
-        <br>font des
+        <br />font des
         <b>économies</b> et
         <b>réduisent</b> leur impact sur l’environnement en utilisant des énergies plus vertes et durables.
-        <br>Et maintenant, un petit quiz pour tester vos connaissances ?
+        <br />Et maintenant, un petit quiz pour tester vos connaissances ?
       </p>
     </SimpleText>
 
-    <SimpleText
-      :style="{textAlign: 'center'}"
-      :width="23.5"
-      :x="5.5"
-      :y="37"
-    >
+    <SimpleText :style="{textAlign: 'center'}" :width="23.5" :x="5.5" :y="37">
       <p>Qui peut bénéficier des aides régionales pour la rénovation énergétique ?</p>
     </SimpleText>
 
-    <SimpleText
-      :style="{textAlign: 'center'}"
-      :y="37"
-      :width="23.5"
-      :x="38"
-    >
+    <SimpleText :style="{textAlign: 'center'}" :y="37" :width="23.5" :x="38">
       <p>
         En moyenne, à quelle distance
         se situe une borne de chargement
@@ -42,12 +24,7 @@
       </p>
     </SimpleText>
 
-    <SimpleText
-      :style="{textAlign: 'center'}"
-      :width="23.5"
-      :x="71"
-      :y="39"
-    >
+    <SimpleText :style="{textAlign: 'center'}" :width="23.5" :x="71" :y="39">
       <p>La biomasse sert le plus souvent à :</p>
     </SimpleText>
 
@@ -163,7 +140,7 @@ export default {
     SimpleText,
     TextTitle,
     QuizzButton,
-    SimpleButton,
+    SimpleButton
   },
   data: () => ({
     //Handle if answer is true or not
@@ -209,23 +186,23 @@ export default {
 
     answer31: null,
     answer32: null,
-    answer33: null,
+    answer33: null
   }),
   created() {
     let q1Order = this.shuffle([1, 2, 3]);
-    this.answer11 = `answer-row-${q1Order[0]} answer-column-1 answer-item`;
-    this.answer12 = `answer-row-${q1Order[1]} answer-column-1 answer-item`;
-    this.answer13 = `answer-row-${q1Order[2]} answer-column-1 answer-item`;
+    this.answer11 = `index-${q1Order[0]}`;
+    this.answer12 = `index-${q1Order[1]}`;
+    this.answer13 = `index-${q1Order[2]}`;
 
     let q2Order = this.shuffle([1, 2, 3]);
-    this.answer21 = `answer-row-${q2Order[0]} answer-column-2 answer-item`;
-    this.answer22 = `answer-row-${q2Order[1]} answer-column-2 answer-item`;
-    this.answer23 = `answer-row-${q2Order[2]} answer-column-2 answer-item`;
+    this.answer21 = `index-${q2Order[0]}`;
+    this.answer22 = `index-${q2Order[1]}`;
+    this.answer23 = `index-${q2Order[2]}`;
 
     let q3Order = this.shuffle([1, 2, 3]);
-    this.answer31 = `answer-row-${q3Order[0]} answer-column-3 answer-item`;
-    this.answer32 = `answer-row-${q3Order[1]} answer-column-3 answer-item`;
-    this.answer33 = `answer-row-${q3Order[2]} answer-column-3 answer-item`;
+    this.answer31 = `index-${q3Order[0]}`;
+    this.answer32 = `index-${q3Order[1]}`;
+    this.answer33 = `index-${q3Order[2]}`;
   },
   methods: {
     shuffle(array) {
@@ -310,39 +287,23 @@ export default {
   align-items: center;
 }
 
-.answer-item {
-  position: absolute;
-  top: 10%;
-  width: 20%;
-}
-
-.answer-column-1 {
-  left: -1%;
-}
-
-.answer-column-2 {
-  left: 40%;
-}
-
-.answer-column-3 {
-  left: 80%;
-}
-
-.answer-row-1 {
-  top: -1%;
-}
-.answer-row-2 {
-  top: 34%;
-}
-.answer-row-3 {
-  top: 72%;
-}
-
 .column {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 35vh;
+}
+
+.index-1 {
+  order: 1;
+}
+
+.index-2 {
+  order: 2;
+}
+
+.index-3 {
+  order: 3;
 }
 
 .fade-enter-active,
