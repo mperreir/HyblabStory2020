@@ -54,72 +54,72 @@
     <div class="answers">
       <div class="column">
         <QuizzButton
-          id="11"
+          :class="answer11"
           text="Professionnels et particuliers"
           :selected="selected11"
           :answer="q1a1"
-          @click.native="() => { onSelectFirstQuestion(1)}"
+          @click.native="onSelectFirstQuestion(1)"
         />
         <QuizzButton
-          id="12"
+          :class="answer12"
           text="Particuliers uniquement"
           :selected="selected12"
           :answer="'waiting'"
-          @click.native="() => { onSelectFirstQuestion(2)}"
+          @click.native="onSelectFirstQuestion(2)"
         />
         <QuizzButton
-          id="13"
+          :class="answer13"
           text="Professionnels uniquement"
           :selected="selected13"
           :answer="'waiting'"
-          @click.native="() => { onSelectFirstQuestion(3)}"
+          @click.native="onSelectFirstQuestion(3)"
         />
       </div>
       <div class="column">
         <QuizzButton
-          id="21"
+          :class="answer21"
           text="33 km"
           :selected="selected21"
           :answer="'waiting'"
-          @click.native="() => { onSelectSecondQuestion(1)}"
+          @click.native="onSelectSecondQuestion(1)"
         />
         <QuizzButton
-          id="22"
+          :class="answer22"
           text="13 km"
           :selected="selected22"
           :answer="q2a2"
-          @click.native="() => { onSelectSecondQuestion(2)}"
+          @click.native="onSelectSecondQuestion(2)"
         />
         <QuizzButton
-          id="23"
+          :class="answer23"
           text="53 km"
           :selected="selected23"
           :answer="'waiting'"
-          @click.native="() => { onSelectSecondQuestion(3)}"
+          @click.native="onSelectSecondQuestion(3)"
         />
       </div>
       <div class="column">
         <QuizzButton
-          id="31"
+          :class="answer31"
           color="red"
           text="Eclairer"
           :selected="selected31"
           :answer="'waiting'"
-          @click.native="() => { onSelectThirdQuestion(1)}"
+          @click.native="onSelectThirdQuestion(1)"
         />
         <QuizzButton
-          id="32"
+          :class="answer32"
           text="Se déplacer"
           :selected="selected32"
           :answer="'waiting'"
-          @click.native="() => { onSelectThirdQuestion(2)}"
+          @click.native="onSelectThirdQuestion(2)"
         />
         <QuizzButton
-          id="33"
+          :class="answer33"
           text="Chauffer"
           :selected="selected33"
           :answer="q3a3"
-          @click.native="() => { onSelectThirdQuestion(3)}"
+          @click.native="onSelectThirdQuestion(3)"
         />
       </div>
     </div>
@@ -146,7 +146,6 @@
     </transition>
 
     <Background class="svg" />
-
   </div>
 </template>
 
@@ -197,9 +196,41 @@ export default {
     selected33: false,
 
     //Handle next scene button
-    validate: false
+    validate: false,
+
+    // Handle answer position
+    answer11: null,
+    answer12: null,
+    answer13: null,
+
+    answer21: null,
+    answer22: null,
+    answer23: null,
+
+    answer31: null,
+    answer32: null,
+    answer33: null,
   }),
+  created() {
+    let q1Order = this.shuffle([1, 2, 3]);
+    this.answer11 = `answer-row-${q1Order[0]} answer-column-1 answer-item`;
+    this.answer12 = `answer-row-${q1Order[1]} answer-column-1 answer-item`;
+    this.answer13 = `answer-row-${q1Order[2]} answer-column-1 answer-item`;
+
+    let q2Order = this.shuffle([1, 2, 3]);
+    this.answer21 = `answer-row-${q2Order[0]} answer-column-2 answer-item`;
+    this.answer22 = `answer-row-${q2Order[1]} answer-column-2 answer-item`;
+    this.answer23 = `answer-row-${q2Order[2]} answer-column-2 answer-item`;
+
+    let q3Order = this.shuffle([1, 2, 3]);
+    this.answer31 = `answer-row-${q3Order[0]} answer-column-3 answer-item`;
+    this.answer32 = `answer-row-${q3Order[1]} answer-column-3 answer-item`;
+    this.answer33 = `answer-row-${q3Order[2]} answer-column-3 answer-item`;
+  },
   methods: {
+    shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    },
     onNext() {
       this.$store.dispatch("nextScene", { sceneId: null });
     },
@@ -277,6 +308,34 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.answer-item {
+  position: absolute;
+  top: 10%;
+  width: 20%;
+}
+
+.answer-column-1 {
+  left: -1%;
+}
+
+.answer-column-2 {
+  left: 40%;
+}
+
+.answer-column-3 {
+  left: 80%;
+}
+
+.answer-row-1 {
+  top: -1%;
+}
+.answer-row-2 {
+  top: 34%;
+}
+.answer-row-3 {
+  top: 72%;
 }
 
 .column {
