@@ -16,13 +16,13 @@ export default class Porte extends Component {
   componentDidMount() {
     document
       .getElementById("appeller-fille")
-      .parentElement.addEventListener("click", this.onGoToATable);
+      .addEventListener("click", this.onGoToATable);
   }
 
   componentWillUnmount() {
     document
       .getElementById("appeller-fille")
-      .parentElement.removeEventListener("click", this.onGoToATable);
+      .removeEventListener("click", this.onGoToATable);
   }
 
   render(target) {
