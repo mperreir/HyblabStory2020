@@ -8,8 +8,7 @@
 #logo-sorties {
   position: absolute;
   left: 0;
-  top: calc(50% - 663/2);
-  transform: translate(-50%, -50%);
+  top: 20%;
 
   z-index: 2;
 }
