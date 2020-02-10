@@ -14,21 +14,6 @@
     margin-top:9vh;
 }
 
-table, td, tr {
-    border: none;
-    border-collapse: collapse;
-}
-
-table td {
-    border-left: 1px solid #969696;
-    padding-left:3vw;
-    padding-right:3vw;
-}
-
-table td:first-child {
-    border-left: none;
-}
-
 #logos-ecoles {
     vertical-align: middle;
 }
@@ -62,11 +47,30 @@ table td:first-child {
 }
 
 .intro-text {
-    font-size: 25px;
-    text-align: center;
-    padding-top:4vh;
+  font-family: NimbusSanL;
+  font-size: 30px;
+  line-height: 50px;
+  /* identical to box height, or 167% */
+  display: flex;
+  align-items: center;
+  color: #1E1E1E;
+}
+#intro-1{
+  position: absolute;
+  width: 171px;
+  height: 50px;
+  left: 875px;
+  top: 81px;
+}
+#intro-2{
+  position: absolute;
+  width: 202px;
+  height: 50px;
+  left: 859px;
+  top: 121px;
 }
 #noms {
+    position: absolute;
     vertical-align:top;
     font-family: NimbusSanL;
     font-style: normal;
@@ -82,7 +86,7 @@ table td:first-child {
     color: #1E1E1E;
 }
 #nom-audencia {
-  position: absolute;
+position: absolute;
 width: 189px;
 height: 78px;
 left: 458px;
@@ -99,14 +103,32 @@ top: 525px;
 
 #nom-polytech {
   position: absolute;
-  width: 218px;
-  height: 78px;
-  left: 850px;
-  top: 525px;
+  width: 257px;
+  height: 195px;
+  left: 1204px;
+  top: 513px;
 }
-
-
-
+.ligne_verticale1
+{
+  position: absolute;
+  width: 397px;
+  height: 0px;
+  left: 787px;
+  top: 300px;
+  border: 1px solid #969696;
+  width:5px;
+  transform: rotate(90deg);
+}
+.ligne_verticale2
+{
+  position: absolute;
+    width: 397px;
+    height: 0px;
+    left: 1134px;
+    top: 300px;
+    border: 1px solid #969696;
+    transform: rotate(90deg);
+}
 #logo-audencia{
     width:90%;
     height:auto;
@@ -142,8 +164,4 @@ top: 525px;
 
 td p {
     margin-bottom:2vh;
-}
-
-#bolder-text {
-    font-weight: bold;
 }
