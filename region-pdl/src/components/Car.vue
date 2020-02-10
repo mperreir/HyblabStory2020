@@ -1,7 +1,7 @@
 <template>
   <div>
     <CarGirlSVG v-if="getCharacterGender === 'mme'" class="car-svg" :class="{rollingOut: rollingOut}"/>
-    <CarBoySVG v-else class="car-svg car-svg-boy" :class="{rollingOut: rollingOut}"/>
+    <CarBoySVG v-else class="car-svg" :class="{rollingOut: rollingOut}"/>
     <WheelSVG class="wheel left-wheel" :class="{moving: moving, rollingOutLeft: rollingOut}" />
     <WheelSVG class="wheel right-wheel" :class="{moving: moving, rollingOutRight: rollingOut}" />
   </div>
