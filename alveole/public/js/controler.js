@@ -24,14 +24,14 @@ class SuperControler {
     var viewModal = new ViewModal();
 
     //Conclusion
-    var viewCenterConclusion = new ViewCenterConclusion();
+    var viewModalConclusion = new ViewModalConclusion();
 
     // ModelPopup
     let modelPopup = new ModelPopup();
 
     // ModelSlide0
     let modelIntroSlide = new ModelIntroSlide();
-    let updateIntroSlide = new UpdateIntroSlide();
+    let updateIntroSlide = new UpdateIntroSlide(modelPopup, viewCenter);
     modelIntroSlide.addObservers(updateIntroSlide);
 
     // ModelSlide1
@@ -111,20 +111,20 @@ class SuperControler {
                                           );
     modelPopup.addObservers(mediatorModal);
 
-    let mediatorConclusion = new MediatorConclusion(  modelSlides,
-                                            modelIntroSlide,
-                                            modelSlide1,
-                                            modelSlide2,
-                                            modelSlide3,
-                                            modelSlide4,
-                                            modelSlide5,
-                                            modelSlide6,
-                                            modelSlide7,
-                                            modelSlide8,
-                                            modelLastSlide,
-                                            viewCenterConclusion
-                                          );
-    modelSlides.addObservers(mediatorConclusion);
+    // let mediatorConclusion = new MediatorConclusion(  modelSlides,
+    //                                         modelIntroSlide,
+    //                                         modelSlide1,
+    //                                         modelSlide2,
+    //                                         modelSlide3,
+    //                                         modelSlide4,
+    //                                         modelSlide5,
+    //                                         modelSlide6,
+    //                                         modelSlide7,
+    //                                         modelSlide8,
+    //                                         modelLastSlide,
+    //                                         viewCenterConclusion
+    //                                       );
+    // modelSlides.addObservers(mediatorConclusion);
 
     // Adding Listenners
     viewStupidButtons.next.addEventListener('click', function() {
@@ -257,7 +257,7 @@ class MediatorModal extends Observer {
 
 class MediatorConclusion extends Observer {
 
-  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewCenterConclusion) {
+  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewModalConclusion) {
 
     super();
 
@@ -336,12 +336,21 @@ class UpdateFooter extends Observer {
 
 class UpdateIntroSlide extends Observer {
 
-  constructor() {
+  constructor(model, composant) {
     super();
+    this.model = model;
+    this.composant = composant;
   }
 
   update(observable, object) {
+    let val = observable.getValue();
 
+    if (val == true) {
+      let div = document.createElement('div');
+      this.composant.div.appendChild(div);
+
+      // observable.loadIntro(div);
+    }
   }
 }
 
@@ -385,8 +394,11 @@ class UpdateSlide1 extends Observer {
       hotel.addEventListener('DOMLoaded', function() {
         document.getElementById('hotel').addEventListener('mouseover', function() {
           hotel.play();
+          // $(this).toggleClass('animation_checked');
+          // $(this).parent().find('#slide1Label').toggleClass('label_checked');
         });
         document.getElementById('hotel').addEventListener('mouseout', function() {
+          $(this).toggleClass('animation');
           hotel.pause();
         });
         document.getElementById('hotel').addEventListener('click', function() {
@@ -766,7 +778,7 @@ class UpdateLastSlide extends Observer {
       container.setAttribute('id', 'lastSlide');
 
       let title = document.createElement('div');
-      title.setAttribute('id', 'title');
+      title.setAttribute('id', 'last_title');
       title.setAttribute('class', 'unselectable');
 
       title.innerHTML = observable.text.title;
@@ -801,7 +813,13 @@ class UpdateLastSlide extends Observer {
       alveole.appendChild(website);
 
       let sources = document.createElement('div');
-      sources.setAttribute('id', 'sources');
+      let button = document.createElement('a');
+      button.setAttribute('id', "sourcesButton");
+      button.setAttribute('href', '#sources');
+
+      sources.appendChild(button);
+
+      sources.setAttribute('id', 'sourcesDiv');
 
       let validate = document.createElement('div');
       validate.setAttribute('id', 'sourceLabel');
