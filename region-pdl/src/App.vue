@@ -5,26 +5,10 @@
 </template>
 
 <style>
-/* NOTE DES BACKGROUND SUR 10 
-7
-4
-7
-8
-9
-9
-6
-9.5
-*/
 html {
   /* background: linear-gradient(to bottom, #90dffe 0%, #38a3d1 100%); */
-  /* background: linear-gradient(to bottom, #757abf 0%,#8583be 60%,#eab0d1 100%); */
-  /* background: linear-gradient(to bottom, #82addb 0%,#ebb2b1 100%); */
   /* background: linear-gradient(to bottom, #90dffe 0%,#ebb2b1 100%); */
-  /* background: linear-gradient(to bottom, #94c5f8 1%,#a6e6ff 70%,#b1b5ea 100%); */
-  /* background: linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%); */
-  /* background: linear-gradient(to bottom, #9be2fe 0%,#67d1fb 100%); */
-  /* background: linear-gradient(to bottom, #57c1eb 0%,#246fa8 100%); */
-  background: linear-gradient(to bottom, #00b7ff 0%,#fff 100%);
+  background: linear-gradient(to bottom, #00b7ff 20%,#fff 100%);
 }
 
 body {
