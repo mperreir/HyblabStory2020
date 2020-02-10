@@ -53,7 +53,7 @@ function myMove9(elem) {
     } else {
       elem.style.borderStyle='none';
       pos++;
-      tail=tail+15/20;
+      tail=tail+13/20;
       elem.style.left = (pos-20) + '%';//déplacement vers la gauche
       elem.style.width = (tail+25) + '%';
     }
@@ -70,7 +70,7 @@ function myReturn9(elem) {
       elem.style.borderStyle='solid';
     } else {
       pos--;
-      tail=tail-15/20;
+      tail=tail-13/20;
       elem.style.left = (pos) + '%';//déplacement vers la gauche
       elem.style.width = (tail+40) + '%';
     }
