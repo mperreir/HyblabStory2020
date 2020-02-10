@@ -136,11 +136,12 @@ $(document).ready(function() {
   });
 
   let menuPos = $("#menu-section").position();
+  let expPos = $("#expo-section").position();
   $(window).scroll(function(e) {
 
     let scrollPos = $(window).scrollTop();
 
-    if (!menuFixed && $exp_selected === undefined && scrollPos > menuPos.top - 500) {
+    if (!menuFixed && $exp_selected === undefined && scrollPos > menuPos.top - 500 && scrollPos < expPos.top - 100) {
       // expo not selected yet, block scroll
       menuFixed = true;
 
