@@ -18,22 +18,12 @@
   left: 0%;
   position: absolute;
 }
-#view5 p {
-  position: absolute;
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 29px;
-  color: #426262;
-  margin: 0px !important;
-  bottom: 7%;
+#view5 #speech {
+  bottom: 15%;
   left: 20%;
   max-height: 60%;
   width: 30%;
-}
-#view5 p em {
-  font-weight: bold;
-  color: #CB563E;
+  position: absolute;
 }
 #view5 #view5-smartphone {
   right: 5%;
@@ -66,27 +56,25 @@
   left: 58%;
   width: 1%;
   bottom: 70%;
-  animation: xAxis 80s infinite;
 }
 #view5 #view5-cercle-2 {
   left: 10%;
   width: 3%;
   bottom: 38%;
-  animation: yAxis 80s infinite;
 }
 #view5 #view5-cercle-3 {
   left: 8%;
   width: 1%;
   bottom: 10%;
-  animation: xAxis 80s infinite;
 }
 #view5 #view5-cercle-4 {
   left: 60%;
   width: 2%;
   bottom: 50%;
-  animation: yAxis 80s infinite;
 }
 #view5 button {
+  width: 15%;
+  bottom: 50%;
   position: absolute;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -98,7 +86,14 @@
 }
 #view5 button p {
   position: relative;
-  min-width: 50%;
+  font-size: 21px;
+  line-height: 29px;
+  color: #426262;
+  text-align: center;
+}
+#view5 button p em {
+  font-weight: bold;
+  color: #CB563E;
 }
 #view5 button .view5-circle {
   position: relative;
@@ -113,18 +108,6 @@
 #view5 #view5-button-hotel-b {
   left: 67%;
   bottom: 45%;
-}
-@keyframes yAxis {
-  50% {
-    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
-    transform: translateY(10px);
-  }
-}
-@keyframes xAxis {
-  50% {
-    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
-    transform: translateX(3%);
-  }
 }
 
 /*# sourceMappingURL=view5.css.map */

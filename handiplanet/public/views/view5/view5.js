@@ -25,6 +25,21 @@ class View5 extends View {
         this.btHotelB.addEventListener('mouseenter', () => {
             window.soundManager.play('sound/hover/hotel_centre.mp3');
         });
+
+        this.cercle1 = document.getElementById('view5-cercle-1');
+        this.cercle2 = document.getElementById('view5-cercle-2');
+        this.cercle3 = document.getElementById('view5-cercle-3');
+        this.cercle4 = document.getElementById('view5-cercle-4');
+
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX - window.innerWidth / 2;
+            const y = e.clientY - window.innerHeight / 2;
+            this.cercle1.style.transform = `translateX(${x * -0.1}px) translateY(${y * -0.05}px)`;
+            this.cercle2.style.transform = `translateX(${x * -0.05}px) translateY(${y * -0.1}px)`;
+            this.cercle3.style.transform = `translateX(${x * 0.08}px) translateY(${y * 0.05}px)`;
+            this.cercle4.style.transform = `translateX(${x * 0.05}px) translateY(${y * -0.1}px)`;
+        });
+
     }
 
     async switchToView6Free(){
