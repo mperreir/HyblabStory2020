@@ -13,7 +13,7 @@
 class View13 extends View {
     constructor(receiver){
         super('view13', receiver);
-        super.load();
+        // super.load();
     }
 
     

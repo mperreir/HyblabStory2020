@@ -15,8 +15,6 @@ class View {
         });
     }
 
-    play() {
-        console.error('No sound to play');
-    }
+    play() {}
 
 }

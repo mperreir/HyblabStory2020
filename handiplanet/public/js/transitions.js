@@ -22,7 +22,7 @@ async function showContextView(currentView){
         nextView = window.contextView;
         nextView.reloadContext();
     } else {
-        if(window.contextView.questionNumber==4){
+        if(window.contextView.questionNumber===4){
             nextView = new View14(tempDiv);
             await nextView.load();
         } else {

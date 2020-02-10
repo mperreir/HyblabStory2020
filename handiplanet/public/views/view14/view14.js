@@ -12,7 +12,7 @@
 class View14 extends View {
   constructor (el) {
     super('view14', el)
-    super.load();
+    // super.load();
   }
 
   linkElements () {
