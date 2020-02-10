@@ -17,6 +17,7 @@
   flex-direction: column;
 }
 #viewremerciements #view-thanks-middle #view-thanks-replay {
+  z-index: 10000;
   bottom: -70%;
   position: relative;
 }

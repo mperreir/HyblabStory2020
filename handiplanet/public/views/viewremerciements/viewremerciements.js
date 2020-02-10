@@ -40,6 +40,9 @@ class ViewThanks extends View {
     replayButton.addEventListener('mouseenter', () => {
       window.soundManager.play('sound/hover/replay.mp3');
     });
+
+    const borderBottom = document.getElementById('overlay-footer');
+    borderBottom.className = 'hide-after';
   }
 
   createName(icon, firstname, lastname) {
@@ -71,6 +74,8 @@ class ViewThanks extends View {
 
   async switchToView1() {
     window.contextView = null;
+    const borderBottom = document.getElementById('overlay-footer');
+    borderBottom.className = '';
     transitionHorizontalInvert(this.view, View1);
   }
 }

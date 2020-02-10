@@ -358,6 +358,14 @@
     top:-2px;
     left:10%;
     width: 80%;
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
+  .hide-after {
+    &::after {
+      opacity: 0 !important;
+    }
   }
   
   p{

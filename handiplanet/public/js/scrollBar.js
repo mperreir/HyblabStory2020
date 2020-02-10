@@ -36,7 +36,6 @@ class ScrollBarController {
             this.points[i].className = 'point'; 
             this.points[i].parentNode.replaceChild(this.points[i].cloneNode(true), this.points[i]); // To remove event listener
         }
-        console.log(position);
         this.points[position].className = 'point selected last';
         if(position>0) this.points[position-1].className = 'point selected';
         if(position>0) this.defineTitlePoint(position, View);
