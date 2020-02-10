@@ -9,8 +9,6 @@
 
 .slide5-container p{
 	z-index: 200;
-  	font-style: normal;
-	font-weight: normal;
 	font-family: Vibur;
 	color: #92C2D2;
 }
@@ -169,7 +167,7 @@
     }
 	
 	#container1-slide5 p, #container2-slide5 p, #container3-slide5 p{
-		font-size: 4vh;
+		font-size: 3.7vh;
 	}
 
     #slide4-dialogueSuivant {
@@ -178,40 +176,56 @@
 
 }
 
+.slide5-container {
+	position: absolute;
+}
+
+.slide5-container img {
+	margin-right: 3%;
+}
+
+.slide5-container p{
+	padding-top: 2.5%;
+
+}
+
 #container1-slide5 img{
 	float:left;
 	width:10%;
-	margin-right:7%;
+	height:10%;
+	margin-right: 3%;
 }
 
 #container1-slide5{
 	position: absolute;
 	left: 24%;
 	top: 20%;
+	width : 50%;
 	visibility: hidden;
 }
 
 #container1-slide5:hover{
-	left: 28%;
+	left: 30%;
 	top: 20%;
 	transition:0.5s;
 }
 
 #container2-slide5 img{
 	float:left;
-	width:22%;
-	margin-right:10%;
+	width:10%;
+	height:10%;
 }
 
 #container2-slide5{
 	position: absolute;
-	left: 28%;
+	left: 24%;
 	top: 40%;
+	width : 52%;
 	visibility: hidden;
 }
 
 #container2-slide5:hover{
-	left: 32%;
+	left: 30%;
 	top: 40%;
 	transition:0.5s;
 	
@@ -220,28 +234,24 @@
 
 #container3-slide5 img{
 	float:left;
-	width:13%;
-	margin-right:9%;
+	width:10%;
+	height:10%;
 }
 
 #container3-slide5{
 	position: absolute;
-	left: 32%;
+	left: 24%;
 	top: 60%;
+	width : 52%;
 	visibility: hidden;
 }
 
 #container3-slide5:hover{
-	left: 36%;
+	left: 30%;
 	top: 60%;
 	transition:0.5s;
 }
 
 #container3-slide5 p:hover, #container3-slide5 img:hover, #container2-slide5 p:hover, #container2-slide5 img:hover, #container1-slide5 p:hover, #container1-slide5 img:hover{
 	cursor: pointer;
-}
-
-#next6, #next7, #next8{
-	background-color: transparent;
-	border-style: none;
 }
