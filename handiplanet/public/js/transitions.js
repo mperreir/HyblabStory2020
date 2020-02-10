@@ -44,9 +44,7 @@ async function showContextView(currentView){
         viewContainer.appendChild(nextView.view);
         currentView.remove();
         window.currentView = nextView.view;
-        /* tempDiv.replaceWith = nextView.view;
-        currentView.remove();
-        window.currentView = nextView.view; */
+        nextView.play();
     }, 1000);
 }
 
@@ -74,6 +72,7 @@ async function transitionHorizontal(view, NextView){
         //tempDiv.replaceWith = nextView.view;
         view.remove();
         window.currentView = nextView.view;
+        nextView.play();
     }, 1000);
 }
 
@@ -112,5 +111,6 @@ async function transitionHorizontalInvert(view, NextView){
         //tempDiv.replaceWith = nextView.view;
         view.remove();
         window.currentView = nextView.view;
+        nextView.play();
     }, 1000);
 }

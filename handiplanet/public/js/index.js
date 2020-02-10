@@ -17,6 +17,7 @@ const paths = [
 window.addEventListener('load', function () {
     function scroll(){
         window.scrollTo(0,window.innerHeight);
+        view.play();
     }
 
     function setSmall(){

@@ -14,6 +14,10 @@ class View1 extends View {
         showContextView(this.view);
     }
 
+    play() {
+        window.soundManager.play('sound/Intro_Wendy.mp3');
+    }
+
     linkElements(){
         // Button to next view
         this.btNext = setOverlayButton('Continuer', false);

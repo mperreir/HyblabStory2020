@@ -20,6 +20,9 @@ class SoundManager {
 
   setSoundActivated(state) {
     this.isSoundActivated = state;
+    if (this.audio) {
+      this.audio.muted = !this.isSoundActivated;
+    }
 
     if (state) {
       this.homeButtonImg.src = 'assets/SonW.svg';
@@ -27,6 +30,24 @@ class SoundManager {
     } else {
       this.homeButtonImg.src = 'assets/SonMuteW.svg';
       this.overlayButtonImg.src = 'assets/SonMute.svg';
+    }
+  }
+
+  play(file) {
+    if (!this.audio) {
+      this.audio = new Audio(file);
+    } else {
+      this.audio.pause();
+      this.audio.src = file;
+    }
+    this.audio.load();
+    this.audio.muted = !this.isSoundActivated;
+    this.audio.play();
+  }
+
+  pause() {
+    if (this.audio) {
+      this.audio.pause();
     }
   }
 
