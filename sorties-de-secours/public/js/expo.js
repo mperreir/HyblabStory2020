@@ -124,13 +124,6 @@ $(document).ready(function() {
             setTimeout(function () {
                 expoFinished = true;
             }, 2500);
-
-            change_music("voice", "sounds/expo/experience.m4a");
-            set_music_volume("voice", 0.3);
-            set_music_volume("generalMusic", 0.02);
-
-            set_music_play("ambianceExpo");
-            set_music_volume("ambianceExpo", 0.04);
         }
     });
 

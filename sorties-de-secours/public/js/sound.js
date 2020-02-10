@@ -78,6 +78,7 @@ $(document).ready(function() {
             set_music_pause("vinyl-noise");
 
             set_music_play("generalMusic");
+            set_music_volume("generalMusic", 0.05);
         }
 
     });
