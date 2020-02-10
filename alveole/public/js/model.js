@@ -114,6 +114,22 @@ class ModelIntroSlide extends Observable {
       this.notifyObservers();
     }
   }
+
+  loadIntro(container) {
+    this.intro = bodymovin.loadAnimation({
+      container : container,
+      renderer: 'svg',
+      name: 'animation1',
+      loop: true,
+      autoplay: false,
+      path: 'data/intro.json',
+      rendererSettings: {
+        className: 'slideIntroAnimation',
+        id: 'svg_intro'
+      }
+    });
+    this.instanciated = true;
+  }
 }
 
 
@@ -439,7 +455,7 @@ class ModelSlide4 extends Observable {
         data.node.addEventListener('click', function(e) {
           $(this).toggleClass('svg_checkbox_checked');
           $(this).parent().parent().find(".animation").toggleClass('animation_checked');
-          $(this).parent().parent().find(".slide4Label").toggleClass('slide4Label_checked');
+          // $(this).parent().parent().find(".slide4Label").toggleClass('slide4Label_checked');
         });
       });
     });
@@ -703,8 +719,9 @@ class ModelLastSlide extends Observable {
       Snap.load('data/fleche.svg', function(data) {
         let snap = Snap(div3);
         data.node.id = 'fleche_sources';
-        data.node.addEventListener('click', () => {
-          console.log('sources');
+        // console.log(data.node.href);
+        data.node.addEventListener('click', function() {
+          console.log(this);
         });
         snap.append(data);
       });

@@ -26,7 +26,7 @@
         },
       "studio": {
           "main": "Les locaux d’Alvéole Média sont adaptés",
-          "sub": "Ils disposent de studios d'enregistrement sonore isolés, davantage propices à la captation des sons."
+          "sub": "Ils disposent de studios<br>d'enregistrement sonore isolés, davantage<br>propices à la captation des sons."
         }
     }
   },
@@ -37,7 +37,7 @@
       "down": "deuxième journée"
     },
     "speech": "Le choix du bon micro est primordial dans la réalisation d’un podcast.<br>Il assure une bonne prise de son et permet une meilleure immersion.",
-    "question": "Parmi les trois quatres <span style='color:#BDB4F3'>micros</span> suivants, lequel<br>vous semble plus adapté pour l’enregistrement d’une voix ?",
+    "question": "Parmi les quatres <span style='color:#BDB4F3'>micros</span> suivants, lequel<br>vous semble plus adapté pour l’enregistrement d’une voix ?",
     "type": "drag",
     "labels": {
       "1": "micro-canon<br>directionnel",

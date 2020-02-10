@@ -46,7 +46,7 @@ main {
   height: 100%;
   width: 100%;
   left: 5%;
-  top: 0%;
+  top: 60%;
 }
 
 #svg_brand
@@ -56,6 +56,7 @@ main {
   position: absolute;
   height: 100%;
   left: 0;
+  z-index: 1;
 }
 
 footer {
@@ -141,9 +142,15 @@ footer {
 }
 
 .onClick {
-  top: 40%;
-  width: 30%!important;
-  height: 60%!important;
+  top: 35%;
+  width: 28%!important;
+  height: 65%!important;
+}
+
+#slideIntroAnimation {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 #hotel {
@@ -171,7 +178,7 @@ footer {
   font-family: Oswald;
   font-style: normal;
   font-weight: 500;
-  font-size: 20%;
+  font-size: 18%;
   text-align: center;
   letter-spacing: 0.21em;
   text-transform: uppercase;
@@ -225,9 +232,9 @@ footer {
 
 #svg_micro-reportage {
   position: absolute;
-  top: 30%;
+  top: 35%;
   width: 100%;
-  height: 30%;
+  height: 25%;
 }
 
 #slide2_3_micro {
@@ -238,7 +245,7 @@ footer {
 
 #svg_micro-couple {
   position: absolute;
-  top: 30%;
+  top: 35%;
   width: 100%;
   height: 30%;
 }
@@ -289,11 +296,11 @@ footer {
 #slide2_plugLabel {
   position: absolute;
   width: 100%;
-  bottom: 0%;
+  bottom: -15%;
   font-family: Oswald;
   font-style: normal;
   font-weight: 500;
-  font-size: 10%;
+  font-size: 12%;
   text-align: center;
   letter-spacing: 0.21em;
   text-transform: uppercase;
@@ -654,11 +661,13 @@ dessus de l'apect ratio 16/9 */
 
 #bouche1 {
   position: absolute;
+  top: 30%;
   left: 5%;
 }
 
 #bouche2 {
   position: absolute;
+  top: 30%;
   right: 5%;
 }
 
@@ -676,7 +685,7 @@ dessus de l'apect ratio 16/9 */
   font-family: Oswald;
   font-style: normal;
   font-weight: 500;
-  font-size: 17%;
+  font-size: 16%;
   text-align: center;
   letter-spacing: 0.21em;
   text-transform: uppercase;
@@ -730,11 +739,27 @@ dessus de l'apect ratio 16/9 */
 .animation, .animation *{
   fill: #fff;
   stroke: #fff;
+  /* transition: all 0.3s ease-in-out; */
 }
 
 .animation_checked, .animation_checked *{
-  fill: #9E90F2;
-  stroke: #9E90F2;
+  fill: #9E90F2!important;
+  stroke: #9E90F2!important;
+}
+
+.animation_checked_test, .animation_checked_test *{
+  fill: #9E90F2!important;
+  stroke: #9E90F2!important;
+}
+
+.animation_checked_test {
+  transform: scale(1.1)!important;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.label_checked {
+  color: #9E90F2;
 }
 
 #etape1 {
@@ -928,7 +953,7 @@ dessus de l'apect ratio 16/9 */
   height: 100%;
 }
 
-#title {
+#last_title {
   position: absolute;
   top: 0;
   height: 10%;
@@ -967,7 +992,7 @@ dessus de l'apect ratio 16/9 */
 
 #logo_alveole #svg_brand {
   position: absolute;
-  width: 100%:
+  width: 100%;
 }
 
 #motto {
@@ -1023,7 +1048,7 @@ dessus de l'apect ratio 16/9 */
   height: 100%;
 }
 
-#sources {
+#sourcesDiv {
   position: absolute;
   right: -20%;
   width: 10%;
@@ -1043,12 +1068,12 @@ dessus de l'apect ratio 16/9 */
   position: absolute;
   width: 100%;
   height: 50%;
-  bottom: 0;
+  bottom: -5%;
   font-family: Oswald;
   font-style: normal;
   font-weight: 500;
   font-size: 10%;
-  line-height: 22px;
+  line-height: 10%;
   text-align: center;
   letter-spacing: 0.21em;
 }
@@ -1057,3 +1082,151 @@ dessus de l'apect ratio 16/9 */
   visibility: hidden!important;
   display: none!important;
 }
+
+#sourcesButton {
+  position: absolute;
+  left: 30%;
+  width: 40%;
+  height: 50%;
+  z-index: 1;
+}
+
+.lastOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  transition: opacity 500ms;
+  visibility: hidden;
+  z-index: 12;
+  opacity: 0;
+}
+.lastOverlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 10%;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  z-index: 13;
+}
+.close:hover {
+  color: #9E90F2;
+}
+.content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+#audencia {
+  position: absolute;
+  top: 35%;
+  height: 40%;
+  width: 14%;
+  left: 20%;
+}
+
+#polytech {
+  position: absolute;
+  top: 35%;
+  height: 40%;
+  width: 14%;
+  left: 43%;
+}
+
+#agr {
+  position: absolute;
+  top: 35%;
+  height: 40%;
+  width: 14%;
+  right: 20%;
+}
+
+#top {
+  position: absolute;
+  top: 10%;
+  height: 20%;
+  width: 20%;
+  left: 40%;
+}
+
+#bottom {
+  position: absolute;
+  bottom: 10%;
+  width: 70%;
+  height: 20%;
+  left: 15%;
+}
+
+.person {
+  position: absolute;
+  width: 100%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.18em;
+}
+
+#person0 {
+  position: absolute;
+  bottom: 30%;
+  height: 10%;
+}
+
+#person1 {
+  position: absolute;
+  bottom: 20%;
+  height: 10%;
+}
+
+#person2 {
+  position: absolute;
+  bottom: 10%;
+  height: 10%;
+}
+
+.role {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+.logo {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 20%;
+}
+
+.svg_logo {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  left: 10%;
+}
+
+#svg_agr
+  .st0{fill:#FFFFFF;}
+  .st1{fill:#997D4A;}
+  .st2{fill:#E30613;}
+  .st3{fill:none;}
+  .st4{fill:#997D4A;stroke:#997D4A;stroke-width:0.25;stroke-miterlimit:10;}
