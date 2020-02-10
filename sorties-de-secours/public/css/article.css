@@ -7,7 +7,7 @@
     padding: 150px;
     background-color: #F6F5F5;
 
-    transition: width 0.5s, height 0.5s, padding 0.5s, transform 1s;
+    transition: width 0.5s, height 0.5s, padding 0.5s, transform 2s linear;
     z-index: -100;
 }
 

@@ -108,7 +108,7 @@ $(document).ready(function() {
     }, layer_premier_rang);
 
     var anim_premier_rang_going = new Konva.Animation(function(frame) {
-        let position = frame.time * 1.5;
+        let position = frame.time * 1;
         if (position >= stageWidth) {
             position = stageWidth;
             anim_premier_rang_going.stop();
