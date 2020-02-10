@@ -1,3 +1,11 @@
+// lottie.loadAnimation({
+//   container: document.getElementById('logo-wrapper'), // the dom element that will contain the animation
+//   renderer: 'svg',
+//   loop: true,
+//   autoplay: true,
+//   path: 'sortiedesecours3.json' // the path to the animation json
+// });
+
 /* A DESACTIVER POUR DEVELOPPER TRANQUILLEMENT
 (c'est ce qui force la premiere page au refresh)*/
 window.onbeforeunload = function () {
@@ -60,3 +68,8 @@ function set_music_play(id) {
 /* A DESACTIVER POUR DEVELOPPER TRANQUILLEMENT */
 const container = document.querySelector("#container");
 bodyScrollLock.disableBodyScroll(container);
+
+/* EXPERIENCE LOGO ANIMATION */
+$(document).ready(function() {
+    $('#logo-experience').addClass("logo-experience-show");
+});

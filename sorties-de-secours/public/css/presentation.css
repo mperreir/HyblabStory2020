@@ -40,7 +40,6 @@
   overflow: hidden;
   position: absolute;
   height: 57px;
-
   z-index: 1;
 }
 .scroll-right marquee {

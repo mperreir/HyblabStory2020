@@ -34,6 +34,7 @@ $(document).ready(function() {
             if (oldNumber !== nb) {
                 set_music_volume("generalMusic", 0.05);
                 change_music("voice", "sounds/numbers/"+nb+".mp3");
+                set_music_volume("voice", 0.4);
                 oldNumber = nb;
             }
 
