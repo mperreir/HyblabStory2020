@@ -6,7 +6,7 @@
       <br />pour la transition énergétique
     </TextTitle>
     <SimpleText :x="7" :y="35" :width="45">
-      Suivez la journée de Monsieur Moreau et Madame Dubois
+      Suivez la journée de M. Moreau et Mme Dubois
       <br />et découvrez comment la
       <b>Région des Pays de la Loire</b>
       <br />les accompagne pour réduire leur impact énergétique et construire un avenir plus vert.

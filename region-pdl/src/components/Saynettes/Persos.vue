@@ -4,7 +4,7 @@
     <Background class="svg" />
     <TextTitle :y="18" :style="{textAlign: 'center'}">Qui voulez-vous suivre aujourd'hui ?</TextTitle>
     <SimpleText :y="27" :style="{textAlign: 'center'}">
-      Madame Dubois et Monsieur Moreau sont voisins et vivent dans la région des Pays de la Loire.
+      Mme Dubois et M. Moreau sont voisins et vivent dans la région des Pays de la Loire.
       <br />Ils sont très attentifs à leur impact sur l'environnement et pratiquent le covoiturage
       <br />pour se rendre sur leur lieu de travail.
     </SimpleText>
