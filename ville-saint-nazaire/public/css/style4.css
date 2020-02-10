@@ -157,6 +157,9 @@
     #page4 p, #texte{
         font-size: 1.8vw;
     }
+	#container1-slide5 p, #container2-slide5 p, #container3-slide5 p{
+		font-size: 2.2vw;
+	}
 
     #dialogueSuivant {
         font-size: 1.8vw;
@@ -171,6 +174,10 @@
    #page4 p, #slide4-texte{
         font-size: 3.5vh;
     }
+	
+	#container1-slide5 p, #container2-slide5 p, #container3-slide5 p{
+		font-size: 4vh;
+	}
 
     #slide4-dialogueSuivant {
         font-size: 3vh;
@@ -181,40 +188,37 @@
 #container1-slide5 img{
 	float:left;
 	width:10%;
-	height:10%;
 	margin-right:7%;
 }
 
 #container1-slide5{
 	position: absolute;
-	left: 30%;
+	left: 24%;
 	top: 20%;
 	visibility: hidden;
 }
 
 #container1-slide5:hover{
-	left: 34%;
+	left: 28%;
 	top: 20%;
 	transition:0.5s;
-	cursor: pointer;
 }
 
 #container2-slide5 img{
 	float:left;
-	width:15%;
-	height:15%;
+	width:22%;
 	margin-right:10%;
 }
 
 #container2-slide5{
 	position: absolute;
-	left: 34%;
+	left: 28%;
 	top: 40%;
 	visibility: hidden;
 }
 
 #container2-slide5:hover{
-	left: 38%;
+	left: 32%;
 	top: 40%;
 	transition:0.5s;
 	
@@ -223,20 +227,19 @@
 
 #container3-slide5 img{
 	float:left;
-	width:12%;
-	height:12%;
+	width:13%;
 	margin-right:9%;
 }
 
 #container3-slide5{
 	position: absolute;
-	left: 36%;
+	left: 32%;
 	top: 60%;
 	visibility: hidden;
 }
 
 #container3-slide5:hover{
-	left: 41%;
+	left: 36%;
 	top: 60%;
 	transition:0.5s;
 }
@@ -249,22 +252,3 @@
 	background-color: transparent;
 	border-style: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
