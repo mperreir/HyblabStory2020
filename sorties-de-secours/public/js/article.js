@@ -92,11 +92,7 @@ function initArticle(sectionName) {
 
     $('#' + sectionName + '-section').on('mousewheel', function(event, delta) {
 
-        console.log("event triggered");
-
         if (!scrollRecently && articleReady) {
-
-            console.log("event ok");
 
             if (event.deltaY < 0) {
                 nextSlide(sectionName);

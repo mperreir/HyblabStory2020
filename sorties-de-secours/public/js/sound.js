@@ -1,3 +1,6 @@
+var musicMuted = false;
+var playingSoundList = [];
+
 $(document).ready(function() {
 
     const pxBeforeTop = 50;
@@ -72,11 +75,41 @@ $(document).ready(function() {
         if (   scrollPos < music_workshop.top - pxBeforeTop
             || scrollPos >= music_workshop.bottom) {
             set_music_pause("vinyl");
-            set_music_play("generalMusic");
-
             set_music_pause("vinyl-noise");
+
+            set_music_play("generalMusic");
         }
 
     });
+
+    // on sound-content click
+    let $soundContent = $('.sound-content');
+
+    $(".sound-content > svg").click(function() {
+
+        if (!musicMuted) {
+            musicMuted = true;
+
+            $soundContent.addClass("sound-content-mute");
+
+            ["generalMusic", "voice", "ambianceExpo", "danceMusic", "vinyl-noise", "vinyl"].forEach((id) => {
+                if (!document.getElementById(id).paused) {
+                    playingSoundList.push(id);
+                    set_music_pause(id);
+                }
+            });
+
+        } else {
+            musicMuted = false;
+
+            $soundContent.removeClass("sound-content-mute");
+
+            playingSoundList.forEach((id) => {
+                set_music_play(id);
+            });
+        }
+
+    });
+
 
 });
