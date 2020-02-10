@@ -143,6 +143,7 @@ function setBackgroundColor(col, fill='blue') {
 }
 
 function setOverlayButton(text, icon) {
+    hideOverlayButton();
     const button = document.createElement('button');
     
     const textContainer = document.createElement('div');
