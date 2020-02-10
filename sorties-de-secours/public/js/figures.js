@@ -1,3 +1,5 @@
+let oldNumber = -1;
+
 $(document).ready(function() {
     $.getJSON("data/resources.json", function(json) {
         $('#range').on('input', function () {
@@ -27,6 +29,13 @@ $(document).ready(function() {
             $('#le_figure').text(nb);
             $('#light').text(des);
             $('#bolder').text(item);
+
+            if (oldNumber !== nb) {
+                set_music_volume("generalMusic", 0.05);
+                change_music("voice", "sounds/numbers/"+nb+".mp3");
+                oldNumber = nb;
+            }
+
         });
     });
 });

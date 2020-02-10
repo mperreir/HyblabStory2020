@@ -152,6 +152,8 @@ $(document).ready(function() {
     var music_playing = 0;
     group.on('dragmove', function() {
 
+        stage.container().style.cursor = 'move';
+
         // remove instructions
         if (!textAnimStarted) {
             textAnim.start();
@@ -195,7 +197,7 @@ $(document).ready(function() {
                 if (music_playing !== 1) {
                     console.log("Musique 1");
 
-                    change_music("vinyl", 'sons/baloji/Peau de Chagrin Bleu de Nuit.mp3');
+                    change_music("vinyl", 'sounds/baloji/Peau de Chagrin Bleu de Nuit.mp3');
                     set_music_play("vinyl");
                     music_playing = 1;
                 }
@@ -205,7 +207,7 @@ $(document).ready(function() {
                 if (music_playing !== 2) {
                     console.log("Musique 2");
 
-                    change_music("vinyl", 'sons/baloji/L’Hiver Indien.mp3');
+                    change_music("vinyl", 'sounds/baloji/L’Hiver Indien.mp3');
                     set_music_play("vinyl");
                     music_playing = 2;
                 }
@@ -216,6 +218,18 @@ $(document).ready(function() {
         k_vinyl_head.rotation(angleDeg);
         layer.batchDraw();
     });
+
+    group.on('dragend', function() {
+        stage.container().style.cursor = 'pointer';
+    });
+
+    k_vinyl_head.on('mouseenter', function() {
+        stage.container().style.cursor = 'pointer';
+    });
+    k_vinyl_head.on('mouseleave', function() {
+        stage.container().style.cursor = 'default';
+    });
+
 
     // ANIMATIONS
     let amplitude = 2;
@@ -240,14 +254,18 @@ $(document).ready(function() {
             textAnim.stop();
         }
     }, layer);
-    // EVENTS
 
+    // EVENTS
     setTimeout(function () {
         musicFinished = true;
     }, 2500);
 
     $('#music-section').on('mousewheel', function () {
         if (musicFinished) {
+            // stop vinyl
+            set_music_pause("vinyl");
+            set_music_pause("vinyl-noise");
+
             vinylAnim.stop();
             vinylCenterAnim.stop();
             let mouseAnimatedMusic = document.querySelector("#mouse-animated-music");

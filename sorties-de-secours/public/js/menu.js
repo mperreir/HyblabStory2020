@@ -77,14 +77,14 @@ $(document).ready(function() {
 
           switch(expId) {
             case "expChoiceMusique":
-            top = $('#music-section').offset().top;
-            break;
+              top = $('#music-section').offset().top;
+              break;
             case "expChoiceDance":
-            top = $('#dance-section').offset().top;
-            break;
+              top = $('#dance-section').offset().top;
+              break;
             case "expChoiceExpo":
-            top = $('#expo-section').offset().top;
-            break;
+              top = $('#expo-section').offset().top;
+              break;
           }
           $exp_selected.addClass("expChoiceOut");
           setTimeout(function() {
@@ -94,6 +94,18 @@ $(document).ready(function() {
               // Transition Experience Dance
               bodyScrollLock.disableBodyScroll("#container"); // enable to avoid mousewheel event
               if(expId === "expChoiceDance") {
+
+                // sound
+                change_music("voice", "sounds/dance/experience.mp3");
+                set_music_volume("voice", 0.4);
+
+                change_music("danceMusic", "sounds/dance/music.mp3");
+                set_music_volume("danceMusic", 0.2);
+                setTimeout(function() {
+                  set_music_volume("danceMusic", 0.4);
+                }, 15500);
+
+                set_music_pause("generalMusic");
 
                 $("#dance-first-slide").css("background-color", "white");
                 $("#img-dancers").css("opacity", "1");
@@ -120,6 +132,12 @@ $(document).ready(function() {
                   //e.preventDefault();
                 });
               } else if(expId === "expChoiceMusique") {
+                set_music_pause("generalMusic");
+
+                change_music("voice", 'sounds/music_workshop/experience.mp3');
+                set_music_volume("voice", 0.4);
+
+                set_music_play("vinyl-noise");
                 setTimeout(function() {
                   let mouseAnimatedMusic = document.querySelector("#mouse-animated-music");
                   mouseAnimatedMusic.classList.remove('fadeOut');
