@@ -14,10 +14,4 @@ $(document).ready(function() {
 
   });
 
-  $("#hover-dancers-crayons").hover(function() {
-    $("#img-dancers-3").css("transform", "scale(1.05)");
-  }, function() {
-    $("#img-dancers-3").css("transform", "scale(1)");
-  });
-
 });

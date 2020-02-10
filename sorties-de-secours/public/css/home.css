@@ -7,15 +7,17 @@
 	position: relative;
 	top: 20%;
 	text-align: center;
+	background-color: #1E1E1E;
 }
 
 #logo-wrapper {
 	position: relative;
+	background-color: #1E1E1E;
 }
 
 #start-experience {
 	position: relative;
-	margin-top: 200px;
+	margin-top: 100px;
 }
 
 #button-start {
@@ -46,4 +48,9 @@
 
 #button-start-text {
 	margin: 1vw;
+}
+
+#video_logo {
+	background-color: #1E1E1E;
+  color: #1E1E1E;
 }

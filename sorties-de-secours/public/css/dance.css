@@ -23,10 +23,13 @@
 }
 
 #img-dancers {
-	left: 0;
 	position: absolute;
+	top: -76px;
+	left: 0;
+
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
+
 	z-index: 100;
 
 	opacity: 0;
@@ -34,22 +37,29 @@
 }
 
 #img-dancers-2 {
-	left: 0;
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 200;
-	opacity: 0;
+	top: -76px;
+	left: 0;
 
+	width: 100%;
+	/*height: 100%;*/
+
+	z-index: 200;
+
+	opacity: 0;
 	transition: opacity 1.5s;
 }
 
 #img-dancers-3 {
-	left: 0;
 	position: absolute;
-	height: 100%;
+	top: -76px;
+	left: 0;
+
+	/*height: 100%;*/
 	width: 100%;
+
 	z-index: 400;
+
 	opacity: 0;
 
 	transition: opacity 1.5s;
@@ -187,8 +197,56 @@
 }
 
 #mouse-animated-dance {
-	position: relative;
-	bottom: 20%;
+	position: absolute;
+	top: 380px;
+	left: 70%;
 	width: 100vw;
+	height: 100px;
+
+	text-align: left;
+
 	z-index: 200;
+}
+
+#dance-text-instruction {
+	font-family: 'NimbusSanL';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 57px;
+
+	position: absolute;
+	top: 350px;
+	right: 100px;
+}
+
+#scroll-down-endDance {
+	position: absolute;
+	width: 30%;
+	height: 50px;
+	left: 0;
+	top: 25%;
+	text-align: center;
+	bottom: inherit;
+	transform: inherit;
+
+  z-index: 9999;
+}
+
+#scroll-down-endDance-span {
+	font-family: "NimbusSanL";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 10px;
+
+  text-transform: uppercase;
+
+  color: black;
+}
+
+#scroll-down-endDance-img {
+	position: absolute;
+	top: 20px;
+	left: 46%;
 }

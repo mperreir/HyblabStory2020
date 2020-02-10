@@ -15,7 +15,7 @@
     text-align:center;
     color:#F6F5F5;
     /* vertical-align: middle; */
-    padding-top: 40vh;
+    padding-top: 15vh;
 
     /* width: 25%; */
 }
@@ -34,8 +34,8 @@
     font-size: 80px;
     font-weight: bolder;
     color:#FFCB13;
-
     margin-right: 0.5%;
+    top: 500px;
 }
 
 #contentFigure {
@@ -56,6 +56,15 @@
 .figure-selected {
     color:#FFCB13;
     /* font-weight: bold; */
+}
+
+img.logo-credit-wrapper {
+  display: block;
+  width: 518.61px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  top: 20px;
 }
 
 
