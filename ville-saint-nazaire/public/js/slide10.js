@@ -24,7 +24,7 @@ let initSlide10 = function(){
 				}
 			  	timeOut = setTimeout(function() {
 			      showLetters(id);
-			    }, 40)
+			    }, 25)
 			  cptLettre++;
 			}
 		  else

@@ -2,6 +2,7 @@
     position: relative;
 }
 
+/* cartes */
 #cartes{
     position: absolute;
     top:0%;
@@ -9,7 +10,6 @@
     width:100%;
     height:100%;
 }
-
 .carte{
     position: absolute;
     opacity: 0;
@@ -18,26 +18,59 @@
     width:100%;
     height:100%;
 }
-
 #carte1905{
     opacity:1;
 }
 
+/* boutons */
 form{
-    position : relative;
     z-index: 10;
     right:0%;
-    width:15%;
+    width:auto;
     height:50%;
     float:right;
 }
-
 form>label{
-    vertical-align:middle;
+    position:absolute;
+    right:10%;
     font-family: Vibur;
     color: #265984;
+    opacity:0;
+}
+#label1905{
+    opacity:1;
+}
+.imageBouton{
+    position: absolute;
+    right:3.5%;
+    width:5%;
+    cursor:pointer;
+}
+.imageBouton:hover {
+	-webkit-transform:scale(1.25); /* Safari et Chrome */
+	-moz-transform:scale(1.25); /* Firefox */
+	-ms-transform:scale(1.25); /* Internet Explorer 9 */
+	-o-transform:scale(1.25); /* Opera */
+	transform:scale(1.25);
+	transition:0.5s;
+}
+#imageBouton1905, #label1905{
+    top:21%;
+}
+#imageBouton1924, #label1924{
+    top:34%;
+}
+#imageBouton1944, #label1944{
+    top:47%;
+}
+#imageBouton1952, #label1952{
+    top:60%;
+}
+#imageBouton1957, #label1957{
+    top:73%;
 }
 
+/* bouton suivant */
 #next4{
     visibility:hidden;
     cursor:pointer;
@@ -58,7 +91,7 @@ form>label{
     visibility:hidden;
 }
 
-
+/* textes */
 #premierTexte, #deuxiemeTexte{
     font-family: Vibur;
     font-style: normal;
@@ -85,12 +118,12 @@ form>label{
 }
 
 @media screen and (max-aspect-ratio: 16/9){
-    #page3 label, #next4-texte{
+    #premierTexte, #deuxiemeTexte, #page3 label, #next4-texte{
         font-size: 3vw;
     }
 }
 @media screen and (min-aspect-ratio: 16/9){
-    #premierTexte, #deuxiemeTexte, label, #next4-texte{
+    #premierTexte, #deuxiemeTexte, #page3 label, #next4-texte{
         font-size: 5vh;
     }
 }
