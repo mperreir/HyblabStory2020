@@ -6,19 +6,9 @@
       <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/article.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/expo.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/expo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/figures.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/figures.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/music-workshop.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/music-workshop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/js/sound.js" beforeDir="false" afterPath="$PROJECT_DIR$/sorties-de-secours/public/js/sound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/ambiance.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/ambiance2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/ambiance3.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/baloji/L’Hiver Indien.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/baloji/Peau de Chagrin Bleu de Nuit.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/music_workshop/vinyl_noise.m4a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/voices/music_workshop.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/voices/music_workshop_old.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/voices/presentation.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sorties-de-secours/public/sons/voices/presentation_old.mp3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +77,7 @@
       <workItem from="1581159197450" duration="16408000" />
       <workItem from="1581242622692" duration="39501000" />
       <workItem from="1581325611711" duration="10588000" />
-      <workItem from="1581336216605" duration="7550000" />
+      <workItem from="1581336216605" duration="11489000" />
     </task>
     <servers />
   </component>

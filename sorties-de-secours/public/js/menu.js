@@ -99,7 +99,11 @@ $(document).ready(function() {
                 // sound
                 change_music("voice", "sounds/dance/experience.mp3");
                 set_music_volume("voice", 1);
-                set_music_volume("generalMusic", 0.2);
+
+                change_music("danceMusic", "sounds/dance/music.mp3");
+                set_music_volume("danceMusic", 1);
+
+                set_music_pause("generalMusic");
 
                 $("#dance-first-slide").css("background-color", "white");
                 $("#img-dancers").css("opacity", "1");

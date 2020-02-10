@@ -129,11 +129,14 @@ $(document).ready(function() {
             set_music_volume("voice", 1);
             set_music_volume("generalMusic", 0.2);
 
+            set_music_play("ambianceExpo");
         }
     });
 
     $('#expo-section').on('mousewheel', function () {
         if (expoFinished) {
+            set_music_pause("ambianceExpo");
+
             anim_premier_rang_going.start();
             initArticle('expo');
         }

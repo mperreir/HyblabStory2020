@@ -262,6 +262,10 @@ $(document).ready(function() {
 
     $('#music-section').on('mousewheel', function () {
         if (musicFinished) {
+            // stop vinyl
+            set_music_pause("vinyl");
+            set_music_pause("vinyl-noise");
+
             vinylAnim.stop();
             vinylCenterAnim.stop();
             initArticle('music');

@@ -36,6 +36,7 @@ let $articleDanceBlue1;
 
 let currentSlide = 0;
 let scrollRecently = false;
+let articleReady = false;
 
 /* JQuery elements */
 let $articleContainer;
@@ -91,7 +92,11 @@ function initArticle(sectionName) {
 
     $('#' + sectionName + '-section').on('mousewheel', function(event, delta) {
 
-        if (!scrollRecently) {
+        console.log("event triggered");
+
+        if (!scrollRecently && articleReady) {
+
+            console.log("event ok");
 
             if (event.deltaY < 0) {
                 nextSlide(sectionName);
@@ -110,6 +115,11 @@ function initArticle(sectionName) {
         playSound(sectionName);
         soundPlaying = true;
     }
+
+    // wait end of animation to start scrolling
+    setTimeout(function () {
+        articleReady = true;
+    }, 2000);
 
     /* start auto scroll if screen size is too small */
     // console.log($articleTextWrapper.prop('scrollHeight'));
@@ -325,6 +335,10 @@ function goBackToMenu(sectionName) {
             $("#expChoiceDance").unbind('click');
             $("#hachure-dance").css("opacity", "1");
             $("#hachure-dance").css("cursor", "auto");
+
+            set_music_pause("danceMusic");
+            set_music_play("generalMusic");
+            set_music_volume("generalMusic", 1);
             break;
     }
     let expoDone = (document.getElementById("hachure-expo").style.opacity == 1);
@@ -340,6 +354,7 @@ function goBackToMenu(sectionName) {
     currentSlide = 0;
     scrollRecently = false;
     soundPlaying = false;
+    articleReady= false;
 
 }
 
