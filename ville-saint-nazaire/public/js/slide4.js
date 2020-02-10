@@ -3,10 +3,39 @@ let initSlide4 = function(){
 	var son = document.querySelector('#audioPas');
     son.play();
 
+    // Fonction d'affiche des dialogues lettre par lettre
+	var cptLettre = 0 ;
+	var timeOut ;
+	function showLetters(id)
+	{
+	  //console.log(id);
+	  let htmlP = document.getElementById(id);
+	  let txt = htmlP.dataset.label;
+	  console.log(txt.length);
+	  if(cptLettre < txt.length)
+		{
+			if (txt[cptLettre] == '<') {
+				htmlP.innerHTML += `<br>`
+			}
+			else {
+				htmlP.innerHTML += txt[cptLettre] ;
+			}
+		  	timeOut = setTimeout(function() {
+		      showLetters(id);
+		    }, 40)
+		  cptLettre++;
+		}
+	  else
+		{
+		  clearTimeout(timeOut);
+		  console.log("end");
+		}
+	}
+	
 
     // Affichage du premier texte après 5s
-    //setTimeout(playDialogues, 5500);
-    setTimeout(playDialogues, 0);
+    setTimeout(playDialogues, 5500);
+    //setTimeout(playDialogues, 0);
 
     var btnSuivant = document.querySelector('#slide4-btnSuivant');
     var notesSuivantes = document.querySelector('#slide4-notesSuivantes');
@@ -34,6 +63,8 @@ let initSlide4 = function(){
 	    architecte.style.visibility = "visible";
 	    journaliste.style.visibility = "visible";
 	    trait.style.visibility = "visible";
+	    showLetters("slide4-dialogue1");
+
 
 
 	   d3.select('#slide4-suivant').on('click', function(){
@@ -46,7 +77,16 @@ let initSlide4 = function(){
 	  			// Positionnement du trait de dialogue
 	    		trait = document.querySelector('#slide4-trait-dialogueA');
 	    		trait.style.height = (dialogue2.offsetHeight/container.offsetHeight)*100 + "%";
-	    		trait.style.visibility = "visible"; 
+	    		trait.style.visibility = "visible";
+	    		// Après calcul de la hauteur du trait on peut vider le contenu
+	    		dialogue2.innerHTML = "";
+	    		
+	    		// Apparition progressive du texte
+	    		cptLettre = 0 ;
+	    		clearTimeout(timeOut);
+	    		showLetters("slide4-dialogue2");
+	    		btnSuivant.style.visibility = "visible";
+	    		notesSuivantes.style.visibility = "visible";
 	    	}
 	    	// Passage au dialogue 3
 	    	else if(dialogue2.style.visibility != "hidden") {
@@ -58,6 +98,13 @@ let initSlide4 = function(){
 	    		trait.style.top = (72 - parseInt(trait.style.height)/2) + "%";
 	    		dialogue3.parentElement.style.top =(72 - parseInt(positionDialogue)/2) + "%";
 	    		dialogue3.style.visibility = "visible";
+	    		// Après calcul de la hauteur du trait on peut vider le contenu
+	    		dialogue3.innerHTML = "";
+
+	    		// Apparition progressive du texte
+	    		cptLettre = 0 ;
+	    		clearTimeout(timeOut);
+	    		showLetters("slide4-dialogue3");
 	    	}
 	    	// Passage au dialogue 4
 	    	else if(dialogue3.style.visibility != "hidden") {
@@ -69,6 +116,13 @@ let initSlide4 = function(){
 	    		trait.style.top = (72 - parseInt(trait.style.height)/2) + "%";
 	    		dialogue4.parentElement.style.top =(72 - parseInt(positionDialogue)/2) + "%";
 	    		dialogue4.style.visibility = "visible";
+	    		// Après calcul de la hauteur du trait on peut vider le contenu
+	    		dialogue4.innerHTML = "";
+
+	    		// Apparition progressive du texte
+	    		cptLettre = 0 ;
+	    		clearTimeout(timeOut);
+	    		showLetters("slide4-dialogue4");
 	    	}
 	    	// Passage au dialogue 5
 	    	else if(dialogue4.style.visibility != "hidden") {
@@ -80,6 +134,13 @@ let initSlide4 = function(){
 	    		trait.style.top = (72 - parseInt(trait.style.height)/2) + "%";
 	    		dialogue5.parentElement.style.top =(72 - parseInt(positionDialogue)/2) + "%";
 	    		dialogue5.style.visibility = "visible";
+	    		// Après calcul de la hauteur du trait on peut vider le contenu
+	    		dialogue5.innerHTML = "";
+
+	    		// Apparition progressive du texte
+	    		cptLettre = 0 ;
+	    		clearTimeout(timeOut);
+	    		showLetters("slide4-dialogue5");
 	    	}
 	    	// Passage à la présentation des choix
 	    	else if (dialogue5.style.visibility != "hidden"){
