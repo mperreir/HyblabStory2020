@@ -339,12 +339,19 @@ function goBackToMenu(sectionName) {
             $("#expChoiceExpo").unbind('click');
             $("#hachure-expo").css("opacity", "1");
             $("#hachure-expo").css("cursor", "auto");
+
+            set_music_pause("expoMusic");
+            set_music_play("generalMusic");
+            set_music_volume("generalMusic", 0.1);
             break;
         case "music":
             $("#hover-music").removeClass("menu-hover");
             $("#expChoiceMusique").unbind('click');
             $("#hachure-music").css("opacity", "1");
             $("#hachure-music").css("cursor", "auto");
+
+            set_music_play("generalMusic");
+            set_music_volume("generalMusic", 0.1);
             break;
         case "dance":
             $("#hover-dance").removeClass("menu-hover");
@@ -381,8 +388,11 @@ function playSound(sectionName) {
 
     if (sectionName === "expo") {
         change_music("voice", "sounds/expo/article.m4a");
-        set_music_volume("voice", 0.4);
-        set_music_volume("generalMusic", 0.05);
+        set_music_volume("voice", 0.35);
+        set_music_volume("expoMusic", 0.05);
+        setTimeout(function() {
+          set_music_volume("expoMusic", 0.1);
+        }, 10000);
     } else if (sectionName === "music") {
         set_music_play("generalMusic");
         change_music("voice", "sounds/music_workshop/article.mp3");

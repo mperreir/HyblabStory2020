@@ -137,13 +137,20 @@ $(document).ready(function() {
                 change_music("voice", 'sounds/music_workshop/experience.mp3');
                 set_music_volume("voice", 0.4);
 
-                set_music_play("vinyl-noise");
                 setTimeout(function() {
                   let mouseAnimatedMusic = document.querySelector("#mouse-animated-music");
                   mouseAnimatedMusic.classList.remove('fadeOut');
                   mouseAnimatedMusic.classList.add('fadeInUp');
                 }, 5000);
               } else if(expId === "expChoiceExpo") {
+                change_music("voice", "sounds/expo/experience.m4a");
+                set_music_volume("voice", 0.4);
+
+                set_music_play("ambianceExpo");
+                set_music_volume("ambianceExpo", 0.06);
+                set_music_pause("generalMusic");
+                change_music("expoMusic", "sounds/expo/music.mp3");
+                set_music_volume("expoMusic", 0.02);
                 setTimeout(function() {
                   let mouseAnimatedExpo = document.querySelector("#mouse-animated-expo");
                   mouseAnimatedExpo.classList.remove('fadeOut');
