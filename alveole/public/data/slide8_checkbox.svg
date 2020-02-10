@@ -1,0 +1,14 @@
+<svg width="27" height="27" class="svg_checkbox_8" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_b)">
+<circle cx="13.5" cy="13.5" r="13.5" fill="black" fill-opacity="0.19"/>
+<circle cx="13.5" cy="13.5" r="13" stroke="#9E90F2"/>
+</g>
+<defs>
+<filter id="filter0_b" x="-4" y="-4" width="35" height="35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="2"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur" result="shape"/>
+</filter>
+</defs>
+</svg>

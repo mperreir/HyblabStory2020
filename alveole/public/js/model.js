@@ -658,10 +658,16 @@ class ModelSlide8 extends Observable {
   // values
   bool;
   text;
+  choice;
 
   constructor() {
     super();
     this.bool = false;
+    this.choice = 1;
+  }
+
+  getChoice() {
+    return this.choice;
   }
 
   getValue() {
@@ -674,6 +680,22 @@ class ModelSlide8 extends Observable {
       this.setChanged();
       this.notifyObservers();
     }
+  }
+
+  loadSVG(container) {
+    Snap.load('data/capsule.svg', (data) => {
+      let snap = Snap(container);
+      snap.append(data);
+    });
+  }
+
+  loadCheckbox(checkboxes) {
+    Object.values(checkboxes).forEach( function(checkbox) {
+      Snap.load('data/slide8_checkbox.svg', function(data) {
+        let snap = Snap(checkbox);
+        snap.append(data);
+      });
+    });
   }
 }
 
@@ -719,7 +741,6 @@ class ModelLastSlide extends Observable {
       Snap.load('data/fleche.svg', function(data) {
         let snap = Snap(div3);
         data.node.id = 'fleche_sources';
-        // console.log(data.node.href);
         data.node.addEventListener('click', function() {
           console.log(this);
         });

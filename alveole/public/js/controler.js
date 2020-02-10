@@ -71,7 +71,7 @@ class SuperControler {
 
     // ModelSlide8
     let modelSlide8 = new ModelSlide8();
-    let updateSlide8 = new UpdateSlide8(viewCenter);
+    let updateSlide8 = new UpdateSlide8(modelPopup, viewCenter);
     modelSlide8.addObservers(updateSlide8);
 
     // ModelLastSlide
@@ -398,7 +398,7 @@ class UpdateSlide1 extends Observer {
           // $(this).parent().find('#slide1Label').toggleClass('label_checked');
         });
         document.getElementById('hotel').addEventListener('mouseout', function() {
-          $(this).toggleClass('animation');
+          // $(this).toggleClass('animation');
           hotel.pause();
         });
         document.getElementById('hotel').addEventListener('click', function() {
@@ -752,9 +752,60 @@ class UpdateSlide8 extends Observer {
     let val = observable.getValue();
 
     if (val == true) {
+      let container = document.createElement('div');
+      container.setAttribute('id', 'slide8_podcast');
+      this.composant.div.appendChild(container);
+
+      let presta = document.createElement('div');
+      presta.setAttribute('id', 'presta');
+      presta.addEventListener('click', () => {
+        // observable.setChoice(1);
+        this.model.setValue(true);
+      });
+
+      let label1 = document.createElement('div');
+      label1.setAttribute('class', 'slide8Label unselectable');
+      label1.innerHTML = observable.text.labels[1];
+      presta.appendChild(label1);
+
+      let artisan = document.createElement('div');
+      artisan.setAttribute('id', 'artisan');
+      artisan.addEventListener('click', () => {
+        // observable.setChoice(1);
+        this.model.setValue(true);
+      });
+
+      let label2 = document.createElement('div');
+      label2.setAttribute('class', 'slide8Label unselectable');
+      label2.innerHTML = observable.text.labels[2];
+      artisan.appendChild(label2);
+
+      let animation = document.createElement('div');
+      animation.setAttribute('id', 'slide8Animation');
+
+      container.appendChild(animation);
+
+      let divs = {};
+
+      for (let i = 1; i < 3; i++) {
+        let div_checkbox = document.createElement('div');
+        div_checkbox.setAttribute('class','slide8_checkbox');
+
+        divs[i] = div_checkbox;
+      }
+
+      presta.appendChild(divs[1]);
+      artisan.appendChild(divs[2]);
+
+      container.appendChild(presta);
+      container.appendChild(artisan);
+
+      observable.loadCheckbox(divs);
+      observable.loadSVG(animation);
+
 
     } else if (val == false) {
-
+      this.composant.div.querySelector('#slide8_podcast').remove();
     } else {
       console.log('err : unhandled slide 8 value');
     }
