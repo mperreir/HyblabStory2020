@@ -16,6 +16,9 @@ function fadeIn(id){
   //le bouton
   var bouton = document.getElementById("imageBouton" + id);
   bouton.src="img/boutonActif.svg";
+  //le label
+  var label = document.getElementById("label" + id);
+  label.style.opacity = "1";
   //l'image
   let image = document.getElementById("carte" + id);
   image.style.opacity = "1";
@@ -42,6 +45,9 @@ function fadeOut(id){
   //le bouton
   var bouton = document.getElementById("imageBouton" + id);
   bouton.src="img/boutonInactif.svg";
+  //le label
+  var label = document.getElementById("label" + id);
+  label.style.opacity = "0";
   //l'image
   let image = document.getElementById("carte" + id);
   image.style.opacity = "0";

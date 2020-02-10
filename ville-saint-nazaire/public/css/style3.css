@@ -35,10 +35,14 @@ form>label{
     right:10%;
     font-family: Vibur;
     color: #265984;
+    opacity:0;
+}
+#label1905{
+    opacity:1;
 }
 .imageBouton{
     position: absolute;
-    right:5%;
+    right:3.5%;
 }
 .imageBouton:hover {
 	-webkit-transform:scale(1.25); /* Safari et Chrome */
@@ -49,16 +53,16 @@ form>label{
 	transition:0.5s;
 }
 #imageBouton1905, #label1905{
-    top:25%;
+    top:21%;
 }
 #imageBouton1924, #label1924{
-    top:37%;
+    top:34%;
 }
 #imageBouton1944, #label1944{
-    top:49%;
+    top:47%;
 }
 #imageBouton1952, #label1952{
-    top:61%;
+    top:60%;
 }
 #imageBouton1957, #label1957{
     top:73%;
