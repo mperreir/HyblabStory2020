@@ -266,6 +266,14 @@ function goBackToMenu(sectionName) {
         $("#hachure-dance").css("cursor", "auto");
         break;
     }
+    let expoDone = (document.getElementById("hachure-expo").style.opacity == 1);
+    let musicDone = (document.getElementById("hachure-music").style.opacity == 1);
+    let danceDone = (document.getElementById("hachure-dance").style.opacity == 1);
+    if(expoDone && musicDone && danceDone) {
+      setTimeout(function() {
+        goToByScroll('figures-section', 500);
+      }, 2000);
+    }
 
     /* reset parameters*/
     currentSlide = 0;
