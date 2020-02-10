@@ -1,4 +1,5 @@
 let oldNumber = -1;
+let figuresFixed = true;
 
 $(document).ready(function() {
     $.getJSON("data/resources.json", function(json) {
@@ -37,5 +38,31 @@ $(document).ready(function() {
             }
 
         });
+    });
+
+    let figPos = $("#figures-section").position();
+    let credPos = $("#credits-section").position();
+
+    $(window).scroll(function(e) {
+
+      let scrollPos = $(window).scrollTop();
+
+      let figuresSection = $("#figures-section");
+      if (scrollPos > figPos.top - 400 && scrollPos < credPos.top - 100 && figuresFixed) {
+        e.preventDefault();
+        bodyScrollLock.disableBodyScroll(figuresSection);
+        $('html,body').animate({
+            scrollTop: $("#figures-section").offset().top
+        }, 200);
+        setTimeout(function() {
+          let endFigures = document.getElementById("end-figures");
+          endFigures.classList.remove('fadeOut');
+          endFigures.classList.add('fadeInUp');
+          bodyScrollLock.clearAllBodyScrollLocks();
+          figuresFixed = false;
+        }, 2000);
+      }
+
+
     });
 });

@@ -1,9 +1,9 @@
 #figures-section {
-    background-color: #1E1E1E;
-    font-family: 'NimbusSanLRegular';
-    /* font-weight:bold; */
-    font-size:30px;
-    /* background-color: #1E1E1E; */
+  font-family: 'NimbusSanLRegular';
+  position: relative;
+  font-size:30px;
+  background-color: #1E1E1E;
+  height: 100vh;
 }
 
 /* .slidecontainer{
@@ -160,4 +160,11 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
   background: #F6F5F5;
+}
+
+#end-figures {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 2%;
 }
