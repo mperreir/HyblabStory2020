@@ -16,8 +16,9 @@ $(document).ready(function() {
 
   $("#link-presentation").click(function(e) {
     document.getElementById("hamburger-checkbox").checked = false;
+
     bodyScrollLock.clearAllBodyScrollLocks();
-    goToByScroll("presentation-section");
+    goToByScroll("presentation-section", 200);
 
     const soundAnimated = document.querySelector("#sound-content-loading");
     const mouseAnimated = document.querySelector("#mouse-animated");
@@ -27,8 +28,9 @@ $(document).ready(function() {
 
   $("#link-menu").click(function(e) {
     document.getElementById("hamburger-checkbox").checked = false;
+
     bodyScrollLock.clearAllBodyScrollLocks();
-    goToByScroll("menu-section");
+    goToByScroll("menu-section", 0);
 
     const soundAnimated = document.querySelector("#sound-content-loading");
     const mouseAnimated = document.querySelector("#mouse-animated");
