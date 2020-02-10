@@ -48,11 +48,19 @@ class Contexte extends View {
             this.photo.style.display = 'none';
             this.switchToPhoto();
         });
+
+        this.photo.addEventListener('mouseenter', () => {
+            window.soundManager.play('sound/context_hover_photo.mp3');
+        });
         
         this.contact.addEventListener('click', () => {
             this.buttons[1] = false;
             this.contact.style.display = 'none';
             this.switchToContact();
+        });
+
+        this.contact.addEventListener('mouseenter', () => {
+            window.soundManager.play('sound/context_hover_contact.mp3');
         });
         
         this.reseau.addEventListener('click', () => {
@@ -60,11 +68,19 @@ class Contexte extends View {
             this.reseau.style.display = 'none';
             this.switchToReseau();
         });
+
+        this.reseau.addEventListener('mouseenter', () => {
+            window.soundManager.play('sound/context_hover_reseau.mp3');
+        });
         
         this.info.addEventListener('click', () => {
             this.buttons[3] = false;
             this.info.style.display = 'none';
             this.switchToInfo();
+        });
+
+        this.info.addEventListener('mouseenter', () => {
+            window.soundManager.play('sound/context_hover_info.mp3');
         });
 
         // Background elements
