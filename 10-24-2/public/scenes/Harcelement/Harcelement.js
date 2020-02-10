@@ -16,27 +16,29 @@ export default class Harcelement extends Component {
     this.section = document.createElement("section");
     this.section.setAttribute("id", "harcelement");
     this.porte = new Porte({
-      arrivee: this.goToArriveeEnfant.bind(this),
+      beginBullying: this.goToArriveeEnfant.bind(this),
       onStart
     });
     this.arrivee = new Arrivee();
-    /*this.porteClaque = new PorteClaque();
+    this.porteClaque = new PorteClaque();
     this.premierChoix = new ViewPremierChoix({
-      onGoToViewDiscussion: this.goToViewDiscussion.bind(this)
+      beginBullying: this.goToPremierChoix.bind(this)
     });
-    /*this.derniereTentative = new ViewDerniereTentative({
-      onGoToViewDiscussion: this.goToViewDiscussion.bind(this)
+    this.derniereTentative = new ViewDerniereTentative({
+      beginBullying: this.goToDernièreTentative.bind(this)
     });
     this.fewHoursBefore = new FewHoursBefore();
     this.flashBack = new FlashBack();
     this.finHistoire = new FinHistoire();
     this.lendemain = new Lendemain();
-    */
+    
   }
 
 
   goToArriveeEnfant(e){
-    this.onStart(this);
+    this.onStart(this); 
+    //erreur ici je sais pas pourquoi mais ça empeche le lancement du scenario
+    //il me dit que onStart n'est pas une fonction du coup je sais pas pourquoi ca marche chez Yoann
     this.porte.componentWillUnmount();
     this.arrivee.render(this.section);
     e.preventDefault();
@@ -59,7 +61,7 @@ export default class Harcelement extends Component {
     this.porteClaque.componentWillUnmount();
     this.premierChoix.render(this.section);
   }
-  /*
+  
   goToDernièreTentative(){
     this.premierChoix.componentWillUnmount();
     this.derniereTentative.render(this.section);
@@ -86,6 +88,9 @@ export default class Harcelement extends Component {
   }
 
   goToFinHistoire(e){
+    this.onStart(this);
+    this.flashBack.componentWillUnmount();
+    e.preventDefault();
     //je sais pas
   }
 
@@ -99,20 +104,20 @@ export default class Harcelement extends Component {
       this.goToArriveeEnfant(e);
     }, 3000);
   }
-  */
+  
 
 
   async load() {
     await Promise.all([
       this.porte.load(),
       this.arrivee.load(),
-      /*this.porteClaque.load(),
+      this.porteClaque.load(),
       this.premierChoix.load(),
       this.derniereTentative.load(),
       this.fewHoursBefore.load(),
       this.flashBack.load(),
       this.finHistoire.load(),
-      this.lendemain.load()*/
+      this.lendemain.load()
     ]);
   }
 
