@@ -166,7 +166,7 @@ let initSlide4 = function(){
 		architecte.style.left = 75.5 + "%";
 
 		journaliste.style.width = 22 + "%";
-		journaliste.style.height = 53 + "%";
+		journaliste.style.height = 55 + "%";
 		journaliste.style.top = 44 + "%";
 		journaliste.style.left = 0 + "%";
 
