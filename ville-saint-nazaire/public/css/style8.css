@@ -1,10 +1,4 @@
 
-#page8 {
-	background-image: url("../img/background.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-
-}
 
 #slide8-container-dialogueA p{
 	z-index: 200;
@@ -12,6 +6,44 @@
 	font-weight: normal;
 	font-family: Vibur;
 	color: #255A85;
+
+}
+
+.date {
+	font-family : Reenie Beanie;
+	color : #265984;
+	font-style: normal;
+}
+
+#date-2 {
+	position: absolute;
+	top : 8.5%;
+	left : 33%;
+	transform: rotate(-5.13deg);
+
+}
+
+#date-3 {
+	position: absolute;
+	top : 6% ;
+	left : 65%;
+	transform: rotate(4.22deg);
+
+}
+
+#date-4 {
+	position: absolute;
+	top : 33%;
+	left : 79.5%;
+	transform: rotate(-8.77deg);
+	z-index: 205;
+}
+
+#date-5 {
+	position: absolute;
+	top : 38%;
+	right : 5%;
+	transform: rotate(2.76deg);
 
 }
 
@@ -117,11 +149,12 @@ transition:0.5s;
 	position: absolute;
 	width: 33%;
 	height: 44%;
-	left: 42.3%;
+	left: 39%;
 	top: 9%;
 	z-index: 195;
 
 }
+
 
 #slide8-img3:hover {
 -webkit-transform:scale(1.40); /* Safari et Chrome */
@@ -176,8 +209,7 @@ transition:0.5s;
 
 }
 
- #slide8-suivant:hover, #slide8-btnRetour:hover, #slide8-img1:hover, #slide8-img2:hover,
- #slide8-img3:hover, #slide8-img4:hover, #slide8-img5:hover {
+ #slide8-suivant:hover, #slide8-btnRetour:hover {
 	cursor: pointer;
 }
 
@@ -187,6 +219,9 @@ transition:0.5s;
    
     #page8 p{
         font-size: 1.8vw;
+    }
+    .date {
+    	font-size: 3.5vw;
     }
 
     #slide8-suivant {
@@ -201,6 +236,10 @@ transition:0.5s;
     
    #page8 p {
         font-size: 3.5vh;
+    }
+
+     .date {
+    	font-size: 6.5vh;
     }
 
     #slide8-suivant {
