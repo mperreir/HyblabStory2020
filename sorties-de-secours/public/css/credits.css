@@ -77,8 +77,6 @@
     font-weight: normal;
     font-size: 22px;
     line-height: 39px;
-    /* padding-top: 30vh; */
-    /* padding-bottom: 2%; */
     display: flex;
     align-items: center;
     text-align: center;
@@ -86,11 +84,11 @@
     color: #1E1E1E;
 }
 #nom-audencia {
-position: absolute;
-width: 189px;
-height: 78px;
-left: 458px;
-top: 525px;
+  position: absolute;
+  width: 189px;
+  height: 78px;
+  left: 458px;
+  top: 525px;
 }
 
 #nom-agr {
@@ -113,10 +111,9 @@ top: 525px;
   position: absolute;
   width: 397px;
   height: 0px;
-  left: 787px;
-  top: 300px;
+  left: 565px;
+  top: 500px;
   border: 1px solid #969696;
-  width:5px;
   transform: rotate(90deg);
 }
 .ligne_verticale2
@@ -124,8 +121,8 @@ top: 525px;
   position: absolute;
     width: 397px;
     height: 0px;
-    left: 1134px;
-    top: 300px;
+    left: 930px;
+    top: 500px;
     border: 1px solid #969696;
     transform: rotate(90deg);
 }
