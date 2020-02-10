@@ -1,68 +1,105 @@
 #page12{
-    background-image: url(../img/fond_choix_decorateur.png);
+    background-image: url(../img/fond12.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-#next15-1{
-  position: absolute;
-  left:5%;
+
+#barre12{
+  position:absolute;
+  bottom:17.3%;
+  right: 14.5%;
+  height: 12%;
+  width: 1%;
 }
-#blackblock12{
-  top: 0%;
-  width: 25%;
-  height: 100%;
-  background-color: black;
-  position: absolute;
-  left: -25%;
-  z-index: 10;
+
+#next13-img{
+    position: absolute;
+    top: 89%;
+    width: 4%;
+    left: 60%;
+ }
+#next13-txt{
+    position: absolute;
+    left: 66%;
+    top: 89%;
+    padding-top: 0.7%;
+    font-family: "Vibur";
+    color: #92C2D2;
+}
+#next13{
+    cursor: pointer;
 }
 
 #image_bureau12{
   position: absolute;
-  top:10%;
+  top:5%;
   left:-20%;
   width: 25%;
   height: auto;
   z-index: 1;
+  transform: rotate(-3.34deg);
 }
 
 #image_commission12{
   position: absolute;
-  top:30%;
+  top:25%;
   left:-20%;
   width: 25%;
   height: auto;
   z-index: 2;
+  transform: rotate(4.59deg);
 }
 #image_salon12{
   position: absolute;
-  top:55%;
+  bottom:10%;
   left:-12%;
   width: 16%;
   height: auto;
   z-index: 3;
+  transform: rotate(-5.78deg);
 }
 
-#texte_slide12{
+.image_slide12{
+  border-width:thick;
+  border-style:solid;
+  border-color:#92C2D2;
+}
+
+.texte_slide12{
     position: absolute;
-    width:68%;
+    width:55%;
     height:12%;
     right:16%;
-    top: 87%;
-    padding : 0.5%
+    bottom: 17%;
+    padding : 0.5%;
+
 }
-#texte_slide12 p{
-    font-family:"Parisienne";
-    color:black;
-    text-align: justify;
+.texte_slide12 p{
+    font-family:"Vibur";
+    color:#255A85;
+    text-align: right;
 }
+#texte_slide12_vide{
+    visibility: visible;
+}
+#texte_slide12_bureau{
+    visibility: hidden;
+}
+#texte_slide12_commission{
+    visibility: hidden;
+}
+#texte_slide12_salon{
+    visibility: hidden;
+}
+
+
 @media screen and (max-aspect-ratio: 16/9){
-    #texte_slide12 p{
-        font-size: 1.7vw;
+    .texte_slide12 p, #next13{
+        font-size: 2vw;
     }
 }
 @media screen and (min-aspect-ratio: 16/9){
-    #texte_slide12 p{
-        font-size: 3vh;
+    .texte_slide12 p, #next13{
+        font-size: 3.4vh;
     }
 }

@@ -10,19 +10,13 @@
 
 body{
     color: black;
-    /*overflow: hidden;   /* pour slidr dans certains navigateurs */
 }
 
 #container{
     background-image: url('../img/background.png');
     position: relative; /* pour permettre le positionnement en absolu des autres éléments */
+    overflow: hidden;
 }
-/* on fait en sorte que le slidr et les slides remplissent tout notre conteneur
-#slidr, #slidr section{
-    width: 100%;
-    height: 100%;
-}*/
-
 
 
 /* ---------- media queries importantes pour le responsive facile :-D ----------------- */
@@ -37,7 +31,6 @@ tant qu'on est en dessous de l'apect ratio 16/9 */
         height: calc(100 * 9vw / 16);
     }
     section{
-        margin-top: calc((100vh - 100 * 9vw / 16) / 2);
         width: 100vw;
         height: calc(100 * 9vw / 16);
     }
@@ -46,6 +39,9 @@ tant qu'on est en dessous de l'apect ratio 16/9 */
     les autres tailles de police. Celle-ci est proportionelle à la largeur ici. */
     body{
         font-size: 9vw;
+    }
+    .annee{
+        font-size: 3.25vw;
     }
 }
 
@@ -56,6 +52,7 @@ dessus de l'apect ratio 16/9 */
         margin-left: calc((100vw - 100 * 16vh / 9) / 2);
         width: calc(100 * 16vh / 9);
         height: 100vh;
+
     }
     section{
         width: calc(100 * 16vh / 9);
@@ -66,6 +63,10 @@ dessus de l'apect ratio 16/9 */
     les autres tailles de police. Celle-ci est proportionelle à la hauteur ici. */
     body{
         font-size: 16vh;
+    }
+
+    .annee{
+        font-size: 7vh;
     }
 }
 
@@ -88,7 +89,6 @@ body {
     transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
 .panel {
-    height: 100vh;
     position: absolute;
     transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
     will-change: transform;
@@ -129,6 +129,9 @@ body {
 .panel[data-y-pos="-5"] {
     top: 500%;
 }
+.panel[data-y-pos="-6"] {
+    top: 600%;
+}
 .panel[data-y-pos="-1"] {
     top: 100%;
 }
@@ -145,3 +148,10 @@ body {
     opacity: 1;
 }
 
+.annee{
+    position:absolute;
+    top:2.5%;
+    right:2%;
+    color: #265984;
+    font-family: Reenie Beanie;
+}

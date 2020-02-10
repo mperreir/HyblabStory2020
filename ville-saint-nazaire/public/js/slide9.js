@@ -1,58 +1,78 @@
 let initSlide9 = function(){
 
   d3.select('#next10').on('click', function(){
-    console.log('10');
     moveDown();
+    moveRight();
     initSlide10();
+  });
+
+  d3.select('#next10').on('mouseover', function(){
+      anime({
+          targets: '#next10-img',
+          scale: 1.2
+      });
+  });
+
+  d3.select('#next10').on('mouseout', function(){
+      anime({
+          targets: '#next10-img',
+          scale: 1
+      });
   });
 }
 
-function moveBureau(){
-  myMove(document.getElementById('image_bureau'),-20);
+
+function moveImage1(){
+  myMove9(document.getElementById('image1_slide9'));
 }
-function moveCommission(){
-  myMove(document.getElementById('image_commission'),-20);
+function moveImage2(){
+  myMove9(document.getElementById('image2_slide9'));
 }
-function moveSalon(){
-  myMove(document.getElementById('image_salon'),-12);
+function moveImage3(){
+  myMove9(document.getElementById('image3_slide9'));
 }
 
-function returnBureau(){
-  myReturn(document.getElementById('image_bureau'),20);
+function returnImage1(){
+  myReturn9(document.getElementById('image1_slide9'));
 }
-function returnCommission(){
-  myReturn(document.getElementById('image_commission'),20);
+function returnImage2(){
+  myReturn9(document.getElementById('image2_slide9'));
 }
-function returnSalon(){
-  myReturn(document.getElementById('image_salon'),12);
+function returnImage3(){
+  myReturn9(document.getElementById('image3_slide9'));
 }
 
 
-
-function myMove(elem,posInitiale) {
+function myMove9(elem) {
   var pos = 0;
+  var tail = 0;
   var id = setInterval(frame, 10);
   function frame() {
-    if (pos == -posInitiale) { //condition d'arrêt de la "boucle"
+    if (pos == 20) { //condition d'arrêt de la "boucle"
       clearInterval(id);
     } else {
+      elem.style.borderStyle='none';
       pos++;
-      //elem.style.top = (pos+30) + '%';//déplacement vers le bas
-      elem.style.left = (pos+posInitiale) + '%';//déplacement vers la gauche
+      tail=tail+13/20;
+      elem.style.left = (pos-20) + '%';//déplacement vers la gauche
+      elem.style.width = (tail+25) + '%';
     }
   }
 }
 
-function myReturn(elem,posInitiale) {
+function myReturn9(elem) {
   var pos = 0;
+  var tail= 0;
   var id = setInterval(frame, 10);
   function frame() {
-    if (pos == -posInitiale) { //condition d'arrêt de la "boucle"
+    if (pos == -20) { //condition d'arrêt de la "boucle"
       clearInterval(id);
+      elem.style.borderStyle='solid';
     } else {
       pos--;
-      //elem.style.top = (pos+30) + '%';//déplacement vers le bas
+      tail=tail-13/20;
       elem.style.left = (pos) + '%';//déplacement vers la gauche
+      elem.style.width = (tail+40) + '%';
     }
   }
 }

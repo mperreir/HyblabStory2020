@@ -1,96 +1,156 @@
-#page4 {
-	background-image: url("../img/fond_HDV_constrcution.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	font-family: Vibur;
-
-}
-
-#img-journaliste {
-
-}
-
-#img-architecte {
-	position: absolute;
-	width : 30%;
-	height : 40%;
-	top : 60%;
-	left : 70%;
+#slide4-container-dialogueJ p, .slide4-container-dialogueA p{
 	z-index: 200;
-	visibility: hidden;
-
-}
-
-#page4 p {
-	z-index: 200;
-	color : black;
-    text-align : center;
-    text-align: justify;
     font-style: normal;
 	font-weight: normal;
-/*	background-color: #C4C4C4;
-*/	padding: 2%;
-}
-
-
-
-#container-dialogue1 {
-	position: absolute;
-	width: 55%;
-	height: 10%;
-	left: 40%;
-	top: 10%;
-	visibility: hidden;
+	font-family: Vibur;
+	color: #255A85;
 
 }
 
-#container-dialogue2 {
-	position: absolute;
-	width: 55%;
-	height: 13%;
-	left: 30%;
-	top: 35%;
-
-	visibility: hidden;
-	background-color: #C4C4C4;
-
+.slide5-container p{
+	z-index: 200;
+	font-family: Vibur;
+	color: #92C2D2;
 }
 
-
-#container-dialogue3 {
+#slide4-img-photo1 {
 	position: absolute;
-	width: 62%;
-	height: 8%;
+	width: 39%;
+	height: 49%;
 	left: 15%;
-	top: 53%;
+	top: 7%;
+}
 
+#slide4-img-photo1:hover {
+
+	-webkit-transform:scale(1.25); /* Safari et Chrome */
+	-moz-transform:scale(1.25); /* Firefox */
+	-ms-transform:scale(1.25); /* Internet Explorer 9 */
+	-o-transform:scale(1.25); /* Opera */
+	transform:scale(1.25);
+	transition:0.5s;
+	z-index:2;
+
+}
+
+#slide4-img-photo2 {
+	position: absolute;
+	width: 32%;
+	height: 39%;
+	left: 52%;
+	top: 13%;
+}
+
+#slide4-img-photo2:hover {
+
+	-webkit-transform:scale(1.25); /* Safari et Chrome */
+	-moz-transform:scale(1.25); /* Firefox */
+	-ms-transform:scale(1.25); /* Internet Explorer 9 */
+	-o-transform:scale(1.25); /* Opera */
+	transform:scale(1.25);
+	transition:0.5s;
+
+}
+
+#slide4-img-journaliste {
+	position: absolute;
+	width : 15%;
+	height : 41%;
+	top : 58%;
+	left : 0%;
+	z-index: 200;
 	visibility: hidden;
 
-
 }
 
-/* Bouton dialogue suivant */
-#dialogueSuivant {
+#slide4-trait-dialogueJ {
 	position: absolute;
-	width: 10%;
-	height: 5%;
-	left: 45%;
-	top: 90%;
-	display: none;
-	background:#f5f5f5;
-	border-radius:2px;
-	border:1px solid #72726E;
-	box-shadow:1px 1px 3px #999;
+	width: 1%;
+	height: 21%;
+	left: 14%;
+	top: 65%;
+	visibility: hidden;
 
 }
 
+#slide4-container-dialogueJ {
+	position: absolute;
+	text-align : justify;
+	width: 56%;
+	height: 10%;
+	left: 17%;
+	top: 64.8%;
+	line-height: 34%;
+	visibility: hidden;
+}
+
+
+#slide4-img-architecte {
+	position: absolute;
+	width : 16%;
+	height : 40%;
+	top : 58%;
+	left : 82%;
+	z-index: 200;
+	visibility: hidden;
+
+}
+
+
+#slide4-trait-dialogueA {
+	position: absolute;
+	width: 1%;
+	height: 13%;
+	left: 83%;
+	top: 65%;
+	visibility: hidden;
+
+}
+
+.slide4-container-dialogueA {
+	position: absolute;
+	text-align : right;
+	width: 56%;
+	height: 13%;
+	left: 26%;
+	top: 64.7%;
+	line-height: 35%;
+	visibility: hidden;
+
+}
+
+ #slide4-notesSuivantes {
+	position: absolute;
+	left: 66%;
+	top: 89%;
+	padding-top: 0.7%;
+	color: #92C2D3;
+	z-index: 200;
+	font-family: Vibur;
+	visibility: hidden;
+}
+
+ #slide4-btnSuivant {
+	position: absolute;
+	top: 89%;
+	width: 4%;
+	left: 60%;
+	visibility: hidden;
+}
+
+ #slide4-suivant:hover {
+	cursor: pointer;
+}
 /* Media queries pour le responsive */
 
 @media screen and (max-aspect-ratio: 16/9){
    
-    #page4 p{
+    #page4 p, #texte{
         font-size: 1.8vw;
     }
+	#container1-slide5 p, #container2-slide5 p, #container3-slide5 p{
+		font-size: 2.2vw;
+	}
 
     #dialogueSuivant {
         font-size: 1.8vw;
@@ -102,20 +162,96 @@
 
 @media screen and (min-aspect-ratio: 16/9){
     
-   #page4 p{
-        font-size: 3vh;
+   #page4 p, #slide4-texte{
+        font-size: 3.5vh;
     }
+	
+	#container1-slide5 p, #container2-slide5 p, #container3-slide5 p{
+		font-size: 3.7vh;
+	}
 
-    #dialogueSuivant {
+    #slide4-dialogueSuivant {
         font-size: 3vh;
     }
 
 }
 
+.slide5-container {
+	position: absolute;
+}
+
+.slide5-container img {
+	margin-right: 3%;
+}
+
+.slide5-container p{
+	padding-top: 2.5%;
+
+}
+
+#container1-slide5 img{
+	float:left;
+	width:10%;
+	height:10%;
+	margin-right: 3%;
+}
+
+#container1-slide5{
+	position: absolute;
+	left: 24%;
+	top: 20%;
+	width : 50%;
+	visibility: hidden;
+}
+
+#container1-slide5:hover{
+	left: 30%;
+	top: 20%;
+	transition:0.5s;
+}
+
+#container2-slide5 img{
+	float:left;
+	width:10%;
+	height:10%;
+}
+
+#container2-slide5{
+	position: absolute;
+	left: 24%;
+	top: 40%;
+	width : 52%;
+	visibility: hidden;
+}
+
+#container2-slide5:hover{
+	left: 30%;
+	top: 40%;
+	transition:0.5s;
+	
+}
 
 
+#container3-slide5 img{
+	float:left;
+	width:10%;
+	height:10%;
+}
 
+#container3-slide5{
+	position: absolute;
+	left: 24%;
+	top: 60%;
+	width : 52%;
+	visibility: hidden;
+}
 
+#container3-slide5:hover{
+	left: 30%;
+	top: 60%;
+	transition:0.5s;
+}
 
-
-
+#container3-slide5 p:hover, #container3-slide5 img:hover, #container2-slide5 p:hover, #container2-slide5 img:hover, #container1-slide5 p:hover, #container1-slide5 img:hover{
+	cursor: pointer;
+}

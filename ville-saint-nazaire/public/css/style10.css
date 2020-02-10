@@ -1,47 +1,155 @@
 #page10 {
-	background-image: url("../img/fond10.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-
+	font-family: Vibur;
+	color: #255A85;
 }
 
-#img-journaliste {
-
-}
-
-#img-decorateur {
+#slide10-date {
+	width : 4%;
+	height: 4%;
 	position: absolute;
-	width : 30%;
-	height : 40%;
-	top : 60%;
-	left : 70%;
-	z-index: 200;
-
+	top : 2%;
+	right: 2%;
 }
 
 
 #page10 p {
 	z-index: 200;
-	color : black;
-    text-align : center;
-    text-align: justify;
-    font-family: Vibur;
     font-style: normal;
 	font-weight: normal;
-/*	background-color: #C4C4C4;
-*/	padding: 2%;
 }
 
-
-
-#container-dialogue {
+#slide10-img1 {
 	position: absolute;
-	width: 45%;
-	height: 10%;
-	left: 13%;
-	top: 18%;
+	width : 40%;
+	height : 45%;
+	top : 15%;
+	left : 14%;
+	z-index: 200;
+
 }
 
+#slide10-img1:hover {
+	-webkit-transform:scale(1.25); /* Safari et Chrome */
+	-moz-transform:scale(1.25); /* Firefox */
+	-ms-transform:scale(1.25); /* Internet Explorer 9 */
+	-o-transform:scale(1.25); /* Opera */
+	transform:scale(1.25);
+	transition:0.5s;
+	z-index:400;
+}
+
+#slide10-img2 {
+	position: absolute;
+	width : 33%;
+	height : 38%;
+	top : 19.5%;
+	left : 50.7%;
+	z-index: 200;
+
+}
+
+#slide10-img2:hover {
+	-webkit-transform:scale(1.22); /* Safari et Chrome */
+	-moz-transform:scale(1.22); /* Firefox */
+	-ms-transform:scale(1.22); /* Internet Explorer 9 */
+	-o-transform:scale(1.22); /* Opera */
+	transform:scale(1.22);
+	transition:0.5s;
+}
+
+
+#slide10-img-journaliste {
+	position: absolute;
+	width : 15%;
+	height : 41%;
+	top : 58%;
+	left : 0%;
+	z-index: 200;
+
+}
+
+#slide10-trait-dialogueJ {
+	position: absolute;
+	width: 1%;
+	height: 16%;
+	left: 15%;
+	top: 67%;
+}
+
+ #slide10-container-dialogueJ {
+	position: absolute;
+	text-align : justify;
+	width: 60%;
+	height: 10%;
+	left: 17%;
+	top: 67%;
+	line-height: 35%;
+}
+
+
+
+#slide10-img-decorateur {
+	position: absolute;
+	width : 15%;
+	height : 40%;
+	top : 57%;
+	left : 83%;
+	z-index: 200;
+
+}
+
+
+#slide10-trait-dialogueD {
+	position: absolute;
+	width: 1%;
+	height: 15%;
+	left: 82%;
+	top: 66.5%;
+	visibility: hidden;
+}
+
+.slide10-container-dialogueD {
+	position: absolute;
+	width: 56%;
+	height: 13%;
+	left: 24%;
+	top: 66%;
+	text-align : right;
+	line-height: 35%;
+	visibility: hidden;
+
+}
+
+
+
+/* Bouton dialogue suivant */
+.slide10-suivant {
+	position: absolute;
+	top: 90%;
+}
+
+ #slide10-notesSuivantes {
+	position: absolute;
+	left: 66%;
+	top: 89%;
+	padding-top: 0.7%;
+	color: #92C2D3;
+	z-index: 200;
+	font-family: Vibur;
+}
+
+ #slide10-btnSuivant {
+	position: absolute;
+	top: 89%;
+	width: 4%;
+	left: 60%;
+}
+
+ #slide10-suivant:hover {
+	cursor: pointer;
+}
 
 /* Media queries pour le responsive */
 
@@ -58,7 +166,7 @@
 @media screen and (min-aspect-ratio: 16/9){
     
    #page10 p{
-        font-size: 3vh;
+        font-size: 3.6vh;
     }
 
 }

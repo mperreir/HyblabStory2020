@@ -1,0 +1,123 @@
+
+#pagedommage{
+
+	background-repeat: no-repeat;
+	background-size:cover;
+
+}
+
+#dommage-img-decorateur {
+	position: absolute;
+	width : 15%;
+	height : 40%;
+	top : 57%;
+	left : 80%;
+	z-index: 200;
+
+}
+
+
+#container2_dommage{
+	position:absolute;
+	left:45%;
+	top:30%;
+}
+
+
+#maquette1_dommage{
+	margin-top:3%;
+	margin-left:8%;
+	width:26%;
+}
+
+
+
+
+#container1_dommage p{
+	margin-left:12%;
+}
+#container1_dommage{
+	position:absolute;
+	margin-top:10%;
+}
+
+#dmg1 p{
+	margin-left:12%;
+	margin-top:7%;
+}
+
+
+#container1_dommage p, #container2_dommage p{
+	color:#255A85;
+	font-family:Vibur;
+}
+
+#text_dommage p{
+	margin-left:15%;
+}
+
+
+
+#nextdmg-img{
+	position: absolute;
+	top: 89%;
+	width: 4%;
+	left: 60%;
+ }
+#nextdmg-texte{
+	position: absolute;
+	left: 66%;
+	top: 89%;
+	padding-top: 0.7%;
+	font-family: "Vibur";
+	color: #92C2D2;
+}
+
+.nextdmg{
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-aspect-ratio: 16/9){
+
+	#nextdmg-texte{
+        font-size: 2vw;
+    }
+
+   
+    #paraph_dommage p,.dommage-suivant{
+        font-size: 3vw;
+    }
+	
+	#container1_dommage p, #dmg1 p{
+        font-size: 4vw;
+    }
+
+    #text_dommage p{
+		font-size:6vw;
+	}
+
+
+}
+
+
+@media screen and (min-aspect-ratio: 16/9){
+
+	#nextdmg-texte{
+        font-size: 3.4vh;
+    }
+    
+    #paraph_dommage p{
+        font-size: 4vh;
+    }
+	
+	  #container1_dommage p, #dmg1 p{
+        font-size: 6vh;
+    }
+
+	#text_dommage p{
+		font-size:9vh;
+	}
+
+}
