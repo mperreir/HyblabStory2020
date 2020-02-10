@@ -47,6 +47,9 @@ let $articleTextWrapper;
 let $articleTitleWrapper;
 let $ssButtonsWrapper;
 
+let $arrowRight;
+let $arrowLeft;
+
 /* sound */
 let soundPlaying = false;
 
@@ -87,6 +90,9 @@ function initArticle(sectionName) {
     $articleTextWrapper = $('#article-text-wrapper-'+sectionName);
     $articleTitleWrapper = $('#article-title-wrapper-'+sectionName);
     $ssButtonsWrapper = $('#ss-buttons-wrapper-'+sectionName);
+
+    $arrowRight = $('#article-arrow-right-'+sectionName);
+    $arrowLeft = $('#article-arrow-left-'+sectionName);
 
     $articleContainer.addClass("article-container-show");
 
@@ -142,6 +148,10 @@ function goFromTo(sectionName, slideFrom, slideTo) {
     $slideTo = $('#article-img-' + sectionName + slideTo);
     $slideFrom = $('#article-img-' + sectionName + slideFrom);
 
+    if (slideFrom === 0) {
+        $arrowLeft.removeClass("article-arrow-hidden");
+    }
+
     if (slideFrom === 0 && slideTo === 1) {
         /* cache le texte */
         $articleTextWrapper.addClass("article-text-wrapper-hidden");
@@ -153,11 +163,15 @@ function goFromTo(sectionName, slideFrom, slideTo) {
         $articleTextWrapper.removeClass("article-text-wrapper-hidden");
         $articleTitleWrapper.removeClass("article-title-wrapper-fullscreen");
         $ssButtonsWrapper.addClass("ss-buttons-wrapper-hidden");
+        $arrowLeft.addClass("article-arrow-hidden");
     }
 
     if (slideTo === 4) {
         $articleContainer.addClass("article-container-fullscreen");
         $articleImgCrayon.addClass("article-img-crayon-show");
+
+        $arrowRight.addClass("article-arrow-hidden");
+        $arrowLeft.addClass("article-arrow-hidden");
     } else {
         $articleContainer.removeClass("article-container-fullscreen");
         $articleImgCrayon.removeClass("article-img-crayon-show");
@@ -169,6 +183,10 @@ function goFromTo(sectionName, slideFrom, slideTo) {
             if (slideTo !== 0) {
                 $slideFrom.addClass('article-img-hidden');
             }
+        }
+        $arrowRight.removeClass("article-arrow-hidden");
+        if (slideTo !== 0) {
+           $arrowLeft.removeClass("article-arrow-hidden");
         }
     }
 
@@ -197,7 +215,9 @@ function previousSlide(sectionName) {
     let slideFrom = currentSlide;
     currentSlide--;
     if (currentSlide < 0) currentSlide = 0;
-    goFromTo(sectionName, slideFrom, currentSlide);
+    if (slideFrom !== currentSlide) {
+        goFromTo(sectionName, slideFrom, currentSlide);
+    }
 }
 
 function activeButton(sectionName, id) {
