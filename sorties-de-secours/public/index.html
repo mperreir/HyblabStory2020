@@ -142,11 +142,12 @@
           <p id="soundText">Pour profiter au maximum de cette expérience,<br>veuillez augmenter le volume.</p>
         </div>
         <div id="mouse-animated">
-          <div class="scroll-down">
-            <div class="mousey" id="mouse-down">
-              <div class="scroller"></div>
-            </div>
-          </div>
+          <div class="arrow">
+        		<ul>
+        			<li></li>
+        			<li></li>
+        		</ul>
+        	</div>
         </div>
       </section>
       <!-- END LOADING -->
@@ -188,11 +189,12 @@
               <b>Cette série a reçu le Prix EURAZEO 2015.</b></p>
             <img class="menu-workshop-author" id="author-expo" src="img/menu_auteur_expo.png" alt="Muriel Bordier" />
             <div class="animated fadeOut" id="mouse-animated-menuExpo">
-              <div class="scroll-down">
-                <div class="mousey-black" id="mouse-down">
-                  <div class="scroller-black"></div>
-                </div>
-              </div>
+              <div class="arrow-black">
+            		<ul>
+            			<li></li>
+            			<li></li>
+            		</ul>
+            	</div>
             </div>
           </div>
         </div>
@@ -201,8 +203,8 @@
       <div class="expChoice" id="expChoiceMusique">
           <img class="hachure" src="img/hachure_music.png" id="hachure-music">
 
-        <img class="img-menu-crayon" src='img/menu_musique_crayon.png'/>
-        <img class="img-menu" id="menu-music" class="menu-img" src='img/menu_musique.jpg'/>
+        <img class="img-menu-crayon" src='img/menu_music_crayon.png'/>
+        <img class="img-menu" id="menu-music" class="menu-img" src='img/menu_music.jpg'/>
         <div class="menu-hover" id="hover-music">
           <div class="hover-text-wrapper">
             <img class="menu-workshop-title" id="title-musique" src="img/menu_title_musique.png" />
@@ -213,11 +215,12 @@
               <b>tout ça en même temps.</b></p>
             <img class="menu-workshop-author" id="author-musique" src="img/menu_auteur_musique.png" alt="Baloji" />
             <div class="animated fadeOut" id="mouse-animated-menuMusic">
-              <div class="scroll-down">
-                <div class="mousey-black" id="mouse-down">
-                  <div class="scroller-black"></div>
-                </div>
-              </div>
+              <div class="arrow-black">
+            		<ul>
+            			<li></li>
+            			<li></li>
+            		</ul>
+            	</div>
             </div>
           </div>
         </div>
@@ -239,11 +242,12 @@
               comment la pourriture devient nourriture... <b>Ils demandent ce qu’est l’essentiel.</b></p>
             <img class="menu-workshop-author" id="author-danse" src="img/menu_auteur_danse.png" alt="Mauricio Bergile" />
             <div class="animated fadeOut" id="mouse-animated-menuDance">
-              <div class="scroll-down">
-                <div class="mousey-black" id="mouse-down">
-                  <div class="scroller-black"></div>
-                </div>
-              </div>
+              <div class="arrow-black">
+            		<ul>
+            			<li></li>
+            			<li></li>
+            		</ul>
+            	</div>
             </div>
           </div>
         </div>
@@ -252,6 +256,29 @@
     </section>
     <!-- END MENU -->
 
+    <!-- FIGURES -->
+    <section class="section" id="figures-section">
+        <div class="textFigure">
+            <div id="modify">
+                <p id="le_figure">15</p>
+                <div id="contentFigure">
+                    <p id="light">Florian</p>
+                    <p id="bolder">Daniel</p>
+                </div>
+            </div>
+            <span>4</span>
+            <span>5</span>
+            <span>20</span>
+            <span>31</span>
+            <span>224</span>
+            <span>300</span>
+            <span>600</span>
+            <span>12 000</span>
+            <span>27 209</span>
+            <input type="range" id="range" min="0" max="540" value="0" step="1">
+        </div>
+    </section>
+    <!-- END FIGURES -->
 
     <!-- EXPO -->
     <section
@@ -260,6 +287,8 @@
 
       <!-- EXPO ARTICLE -->
       <section class="article-container" id="article-container-expo">
+
+        <img class="article-dechirure" src="img/texture/dechirure1.png" />
 
         <img class="brush brush-show" id="article-expo-yellow1" src="img/brush/yellow1.png" />
 
@@ -273,8 +302,6 @@
         <img class="brush" id="article-expo-orange6" src="img/brush/orange6.png" />
 
         <div class="article-wrapper">
-
-          <img class="article-dechirure" src="img/texture/dechirure1.png" />
 
           <div class="article-title-wrapper" id="article-title-wrapper-expo">
             <p class="article-title">Les Termes</p>
@@ -342,6 +369,8 @@
         <!-- DANCE ARTICLE -->
         <section class="article-container" id="article-container-dance">
 
+          <img class="article-dechirure" src="img/texture/dechirure1.png" />
+
           <img class="brush brush-show" id="article-dance-blue4" src="img/brush/blue4.png" />
           <img class="brush brush-show" id="article-dance-yellow4a" src="img/brush/yellow4.png" />
 
@@ -355,8 +384,6 @@
           <img class="brush" id="article-dance-blue1" src="img/brush/blue1.png" />
 
           <div class="article-wrapper">
-
-            <img class="article-dechirure" src="img/texture/dechirure1.png" />
 
             <div class="article-title-wrapper" id="article-title-wrapper-dance">
               <p class="article-title">La Galerie</p>
@@ -413,16 +440,17 @@
           <div id="dance-first-slide">
             <script type="text/paperscript" canvas="dance-experience" src="js/dance-experience.js"></script>
             <canvas id="dance-experience" resize="true"></canvas>
-            <img src='img/dancers_1.png' id='img-dancers' />
-            <img src='img/dancers_zoom.png' id='img-dancers-2' />
-            <img src='img/dancers_crayons.png' id='img-dancers-3' />
-            <div id="hover-dancers-crayons"></div>
+            <img src='img/experience/dance/dancers_no_bg.png' id='img-dancers' />
+            <img src='img/experience/dance/dancers.png' id='img-dancers-2' />
+            <img src='img/experience/dance/dancers_crayon.png' id='img-dancers-3' />
+            <p id="dance-text-instruction">Faites danser votre curseur</p>
             <div class="animated fadeOut" id="mouse-animated-dance">
-              <div class="scroll-down">
-                <div class="mousey-black" id="mouse-down">
-                  <div class="scroller-black"></div>
-                </div>
-              </div>
+              <div class="arrow-black">
+            		<ul>
+            			<li></li>
+            			<li></li>
+            		</ul>
+            	</div>
             </div>
           </div>
 
@@ -446,6 +474,8 @@
         <!-- MUSIC ARTICLE -->
         <section class="article-container" id="article-container-music">
 
+          <img class="article-dechirure" src="img/texture/dechirure1.png" />
+
           <img class="brush brush-show" id="article-music-blue2" src="img/brush/blue2.png" />
           <img class="brush brush-show" id="article-music-orange4" src="img/brush/orange4.png" />
 
@@ -462,8 +492,6 @@
 
           <div class="article-wrapper">
 
-            <img class="article-dechirure" src="img/texture/dechirure1.png" />
-
             <div class="article-title-wrapper" id="article-title-wrapper-music">
               <p class="article-title">Révélation</p>
               <p class="article-author">Baloji</p>
@@ -471,7 +499,7 @@
 
             <div class="article-img-wrapper ">
               <img class="article-img" id="article-img-music3" src="img/articles/music/article3.jpeg">
-              <img class="article-img" id="article-img-music2" src="img/articles/music/article2.jpeg">
+              <img class="article-img" id="article-img-music2" src="img/articles/music/article2.jpg">
               <img class="article-img" id="article-img-music1" src="img/articles/music/article1.jpeg">
               <img class="article-img article-img-crayon" id="article-img-crayon-music" src="img/articles/music/crayon.png">
             </div>
@@ -519,6 +547,7 @@
       </section>
       <!-- END MUSIC WORKSHOP -->
 
+<<<<<<< HEAD
       <!-- NUMBER -->
 
 
@@ -629,6 +658,8 @@
     <!-- END CONTACT -->
 
 
+=======
+>>>>>>> sorties-de-secours
   </div>
   <!-- FIN CONTAINER -->
   </div>

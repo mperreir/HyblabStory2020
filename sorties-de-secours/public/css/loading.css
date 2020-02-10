@@ -169,3 +169,92 @@
   10% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(15px); opacity: 0;}
 }
+
+
+.arrow {
+	width: 38px;
+	height: 14px;
+	margin: auto;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	transition: ease 1s;
+	animation: bouncey 1.6s linear infinite;
+}
+
+.arrow ul {
+  list-style: none;
+}
+
+.arrow ul li {
+  width: 24px;
+  height: 4px;
+  background: white;
+}
+
+.arrow ul li:nth-child(1) {
+  left: 0;
+  top: 0;
+  position: absolute;
+  transform: rotate(45deg);
+  border-radius: 5px 0 0 5px;
+}
+
+.arrow ul li:nth-child(2) {
+  left: 14px;
+  position: absolute;
+  border-radius: 0 5px 5px 0;
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.arrow-black {
+	width: 38px;
+	height: 14px;
+	margin: auto;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	transition: ease 1s;
+	animation: bouncey 1.6s linear infinite;
+}
+
+.arrow-black ul {
+  list-style: none;
+}
+
+.arrow-black ul li {
+  width: 24px;
+  height: 4px;
+  background: black;
+}
+
+.arrow-black ul li:nth-child(1) {
+  left: 0;
+  top: 0;
+  position: absolute;
+  transform: rotate(45deg);
+  border-radius: 5px 0 0 5px;
+}
+
+.arrow-black ul li:nth-child(2) {
+  left: 14px;
+  position: absolute;
+  border-radius: 0 5px 5px 0;
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+@keyframes bouncey {
+	0% {transform: translateY(0);}
+	50% {transform: translateY(6px);}
+	100% {transform: (translateY(0);}
+}

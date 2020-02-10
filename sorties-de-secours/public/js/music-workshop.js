@@ -1,5 +1,6 @@
 var musicFinished = false;
 var vinylTurning = false;
+var textAnimStarted = false;
 
 $(document).ready(function() {
 
@@ -18,8 +19,10 @@ $(document).ready(function() {
     let vinyl_center = new Image();
     let k_vinyl_center = new Konva.Image();
 
-    let support = new Image();
-    let k_support = new Konva.Image();
+    // let support = new Image();
+    // let k_support = new Konva.Image();
+
+    let instructionText = new Konva.Text();
 
     let layer = new Konva.Layer();
     stage.add(layer);
@@ -114,11 +117,28 @@ $(document).ready(function() {
 
                 group.add(k_vinyl_head);
                 layer.add(group);
-
-                // layer.add(k_vinyl_head);
                 layer.batchDraw();
             };
             vinyl_head.src = 'img/experience/music/vinyl_head.png';
+
+            // text
+            instructionText = new Konva.Text({
+                x: 15,
+                y: stage.height() / 2,
+                text: 'Déplacez la tête de lecture\net lancez le son de Baloji.',
+                fontSize: 30,
+                fontFamily: 'NimbusSanL',
+                lineHeight: 1.2
+            });
+
+            // to align text in the middle of the screen, we can set the
+            // shape offset to the center of the text shape after instantiating it
+            instructionText.offset({
+                x: 0,
+                y: instructionText.height() / 2
+            });
+            layer.add(instructionText);
+            layer.batchDraw();
 
         };
         vinyl.src = 'img/experience/music/vinyl2.png';
@@ -131,6 +151,15 @@ $(document).ready(function() {
 
     var music_playing = 0;
     group.on('dragmove', function() {
+
+        stage.container().style.cursor = 'move';
+
+        // remove instructions
+        if (!textAnimStarted) {
+            textAnim.start();
+            textAnimStarted = true;
+        }
+
         mouseDown = true;
         let pos = stage.getPointerPosition();
 
@@ -190,6 +219,18 @@ $(document).ready(function() {
         layer.batchDraw();
     });
 
+    group.on('dragend', function() {
+        stage.container().style.cursor = 'pointer';
+    });
+
+    k_vinyl_head.on('mouseenter', function() {
+        stage.container().style.cursor = 'pointer';
+    });
+    k_vinyl_head.on('mouseleave', function() {
+        stage.container().style.cursor = 'default';
+    });
+
+
     // ANIMATIONS
     let amplitude = 2;
     let period = 5000;
@@ -203,8 +244,18 @@ $(document).ready(function() {
         k_vinyl_center.rotation( vinylCenterAmplitude * (frame.time * 2 * Math.PI) / vinylCenterPeriod);
     }, layer);
 
-    // EVENTS
 
+    let textSpeed = 450;
+    var textAnim = new Konva.Animation(function(frame) {
+        let opacity =  1 - frame.time / textSpeed;
+        instructionText.opacity( opacity );
+        if (opacity <= 0) {
+            instructionText.hide();
+            textAnim.stop();
+        }
+    }, layer);
+
+    // EVENTS
     setTimeout(function () {
         musicFinished = true;
     }, 2500);
