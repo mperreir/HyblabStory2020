@@ -21,7 +21,7 @@
     transform: translateX(-50%) translateY(-50%);
     position: absolute;
   }
-  
+
   #view-13-middle {
     width: 80vw;
     height: 100vh;
@@ -37,7 +37,7 @@
     }
 
 
-    
+
     #view-13-chart-container{
       height: 80%;
       flex: 1;
@@ -53,7 +53,7 @@
       }
     }
 
-    
+
     #view-13-rond-vert{
       z-index: 7;
       position: absolute;
@@ -62,8 +62,8 @@
       height: 30vw;
       border-radius: 30vw;
       background-color: #5A8D8C;
-      align-items: center;  
-      
+      align-items: center;
+
       #view-13-rond-blanc{
         z-index: 0;
         position: absolute;
@@ -84,19 +84,19 @@
         background-color: #cb563e;
         align-items: center;
         top: 1vw;
-        left: 1vw;      
+        left: 1vw;
       }
 
-      
-      
+
+
     }
-    
+
 
 
     article {
       position: absolute;
       left: 50%;
-      width: 40%;
+      width: 30%;
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
       p{
