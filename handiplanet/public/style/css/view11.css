@@ -87,6 +87,7 @@
   color: #cb563e;
 }
 #view11 #view-11-middle figcaption {
+  z-index: 100;
   font-family: Nunito;
   font-style: normal;
   font-weight: normal;
@@ -103,13 +104,13 @@
 }
 #view11 #view-11-middle #view-11-hotel-a-caption {
   position: absolute;
-  top: -5%;
-  left: 70%;
+  left: 0%;
+  transform: translateX(100%);
 }
 #view11 #view-11-middle #view-11-hotel-b-caption {
   position: absolute;
-  top: -5%;
-  left: 70%;
+  left: 0%;
+  transform: translateX(100%);
 }
 #view11 #view-11-middle #view-11-button-hotel-a {
   right: -10%;
