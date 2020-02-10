@@ -3,6 +3,8 @@ class SuperControler {
   constructor(modelSlides) {
     // Header
     let viewHeader = new ViewHeader();
+    let updateHeader = new UpdateHeader(modelSlides, viewHeader.div);
+    modelSlides.addObservers(updateHeader);
 
     // Footer
     var viewFooter = new ViewFooter();
@@ -76,7 +78,7 @@ class SuperControler {
 
     // ModelLastSlide
     let modelLastSlide = new ModelLastSlide();
-    let updateLastSlide = new UpdateLastSlide(viewCenter);
+    let updateLastSlide = new UpdateLastSlide(viewCenterConclusion);
     modelLastSlide.addObservers(updateLastSlide);
 
     // Mediator of slide model
@@ -182,14 +184,10 @@ class MediatorSlide extends Observer {
         if (i > 0 && i < 9) {
           this.composant.question.innerHTML = model.text.question;
           this.composant.speech.innerHTML = model.text.speech;
-          this.modelSlides.setFooterText(model.text.page);
         } else if (i == 0) {
           this.composant.question.innerHTML = "";
           this.composant.speech.innerHTML = "";
           this.modelSlides.setFooterText(model.text.page);
-        } else if (i == 9) {
-          this.composant.question.innerHTML = "";
-          this.composant.speech.innerHTML = "";
         }
       } else {
         console.log('err : unhandled value (mediator slide controler)');
@@ -334,6 +332,26 @@ class UpdateFooter extends Observer {
   }
 }
 
+class UpdateHeader extends Observer {
+
+  constructor(model, composant) {
+    super();
+    this.model = model;
+    this.composant = composant;
+  }
+
+  update(observable, object) {
+    let val = observable.getValue();
+    if (val == observable.obj.length - 1) {
+      this.composant.style.visibility = 'hidden';
+    } else if (val >= 0 || val < observable.obj.length - 1) {
+      this.composant.style.visibility = 'visible';
+    } else {
+      console.log("err : value not handled (updateFooter observer)");
+    }
+  }
+}
+
 class UpdateIntroSlide extends Observer {
 
   constructor() {
@@ -436,7 +454,6 @@ class UpdateSlide2 extends Observer {
       container.setAttribute('id', 'slide2_micros');
       this.composant.div.appendChild(container);
 
-
       let divs = [];
 
       for (let micro in observable.text['labels']) {
@@ -464,7 +481,37 @@ class UpdateSlide2 extends Observer {
       container.appendChild(plug);
       plug.appendChild(text);
 
-      let micros = observable.loadMicros(plug, divs);
+      observable.loadMicros(plug, divs);
+
+      //Wires
+      let wires = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      wires.setAttributeNS(null, 'id', 'wires');
+      container.appendChild(wires);
+      for (var i = 0; i < 4; i++) {
+        let path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+        path.setAttributeNS(null, 'class', 'path');
+        wires.appendChild(path);
+        //handles
+        let h1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        h1.setAttributeNS(null, 'class', 'handle'+i);
+        h1.setAttributeNS(null,'cx', 0);
+        h1.setAttributeNS(null, 'cy', 0);
+        h1.setAttributeNS(null, 'r', 8);
+        h1.setAttributeNS(null, 'mic', i+1);
+        let h2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        h2.setAttributeNS(null,'class', 'handle'+i);
+        h2.setAttributeNS(null, 'cx', 0);
+        h2.setAttributeNS(null, 'cy', 0);
+        h2.setAttributeNS(null, 'r', 8);
+        h2.setAttributeNS(null, 'mic', i+1);
+        wires.appendChild(h1);
+        wires.appendChild(h2);
+
+        let handles = document.querySelectorAll(".handle"+i);
+        let node1 = [i*200 + 50, 300];
+        let node2 = [i*200 + 50, 500];
+        observable.loadWire(handles, path, [node1, node2]);
+      }
 
     } else if (val == false) {
        this.composant.div.querySelector("#slide2_micros").remove();
@@ -761,75 +808,15 @@ class UpdateLastSlide extends Observer {
     let val = observable.getValue();
 
     if (val == true) {
-
-      let container = document.createElement('div');
-      container.setAttribute('id', 'lastSlide');
-
-      let title = document.createElement('div');
-      title.setAttribute('id', 'title');
-      title.setAttribute('class', 'unselectable');
-
-      title.innerHTML = observable.text.title;
-
-      let speech = document.createElement('div');
-      speech.setAttribute('id', 'speech');
-      speech.setAttribute('class', 'unselectable');
-
-      speech.innerHTML = observable.text.speech;
-
-      let logo = document.createElement('div');
-      logo.setAttribute('id', 'logo_alveole');
-
-      let motto = document.createElement('div');
-      motto.setAttribute('id', 'motto');
-      motto.setAttribute('class', 'unselectable');
-
-      motto.innerHTML = observable.text.motto;
-
-      let soundcloud = document.createElement('div');
-      soundcloud.setAttribute('id', 'soundcloud');
-
-      let alveole = document.createElement('div');
-      alveole.setAttribute('id', 'alveole');
-
-      let website = document.createElement('div');
-      website.setAttribute('id', 'website');
-      website.setAttribute('class', 'unselectable');
-
-      website.innerHTML = observable.text.website;
-
-      alveole.appendChild(website);
-
-      let sources = document.createElement('div');
-      sources.setAttribute('id', 'sources');
-
-      let validate = document.createElement('div');
-      validate.setAttribute('id', 'sourceLabel');
-      validate.setAttribute('class', 'unselectable');
-      validate.innerHTML = 'sources';
-
-      sources.appendChild(validate);
-
-      this.composant.div.appendChild(container);
-
-      container.appendChild(title);
-      container.appendChild(speech);
-      container.appendChild(logo);
-      container.appendChild(motto);
-      container.appendChild(soundcloud);
-      container.appendChild(alveole);
-      container.appendChild(sources);
-
-      observable.loadContent(logo, alveole, sources);
-
-      let frame = document.createElement('iframe');
-      frame.setAttribute('src', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/685582138&amp;color=807aa7');
-      frame.setAttribute('id', 'soundcloud');
-      container.appendChild(frame);
-
+      this.composant.div.style.visibility = "visible";
+      observable.loadContent(this.composant.div);
+      this.frame = document.createElement('iframe');
+      this.frame.setAttribute('src', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/685582138&amp;color=807aa7');
+      this.frame.setAttribute('id', 'soundcloud');
+      this.composant.div.appendChild(this.frame);
     } else if (val == false) {
-      this.composant.div.querySelector('#lastSlide').remove();
-      observable.setDestroyed();
+      this.composant.div.removeChild(this.frame);
+      this.composant.div.style.visibility = "hidden";
     }
   }
 }

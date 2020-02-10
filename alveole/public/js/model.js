@@ -221,6 +221,7 @@ class ModelSlide2 extends Observable {
   answer;
   instanciated;
   text;
+  handles;
 
   constructor() {
     super();
@@ -229,6 +230,7 @@ class ModelSlide2 extends Observable {
     this.choice = 1;
     this.answer;
     this.wires;
+    this.handles = [100,100];
   }
 
   getValue() {
@@ -240,6 +242,20 @@ class ModelSlide2 extends Observable {
       this.bool = val;
       this.setChanged();
       this.notifyObservers();
+    }
+  }
+
+  setChoice(val) {
+    if (val == 1) {
+      this.choice = 1;
+    } else if (val == 2) {
+      this.choice = 2;
+    } else if (val == 3) {
+      this.choice = 3;
+    } else if (val == 4) {
+      this.choice = 4;
+    } else {
+      console.log("err : invalid slide 2 choice value");
     }
   }
 
@@ -267,11 +283,68 @@ class ModelSlide2 extends Observable {
         let snap = Snap(container);
         snap.append(data);
       });
-
       this.instanciated = true;
     }
     else {
       console.log('err : slide2 micros already instanciated');
+    }
+  }
+
+  loadWire(handles, path, nodes) {
+    var bezierWeight = 0.2;
+
+    for (var i = 0; i < 4; i++) {
+
+      var point = {x:341, y:331};
+
+      gsap.set(handles[0], {x:nodes[0][0], y:nodes[0][1]});
+      gsap.set(handles[1], {x:nodes[1][0], y:nodes[1][1]});
+
+      Draggable.create(handles, {
+        bounds: path.parentElement,
+        onDrag: updatePath,
+        liveSnap: {
+          points: [point],
+          radius: 100
+        },
+        snap: {
+          points: [point],
+          radius: 10
+        },
+        onDragEnd: updateChoice
+      });
+
+      updatePath();
+
+      function updatePath() {
+
+        gsap.set(handles[0], {x:nodes[0][0], y:nodes[0][1]});
+
+        var x1 = gsap.getProperty(handles[0], 'x');
+        var y1 = gsap.getProperty(handles[0], 'y');
+
+        var x4 = gsap.getProperty(handles[1], 'x');
+        var y4 = gsap.getProperty(handles[1], 'y');
+
+        var dx = Math.abs(x4 - x1) * bezierWeight;
+
+        var x2 = x1 - dx;
+        var x3 = x4 + dx;
+
+        var data = `M${x1} ${y1} C ${x2} ${y1} ${x3} ${y4} ${x4} ${y4}`;
+
+        path.setAttribute('d', data);
+      }
+
+      let that = this;
+      function updateChoice() {
+        if ((this.x == point.x) && (this.y = point.y)) {
+          that.setChoice(this.target.getAttribute('mic'));
+        }
+        else {
+          console.log("Wire not plugged");
+        }
+      }
     }
   }
 

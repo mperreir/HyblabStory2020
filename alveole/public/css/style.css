@@ -300,6 +300,53 @@ footer {
   color: #9E90F2;
 }
 
+#wires {
+  position: absolute;
+  width: 1000%;
+  height: 1000%;
+}
+
+#wires .path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  stroke: white!important;
+  stroke-width: 6!important;
+  z-index: 13!important;
+}
+
+.handle0 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+.handle1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+.handle2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+.handle3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
 #slide3_mixtable {
   position: absolute;
   width: 100%;
