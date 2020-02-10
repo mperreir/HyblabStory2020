@@ -263,8 +263,8 @@ $(document).ready(function() {
     $('#music-section').on('mousewheel', function () {
         if (musicFinished) {
             // stop vinyl
-            set_music_pause("vinyl");
-            set_music_pause("vinyl-noise");
+            set_music_pause_and_stop("vinyl");
+            set_music_pause_and_stop("vinyl-noise");
 
             vinylAnim.stop();
             vinylCenterAnim.stop();

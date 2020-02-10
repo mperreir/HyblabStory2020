@@ -75,9 +75,9 @@ $(document).ready(function() {
         if (   scrollPos < music_workshop.top - pxBeforeTop
             || scrollPos >= music_workshop.bottom) {
             set_music_pause("vinyl");
-            set_music_play("generalMusic");
-
             set_music_pause("vinyl-noise");
+            
+            set_music_play("generalMusic");
         }
 
     });
@@ -88,41 +88,26 @@ $(document).ready(function() {
     $(".sound-content > svg").click(function() {
 
         if (!musicMuted) {
+            musicMuted = true;
+
             $soundContent.addClass("sound-content-mute");
 
-            console.log(document.getElementById("generalMusic").paused);
-            console.log(document.getElementById("voice").paused);
-            console.log(document.getElementById("ambianceExpo").paused);
-            console.log(document.getElementById("danceMusic").paused);
-            console.log(document.getElementById("vinyl-noise").paused);
-            console.log(document.getElementById("vinyl").paused);
+            ["generalMusic", "voice", "ambianceExpo", "danceMusic", "vinyl-noise", "vinyl"].forEach((id) => {
+                if (!document.getElementById(id).paused) {
+                    console.log(id + " is paused : " + document.getElementById(id).paused);
+                    playingSoundList.push(id);
+                    set_music_pause(id);
+                }
+            });
 
-            set_music_pause("generalMusic");
-            set_music_pause("voice");
-            set_music_pause("ambianceExpo");
-            set_music_pause("danceMusic");
-            set_music_pause("vinyl-noise");
-            set_music_pause("vinyl");
-
-            musicMuted = true;
         } else {
+            musicMuted = false;
+
             $soundContent.removeClass("sound-content-mute");
 
-            console.log(document.getElementById("generalMusic").paused);
-            console.log(document.getElementById("voice").paused);
-            console.log(document.getElementById("ambianceExpo").paused);
-            console.log(document.getElementById("danceMusic").paused);
-            console.log(document.getElementById("vinyl-noise").paused);
-            console.log(document.getElementById("vinyl").paused);
-
-            set_music_play("generalMusic");
-            set_music_play("voice");
-            set_music_play("ambianceExpo");
-            set_music_play("danceMusic");
-            set_music_play("vinyl-noise");
-            set_music_play("vinyl");
-
-            musicMuted = false;
+            playingSoundList.forEach((id) => {
+                set_music_play(id);
+            });
         }
 
     });
