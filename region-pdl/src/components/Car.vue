@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CarGirlSVG v-if="getChatacterGender === 'mme'" class="car-svg" :class="{rollingOut: rollingOut}"/>
+    <CarGirlSVG v-if="getCharacterGender === 'mme'" class="car-svg" :class="{rollingOut: rollingOut}"/>
     <CarBoySVG v-else class="car-svg car-svg-boy" :class="{rollingOut: rollingOut}"/>
     <WheelSVG class="wheel left-wheel" :class="{moving: moving, rollingOutLeft: rollingOut}" />
     <WheelSVG class="wheel right-wheel" :class="{moving: moving, rollingOutRight: rollingOut}" />
@@ -23,7 +23,7 @@ export default {
   props: ['moving', 'rollingOut'],
   data: () => ({}),
   computed: {
-    ...mapGetters(["getChatacterGender"])
+    ...mapGetters(["getCharacterGender"])
   },
   methods: {}
 };

@@ -4,8 +4,8 @@
     <SimpleText :width="70" :x="15" :y="15" :style="{textAlign: 'center'}">
       Pour accompagner la transition énergétique, la Région participe au
       déploiement de bornes de recharge pour véhicules électriques sur
-      l’ensemble du territoire ligérien. Ainsi, lorsque {{ getChatacter }} prend sa
-      voiture, {{ getChatacterGender === 'm' ? 'il' : 'elle' }} sait qu’il y aura toujours une
+      l’ensemble du territoire ligérien. Ainsi, lorsque {{ getCharacter }} prend sa
+      voiture, {{ getCharacterGender === 'm' ? 'il' : 'elle' }} sait qu’il y aura toujours une
       <b>borne à proximité</b>.
     </SimpleText>
 
@@ -70,7 +70,7 @@ export default {
     nextInitiated: false
   }),
   computed: {
-    ...mapGetters(["getChatacter", "getChatacterGender"])
+    ...mapGetters(["getCharacter", "getCharacterGender"])
   },
   methods: {
     onNext() {
@@ -85,7 +85,7 @@ export default {
         if (train.x + train.width < 0) {
           this.nextInitiated = true;
           this.$store.dispatch("nextScene", {
-            sceneId: this.getChatacterGender === "m" ? 2 : 1
+            sceneId: this.getCharacterGender === "m" ? 2 : 1
           });
         } else {
           setTimeout(this.goNext, 100);

@@ -4,7 +4,7 @@
     <BackgroundLarge :class="{test: true, moved: carHasStarted}" />
     <div :class="{carStartProposal: true, carStartProposalFade: carHasStarted}">
       <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
-        Sur le chemin du travail, {{ getChatacter }} observe de nombreux équipements
+        Sur le chemin du travail, {{ getCharacter }} observe de nombreux équipements
         pour la
         <br />
         <b>transition énergétique qui ont bénéficié d'un financement régional.</b>
@@ -14,7 +14,7 @@
     </div>
     <div v-show="carGoesOut">
       <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
-        Pendant le trajet, {{ getChatacter }} s'aperçoit que la batterie de sa voiture est faible.
+        Pendant le trajet, {{ getCharacter }} s'aperçoit que la batterie de sa voiture est faible.
         <br />Un passage aux bornes de rechargement s'impose.
       </SimpleText>
     </div>
@@ -61,7 +61,7 @@ export default {
     podcastSong: null
   }),
   computed: {
-    ...mapGetters(["getChatacter"])
+    ...mapGetters(["getCharacter"])
   },
   methods: {
     startCar() {

@@ -26,12 +26,12 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    getChatacter: state => {
+    getCharacter: state => {
       return state.character === "dubois"
         ? "Mme Dubois"
         : "M. Moreau";
     },
-    getChatacterGender: state => {
+    getCharacterGender: state => {
       return state.character === "dubois"
         ? "mme"
         : "m";

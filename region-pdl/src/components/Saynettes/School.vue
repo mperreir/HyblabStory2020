@@ -1,7 +1,7 @@
 <template>
   <div class="saynette">
     <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
-      <p v-if="getChatacterGender === 'mme'">
+      <p v-if="getCharacterGender === 'mme'">
         Juste à côté de l’entreprise dans laquelle travaille Mme Dubois,
         se trouve une école dans laquelle M. Moreau est professeur.
         Cette année, l’école a bénéficié d’une
@@ -9,7 +9,7 @@
         <b>aide de la Région</b> pour réaliser
         <b>des travaux d’isolation</b>.
       </p>
-      <p v-if="getChatacterGender === 'm'">
+      <p v-if="getCharacterGender === 'm'">
         M. Moreau est professeur des écoles. Cette année, son école a bénéficié
         <br />
         <b>d’une aide de la Région</b> pour réaliser
@@ -38,7 +38,7 @@
 
     <SimpleButton text="Continuer l'histoire" :width="23" :x="75" :y="90" @click.native="onNext" />
     <Background class="svg" />
-    <RoadSVG v-if="getChatacterGender === 'm'" class="road-svg" />
+    <RoadSVG v-if="getCharacterGender === 'm'" class="road-svg" />
   </div>
 </template>
 
@@ -65,7 +65,7 @@ export default {
     closePopover2: false
   }),
   computed: {
-    ...mapGetters(["getChatacterGender"])
+    ...mapGetters(["getCharacterGender"])
   },
   methods: {
     closePopover(i) {
@@ -82,7 +82,7 @@ export default {
     },
     onNext() {
       this.$store.dispatch("nextScene", {
-        sceneId: this.getChatacterGender === "m" ? -1 : 1
+        sceneId: this.getCharacterGender === "m" ? -1 : 1
       });
     }
   }

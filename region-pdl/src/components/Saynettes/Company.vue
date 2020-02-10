@@ -1,7 +1,7 @@
 <template>
   <div class="saynette">
     <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
-      <span v-if="getChatacterGender === 'mme'">
+      <span v-if="getCharacterGender === 'mme'">
         L’entreprise de Mme Dubois est engagée pour la transition énergétique et profite des aides de la Région.
         <br />À présent, l’entreprise crée sa
         <b>
@@ -9,7 +9,7 @@
           grâce à la biomasse
         </b>.
       </span>
-      <span v-if="getChatacterGender === 'm'">
+      <span v-if="getCharacterGender === 'm'">
         À côté de l’école dans laquelle enseigne M. Moreau, se trouve l’entreprise de Mme Dubois.
         <br />Elle est engagée pour la transition énergétique et profite des aides de la Région.
         <br />À présent, elle crée sa
@@ -46,7 +46,7 @@
     </PlusButton>
     <SimpleButton text="Continuer l'histoire" :width="23" :x="75" :y="90" @click.native="onNext" />
     <CompanySVG class="svg" />
-    <RoadSVG v-if="getChatacterGender === 'mme'" class="road-svg" />
+    <RoadSVG v-if="getCharacterGender === 'mme'" class="road-svg" />
   </div>
 </template>
 
@@ -74,12 +74,12 @@ export default {
     closePopover4: false
   }),
   computed: {
-    ...mapGetters(["getChatacterGender"])
+    ...mapGetters(["getCharacterGender"])
   },
   methods: {
     onNext() {
       this.$store.dispatch("nextScene", {
-        sceneId: this.getChatacterGender === "m" ? 2 : 1
+        sceneId: this.getCharacterGender === "m" ? 2 : 1
       });
     },
     closePopover(i) {

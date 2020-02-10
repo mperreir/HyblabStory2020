@@ -2,7 +2,7 @@
   <div class="saynette">
     <Background class="svg" />
     <SimpleText :y="15" :x="15" :width="70" :style="{textAlign: 'center'}">
-      <span v-if="getChatacterGender === 'mme'">
+      <span v-if="getCharacterGender === 'mme'">
         Il y a peu, Mme Dubois a fait appel à la Région afin
         <b>d’obtenir des aides pour améliorer l’isolation</b> de sa maison.
         Cette rénovation, rendue possible
@@ -10,7 +10,7 @@
         <br />de faire des
         <b>économies d’énergie</b> et de participer à la transition écologique de la région.
       </span>
-      <span v-if="getChatacterGender === 'm'">
+      <span v-if="getCharacterGender === 'm'">
         Il y a peu, M. Moreau a fait appel à la Région afin
         <b>d’obtenir des aides pour améliorer l’isolation</b> de sa maison.
         Cette rénovation, rendue possible
@@ -47,12 +47,12 @@
       </p>
     </PlusButton>
     <PlusButton v-model="closePopover2" class="plus2" :width="35" @open="closePopover(2)">
-      <p v-if="getChatacterGender === 'm'">
+      <p v-if="getCharacterGender === 'm'">
         La maison de M. Moreau fait
         <span class="red">50 m².</span> Il a eu le droit à
         <span class="red">4000 euros</span> d’aides.
       </p>
-      <p v-if="getChatacterGender === 'mme'">
+      <p v-if="getCharacterGender === 'mme'">
         La maison de Mme Dubois fait
         <span class="red">150 m².</span> Elle a eu le droit à
         <span class="red">4000 euros</span> d’aides.
@@ -144,7 +144,7 @@ export default {
     fakeName: "moreau"
   }),
   computed: {
-    ...mapGetters(["getChatacterGender"])
+    ...mapGetters(["getCharacterGender"])
   },
   methods: {
     onChange(value) {
