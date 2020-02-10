@@ -27,6 +27,18 @@
    background-color: #7D98DD;
 }
 
+.expChoice-sound {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 2s;
+    transition-delay: 1.5s;
+}
+
+.expChoiceExpand .expChoice-sound {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
 
 .img-menu {
   z-index: 1; /* below crayon */
