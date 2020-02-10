@@ -106,7 +106,7 @@ export default {
   animation-name: train-move;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-duration: 4s;
+  animation-duration: 10s;
 }
 
 @-webkit-keyframes train-move {
@@ -118,11 +118,11 @@ export default {
     -o-transform: translateX(-350%);
   }
   to {
-    transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    -moz-transform: translateX(200%);
-    -webkit-transform: translateX(200%);
-    -o-transform: translateX(200%);
+    transform: translateX(2000%);
+    -ms-transform: translateX(2000%);
+    -moz-transform: translateX(2000%);
+    -webkit-transform: translateX(2000%);
+    -o-transform: translateX(2000%);
   }
 }
 @keyframes train-move {
@@ -134,11 +134,11 @@ export default {
     -o-transform: translateX(-350%);
   }
   to {
-    transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    -moz-transform: translateX(200%);
-    -webkit-transform: translateX(200%);
-    -o-transform: translateX(200%);
+    transform: translateX(2000%);
+    -ms-transform: translateX(2000%);
+    -moz-transform: translateX(2000%);
+    -webkit-transform: translateX(2000%);
+    -o-transform: translateX(2000%);
   }
 }
 
