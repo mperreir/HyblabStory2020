@@ -112,7 +112,7 @@
 }
 
 .article-footer > p, .article-footer > div {
-    flex-grow: 1;
+    flex: 1 1 0px;
     z-index: 6;
 }
 
@@ -312,15 +312,15 @@
     bottom: -200px;
 }
 #article-music-yellow3 {
-    width: 829px;
-    height: 854px;
-    left: -20px;
-    bottom: -300px;
+    width: 600px;
+    height: 600px;
+    left: -50px;
+    bottom: -250px;
     transform: rotate(150deg);
 }
 #article-music-orange3 {
-    width: 645px;
-    height: 665px;
+    width: 500px;
+    height: 500px;
     right: -175px;
     top: 35%;
     transform: rotate(-45.69deg);
@@ -335,7 +335,7 @@
     width: 636px;
     height: 616px;
     right: 300px;
-    bottom: -125px;
+    bottom: -250px;
     transform: matrix(-0.98, 0.21, 0.21, 0.98, 0, 0);
 }
 /* END MUSIC */
