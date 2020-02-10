@@ -1,15 +1,17 @@
-#logo-sorties {
-  position: absolute;
-  left: 0;
-  top: 10%;
-
-  z-index: 2;
-}
-
 #presentation-section {
   position: relative;
   background-color: #1E1E1E;
   height: 100vh;
+}
+
+
+#logo-sorties {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 663/2);
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
 }
 
 #end-presentation {
@@ -33,7 +35,22 @@
   margin-top: 20px;
 }
 
-.scroll-right {
+#presentation-text {
+
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 39px;
+    color: #F6F5F5;
+}
+
+/* .scroll-right {
   top: 20%;
   left: 50%;
   width: 60%;
@@ -57,4 +74,4 @@
   height: 57px;
   color: #F6F5F5;
 
-}
+} */
