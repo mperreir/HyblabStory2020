@@ -173,7 +173,6 @@ $(document).ready(function() {
 
         /* CHANGE MUSIC */
         if (angleDeg < 15 || angleDeg > 50) {
-            console.log("Musique OFF");
             music_playing = 0;
             set_music_pause("vinyl");
             set_music_volume("vinyl", 1);
@@ -195,8 +194,6 @@ $(document).ready(function() {
             if (angleDeg >= 15 && angleDeg < 35) {
 
                 if (music_playing !== 1) {
-                    console.log("Musique 1");
-
                     change_music("vinyl", 'sounds/baloji/Peau de Chagrin Bleu de Nuit.mp3');
                     set_music_play("vinyl");
                     music_playing = 1;
@@ -205,8 +202,6 @@ $(document).ready(function() {
             } else if (angleDeg >= 35 && angleDeg < 50) {
 
                 if (music_playing !== 2) {
-                    console.log("Musique 2");
-
                     change_music("vinyl", 'sounds/baloji/L’Hiver Indien.mp3');
                     set_music_play("vinyl");
                     music_playing = 2;
