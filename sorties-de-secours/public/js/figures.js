@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $.getJSON("data/resources.json", function(json) {
-        console.log(typeof $('#range').val());
         $('#range').on('input', function () {
             let step = 61;
 

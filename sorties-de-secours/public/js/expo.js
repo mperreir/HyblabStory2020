@@ -130,7 +130,10 @@ $(document).ready(function() {
     $('#expo-section').on('mousewheel', function () {
         if (expoFinished) {
             anim_premier_rang_going.start();
-            initArticle('expo');
+            let mouseAnimatedExpo = document.querySelector("#mouse-animated-expo");
+            mouseAnimatedExpo.classList.remove('fadeInUp');
+            mouseAnimatedExpo.classList.add('fadeOut');
+            mouseAnimatedExpo.addEventListener('animationend', function() { initArticle('expo'); });
         }
     });
 

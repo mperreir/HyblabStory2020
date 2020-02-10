@@ -93,7 +93,6 @@ $(document).ready(function() {
             }, 0, function () {
               // Transition Experience Dance
               bodyScrollLock.disableBodyScroll("#container"); // enable to avoid mousewheel event
-
               if(expId === "expChoiceDance") {
 
                 $("#dance-first-slide").css("background-color", "white");
@@ -120,6 +119,18 @@ $(document).ready(function() {
                   }
                   //e.preventDefault();
                 });
+              } else if(expId === "expChoiceMusique") {
+                setTimeout(function() {
+                  let mouseAnimatedMusic = document.querySelector("#mouse-animated-music");
+                  mouseAnimatedMusic.classList.remove('fadeOut');
+                  mouseAnimatedMusic.classList.add('fadeInUp');
+                }, 5000);
+              } else if(expId === "expChoiceExpo") {
+                setTimeout(function() {
+                  let mouseAnimatedExpo = document.querySelector("#mouse-animated-expo");
+                  mouseAnimatedExpo.classList.remove('fadeOut');
+                  mouseAnimatedExpo.classList.add('fadeInUp');
+                }, 5000);
               }
 
             });

@@ -55,7 +55,6 @@ $(document).ready(function() {
     if (scrollPos > presPos.top - 400 && presentationFixed && scrollPos < menuPos.top - 100) {
       e.preventDefault();
       bodyScrollLock.disableBodyScroll(presentationSection);
-      console.log("J'ANIME");
       $('html,body').animate({
           scrollTop: $("#presentation-section").offset().top
       }, 200);

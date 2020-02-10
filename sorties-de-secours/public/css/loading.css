@@ -216,8 +216,10 @@
   position: absolute;
   bottom: 1%;
   text-align: center;
-
   z-index: 9999;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 50px;
 }
 
 .arrow-scroll-down span {
@@ -230,6 +232,12 @@
   text-transform: uppercase;
 
   color: black;
+}
+
+.arrow-scroll-down img {
+  position: absolute;
+  top: 30px;
+  left: -5px;
 }
 
 @keyframes bouncey {
