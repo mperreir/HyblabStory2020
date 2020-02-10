@@ -33,6 +33,7 @@ img.logo-contact-wrapper {
   left: 1200px;
   top: 300px;
   height: 402px;
+  font-family: NimbusSanL;
 }
 
 #title-contact{
@@ -40,6 +41,7 @@ img.logo-contact-wrapper {
   font-style: normal;
   font-weight: normal;
   color: #F6F5F5;
+  font-size: 200%;
 }
 
 
@@ -60,18 +62,6 @@ th{
   line-height: 200%;
 }
 
-.table_message{
-  height: 150px;
-  vertical-align: top;
-}
-
-
-.table_title{
-  width: 25%;
-  font-weight: 500;
-  color: #F6F5F5;
-  font-family: NimbusSanL;
-}
 
 #btnSend{
   background-color: #1E1E1E;
@@ -80,6 +70,7 @@ th{
   border: 1px solid white;
   border-radius: 2px;
   margin-top: 10px;
+  font-size: 200%;
 }
 #btnSend:hover {background-color: #373837}
 
@@ -117,4 +108,16 @@ th{
   align-items: center;
   color: #F6F5F5;
 
+}
+
+.table_message{
+  height: 150px;
+  vertical-align: top;
+}
+
+.table_title{
+  width: 25%;
+  font-weight: 500;
+  color: #F6F5F5;
+  font-family: NimbusSanL;
 }

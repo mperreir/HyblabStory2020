@@ -58,7 +58,8 @@
     /* font-weight: bold; */
 }
 
-img.logo-contact-wrapper {
+img.logo-credit-wrapper {
+  display: block;
   width: 518.61px;
   height: auto;
   margin-left: auto;
