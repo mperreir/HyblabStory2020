@@ -28,6 +28,8 @@ class View1 extends View {
         // Background elements
         this.hotel = document.getElementById('view-1-hotel-img');
         this.luggage = document.getElementById('view-1-luggage-img');
+        this.bulle1 = document.getElementById('view1-bulle1');
+        this.bulle2 = document.getElementById('view1-bulle2');
 
         // Parallax for background elements
         document.addEventListener('mousemove', (e) => {
@@ -35,6 +37,8 @@ class View1 extends View {
             const y = e.clientY - window.innerHeight / 2;
             this.hotel.style.transform = `translateX(${x * -0.1}px) translateY(${y * -0.05}px)`;
             this.luggage.style.transform = `translateX(${x * -0.05}px) translateY(${y * -0.1}px)`;
+            this.bulle1.style.transform = `translateX(${x * 0.08}px) translateY(${y * 0.05}px)`;
+            this.bulle2.style.transform = `translateX(${x * 0.05}px) translateY(${y * -0.1}px)`;
         });
 
         // Select color of character
