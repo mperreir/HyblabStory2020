@@ -120,8 +120,8 @@ class ModelIntroSlide extends Observable {
       container : container,
       renderer: 'svg',
       name: 'animation1',
-      loop: true,
-      autoplay: false,
+      loop: false,
+      autoplay: true,
       path: 'data/intro.json',
       rendererSettings: {
         className: 'slideIntroAnimation',
@@ -546,10 +546,16 @@ class ModelSlide5 extends Observable {
   // values
   bool;
   text;
+  choice;
 
   constructor() {
     super();
     this.bool = false;
+    this.choice = 1;
+  }
+
+  getChoice() {
+    return this.choice;
   }
 
   getValue() {
@@ -562,6 +568,32 @@ class ModelSlide5 extends Observable {
       this.setChanged();
       this.notifyObservers();
     }
+  }
+
+  loadTimeLine(container) {
+    Snap.load('data/timeline-vide.svg', (data) => {
+      let snap = Snap(container);
+      snap.append(data);
+    });
+    Snap.load('data/timeline-5min.svg', (data) => {
+      let snap = Snap(container);
+      snap.append(data);
+    });
+    Snap.load('data/timeline-10min.svg', (data) => {
+      let snap = Snap(container);
+      snap.append(data);
+    });
+    Snap.load('data/timeline-20min.svg', (data) => {
+      let snap = Snap(container);
+      snap.append(data);
+    });
+  }
+
+  loadValide(div_valide) {
+    Snap.load('data/tournage_valide.svg', function(data) {
+      let snap = Snap(div_valide);
+      snap.append(data);
+    });
   }
 }
 

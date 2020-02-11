@@ -141,26 +141,34 @@ footer {
   background-color: black;
 }
 
-.onClick {
-  top: 35%;
-  width: 28%!important;
-  height: 65%!important;
-}
-
-#slideIntroAnimation {
+#slideIntro {
   position: absolute;
   height: 100%;
   width: 100%;
 }
 
+.slideIntroAnimation {
+  position: absolute;
+  transform: scale(1.2)!important;
+}
+
+
 #hotel {
   position: absolute;
   left: 5%;
+  top: 35%;
+  width: 28%;
+  height: 65%;
+  z-index: 1;
 }
 
 #studio {
   position: absolute;
   right: 5%;
+  top: 35%;
+  width: 28%;
+  height: 65%;
+  z-index: 1;
 }
 
 .slide1 {
@@ -168,6 +176,13 @@ footer {
   top: 0%;
   width: 100%!important;
   height: 80%!important;
+  z-index: -1;
+}
+
+#slide1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .slide1Label {
@@ -396,7 +411,7 @@ footer {
 }
 
 .modal-content #sub_text {
-  font-size: 15%;
+  font-size: 14%;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -407,9 +422,7 @@ footer {
 }
 
 #button-next {
-  flex: shrink;
-  bottom: 5%;
-  width: 12%;
+  width: 13%;
   height: 20%;
   left: 44%;
 }
@@ -759,17 +772,6 @@ dessus de l'apect ratio 16/9 */
   stroke: #9E90F2!important;
 }
 
-.animation_checked_test, .animation_checked_test *{
-  fill: #9E90F2!important;
-  stroke: #9E90F2!important;
-}
-
-/* .animation_checked_test {
-  transform: scale(1.1)!important;
-  transition: all 0.3s ease-in-out;
-  z-index: 1000;
-} */
-
 .label_checked {
   color: #9E90F2;
 }
@@ -902,6 +904,7 @@ dessus de l'apect ratio 16/9 */
   font-size: 20%;
   line-height: 172%;
   text-align: center;
+  z-index: 1;
 }
 
 #slide5_1_label {
@@ -914,6 +917,44 @@ dessus de l'apect ratio 16/9 */
 
 #slide5_3_label {
   right: 0;
+}
+
+#slide5TimeLine {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  top: 70%;
+}
+
+#svg_slide5-vide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#svg_slide5-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+#svg_slide5-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+#svg_slide5-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.slide5visible {
+  visibility: visible!important;
+  z-index: 1;
 }
 
 #slide6_mixtable {
