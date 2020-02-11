@@ -4,7 +4,8 @@
     <SimpleText :y="15" :x="15" :width="70" :style="{textAlign: 'center'}">
       <span v-if="getCharacterGender === 'mme'">
         Il y a peu, Mme Dubois a fait appel à la Région afin
-        <b>d’obtenir des aides pour améliorer l’isolation</b><br> de sa maison.
+        <b>d’obtenir des aides pour améliorer l’isolation</b>
+        <br />de sa maison.
         Cette rénovation, rendue possible
         <b>grâce aux aides de la Région</b>, a permis à Mme Dubois
         <br />de faire des
@@ -142,15 +143,27 @@ export default {
     closePopover3: false,
     closePopover4: false,
     closePopover5: false,
-    fakeName: "moreau"
+    fakeName: "moreau",
+    canPlay: false
   }),
+  mounted() {
+    this.clickSound = new Howl({
+      src: ["sounds/water-drop.mp3"],
+      volume: 0.2
+    });
+  },
   computed: {
     ...mapGetters(["getCharacterGender"])
   },
   methods: {
     onChange(value) {
       this.indexHouse = value;
-      this.clickSound.play();
+
+      if (this.canPlay) {
+        this.clickSound.play();
+      }
+
+      this.canPlay = true;
     },
     onNextCar() {
       this.$store.dispatch("nextScene", {});
@@ -194,12 +207,6 @@ export default {
           break;
       }
     }
-  },
-  mounted() {
-    this.clickSound = new Howl({
-      src: ["sounds/water-drop.mp3"],
-      volume: 0.2
-    });
   }
 };
 </script>

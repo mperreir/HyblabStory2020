@@ -66,21 +66,14 @@ export default {
 </script>
 
 <style scoped>
-
-.plus-text {
-  color: blue;
-}
-
 .plus-button {
   position: absolute;
 }
 
 .plus {
-  flex-wrap: wrap;
   position: absolute;
   border-radius: 1vh;
   width: 5vh;
-  border: 0.3vh solid #fff;
 }
 
 .plus:hover {
