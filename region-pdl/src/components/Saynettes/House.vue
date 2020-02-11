@@ -271,7 +271,7 @@ export default {
 .plus5 {
   position: absolute;
   top: 52%;
-  left: 45%;
+  left: 52%;
 }
 
 .bounce,
