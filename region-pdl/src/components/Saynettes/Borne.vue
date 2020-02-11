@@ -5,7 +5,7 @@
       Pour accompagner la transition énergétique, la Région participe au
       déploiement de bornes de recharge pour véhicules électriques sur
       l’ensemble du territoire ligérien. Ainsi, lorsque {{ getCharacter }} prend sa
-      voiture, {{ getCharacterGender === 'm' ? 'il' : 'elle' }} sait qu’il y aura toujours une
+      voiture, <br>{{ getCharacterGender === 'm' ? 'il' : 'elle' }} sait qu’il y aura toujours une
       <b>borne à proximité</b>.
     </SimpleText>
 
@@ -17,7 +17,7 @@
 
     <PlusButton class="plus-button" :width="23">
       <p class="text">
-        En moyenne, on peut trouver une borne tous les
+        En moyenne, on peut trouver une borne <br> tous les
         <span class="orange">13 km</span> dans toute la région.
       </p>
     </PlusButton>

@@ -43,18 +43,18 @@
     <PlusButton v-model="closePopover1" class="plus1" :width="30" @open="closePopover(1)">
       <p class="text">
         En 2018,
-        <span class="orange">1077 maisons</span> ont bénéficié de cette aide à l’isolation.
+        <span class="orange">1077 maisons</span> <br> ont bénéficié de cette aide <br> à l’isolation.
       </p>
     </PlusButton>
     <PlusButton v-model="closePopover2" class="plus2" :width="35" @open="closePopover(2)">
       <p v-if="getCharacterGender === 'm'">
         La maison de M. Moreau fait
-        <span class="orange">50 m².</span> Il a eu le droit à
+        <span class="orange">50 m².</span> <br> Il a eu le droit à
         <span class="orange">4000 euros</span> d’aides.
       </p>
       <p v-if="getCharacterGender === 'mme'">
         La maison de Mme Dubois fait
-        <span class="orange">150 m².</span> Elle a eu le droit à
+        <span class="orange"> <br> 150 m².</span> Elle a eu le droit à
         <span class="orange">4000 euros</span> d’aides.
       </p>
     </PlusButton>
@@ -68,8 +68,8 @@
       <p>
         Pour une maison de
         <span class="orange">50 m².</span>
-        Le gain moyen sur la consommation est de
-        <span class="orange">58 %</span> après les travaux.
+        Le gain moyen <br> sur la consommation <br> est de
+        <span class="orange">58 %</span> après <br> les travaux.
       </p>
     </PlusButton>
     <PlusButton
@@ -82,7 +82,7 @@
       <p>
         Pour une maison de
         <span class="orange">100 m².</span>
-        Le gain moyen sur la consommation est de
+        <br> Le gain moyen <br>sur la consommation <br>est de
         <span class="orange">51 %</span> après les travaux.
       </p>
     </PlusButton>
@@ -96,7 +96,7 @@
       <p>
         Pour une maison de
         <span class="orange">150 m².</span>
-        Le gain moyen sur la consommation est de
+        <br>Le gain moyen <br> sur la consommation <br> est de
         <span class="orange">53 %</span> après les travaux.
       </p>
     </PlusButton>
@@ -247,23 +247,23 @@ export default {
 
 .plus2 {
   position: absolute;
-  top: 70%;
+  top: 67%;
   left: 35%;
 }
 
 .plus3 {
   position: absolute;
-  top: 75%;
+  top: 60%;
   left: 55%;
 }
 .plus4 {
   position: absolute;
-  top: 72%;
+  top: 55%;
   left: 55%;
 }
 .plus5 {
   position: absolute;
-  top: 68%;
+  top: 52%;
   left: 45%;
 }
 
