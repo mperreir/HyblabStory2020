@@ -115,6 +115,13 @@ class ModelIntroSlide extends Observable {
     }
   }
 
+  loadNext(container) {
+    Snap.load('data/next.svg', function(data) {
+      let snap = Snap(container);
+      snap.append(data);
+    });
+  }
+
   loadIntro(container) {
     this.intro = bodymovin.loadAnimation({
       container : container,
@@ -129,6 +136,11 @@ class ModelIntroSlide extends Observable {
       }
     });
     this.instanciated = true;
+    return this.intro;
+  }
+
+  getIntro() {
+    return this.intro;
   }
 }
 

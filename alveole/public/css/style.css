@@ -75,7 +75,8 @@ footer {
 
 #svg_ellipse {
   position: absolute;
-  height: 100%;
+  bottom: 0;
+  height: 150%!important;
   width: 100%;
   left: 0;
 }
@@ -149,7 +150,32 @@ footer {
 
 .slideIntroAnimation {
   position: absolute;
-  transform: scale(1.2)!important;
+  transform: scale(1.3)!important;
+}
+
+#next {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  top: 40%;
+  left: 40%;
+  z-index: 1;
+}
+
+#introSlide_next {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.next_checked {
+  transform: scale(1.1)!important;
+  transition: all .2s ease-in-out;
+}
+
+.next_checked, .next_checked * {
+  stroke: #9E90F2!important;
 }
 
 

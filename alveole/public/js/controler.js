@@ -31,7 +31,7 @@ class SuperControler {
 
     // ModelSlide0
     let modelIntroSlide = new ModelIntroSlide();
-    let updateIntroSlide = new UpdateIntroSlide(modelPopup, viewCenter);
+    let updateIntroSlide = new UpdateIntroSlide(modelPopup, viewCenter, modelSlides);
     modelIntroSlide.addObservers(updateIntroSlide);
 
     // ModelSlide1
@@ -255,65 +255,6 @@ class MediatorModal extends Observer {
   }
 }
 
-class MediatorConclusion extends Observer {
-
-  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewModalConclusion) {
-
-    super();
-
-    this.slides = {
-      "0": modelIntroSlide,
-      "1": modelSlide1,
-      "2": modelSlide2,
-      "3": modelSlide3,
-      "4": modelSlide4,
-      "5": modelSlide5,
-      "6": modelSlide6,
-      "7": modelSlide7,
-      "8": modelSlide8,
-      "9": modelLastSlide
-    };
-
-    this.loadText(this.slides);
-    this.model = modelSlides;
-    this.composant = viewCenterConclusion;
-  }
-
-  update(observable, object) {
-    let val = observable.getValue();
-
-    const entries = Object.entries(this.slides);
-
-    for (const [i, model] of entries) {
-      if (i != val) {
-        model.setValue(false);
-      }
-      else if (i == val) {
-        model.setValue(true);
-        if (i == 9) {
-          this.composant.theme.innerHTML = model.text["theme"];
-          this.composant.center_speech1.innerHTML = model.text["header-speech"];
-          this.composant.center_speech2.innerHTML = model.text["center-speech"];
-          this.composant.footer_speech.innerHTML = model.text["footer-speech"];
-        }
-      }
-    }
-  }
-
-  loadText(slides) {
-    $.getJSON("data/text.json", function(data) {
-
-      const entries = Object.entries(data);
-      let count = 0;
-
-      for (const [i, text] of entries) {
-        slides[count].text = text;
-        count++;
-      }
-    });
-  }
-}
-
 class UpdateFooter extends Observer {
 
   constructor(composant) {
@@ -325,9 +266,11 @@ class UpdateFooter extends Observer {
     let val = observable.getValue();
     if (val == observable.obj.length - 1) {
       this.composant.div.style.visibility = 'hidden';
-    } else if (val >= 0 || val < observable.obj.length - 1) {
+    } else if (val > 0 || val < observable.obj.length - 1) {
       this.composant.div.style.visibility = 'visible';
       this.composant.text.innerHTML = observable.getFooterText()["down"];
+      this.composant.roue.play();
+      setTimeout(() => {this.composant.roue.pause();}, 1000);
     } else {
       console.log("err : value not handled (updateFooter observer)");
     }
@@ -336,10 +279,11 @@ class UpdateFooter extends Observer {
 
 class UpdateIntroSlide extends Observer {
 
-  constructor(model, composant) {
+  constructor(model, composant, slides) {
     super();
     this.model = model;
     this.composant = composant;
+    this.slides = slides;
   }
 
   update(observable, object) {
@@ -350,7 +294,37 @@ class UpdateIntroSlide extends Observer {
       div.setAttribute('id', 'slideIntro');
       this.composant.div.appendChild(div);
 
-      observable.loadIntro(div);
+      let start = document.createElement('div');
+      start.setAttribute('id', 'starts');
+
+      let next = document.createElement('div');
+      next.setAttribute('id', 'next');
+      next.style.visibility = 'hidden';
+      next.addEventListener('mouseenter', function() {
+        $(this).toggleClass('next_checked');
+      });
+      next.addEventListener('mouseleave', function() {
+        $(this).toggleClass('next_checked');
+      });
+      next.addEventListener('click', () => {
+        this.slides.nextSlide();
+      });
+
+      div.appendChild(next);
+
+      div.appendChild(start);
+      observable.loadNext(next);
+
+      let intro  = observable.loadIntro(div);
+
+      intro.addEventListener('DOMLoaded', () => {
+        intro.addEventListener('complete', () => {
+          console.log('ended');
+          next.style.visibility = 'visible';
+        });
+      });
+
+
     } else if (val == false) {
       this.composant.div.querySelector('#slideIntro').remove();
     }
