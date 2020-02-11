@@ -130,3 +130,8 @@ th{
   text-align: center;
   bottom: 2%;
 }
+
+#contact-animated-logo {
+  position: absolute;
+  left: 37%;
+}

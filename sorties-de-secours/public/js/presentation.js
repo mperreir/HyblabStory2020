@@ -66,7 +66,7 @@ $(document).ready(function() {
         let endPresentation = document.getElementById("end-presentation");
         endPresentation.classList.remove('fadeOut');
         endPresentation.classList.add('fadeInUp');
-      }, 10000);
+      }, 38000);
     }
 
   });

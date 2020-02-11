@@ -208,7 +208,7 @@ $(document).ready(function() {
                 if (music_playing !== 2) {
                     change_music("vinyl", 'sounds/baloji/L’Hiver Indien.mp3');
                     set_music_play("vinyl");
-                    set_music_volume("vinyl", 0.25);
+                    set_music_volume("vinyl", 0.2);
                     music_playing = 2;
                 }
 
