@@ -1,22 +1,22 @@
 import Component from "../../../js/Component.js";
 
-export default class Porte extends Component {
-  constructor({ onGoToATable }) {
+export default class Buzzer9 extends Component {
+  constructor({ goToChoix }) {
     super();
     this.html = "";
-    this.onGoToATable = onGoToATable;
+    this.goToChoix = goToChoix;
   }
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-2/scenes/Puberte/1_Porte/Porte.html"
+      "/10-24-2/scenes/Puberte/9_Buzzer/Buzzer.html"
     );
   }
 
   componentDidMount() {
     document
-      .getElementById("appeller-fille")
-      .addEventListener("click", e => this.onGoToATable(e));
+      .getElementById("buzzer9")
+      .addEventListener("click", e => this.goToChoix(e));
   }
 
   render(target) {

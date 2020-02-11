@@ -1,10 +1,11 @@
 import Component from "../../../js/Component.js";
 
 export default class Porte extends Component {
-  constructor({ onGoToATable }) {
+  constructor({ onGoToDiscussion, onGoToBuzzer4 }) {
     super();
     this.html = "";
-    this.onGoToATable = onGoToATable;
+    this.onGoToDiscussion = onGoToDiscussion;
+    this.onGoToBuzzer4 = onGoToBuzzer4;
   }
 
   async load() {
@@ -14,15 +15,13 @@ export default class Porte extends Component {
   }
 
   componentDidMount() {
-    // document
-    //   .getElementById("appeller-fille")
-    //   .parentElement.addEventListener("click", this.onGoToATable);
-  }
-
-  componentWillUnmount() {
-    // document
-    //   .getElementById("appeller-fille")
-    //   .parentElement.removeEventListener("click", this.onGoToATable);
+    console.log("culotte mount");
+    document
+      .getElementById("achat-protection")
+      .addEventListener("click", e => this.onGoToBuzzer4(e));
+    document
+      .getElementById("explication-menstruations")
+      .addEventListener("click", e => this.onGoToDiscussion(e));
   }
 
   render(target) {

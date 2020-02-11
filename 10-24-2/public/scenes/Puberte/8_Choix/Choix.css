@@ -7,6 +7,10 @@
   align-items: center;
   flex-direction: column;
 }
+#section-choix {
+  height: 650px;
+}
+
 /* Quelle protection */
 
 #quelle-protection {
