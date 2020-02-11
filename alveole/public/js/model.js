@@ -227,10 +227,9 @@ class ModelSlide2 extends Observable {
     super();
     this.bool = false;
     this.instanciated = false;
-    this.choice = 1;
+    this.choice = 0;
     this.answer;
     this.wires;
-    this.handles = [100,100];
   }
 
   getValue() {
@@ -245,17 +244,14 @@ class ModelSlide2 extends Observable {
     }
   }
 
-  setChoice(val) {
-    if (val == 1) {
-      this.choice = 1;
-    } else if (val == 2) {
-      this.choice = 2;
-    } else if (val == 3) {
-      this.choice = 3;
-    } else if (val == 4) {
-      this.choice = 4;
-    } else {
-      console.log("err : invalid slide 2 choice value");
+  setChoice(c) {
+      this.choice = c;
+      this.setValue(true);
+  }
+
+  getChoice(){
+    if (this.choice != 0){
+      return 1;
     }
   }
 
@@ -290,22 +286,24 @@ class ModelSlide2 extends Observable {
     }
   }
 
-  loadWire(handles, path, nodes) {
+  loadWire(handles, path, plug, nodes) {
     var bezierWeight = 0.2;
+    var box = plug.getBoundingClientRect();
 
     for (var i = 0; i < 4; i++) {
 
-      var point = {x:341, y:331};
+      var point = {x:323, y:314};
 
       gsap.set(handles[0], {x:nodes[0][0], y:nodes[0][1]});
       gsap.set(handles[1], {x:nodes[1][0], y:nodes[1][1]});
 
       Draggable.create(handles, {
+        type: 'x,y',
         bounds: path.parentElement,
         onDrag: updatePath,
         liveSnap: {
           points: [point],
-          radius: 100
+          radius: 10
         },
         snap: {
           points: [point],
@@ -340,12 +338,20 @@ class ModelSlide2 extends Observable {
       function updateChoice() {
         if ((this.x == point.x) && (this.y = point.y)) {
           that.setChoice(this.target.getAttribute('mic'));
+          console.log('choice set at ' + that.choice)
         }
         else {
           console.log("Wire not plugged");
         }
       }
     }
+  }
+
+  loadValide(div_valide) {
+    Snap.load('data/tournage_valide.svg', function(data) {
+      let snap = Snap(div_valide);
+      snap.append(data);
+    });
   }
 
   setDestroyed() {
@@ -428,7 +434,7 @@ class ModelSlide4 extends Observable {
     super();
     this.bool = false;
     this.instanciated = false;
-    this.choice = 1;
+    this.choice = 0;
   }
 
   getValue() {
@@ -439,8 +445,8 @@ class ModelSlide4 extends Observable {
     return this.choice;
   }
 
-  setChoice(val) {
-
+  setChoice(c) {
+    this.choice = 1 ;
   }
 
   setValue(val) {

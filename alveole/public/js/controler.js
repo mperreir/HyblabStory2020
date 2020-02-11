@@ -446,9 +446,9 @@ class UpdateSlide2 extends Observer {
   }
 
   update(observable, object) {
-    let val = observable.getValue();
 
-    if (val == true) {
+      let val = observable.getValue();
+      if (val == true) {
 
       let container = document.createElement('div');
       container.setAttribute('id', 'slide2_micros');
@@ -489,31 +489,65 @@ class UpdateSlide2 extends Observer {
       container.appendChild(wires);
       for (var i = 0; i < 4; i++) {
         let path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
-        path.setAttributeNS(null, 'class', 'path');
+        path.setAttributeNS(null, 'class', 'path'+i);
         wires.appendChild(path);
         //handles
         let h1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         h1.setAttributeNS(null, 'class', 'handle'+i);
         h1.setAttributeNS(null,'cx', 0);
         h1.setAttributeNS(null, 'cy', 0);
-        h1.setAttributeNS(null, 'r', 8);
+        h1.setAttributeNS(null, 'r', 4);
         h1.setAttributeNS(null, 'mic', i+1);
         let h2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         h2.setAttributeNS(null,'class', 'handle'+i);
         h2.setAttributeNS(null, 'cx', 0);
         h2.setAttributeNS(null, 'cy', 0);
-        h2.setAttributeNS(null, 'r', 8);
+        h2.setAttributeNS(null, 'r', 4);
         h2.setAttributeNS(null, 'mic', i+1);
         wires.appendChild(h1);
         wires.appendChild(h2);
 
         let handles = document.querySelectorAll(".handle"+i);
-        let node1 = [i*200 + 50, 300];
-        let node2 = [i*200 + 50, 500];
-        observable.loadWire(handles, path, [node1, node2]);
+
+        if (i == 0){
+          let node1 = [100, 400];
+          let node2 = [100, 450];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+        else if (i == 3){
+          let node1 = [600, 400];
+          let node2 = [600, 450];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+        else if (i == 1){
+          let node1 = [250, 250];
+          let node2 = [250, 300];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+        else if (i == 2){
+          let node1 = [400, 250];
+          let node2 = [400, 300];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
       }
 
-    } else if (val == false) {
+      //slide_validée
+      let div_valide = document.createElement('div');
+      div_valide.setAttribute('id','slide2_valide');
+      container.appendChild(div_valide);
+
+      div_valide.addEventListener('click', () => {
+        if (observable.getChoice() == 1) {
+          this.model.setValue(true);
+          observable.setChoice(0);
+        } else {
+          console.log('err : expeted checked animation');
+        }
+      });
+
+      observable.loadValide(div_valide);
+    }
+    else if (val == false) {
        this.composant.div.querySelector("#slide2_micros").remove();
        observable.setDestroyed();
     }

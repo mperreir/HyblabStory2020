@@ -302,20 +302,21 @@ footer {
 
 #wires {
   position: absolute;
-  width: 1000%;
-  height: 1000%;
+  width: 100%;
+  height: 200%;
 }
 
-#wires .path {
+#wires .path0 {
   position: absolute;
   width: 100%;
   height: 100%;
+  fill: transparent;
   stroke: white!important;
-  stroke-width: 6!important;
+  stroke-width: 3!important;
   z-index: 13!important;
 }
 
-.handle0 {
+#wires .handle0 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -323,7 +324,17 @@ footer {
   z-index: 13!important;
 }
 
-.handle1 {
+#wires .path1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle1 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -331,7 +342,17 @@ footer {
   z-index: 13!important;
 }
 
-.handle2 {
+#wires .path2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle2 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -339,12 +360,31 @@ footer {
   z-index: 13!important;
 }
 
-.handle3 {
+#wires .path3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle3 {
   position: absolute;
   width: 100%;
   height: 100%;
   fill: white!important;
   z-index: 13!important;
+}
+
+#slide2_valide{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  left: 115%;
+  top: 62%;
+  z-index: 1;
 }
 
 #slide3_mixtable {
