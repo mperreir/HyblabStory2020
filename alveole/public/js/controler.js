@@ -25,15 +25,12 @@ class SuperControler {
     // Popup
     var viewModal = new ViewModal();
 
-    //Conclusion
-    var viewModalConclusion = new ViewModalConclusion();
-
     // ModelPopup
     let modelPopup = new ModelPopup();
 
     // ModelSlide0
     let modelIntroSlide = new ModelIntroSlide();
-    let updateIntroSlide = new UpdateIntroSlide(modelPopup, viewCenter, modelSlides);
+    let updateIntroSlide = new UpdateIntroSlide();
     modelIntroSlide.addObservers(updateIntroSlide);
 
     // ModelSlide1
@@ -73,12 +70,12 @@ class SuperControler {
 
     // ModelSlide8
     let modelSlide8 = new ModelSlide8();
-    let updateSlide8 = new UpdateSlide8(modelPopup, viewCenter);
+    let updateSlide8 = new UpdateSlide8(viewCenter);
     modelSlide8.addObservers(updateSlide8);
 
     // ModelLastSlide
     let modelLastSlide = new ModelLastSlide();
-    let updateLastSlide = new UpdateLastSlide(viewCenterConclusion);
+    let updateLastSlide = new UpdateLastSlide(viewCenter);
     modelLastSlide.addObservers(updateLastSlide);
 
     // Mediator of slide model
@@ -112,21 +109,6 @@ class SuperControler {
                                             viewModal
                                           );
     modelPopup.addObservers(mediatorModal);
-
-    // let mediatorConclusion = new MediatorConclusion(  modelSlides,
-    //                                         modelIntroSlide,
-    //                                         modelSlide1,
-    //                                         modelSlide2,
-    //                                         modelSlide3,
-    //                                         modelSlide4,
-    //                                         modelSlide5,
-    //                                         modelSlide6,
-    //                                         modelSlide7,
-    //                                         modelSlide8,
-    //                                         modelLastSlide,
-    //                                         viewCenterConclusion
-    //                                       );
-    // modelSlides.addObservers(mediatorConclusion);
 
     // Adding Listenners
     viewStupidButtons.next.addEventListener('click', function() {
@@ -253,6 +235,65 @@ class MediatorModal extends Observer {
   }
 }
 
+class MediatorConclusion extends Observer {
+
+  constructor(modelSlides, modelIntroSlide, modelSlide1, modelSlide2, modelSlide3, modelSlide4, modelSlide5, modelSlide6, modelSlide7, modelSlide8, modelLastSlide, viewCenterConclusion) {
+
+    super();
+
+    this.slides = {
+      "0": modelIntroSlide,
+      "1": modelSlide1,
+      "2": modelSlide2,
+      "3": modelSlide3,
+      "4": modelSlide4,
+      "5": modelSlide5,
+      "6": modelSlide6,
+      "7": modelSlide7,
+      "8": modelSlide8,
+      "9": modelLastSlide
+    };
+
+    this.loadText(this.slides);
+    this.model = modelSlides;
+    this.composant = viewCenterConclusion;
+  }
+
+  update(observable, object) {
+    let val = observable.getValue();
+
+    const entries = Object.entries(this.slides);
+
+    for (const [i, model] of entries) {
+      if (i != val) {
+        model.setValue(false);
+      }
+      else if (i == val) {
+        model.setValue(true);
+        if (i == 9) {
+          this.composant.theme.innerHTML = model.text["theme"];
+          this.composant.center_speech1.innerHTML = model.text["header-speech"];
+          this.composant.center_speech2.innerHTML = model.text["center-speech"];
+          this.composant.footer_speech.innerHTML = model.text["footer-speech"];
+        }
+      }
+    }
+  }
+
+  loadText(slides) {
+    $.getJSON("data/text.json", function(data) {
+
+      const entries = Object.entries(data);
+      let count = 0;
+
+      for (const [i, text] of entries) {
+        slides[count].text = text;
+        count++;
+      }
+    });
+  }
+}
+
 class UpdateFooter extends Observer {
 
   constructor(composant) {
@@ -264,11 +305,9 @@ class UpdateFooter extends Observer {
     let val = observable.getValue();
     if (val == observable.obj.length - 1) {
       this.composant.div.style.visibility = 'hidden';
-    } else if (val > 0 || val < observable.obj.length - 1) {
+    } else if (val >= 0 || val < observable.obj.length - 1) {
       this.composant.div.style.visibility = 'visible';
       this.composant.text.innerHTML = observable.getFooterText()["down"];
-      this.composant.roue.play();
-      setTimeout(() => {this.composant.roue.pause();}, 1000);
     } else {
       console.log("err : value not handled (updateFooter observer)");
     }
@@ -297,55 +336,12 @@ class UpdateHeader extends Observer {
 
 class UpdateIntroSlide extends Observer {
 
-  constructor(model, composant, slides) {
+  constructor() {
     super();
-    this.model = model;
-    this.composant = composant;
-    this.slides = slides;
   }
 
   update(observable, object) {
-    let val = observable.getValue();
 
-    if (val == true) {
-      let div = document.createElement('div');
-      div.setAttribute('id', 'slideIntro');
-      this.composant.div.appendChild(div);
-
-      let start = document.createElement('div');
-      start.setAttribute('id', 'starts');
-
-      let next = document.createElement('div');
-      next.setAttribute('id', 'next');
-      next.style.visibility = 'hidden';
-      next.addEventListener('mouseenter', function() {
-        $(this).toggleClass('next_checked');
-      });
-      next.addEventListener('mouseleave', function() {
-        $(this).toggleClass('next_checked');
-      });
-      next.addEventListener('click', () => {
-        this.slides.nextSlide();
-      });
-
-      div.appendChild(next);
-
-      div.appendChild(start);
-      observable.loadNext(next);
-
-      let intro  = observable.loadIntro(div);
-
-      intro.addEventListener('DOMLoaded', () => {
-        intro.addEventListener('complete', () => {
-          console.log('ended');
-          next.style.visibility = 'visible';
-        });
-      });
-
-
-    } else if (val == false) {
-      this.composant.div.querySelector('#slideIntro').remove();
-    }
   }
 }
 
@@ -362,57 +358,50 @@ class UpdateSlide1 extends Observer {
 
 
     if (val == true) {
-      let container = document.createElement('div');
-      container.setAttribute('id', 'slide1');
-
       let hotelDiv = document.createElement('div');
       hotelDiv.setAttribute('id', 'hotel');
+      hotelDiv.setAttribute('class', 'onClick');
 
       let hotelText = document.createElement('div');
       hotelText.setAttribute('class', 'slide1Label unselectable');
 
       let studioDiv = document.createElement('div');
       studioDiv.setAttribute('id', 'studio');
+      studioDiv.setAttribute('class', 'onClick');
 
       let studioText = document.createElement('div');
       studioText.setAttribute('class', 'slide1Label unselectable');
 
-      container.appendChild(hotelDiv);
-      container.appendChild(studioDiv);
-
       hotelDiv.appendChild(hotelText);
       studioDiv.appendChild(studioText);
 
-      this.composant.div.appendChild(container);
+      this.composant.div.appendChild(hotelDiv);
+      this.composant.div.appendChild(studioDiv);
 
       let hotel = observable.loadHotel(hotelDiv);
       let studio = observable.loadStudio(studioDiv);
       let model = this.model;
 
       hotel.addEventListener('DOMLoaded', function() {
-        hotelDiv.addEventListener('mouseenter', function() {
+        document.getElementById('hotel').addEventListener('mouseover', function() {
           hotel.play();
-          $(this).toggleClass('animation_checked');
         });
-        hotelDiv.addEventListener('mouseleave', function() {
+        document.getElementById('hotel').addEventListener('mouseout', function() {
           hotel.pause();
-          $(this).toggleClass('animation_checked');
         });
-        hotelDiv.addEventListener('click', function() {
+        document.getElementById('hotel').addEventListener('click', function() {
           observable.setChoice(0);
           model.setValue(true);
         });
       });
       studio.addEventListener('DOMLoaded', function() {
-        studioDiv.addEventListener('mouseenter', function() {
+        document.getElementById('studio').addEventListener('mouseover', function() {
           studio.play();
-          $(this).toggleClass('animation_checked');
         });
-        studioDiv.addEventListener('mouseleave', function() {
+        document.getElementById('studio').addEventListener('mouseout', function() {
           studio.pause();
-          $(this).toggleClass('animation_checked');
         });
-        studioDiv.addEventListener('click', function() {
+        document.getElementById('studio').addEventListener('click', function() {
           observable.setChoice(1);
           model.setValue(true);
         });
@@ -426,7 +415,6 @@ class UpdateSlide1 extends Observer {
       document.getElementById('studio').remove();
       observable.destroyHotel();
       observable.destroyStudio();
-      this.composant.div.querySelector("#slide1").remove();
     }
   }
 }
@@ -585,28 +573,7 @@ class UpdateSlide3 extends Observer {
       bouche1Text.innerHTML = observable.text.labels[1];
       bouche2Text.innerHTML = observable.text.labels[2];
 
-      let bouches = observable.loadIcons(bouche1, bouche2);
-
-      bouches[1].addEventListener('DOMLoaded', () => {
-        bouche1.addEventListener('mouseenter', function() {
-          bouches[1].play();
-          $(this).toggleClass('animation_checked');
-        });
-        bouche1.addEventListener('mouseleave', function() {
-          bouches[1].pause();
-          $(this).toggleClass('animation_checked');
-        });
-      });
-      bouches[2].addEventListener('DOMLoaded', () => {
-        bouche2.addEventListener('mouseenter', function() {
-          bouches[2].play();
-          $(this).toggleClass('animation_checked');
-        });
-        bouche2.addEventListener('mouseleave', function() {
-          bouches[2].pause();
-          $(this).toggleClass('animation_checked');
-        });
-      });
+      observable.loadIcons(bouche1, bouche2);
 
       let model = this.model;
 
@@ -648,12 +615,12 @@ class UpdateSlide4 extends Observer {
       container.appendChild(div_valide);
 
       div_valide.addEventListener('click', () => {
-        let checked = document.getElementsByClassName('animation_checked');
+        let checked = document.getElementsByClassName('slide4Label_checked');
         if (checked.length >= 1) {
           observable.setChoice();
           this.model.setValue(true);
         } else {
-          console.log('err : expected checked animation');
+          console.log('err : expeted checked animation');
         }
       });
 
@@ -672,9 +639,9 @@ class UpdateSlide4 extends Observer {
         etape.setAttribute('id', 'etape'+i);
         etape.setAttribute('class', 'slide4Animations');
 
-        // let div_checkbox = document.createElement('div');
-        // div_checkbox.setAttribute('class','slide4_checkbox');
-        // etape.appendChild(div_checkbox);
+        let div_checkbox = document.createElement('div');
+        div_checkbox.setAttribute('class','slide4_checkbox');
+        etape.appendChild(div_checkbox);
 
         let text = document.createElement('div');
         text.setAttribute('class', 'slide4Label unselectable');
@@ -683,23 +650,18 @@ class UpdateSlide4 extends Observer {
 
         container.appendChild(etape);
         divs[i] = etape;
-        // checkboxes[i] = div_checkbox;
+        checkboxes[i] = div_checkbox;
       };
 
-      let animations = observable.load(container, divs, div_valide);
+      let animations = observable.load(container, divs, checkboxes, div_valide);
 
       Object.keys(animations).forEach( function(key) {
         animations[key].addEventListener('DOMLoaded', function() {
-          document.getElementById(key).addEventListener('mouseenter', function() {
+          document.getElementById(key).addEventListener('mouseover', function(){
             animations[key].play();
-            $(this).toggleClass('animation_checked');
           });
-          document.getElementById(key).addEventListener('mouseleave', function() {
+          document.getElementById(key).addEventListener('mouseout', function(){
             animations[key].pause();
-            $(this).toggleClass('animation_checked');
-          });
-          document.getElementById(key).addEventListener('click', function() {
-            $(this).toggleClass('animation_checked');
           });
         });
       });
@@ -731,54 +693,13 @@ class UpdateSlide5 extends Observer {
       container.setAttribute('id', 'slide5_derush');
       this.composant.div.appendChild(container);
 
-      let timeline = document.createElement('div');
-      timeline.setAttribute('id', 'slide5TimeLine');
-      container.appendChild(timeline);
-
       for (let i = 1; i < 4; i++) {
         let label = document.createElement('div');
         label.setAttribute('id', 'slide5_' + i + '_label');
         label.setAttribute('class', 'slide5Label unselectable');
         label.innerHTML = observable.text.labels[i];
-
-        label.addEventListener('click', function() {
-          $(this).parent().find('#svg_slide5-' + i).toggleClass('slide5visible');
-        });
-        label.addEventListener('mouseenter', function() {
-          $(this).toggleClass('text_checked');
-        });
-        label.addEventListener('mouseleave', function() {
-          $(this).toggleClass('text_checked');
-        });
-        label.addEventListener('click', function() {
-          $(this).toggleClass('text_checked');
-        });
         container.appendChild(label);
       }
-
-      let div_valide = document.createElement('div');
-      div_valide.setAttribute('id','slide4_valide');
-      container.appendChild(div_valide);
-
-      div_valide.addEventListener('click', () => {
-        let checked = document.getElementsByClassName('slide5visible');
-        if (checked.length >= 1) {
-          this.model.setValue(true);
-        } else {
-          console.log('err : expected checked animation');
-        }
-      });
-
-      let div_valide_text = document.createElement('div');
-      div_valide_text.setAttribute('id','slide4_valide_text');
-      div_valide_text.setAttribute('class', 'unselectable');
-      container.appendChild(div_valide_text);
-      div_valide_text.innerHTML = 'valider';
-
-      observable.loadTimeLine(timeline);
-      observable.loadValide(div_valide);
-
-
     } else if (val == false) {
       this.composant.div.querySelector('#slide5_derush').remove();
     }
@@ -803,34 +724,6 @@ class UpdateSlide6 extends Observer {
       this.composant.div.appendChild(container);
 
       let micros = observable.loadMixTable(container);
-
-      let slider1 = document.createElement('div');
-      slider1.setAttribute('class', 'slideContainer');
-
-      let input1 = document.createElement('input');
-      input1.setAttribute('type', 'range');
-      input1.setAttribute('min', '0');
-      input1.setAttribute('max', '10');
-      input1.setAttribute('value', '5');
-      input1.setAttribute('class', 'slider');
-      input1.setAttribute('id', 'slider1');
-      input1.setAttribute('orient', 'vertical');
-
-      let slider2 = document.createElement('div');
-      slider2.setAttribute('class', 'slideContainer2');
-
-      let input2 = document.createElement('input');
-      input2.setAttribute('type', 'range');
-      input2.setAttribute('min', '0');
-      input2.setAttribute('max', '10');
-      input2.setAttribute('value', '5');
-      input2.setAttribute('class', 'slider');
-      input2.setAttribute('id', 'slider2');
-
-      container.appendChild(slider2);
-      container.appendChild(slider1);
-      slider1.appendChild(input1);
-      slider2.appendChild(input2);
 
     } else if (val == false) {
        this.composant.div.querySelector("#slide6_mixtable").remove();
@@ -881,31 +774,12 @@ class UpdateSlide7 extends Observer {
       animations[1].addEventListener('DOMLoaded', () => {
         document.getElementById('slide7_ondes').addEventListener('click', () => {
           this.slides.setValue(9);
-        });
-
-        divs[1].addEventListener('mouseenter', function() {
-          animations[1].play();
-          $(this).toggleClass('animation_checked');
-        });
-        divs[1].addEventListener('mouseleave', function() {
-          animations[1].pause();
-          $(this).toggleClass('animation_checked');
-        });
-
+        })
       });
       animations[2].addEventListener('DOMLoaded', () => {
         document.getElementById('slide7_casque').addEventListener('click', () => {
           this.model.setValue(true);
         })
-
-        divs[2].addEventListener('mouseenter', function() {
-          animations[2].play();
-          $(this).toggleClass('animation_checked');
-        });
-        divs[2].addEventListener('mouseleave', function() {
-          animations[2].pause();
-          $(this).toggleClass('animation_checked');
-        });
       });
 
     } else if (val == false) {
@@ -929,71 +803,9 @@ class UpdateSlide8 extends Observer {
     let val = observable.getValue();
 
     if (val == true) {
-      let container = document.createElement('div');
-      container.setAttribute('id', 'slide8_podcast');
-      this.composant.div.appendChild(container);
-
-      let presta = document.createElement('div');
-      presta.setAttribute('id', 'presta');
-      presta.addEventListener('click', () => {
-        this.model.setValue(true);
-      });
-      presta.addEventListener('mouseenter', function() {
-        $(this).toggleClass('text_checked');
-      });
-      presta.addEventListener('mouseleave', function() {
-        $(this).toggleClass('text_checked');
-      });
-
-
-      let label1 = document.createElement('div');
-      label1.setAttribute('class', 'slide8Label unselectable');
-      label1.innerHTML = observable.text.labels[1];
-      presta.appendChild(label1);
-
-      let artisan = document.createElement('div');
-      artisan.setAttribute('id', 'artisan');
-      artisan.addEventListener('click', () => {
-        this.model.setValue(true);
-      });
-      artisan.addEventListener('mouseenter', function() {
-        $(this).toggleClass('text_checked');
-      });
-      artisan.addEventListener('mouseleave', function() {
-        $(this).toggleClass('text_checked');
-      });
-
-      let label2 = document.createElement('div');
-      label2.setAttribute('class', 'slide8Label unselectable');
-      label2.innerHTML = observable.text.labels[2];
-      artisan.appendChild(label2);
-
-      let animation = document.createElement('div');
-      animation.setAttribute('id', 'slide8Animation');
-
-      container.appendChild(animation);
-
-      // let divs = {};
-      //
-      // for (let i = 1; i < 3; i++) {
-      //   let div_checkbox = document.createElement('div');
-      //   div_checkbox.setAttribute('class','slide8_checkbox');
-      //
-      //   divs[i] = div_checkbox;
-      // }
-      //
-      // presta.appendChild(divs[1]);
-      // artisan.appendChild(divs[2]);
-
-      container.appendChild(presta);
-      container.appendChild(artisan);
-
-      // observable.loadCheckbox(divs);
-      observable.loadSVG(animation);
-
 
     } else if (val == false) {
-      this.composant.div.querySelector('#slide8_podcast').remove();
+
     } else {
       console.log('err : unhandled slide 8 value');
     }
@@ -1012,78 +824,12 @@ class UpdateLastSlide extends Observer {
     let val = observable.getValue();
 
     if (val == true) {
-
-      let container = document.createElement('div');
-      container.setAttribute('id', 'lastSlide');
-
-      let title = document.createElement('div');
-      title.setAttribute('id', 'last_title');
-      title.setAttribute('class', 'unselectable');
-
-      title.innerHTML = observable.text.title;
-
-      let speech = document.createElement('div');
-      speech.setAttribute('id', 'speech');
-      speech.setAttribute('class', 'unselectable');
-
-      speech.innerHTML = observable.text.speech;
-
-      let logo = document.createElement('div');
-      logo.setAttribute('id', 'logo_alveole');
-
-      let motto = document.createElement('div');
-      motto.setAttribute('id', 'motto');
-      motto.setAttribute('class', 'unselectable');
-
-      motto.innerHTML = observable.text.motto;
-
-      let soundcloud = document.createElement('div');
-      soundcloud.setAttribute('id', 'soundcloud');
-
-      let alveole = document.createElement('div');
-      alveole.setAttribute('id', 'alveole');
-
-      let website = document.createElement('div');
-      website.setAttribute('id', 'website');
-      website.setAttribute('class', 'unselectable');
-
-      website.innerHTML = observable.text.website;
-
-      alveole.appendChild(website);
-
-      let sources = document.createElement('div');
-      let button = document.createElement('a');
-      button.setAttribute('id', "sourcesButton");
-      button.setAttribute('href', '#sources');
-
-      sources.appendChild(button);
-
-      sources.setAttribute('id', 'sourcesDiv');
-
-      let validate = document.createElement('div');
-      validate.setAttribute('id', 'sourceLabel');
-      validate.setAttribute('class', 'unselectable');
-      validate.innerHTML = 'sources';
-
-      sources.appendChild(validate);
-
-      this.composant.div.appendChild(container);
-
-      container.appendChild(title);
-      container.appendChild(speech);
-      container.appendChild(logo);
-      container.appendChild(motto);
-      container.appendChild(soundcloud);
-      container.appendChild(alveole);
-      container.appendChild(sources);
-
-      observable.loadContent(logo, alveole, sources);
-
-      let frame = document.createElement('iframe');
-      frame.setAttribute('src', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/685582138&amp;color=807aa7');
-      frame.setAttribute('id', 'soundcloud');
-      container.appendChild(frame);
-
+      this.composant.div.style.visibility = "visible";
+      observable.loadContent(this.composant.div);
+      this.frame = document.createElement('iframe');
+      this.frame.setAttribute('src', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/685582138&amp;color=807aa7');
+      this.frame.setAttribute('id', 'soundcloud');
+      this.composant.div.appendChild(this.frame);
     } else if (val == false) {
       this.composant.div.removeChild(this.frame);
       this.composant.div.style.visibility = "hidden";
