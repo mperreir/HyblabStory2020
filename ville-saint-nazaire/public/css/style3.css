@@ -79,13 +79,13 @@ form>label{
     position: absolute;
     width: 4%;
     left : 70%;
-    top : 90%;
+    top : 90.5%;
     visibility:hidden;
 }
 #next4-texte{
     position: absolute;
     left : 76%;
-    top : 91%;
+    top : 92%;
     font-family: Vibur;
     color: #92C2D2;
     visibility:hidden;
