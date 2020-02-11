@@ -160,6 +160,14 @@ $(document).ready(function() {
             textAnimStarted = true;
         }
 
+        set_music_pause("vinyl-noise");
+
+        if (vinylTurning) {
+            vinylAnim.stop();
+            vinylCenterAnim.stop();
+            vinylTurning = false;
+        }
+
         mouseDown = true;
         let pos = stage.getPointerPosition();
 
@@ -177,22 +185,7 @@ $(document).ready(function() {
             set_music_pause("vinyl");
             set_music_volume("vinyl", 0.2);
 
-            set_music_pause("vinyl-noise");
-
-            if (vinylTurning) {
-                vinylAnim.stop();
-                vinylCenterAnim.stop();
-                vinylTurning = false;
-            }
-
         } else {
-            set_music_play("vinyl-noise");
-            set_music_volume("vinyl-noise", 0.5);
-            if (!vinylTurning) {
-                vinylAnim.start();
-                vinylCenterAnim.start();
-                vinylTurning = true;
-            }
 
             if (angleDeg >= 15 && angleDeg < 35) {
 
@@ -221,6 +214,18 @@ $(document).ready(function() {
 
     group.on('dragend', function() {
         stage.container().style.cursor = 'pointer';
+
+        let pos = stage.getPointerPosition();
+        let angleDeg = Math.atan2(201 * (stageHeight / 810) - pos.y, ((1336 * (201 * (stageHeight / 810))) / 201) + ((((stageHeight * 1920) / 1080) - ((stageHeight * 1920) / 810)) / 2) - pos.x) * 180 / Math.PI + 90;
+        if (angleDeg >= 15 && angleDeg < 50) {
+            set_music_play("vinyl-noise");
+            set_music_volume("vinyl-noise", 0.5);
+            if (!vinylTurning) {
+                vinylAnim.start();
+                vinylCenterAnim.start();
+                vinylTurning = true;
+            }
+        }
     });
 
     k_vinyl_head.on('mouseenter', function() {
