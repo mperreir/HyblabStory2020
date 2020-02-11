@@ -129,7 +129,7 @@ $(document).ready(function() {
 
     $('#expo-section').on('mousewheel', function () {
         if (expoFinished) {
-            set_music_pause("ambianceExpo");
+            set_music_pause_and_stop("ambianceExpo");
 
             anim_premier_rang_going.start();
             let mouseAnimatedExpo = document.querySelector("#mouse-animated-expo");

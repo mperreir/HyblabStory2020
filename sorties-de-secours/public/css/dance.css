@@ -227,6 +227,13 @@
 	position: absolute;
 	top: 300px;
 	right: 175px;
+
+	opacity: 1;
+	transition: opacity 0.75s;
+}
+
+.dance-text-instruction-hidden {
+	opacity: 0 !important;
 }
 
 #scroll-down-endDance {
@@ -238,6 +245,8 @@
 	text-align: center;
 	bottom: inherit;
 	transform: inherit;
+
+	margin-left: 150px;
 
   z-index: 9999;
 }

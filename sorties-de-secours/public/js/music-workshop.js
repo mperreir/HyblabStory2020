@@ -160,7 +160,7 @@ $(document).ready(function() {
             textAnimStarted = true;
         }
 
-        set_music_pause("vinyl-noise");
+        set_music_pause_and_stop("vinyl-noise");
 
         if (vinylTurning) {
             vinylAnim.stop();
@@ -182,7 +182,7 @@ $(document).ready(function() {
         /* CHANGE MUSIC */
         if (angleDeg < 15 || angleDeg > 50) {
             music_playing = 0;
-            set_music_pause("vinyl");
+            set_music_pause_and_stop("vinyl");
             set_music_volume("vinyl", 0.2);
 
         } else {

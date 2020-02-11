@@ -111,6 +111,11 @@ $(document).ready(function() {
                 $("#img-dancers").css("opacity", "1");
 
                 setTimeout(function() {
+                    let danceTextInstruction = document.querySelector("#dance-text-instruction");
+                    danceTextInstruction.classList.add('dance-text-instruction-hidden');
+                }, 4500);
+
+                setTimeout(function() {
                   let mouseAnimatedDance = document.querySelector("#mouse-animated-dance");
                   mouseAnimatedDance.classList.remove('fadeOut');
                   mouseAnimatedDance.classList.add('fadeInUp');

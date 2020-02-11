@@ -349,7 +349,7 @@ function goBackToMenu(sectionName) {
             $("#hachure-expo").css("opacity", "1");
             $("#hachure-expo").css("cursor", "auto");
 
-            set_music_pause("expoMusic");
+            set_music_pause_and_stop("expoMusic");
             set_music_play("generalMusic");
             set_music_volume("generalMusic", 0.1);
             break;
@@ -368,7 +368,7 @@ function goBackToMenu(sectionName) {
             $("#hachure-dance").css("opacity", "1");
             $("#hachure-dance").css("cursor", "auto");
 
-            set_music_pause("danceMusic");
+            set_music_pause_and_stop("danceMusic");
             set_music_play("generalMusic");
             set_music_volume("generalMusic", 0.1);
             break;

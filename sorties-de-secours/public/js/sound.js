@@ -57,7 +57,7 @@ $(document).ready(function() {
         // menu
         if (    scrollPos >= menu.top - pxBeforeTop
             &&  scrollPos < menu.bottom) {
-            set_music_pause("voice");
+            set_music_pause_and_stop("voice");
             set_music_volume("generalMusic", 0.1);
         }
 
@@ -74,8 +74,8 @@ $(document).ready(function() {
 
         if (   scrollPos < music_workshop.top - pxBeforeTop
             || scrollPos >= music_workshop.bottom) {
-            set_music_pause("vinyl");
-            set_music_pause("vinyl-noise");
+            set_music_pause_and_stop("vinyl");
+            set_music_pause_and_stop("vinyl-noise");
 
             set_music_play("generalMusic");
             set_music_volume("generalMusic", 0.05);
