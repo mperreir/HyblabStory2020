@@ -36,6 +36,7 @@ let initSlide4 = function(){
     // Affichage du premier texte après 5s
     setTimeout(playDialogues, 3500);
     //setTimeout(playDialogues, 0);
+    //VROUM VROUM LA VOITURE
 
     var btnSuivant = document.querySelector('#slide4-btnSuivant');
     var notesSuivantes = document.querySelector('#slide4-notesSuivantes');
