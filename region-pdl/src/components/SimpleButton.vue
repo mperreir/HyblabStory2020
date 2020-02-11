@@ -1,10 +1,11 @@
 <template>
-  <div class="classic-btn bg-darkblue" :style="{width: width+'%', left: x+'%', top: y+'%'}">
+  <div class="classic-btn bg-darkblue" :style="{width: width+'%', left: x+'%', top: y+'%'}" @click="onClick">
     <div class="text">{{ text }}</div>
   </div>
 </template>
 
 <script>
+import { Howl } from "howler";
 export default {
   props: {
     text: {
@@ -22,6 +23,17 @@ export default {
     y: {
       type: Number,
       default: 0
+    }
+  },
+  mounted() {
+    this.clickSound = new Howl({
+      src: ["sounds/click.mp3"],
+      volume: 0.7
+    });
+  },
+  methods: {
+    onClick() {
+      this.clickSound.play();
     }
   }
 };

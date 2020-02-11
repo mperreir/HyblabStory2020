@@ -38,6 +38,8 @@ export default {
     plusOnClick() {
       this.popover = !this.popover;
 
+      this.clickSound.play();
+
       if (this.pulse === true) {
         this.pulse = false;
       }
@@ -51,7 +53,13 @@ export default {
         this.popover = false;
       }
     }
-  }
+  },
+  mounted() {
+    this.clickSound = new Howl({
+      src: ["sounds/click-swoosh-1.mp3"],
+      volume: 0.2
+    });
+  },
 };
 </script>
 
