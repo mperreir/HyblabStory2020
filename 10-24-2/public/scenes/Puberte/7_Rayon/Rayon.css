@@ -9,5 +9,5 @@
 
 #rayon-parent {
   transform-origin: 50% 100%;
-  animation: scaling 4s ease-in-out;
+  animation: scaling 0.5s ease-in-out;
 }

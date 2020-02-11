@@ -18,9 +18,9 @@ export default class Carousel extends Component {
     // this.harcelementC = new Harcelement(ChildrenProps);
     // this.puberteC = new Puberte(ChildrenProps);
     // /!\ Cheat /!\
-    this.ecransC = new Puberte(ChildrenProps);
-    this.flemmeC = new Puberte(ChildrenProps);
-    this.harcelementC = new Puberte(ChildrenProps);
+    // this.ecransC = new Puberte(ChildrenProps);
+    // this.flemmeC = new Puberte(ChildrenProps);
+    // this.harcelementC = new Puberte(ChildrenProps);
     this.puberteC = new Puberte(ChildrenProps);
 
     // state
@@ -47,10 +47,10 @@ export default class Carousel extends Component {
   startScenario(scenarioC) {
     this.state.currentView = scenarioC;
     const $slider = $("#carousel");
-    $slider.slick("slickSetOption", "accessibility", false);
-    $slider.slick("slickSetOption", "draggable", false);
-    $slider.slick("slickSetOption", "swipe", false);
-    $slider.slick("slickSetOption", "touchMove", false);
+    // $slider.slick("slickSetOption", "accessibility", false);
+    // $slider.slick("slickSetOption", "draggable", false);
+    // $slider.slick("slickSetOption", "swipe", false);
+    // $slider.slick("slickSetOption", "touchMove", false);
     document.getElementById("nextArrow").style.display = "none";
     document.getElementById("previousArrow").style.display = "none";
     document.getElementById("choix-portes").style.display = "block";
@@ -141,9 +141,9 @@ export default class Carousel extends Component {
   async load() {
     const promises = await Promise.all([
       this.loadHTML("/10-24-2/scenes/Carousel/Carousel.html"),
-      this.ecransC.load(),
-      this.flemmeC.load(),
-      this.harcelementC.load(),
+      // this.ecransC.load(),
+      // this.flemmeC.load(),
+      // this.harcelementC.load(),
       this.puberteC.load()
     ]);
     this.html = promises[0];
@@ -165,15 +165,15 @@ export default class Carousel extends Component {
     const divPuberteC = document.createElement("div");
 
     // We insert them in each carousel slide and
-    carousel.appendChild(divEcransC);
-    carousel.appendChild(divFlemmeC);
-    carousel.appendChild(divHarcelementC);
+    // carousel.appendChild(divEcransC);
+    // carousel.appendChild(divFlemmeC);
+    // carousel.appendChild(divHarcelementC);
     carousel.appendChild(divPuberteC);
 
     // We render each scenario
-    this.ecransC.render(divEcransC);
-    this.flemmeC.render(divFlemmeC);
-    this.harcelementC.render(divHarcelementC);
+    // this.ecransC.render(divEcransC);
+    // this.flemmeC.render(divFlemmeC);
+    // this.harcelementC.render(divHarcelementC);
     this.puberteC.render(divPuberteC);
 
     // We activate the slider
