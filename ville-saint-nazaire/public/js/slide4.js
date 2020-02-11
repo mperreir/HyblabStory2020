@@ -154,6 +154,7 @@ let initSlide4 = function(){
 	// Chargements présentation des choix
 	function loadChoices() 
     {
+    	var introChoix = document.querySelector('#slide4-intro-choix');
     	var choix1 = document.querySelector('#container1-slide5');
 		var choix2 = document.querySelector('#container2-slide5');
 		var choix3 = document.querySelector('#container3-slide5');
@@ -171,6 +172,7 @@ let initSlide4 = function(){
 		journaliste.style.left = 0 + "%";
 
 		// On affiche les choix
+		introChoix.style.visibility = "visible";
     	choix1.style.visibility = "visible";
 		choix2.style.visibility = "visible";
 		choix3.style.visibility = "visible";
