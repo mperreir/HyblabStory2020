@@ -15,7 +15,7 @@ function initForm6(){
 function fadeIn6(id){
 
   var bouton = document.getElementById("imagebtn" + id);
-  bouton.src="img/boutonActif.svg";
+  bouton.src="img/point-choix1.svg";
 
   var texte = document.getElementById("texte-" + id);
   texte.style.visibility = "visible";
@@ -26,7 +26,7 @@ function fadeIn6(id){
 function fadeOut6(id){
   //le bouton
   var bouton = document.getElementById("imagebtn" + id);
-  bouton.src="img/boutonInactif.svg";
+  bouton.src="img/bouton-choix1.svg";
 
   var texte = document.getElementById("texte-" + id);
   texte.style.visibility = "hidden";
