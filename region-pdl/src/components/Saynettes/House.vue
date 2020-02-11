@@ -49,7 +49,7 @@
     <PlusButton v-model="closePopover2" class="plus2" :width="35" @open="closePopover(2)">
       <p v-if="getCharacterGender === 'm'">
         La maison de M. Moreau fait
-        <span class="orange">50 m².</span> Il a eu le droit à
+        <span class="orange">50 m².</span> <br> Il a eu le droit à
         <span class="orange">4000 euros</span> d’aides.
       </p>
       <p v-if="getCharacterGender === 'mme'">
