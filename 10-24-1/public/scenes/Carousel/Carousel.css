@@ -83,3 +83,9 @@
 button {
   width: 263px;
 }
+
+/* height issues */
+
+#carousel > .slick-list > .slick-track {
+  height: 600px;
+}

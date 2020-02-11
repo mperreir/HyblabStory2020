@@ -58,7 +58,7 @@ export default class Puberte extends Component {
     setTimeout(() => {
       this.atable.componentWillUnmount();
       this.goToCulotte();
-    }, 500);
+    }, 4500);
   }
 
   goToCulotte() {

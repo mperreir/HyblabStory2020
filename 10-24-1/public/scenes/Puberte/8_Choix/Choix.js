@@ -74,7 +74,7 @@ export default class Choix extends Component {
             document.getElementById("choix-portes").style.display = "none";
             setTimeout(() => {
               this.componentWillUnmount();
-            }, 3000);
+            }, 3500);
           }
         });
       } else {
@@ -100,7 +100,7 @@ export default class Choix extends Component {
             document.getElementById("choix-portes").style.display = "none";
             setTimeout(() => {
               this.componentWillUnmount();
-            }, 3000);
+            }, 6000);
           }
         });
       }

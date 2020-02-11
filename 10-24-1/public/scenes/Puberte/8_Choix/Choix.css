@@ -88,13 +88,13 @@
   font-size: 25px;
 }
 #serviette > div.texte > p {
-  width: 92%;
-  transform: translateY(-112%);
+  width: 94%;
+  transform: translateY(-106%);
 }
 
 #tampon > div.texte > p {
   transform: translateY(-100%);
-  width: 49%;
+  width: 55%;
 }
 
 /* Bottom */

@@ -4,6 +4,11 @@ import Puberte from "../Puberte/Puberte.js";
 // import Harcelement from "../Harcelement/Harcelement.js";
 // import Flemme from "../Flemme/Flemme.js";
 
+// demo stereolux
+import Flemme from "../Flemme/1_Porte_stereolux/Porte.js";
+import Harcelement from "../Harcelement/1_Porte_stereolux/Porte.js";
+import Ecrans from "../Ecrans/1_Porte_stereolux/Porte.js";
+
 export default class Carousel extends Component {
   constructor() {
     super();
@@ -13,14 +18,9 @@ export default class Carousel extends Component {
 
     // components
     const ChildrenProps = { onStart: this.startScenario.bind(this) };
-    // this.ecransC = new Ecrans(ChildrenProps);
-    // this.flemmeC = new Flemme(ChildrenProps);
-    // this.harcelementC = new Harcelement(ChildrenProps);
-    // this.puberteC = new Puberte(ChildrenProps);
-    // /!\ Cheat /!\
-    // this.ecransC = new Puberte(ChildrenProps);
-    // this.flemmeC = new Puberte(ChildrenProps);
-    // this.harcelementC = new Puberte(ChildrenProps);
+    this.ecransC = new Ecrans(ChildrenProps);
+    this.flemmeC = new Flemme(ChildrenProps);
+    this.harcelementC = new Harcelement(ChildrenProps);
     this.puberteC = new Puberte(ChildrenProps);
 
     // state
@@ -46,11 +46,13 @@ export default class Carousel extends Component {
    */
   startScenario(scenarioC) {
     this.state.currentView = scenarioC;
+    // Disable slider
     const $slider = $("#carousel");
-    // $slider.slick("slickSetOption", "accessibility", false);
-    // $slider.slick("slickSetOption", "draggable", false);
-    // $slider.slick("slickSetOption", "swipe", false);
-    // $slider.slick("slickSetOption", "touchMove", false);
+    $slider.slick("slickPause");
+    $slider.slick("slickSetOption", "accessibility", false);
+    $slider.slick("slickSetOption", "draggable", false);
+    $slider.slick("slickSetOption", "swipe", false);
+    $slider.slick("slickSetOption", "touchMove", false);
     document.getElementById("nextArrow").style.display = "none";
     document.getElementById("previousArrow").style.display = "none";
     document.getElementById("choix-portes").style.display = "block";
@@ -137,14 +139,16 @@ export default class Carousel extends Component {
 
     // wire the carousel/root button
     this.handleCarouselButton();
+
+    document.getElementById("carousel-player").volume = 0.1;
   }
 
   async load() {
     const promises = await Promise.all([
       this.loadHTML("/10-24-1/scenes/Carousel/Carousel.html"),
-      // this.ecransC.load(),
-      // this.flemmeC.load(),
-      // this.harcelementC.load(),
+      this.ecransC.load(),
+      this.flemmeC.load(),
+      this.harcelementC.load(),
       this.puberteC.load()
     ]);
     this.html = promises[0];
@@ -162,28 +166,28 @@ export default class Carousel extends Component {
     // We create the divs that will each contain one scenario
     const divEcransC = document.createElement("div");
     const divFlemmeC = document.createElement("div");
-    // const divHarcelementC = document.createElement("div");
+    const divHarcelementC = document.createElement("div");
     const divPuberteC = document.createElement("div");
 
     // We insert them in each carousel slide and
-    // carousel.appendChild(divEcransC);
-    // carousel.appendChild(divFlemmeC);
-    // carousel.appendChild(divHarcelementC);
     carousel.appendChild(divPuberteC);
+    carousel.appendChild(divFlemmeC);
+    carousel.appendChild(divHarcelementC);
+    carousel.appendChild(divEcransC);
 
     // We render each scenario
-    // this.ecransC.render(divEcransC);
-    // this.flemmeC.render(divFlemmeC);
-    // this.harcelementC.render(divHarcelementC);
+    this.ecransC.render(divEcransC);
+    this.flemmeC.render(divFlemmeC);
+    this.harcelementC.render(divHarcelementC);
     this.puberteC.render(divPuberteC);
 
     // We activate the slider
     $(carousel).slick({
-      // autoplay: true,
+      autoplay: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 3000,
       nextArrow: $("#nextArrow"),
       prevArrow: $("#previousArrow")
     });
