@@ -4,7 +4,6 @@
  * Copyright - 2020 Christophe SONNEVILLE
  */
 class ViewThanks extends View {
-  static titre = 'Remerciements';
   constructor(el) {
     super('viewremerciements', el || document.getElementById('view-container'));
   }
@@ -79,3 +78,5 @@ class ViewThanks extends View {
     transitionHorizontalInvert(this.view, View1);
   }
 }
+
+ViewThanks.titre = 'Remerciements';

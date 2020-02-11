@@ -1,5 +1,4 @@
 class View5 extends View {
-    static titre = 'Visiter les réseaux sociaux';
     constructor(receiver){
         super('view5', receiver);
         
@@ -53,3 +52,5 @@ class View5 extends View {
         window.soundManager.play('sound/Question_liens_externes.mp3');
     }
 }
+
+View5.titre = 'Visiter les réseaux sociaux';

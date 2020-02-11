@@ -1,6 +1,5 @@
 
 class View2 extends View {
-    static titre = 'Visionner les photos';
     constructor(receiver){
         super('view2', receiver);
     }
@@ -37,3 +36,5 @@ class View2 extends View {
         transitionHorizontal(this.view, View3Premium);
     }
 }
+
+View2.titre = 'Visionner les photos';

@@ -4,7 +4,6 @@
  * Copyright - 2020 Christophe SONNEVILLE
  */
 class View8 extends View {
-  static titre = 'Prendre contact';
   constructor(el) {
     super('view8', el || document.getElementById('view-container'));
     this.load()
@@ -49,3 +48,5 @@ class View8 extends View {
     window.soundManager.play('sound/Question_contact.mp3');
   }
 }
+
+View8.titre = 'Prendre contact';
