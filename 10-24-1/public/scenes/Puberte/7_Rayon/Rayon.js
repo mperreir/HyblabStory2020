@@ -15,7 +15,7 @@ export default class Rayon extends Component {
 
   componentDidMount() {
     document.getElementById("choix-portes").style.display = "none";
-    setTimeout(() => this.goToChoix(), 6000);
+    setTimeout(() => this.goToChoix(), 8000);
   }
 
   render(target) {

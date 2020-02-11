@@ -15,7 +15,6 @@ export default class SuperPapa extends Component {
 
   componentDidMount() {
     document.getElementById("choix-portes").style.display = "none";
-    console.log(6000);
     setTimeout(() => this.goToRayon(), 5000);
   }
 
