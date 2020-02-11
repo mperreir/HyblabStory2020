@@ -8,8 +8,8 @@
   position: absolute;
   width: 481px;
   height: 92px;
-  left: 413px;
-  top: 507px;
+  left: 25%;
+  top: 45%;
   font-family: NimbusSanL;
   font-style: normal;
   font-weight: normal;
@@ -31,7 +31,7 @@ img.logo-contact-wrapper {
 
 #contact-content{
   position: absolute;
-  left: 1200px;
+  left: 60%;
   top: 45%;
   height: 402px;
   font-family: NimbusSanL;
@@ -44,24 +44,6 @@ img.logo-contact-wrapper {
   color: #F6F5F5;
   font-size: 30px;
   line-height: 50px;
-}
-
-
-table{
-  width: 100%;
-  text-align: left;
-  font-size: medium;
-}
-
-table, tr{
-  border: 1px solid white;
-  margin: 0 auto;
-  font-size: medium;
-  border-collapse: collapse;
-}
-
-th{
-  line-height: 200%;
 }
 
 
@@ -86,8 +68,8 @@ th{
   position: absolute;
   width: 681px;
   height: 60px;
-  left: 72px;
-  bottom: 15%;
+  left: 4%;
+  bottom: 12%;
   font-family: NimbusSanL;
   font-style: normal;
   font-size: 17px;
@@ -100,7 +82,7 @@ th{
   position: absolute;
   width: 636px;
   height: 79px;
-  left: 72px;
+  left: 4%;
   bottom: 5%;
   font-family: NimbusSanL;
   font-style: normal;

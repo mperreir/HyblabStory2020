@@ -101,6 +101,30 @@
 
 #nom-polytech {
   position: absolute;
+  width: 257px;
+  height: 195px;
+  left: 1204px;
+  top: 513px;
+}
+
+#noms > a {
+    position: absolute;
+    vertical-align:top;
+    font-family: NimbusSanL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E1E1E;
+}
+
+
+#nom-polytech {
+  position: absolute;
   width: 400px;
   height: 195px;
   left: 1204px;
