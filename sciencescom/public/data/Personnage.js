@@ -184,23 +184,23 @@ let Personnage = {
     "dialogues": {
       "5": [
         {
-          "texte": ["Non, pas tant que ça ! Il faut dire que j’ai eu de la chance :^500"," je suis arrivé dans des locaux flambant neufs, sur le campus des facultés de Nantes !^500"," Et l’année d’après, de nouveaux ordinateurs ont été installés !^500"],
+          "texte": ["Non,^150 pas tant que ça !^300 Il faut dire que j’ai eu de la chance^500","Je suis arrivé dans des locaux flambant neufs,^150 sur le campus des facultés de Nantes !^500", "Et l’année d’après,^150 de nouveaux ordinateurs ont été installés !^500"],
           "suivant": {"personnage": "Pablo", "slide": "5", "paragraphe": "1"}
         },
         {
-          "texte": ["Oui, un très bon timing !^300"," Surtout que le premier mini-ordinateur est arrivé dans l’école pendant ma dernière année !^500"," Bon, à l’époque, ça n’avait de “mini” que le nom mais autant dire que j’ai accueilli ça à bras ouverts !^500"],
+          "texte": ["Oui,^150 un très bon timing !^300", "Surtout que le premier mini-ordinateur est arrivé dans l’école pendant ma dernière année !^700", "Bon,^150 à l’époque,^150 ça n’avait de “mini” que le nom mais autant dire que j’ai accueilli ça à bras ouverts !^500"],
           "suivant": {"personnage": "Pablo", "slide": "5", "paragraphe": "2"}
         },
         {
-          "texte": ["Évidemment ! Je suis diplômé de la promo 1975 au sein du cursus “Finance-Comptabilité”,^500"," donc forcément, un ordinateur est un outil plus qu’important pour travailler dans les meilleures conditions.^500"],
+          "texte": ["Évidemment !^300 Je suis diplômé de la promo 1975 au sein du cursus “Finance-Comptabilité”^500", "donc forcément,^150 un ordinateur est un outil plus qu’important pour travailler dans les meilleures conditions.^500"],
           "suivant": {"personnage": "Pablo", "slide": "5", "paragraphe": "3"}
         },
         {
-          "texte": ["Bien sûr !^300"," Cela fait 2 ans que je suis diplômé et j’ai toujours eu un poste à responsabilités depuis que je suis sorti de l’école.^500"," Aujourd’hui, je travaille au service comptabilité de KPMG à Paris. Ça te parle ?^500"],
+          "texte": ["Bien sûr !^300", "Cela fait 2 ans que je suis diplômé et j’ai toujours eu un poste à responsabilités depuis que je suis sorti de l’école.^700", "Aujourd’hui, je travaille au service comptabilité de KPMG à Paris.^300 Ça te parle ?^500"],
           "suivant": {"personnage": "Pablo", "slide": "5", "paragraphe": "4"}
         },
         {
-          "texte": ["Au plaisir, et bon courage !^500"]
+          "texte": ["Au plaisir,^150 et bon courage !^500"]
         }
       ]
     }
@@ -212,21 +212,21 @@ let Personnage = {
     "dialogues": {
       "6": [
         {
-          "texte": ["Bonjour Pablo, moi c’est Martine.^300"," Et je serais ravie de t’expliquer mon parcours ainsi que l’histoire de l’école, en tout cas l’histoire que j’ai pu voir.^500"," J’ai été diplômée en 1980 du cursus “distribution - commerce  extérieur”.^400"," Ce fut une très belle expérience pour moi.^400"," J’ai eu la chance de faire partie de la première promotion diplômée de la MBA de l’oregon state university.^600"],
+          "texte": ["Bonjour Pablo,^150 moi c’est Martine.^300", "Et je serais ravie de t’expliquer mon parcours ainsi que l’histoire de l’école,^150 en tout cas l’histoire que j’ai pu voir.^500", "J’ai été diplômée en 1980 du cursus “distribution - commerce  extérieur”.^400", "Ce fut une très belle expérience pour moi.^500"," J’ai eu la chance de faire partie de la première promotion diplômée de la MBA de l’Oregon State University.^600"],
           "suivant": {"personnage": "Pablo", "slide": "6", "paragraphe": "1"}
         },
         {
-          "texte": ["Bien sûr ,^300"," il s’agit d’un diplôme international d’études supérieures de haut niveau de gestion et de management des entreprises.^500"," Faire partie des diplômés fut vraiment une fierté pour moi ainsi que mes parents.^500"],
+          "texte": ["Bien sûr,^300 il s’agit d’un diplôme international d’études supérieures de haut niveau", "dans le domaine de la gestion et du management des entreprises.^500", "Faire partie des diplômés fut vraiment une fierté pour moi ainsi que mes parents.^500"],
           "suivant": {"personnage": "Pablo", "slide": "6", "paragraphe": "2"}
         },
         {
-          "texte": ["En effet mais ce n’est pas tout, la période que j’ai vécu en tant qu’étudiante à Audencia fut très riche en innovations.^500"," Ce qui m’a particulièrement plu, c’est l’ouverture  à l’internationale.^400"," Quel chance pour nous ainsi que les futurs étudiants!^400"," Un promotion entière est parties au Polytechnic Central London.^500"," Pour nous ce fut une nouveauté et une opportunité incroyable.^500"," Puis l’ouverture d’un MBA à audencia et d’un institut de relations internationales^500"," a fait d’Audencia une école moderne.^400"," Et c’est sur cette note positive que j’ai terminé mes études.^500"],
+          "texte": ["En effet mais ce n’est pas tout,^150 la période que j’ai vécu en tant qu’étudiante à Audencia fut très riche en innovations.^500", "Ce qui m’a particulièrement plu,^150 c’est l’ouverture à l’international.^500", "Quel chance pour nous ainsi que les futurs étudiants!^400","Une promotion entière est partie au Polytechnic Central London.^500", "Pour nous ce fut une nouveauté et une opportunité incroyable.^500", "Puis l’ouverture d’un MBA à Audencia et d’un institut des relations internationales^500", "a fait d’Audencia une école moderne.^500", "Et c’est sur cette note positive que j’ai terminé mes études.^500"],
           "suivant": {"personnage": "Pablo", "slide": "6", "paragraphe": "3"}
         },
         {
-          "texte": ["Je te souhaite de trouver ta voie. Bonne continuation Pablo.^500"]
+          "texte": ["Je te souhaite de trouver ta voie.^300 Bonne continuation Pablo.^500"]
         }
       ]
     }
   }
-}
+};
