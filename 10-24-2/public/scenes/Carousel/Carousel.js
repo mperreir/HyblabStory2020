@@ -1,7 +1,7 @@
 import Component from "../../js/Component.js";
 import Puberte from "../Puberte/Puberte.js";
 // import Ecrans from "../Ecrans/Ecrans.js";
-// import Harcelement from "../Harcelement/Harcelement.js";
+import Harcelement from "../Harcelement/Harcelement.js";
 // import Flemme from "../Flemme/Flemme.js";
 
 export default class Carousel extends Component {
@@ -15,7 +15,7 @@ export default class Carousel extends Component {
     const ChildrenProps = { onStart: this.startScenario.bind(this) };
     // this.ecransC = new Ecrans(ChildrenProps);
     // this.flemmeC = new Flemme(ChildrenProps);
-    // this.harcelementC = new Harcelement(ChildrenProps);
+    this.harcelementC = new Harcelement(ChildrenProps);
     // this.puberteC = new Puberte(ChildrenProps);
     // /!\ Cheat /!\
     // this.ecransC = new Puberte(ChildrenProps);

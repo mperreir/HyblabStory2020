@@ -1,44 +1,129 @@
-import View from "../../js/View.js";
-import ViewLendemain from "./lendemain/lendemain.js";
+import Component from "../../js/Component.js";
+import Porte from "./Porte/Porte.js"
+import Arrivee from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import PorteClaque from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import ViewDerniereTentative from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import ViewPremierChoix from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import FewHoursBefore from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import FlashBack from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import FinHistoire from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import Lendemain from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
 
-export default class ViewHarcelement extends View {
-  constructor() {
-    super("harcelement", document.getElementById("root"));
+export default class Harcelement extends Component {
+  constructor(onStart) {
+    super();
+    this.onStart = onStart;
+    this.section = document.createElement("section");
+    this.section.setAttribute("id", "harcelement");
+    this.porte = new Porte({
+      beginBullying: this.goToArriveeEnfant.bind(this),
+      onStart
+    });
+    this.arrivee = new Arrivee();
+    this.porteClaque = new PorteClaque();
+    this.premierChoix = new ViewPremierChoix({
+      beginBullying: this.goToPremierChoix.bind(this)
+    });
+    this.derniereTentative = new ViewDerniereTentative({
+      beginBullying: this.goToDernièreTentative.bind(this)
+    });
+    this.fewHoursBefore = new FewHoursBefore();
+    this.flashBack = new FlashBack();
+    this.finHistoire = new FinHistoire();
+    this.lendemain = new Lendemain();
+    
   }
+
+
+  goToArriveeEnfant(e){
+    this.onStart(this); 
+    //erreur ici je sais pas pourquoi mais ça empeche le lancement du scenario
+    //il me dit que onStart n'est pas une fonction du coup je sais pas pourquoi ca marche chez Yoann
+    this.porte.componentWillUnmount();
+    this.arrivee.render(this.section);
+    e.preventDefault();
+    setTimeout(() => {
+      this.goToClaquePorte(e);
+    }, 3000);
+  }
+
+  goToClaquePorte(e){
+    this.onStart(this);
+    this.arrivee.componentWillUnmount();
+    this.porteClaque.render(this.section);
+    e.preventDefault();
+    setTimeout(() => {
+      this.goToPremierChoix();
+    }, 3000);
+  }
+
+  goToPremierChoix(){
+    this.porteClaque.componentWillUnmount();
+    this.premierChoix.render(this.section);
+  }
+  
+  goToDernièreTentative(){
+    this.premierChoix.componentWillUnmount();
+    this.derniereTentative.render(this.section);
+  }
+
+  goToFewHoursBefore(e){
+    this.onStart(this);
+    this.derniereTentative.componentWillUnmount();
+    this.fewHoursBefore.render(this.section);
+    e.preventDefault();
+    setTimeout(() => {
+      this.goToFlashBack(e);
+    }, 3000);
+  }
+
+  goToFlashBack(e){
+    this.onStart(this);
+    this.fewHoursBefore.componentWillUnmount();
+    this.flashBack.render(this.section);
+    e.preventDefault();
+    setTimeout(() => {
+      this.goToFinHistoire(e);
+    }, 3000);
+  }
+
+  goToFinHistoire(e){
+    this.onStart(this);
+    this.flashBack.componentWillUnmount();
+    e.preventDefault();
+    //je sais pas
+  }
+
+  gotoLendemain(e){
+    this.onStart(this);
+    this.premierChoix.componentWillUnmount();
+    //ou derniereTentative mais je sais pas comment faire
+    this.lendemain.render(this.section);
+    e.preventDefault();
+    setTimeout(() => {
+      this.goToArriveeEnfant(e);
+    }, 3000);
+  }
+  
+
 
   async load() {
-    await super.load();
-    this.porte = await this.loadHTML("/10-24-2/scenes/Harcelement/porte.html");
-    this.lendemain = new ViewLendemain();
-    await this.lendemain.load();
-    // await Promise.all([super.load(), this.porte, this.lendemain]);
+    await Promise.all([
+      this.porte.load(),
+      this.arrivee.load(),
+      this.porteClaque.load(),
+      this.premierChoix.load(),
+      this.derniereTentative.load(),
+      this.fewHoursBefore.load(),
+      this.flashBack.load(),
+      this.finHistoire.load(),
+      this.lendemain.load()
+    ]);
   }
 
-  linkElements() {
-    document
-      .getElementById("harcelement")
-      .addEventListener("click", () => console.log("toc"));
-    document.getElementById("harcelement").addEventListener("click", () => {
-      document.getElementById("carousel-button").style.display = "block";
-      document.getElementById("harcelement").innerHTML = "";
-      this.lendemain.render(document.getElementById("harcelement"));
-    });
-  }
-
-  /**
-   *
-   * @param {HTMLElement} target
-   */
   render(target) {
-    const parser = new DOMParser();
-    var sectionEl = parser.parseFromString(this.htmlText, "text/html").body
-      .firstChild;
-    sectionEl.appendChild(
-      parser.parseFromString(this.porte, "text/html").body.firstChild
-    );
-    target.innerHTML = "";
-    target.appendChild(sectionEl);
-    console.log(target);
-    this.linkElements();
+    this.renderHtmlInTarget(target, this.section);
+    this.porte.render(this.section);
+    this.componentDidMount();
   }
 }
