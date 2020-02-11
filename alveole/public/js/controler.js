@@ -61,7 +61,7 @@ class SuperControler {
 
     // ModelSlide6
     let modelSlide6 = new ModelSlide6();
-    let updateSlide6 = new UpdateSlide6(modelPopup, viewCenter);
+    let updateSlide6 = new UpdateSlide6(modelPopup, viewCenter, modelSlides);
     modelSlide6.addObservers(updateSlide6);
 
     // ModelSlide7
@@ -127,12 +127,12 @@ class SuperControler {
     // modelSlides.addObservers(mediatorConclusion);
 
     // Adding Listenners
-    viewStupidButtons.next.addEventListener('click', function() {
-      modelSlides.nextSlide();
-    });
-    viewStupidButtons.prev.addEventListener('click', function() {
-      modelSlides.prevSlide();
-    });
+    // viewStupidButtons.next.addEventListener('click', function() {
+    //   modelSlides.nextSlide();
+    // });
+    // viewStupidButtons.prev.addEventListener('click', function() {
+    //   modelSlides.prevSlide();
+    // });
     document.getElementById('button-next').addEventListener('click', function() {
       modelSlides.nextSlide();
       modelPopup.setValue(false);
@@ -820,10 +820,11 @@ class UpdateSlide5 extends Observer {
 
 class UpdateSlide6 extends Observer {
 
-  constructor(model, composant) {
+  constructor(model, composant, modelS) {
     super();
     this.model = model;
     this.composant = composant;
+    this.modelS = modelS;
   }
 
   update(observable, object) {
@@ -864,6 +865,17 @@ class UpdateSlide6 extends Observer {
       container.appendChild(slider1);
       slider1.appendChild(input1);
       slider2.appendChild(input2);
+
+      let next = document.createElement('div');
+      next.setAttribute('id', 'nextSlide6');
+      next.innerHTML = "next";
+
+      next.addEventListener('click', () => {
+        this.modelS.nextSlide();
+      });
+
+      container.appendChild(next);
+
 
     } else if (val == false) {
        this.composant.div.querySelector("#slide6_mixtable").remove();
