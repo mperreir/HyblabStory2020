@@ -175,7 +175,7 @@ $(document).ready(function() {
         if (angleDeg < 15 || angleDeg > 50) {
             music_playing = 0;
             set_music_pause("vinyl");
-            set_music_volume("vinyl", 1);
+            set_music_volume("vinyl", 0.2);
 
             set_music_pause("vinyl-noise");
 
