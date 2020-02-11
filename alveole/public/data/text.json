@@ -115,8 +115,8 @@
     },
     "choices": {
       "1": {
-        "main": "il faut compter en moyenne le double du temps de l’enregistrement.",
-        "sub": "soit 20 minutes de dérushage pour 10 minutes d’enregistrement audio"
+        "main": "il faut compter en moyenne<br>le double du temps de l’enregistrement.",
+        "sub": "Soit 20 minutes de dérushage pour 10<br>minutes d’enregistrement audio"
       }
     },
     "answer": "Pas simple ? développer expertise du monteur : connaît les règles de l’acoustique, le fonctionnement d’un micro dans ses moindres détails, le traitement des sons, un peu l’oreille absolue, sait quel matériel utiliser selon situations."

@@ -347,9 +347,12 @@ class UpdateIntroSlide extends Observer {
 
     if (val == true) {
       let div = document.createElement('div');
+      div.setAttribute('id', 'slideIntro');
       this.composant.div.appendChild(div);
 
-      // observable.loadIntro(div);
+      observable.loadIntro(div);
+    } else if (val == false) {
+      this.composant.div.querySelector('#slideIntro').remove();
     }
   }
 }
@@ -367,53 +370,57 @@ class UpdateSlide1 extends Observer {
 
 
     if (val == true) {
+      let container = document.createElement('div');
+      container.setAttribute('id', 'slide1');
+
       let hotelDiv = document.createElement('div');
       hotelDiv.setAttribute('id', 'hotel');
-      hotelDiv.setAttribute('class', 'onClick');
 
       let hotelText = document.createElement('div');
       hotelText.setAttribute('class', 'slide1Label unselectable');
 
       let studioDiv = document.createElement('div');
       studioDiv.setAttribute('id', 'studio');
-      studioDiv.setAttribute('class', 'onClick');
 
       let studioText = document.createElement('div');
       studioText.setAttribute('class', 'slide1Label unselectable');
 
+      container.appendChild(hotelDiv);
+      container.appendChild(studioDiv);
+
       hotelDiv.appendChild(hotelText);
       studioDiv.appendChild(studioText);
 
-      this.composant.div.appendChild(hotelDiv);
-      this.composant.div.appendChild(studioDiv);
+      this.composant.div.appendChild(container);
 
       let hotel = observable.loadHotel(hotelDiv);
       let studio = observable.loadStudio(studioDiv);
       let model = this.model;
 
       hotel.addEventListener('DOMLoaded', function() {
-        document.getElementById('hotel').addEventListener('mouseover', function() {
+        hotelDiv.addEventListener('mouseenter', function() {
           hotel.play();
-          // $(this).toggleClass('animation_checked');
-          // $(this).parent().find('#slide1Label').toggleClass('label_checked');
+          $(this).toggleClass('animation_checked');
         });
-        document.getElementById('hotel').addEventListener('mouseout', function() {
-          // $(this).toggleClass('animation');
+        hotelDiv.addEventListener('mouseleave', function() {
           hotel.pause();
+          $(this).toggleClass('');
         });
-        document.getElementById('hotel').addEventListener('click', function() {
+        hotelDiv.addEventListener('click', function() {
           observable.setChoice(0);
           model.setValue(true);
         });
       });
       studio.addEventListener('DOMLoaded', function() {
-        document.getElementById('studio').addEventListener('mouseover', function() {
+        studioDiv.addEventListener('mouseenter', function() {
           studio.play();
+          $(this).toggleClass('animation_checked');
         });
-        document.getElementById('studio').addEventListener('mouseout', function() {
+        studioDiv.addEventListener('mouseleave', function() {
           studio.pause();
+          $(this).toggleClass('');
         });
-        document.getElementById('studio').addEventListener('click', function() {
+        studioDiv.addEventListener('click', function() {
           observable.setChoice(1);
           model.setValue(true);
         });
@@ -564,12 +571,12 @@ class UpdateSlide4 extends Observer {
       container.appendChild(div_valide);
 
       div_valide.addEventListener('click', () => {
-        let checked = document.getElementsByClassName('slide4Label_checked');
+        let checked = document.getElementsByClassName('svg_checkbox_checked');
         if (checked.length >= 1) {
           observable.setChoice();
           this.model.setValue(true);
         } else {
-          console.log('err : expeted checked animation');
+          console.log('err : expected checked animation');
         }
       });
 
@@ -642,13 +649,45 @@ class UpdateSlide5 extends Observer {
       container.setAttribute('id', 'slide5_derush');
       this.composant.div.appendChild(container);
 
+      let timeline = document.createElement('div');
+      timeline.setAttribute('id', 'slide5TimeLine');
+      container.appendChild(timeline);
+
       for (let i = 1; i < 4; i++) {
         let label = document.createElement('div');
         label.setAttribute('id', 'slide5_' + i + '_label');
         label.setAttribute('class', 'slide5Label unselectable');
         label.innerHTML = observable.text.labels[i];
+
+        label.addEventListener('click', function() {
+          $(this).parent().find('#svg_slide5-' + i).toggleClass('slide5visible');
+        });
         container.appendChild(label);
       }
+
+      let div_valide = document.createElement('div');
+      div_valide.setAttribute('id','slide4_valide');
+      container.appendChild(div_valide);
+
+      div_valide.addEventListener('click', () => {
+        let checked = document.getElementsByClassName('slide5visible');
+        if (checked.length >= 1) {
+          this.model.setValue(true);
+        } else {
+          console.log('err : expected checked animation');
+        }
+      });
+
+      let div_valide_text = document.createElement('div');
+      div_valide_text.setAttribute('id','slide4_valide_text');
+      div_valide_text.setAttribute('class', 'unselectable');
+      container.appendChild(div_valide_text);
+      div_valide_text.innerHTML = 'valider';
+
+      observable.loadTimeLine(timeline);
+      observable.loadValide(div_valide);
+
+
     } else if (val == false) {
       this.composant.div.querySelector('#slide5_derush').remove();
     }
