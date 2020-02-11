@@ -483,7 +483,7 @@ class ModelSlide4 extends Observable {
     });
   }
 
-  load(container, divs, checkboxes, div_valide) {
+  load(container, divs, div_valide) {
     if (this.instanciated == false) {
       let animes = this.loadAnime(divs);
       // this.loadCheckbox(checkboxes);
