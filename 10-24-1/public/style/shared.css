@@ -102,6 +102,27 @@ button:focus {
   fill: white;
 }
 
+#facebook-button-fin,
+#instagram-button-fin {
+  fill: transparent;
+}
+
+#facebook-button-fin:hover,
+#instagram-button-fin:hover {
+  cursor: pointer;
+}
+
+#facebook-button-fin:hover > circle,
+#instagram-button-fin:hover > circle {
+  stroke: rgb(255, 110, 0);
+  fill: rgb(255, 110, 0);
+}
+
+#facebook-button-fin:hover path,
+#instagram-button-fin:hover path {
+  fill: white;
+}
+
 .social-network-button {
   width: 37.5px;
   height: 37.5px;

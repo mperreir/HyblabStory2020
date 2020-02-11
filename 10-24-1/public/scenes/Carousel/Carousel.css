@@ -45,6 +45,11 @@
   display: none;
 }
 
+#credits-button {
+  display: none;
+  width: 116px;
+}
+
 /* Carousel */
 
 #carousel-container {

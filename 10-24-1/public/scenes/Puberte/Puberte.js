@@ -8,6 +8,7 @@ import SuperPapa from "./6_SuperPapa/SuperPapa.js";
 import Rayon from "./7_Rayon/Rayon.js";
 import Choix from "./8_Choix/Choix.js";
 import Fin from "./10_Fin/Fin.js";
+import Credits from "./11_Credits/Credits.js";
 
 export default class Puberte extends Component {
   constructor({ onStart }) {
@@ -43,7 +44,10 @@ export default class Puberte extends Component {
       goToChoix: () => this.choix.render(this.section)
     });
     this.choix = new Choix({ goToFin: () => this.fin.render(this.section) });
-    this.fin = new Fin();
+    this.fin = new Fin({
+      goToCredits: () => this.credits.render(this.section)
+    });
+    this.credits = new Credits();
   }
 
   goToATable(e) {
@@ -82,7 +86,8 @@ export default class Puberte extends Component {
       this.superPapa.load(),
       this.rayon.load(),
       this.choix.load(),
-      this.fin.load()
+      this.fin.load(),
+      this.credits.load()
     ]);
   }
 
