@@ -684,22 +684,28 @@ dessus de l'apect ratio 16/9 */
   height: 100%;
 }
 
+.onClick {
+  position: absolute;
+  top: 40%;
+  width: 40%;
+  height: 60%;
+}
+
 #bouche1 {
   position: absolute;
-  top: 30%;
-  left: 5%;
+  left: 0%;
 }
 
 #bouche2 {
   position: absolute;
-  top: 30%;
-  right: 5%;
+  right: 0%;
 }
 
 .slide3 {
   position: absolute;
-  top: 20%!important;
-  height: 50%!important;
+  top: 0;
+  height: 80%!important;
+  width: 100%!important;
 }
 
 .slide3Label {
@@ -767,9 +773,16 @@ dessus de l'apect ratio 16/9 */
   /* transition: all 0.3s ease-in-out; */
 }
 
+.animation_checked {
+  transform: scale(1.1)!important;
+  transition: all .2s ease-in-out;
+}
+
 .animation_checked, .animation_checked *{
   fill: #9E90F2!important;
   stroke: #9E90F2!important;
+  /* transform: scale(1.1); */
+  /* transition: scale .3s; */
 }
 
 .label_checked {

@@ -404,7 +404,7 @@ class UpdateSlide1 extends Observer {
         });
         hotelDiv.addEventListener('mouseleave', function() {
           hotel.pause();
-          $(this).toggleClass('');
+          $(this).toggleClass('animation_checked');
         });
         hotelDiv.addEventListener('click', function() {
           observable.setChoice(0);
@@ -418,7 +418,7 @@ class UpdateSlide1 extends Observer {
         });
         studioDiv.addEventListener('mouseleave', function() {
           studio.pause();
-          $(this).toggleClass('');
+          $(this).toggleClass('animation_checked');
         });
         studioDiv.addEventListener('click', function() {
           observable.setChoice(1);
@@ -434,6 +434,7 @@ class UpdateSlide1 extends Observer {
       document.getElementById('studio').remove();
       observable.destroyHotel();
       observable.destroyStudio();
+      this.composant.div.querySelector("#slide1").remove();
     }
   }
 }
@@ -529,7 +530,28 @@ class UpdateSlide3 extends Observer {
       bouche1Text.innerHTML = observable.text.labels[1];
       bouche2Text.innerHTML = observable.text.labels[2];
 
-      observable.loadIcons(bouche1, bouche2);
+      let bouches = observable.loadIcons(bouche1, bouche2);
+
+      bouches[1].addEventListener('DOMLoaded', () => {
+        bouche1.addEventListener('mouseenter', function() {
+          bouches[1].play();
+          $(this).toggleClass('animation_checked');
+        });
+        bouche1.addEventListener('mouseleave', function() {
+          bouches[1].pause();
+          $(this).toggleClass('animation_checked');
+        });
+      });
+      bouches[2].addEventListener('DOMLoaded', () => {
+        bouche2.addEventListener('mouseenter', function() {
+          bouches[2].play();
+          $(this).toggleClass('animation_checked');
+        });
+        bouche2.addEventListener('mouseleave', function() {
+          bouches[2].pause();
+          $(this).toggleClass('animation_checked');
+        });
+      });
 
       let model = this.model;
 
@@ -571,7 +593,7 @@ class UpdateSlide4 extends Observer {
       container.appendChild(div_valide);
 
       div_valide.addEventListener('click', () => {
-        let checked = document.getElementsByClassName('svg_checkbox_checked');
+        let checked = document.getElementsByClassName('animation_checked');
         if (checked.length >= 1) {
           observable.setChoice();
           this.model.setValue(true);
@@ -613,11 +635,16 @@ class UpdateSlide4 extends Observer {
 
       Object.keys(animations).forEach( function(key) {
         animations[key].addEventListener('DOMLoaded', function() {
-          document.getElementById(key).addEventListener('mouseover', function(){
+          document.getElementById(key).addEventListener('mouseenter', function() {
             animations[key].play();
+            $(this).toggleClass('animation_checked');
           });
-          document.getElementById(key).addEventListener('mouseout', function(){
+          document.getElementById(key).addEventListener('mouseleave', function() {
             animations[key].pause();
+            $(this).toggleClass('animation_checked');
+          });
+          document.getElementById(key).addEventListener('click', function() {
+            $(this).toggleClass('animation_checked');
           });
         });
       });
