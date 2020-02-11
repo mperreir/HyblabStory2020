@@ -33,10 +33,24 @@ class ViewFooter {
     this.div.appendChild(this.text);
     footer.appendChild(this.div);
 
-    Snap.load('data/footer_ellipse.svg', function(data) {
-      let snap = Snap('#footer_ellipse');
-      snap.append(data);
+    // Snap.load('data/footer_ellipse.svg', function(data) {
+    //   let snap = Snap('#footer_ellipse');
+    //   snap.append(data);
+    // });
+
+    this.roue = bodymovin.loadAnimation({
+      container : this.div,
+      renderer: 'svg',
+      name: 'animation1',
+      loop: true,
+      autoplay: false,
+      path: 'data/roue-2.json',
+      rendererSettings: {
+        className: 'footerAnimation',
+        id: 'svg_ellipse'
+      }
     });
+
     this.main.appendChild(footer);
   }
 }
