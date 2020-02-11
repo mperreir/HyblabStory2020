@@ -344,7 +344,7 @@ class ModelSlide3 extends Observable {
         renderer: 'svg',
         loop: true,
         autoplay: false,
-        path: 'data/bouche.json',
+        path: 'data/voix-amateur.json',
         rendererSettings: {
           className: 'slide3',
           id: 'svg_bouche1'
@@ -355,7 +355,7 @@ class ModelSlide3 extends Observable {
         renderer: 'svg',
         loop: true,
         autoplay: false,
-        path: 'data/bouche.json',
+        path: 'data/voix-pro.json',
         rendererSettings: {
           className: 'slide3',
           id: 'svg_bouche2'
@@ -549,6 +549,10 @@ class ModelSlide6 extends Observable {
     }
   }
 
+  getDraggPath() {
+
+  }
+
   setDestroyed() {
     this.instanciated = false;
   }
@@ -730,9 +734,17 @@ class ModelSlide8 extends Observable {
   }
 
   loadSVG(container) {
-    Snap.load('data/capsule.svg', (data) => {
-      let snap = Snap(container);
-      snap.append(data);
+    this.capsule = bodymovin.loadAnimation({
+      container : container,
+      renderer: 'svg',
+      name: 'animation1',
+      loop: true,
+      autoplay: true,
+      path: 'data/capsule.json',
+      rendererSettings: {
+        className: 'slide8AnimationJSON',
+        id: 'svg_slide8'
+      }
     });
   }
 
