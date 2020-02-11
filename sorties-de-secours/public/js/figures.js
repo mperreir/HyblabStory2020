@@ -42,16 +42,19 @@ $(document).ready(function() {
     });
 
     let figPos = $("#figures-section").position();
-    let credPos = $("#credits-section").position();
+    let contPos = $("#contact-section").position();
 
     $(window).scroll(function(e) {
 
       let scrollPos = $(window).scrollTop();
 
       let figuresSection = $("#figures-section");
-      if (scrollPos > figPos.top - 400 && scrollPos < credPos.top - 100 && figuresFixed) {
+      if (scrollPos > figPos.top - 400 && scrollPos < contPos.top - 100 && figuresFixed) {
         e.preventDefault();
         bodyScrollLock.disableBodyScroll(figuresSection);
+        let logoAnimated = document.getElementById("figures-animated-logo");
+        logoAnimated.classList.remove("fadeOut");
+        logoAnimated.classList.add("fadeInUp");
         $('html,body').animate({
             scrollTop: $("#figures-section").offset().top
         }, 200);

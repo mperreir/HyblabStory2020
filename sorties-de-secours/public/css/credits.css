@@ -101,13 +101,13 @@
 
 #nom-polytech {
   position: absolute;
-  width: 257px;
+  width: 400px;
   height: 195px;
   left: 1204px;
   top: 513px;
 }
 
-#noms > a {
+#noms p a {
     position: absolute;
     vertical-align:top;
     font-family: NimbusSanL;
@@ -120,7 +120,14 @@
     text-align: center;
     text-transform: uppercase;
     color: #1E1E1E;
+
+    text-decoration: none;
 }
+
+#noms p a:hover {
+  font-weight: bold;
+}
+
 .ligne_verticale1
 {
   position: absolute;
