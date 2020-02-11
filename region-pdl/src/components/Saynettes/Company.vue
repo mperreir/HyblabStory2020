@@ -22,7 +22,7 @@
     <PlusButton v-model="closePopover1" class="plus1" :width="20" @open="closePopover(1)">
       <p class="text">
         La
-        <span class="orange">biomasse</span> utilise <br> le méthane produit par la décomposition de déchets ménagers pour chauffer les bâtiments.
+        <span class="orange">biomasse</span> utilise <br> le méthane produit par la décomposition de déchets ménagers pour chauffer <br> les bâtiments.
       </p>
     </PlusButton>
     <PlusButton v-model="closePopover2" class="plus2" :width="20" @open="closePopover(2)">
@@ -40,8 +40,8 @@
     <PlusButton v-model="closePopover4" class="plus4" :width="20" @open="closePopover(4)">
       <p class="text">
         En Pays de la Loire, <br> la biomasse produit
-        <span class="orange">651 GWh.</span> <br> Cela équivaut à
-        <span class="orange">56 000 tonnes de pétrole.</span>
+        <span class="orange">651 GWh.</span> <br> Cela équivaut <br> à
+        <span class="orange">56 000 tonnes <br> de pétrole.</span>
       </p>
     </PlusButton>
     <SimpleButton text="Continuer l'histoire" :width="23" :x="75" :y="90" @click.native="onNext" />
