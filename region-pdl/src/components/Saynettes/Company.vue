@@ -123,8 +123,8 @@ export default {
 
 .plus2 {
   position: absolute;
-  top: 35%;
-  left: 60%;
+  top: 75%;
+  left: 77%;
 }
 
 .plus3 {
@@ -135,7 +135,7 @@ export default {
 
 .plus4 {
   position: absolute;
-  top: 75%;
+  top: 80%;
   left: 30%;
 }
 </style>
