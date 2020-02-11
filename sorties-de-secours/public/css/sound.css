@@ -9,7 +9,14 @@
   position: relative;
   top: 30%;
 
+  z-index: 450;
+
   animation-delay: 0.5s;
+}
+
+.sound-content-bottom-right {
+    right: 50px;
+    top: calc(100vh - 100px);
 }
 
 .sound-content > svg:hover {
