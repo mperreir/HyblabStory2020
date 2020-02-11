@@ -22,6 +22,9 @@
   line-height: 29px !important;
   color: #426262 !important;
 }
+.text-change * {
+  color: #426262 !important;
+}
 .text-change em, .text-change span {
   color: #cb563e !important;
   font-weight: bold !important;

@@ -88,6 +88,9 @@
   font-size: 20px;
   margin-bottom: auto;
 }
+#view7 #view-7-middle #view-7-rond-vert #view-7-nonpmrtext em {
+  font-weight: bold;
+}
 #view7 #view-7-middle article {
   position: absolute;
   left: 50%;
