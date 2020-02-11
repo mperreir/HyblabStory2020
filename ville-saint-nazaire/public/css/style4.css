@@ -7,6 +7,7 @@
 
 }
 
+
 .slide5-container p{
 	z-index: 200;
 	font-family: Vibur;
@@ -145,9 +146,14 @@
 
 @media screen and (max-aspect-ratio: 16/9){
    
-    #page4 p, #texte{
+    #page4 p, #texte, #slide4-intro-choix{
         font-size: 1.8vw;
     }
+
+     #slide4-intro-choix {
+    	 font-size: 2.5vw;
+    }
+	
 	#container1-slide5 p, #container2-slide5 p, #container3-slide5 p{
 		font-size: 2.2vw;
 	}
@@ -165,6 +171,10 @@
    #page4 p, #slide4-texte{
         font-size: 3.5vh;
     }
+
+    #slide4-intro-choix {
+    	 font-size: 5.5vh;
+    }
 	
 	#container1-slide5 p, #container2-slide5 p, #container3-slide5 p{
 		font-size: 3.7vh;
@@ -174,6 +184,16 @@
         font-size: 3vh;
     }
 
+}
+
+#slide4-intro-choix {
+	visibility: hidden;
+	z-index: 200;
+	font-family: Vibur;
+	color: #255A85;
+	position: absolute;
+	top : 20%;
+	left : 28%;
 }
 
 .slide5-container {
@@ -199,14 +219,14 @@
 #container1-slide5{
 	position: absolute;
 	left: 24%;
-	top: 20%;
+	top: 35%;
 	width : 50%;
 	visibility: hidden;
 }
 
 #container1-slide5:hover{
 	left: 30%;
-	top: 20%;
+	top: 35%;
 	transition:0.5s;
 }
 
@@ -219,14 +239,14 @@
 #container2-slide5{
 	position: absolute;
 	left: 24%;
-	top: 40%;
+	top: 52%;
 	width : 52%;
 	visibility: hidden;
 }
 
 #container2-slide5:hover{
 	left: 30%;
-	top: 40%;
+	top: 52%;
 	transition:0.5s;
 	
 }
@@ -241,14 +261,14 @@
 #container3-slide5{
 	position: absolute;
 	left: 24%;
-	top: 60%;
+	top: 69%;
 	width : 52%;
 	visibility: hidden;
 }
 
 #container3-slide5:hover{
 	left: 30%;
-	top: 60%;
+	top: 69%;
 	transition:0.5s;
 }
 

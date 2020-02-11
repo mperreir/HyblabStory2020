@@ -27,9 +27,9 @@
 #slide6-trait-dialogueA {
 	position: absolute;
 	width: 1%;
-	height: 11%;
+	height: 20%;
 	left: 83%;
-	top: 67.5%;
+	top: 68%;
 
 }
 
@@ -38,8 +38,8 @@
 	text-align : right;
 	width: 56%;
 	height: 13%;
-	left: 26%;
-	top: 67.3%;
+/*	left: 26%;
+	top: 67.3%;*/
 	line-height: 35%;
 
 }
@@ -97,12 +97,31 @@
 }
 #imagebtn36{
     top:30%;
-	  left:66%;
+	 left:66%;
 }
 
+#texte-16 {
+	position: absolute;
+	left: 11%;
+	top: 68.8%;
+	width : 70%;
+}
+
+#texte-26 {
+	position: absolute;
+	left: 11%;
+	top: 67.3%;
+}
+
+#texte-36 {
+	position: absolute;
+	left: 11%;
+	top: 68.8%;
+}
 
 #texte-26, #texte-36{
 	visibility:hidden;
+	width : 70%;
 }
 
  #slide6-suivant:hover, #slide6-btnRetour:hover, #imagebtn16, #imagebtn26, #imagebtn36{
@@ -112,7 +131,7 @@
 /* Media queries pour le responsive */
 
 @media screen and (max-aspect-ratio: 16/9){
-   
+
     #page6 p{
         font-size: 1.8vw;
     }
@@ -126,7 +145,7 @@
 
 
 @media screen and (min-aspect-ratio: 16/9){
-    
+
    #page6 p {
         font-size: 3.5vh;
     }
