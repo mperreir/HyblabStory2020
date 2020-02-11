@@ -510,23 +510,23 @@ class UpdateSlide2 extends Observer {
         let handles = document.querySelectorAll(".handle"+i);
 
         if (i == 0){
-          let node1 = [100, 400];
+          let node1 = [45, 395];
           let node2 = [100, 450];
           observable.loadWire(handles, path, plug, [node1, node2]);
         }
-        else if (i == 3){
-          let node1 = [600, 400];
-          let node2 = [600, 450];
-          observable.loadWire(handles, path, plug, [node1, node2]);
-        }
         else if (i == 1){
-          let node1 = [250, 250];
-          let node2 = [250, 300];
+          let node1 = [210, 270];
+          let node2 = [230, 280];
           observable.loadWire(handles, path, plug, [node1, node2]);
         }
         else if (i == 2){
-          let node1 = [400, 250];
-          let node2 = [400, 300];
+          let node1 = [486, 272];
+          let node2 = [500, 400];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+        else if (i == 3){
+          let node1 = [636, 368];
+          let node2 = [550, 450];
           observable.loadWire(handles, path, plug, [node1, node2]);
         }
       }
