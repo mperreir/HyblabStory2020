@@ -113,11 +113,12 @@ export default {
 
 .logo-region {
   position: absolute;
-  left: 7%;
-  top: 5%;
-  width: 16%;
+  left: 0;
+  top: 0;
+  width: 20%;
   height: 7%;
-  border-radius: 1vh;
+  padding: 1% 0;
   background-color: #fff8;
+  border-radius: 0 0 2vh 0;
 }
 </style>
