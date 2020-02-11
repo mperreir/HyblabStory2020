@@ -3,7 +3,7 @@
     <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
       <span v-if="getCharacterGender === 'mme'">
         L’entreprise de Mme Dubois est engagée pour la transition énergétique et profite des aides de la Région.
-        <br />À présent, l’entreprise créée sa
+        <br />À présent, l’entreprise crée sa
         <b>
           propre énergie verte
           grâce à la biomasse.
@@ -12,7 +12,7 @@
       <span v-if="getCharacterGender === 'm'">
         À côté de l’école dans laquelle enseigne M. Moreau, se trouve l’entreprise de Mme Dubois.
         <br />Elle est engagée pour la transition énergétique et profite des aides de la Région.
-        <br />À présent, elle créée sa
+        <br />À présent, elle crée sa
         <b>
           propre énergie verte
           grâce à la biomasse
