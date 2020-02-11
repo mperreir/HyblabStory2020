@@ -44,7 +44,7 @@ class ViewFooter {
       name: 'animation1',
       loop: true,
       autoplay: false,
-      path: 'data/roue-2.json',
+      path: 'data/roue-3.json',
       rendererSettings: {
         className: 'footerAnimation',
         id: 'svg_ellipse'
@@ -195,8 +195,39 @@ class ViewModalConclusion {
     this.alveole = document.createElement('div');
     this.alveole.setAttribute('id', 'top');
 
+    this.logo = document.createElement('div');
+    this.logo.setAttribute('id', 'logoAlv');
+
+    Snap.load('data/logo_conclu.svg', (data) => {
+      let snap = Snap(this.logo);
+      snap.append(data);
+    });
+
+    this.text = document.createElement('div');
+    this.text.setAttribute('id', 'names_');
+    this.text.innerHTML = "boris lemasson - co-fondateur<br>pierre-yves alain - co-fondateur";
+
+    this.alveole.appendChild(this.text);
+    this.alveole.appendChild(this.logo);
+
     this.bottom = document.createElement('div');
     this.bottom.setAttribute('id', 'bottom');
+
+    this.media = document.createElement('div');
+    this.media.setAttribute('id', 'medialab');
+    Snap.load('logos/medialab.svg', (data) => {
+      let snap = Snap(this.media);
+      snap.append(data);
+    });
+    this.hyblab = document.createElement('div');
+    this.hyblab.setAttribute('id', 'hyblab');
+    Snap.load('logos/hyblab.svg', (data) => {
+      let snap = Snap(this.hyblab);
+      snap.append(data);
+    });
+
+    this.bottom.appendChild(this.media);
+    this.bottom.appendChild(this.hyblab);
 
     this.content.appendChild(this.alveole);
     this.content.appendChild(this.bottom);
@@ -212,7 +243,7 @@ class ViewModalConclusion {
       },
       "polytech": {
         "logo": "logos/polytech.svg",
-        "role": "Développeurs",
+        "role": "Développement",
         "people": {
           "1": "Andi Wang",
           "2": "Robin Mauduit",

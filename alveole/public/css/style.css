@@ -181,18 +181,18 @@ footer {
 
 #hotel {
   position: absolute;
-  left: 5%;
+  left: 10%;
   top: 35%;
-  width: 28%;
+  width: 25%;
   height: 65%;
   z-index: 1;
 }
 
 #studio {
   position: absolute;
-  right: 5%;
+  right: 10%;
   top: 35%;
-  width: 28%;
+  width: 25%;
   height: 65%;
   z-index: 1;
 }
@@ -706,19 +706,19 @@ dessus de l'apect ratio 16/9 */
 
 .onClick {
   position: absolute;
-  top: 40%;
+  top: 45%;
   width: 40%;
-  height: 60%;
+  height: 55%;
 }
 
 #bouche1 {
   position: absolute;
-  left: 0%;
+  left: 3%;
 }
 
 #bouche2 {
   position: absolute;
-  right: 0%;
+  right: 3%;
 }
 
 .slide3 {
@@ -736,7 +736,7 @@ dessus de l'apect ratio 16/9 */
   font-family: Oswald;
   font-style: normal;
   font-weight: 500;
-  font-size: 16%;
+  font-size: 15%;
   text-align: center;
   letter-spacing: 0.21em;
   text-transform: uppercase;
@@ -784,7 +784,7 @@ dessus de l'apect ratio 16/9 */
   position: absolute;
   height: 60%;
   width: 18%;
-  top: 30%;
+  top: 40%;
 }
 
 .animation, .animation *{
@@ -1092,7 +1092,7 @@ dessus de l'apect ratio 16/9 */
   font-style: normal;
   font-weight: 500;
   font-size: 15%;
-  line-height: 27px;
+  /* line-height: 27px; */
   text-align: center;
   letter-spacing: 0.21em;
   text-transform: uppercase;
@@ -1103,7 +1103,7 @@ dessus de l'apect ratio 16/9 */
   width: 40%;
   height: 40%;
   top: 45%;
-  left: -0%;
+  left: 5%;
 }
 
 #slide7_2_choice {
@@ -1445,8 +1445,8 @@ dessus de l'apect ratio 16/9 */
   position: absolute;
   top: 10%;
   height: 20%;
-  width: 20%;
-  left: 40%;
+  width: 40%;
+  left: 30%;
 }
 
 #bottom {
@@ -1503,14 +1503,41 @@ dessus de l'apect ratio 16/9 */
   position: absolute;
   top: 0%;
   width: 100%;
-  height: 20%;
+  height: 30%;
+}
+
+#logoAlv {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60%;
+}
+
+#svg_logo_conclu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .svg_logo {
   position: absolute;
   height: 100%;
   width: 80%;
-  left: 10%;
+  bottom:
+}
+
+#names_ {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.18em;
+  bottom: 0;
+  text-transform: uppercase;
 }
 
 #svg_agr
@@ -1523,3 +1550,18 @@ dessus de l'apect ratio 16/9 */
   .st3{fill:none;}
 #svg_agr
   .st4{fill:#997D4A;stroke:#997D4A;stroke-width:0.25;stroke-miterlimit:10;}
+
+ #hyblab{
+  position: absolute;
+  left: 10%;
+  height: 100%;
+  width: 20%;
+}
+
+
+#medialab {
+  position: absolute;
+  right: 10%;
+  height: 100%;
+  width: 20%;
+}
