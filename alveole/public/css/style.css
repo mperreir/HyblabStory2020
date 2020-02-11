@@ -778,6 +778,12 @@ dessus de l'apect ratio 16/9 */
   transition: all .2s ease-in-out;
 }
 
+.text_checked {
+  transform: scale(1.1)!important;
+  transition: all .2s ease-in-out;
+  color: #9E90F2;
+}
+
 .animation_checked, .animation_checked *{
   fill: #9E90F2!important;
   stroke: #9E90F2!important;
@@ -1047,7 +1053,7 @@ dessus de l'apect ratio 16/9 */
 
 .slide8Label {
   position: absolute;
-  height: 50%;
+  height: 40%;
   width: 100%;
   font-family: Oswald;
   font-style: normal;

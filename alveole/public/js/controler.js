@@ -617,9 +617,9 @@ class UpdateSlide4 extends Observer {
         etape.setAttribute('id', 'etape'+i);
         etape.setAttribute('class', 'slide4Animations');
 
-        let div_checkbox = document.createElement('div');
-        div_checkbox.setAttribute('class','slide4_checkbox');
-        etape.appendChild(div_checkbox);
+        // let div_checkbox = document.createElement('div');
+        // div_checkbox.setAttribute('class','slide4_checkbox');
+        // etape.appendChild(div_checkbox);
 
         let text = document.createElement('div');
         text.setAttribute('class', 'slide4Label unselectable');
@@ -628,10 +628,10 @@ class UpdateSlide4 extends Observer {
 
         container.appendChild(etape);
         divs[i] = etape;
-        checkboxes[i] = div_checkbox;
+        // checkboxes[i] = div_checkbox;
       };
 
-      let animations = observable.load(container, divs, checkboxes, div_valide);
+      let animations = observable.load(container, divs, div_valide);
 
       Object.keys(animations).forEach( function(key) {
         animations[key].addEventListener('DOMLoaded', function() {
@@ -688,6 +688,15 @@ class UpdateSlide5 extends Observer {
 
         label.addEventListener('click', function() {
           $(this).parent().find('#svg_slide5-' + i).toggleClass('slide5visible');
+        });
+        label.addEventListener('mouseenter', function() {
+          $(this).toggleClass('text_checked');
+        });
+        label.addEventListener('mouseleave', function() {
+          $(this).toggleClass('text_checked');
+        });
+        label.addEventListener('click', function() {
+          $(this).toggleClass('text_checked');
         });
         container.appendChild(label);
       }
@@ -789,12 +798,31 @@ class UpdateSlide7 extends Observer {
       animations[1].addEventListener('DOMLoaded', () => {
         document.getElementById('slide7_ondes').addEventListener('click', () => {
           this.slides.setValue(9);
-        })
+        });
+
+        divs[1].addEventListener('mouseenter', function() {
+          animations[1].play();
+          $(this).toggleClass('animation_checked');
+        });
+        divs[1].addEventListener('mouseleave', function() {
+          animations[1].pause();
+          $(this).toggleClass('animation_checked');
+        });
+
       });
       animations[2].addEventListener('DOMLoaded', () => {
         document.getElementById('slide7_casque').addEventListener('click', () => {
           this.model.setValue(true);
         })
+
+        divs[2].addEventListener('mouseenter', function() {
+          animations[2].play();
+          $(this).toggleClass('animation_checked');
+        });
+        divs[2].addEventListener('mouseleave', function() {
+          animations[2].pause();
+          $(this).toggleClass('animation_checked');
+        });
       });
 
     } else if (val == false) {
@@ -825,9 +853,15 @@ class UpdateSlide8 extends Observer {
       let presta = document.createElement('div');
       presta.setAttribute('id', 'presta');
       presta.addEventListener('click', () => {
-        // observable.setChoice(1);
         this.model.setValue(true);
       });
+      presta.addEventListener('mouseenter', function() {
+        $(this).toggleClass('text_checked');
+      });
+      presta.addEventListener('mouseleave', function() {
+        $(this).toggleClass('text_checked');
+      });
+
 
       let label1 = document.createElement('div');
       label1.setAttribute('class', 'slide8Label unselectable');
@@ -837,8 +871,13 @@ class UpdateSlide8 extends Observer {
       let artisan = document.createElement('div');
       artisan.setAttribute('id', 'artisan');
       artisan.addEventListener('click', () => {
-        // observable.setChoice(1);
         this.model.setValue(true);
+      });
+      artisan.addEventListener('mouseenter', function() {
+        $(this).toggleClass('text_checked');
+      });
+      artisan.addEventListener('mouseleave', function() {
+        $(this).toggleClass('text_checked');
       });
 
       let label2 = document.createElement('div');
@@ -851,22 +890,22 @@ class UpdateSlide8 extends Observer {
 
       container.appendChild(animation);
 
-      let divs = {};
-
-      for (let i = 1; i < 3; i++) {
-        let div_checkbox = document.createElement('div');
-        div_checkbox.setAttribute('class','slide8_checkbox');
-
-        divs[i] = div_checkbox;
-      }
-
-      presta.appendChild(divs[1]);
-      artisan.appendChild(divs[2]);
+      // let divs = {};
+      //
+      // for (let i = 1; i < 3; i++) {
+      //   let div_checkbox = document.createElement('div');
+      //   div_checkbox.setAttribute('class','slide8_checkbox');
+      //
+      //   divs[i] = div_checkbox;
+      // }
+      //
+      // presta.appendChild(divs[1]);
+      // artisan.appendChild(divs[2]);
 
       container.appendChild(presta);
       container.appendChild(artisan);
 
-      observable.loadCheckbox(divs);
+      // observable.loadCheckbox(divs);
       observable.loadSVG(animation);
 
 
