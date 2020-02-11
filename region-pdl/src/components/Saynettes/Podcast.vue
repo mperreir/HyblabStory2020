@@ -5,8 +5,7 @@
     <div :class="{carStartProposal: true, carStartProposalFade: carHasStarted}">
       <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
         Sur le chemin du travail, {{ getCharacter }} observe de nombreux équipements
-        pour la
-        <br />
+        <br>pour la
         <b>transition énergétique qui ont bénéficié d'un financement régional.</b>
       </SimpleText>
       <TextTitle :style="{textAlign: 'center'}" :y="40">Démarrer la voiture</TextTitle>
