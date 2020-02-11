@@ -28,7 +28,7 @@ export default {
   mounted() {
     this.clickSound = new Howl({
       src: ["sounds/click.mp3"],
-      volume: 0.7
+      volume: 0.2
     });
   },
   methods: {
