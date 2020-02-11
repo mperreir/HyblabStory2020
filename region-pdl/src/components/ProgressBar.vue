@@ -68,7 +68,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  top: 7vh;
+  top: 4vh;
   margin-left: 45vh;
   height: 3vh;
   width: 70vh;
@@ -77,7 +77,7 @@ export default {
 
 .progress-line {
   position: absolute;
-  top: 8.2vh;
+  top: 5.2vh;
   margin-left: 46vh;
   height: 0.6vh;
   width: 68vh;

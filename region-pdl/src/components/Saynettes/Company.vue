@@ -3,16 +3,16 @@
     <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
       <span v-if="getCharacterGender === 'mme'">
         L’entreprise de Mme Dubois est engagée pour la transition énergétique et profite des aides de la Région.
-        <br />À présent, l’entreprise créée sa
+        <br />À présent, l’entreprise crée sa
         <b>
           propre énergie verte
-          grâce à la biomasse
-        </b>.
+          grâce à la biomasse.
+        </b>
       </span>
       <span v-if="getCharacterGender === 'm'">
         À côté de l’école dans laquelle enseigne M. Moreau, se trouve l’entreprise de Mme Dubois.
         <br />Elle est engagée pour la transition énergétique et profite des aides de la Région.
-        <br />À présent, elle créée sa
+        <br />À présent, elle crée sa
         <b>
           propre énergie verte
           grâce à la biomasse
@@ -22,7 +22,7 @@
     <PlusButton v-model="closePopover1" class="plus1" :width="20" @open="closePopover(1)">
       <p class="text">
         La
-        <span class="orange">biomasse</span> utilise le méthane produit par la décomposition de déchets ménagers pour chauffer les bâtiments.
+        <span class="orange">biomasse</span> utilise <br> le méthane produit par la décomposition de déchets ménagers pour chauffer les bâtiments.
       </p>
     </PlusButton>
     <PlusButton v-model="closePopover2" class="plus2" :width="20" @open="closePopover(2)">
@@ -39,8 +39,8 @@
     </PlusButton>
     <PlusButton v-model="closePopover4" class="plus4" :width="20" @open="closePopover(4)">
       <p class="text">
-        En Pays de la Loire, la biomasse produit
-        <span class="orange">651 GWh.</span> Cela équivaut à
+        En Pays de la Loire, <br> la biomasse produit
+        <span class="orange">651 GWh.</span> <br> Cela équivaut à
         <span class="orange">56 000 tonnes de pétrole.</span>
       </p>
     </PlusButton>
