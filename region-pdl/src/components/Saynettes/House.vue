@@ -12,7 +12,7 @@
       </span>
       <span v-if="getCharacterGender === 'm'">
         Il y a peu, M. Moreau a fait appel à la Région afin
-        <b>d’obtenir des aides pour améliorer l’isolation</b> de sa maison.
+        <b>d’obtenir des aides pour améliorer l’isolation</b><br> de sa maison.
         Cette rénovation, rendue possible
         <b>grâce aux aides de la Région</b>, a permis à M. Moreau
         <br />de faire des
