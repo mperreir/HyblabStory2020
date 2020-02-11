@@ -35,6 +35,11 @@ class View2 extends View {
     async switchToViewPremium() {
         transitionHorizontal(this.view, View3Premium);
     }
+
+    deactivate() {
+        this.btFree.remove();
+        this.btPremium.remove();
+    }
 }
 
 View2.titre = 'Visionner les photos';

@@ -47,6 +47,11 @@ class View8 extends View {
   play() {
     window.soundManager.play('sound/Question_contact.mp3');
   }
+
+  deactivate() {
+    this.nextFreeView.remove();
+    this.nextPremiumView.remove();
+  }
 }
 
 View8.titre = 'Prendre contact';

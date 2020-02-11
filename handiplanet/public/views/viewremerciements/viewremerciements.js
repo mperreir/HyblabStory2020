@@ -32,16 +32,20 @@ class ViewThanks extends View {
     omlImg.classList = 'sponsor';
     document.getElementById('view-thanks-audencia').appendChild(omlImg);
 
-    const replayButton = document.getElementById('view-thanks-replay');
-    replayButton.addEventListener('click', () => {
+    this.replayButton = document.getElementById('view-thanks-replay');
+    this.replayButton.addEventListener('click', () => {
       this.switchToView1();
     });
-    replayButton.addEventListener('mouseenter', () => {
+    this.replayButton.addEventListener('mouseenter', () => {
       window.soundManager.play('sound/hover/replay.mp3');
     });
 
     const borderBottom = document.getElementById('overlay-footer');
     borderBottom.className = 'hide-after';
+  }
+
+  deactivate() {
+    this.replayButton.remove();
   }
 
   createName(icon, firstname, lastname) {

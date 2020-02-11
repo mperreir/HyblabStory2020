@@ -38,6 +38,7 @@ async function showContextView(currentView){
     currentView.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
     tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
     tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
+    window.currentController.deactivate();
     setTimeout(() => {
         if (window.contextView.questionNumber !== 4) {
             const nextButton = setOverlayButton('Déja convaincu ?', false, 'sound/hover/convaincu.mp3');
@@ -50,6 +51,7 @@ async function showContextView(currentView){
         viewContainer.appendChild(nextView.view);
         currentView.remove();
         window.currentView = nextView.view;
+        window.currentController = nextView;
         nextView.play();
         nextView.runAnim();
     }, 1000);
@@ -72,6 +74,7 @@ async function transitionHorizontal(view, NextView){
     view.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
     tempDiv.style.animation = 'scrollTransitionHorizontal 1s forwards';
     tempDiv.style.webkitAnimation = 'scrollTransitionHorizontal 1s forwards';
+    window.currentController.deactivate();
     setTimeout(() => {
         const viewContainer = document.getElementById('view-container');
         viewContainer.innerHTML = '';
@@ -79,6 +82,7 @@ async function transitionHorizontal(view, NextView){
         //tempDiv.replaceWith = nextView.view;
         view.remove();
         window.currentView = nextView.view;
+        window.currentController = nextView;
         nextView.play();
         nextView.runAnim();
     }, 1000);
@@ -112,6 +116,7 @@ async function transitionHorizontalInvert(view, NextView){
     view.style.webkitAnimation = 'scrollTransitionHorizontalInvert 1s forwards';
     tempDiv.style.animation = 'scrollTransitionHorizontalInvert 1s forwards';
     tempDiv.style.webkitAnimation = 'scrollTransitionHorizontalInvert 1s forwards';
+    window.currentController.deactivate();
     setTimeout(() => {
         const viewContainer = document.getElementById('view-container');
         viewContainer.innerHTML = '';
@@ -119,6 +124,7 @@ async function transitionHorizontalInvert(view, NextView){
         //tempDiv.replaceWith = nextView.view;
         view.remove();
         window.currentView = nextView.view;
+        window.currentController = nextView;
         nextView.play();
         nextView.runAnim();
     }, 1000);

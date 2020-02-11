@@ -51,6 +51,11 @@ class View5 extends View {
     play() {
         window.soundManager.play('sound/Question_liens_externes.mp3');
     }
+
+    deactivate() {
+        this.btHotelA.remove();
+        this.btHotelB.remove();
+    }
 }
 
 View5.titre = 'Visiter les réseaux sociaux';

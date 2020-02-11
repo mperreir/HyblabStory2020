@@ -61,6 +61,12 @@ class View1 extends View {
             });
         });
     }
+
+    deactivate() {
+        this.selectCharButtons.forEach((li, index) => {
+            li.remove();
+        });
+    }
 }
 
 View1.titre = 'Introduction';

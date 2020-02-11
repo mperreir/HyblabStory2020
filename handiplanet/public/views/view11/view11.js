@@ -49,6 +49,11 @@ class View11 extends View {
         window.soundManager.play('sound/Question_informations.mp3');
     }
 
+    deactivate() {
+        this.btA.remove();
+        this.btB.remove();
+    }
+
 }
 
 View11.titre = 'Voir les informations';
