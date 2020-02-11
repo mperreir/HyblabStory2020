@@ -27,9 +27,9 @@
 #slide7-trait-dialogueA {
 	position: absolute;
 	width: 1%;
-	height: 11%;
+	height: 13%;
 	left: 83%;
-	top: 67.5%;
+	top: 68%;
 
 }
 
@@ -114,7 +114,7 @@
 /* Media queries pour le responsive */
 
 @media screen and (max-aspect-ratio: 16/9){
-   
+
     #page7 p{
         font-size: 1.8vw;
     }
@@ -128,7 +128,7 @@
 
 
 @media screen and (min-aspect-ratio: 16/9){
-    
+
    #page7 p {
         font-size: 3.5vh;
     }
