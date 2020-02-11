@@ -1,4 +1,4 @@
-#hamburger {
+.hamburger {
   display: block;
   position: absolute;
   top: 50px;
@@ -23,12 +23,16 @@
   cursor: pointer;
 }
 
+.hamburger-dark .menuLink {
+    color: black;
+}
+
 .menuLink:hover {
   font-weight: bold;
 }
 
 
-#hamburger input {
+.hamburger input {
   display: block;
   width: 40px;
   height: 32px;
@@ -44,7 +48,7 @@
   -webkit-touch-callout: none;
 }
 
-#hamburger span {
+.hamburger span {
   display: block;
   width: 33px;
   height: 3px;
@@ -63,31 +67,43 @@
               opacity 0.55s ease;
 }
 
-#hamburger span:first-child {
+.hamburger-dark span {
+    background: black;
+}
+
+.hamburger span:first-child {
   transform-origin: 0% 0%;
 }
 
-#hamburger span:nth-last-child(2) {
+.hamburger span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#hamburger input:checked ~ span {
+.hamburger input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: white;
 }
 
-#hamburger input:checked ~ span:nth-last-child(3) {
+.hamburger-dark input:checked ~ span  {
+  background: black;
+}
+
+.hamburger input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#hamburger input:checked ~ span:nth-last-child(2) {
+.hamburger input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0px, 2px);
   background: white;
 }
 
-#categories {
+.hamburger-dark input:checked ~ span:nth-last-child(2) {
+  background: black;
+}
+
+.categories {
   position: absolute;
   width: 400px;
   top: -50px;
@@ -105,15 +121,15 @@
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#categories li:first-child {
+.categories li:first-child {
   padding-top: 120px;
 }
 
-#categories li {
+.categories li {
   padding: 20px;
   padding-left: 60px;
 }
 
-#hamburger input:checked ~ ul {
+.hamburger input:checked ~ ul {
   transform: none;
 }
