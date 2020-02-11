@@ -290,6 +290,53 @@
     left: 0;
     height: 20%;
     background-color: inherit;
+    display: flex;
+    
+
+    #comparatif-button-container {
+      margin: auto;
+      width: 80vw;
+      display: flex;
+      padding: 0px 10%;
+
+      #comparatif-replay-button {
+        display: flex;
+        background-color: #CB563E;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 34px;
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 50px;
+        margin-right: 5%;
+
+        img {
+          margin-left: auto;
+          margin-right: 10px;
+        }
+
+        &>div {
+          margin-right: auto;
+        }
+      }
+
+      #comparatif-subscribe-button {
+        margin-left: 5%;
+        display: flex;
+        button {
+          border-radius: 50px;
+          font-weight: normal;
+          font-size: 25px;
+          padding: 10px 20px;
+          margin: auto;
+          color: #ffffff;
+          background-color: #426262;
+        }
+      }
+      &>button, &>div {
+        flex: 1;
+      }
+    }
     
     #son{
       z-index: 10000;

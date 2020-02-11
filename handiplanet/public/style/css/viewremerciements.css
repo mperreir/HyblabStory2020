@@ -9,9 +9,9 @@
 }
 #viewremerciements #view-thanks-middle {
   width: 80vw;
-  height: 85vh;
+  height: 80vh;
   margin: 10vh 10vw;
-  margin-bottom: 5vh;
+  margin-top: 0px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,6 +20,11 @@
   z-index: 10000;
   bottom: -70%;
   position: relative;
+  background-color: #CB563E;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 34px;
+  color: #ffffff;
 }
 #viewremerciements #view-thanks-middle section:first-of-type {
   margin-top: auto;
@@ -74,33 +79,6 @@
 }
 #viewremerciements #view-thanks-middle section:first-of-type .view-thanks-name div:last-of-type h1 em {
   font-weight: bold;
-}
-#viewremerciements #view-thanks-middle section:last-of-type {
-  display: flex;
-  margin-top: 3vh;
-}
-#viewremerciements #view-thanks-middle section:last-of-type button {
-  margin: auto;
-  background-color: #CB563E;
-  display: flex;
-  padding: 10px;
-  border-radius: 50px;
-}
-#viewremerciements #view-thanks-middle section:last-of-type button img {
-  height: 4vh;
-  width: 4vh;
-  margin-right: 2vh;
-}
-#viewremerciements #view-thanks-middle section:last-of-type button div {
-  margin: auto 0px;
-}
-#viewremerciements #view-thanks-middle section:last-of-type button div div {
-  font-size: 2em;
-  color: #ffffff;
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: bold;
-  margin: auto;
 }
 
 /*# sourceMappingURL=viewremerciements.css.map */

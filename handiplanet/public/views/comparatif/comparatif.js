@@ -31,10 +31,57 @@ class Comparatif extends View {
         this.btNext.addEventListener('click', ()=>{
             this.switchNextView();
         });
+
+        this.buttonContainer = document.createElement('div');
+
+        this.replayButton = document.createElement('button');
+        this.replayButton.id = 'comparatif-replay-button';
+        const imgReplay = document.createElement('img');
+        imgReplay.src = 'assets/replay.svg';
+        const textContainer = document.createElement('div');
+        const textDiv = document.createElement('div');
+        textDiv.innerHTML = 'Rejouer l\'expérience';
+        this.replayButton.appendChild(imgReplay);
+        textContainer.appendChild(textDiv);
+        this.replayButton.appendChild(textContainer);
+        const footer = document.getElementById('overlay-footer');
+        this.buttonContainer.appendChild(this.replayButton);
+
+        this.subscribeButtonContainer = document.createElement('div');
+        this.subscribeButtonContainer.id = 'comparatif-subscribe-button';
+        this.subscribeButton = document.createElement('button');
+        this.subscribeButton.innerHTML = 'Souscrire';
+        this.subscribeButtonContainer.appendChild(this.subscribeButton);
+        this.buttonContainer.appendChild(this.subscribeButtonContainer);
+        this.buttonContainer.id = 'comparatif-button-container';
+        footer.appendChild(this.buttonContainer);
+
+        this.replayButton.addEventListener('click', () => {
+            this.switchToView1();
+        });
+
+        this.replayButton.addEventListener('mouseenter', () => {
+            window.soundManager.play('sound/hover/replay.mp3');
+        });
+
+        this.subscribeButton.addEventListener('click', () => {
+            window.open('https://handiplanet.com/pro', '_blank');
+        });
+    }
+
+    deactivate() {
+        this.buttonContainer.remove();
     }
 
     async switchNextView(){
         transitionHorizontal(this.view, ViewThanks);
         window.scrollBarController.setPosition(5, ViewThanks);
+    }
+
+    async switchToView1() {
+        window.contextView = null;
+        const borderBottom = document.getElementById('overlay-footer');
+        borderBottom.className = '';
+        transitionHorizontalInvert(this.view, View1);
     }
 }

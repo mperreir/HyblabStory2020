@@ -1,30 +1,30 @@
 /*
- * File Created: 2020-02-05 20:31
- * Author: Alban LECUIVRE
- * Copyright - 2020 Alban LECUIVRE
- */
+* File Created: 2020-02-05 20:31
+* Author: Alban LECUIVRE
+* Copyright - 2020 Alban LECUIVRE
+*/
 
 #comparatif {
   width: 100vw;
   height: 100vh;
-
+  
   h1{
     font-family: Nunito;
     font-style: normal;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 41px;
     text-transform: uppercase;
     margin: 0;
   }
-
+  
   #comparatif-middle {
     width: 80vw;
     height: 80vh;
     margin: 0px 10vw;
     border-bottom: 2px solid #5A8D8C;
     position: relative;
-
+    
     img {
       position: absolute;
       bottom: -2px;
@@ -42,7 +42,7 @@
       border-radius: 100%;
       border: 10px solid #CB563E;
     }
-
+    
     #comparatif-green-ring{
       position: absolute;
       transition: transform ease-in-out;
@@ -53,7 +53,7 @@
       border-radius: 100%;
       border: 5px solid #71C0A0;
     }
-
+    
     #comparatif-white-ring{
       position: absolute;
       transition: transform ease-in-out;
@@ -64,7 +64,7 @@
       border-radius: 100%;
       border: 5px solid #ffffff;
     }
-
+    
     #comparatif-green-tiny-dot{
       position: absolute;
       transition: transform ease-in-out;
@@ -87,7 +87,7 @@
       display: flex;
       flex-direction: row;
       flex:2;
-
+      
       .comparatif-column{
         flex:1;
         display: flex;
@@ -95,8 +95,9 @@
         justify-content: flex-end;
         margin: 0 10px;
       }
-
+      
       #comparatif-free-column{
+        position: relative;
         h1{
           color: #CB563E;
         }
@@ -106,8 +107,21 @@
           border-top-right-radius: 30px;
           padding: 10px 10px 10px 40px;
         }
+        
+        #view-comparatif-replay {
+          position: absolute;
+          top: calc(100%);
+          transform: translateX(-50%);
+          left: 50%;
+          background-color: #CB563E;
+          font-weight: normal;
+          font-size: 25px;
+          line-height: 34px;
+          color: #ffffff;
+          display: flex;
+        }
       }
-
+      
       #comparatif-premium-column{
         h1{
           color: #5A8D8C;
@@ -119,7 +133,7 @@
           padding: 10px 10px 10px 40px;
         }
       }
-
+      
       li {
         list-style-image: url(../../assets/comparatif/comparatif-bullet.svg);
         margin-bottom: 5px;
@@ -130,7 +144,7 @@
           font-size: 17px;
           line-height: 29px;
           color: #ffffff;
-
+          
           span{
             font-weight: bold;
           }
@@ -138,12 +152,12 @@
       }
     }
   }
-
+  
   footer {
     width: 100vw;
     height: 20vh;
     position: relative;
-
+    
     #comparatif-next-button {
       z-index: 10000;
       position: absolute;
@@ -160,7 +174,7 @@
       margin: 0px;
       top: 50%;
       transform: translateY(-50%);
-
+      
       span{
         font-weight: bold;
         color: #ffffff;

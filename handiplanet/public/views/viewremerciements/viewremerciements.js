@@ -54,22 +54,9 @@ class ViewThanks extends View {
     logoContainer.appendChild(ccImg);
 
     document.getElementById('view-thanks-audencia').appendChild(logoContainer);
-    
-
-    this.replayButton = document.getElementById('view-thanks-replay');
-    this.replayButton.addEventListener('click', () => {
-      this.switchToView1();
-    });
-    this.replayButton.addEventListener('mouseenter', () => {
-      window.soundManager.play('sound/hover/replay.mp3');
-    });
 
     const borderBottom = document.getElementById('overlay-footer');
     borderBottom.className = 'hide-after';
-  }
-
-  deactivate() {
-    this.replayButton.remove();
   }
 
   createName(icon, firstname, lastname) {
@@ -103,13 +90,6 @@ class ViewThanks extends View {
     const borderBottom = document.getElementById('overlay-footer');
     borderBottom.className = '';
     transitionHorizontalInvert(this.view, Comparatif);
-  }
-
-  async switchToView1() {
-    window.contextView = null;
-    const borderBottom = document.getElementById('overlay-footer');
-    borderBottom.className = '';
-    transitionHorizontalInvert(this.view, View1);
   }
 }
 

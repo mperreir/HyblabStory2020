@@ -9,9 +9,9 @@
   
   #view-thanks-middle {
     width: 80vw;
-    height: 85vh;
+    height: 80vh;
     margin: 10vh 10vw;
-    margin-bottom: 5vh;
+    margin-top: 0px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -20,6 +20,11 @@
       z-index: 10000;
       bottom: -70%;
       position: relative;
+      background-color: #CB563E;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 34px;
+      color: #ffffff;
     }
     
     section:first-of-type {
@@ -82,37 +87,6 @@
           }
         }
         
-      }
-    }
-    
-    section:last-of-type {
-      display: flex;
-      margin-top: 3vh;
-      
-      button {
-        margin: auto;
-        background-color: #CB563E;
-        display: flex;
-        padding: 10px;
-        border-radius: 50px;
-        
-        img {
-          height: 4vh;
-          width: 4vh;
-          margin-right: 2vh;
-        }
-        
-        div {
-          margin: auto 0px;
-          div {
-            font-size: 2em;
-            color: #ffffff;
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: bold;
-            margin: auto;
-          }
-        }
       }
     }
   }
