@@ -6,6 +6,7 @@
 
 <script>
 import { Howl } from "howler";
+
 export default {
   props: {
     text: {

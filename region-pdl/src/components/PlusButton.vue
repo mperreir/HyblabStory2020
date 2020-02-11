@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import { Howl } from "howler";
+
 import Plus from "@/assets/plus.svg";
 
 export default {
@@ -56,10 +58,10 @@ export default {
   },
   mounted() {
     this.clickSound = new Howl({
-      src: ["sounds/click-swoosh-2.mp3"],
-      volume: 0.2
+      src: ["sounds/click-swoosh.mp3"],
+      volume: 0.1
     });
-  },
+  }
 };
 </script>
 

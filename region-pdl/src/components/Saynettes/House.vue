@@ -112,6 +112,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+import { Howl } from "howler";
 
 import Background from "@/assets/House/background-house.svg";
 import LittleHouse from "@/assets/House/little-house.svg";
@@ -149,11 +150,11 @@ export default {
   methods: {
     onChange(value) {
       this.indexHouse = value;
+      this.clickSound.play();
     },
     onNextCar() {
       this.$store.dispatch("nextScene", {});
     },
-
     closePopover(i) {
       switch (i) {
         case 1:
@@ -193,6 +194,12 @@ export default {
           break;
       }
     }
+  },
+  mounted() {
+    this.clickSound = new Howl({
+      src: ["sounds/water-drop.mp3"],
+      volume: 0.2
+    });
   }
 };
 </script>

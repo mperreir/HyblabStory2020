@@ -55,7 +55,7 @@ import Quizz from "@/components/Saynettes/Quizz.vue";
 import End from "@/components/Saynettes/End.vue";
 import Carousel from "@/components/carousel/Carousel.vue";
 import CarouselSlide from "@/components/carousel/CarouselSlide.vue";
-import {Howl, Howler} from 'howler';
+import { Howl } from 'howler';
 
 export default {
   

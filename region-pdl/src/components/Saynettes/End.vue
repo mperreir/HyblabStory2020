@@ -48,6 +48,8 @@
 </template>
 
 <script>
+import { Howl } from "howler";
+
 import Background from "@/assets/End/background-end.svg";
 import TextTitle from "@/components/TextTitle";
 import SimpleText from "@/components/SimpleText";
@@ -60,6 +62,14 @@ export default {
     TextTitle,
     SimpleText,
     LogoPolytech
+  },
+  mounted() {
+    this.clickSound = new Howl({
+      src: ["sounds/applause.mp3"],
+      volume: 0.8
+    });
+
+    this.clickSound.play();
   }
 };
 </script>
