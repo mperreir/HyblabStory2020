@@ -144,7 +144,7 @@ export default class Carousel extends Component {
       this.loadHTML("/10-24-2/scenes/Carousel/Carousel.html"),
       // this.ecransC.load(),
       // this.flemmeC.load(),
-      // this.harcelementC.load(),
+      this.harcelementC.load(),
       this.puberteC.load()
     ]);
     this.html = promises[0];
@@ -168,13 +168,13 @@ export default class Carousel extends Component {
     // We insert them in each carousel slide and
     // carousel.appendChild(divEcransC);
     // carousel.appendChild(divFlemmeC);
-    // carousel.appendChild(divHarcelementC);
+    carousel.appendChild(divHarcelementC);
     carousel.appendChild(divPuberteC);
 
     // We render each scenario
     // this.ecransC.render(divEcransC);
     // this.flemmeC.render(divFlemmeC);
-    // this.harcelementC.render(divHarcelementC);
+    this.harcelementC.render(divHarcelementC);
     this.puberteC.render(divPuberteC);
 
     // We activate the slider

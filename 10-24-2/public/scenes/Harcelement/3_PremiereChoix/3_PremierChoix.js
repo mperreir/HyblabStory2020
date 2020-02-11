@@ -1,10 +1,11 @@
 import Component from "../../../js/Component.js";
 
 export default class ViewPremierChoix extends Component {
-  constructor({ onGoToViewDiscussion }) {
+  constructor({ onGoToLendemain, onGoToDerniereTentative }) {
     super();
     this.html = "";
-    this.onGoToViewDiscussion = onGoToViewDiscussion;
+    this.onGoToLendemain = onGoToLendemain;
+    this.onGoToDerniereTentative = onGoToDerniereTentative;
   }
 
   async load() {
@@ -15,15 +16,13 @@ export default class ViewPremierChoix extends Component {
 
   componentDidMount() {
     document
-      .getElementById("harcelement")
-      .addEventListener("click", this.onGoToViewDiscussion);
+      .getElementById("aller-le-voir")
+      .addEventListener("click", this.onGoToDerniereTentative);
+      document
+      .getElementById("le-laisser")
+      .addEventListener("click", this.onGoToLendemain);      
   }
 
-  comonentWillUnmount() {
-    document
-      .getElementById("harcelement")
-      .removeEventListener("click", this.onGoToViewDiscussion);
-  }
 
   render(target) {
     this.renderHtmlInTarget(target, this.html);

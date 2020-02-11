@@ -1,10 +1,12 @@
 import Component from "../../../js/Component.js";
 
 export default class ViewDerniereTentative extends Component {
-  constructor({ onGoToViewDiscussion }) {
+  constructor({ onGoToFewHoursBefore, onGoToLendemain }) {
     super();
     this.html = "";
-    this.onGoToViewDiscussion = onGoToViewDiscussion;
+    this.onGoToFewHoursBefore = onGoToFewHoursBefore;
+    this.onGoToLendemain = onGoToLendemain;
+
   }
 
   async load() {
@@ -15,14 +17,11 @@ export default class ViewDerniereTentative extends Component {
 
   componentDidMount() {
     document
-      .getElementById("harcelement")
-      .addEventListener("click", this.onGoToViewDiscussion);
-  }
-
-  comonentWillUnmount() {
-    document
-      .getElementById("harcelement")
-      .removeEventListener("click", this.onGoToViewDiscussion);
+      .getElementById("insister")
+      .addEventListener("click", this.onGoToFewHoursBefore);
+      document
+      .getElementById("le-laisser")
+      .addEventListener("click", this.onGoToLendemain);
   }
 
   render(target) {

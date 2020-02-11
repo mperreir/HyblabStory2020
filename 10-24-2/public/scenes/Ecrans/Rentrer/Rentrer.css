@@ -1,0 +1,17 @@
+/* Button next scene */
+
+#next {
+  height: 40px;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom: 17%;
+  right: 30%;
+  line-height:15px;
+}
+
+#next:hover {
+  border-color: white;
+}

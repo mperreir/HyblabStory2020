@@ -1,35 +1,48 @@
 import Component from "../../js/Component.js";
 import Porte from "./Porte/Porte.js"
 import Arrivee from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
-import PorteClaque from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
-import ViewDerniereTentative from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
-import ViewPremierChoix from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
-import FewHoursBefore from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
-import FlashBack from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
-import FinHistoire from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
-import Lendemain from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
+import PorteClaque from "./2_PorteClaque/2_PorteClaque.js"
+import ViewDerniereTentative from "./3_PremierChoix/3_PremierChoix.js"
+import ViewPremierChoix from "./4_DerniereTentative/4_DerniereTentative.js"
+import FewHoursBefore from "./5_FewHoursBefore/5_FewHoursBefore.js"
+import FlashBack from "./6_FlashBack/6_FlashBack.js"
+import FinHistoire from "./7_FinHistoire/7_FinHistoire.js"
+import Lendemain from "./Lendemain/Lendemain.js"
 
 export default class Harcelement extends Component {
   constructor(onStart) {
     super();
     this.onStart = onStart;
+
+    // Carousel container section for the puberté playscript
     this.section = document.createElement("section");
     this.section.setAttribute("id", "harcelement");
+
     this.porte = new Porte({
-      beginBullying: this.goToArriveeEnfant.bind(this),
+      onGoToArriveeEnfant: this.goToArriveeEnfant.bind(this),
       onStart
     });
     this.arrivee = new Arrivee();
-    this.porteClaque = new PorteClaque();
+    this.porteClaque = new PorteClaque({
+      goToClaquePorte: () => this.porteClaque.render(this.section)
+    });
     this.premierChoix = new ViewPremierChoix({
-      beginBullying: this.goToPremierChoix.bind(this)
+      onGoToDerniereTentative: this.goToDernièreTentative.bind(this),
+      onGoToLendemain : this.goToLendemain.bind(this)
     });
     this.derniereTentative = new ViewDerniereTentative({
-      beginBullying: this.goToDernièreTentative.bind(this)
+      onGoToFewHoursBefore: this.goToFewHoursBefore.bind(this),
+      onGoToLendemain : this.goToLendemain.bind(this)
     });
+
     this.fewHoursBefore = new FewHoursBefore();
+
     this.flashBack = new FlashBack();
-    this.finHistoire = new FinHistoire();
+
+    this.finHistoire = new FinHistoire({
+      goToFinHistoire: () => this.finHistoire.render(this.section)
+    });
+
     this.lendemain = new Lendemain();
     
   }
@@ -43,69 +56,33 @@ export default class Harcelement extends Component {
     this.arrivee.render(this.section);
     e.preventDefault();
     setTimeout(() => {
-      this.goToClaquePorte(e);
+      this.goToClaquePorte();
     }, 3000);
   }
 
-  goToClaquePorte(e){
-    this.onStart(this);
-    this.arrivee.componentWillUnmount();
-    this.porteClaque.render(this.section);
-    e.preventDefault();
-    setTimeout(() => {
-      this.goToPremierChoix();
-    }, 3000);
-  }
 
   goToPremierChoix(){
-    this.porteClaque.componentWillUnmount();
     this.premierChoix.render(this.section);
   }
   
+
   goToDernièreTentative(){
-    this.premierChoix.componentWillUnmount();
     this.derniereTentative.render(this.section);
   }
 
-  goToFewHoursBefore(e){
-    this.onStart(this);
-    this.derniereTentative.componentWillUnmount();
-    this.fewHoursBefore.render(this.section);
-    e.preventDefault();
-    setTimeout(() => {
-      this.goToFlashBack(e);
-    }, 3000);
+  goToFewHoursBefore(){
+    this.fewHoursBefore.render(this.section)
   }
 
-  goToFlashBack(e){
-    this.onStart(this);
-    this.fewHoursBefore.componentWillUnmount();
-    this.flashBack.render(this.section);
-    e.preventDefault();
-    setTimeout(() => {
-      this.goToFinHistoire(e);
-    }, 3000);
-  }
-
-  goToFinHistoire(e){
-    this.onStart(this);
-    this.flashBack.componentWillUnmount();
-    e.preventDefault();
-    //je sais pas
-  }
-
-  gotoLendemain(e){
-    this.onStart(this);
-    this.premierChoix.componentWillUnmount();
-    //ou derniereTentative mais je sais pas comment faire
-    this.lendemain.render(this.section);
-    e.preventDefault();
-    setTimeout(() => {
-      this.goToArriveeEnfant(e);
-    }, 3000);
-  }
   
+  goToFlashBack(){ 
+    this.flashBack.render(this.section)
+  }
 
+
+  goToLendemain() {
+    this.lendemain.render(this.section)
+  }
 
   async load() {
     await Promise.all([
@@ -120,6 +97,7 @@ export default class Harcelement extends Component {
       this.lendemain.load()
     ]);
   }
+
 
   render(target) {
     this.renderHtmlInTarget(target, this.section);
