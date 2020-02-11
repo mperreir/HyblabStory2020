@@ -371,13 +371,17 @@ body {
 
 
 @keyframes animPersoLeft {
-    from {left: -15vw;}
-    to {left: 32vw;}
+    from {left: -15vw;
+        opacity: 1;}
+    to {left: 32vw;
+        opacity: 1;}
 }
 
 @keyframes animPersoRight {
-    from {left: 100vw;}
-    to {left: 54.3vw;}
+    from {left: 100vw;
+        opacity: 1;}
+    to {left: 54.3vw;
+        opacity: 1;}
 }
 
 @keyframes appear {
@@ -407,6 +411,7 @@ body {
     animation-duration: 6s;
     animation-timing-function: linear;
     animation-fill-mode: none;
+    opacity: 0;
 }
 
 .persoRight{
@@ -417,6 +422,7 @@ body {
     animation-duration: 6s;
     animation-timing-function: linear;
     animation-fill-mode: none;
+    opacity: 0;
 }
 
 .disappearAfter6s{
