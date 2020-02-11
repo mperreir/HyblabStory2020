@@ -28,6 +28,8 @@
   height: 100%;
   width: 100%;
   min-width: 100%;
+  object-fit: contain;
+  object-position: bottom;
 }
 #view10 #view10-middle #view-10-graph_container #view-10-graph_title {
   position: absolute;

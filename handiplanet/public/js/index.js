@@ -7,7 +7,7 @@ window.soundManager = new SoundManager();
 window.colorPersoManager = new ColorPersoManager();
 
 window.scrollBarController = new ScrollBarController();
-view = new View1(document.getElementById('view-container'));
+view = new ViewThanks(document.getElementById('view-container'));
 window.scrollTo(0, 0);
 disableScroll();
 function disableScroll() {

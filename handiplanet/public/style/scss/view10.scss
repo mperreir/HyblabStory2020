@@ -31,6 +31,8 @@
                 height: 100%;
                 width: 100%;
                 min-width: 100%;
+                object-fit: contain;
+                object-position: bottom;
             }
             #view-10-graph_title {
                 position: absolute;
