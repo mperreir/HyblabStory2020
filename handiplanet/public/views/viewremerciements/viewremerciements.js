@@ -10,6 +10,10 @@ class ViewThanks extends View {
 
   linkElements() {
     hideSplash();
+    const nextBt = setOverlayButton('Retour', false);
+    nextBt.addEventListener('click', () => {
+      this.switchToComparatif();
+    });
     this.createName('agr', 'Benoit', 'Frehel');
     this.createName('agr', 'Maéva', 'Pasquier');
 
@@ -27,10 +31,30 @@ class ViewThanks extends View {
     hyblabImg.classList = 'sponsor';
     document.getElementById('view-thanks-agr').appendChild(hyblabImg);
 
+    const nantesImg = document.createElement('img');
+    nantesImg.src = 'assets/logo_nantesmetropole.svg';
+    nantesImg.classList = 'sponsor';
+    document.getElementById('view-thanks-agr').appendChild(nantesImg);
+
     const omlImg = document.createElement('img');
     omlImg.src = 'assets/logo-oml.svg';
     omlImg.classList = 'sponsor';
     document.getElementById('view-thanks-audencia').appendChild(omlImg);
+
+    const logoContainer = document.createElement('div');
+    logoContainer.className = 'sponsor';
+
+    const openSourceImg = document.createElement('img');
+    openSourceImg.src = 'assets/logo_opensource.svg';
+
+    const ccImg = document.createElement('img');
+    ccImg.src = 'assets/logo_cc.svg';
+
+    logoContainer.appendChild(openSourceImg);
+    logoContainer.appendChild(ccImg);
+
+    document.getElementById('view-thanks-audencia').appendChild(logoContainer);
+    
 
     this.replayButton = document.getElementById('view-thanks-replay');
     this.replayButton.addEventListener('click', () => {
@@ -73,6 +97,12 @@ class ViewThanks extends View {
 
     const containerElement = document.getElementById(`view-thanks-${icon}`);
     containerElement.appendChild(article);
+  }
+
+  async switchToComparatif() {
+    const borderBottom = document.getElementById('overlay-footer');
+    borderBottom.className = '';
+    transitionHorizontalInvert(this.view, Comparatif);
   }
 
   async switchToView1() {

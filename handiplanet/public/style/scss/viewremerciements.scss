@@ -43,6 +43,12 @@
         width: 70%;
         margin: auto;
         margin-bottom: 20px;
+        display: flex;
+
+        img {
+          flex: 1;
+          height: 10vh;
+        }
       }
       
       .view-thanks-name {

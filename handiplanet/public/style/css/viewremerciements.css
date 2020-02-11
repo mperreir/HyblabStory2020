@@ -40,6 +40,11 @@
   width: 70%;
   margin: auto;
   margin-bottom: 20px;
+  display: flex;
+}
+#viewremerciements #view-thanks-middle section:first-of-type .sponsor img {
+  flex: 1;
+  height: 10vh;
 }
 #viewremerciements #view-thanks-middle section:first-of-type .view-thanks-name {
   display: flex;

@@ -7,7 +7,7 @@ window.soundManager = new SoundManager();
 window.colorPersoManager = new ColorPersoManager();
 
 window.scrollBarController = new ScrollBarController();
-view = new View1(document.getElementById('view-container'));
+view = new ViewThanks(document.getElementById('view-container'));
 view.load();
 window.currentController = view;
 const paths = [
