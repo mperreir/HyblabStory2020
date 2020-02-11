@@ -3,6 +3,8 @@ class SuperControler {
   constructor(modelSlides) {
     // Header
     let viewHeader = new ViewHeader();
+    let updateHeader = new UpdateHeader(modelSlides, viewHeader.div);
+    modelSlides.addObservers(updateHeader);
 
     // Footer
     var viewFooter = new ViewFooter();
@@ -76,7 +78,7 @@ class SuperControler {
 
     // ModelLastSlide
     let modelLastSlide = new ModelLastSlide();
-    let updateLastSlide = new UpdateLastSlide(viewCenter);
+    let updateLastSlide = new UpdateLastSlide(viewCenterConclusion);
     modelLastSlide.addObservers(updateLastSlide);
 
     // Mediator of slide model
@@ -182,14 +184,10 @@ class MediatorSlide extends Observer {
         if (i > 0 && i < 9) {
           this.composant.question.innerHTML = model.text.question;
           this.composant.speech.innerHTML = model.text.speech;
-          this.modelSlides.setFooterText(model.text.page);
         } else if (i == 0) {
           this.composant.question.innerHTML = "";
           this.composant.speech.innerHTML = "";
           this.modelSlides.setFooterText(model.text.page);
-        } else if (i == 9) {
-          this.composant.question.innerHTML = "";
-          this.composant.speech.innerHTML = "";
         }
       } else {
         console.log('err : unhandled value (mediator slide controler)');
@@ -271,6 +269,26 @@ class UpdateFooter extends Observer {
       this.composant.text.innerHTML = observable.getFooterText()["down"];
       this.composant.roue.play();
       setTimeout(() => {this.composant.roue.pause();}, 1000);
+    } else {
+      console.log("err : value not handled (updateFooter observer)");
+    }
+  }
+}
+
+class UpdateHeader extends Observer {
+
+  constructor(model, composant) {
+    super();
+    this.model = model;
+    this.composant = composant;
+  }
+
+  update(observable, object) {
+    let val = observable.getValue();
+    if (val == observable.obj.length - 1) {
+      this.composant.style.visibility = 'hidden';
+    } else if (val >= 0 || val < observable.obj.length - 1) {
+      this.composant.style.visibility = 'visible';
     } else {
       console.log("err : value not handled (updateFooter observer)");
     }
@@ -422,14 +440,13 @@ class UpdateSlide2 extends Observer {
   }
 
   update(observable, object) {
-    let val = observable.getValue();
 
-    if (val == true) {
+      let val = observable.getValue();
+      if (val == true) {
 
       let container = document.createElement('div');
       container.setAttribute('id', 'slide2_micros');
       this.composant.div.appendChild(container);
-
 
       let divs = [];
 
@@ -458,9 +475,73 @@ class UpdateSlide2 extends Observer {
       container.appendChild(plug);
       plug.appendChild(text);
 
-      let micros = observable.loadMicros(plug, divs);
+      observable.loadMicros(plug, divs);
 
-    } else if (val == false) {
+      //Wires
+      let wires = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      wires.setAttributeNS(null, 'id', 'wires');
+      container.appendChild(wires);
+      for (var i = 0; i < 4; i++) {
+        let path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+        path.setAttributeNS(null, 'class', 'path'+i);
+        wires.appendChild(path);
+        //handles
+        let h1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        h1.setAttributeNS(null, 'class', 'handle'+i);
+        h1.setAttributeNS(null,'cx', 0);
+        h1.setAttributeNS(null, 'cy', 0);
+        h1.setAttributeNS(null, 'r', 4);
+        h1.setAttributeNS(null, 'mic', i+1);
+        let h2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        h2.setAttributeNS(null,'class', 'handle'+i);
+        h2.setAttributeNS(null, 'cx', 0);
+        h2.setAttributeNS(null, 'cy', 0);
+        h2.setAttributeNS(null, 'r', 4);
+        h2.setAttributeNS(null, 'mic', i+1);
+        wires.appendChild(h1);
+        wires.appendChild(h2);
+
+        let handles = document.querySelectorAll(".handle"+i);
+
+        if (i == 0){
+          let node1 = [45, 395];
+          let node2 = [100, 450];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+        else if (i == 1){
+          let node1 = [210, 270];
+          let node2 = [230, 280];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+        else if (i == 2){
+          let node1 = [486, 272];
+          let node2 = [500, 400];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+        else if (i == 3){
+          let node1 = [636, 368];
+          let node2 = [550, 450];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+      }
+
+      //slide_validée
+      let div_valide = document.createElement('div');
+      div_valide.setAttribute('id','slide2_valide');
+      container.appendChild(div_valide);
+
+      div_valide.addEventListener('click', () => {
+        if (observable.getChoice() == 1) {
+          this.model.setValue(true);
+          observable.setChoice(0);
+        } else {
+          console.log('err : expeted checked animation');
+        }
+      });
+
+      observable.loadValide(div_valide);
+    }
+    else if (val == false) {
        this.composant.div.querySelector("#slide2_micros").remove();
        observable.setDestroyed();
     }
@@ -1004,8 +1085,8 @@ class UpdateLastSlide extends Observer {
       container.appendChild(frame);
 
     } else if (val == false) {
-      this.composant.div.querySelector('#lastSlide').remove();
-      observable.setDestroyed();
+      this.composant.div.removeChild(this.frame);
+      this.composant.div.style.visibility = "hidden";
     }
   }
 }
