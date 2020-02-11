@@ -14,11 +14,9 @@ export default class Lendemain extends Component {
 
   componentDidMount() {
     document.getElementById("choix-portes").style.display = "none";
+    setTimeout(() => this.goToArriveeEnfant(), 1000);
   }
 
-  componentWillUnmount() {
-    document.getElementById("choix-portes").style.display = "block";
-  }
 
   render(target) {
     this.renderHtmlInTarget(target, this.html);

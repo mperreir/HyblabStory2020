@@ -12,14 +12,20 @@ export default class FinHistoire extends Component {
     );
   }
 
+
   componentDidMount() {
-    document.getElementById("choix-portes").style.display = "none";
+    document
+      .getElementById("facebook-button")
+      .addEventListener("click", () =>
+        window.open("https://www.facebook.com/1024.media/", "_blank")
+      );
+    document
+      .getElementById("instagram-button")
+      .addEventListener("click", () =>
+        window.open("https://www.instagram.com/instagram/", "_blank")
+      );
   }
-
-  componentWillUnmount() {
-    document.getElementById("choix-portes").style.display = "block";
-  }
-
+  
   render(target) {
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();

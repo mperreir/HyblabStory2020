@@ -14,11 +14,10 @@ export default class PorteClaque extends Component {
 
   componentDidMount() {
     document.getElementById("choix-portes").style.display = "none";
+    setTimeout(() => this.goToPremierChoix(), 1500);
+
   }
 
-  componentWillUnmount() {
-    document.getElementById("choix-portes").style.display = "block";
-  }
 
   render(target) {
     this.renderHtmlInTarget(target, this.html);

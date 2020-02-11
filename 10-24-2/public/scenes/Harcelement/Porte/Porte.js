@@ -1,10 +1,10 @@
 import Component from "../../../js/Component.js";
 
 export default class ViewPorte extends Component {
-  constructor({ beginBullying }) {
+  constructor({ onGoToArriveeEnfant }) {
     super();
     this.html = "";
-    this.beginBullying = beginBullying;
+    this.onGoToArriveeEnfant = onGoToArriveeEnfant;
   }
 
   async load() {
@@ -14,13 +14,7 @@ export default class ViewPorte extends Component {
   componentDidMount() {
     document
       .getElementById("harcelement")
-      .parentElement.addEventListener("click", this.beginBullying);
-  }
-
-  componentWillUnmount() {
-    document
-      .getElementById("harcelement")
-      .parentElement.removeEventListener("click", this.beginBullying);
+      .addEventListener("click", e => this.onGoToArriveeEnfant(e));
   }
 
   render(target) {

@@ -14,11 +14,10 @@ export default class FewHoursBefore extends Component {
 
   componentDidMount() {
     document.getElementById("choix-portes").style.display = "none";
+    setTimeout(() => this.goToFlashBack(), 1000);
   }
 
-  componentWillUnmount() {
-    document.getElementById("choix-portes").style.display = "block";
-  }
+
 
   render(target) {
     this.renderHtmlInTarget(target, this.html);
