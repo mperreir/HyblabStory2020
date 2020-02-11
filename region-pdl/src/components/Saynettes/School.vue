@@ -3,10 +3,9 @@
     <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
       <p v-if="getCharacterGender === 'mme'">
         Juste à côté de l’entreprise dans laquelle travaille Mme Dubois,
-        se trouve une école dans laquelle M. Moreau est professeur.
+        se trouve une école <br> dans laquelle M. Moreau est professeur.
         Cette année, l’école a bénéficié d’une
-        <br />
-        <b>aide de la Région</b> pour réaliser
+        <b>aide de la Région</b> <br> pour réaliser
         <b>des travaux d’isolation</b>.
       </p>
       <p v-if="getCharacterGender === 'm'">
@@ -20,18 +19,17 @@
       ÉCOLE
     </SimpleText>
 
-    <PlusButton v-model="closePopover1" class="plus1" :width="30" @open="closePopover(1)">
+    <PlusButton v-model="closePopover1" class="plus1" :width="45" @open="closePopover(1)">
       <p class="text">
         En 2018,
-        <span class="orange">140 bâtiments publics</span> ont bénéficié des aides de la Région pour la réhabilitation et la rénovation de leur isolation pour un montant total de
-        <br />
+        <span class="orange">140 bâtiments publics</span> ont bénéficié des aides de la Région <br> pour la réhabilitation et la rénovation <br> de leur isolation pour un montant total <br> de
         <span class="orange">21 millions d’euros.</span>
       </p>
     </PlusButton>
 
     <PlusButton v-model="closePopover2" class="plus2" :width="30" @open="closePopover(2)">
       <p class="text">
-        En 2018, l’école de M. Moreau a pu toucher
+        En 2018, l’école de M. Moreau <br> a pu toucher
         <span class="orange">84 400 €</span> d’aides de la part de la Région.
       </p>
     </PlusButton>
@@ -96,8 +94,8 @@ export default {
 
 .plus1 {
   position: absolute;
-  top: 72%;
-  left: 48%;
+  top: 60%;
+  left: 70%;
 }
 
 .plus2 {
