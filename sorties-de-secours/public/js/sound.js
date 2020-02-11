@@ -93,7 +93,7 @@ $(document).ready(function() {
 
             $soundContent.addClass("sound-content-mute");
 
-            ["generalMusic", "voice", "ambianceExpo", "danceMusic", "vinyl-noise", "vinyl"].forEach((id) => {
+            ["generalMusic", "voice", "ambianceExpo", "vinyl-noise", "vinyl"].forEach((id) => {
                 if (!document.getElementById(id).paused) {
                     playingSoundList.push(id);
                     set_music_pause(id);
