@@ -43,7 +43,8 @@ async function showContextView(currentView){
         if (window.contextView.questionNumber !== 4) {
             const nextButton = setOverlayButton('Déja convaincu ?', false, 'sound/hover/convaincu.mp3');
             nextButton.addEventListener('click', () => {
-                window.open('https://handiplanet.com/pro', '_blank');
+                transitionHorizontal(nextView.view, View14);
+                return;
             });
         }
         const viewContainer = document.getElementById('view-container');
