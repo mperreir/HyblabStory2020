@@ -14,25 +14,32 @@
     margin-top:9vh;
 }
 
-table, td, tr {
-    border: none;
-    border-collapse: collapse;
-}
-
-table td {
-    border-left: 1px solid #969696;
-    padding-left:3vw;
-    padding-right:3vw;
-}
-
-table td:first-child {
-    border-left: none;
-}
-
 #logos-ecoles {
     vertical-align: middle;
+}
 
-    /* font-family: 'NimbusSanLRegular'; */
+#logo-big-audencia {
+  position: absolute;
+  width: 269px;
+  height: 71px;
+  left: 417px;
+  top: 354px;
+}
+
+#logo-big-polytech {
+  position: absolute;
+  width: 195px;
+  height: 124px;
+  left: 1234px;
+  top: 318px;
+}
+
+#logo-big-agr {
+  position: absolute;
+  width: 146px;
+  height: 216px;
+  left: 887px;
+  top: 282px;
 }
 
 #logos-ecoles>td {
@@ -40,31 +47,106 @@ table td:first-child {
 }
 
 .intro-text {
-    font-size: 25px;
-    text-align: center;
-    padding-top:4vh;
+  font-family: NimbusSanL;
+  font-size: 30px;
+  line-height: 50px;
+  /* identical to box height, or 167% */
+  display: flex;
+  align-items: center;
+  color: #1E1E1E;
+}
+#intro-1{
+  position: absolute;
+  width: 171px;
+  height: 50px;
+  left: 875px;
+  top: 81px;
+}
+#intro-2{
+  position: absolute;
+  width: 202px;
+  height: 50px;
+  left: 859px;
+  top: 121px;
 }
 #noms {
+    position: absolute;
     vertical-align:top;
-    font-size: 14px;
-    /* padding-top: 30vh; */
-    /* padding-bottom: 2%; */
+    font-family: NimbusSanL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E1E1E;
+}
+#nom-audencia {
+  position: absolute;
+  width: 189px;
+  height: 78px;
+  left: 458px;
+  top: 525px;
 }
 
-
-#logo-audencia{
-    width:90%;
-    height:auto;
+#nom-agr {
+  position: absolute;
+  width: 218px;
+  height: 78px;
+  left: 850px;
+  top: 525px;
 }
 
-#logo-agr {
-    width: 60%;
-    height:auto;
+#nom-polytech {
+  position: absolute;
+  width: 400px;
+  height: 195px;
+  left: 1204px;
+  top: 513px;
 }
 
-#logo-polytech {
-    width:85%;
-    height:auto;
+#noms p a {
+    position: absolute;
+    vertical-align:top;
+    font-family: NimbusSanL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E1E1E;
+
+    text-decoration: none;
+}
+
+#noms p a:hover {
+  font-weight: bold;
+}
+
+.ligne_verticale1
+{
+  position: absolute;
+  width: 397px;
+  height: 0px;
+  left: 565px;
+  top: 500px;
+  border: 1px solid #969696;
+  transform: rotate(90deg);
+}
+.ligne_verticale2
+{
+  position: absolute;
+    width: 397px;
+    height: 0px;
+    left: 930px;
+    top: 500px;
+    border: 1px solid #969696;
+    transform: rotate(90deg);
 }
 
 .logos-partenaires {
@@ -87,8 +169,4 @@ table td:first-child {
 
 td p {
     margin-bottom:2vh;
-}
-
-#bolder-text {
-    font-weight: bold;
 }

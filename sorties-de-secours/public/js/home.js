@@ -55,7 +55,18 @@ $(document).ready(function() {
     $(".hamburger-checkbox").prop('checked', false);
 
     bodyScrollLock.enableBodyScroll(container);
-    goToByScroll("contact-section");
+    goToByScroll("contact-section", 0);
+
+    const soundAnimated = document.querySelector("#sound-content-loading");
+    const mouseAnimated = document.querySelector("#mouse-animated");
+    soundAnimated.classList.add('animated', 'fadeInUp');
+    mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
+  });
+
+  $(".link-credits").click(function(e) {
+    document.getElementById("hamburger-checkbox").checked = false;
+    bodyScrollLock.enableBodyScroll(container);
+    goToByScroll("credits-section", 0);
 
     const soundAnimated = document.querySelector("#sound-content-loading");
     const mouseAnimated = document.querySelector("#mouse-animated");
