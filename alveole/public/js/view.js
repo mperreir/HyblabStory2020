@@ -33,10 +33,24 @@ class ViewFooter {
     this.div.appendChild(this.text);
     footer.appendChild(this.div);
 
-    Snap.load('data/footer_ellipse.svg', function(data) {
-      let snap = Snap('#footer_ellipse');
-      snap.append(data);
+    // Snap.load('data/footer_ellipse.svg', function(data) {
+    //   let snap = Snap('#footer_ellipse');
+    //   snap.append(data);
+    // });
+
+    this.roue = bodymovin.loadAnimation({
+      container : this.div,
+      renderer: 'svg',
+      name: 'animation1',
+      loop: true,
+      autoplay: false,
+      path: 'data/roue-2.json',
+      rendererSettings: {
+        className: 'footerAnimation',
+        id: 'svg_ellipse'
+      }
     });
+
     this.main.appendChild(footer);
   }
 }
@@ -127,11 +141,11 @@ class ViewModal {
 
     this.mainText = document.createElement('div');
     this.mainText.setAttribute('id', 'main_text');
-    this.mainText.setAttribute('class', 'text unselectable');
+    this.mainText.setAttribute('class', 'unselectable');
 
     this.subText = document.createElement('div');
     this.subText.setAttribute('id', 'sub_text');
-    this.subText.setAttribute('class', 'text unselectable');
+    this.subText.setAttribute('class', 'unselectable');
 
     Snap.load('data/skip_popup.svg', function(data) {
       // Adding the ellipse to the div
@@ -151,41 +165,107 @@ class ViewModal {
   }
 }
 
-class ViewCenterConclusion {
+class ViewModalConclusion {
 
   constructor() {
     this.main = document.querySelector('main');
+
     this.div = document.createElement('div');
-    this.div.setAttribute('id', 'center');
-    this.div.style.visibility = 'hidden';
+    this.div.setAttribute('id', 'sources');
+    this.div.setAttribute('class', 'lastOverlay');
 
-    this.theme = document.createElement('div');
-    this.theme.setAttribute('class', 'theme');
+    this.modal = document.createElement('div');
+    this.modal.setAttribute('class', 'modal');
 
-    this.center_speech1 = document.createElement('div');
-    this.center_speech1.setAttribute('class', 'center_speech1');
+    this.div.appendChild(this.modal);
 
-    this.center_speech2 = document.createElement('div');
-    this.center_speech2.setAttribute('class', 'center_speech2');
+    this.close = document.createElement('a');
+    this.close.setAttribute('class', 'close');
+    this.close.setAttribute('href', '#');
+    this.close.innerHTML = '&times;';
 
-    this.footer_speech = document.createElement('div');
-    this.footer_speech.setAttribute('class', 'footer_speech');
+    this.content = document.createElement('div');
+    this.content.setAttribute('class', 'modalContent');
 
-    this.arrow = document.createElement('div');
-    this.arrow.setAttribute('id', 'sources_arrow');
-    this.arrow.innerHTML = 'sources'
-    let that = this;
-    Snap.load('data/tournage_valide.svg', function(data) {
-      let snap = Snap(that.arrow);
-      snap.append(data);
-    });
-
-    this.div.appendChild(this.theme);
-    this.div.appendChild(this.center_speech1);
-    this.div.appendChild(this.center_speech2);
-    this.div.appendChild(this.footer_speech);
-    this.div.appendChild(this.arrow);
+    this.modal.appendChild(this.close);
+    this.modal.appendChild(this.content);
 
     this.main.appendChild(this.div);
+
+    this.alveole = document.createElement('div');
+    this.alveole.setAttribute('id', 'top');
+
+    this.bottom = document.createElement('div');
+    this.bottom.setAttribute('id', 'bottom');
+
+    this.content.appendChild(this.alveole);
+    this.content.appendChild(this.bottom);
+
+    this.school = {
+      "audencia": {
+        "logo": "logos/audencia.svg",
+        "role": "scénario",
+        "people": {
+          "1": "Anaelle Favier",
+          "2": "Gwenn Lorans"
+        }
+      },
+      "polytech": {
+        "logo": "logos/polytech.svg",
+        "role": "Développeurs",
+        "people": {
+          "1": "Andi Wang",
+          "2": "Robin Mauduit",
+          "3": "Xingshuo Cha"
+        }
+      },
+      "agr": {
+          "logo": "logos/agr.svg",
+          "role": "da - graphisme",
+          "people": {
+            "1": "Aurélie Lumeau",
+            "2": "Justine Cousin"
+          }
+        }
+      };
+
+    Object.keys(this.school).forEach((key) => {
+      let divP = document.createElement('div');
+      divP.setAttribute('id', key);
+
+      let logo = document.createElement('div');
+      logo.setAttribute('class', 'logo');
+
+      Snap.load(this.school[key].logo, (data) => {
+        let snap = Snap(logo);
+        snap.append(data);
+      });
+
+      let role = document.createElement('div');
+      role.setAttribute('class', 'role');
+      role.innerHTML = this.school[key].role;
+
+      let people = document.createElement('div');
+      people.setAttribute('class', 'people');
+
+      let counter = 0;
+      Object.values(this.school[key].people).forEach((person) =>{
+        let personDiv = document.createElement('div');
+        personDiv.setAttribute('class', 'person');
+        personDiv.setAttribute('id', 'person' + counter);
+        personDiv.innerHTML = person;
+
+        people.appendChild(personDiv);
+        counter++;
+      });
+
+      divP.appendChild(logo);
+      divP.appendChild(role);
+      divP.appendChild(people);
+
+      this.content.appendChild(divP);
+
+    });
+
   }
 }

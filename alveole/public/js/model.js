@@ -114,6 +114,34 @@ class ModelIntroSlide extends Observable {
       this.notifyObservers();
     }
   }
+
+  loadNext(container) {
+    Snap.load('data/next.svg', function(data) {
+      let snap = Snap(container);
+      snap.append(data);
+    });
+  }
+
+  loadIntro(container) {
+    this.intro = bodymovin.loadAnimation({
+      container : container,
+      renderer: 'svg',
+      name: 'animation1',
+      loop: false,
+      autoplay: true,
+      path: 'data/intro.json',
+      rendererSettings: {
+        className: 'slideIntroAnimation',
+        id: 'svg_intro'
+      }
+    });
+    this.instanciated = true;
+    return this.intro;
+  }
+
+  getIntro() {
+    return this.intro;
+  }
 }
 
 
@@ -402,15 +430,30 @@ class ModelSlide3 extends Observable {
 
   loadIcons(container1, container2) {
     if (this.instanciated == false) {
-      Snap.load('data/bouche.svg', function(data) {
-        let snap = Snap(container1);
-        snap.append(data);
+      this.bouche1 = bodymovin.loadAnimation({
+        container : container1,
+        renderer: 'svg',
+        loop: true,
+        autoplay: false,
+        path: 'data/voix-amateur.json',
+        rendererSettings: {
+          className: 'slide3',
+          id: 'svg_bouche1'
+        }
       });
-      Snap.load('data/bouche.svg', function(data) {
-        let snap = Snap(container2);
-        snap.append(data);
+      this.bouche2 = bodymovin.loadAnimation({
+        container : container2,
+        renderer: 'svg',
+        loop: true,
+        autoplay: false,
+        path: 'data/voix-pro.json',
+        rendererSettings: {
+          className: 'slide3',
+          id: 'svg_bouche2'
+        }
       });
       this.instanciated = true;
+      return {"1": this.bouche1, "2": this.bouche2};
     }
     else {
       console.log('err : slide3 voix already instanciated');
@@ -510,19 +553,19 @@ class ModelSlide4 extends Observable {
     };
   }
 
-  loadCheckbox(checkboxes) {
-    Object.values(checkboxes).forEach( function(checkbox) {
-      Snap.load('data/slide4_checkbox.svg', function(data) {
-        let snap = Snap(checkbox);
-        snap.append(data);
-        data.node.addEventListener('click', function(e) {
-          $(this).toggleClass('svg_checkbox_checked');
-          $(this).parent().parent().find(".animation").toggleClass('animation_checked');
-          $(this).parent().parent().find(".slide4Label").toggleClass('slide4Label_checked');
-        });
-      });
-    });
-  }
+  // loadCheckbox(checkboxes) {
+  //   Object.values(checkboxes).forEach( function(checkbox) {
+  //     Snap.load('data/slide4_checkbox.svg', function(data) {
+  //       let snap = Snap(checkbox);
+  //       snap.append(data);
+  //       data.node.addEventListener('click', function(e) {
+  //         $(this).toggleClass('svg_checkbox_checked');
+  //         $(this).parent().parent().find(".animation").toggleClass('animation_checked');
+  //         // $(this).parent().parent().find(".slide4Label").toggleClass('slide4Label_checked');
+  //       });
+  //     });
+  //   });
+  // }
 
   loadValide(div_valide) {
     Snap.load('data/tournage_valide.svg', function(data) {
@@ -531,10 +574,10 @@ class ModelSlide4 extends Observable {
     });
   }
 
-  load(container, divs, checkboxes, div_valide) {
+  load(container, divs, div_valide) {
     if (this.instanciated == false) {
       let animes = this.loadAnime(divs);
-      this.loadCheckbox(checkboxes);
+      // this.loadCheckbox(checkboxes);
       this.loadValide(div_valide);
       this.instanciated = true;
       return animes;
@@ -597,6 +640,10 @@ class ModelSlide6 extends Observable {
     }
   }
 
+  getDraggPath() {
+
+  }
+
   setDestroyed() {
     this.instanciated = false;
   }
@@ -609,10 +656,16 @@ class ModelSlide5 extends Observable {
   // values
   bool;
   text;
+  choice;
 
   constructor() {
     super();
     this.bool = false;
+    this.choice = 1;
+  }
+
+  getChoice() {
+    return this.choice;
   }
 
   getValue() {
@@ -625,6 +678,32 @@ class ModelSlide5 extends Observable {
       this.setChanged();
       this.notifyObservers();
     }
+  }
+
+  loadTimeLine(container) {
+    Snap.load('data/timeline-vide.svg', (data) => {
+      let snap = Snap(container);
+      snap.append(data);
+    });
+    Snap.load('data/timeline-5min.svg', (data) => {
+      let snap = Snap(container);
+      snap.append(data);
+    });
+    Snap.load('data/timeline-10min.svg', (data) => {
+      let snap = Snap(container);
+      snap.append(data);
+    });
+    Snap.load('data/timeline-20min.svg', (data) => {
+      let snap = Snap(container);
+      snap.append(data);
+    });
+  }
+
+  loadValide(div_valide) {
+    Snap.load('data/tournage_valide.svg', function(data) {
+      let snap = Snap(div_valide);
+      snap.append(data);
+    });
   }
 }
 
@@ -721,10 +800,16 @@ class ModelSlide8 extends Observable {
   // values
   bool;
   text;
+  choice;
 
   constructor() {
     super();
     this.bool = false;
+    this.choice = 1;
+  }
+
+  getChoice() {
+    return this.choice;
   }
 
   getValue() {
@@ -737,6 +822,30 @@ class ModelSlide8 extends Observable {
       this.setChanged();
       this.notifyObservers();
     }
+  }
+
+  loadSVG(container) {
+    this.capsule = bodymovin.loadAnimation({
+      container : container,
+      renderer: 'svg',
+      name: 'animation1',
+      loop: true,
+      autoplay: true,
+      path: 'data/capsule.json',
+      rendererSettings: {
+        className: 'slide8AnimationJSON',
+        id: 'svg_slide8'
+      }
+    });
+  }
+
+  loadCheckbox(checkboxes) {
+    Object.values(checkboxes).forEach( function(checkbox) {
+      Snap.load('data/slide8_checkbox.svg', function(data) {
+        let snap = Snap(checkbox);
+        snap.append(data);
+      });
+    });
   }
 }
 
@@ -782,8 +891,8 @@ class ModelLastSlide extends Observable {
       Snap.load('data/fleche.svg', function(data) {
         let snap = Snap(div3);
         data.node.id = 'fleche_sources';
-        data.node.addEventListener('click', () => {
-          console.log('sources');
+        data.node.addEventListener('click', function() {
+          console.log(this);
         });
         snap.append(data);
       });

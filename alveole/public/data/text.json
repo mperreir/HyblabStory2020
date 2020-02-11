@@ -26,7 +26,7 @@
         },
       "studio": {
           "main": "Les locaux d’Alvéole Média sont adaptés",
-          "sub": "Ils disposent de studios d'enregistrement sonore isolés, davantage propices à la captation des sons."
+          "sub": "Ils disposent de studios<br>d'enregistrement sonore isolés, davantage<br>propices à la captation des sons."
         }
     }
   },
@@ -37,7 +37,7 @@
       "down": "deuxième journée"
     },
     "speech": "Le choix du bon micro est primordial dans la réalisation d’un podcast.<br>Il assure une bonne prise de son et permet une meilleure immersion.",
-    "question": "Parmi les trois quatres <span style='color:#BDB4F3'>micros</span> suivants, lequel<br>vous semble plus adapté pour l’enregistrement d’une voix ?",
+    "question": "Parmi les quatres <span style='color:#BDB4F3'>micros</span> suivants, lequel<br>vous semble plus adapté pour l’enregistrement d’une voix ?",
     "type": "drag",
     "labels": {
       "1": "micro-canon<br>directionnel",
@@ -115,8 +115,8 @@
     },
     "choices": {
       "1": {
-        "main": "il faut compter en moyenne le double du temps de l’enregistrement.",
-        "sub": "soit 20 minutes de dérushage pour 10 minutes d’enregistrement audio"
+        "main": "il faut compter en moyenne<br>le double du temps de l’enregistrement.",
+        "sub": "Soit 20 minutes de dérushage pour 10<br>minutes d’enregistrement audio"
       }
     },
     "answer": "Pas simple ? développer expertise du monteur : connaît les règles de l’acoustique, le fonctionnement d’un micro dans ses moindres détails, le traitement des sons, un peu l’oreille absolue, sait quel matériel utiliser selon situations."
@@ -161,7 +161,7 @@
       "up": "Conception",
       "down": "neuvième journée"
     },
-    "question": "à qui préférez-vous faire appel<br>pour la <span style='color:#BDB4F3'>conception</span> de la capsule sonnore ?",
+    "question": "à qui préférez-vous faire appel<br>pour la <span style='color:#BDB4F3'>conception</span> de la capsule sonore ?",
     "speech": "L’installation de la capsule sonore nécessite la fabrication<br>d’un support adapté. L’objectif étant de valoriser la création sonore<br>à l’aide d’une infrastructure artistique (en bois par exemple).",
     "labels": {
       "1": "à des prestataires<br>de mon propre réseau",
@@ -169,18 +169,14 @@
     },
     "choices": {
       "1": {
-        "main": "Alvéole Média s’efforce de travailler avec des artisans locaux",
-        "sub": "Pour l’installation de ses capsules sonores (Menuisier ebeniste, Menuisier d'intérieur, Designer sonore) L'aide à l'installation de la capsule sonore permet d'éviter de passer par un prestataire supplémentaire."
-      },
-      "2": {
-        "main": "Alvéole Média s’efforce de travailler avec des artisans locaux",
-        "sub": "Pour l’installation de ses capsules sonores (Menuisier ebeniste, Menuisier d'intérieur, Designer sonore) L'aide à l'installation de la capsule sonore permet d'éviter de passer par un prestataire supplémentaire."
+        "main": "Alvéole Média s’efforce<br>de travailler avec des artisans locaux",
+        "sub": "Pour l’installation de ses capsules<br>sonores (Menuisier ebeniste, Menuisier<br> d'intérieur, Designer sonore)<br>L'aide à l'installation de la capsule<br>sonore permet d'éviter de passer<br>par un prestataire supplémentaire."
       }
     }
   },
   "lastSlide": {
     "title": "Vous êtes arrivé à la <span style='color:#BDB4F3'>fin du processus</span> de réalisation sonore.",
-    "speech": "Lors de votre parcours vous avez pu vous avez pu remarquer<br>que La réalisation d’un podcast est un <span style='color:#BDB4F3'>processus complexe et chronophage</span>.<br>Alvéole Média vous propose un accompagnement personnalisé<br>et adapté à vos besoins.",
+    "speech": "Lors de votre parcours vous avez pu remarquer<br>que La réalisation d’un podcast est un <span style='color:#BDB4F3'>processus complexe et chronophage</span>.<br>Alvéole Média vous propose un accompagnement personnalisé<br>et adapté à vos besoins.",
     "motto": "Choisissez notre expertise,<br><span style='color:#BDB4F3'>faites vous entendre autrement !</span>",
     "website": "Accedez au site d’alvéole",
     "url": "http://alveole.media"
