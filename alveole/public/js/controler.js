@@ -749,6 +749,34 @@ class UpdateSlide6 extends Observer {
 
       let micros = observable.loadMixTable(container);
 
+      let slider1 = document.createElement('div');
+      slider1.setAttribute('class', 'slideContainer');
+
+      let input1 = document.createElement('input');
+      input1.setAttribute('type', 'range');
+      input1.setAttribute('min', '0');
+      input1.setAttribute('max', '10');
+      input1.setAttribute('value', '5');
+      input1.setAttribute('class', 'slider');
+      input1.setAttribute('id', 'slider1');
+      input1.setAttribute('orient', 'vertical');
+
+      let slider2 = document.createElement('div');
+      slider2.setAttribute('class', 'slideContainer2');
+
+      let input2 = document.createElement('input');
+      input2.setAttribute('type', 'range');
+      input2.setAttribute('min', '0');
+      input2.setAttribute('max', '10');
+      input2.setAttribute('value', '5');
+      input2.setAttribute('class', 'slider');
+      input2.setAttribute('id', 'slider2');
+
+      container.appendChild(slider2);
+      container.appendChild(slider1);
+      slider1.appendChild(input1);
+      slider2.appendChild(input2);
+
     } else if (val == false) {
        this.composant.div.querySelector("#slide6_mixtable").remove();
        observable.setDestroyed();

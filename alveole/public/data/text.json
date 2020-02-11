@@ -161,7 +161,7 @@
       "up": "Conception",
       "down": "neuvième journée"
     },
-    "question": "à qui préférez-vous faire appel<br>pour la <span style='color:#BDB4F3'>conception</span> de la capsule sonnore ?",
+    "question": "à qui préférez-vous faire appel<br>pour la <span style='color:#BDB4F3'>conception</span> de la capsule sonore ?",
     "speech": "L’installation de la capsule sonore nécessite la fabrication<br>d’un support adapté. L’objectif étant de valoriser la création sonore<br>à l’aide d’une infrastructure artistique (en bois par exemple).",
     "labels": {
       "1": "à des prestataires<br>de mon propre réseau",
@@ -176,7 +176,7 @@
   },
   "lastSlide": {
     "title": "Vous êtes arrivé à la <span style='color:#BDB4F3'>fin du processus</span> de réalisation sonore.",
-    "speech": "Lors de votre parcours vous avez pu vous avez pu remarquer<br>que La réalisation d’un podcast est un <span style='color:#BDB4F3'>processus complexe et chronophage</span>.<br>Alvéole Média vous propose un accompagnement personnalisé<br>et adapté à vos besoins.",
+    "speech": "Lors de votre parcours vous avez pu remarquer<br>que La réalisation d’un podcast est un <span style='color:#BDB4F3'>processus complexe et chronophage</span>.<br>Alvéole Média vous propose un accompagnement personnalisé<br>et adapté à vos besoins.",
     "motto": "Choisissez notre expertise,<br><span style='color:#BDB4F3'>faites vous entendre autrement !</span>",
     "website": "Accedez au site d’alvéole",
     "url": "http://alveole.media"
