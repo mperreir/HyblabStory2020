@@ -1,10 +1,10 @@
 import Component from "../../../js/Component.js";
 
-export default class Porte extends Component {
-  constructor({ onGoToDiscussion, onGoToBuzzer4 }) {
+export default class Culotte extends Component {
+  constructor({ goToDiscussion, onGoToBuzzer4 }) {
     super();
     this.html = "";
-    this.onGoToDiscussion = onGoToDiscussion;
+    this.goToDiscussion = goToDiscussion;
     this.onGoToBuzzer4 = onGoToBuzzer4;
   }
 
@@ -21,7 +21,7 @@ export default class Porte extends Component {
       .addEventListener("click", e => this.onGoToBuzzer4(e));
     document
       .getElementById("explication-menstruations")
-      .addEventListener("click", e => this.onGoToDiscussion(e));
+      .addEventListener("click", e => this.goToDiscussion(e));
   }
 
   render(target) {

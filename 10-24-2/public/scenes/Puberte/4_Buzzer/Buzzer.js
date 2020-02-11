@@ -1,10 +1,10 @@
 import Component from "../../../js/Component.js";
 
 export default class Buzzer extends Component {
-  constructor({ onGoToCulotte }) {
+  constructor({ goToDiscussion }) {
     super();
     this.html = "";
-    this.onGoToCulotte = onGoToCulotte;
+    this.goToDiscussion = goToDiscussion;
   }
 
   async load() {
@@ -16,7 +16,7 @@ export default class Buzzer extends Component {
   componentDidMount() {
     document
       .getElementById("explic-buzzer-4")
-      .addEventListener("click", e => this.onGoToCulotte(e));
+      .addEventListener("click", e => this.goToDiscussion(e));
   }
 
   render(target) {

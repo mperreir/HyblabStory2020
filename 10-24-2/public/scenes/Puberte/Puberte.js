@@ -24,10 +24,15 @@ export default class Puberte extends Component {
     });
     this.atable = new ATable();
     this.culotte = new Culotte({
-      onGoToDiscussion: this.goToDiscussion.bind(this),
+      goToDiscussion: () => {
+        this.culotte.componentWillUnmount();
+        this.discussion.render(this.section);
+      },
       onGoToBuzzer4: this.goToBuzzer4.bind(this)
     });
-    this.buzzer4 = new Buzzer4({ onGoToCulotte: this.goToCulotte.bind(this) });
+    this.buzzer4 = new Buzzer4({
+      goToDiscussion: this.goToDiscussion.bind(this)
+    });
     this.discussion = new Discussion({
       goToSuperPapa: () => this.superPapa.render(this.section)
     });
@@ -63,7 +68,6 @@ export default class Puberte extends Component {
   }
 
   goToDiscussion(e) {
-    this.culotte.componentWillUnmount();
     this.discussion.render(this.section);
     e.preventDefault();
   }

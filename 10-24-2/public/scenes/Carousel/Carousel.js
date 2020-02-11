@@ -54,6 +54,7 @@ export default class Carousel extends Component {
     document.getElementById("nextArrow").style.display = "none";
     document.getElementById("previousArrow").style.display = "none";
     document.getElementById("choix-portes").style.display = "block";
+    document.getElementById("carousel-player").pause();
   }
 
   handleCarouselButton() {

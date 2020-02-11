@@ -1,6 +1,12 @@
 import Component from "../../../js/Component.js";
 import Buzzer9 from "../9_Buzzer/Buzzer.js";
 
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+}
+
 export default class Choix extends Component {
   constructor({ goToFin, goToBuzzer }) {
     super();
@@ -41,15 +47,14 @@ export default class Choix extends Component {
     document.querySelectorAll(".un-choix").forEach(el => {
       // hide text
       el.addEventListener("dragstart", () => {
-        console.log("start");
         document
           .querySelectorAll(".un-choix")
           .forEach(el => el.classList.remove("showText"));
       });
-
-      // show text
-      el.addEventListener("dragend", e => {
-        if (e.x > x && e.y > y) {
+      console.log(isMobile());
+      if (isMobile()) {
+        // show text
+        el.addEventListener("click", e => {
           if (el.id === "tampon") {
             el.classList.toggle("showText");
             this.state.t_clicked = true;
@@ -60,17 +65,43 @@ export default class Choix extends Component {
             this.buzzer.render(this.target);
             this.state.c_clicked = true;
           }
-        }
-        if (
-          this.state.c_clicked &&
-          this.state.t_clicked &&
-          this.state.s_clicked
-        ) {
-          setTimeout(() => {
-            this.componentWillUnmount();
-          }, 3000);
-        }
-      });
+
+          if (
+            this.state.c_clicked &&
+            this.state.t_clicked &&
+            this.state.s_clicked
+          ) {
+            setTimeout(() => {
+              this.componentWillUnmount();
+            }, 3000);
+          }
+        });
+      } else {
+        // show text
+        el.addEventListener("dragend", e => {
+          if (e.x > x && e.y > y) {
+            if (el.id === "tampon") {
+              el.classList.toggle("showText");
+              this.state.t_clicked = true;
+            } else if (el.id === "serviette") {
+              el.classList.toggle("showText");
+              this.state.s_clicked = true;
+            } else if (el.id === "couche") {
+              this.buzzer.render(this.target);
+              this.state.c_clicked = true;
+            }
+          }
+          if (
+            this.state.c_clicked &&
+            this.state.t_clicked &&
+            this.state.s_clicked
+          ) {
+            setTimeout(() => {
+              this.componentWillUnmount();
+            }, 3000);
+          }
+        });
+      }
     });
   }
 
