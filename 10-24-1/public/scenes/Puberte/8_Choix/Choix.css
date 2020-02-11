@@ -51,10 +51,8 @@
 
 #tampon .texte {
   position: absolute;
-  width: 200%;
-  height: 139%;
-  top: 6%;
-  margin-left: 9%;
+  width: 155%;
+  height: 143%;
 }
 
 .showText .texte {
@@ -90,13 +88,13 @@
   font-size: 25px;
 }
 #serviette > div.texte > p {
-  width: 94%;
-  transform: translateY(-106%);
+  width: 92%;
+  transform: translateY(-112%);
 }
 
 #tampon > div.texte > p {
-  transform: translateY(-84%);
-  width: 68%;
+  transform: translateY(-100%);
+  width: 49%;
 }
 
 /* Bottom */
@@ -132,9 +130,9 @@
     transform: translate(0%, 0%);
   }
   50% {
-    transform: translate(57vw, -20vh);
+    transform: translate(62vw, -20vh);
   }
   to {
-    transform: translate(57vw, 10vh);
+    transform: translate(62vw, 10vh);
   }
 }
