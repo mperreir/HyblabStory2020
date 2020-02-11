@@ -117,25 +117,25 @@ export default {
 <style scoped>
 .plus1 {
   position: absolute;
-  top: 80%;
-  left: 85%;
+  top: 62%;
+  left: 62%;
 }
 
 .plus2 {
   position: absolute;
-  top: 45%;
-  left: 70%;
+  top: 35%;
+  left: 60%;
 }
 
 .plus3 {
   position: absolute;
-  top: 43%;
-  left: 13.5%;
+  top: 45%;
+  left: 30%;
 }
 
 .plus4 {
   position: absolute;
-  top: 90%;
-  left: 13.5%;
+  top: 75%;
+  left: 30%;
 }
 </style>
