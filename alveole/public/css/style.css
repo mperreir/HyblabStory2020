@@ -224,7 +224,7 @@ footer {
   letter-spacing: 0.21em;
   text-transform: uppercase;
 }
-
+/*
 #slide2_micros {
   position: absolute;
   height: 100%;
@@ -346,7 +346,219 @@ footer {
   letter-spacing: 0.21em;
   text-transform: uppercase;
   color: #9E90F2;
+} */
+
+
+#slide2_micros {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
+
+.micro {
+  position: absolute;
+  height: 40%;
+  width: 20%;
+  z-index: 1;
+}
+
+.slide2Label {
+  position: absolute;
+  top: 0;
+  height: 30%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+#slide2_1_micro {
+  position: absolute;
+  left: -10%;
+  top: 70%;
+}
+
+#svg_micro-canon {
+  position: absolute;
+  top: 30%;
+  height: 40%;
+  width: 100%;
+}
+
+#slide2_2_micro {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+#svg_micro-reportage {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 30%;
+}
+
+#slide2_3_micro {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+}
+
+#svg_micro-couple {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 30%;
+}
+
+#slide2_4_micro {
+  position: absolute;
+  right: -10%;
+  top: 70%;
+}
+
+#svg_micro-cravate {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 20%;
+}
+
+.slide2 .st0 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-miterlimit: 10;
+}
+
+.slide2 .st1 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+#slide2_plug {
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  width: 30%;
+  height: 20%;
+}
+
+#svg_plug {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  left: 35%;
+  height: 40%;
+}
+
+#slide2_plugLabel {
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+  color: #9E90F2;
+}
+
+#wires {
+  position: absolute;
+  width: 100%;
+  height: 200%;
+}
+
+#wires .path0 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle0 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#wires .path1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#wires .path2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#wires .path3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#slide2_valide{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  left: 115%;
+  top: 62%;
+  z-index: 1;
+}
+
 
 #svg_mix_table
   	.st0{opacity:0.5;fill:#FFF8E6;stroke:#FFF8E6;stroke-width:2.0609;stroke-linecap:round;stroke-miterlimit:10;}

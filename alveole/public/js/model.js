@@ -240,7 +240,73 @@ class ModelSlide1 extends Observable {
   }
 
 }
-
+//
+// class ModelSlide2 extends Observable {
+//
+//   // values;
+//   bool;
+//   choice;
+//   answer;
+//   instanciated;
+//   text;
+//
+//   constructor() {
+//     super();
+//     this.bool = false;
+//     this.instanciated = false;
+//     this.choice = 1;
+//     this.answer;
+//     this.wires;
+//   }
+//
+//   getValue() {
+//     return this.bool;
+//   }
+//
+//   setValue(val) {
+//     if (val != this.bool) {
+//       this.bool = val;
+//       this.setChanged();
+//       this.notifyObservers();
+//     }
+//   }
+//
+//   loadMicros(container, divs) {
+//
+//     if (this.instanciated == false) {
+//
+//       Snap.load('data/micro_canon.svg', function(data) {
+//         let snap = Snap(divs[0]);
+//         snap.append(data);
+//       });
+//       Snap.load('data/micro_reportage.svg', function(data) {
+//         let snap = Snap(divs[1]);
+//         snap.append(data);
+//       });
+//       Snap.load('data/micro_XY.svg', function(data) {
+//         let snap = Snap(divs[2]);
+//         snap.append(data);
+//       });
+//       Snap.load('data/micro_cravate.svg', function(data) {
+//         let snap = Snap(divs[3]);
+//         snap.append(data);
+//       });
+//       Snap.load('data/plug.svg', function(data) {
+//         let snap = Snap(container);
+//         snap.append(data);
+//       });
+//
+//       this.instanciated = true;
+//     }
+//     else {
+//       console.log('err : slide2 micros already instanciated');
+//     }
+//   }
+//
+//   setDestroyed() {
+//     this.instanciated = false;
+//   }
+// }
 class ModelSlide2 extends Observable {
 
   // values;
@@ -249,12 +315,13 @@ class ModelSlide2 extends Observable {
   answer;
   instanciated;
   text;
+  handles;
 
   constructor() {
     super();
     this.bool = false;
     this.instanciated = false;
-    this.choice = 1;
+    this.choice = 0;
     this.answer;
     this.wires;
   }
@@ -268,6 +335,17 @@ class ModelSlide2 extends Observable {
       this.bool = val;
       this.setChanged();
       this.notifyObservers();
+    }
+  }
+
+  setChoice(c) {
+      this.choice = c;
+      this.setValue(true);
+  }
+
+  getChoice(){
+    if (this.choice != 0){
+      return 1;
     }
   }
 
@@ -295,12 +373,79 @@ class ModelSlide2 extends Observable {
         let snap = Snap(container);
         snap.append(data);
       });
-
       this.instanciated = true;
     }
     else {
       console.log('err : slide2 micros already instanciated');
     }
+  }
+
+  loadWire(handles, path, plug, nodes) {
+    var bezierWeight = 0.2;
+    var box = plug.getBoundingClientRect();
+
+    for (var i = 0; i < 4; i++) {
+
+      var point = {x:323, y:314};
+
+      gsap.set(handles[0], {x:nodes[0][0], y:nodes[0][1]});
+      gsap.set(handles[1], {x:nodes[1][0], y:nodes[1][1]});
+
+      Draggable.create(handles, {
+        type: 'x,y',
+        bounds: path.parentElement,
+        onDrag: updatePath,
+        liveSnap: {
+          points: [point],
+          radius: 10
+        },
+        snap: {
+          points: [point],
+          radius: 10
+        },
+        onDragEnd: updateChoice
+      });
+
+      updatePath();
+
+      function updatePath() {
+
+        gsap.set(handles[0], {x:nodes[0][0], y:nodes[0][1]});
+
+        var x1 = gsap.getProperty(handles[0], 'x');
+        var y1 = gsap.getProperty(handles[0], 'y');
+
+        var x4 = gsap.getProperty(handles[1], 'x');
+        var y4 = gsap.getProperty(handles[1], 'y');
+
+        var dx = Math.abs(x4 - x1) * bezierWeight;
+
+        var x2 = x1 - dx;
+        var x3 = x4 + dx;
+
+        var data = `M${x1} ${y1} C ${x2} ${y1} ${x3} ${y4} ${x4} ${y4}`;
+
+        path.setAttribute('d', data);
+      }
+
+      let that = this;
+      function updateChoice() {
+        if ((this.x == point.x) && (this.y = point.y)) {
+          that.setChoice(this.target.getAttribute('mic'));
+          console.log('choice set at ' + that.choice)
+        }
+        else {
+          console.log("Wire not plugged");
+        }
+      }
+    }
+  }
+
+  loadValide(div_valide) {
+    Snap.load('data/tournage_valide.svg', function(data) {
+      let snap = Snap(div_valide);
+      snap.append(data);
+    });
   }
 
   setDestroyed() {

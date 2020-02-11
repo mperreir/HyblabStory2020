@@ -423,14 +423,13 @@ class UpdateSlide2 extends Observer {
   }
 
   update(observable, object) {
-    let val = observable.getValue();
 
-    if (val == true) {
+      let val = observable.getValue();
+      if (val == true) {
 
       let container = document.createElement('div');
       container.setAttribute('id', 'slide2_micros');
       this.composant.div.appendChild(container);
-
 
       let divs = [];
 
@@ -459,14 +458,132 @@ class UpdateSlide2 extends Observer {
       container.appendChild(plug);
       plug.appendChild(text);
 
-      let micros = observable.loadMicros(plug, divs);
+      observable.loadMicros(plug, divs);
 
-    } else if (val == false) {
+      //Wires
+      let wires = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      wires.setAttributeNS(null, 'id', 'wires');
+      container.appendChild(wires);
+      for (var i = 0; i < 4; i++) {
+        let path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+        path.setAttributeNS(null, 'class', 'path'+i);
+        wires.appendChild(path);
+        //handles
+        let h1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        h1.setAttributeNS(null, 'class', 'handle'+i);
+        h1.setAttributeNS(null,'cx', 0);
+        h1.setAttributeNS(null, 'cy', 0);
+        h1.setAttributeNS(null, 'r', 4);
+        h1.setAttributeNS(null, 'mic', i+1);
+        let h2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        h2.setAttributeNS(null,'class', 'handle'+i);
+        h2.setAttributeNS(null, 'cx', 0);
+        h2.setAttributeNS(null, 'cy', 0);
+        h2.setAttributeNS(null, 'r', 4);
+        h2.setAttributeNS(null, 'mic', i+1);
+        wires.appendChild(h1);
+        wires.appendChild(h2);
+
+        let handles = document.querySelectorAll(".handle"+i);
+
+        if (i == 0){
+          let node1 = [45, 395];
+          let node2 = [100, 450];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+        else if (i == 1){
+          let node1 = [210, 270];
+          let node2 = [230, 280];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+        else if (i == 2){
+          let node1 = [486, 272];
+          let node2 = [500, 400];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+        else if (i == 3){
+          let node1 = [636, 368];
+          let node2 = [550, 450];
+          observable.loadWire(handles, path, plug, [node1, node2]);
+        }
+      }
+
+      //slide_validée
+      let div_valide = document.createElement('div');
+      div_valide.setAttribute('id','slide2_valide');
+      container.appendChild(div_valide);
+
+      div_valide.addEventListener('click', () => {
+        if (observable.getChoice() == 1) {
+          this.model.setValue(true);
+          observable.setChoice(0);
+        } else {
+          console.log('err : expeted checked animation');
+        }
+      });
+
+      observable.loadValide(div_valide);
+    }
+    else if (val == false) {
        this.composant.div.querySelector("#slide2_micros").remove();
        observable.setDestroyed();
     }
   }
 }
+//
+// class UpdateSlide2 extends Observer {
+//
+//   constructor(model, composant) {
+//     super();
+//     this.model = model;
+//     this.composant = composant;
+//   }
+//
+//   update(observable, object) {
+//     let val = observable.getValue();
+//
+//     if (val == true) {
+//
+//       let container = document.createElement('div');
+//       container.setAttribute('id', 'slide2_micros');
+//       this.composant.div.appendChild(container);
+//
+//
+//       let divs = [];
+//
+//       for (let micro in observable.text['labels']) {
+//         let div = document.createElement('div');
+//         div.setAttribute('id', 'slide2_' + micro + '_micro');
+//         div.setAttribute('class', 'micro');
+//         container.appendChild(div);
+//
+//         let text_micro = document.createElement('div');
+//         text_micro.setAttribute('class', 'slide2Label unselectable');
+//         text_micro.innerHTML = observable.text['labels'][micro];
+//
+//         div.appendChild(text_micro);
+//         divs.push(div);
+//       }
+//
+//       let plug = document.createElement('div');
+//       plug.setAttribute('id', 'slide2_plug');
+//
+//       let text = document.createElement('div');
+//       text.setAttribute('id', 'slide2_plugLabel');
+//       text.setAttribute('class', 'unselectable');
+//       text.innerHTML = observable.text.plug;
+//
+//       container.appendChild(plug);
+//       plug.appendChild(text);
+//
+//       let micros = observable.loadMicros(plug, divs);
+//
+//     } else if (val == false) {
+//        this.composant.div.querySelector("#slide2_micros").remove();
+//        observable.setDestroyed();
+//     }
+//   }
+// }
 
 class UpdateSlide3 extends Observer {
 

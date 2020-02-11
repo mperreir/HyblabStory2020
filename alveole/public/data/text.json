@@ -47,8 +47,8 @@
     },
     "choices": {
       "1": {
-        "main": "Il n’y a pas de bonne réponse quant au choix du micro.",
-        "sub": "En effet, il dépend du lieu ou encore des conditions de tournage."
+        "main": "Il n’y a pas de bonne réponse<br>quant au choix du micro.",
+        "sub": "En effet, il dépend du lieu ou encore<br>des conditions de tournage."
       }
     },
     "plug": "Branchez ici<br>et cliquez sur le micro<br>de votre choix"
