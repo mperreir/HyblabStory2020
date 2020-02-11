@@ -25,13 +25,13 @@
     </SimpleText>
 
     <SimpleText :y="50" :x="10" :width="20" :style="{textAlign: 'center'}">
-      <b>Storytelling :</b>
+      <span class="large-text">Storytelling<br></span>
       <br />Nina Naulleau
       <br />Vinciane Le Borgne
     </SimpleText>
 
     <SimpleText :y="50" :x="35" :width="30" :style="{textAlign: 'center'}">
-      <b>Développement et intégration :</b>
+      <span class="large-text">Développement et intégration<br></span>
       <br />Julien Garcia
       <br />Nicolas Vautier
       <br />Mathis Le Berrigaud
@@ -40,7 +40,7 @@
     </SimpleText>
 
     <SimpleText :y="50" :x="70" :width="20" :style="{textAlign: 'center'}">
-      <b>Direction artistique :</b>
+      <span class="large-text">Direction artistique<br></span>
       <br />Mathilde Mousset
       <br />Marine Boismain
     </SimpleText>
@@ -65,6 +65,12 @@ export default {
 </script>
 
 <style scoped>
+
+.large-text {
+  font-weight: bold;
+  font-size: 3vh;
+}
+
 a {
   text-decoration: none;
 }
