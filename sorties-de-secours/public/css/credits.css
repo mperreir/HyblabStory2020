@@ -97,6 +97,7 @@
   height: 78px;
   left: 850px;
   top: 525px;
+<<<<<<< HEAD
 }
 
 #nom-polytech {
@@ -121,6 +122,39 @@
     text-transform: uppercase;
     color: #1E1E1E;
 }
+=======
+}
+
+#nom-polytech {
+  position: absolute;
+  width: 400px;
+  height: 195px;
+  left: 1204px;
+  top: 513px;
+}
+
+#noms p a {
+    position: absolute;
+    vertical-align:top;
+    font-family: NimbusSanL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E1E1E;
+
+    text-decoration: none;
+}
+
+#noms p a:hover {
+  font-weight: bold;
+}
+
+>>>>>>> sorties-de-secours
 .ligne_verticale1
 {
   position: absolute;

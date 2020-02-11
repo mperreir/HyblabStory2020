@@ -15,7 +15,7 @@
     text-align:center;
     color:#F6F5F5;
     /* vertical-align: middle; */
-    padding-top: 15vh;
+    padding-top: 40vh;
 
     /* width: 25%; */
 }
@@ -176,4 +176,9 @@ input[type=range]:focus::-ms-fill-upper {
   width: 100%;
   text-align: center;
   bottom: 2%;
+}
+
+#figures-animated-logo {
+  position: absolute;
+  left: 37%;
 }

@@ -15,8 +15,8 @@ $(document).ready(function() {
     set_music_volume("generalMusic", 0.1);
   });
 
-  $("#link-presentation").click(function(e) {
-    document.getElementById("hamburger-checkbox").checked = false;
+  $(".link-presentation").click(function(e) {
+      $(".hamburger-checkbox").prop('checked', false);
 
     bodyScrollLock.clearAllBodyScrollLocks();
     goToByScroll("presentation-section", 200);
@@ -27,8 +27,8 @@ $(document).ready(function() {
     mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
   });
 
-  $("#link-menu").click(function(e) {
-    document.getElementById("hamburger-checkbox").checked = false;
+  $(".link-menu").click(function(e) {
+      $(".hamburger-checkbox").prop('checked', false);
 
     bodyScrollLock.clearAllBodyScrollLocks();
     goToByScroll("menu-section", 0);
@@ -39,8 +39,8 @@ $(document).ready(function() {
     mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
   });
 
-  $("#link-figures").click(function(e) {
-    document.getElementById("hamburger-checkbox").checked = false;
+  $(".link-figures").click(function(e) {
+      $(".hamburger-checkbox").prop('checked', false);
 
     bodyScrollLock.clearAllBodyScrollLocks();
     goToByScroll("figures-section", 0);
@@ -51,10 +51,23 @@ $(document).ready(function() {
     mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
   });
 
-  $("#link-contact").click(function(e) {
-    document.getElementById("hamburger-checkbox").checked = false;
+  $(".link-contact").click(function(e) {
+    $(".hamburger-checkbox").prop('checked', false);
+
     bodyScrollLock.enableBodyScroll(container);
-    goToByScroll("contact-section");
+    goToByScroll("contact-section", 0);
+
+    const soundAnimated = document.querySelector("#sound-content-loading");
+    const mouseAnimated = document.querySelector("#mouse-animated");
+    soundAnimated.classList.add('animated', 'fadeInUp');
+    mouseAnimated.classList.add('animated', 'fadeInUp', 'delay-1s');
+  });
+
+  $(".link-credits").click(function(e) {
+      $(".hamburger-checkbox").prop('checked', false);
+
+    bodyScrollLock.enableBodyScroll(container);
+    goToByScroll("credits-section", 0);
 
     const soundAnimated = document.querySelector("#sound-content-loading");
     const mouseAnimated = document.querySelector("#mouse-animated");

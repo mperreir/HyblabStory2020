@@ -1,6 +1,7 @@
 #contact-section {
   position: relative;
   background-color: #1E1E1E;
+  height: 100vh;
 }
 
 #menu-text {
@@ -31,7 +32,7 @@ img.logo-contact-wrapper {
 #contact-content{
   position: absolute;
   left: 1200px;
-  top: 300px;
+  top: 45%;
   height: 402px;
   font-family: NimbusSanL;
 }
@@ -41,7 +42,8 @@ img.logo-contact-wrapper {
   font-style: normal;
   font-weight: normal;
   color: #F6F5F5;
-  font-size: 200%;
+  font-size: 30px;
+  line-height: 50px;
 }
 
 
@@ -85,7 +87,7 @@ th{
   width: 681px;
   height: 60px;
   left: 72px;
-  top: 856px;
+  bottom: 15%;
   font-family: NimbusSanL;
   font-style: normal;
   font-size: 17px;
@@ -99,7 +101,7 @@ th{
   width: 636px;
   height: 79px;
   left: 72px;
-  top: 942px;
+  bottom: 5%;
   font-family: NimbusSanL;
   font-style: normal;
   font-size: 17px;
@@ -120,4 +122,16 @@ th{
   font-weight: 500;
   color: #F6F5F5;
   font-family: NimbusSanL;
+}
+
+#end-contact {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 2%;
+}
+
+#contact-animated-logo {
+  position: absolute;
+  left: 37%;
 }
