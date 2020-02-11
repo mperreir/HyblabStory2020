@@ -9,7 +9,7 @@ let Personnage = {
     "dialogues": {
       "0": [
         {
-          "texte": ["^1000Bonjour et bienvenue aux portes ouvertes d'Audencia !^300 Je suis Emma.^300 Je suis en Master 1 à Audencia,^150 je peux t’aider?^500"],
+          "texte": ["^1000Bonjour et bienvenue aux portes ouvertes d'Audencia !^300 Je suis Emma.^300 Je suis en Master 1 à Audencia,^150 je peux t’aider ?^500"],
           "suivant": {"personnage": "Pablo", "slide": "0", "paragraphe": "0"}
         },
         {
@@ -31,15 +31,15 @@ let Personnage = {
       ],
       "4": [
         {
-          "texte": ["Alors Pablo, j’espère que tu as pu découvrir un peu plus ce qu’était Audencia à ses débuts.^500", " C’est une grande école avec une longue histoire comme tu as pu le remarquer.^500"," Mais ce n’est pas fini ! ^300Je vais t’emmener rencontrer d’autres personnes,^150 elles pourront t’en dire davantage.^300 Continuons.^500"],
+          "texte": ["^1000Alors Pablo,^150 j’espère que tu as pu découvrir un peu plus ce qu’était Audencia à ses débuts.^500", "C’est une grande école avec une longue histoire comme tu as pu le remarquer.^500", "Mais ce n’est pas fini !^300 Je vais t’emmener rencontrer d’autres personnes,^150 elles pourront t’en dire davantage.^300 Continuons.^500"],
           "suivant": {"personnage": "Pablo", "slide": "4", "paragraphe": "0"}
         },
         {
-          "texte": ["Bon, on a fait un petit bond dans le temps, et on est en^150 …. 1974 !^500"],
+          "texte": ["Bon,^150 on a fait un petit bond dans le temps, et on est en …. ^150 1974 !^500"],
           "suivant": {"personnage": "Pablo", "slide": "4", "paragraphe": "1"}
         },
         {
-          "texte": ["Pas mal !^300 Et tu vas voir, l’école a aussi fait son bond en avant, et pas des moindres !^500"," Mais je suis convaincue que d’autres pourront mieux te l’expliquer que moi…^500"]
+          "texte": ["Pas mal !^300 Et tu vas voir,^150 l’école a aussi fait son bond en avant, et pas des moindres !^500"," Mais je suis convaincue que d’autres pourront mieux te l’expliquer que moi…^500"]
         }
       ],
       "7": [
@@ -65,7 +65,7 @@ let Personnage = {
           "suivant": {"personnage": "Emma", "slide": "10", "paragraphe": "2"}
         },
         {
-          "texte": ["^1500Félicitations,^150 maintenant tu en sais un peu plus sur l’histoire d’Audencia !^300 Alors, ça t’a plu?^500"],
+          "texte": ["^1500Félicitations,^150 maintenant tu en sais un peu plus sur l’histoire d’Audencia !^300 Alors, ça t’a plu ?^500"],
           "suivant": {"personnage": "Pablo", "slide": "10", "paragraphe": "1"}
         },
         {
@@ -113,7 +113,7 @@ let Personnage = {
       ],
       "5": [
         {
-          "texte": ["Bonjour !^200 je m’appelle Pablo,^100 enchanté,^100 je suis intéressé par l’école que tu as fait et je voulais savoir :^500"," comment tes années à l’école se sont passées ? Pas trop compliqué ?^500"],
+          "texte": ["^1500Bonjour !^200 je m’appelle Pablo,^150 enchanté,^150 je suis intéressé par l’école que tu as fait et je voulais savoir :^500", "comment tes années à l’école se sont passées ?^300 Pas trop compliqué ?^500"],
           "suivant": {"personnage": "Alain", "slide": "5", "paragraphe": "0"}
         },
         {
@@ -125,17 +125,17 @@ let Personnage = {
           "suivant": {"personnage": "Alain", "slide": "5", "paragraphe": "2"}
         },
         {
-          "texte": ["Très bien !^300 Et depuis, tes années à l’école t’ont aidé pour le monde du travail ?^500"],
+          "texte": ["Très bien !^300 Et depuis,^150 tes années à l’école t’ont aidé pour le monde du travail ?^500"],
           "suivant": {"personnage": "Alain", "slide": "5", "paragraphe": "3"}
         },
         {
-          "texte": ["Plutôt oui !^300 En tout cas,^100 merci beaucoup d’avoir pris le temps de discuter avec moi,^150 j’ai beaucoup appris !^500"],
+          "texte": ["Plutôt oui !^300 En tout cas,^150 merci beaucoup d’avoir pris le temps de discuter avec moi,^150 j’ai beaucoup appris !^500"],
           "suivant": {"personnage": "Alain", "slide": "5", "paragraphe": "4"}
         }
       ],
       "6": [
         {
-          "texte": ["Bonjour,^100 je m’appelle Pablo et je suis très intéressé par l’école.^500"," J’ai pu en apprendre un peu plus sur ses débuts et je ne pensais pas qu’elle pouvait avoir une telle histoire !^500"," J’aimerais m’informer un peu plus.^400"],
+          "texte": ["^1500Bonjour,^100 je m’appelle Pablo et je suis très intéressé par l’école.^500", "J’ai pu en apprendre un peu plus sur ses débuts et je ne pensais pas qu’elle pouvait avoir une telle histoire !^500", "J’aimerais m’informer un peu plus.^500"],
           "suivant": {"personnage": "Martine", "slide": "6", "paragraphe": "0"}
         },
         {
@@ -143,11 +143,11 @@ let Personnage = {
           "suivant": {"personnage": "Martine", "slide": "6", "paragraphe": "1"}
         },
         {
-          "texte": ["je comprends,^150 cela a dû être très intéressant à vivre.^500"],
+          "texte": ["Je comprends,^150 cela a dû être très intéressant à vivre.^500"],
           "suivant": {"personnage": "Martine", "slide": "6", "paragraphe": "2"}
         },
         {
-          "texte": ["Je vous remercie de m’avoir consacré un peu de temps.^500"," Encore une fois l’histoire m’épate et me donne envie d’étudier dans cet établissement.^500"],
+          "texte": ["Je vous remercie de m’avoir consacré un peu de temps.^500", "Encore une fois l’histoire m’épate et me donne envie d’étudier dans cet établissement.^500"],
           "suivant": {"personnage": "Martine", "slide": "6", "paragraphe": "3"}
         }
       ],
