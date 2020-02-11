@@ -348,3 +348,22 @@ body {
     opacity: 0.92;
     font-size: 0.8em;
 }
+
+
+/* Crédits */
+
+#credits {
+    text-decoration: none;
+    transition: opacity 1s ease;
+    opacity: 0;
+    color: #002B5E;
+    font-size: 2vw;
+    bottom: 5vh;
+    left: 48vw;
+    font-weight: bolder;
+    line-height: initial;
+}
+
+#credits:hover {
+    color: #DD4C73;
+}
