@@ -104,14 +104,22 @@
     margin-top: 17%;
 }
 
+#cc{
+    color: #9AC6D4;
+    position: absolute;
+    left: 73%;
+    top: 89%;
+    font-family: Vibur;
+}
+
 
 @media screen and (max-aspect-ratio: 16/9){
-    #etudiants_audencia p, #etudiants_polytech p,#etudiants_agr p{
+    #etudiants_audencia p, #etudiants_polytech p,#etudiants_agr p,#cc{
         font-size: 2vw;
     }
 }
 @media screen and (min-aspect-ratio: 16/9){
-    #etudiants_audencia p, #etudiants_polytech p,#etudiants_agr p{
+    #etudiants_audencia p, #etudiants_polytech p,#etudiants_agr p,#cc{
         font-size: 3.4vh;
     }
 }
