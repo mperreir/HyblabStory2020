@@ -78,3 +78,39 @@
 	background-color: #1E1E1E;
   color: #1E1E1E;
 }
+
+#logo-white {
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+
+	width: 750px;
+	height: 350px;
+	/* margin: auto; */
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+#logo-white.logo-white-show {
+	opacity: 1;
+}
+
+#logo-gif {
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+
+	width: 750px;
+	height: 350px;
+
+	/* display: block; */
+	opacity: 1;
+	transition: opacity 1s;
+	/* margin: auto; */
+}
+
+#logo-gif.logo-gif-hide {
+	opacity: 0;
+}

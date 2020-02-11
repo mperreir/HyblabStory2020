@@ -71,5 +71,8 @@ bodyScrollLock.disableBodyScroll(container);
 
 /* EXPERIENCE LOGO ANIMATION */
 $(document).ready(function() {
-    $('#logo-experience').addClass("logo-experience-show");
+    setTimeout(function() {
+        $('#logo-white').addClass("logo-white-show");
+        $('#logo-gif').addClass("logo-gif-hide");
+    }, 3750);
 });
