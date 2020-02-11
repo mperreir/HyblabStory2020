@@ -17,6 +17,13 @@ class Comparatif extends View {
         this.dot2 = document.getElementById('comparatif-green-ring');
         this.dot3 = document.getElementById('comparatif-white-ring');
         this.dot4 = document.getElementById('comparatif-green-tiny-dot');
+
+        this.overlaySubscribeButton = document.querySelector('#app-overlay header li');
+        this.overlaySubscribeButton.style.transition = 'opacity 0.2s';
+        this.overlaySubscribeButton.style.opacity = '0';
+        setTimeout(() => {
+            this.overlaySubscribeButton.style.display = 'none';
+        });
         
         // Parallax for background elements
         document.addEventListener('mousemove', (e) => {
@@ -71,6 +78,8 @@ class Comparatif extends View {
 
     deactivate() {
         this.buttonContainer.remove();
+        this.overlaySubscribeButton.style.display = 'initial';
+        this.overlaySubscribeButton.style.opacity = '1';
     }
 
     async switchNextView(){

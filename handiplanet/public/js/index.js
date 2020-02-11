@@ -8,6 +8,22 @@ window.colorPersoManager = new ColorPersoManager();
 
 window.scrollBarController = new ScrollBarController();
 view = new View1(document.getElementById('view-container'));
+window.scrollTo(0, 0);
+disableScroll();
+function disableScroll() {
+    if (window.addEventListener) {
+        window.addEventListener('DOMMouseScroll', (e) => {
+            e.preventDefault();
+        }, false);
+    }
+        
+    document.addEventListener('wheel', (e) => {
+        e.preventDefault();
+    }, { passive: false });
+    window.onwheel = (e) => e.preventDefault();
+    window.onmousewheel = document.onmousewheel = (e) => e.preventDefault();
+    window.ontouchmove = (e) => e.preventDefault();
+}
 view.load();
 window.currentController = view;
 const paths = [

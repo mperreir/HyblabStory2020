@@ -17,6 +17,8 @@ class View10 extends View {
   linkElements() {
     hideSplash();
     const nextButton = setOverlayButton('Retrouver Wendy', false, 'sound/hover/go_to_wendy.mp3');
+    const borderBottom = document.getElementById('overlay-footer');
+    borderBottom.className = 'hide-after';
     nextButton.addEventListener('click', () => {
       this.switchToContext();
     });
@@ -24,6 +26,11 @@ class View10 extends View {
 
   async switchToContext() {
     showContextView(this.view);
+  }
+
+  deactivate() {
+    const borderBottom = document.getElementById('overlay-footer');
+    borderBottom.className = '';
   }
 
   play() {

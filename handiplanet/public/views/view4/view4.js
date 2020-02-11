@@ -13,9 +13,16 @@ class View4 extends View {
         hideSplash();
         // Button to next view
         this.btNext = setOverlayButton('Retrouver Wendy', false, 'sound/hover/go_to_wendy.mp3');
+        const borderBottom = document.getElementById('overlay-footer');
+        borderBottom.className = 'hide-after';
         this.btNext.addEventListener('click', ()=>{
             this.switchToNextView();
         });
+    }
+
+    deactivate() {
+        const borderBottom = document.getElementById('overlay-footer');
+        borderBottom.className = '';
     }
 
     play() {
