@@ -87,7 +87,7 @@ let Personnage = {
     "dialogues": {
       "0": [
         {
-          "texte": ["Bonjour,^150 moi c’est Pablo,^150 Je suis à la recherche d’une école pour l’année prochaine,^300", "et je voulais avoir quelques renseignements au sujet de celle-ci.^500"],
+          "texte": ["Bonjour,^150 moi c’est Pablo,^150 je suis à la recherche d’une école pour l’année prochaine,^300", "et je voulais avoir quelques renseignements au sujet de celle-ci.^500"],
           "suivant": {"personnage": "Emma", "slide": "0", "paragraphe": "1"}
         }
       ],
