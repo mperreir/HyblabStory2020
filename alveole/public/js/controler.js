@@ -303,9 +303,10 @@ class UpdateFooter extends Observer {
 
   update(observable, object) {
     let val = observable.getValue();
+    console.log(val);
     if (val == observable.obj.length - 1) {
       this.composant.div.style.visibility = 'hidden';
-    } else if (val >= 0 || val < observable.obj.length - 1) {
+    } else if (val > 0 && val < observable.obj.length - 1) {
       this.composant.div.style.visibility = 'visible';
       this.composant.text.innerHTML = observable.getFooterText()["down"];
     } else {
@@ -638,10 +639,6 @@ class UpdateSlide4 extends Observer {
         let etape = document.createElement('div');
         etape.setAttribute('id', 'etape'+i);
         etape.setAttribute('class', 'slide4Animations');
-
-        let div_checkbox = document.createElement('div');
-        div_checkbox.setAttribute('class','slide4_checkbox');
-        etape.appendChild(div_checkbox);
 
         let text = document.createElement('div');
         text.setAttribute('class', 'slide4Label unselectable');
