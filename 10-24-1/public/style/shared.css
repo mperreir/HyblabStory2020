@@ -1,5 +1,19 @@
 /* Omnes Semibold font */
-@import url(https://db.onlinewebfonts.com/c/827efd408950e4d94af5e60b9a37c5b8?family=Omnes+Semibold);
+@font-face {
+  font-family: "Omnes Semibold";
+  src: url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.eot");
+  src: url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.svg#Omnes Semibold")
+      format("svg");
+}
+
 html * {
   font-size: 17px;
   font-family: "Omnes Semibold";
