@@ -22,26 +22,26 @@
     <PlusButton v-model="closePopover1" class="plus1" :width="20" @open="closePopover(1)">
       <p class="text">
         La
-        <span class="red">biomasse</span> utilise le méthane produit par la décomposition de déchets ménagers pour chauffer les bâtiments.
+        <span class="orange">biomasse</span> utilise le méthane produit par la décomposition de déchets ménagers pour chauffer les bâtiments.
       </p>
     </PlusButton>
     <PlusButton v-model="closePopover2" class="plus2" :width="20" @open="closePopover(2)">
       <p class="text">
         Avec la biomasse, une entreprise peut produire
-        <span class="red">113 000 MWh.</span>
+        <span class="orange">113 000 MWh.</span>
       </p>
     </PlusButton>
     <PlusButton v-model="closePopover3" class="plus3" :width="20" @open="closePopover(3)">
       <p class="text">
-        <span class="red">2 000 m³</span> de biogaz équivalent à
-        <span class="red">1 tonne de pétrole.</span>
+        <span class="orange">2 000 m³</span> de biogaz équivalent à
+        <span class="orange">1 tonne de pétrole.</span>
       </p>
     </PlusButton>
     <PlusButton v-model="closePopover4" class="plus4" :width="20" @open="closePopover(4)">
       <p class="text">
         En Pays de la Loire, la biomasse produit
-        <span class="red">651 GWh.</span> Cela équivaut à
-        <span class="red">56 000 tonnes de pétrole.</span>
+        <span class="orange">651 GWh.</span> Cela équivaut à
+        <span class="orange">56 000 tonnes de pétrole.</span>
       </p>
     </PlusButton>
     <SimpleButton text="Continuer l'histoire" :width="23" :x="75" :y="90" @click.native="onNext" />

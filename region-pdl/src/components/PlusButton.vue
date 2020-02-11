@@ -4,7 +4,7 @@
       <Plus class="plus" :class="{ spinnin: popover, pulse: pulse }" @click="plusOnClick" />
       <span
         v-if="popover"
-        class="text"
+        class="text darkblue"
         :class="{ popover: popover }"
         :style="{ width: width + 'vh'}"
       >
@@ -66,6 +66,11 @@ export default {
 </script>
 
 <style scoped>
+
+.plus-text {
+  color: blue;
+}
+
 .plus-button {
   position: absolute;
 }

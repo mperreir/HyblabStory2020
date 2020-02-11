@@ -18,7 +18,7 @@
     <PlusButton class="plus-button" :width="23">
       <p class="text">
         En moyenne, on peut trouver une borne tous les
-        <span class="red">13 km</span> dans toute la région.
+        <span class="orange">13 km</span> dans toute la région.
       </p>
     </PlusButton>
 

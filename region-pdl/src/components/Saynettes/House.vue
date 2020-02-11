@@ -4,7 +4,7 @@
     <SimpleText :y="15" :x="15" :width="70" :style="{textAlign: 'center'}">
       <span v-if="getCharacterGender === 'mme'">
         Il y a peu, Mme Dubois a fait appel à la Région afin
-        <b>d’obtenir des aides pour améliorer l’isolation</b> de sa maison.
+        <b>d’obtenir des aides pour améliorer l’isolation</b><br> de sa maison.
         Cette rénovation, rendue possible
         <b>grâce aux aides de la Région</b>, a permis à Mme Dubois
         <br />de faire des
@@ -43,19 +43,19 @@
     <PlusButton v-model="closePopover1" class="plus1" :width="30" @open="closePopover(1)">
       <p class="text">
         En 2018,
-        <span class="red">1077 maisons</span> ont bénéficié de cette aide à l’isolation.
+        <span class="orange">1077 maisons</span> ont bénéficié de cette aide à l’isolation.
       </p>
     </PlusButton>
     <PlusButton v-model="closePopover2" class="plus2" :width="35" @open="closePopover(2)">
       <p v-if="getCharacterGender === 'm'">
         La maison de M. Moreau fait
-        <span class="red">50 m².</span> Il a eu le droit à
-        <span class="red">4000 euros</span> d’aides.
+        <span class="orange">50 m².</span> Il a eu le droit à
+        <span class="orange">4000 euros</span> d’aides.
       </p>
       <p v-if="getCharacterGender === 'mme'">
         La maison de Mme Dubois fait
-        <span class="red">150 m².</span> Elle a eu le droit à
-        <span class="red">4000 euros</span> d’aides.
+        <span class="orange">150 m².</span> Elle a eu le droit à
+        <span class="orange">4000 euros</span> d’aides.
       </p>
     </PlusButton>
     <PlusButton
@@ -67,9 +67,9 @@
     >
       <p>
         Pour une maison de
-        <span class="red">50 m².</span>
+        <span class="orange">50 m².</span>
         Le gain moyen sur la consommation est de
-        <span class="red">58 %</span> après les travaux.
+        <span class="orange">58 %</span> après les travaux.
       </p>
     </PlusButton>
     <PlusButton
@@ -81,9 +81,9 @@
     >
       <p>
         Pour une maison de
-        <span class="red">100 m².</span>
+        <span class="orange">100 m².</span>
         Le gain moyen sur la consommation est de
-        <span class="red">51 %</span> après les travaux.
+        <span class="orange">51 %</span> après les travaux.
       </p>
     </PlusButton>
     <PlusButton
@@ -95,9 +95,9 @@
     >
       <p>
         Pour une maison de
-        <span class="red">150 m².</span>
+        <span class="orange">150 m².</span>
         Le gain moyen sur la consommation est de
-        <span class="red">53 %</span> après les travaux.
+        <span class="orange">53 %</span> après les travaux.
       </p>
     </PlusButton>
     <SimpleButton
