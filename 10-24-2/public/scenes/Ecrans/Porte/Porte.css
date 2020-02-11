@@ -1,0 +1,15 @@
+/* Texte de la porte */
+#texte-porte > p {
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 23px;
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom : 65%;
+  right: 43%;
+}

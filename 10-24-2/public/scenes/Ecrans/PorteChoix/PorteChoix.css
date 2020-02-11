@@ -1,0 +1,56 @@
+/* Buttons scénarios */
+
+#partir {
+  height: 55px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom: 24%;
+  right: 24%;
+  font-size: 14px;
+  line-height:14px;
+}
+
+#toquer {
+  height: 55px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom: 24%;
+  right: 53%;
+  font-size: 14px;
+  line-height:28px;
+}
+
+#toquer:hover {
+  border-color: white;
+}
+
+#partir:hover {
+  border-color: white;
+}
+
+.scenario-buttons > button {
+  width: 100%;
+  border-radius: 151px;
+}
+
+/* Texte de la porte */
+#texte-porte > p {
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 23px;
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom : 65%;
+  right: 43%;
+}
