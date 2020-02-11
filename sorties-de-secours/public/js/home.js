@@ -64,7 +64,8 @@ $(document).ready(function() {
   });
 
   $(".link-credits").click(function(e) {
-    document.getElementById("hamburger-checkbox").checked = false;
+      $(".hamburger-checkbox").prop('checked', false);
+
     bodyScrollLock.enableBodyScroll(container);
     goToByScroll("credits-section", 0);
 
