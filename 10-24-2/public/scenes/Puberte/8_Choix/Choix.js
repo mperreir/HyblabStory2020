@@ -29,6 +29,7 @@ export default class Choix extends Component {
   }
 
   componentDidMount() {
+    document.getElementById("choix-portes").style.display = "block";
     const { x, y } = document.getElementById("panier").getBoundingClientRect();
 
     document.querySelector("body").addEventListener("click", () => {
