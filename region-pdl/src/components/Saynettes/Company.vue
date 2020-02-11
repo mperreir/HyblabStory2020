@@ -28,7 +28,7 @@
     <PlusButton v-model="closePopover2" class="plus2" :width="20" @open="closePopover(2)">
       <p class="text">
         Avec la biomasse, une entreprise peut produire
-        <span class="orange">113 000 MWh.</span>
+        <span class="orange"> <br> 113 000 MWh.</span>
       </p>
     </PlusButton>
     <PlusButton v-model="closePopover3" class="plus3" :width="20" @open="closePopover(3)">
