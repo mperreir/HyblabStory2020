@@ -168,6 +168,7 @@ class SuperControler {
         },
         ],
         continue_next:false,
+        volume:10,
     });
     Amplitude.setRepeat(true);
   }
