@@ -486,17 +486,10 @@ class UpdateSlide2 extends Observer {
 
         let handles = document.querySelectorAll(".handle"+i);
 
-        var w = $("#slide2_micros").width();
-        var h = $("#slide2_micros").height();
-        console.log(w)
-        function percent(x,y){
-          var xp = Math.round(w/x*100);
-          var yp = Math.round(h/y*100);
-          return [xp,yp];
-        }
+
         if (i == 0){
-          let node1 = percent(45, 395);
-          let node2 = percent(100, 450);
+          let node1 = [45, 395];
+          let node2 = [100, 450];
           observable.loadWire(handles, path, plug, [node1, node2]);
         }
         else if (i == 1){
