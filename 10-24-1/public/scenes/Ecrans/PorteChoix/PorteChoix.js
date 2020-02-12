@@ -15,7 +15,7 @@ export default class PorteChoix extends Component {
   }
 
   componentDidMount() {
-    console.log("PorteChoix mount");
+    // console.log("PorteChoix mount");
     document
       .getElementById("e_toquer")
       .addEventListener("click", e => this.onGoToRentrer(e));

@@ -1,0 +1,29 @@
+/* Texte de la plage horaire */
+#e_texte-plage-horaire > p {
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 23px;
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom : 18%;
+  right: 28%;
+}
+
+/* Button next scene */
+
+#e_next {
+  height: 40px;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom: 18%;
+  right: 22%;
+  line-height:15px;
+}

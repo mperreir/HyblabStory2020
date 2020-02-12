@@ -1,22 +1,22 @@
 import Component from "../../../js/Component.js";
 
-export default class Visage extends Component {
-  constructor({ goToPlageHoraire }) {
+export default class PlageHoraire3 extends Component {
+  constructor({ goToPageFin }) {
     super();
     this.html = "";
-    this.goToPlageHoraire = goToPlageHoraire;
+    this.goToPageFin = goToPageFin;
   }
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Ecrans/Visage/Visage.html"
+      "/10-24-1/scenes/Ecrans/PlageHoraire3/PlageHoraire3.html"
     );
   }
 
   componentDidMount() {
     document
       .getElementById("e_next")
-      .addEventListener("click", e => this.goToPlageHoraire(e));
+      .addEventListener("click", e => this.goToPageFin(e));
   }
 
   render(target) {
