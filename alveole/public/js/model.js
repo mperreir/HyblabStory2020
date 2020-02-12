@@ -397,11 +397,11 @@ class ModelSlide2 extends Observable {
         onDrag: updatePath,
         liveSnap: {
           points: [point],
-          radius: 10
+          radius: 20
         },
         snap: {
           points: [point],
-          radius: 10
+          radius: 20
         },
         onDragEnd: updateChoice
       });
