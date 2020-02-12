@@ -675,11 +675,13 @@ class ModelSlide6 extends Observable {
   bool;
   instanciated;
   text;
+  choice;
 
   constructor() {
     super();
     this.bool = false;
     this.instanciated = false;
+    this.choice = 0;
   }
 
   getValue() {
@@ -691,6 +693,17 @@ class ModelSlide6 extends Observable {
       this.bool = val;
       this.setChanged();
       this.notifyObservers();
+    }
+  }
+
+  setChoice(c) {
+      this.choice = c;
+      this.setValue(true);
+  }
+
+  getChoice(){
+    if (this.choice != 0){
+      return 1;
     }
   }
 
@@ -708,6 +721,13 @@ class ModelSlide6 extends Observable {
 
   getDraggPath() {
 
+  }
+
+  loadValide(div_valide) {
+    Snap.load('data/tournage_valide.svg', function(data) {
+      let snap = Snap(div_valide);
+      snap.append(data);
+    });
   }
 
   setDestroyed() {
