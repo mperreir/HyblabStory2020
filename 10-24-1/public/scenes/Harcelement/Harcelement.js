@@ -39,7 +39,7 @@ export default class Harcelement extends Component {
     });
 
     this.fewHoursBefore = new FewHoursBefore({
-      goToFlashBack: () => this.flashBack.render(this.section)
+      goToFlashBack: () => this.f.render(this.section)
     });
 
     this.flashBack = new FlashBack({
@@ -69,6 +69,28 @@ export default class Harcelement extends Component {
 
   goToClaquePorte(){
     this.porteClaque.render(this.section);
+  }
+
+
+  
+  
+
+  goToDernièreTentative(){
+    this.derniereTentative.render(this.section);
+  }
+
+  goToFewHoursBefore(){
+    this.fewHoursBefore.render(this.section)
+  }
+
+  
+  goToFlashBack(){ 
+    this.flashBack.render(this.section)
+  }
+
+
+  goToLendemain() {
+    this.lendemain.render(this.section)
   }
 
   async load() {

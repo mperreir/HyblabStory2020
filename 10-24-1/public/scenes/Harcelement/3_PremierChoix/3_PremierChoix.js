@@ -17,7 +17,7 @@ export default class PremierChoix extends Component {
   componentDidMount() {
     document
       .getElementById("aller-le-voir")
-      .addEventListener("click", e => this.onGoToDerniereTentative(e));
+      .addEventListener("click", () => this.onGoToDerniereTentative());
     document
       .getElementById("le-laisser")
       .addEventListener("click", e => this.onGoToLendemain(e));
