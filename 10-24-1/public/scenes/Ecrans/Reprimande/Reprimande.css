@@ -1,8 +1,5 @@
 /* Texte de reprimande */
-#texte-reprimande > p {
-  /* border: 3px black solid;
-  border-radius: 10px;
-  padding: 5px; */
+#e_texte-reprimande > p {
   text-align: center;
   font-style: normal;
   font-weight: 600;
@@ -20,7 +17,7 @@
 
 /* Button next scene */
 
-#next {
+#e_next {
   height: 40px;
   width: 150px;
   display: flex;

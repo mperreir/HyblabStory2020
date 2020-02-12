@@ -15,7 +15,7 @@ export default class Chambre extends Component {
 
   componentDidMount() {
     document
-      .getElementById("next")
+      .getElementById("e_next")
       .addEventListener("click", e => this.goToReprimande(e));
   }
 

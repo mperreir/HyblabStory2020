@@ -1,6 +1,6 @@
 /* Buttons scénarios */
 
-#partir {
+#e_partir {
   height: 55px;
   width: 300px;
   display: flex;
@@ -13,7 +13,7 @@
   line-height:14px;
 }
 
-#toquer {
+#e_toquer {
   height: 55px;
   width: 300px;
   display: flex;
@@ -26,31 +26,15 @@
   line-height:28px;
 }
 
-#toquer:hover {
+#e_toquer:hover {
   border-color: white;
 }
 
-#partir:hover {
+#e_partir:hover {
   border-color: white;
 }
 
-.scenario-buttons > button {
+/* .scenario-buttons > button {
   width: 100%;
   border-radius: 151px;
-}
-
-/* Texte de la porte */
-p {
-  text-align: center;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 23px;
-  margin: 40px 0;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  position: absolute;
-  bottom : 65%;
-  right: 43%;
-}
+} */

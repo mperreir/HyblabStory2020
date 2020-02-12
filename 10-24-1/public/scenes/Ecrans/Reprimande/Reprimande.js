@@ -15,7 +15,7 @@ export default class Reprimande extends Component {
 
   componentDidMount() {
     document
-      .getElementById("next")
+      .getElementById("e_next")
       .addEventListener("click", e => this.goToVisage(e));
   }
 

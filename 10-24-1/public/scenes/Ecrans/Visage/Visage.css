@@ -1,6 +1,6 @@
 /* Button next scene */
 
-#next {
+#e_next {
   height: 40px;
   width: 150px;
   display: flex;
@@ -12,6 +12,6 @@
   line-height:15px;
 }
 
-#next:hover {
+#e_next:hover {
   border-color: white;
 }

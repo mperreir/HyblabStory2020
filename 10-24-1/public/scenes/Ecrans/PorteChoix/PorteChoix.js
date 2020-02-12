@@ -17,10 +17,10 @@ export default class PorteChoix extends Component {
   componentDidMount() {
     console.log("PorteChoix mount");
     document
-      .getElementById("toquer")
+      .getElementById("e_toquer")
       .addEventListener("click", e => this.onGoToRentrer(e));
     document
-      .getElementById("partir")
+      .getElementById("e_partir")
       .addEventListener("click", e => this.onGoToPorte(e));
   }
 
