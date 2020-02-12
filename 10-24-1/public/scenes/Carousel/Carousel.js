@@ -1,13 +1,13 @@
 import Component from "../../js/Component.js";
 import Puberte from "../Puberte/Puberte.js";
-// import Ecrans from "../Ecrans/Ecrans.js";
+import Ecrans from "../Ecrans/Ecrans.js";
 import Harcelement from "../Harcelement/Harcelement.js";
 import Flemme from "../Flemme/Flemme.js";
 
 // demo stereolux
 // import Flemme from "../Flemme/1_Porte_stereolux/Porte.js";
 //import Harcelement from "../Harcelement/1_Porte_stereolux/Porte.js";
-import Ecrans from "../Ecrans/1_Porte_stereolux/Porte.js";
+// import Ecrans from "../Ecrans/1_Porte_stereolux/Porte.js";
 
 export default class Carousel extends Component {
   constructor() {

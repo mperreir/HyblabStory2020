@@ -5,6 +5,9 @@ import Rentrer from "./Rentrer/Rentrer.js";
 import Chambre from "./Chambre/Chambre.js";
 import Reprimande from "./Reprimande/Reprimande.js";
 import Visage from "./Visage/Visage.js";
+import PlageHoraire from "./PlageHoraire/PlageHoraire.js";
+import PlageHoraire2 from "./PlageHoraire2/PlageHoraire2.js";
+import PlageHoraire3 from "./PlageHoraire3/PlageHoraire3.js";
 import PageFin from "./PageFin/PageFin.js";
 
 export default class Ecrans extends Component {
@@ -34,7 +37,10 @@ export default class Ecrans extends Component {
       goToVisage: () => this.Visage.render(this.section)
     });
     this.Visage = new Visage({
-      goToPageFin: () => this.PageFin.render(this.section) //en attendant de resoudre PlageHoraire
+      goToPlageHoraire: () => this.PlageHoraire.render(this.section)
+    });
+    this.PlageHoraire = new PlageHoraire({
+      goToPageFin: () => this.PageFin.render(this.section)
     });
     this.PageFin = new PageFin();
   }
@@ -63,29 +69,6 @@ export default class Ecrans extends Component {
     // e.preventDefault();
   }
 
-  // goToChambre(e) {
-  //   this.Rentrer.componentWillUnmount();
-  //   this.Chambre.render(this.section);
-  //   e.preventDefault();
-  // }
-
-  // goToReprimande(e) {
-  //   this.Chambre.componentWillUnmount();
-  //   this.Reprimande.render(this.section);
-  //   e.preventDefault();
-  // }
-
-  // goToVisage(e) {
-  //   this.Reprimande.componentWillUnmount();
-  //   this.Visage.render(this.section);
-  //   e.preventDefault();
-  // }
-
-  // goToPageFin(e) {
-  //   this.Visage.componentWillUnmount();
-  //   this.PageFin.render(this.section);
-  // }
-
   async load() {
     await Promise.all([
       this.Porte.load(),
@@ -94,6 +77,7 @@ export default class Ecrans extends Component {
       this.Chambre.load(),
       this.Reprimande.load(),
       this.Visage.load(),
+      this.PlageHoraire.load(),
       this.PageFin.load()
     ]);
   }
