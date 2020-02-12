@@ -22,24 +22,24 @@
   position: absolute;
   width: 269px;
   height: 71px;
-  left: 417px;
-  top: 354px;
+  left: 23%;
+  top: 32%;
 }
 
 #logo-big-polytech {
   position: absolute;
   width: 195px;
   height: 124px;
-  left: 1234px;
-  top: 318px;
+  left: 70%;
+  top: 27%;
 }
 
 #logo-big-agr {
   position: absolute;
   width: 146px;
   height: 216px;
-  left: 887px;
-  top: 282px;
+  left: 48%;
+  top: 25%;
 }
 
 #logos-ecoles>td {
@@ -57,17 +57,17 @@
 }
 #intro-1{
   position: absolute;
-  width: 171px;
+  width: 10%;
   height: 50px;
-  left: 875px;
-  top: 81px;
+  left: 48%;
+  top: 6%;
 }
 #intro-2{
   position: absolute;
-  width: 202px;
+  width: 12%;
   height: 50px;
-  left: 859px;
-  top: 121px;
+  left: 47%;
+  top: 10%;
 }
 #noms {
     position: absolute;
@@ -85,26 +85,26 @@
 }
 #nom-audencia {
   position: absolute;
-  width: 189px;
+  width: 200px;
   height: 78px;
-  left: 458px;
-  top: 525px;
+  left: 45vh;
+  top: 47vh;
 }
 
 #nom-agr {
   position: absolute;
-  width: 218px;
-  height: 78px;
-  left: 850px;
-  top: 525px;
+  width: 250px;
+  height: 80px;
+  left: 83vh;
+  top: 47vh;
 }
 
 #nom-polytech {
   position: absolute;
   width: 257px;
   height: 195px;
-  left: 1204px;
-  top: 513px;
+  left: 122vh;
+  top: 47vh;
 }
 
 #noms > a {
@@ -122,14 +122,6 @@
     color: #1E1E1E;
 }
 
-
-#nom-polytech {
-  position: absolute;
-  width: 400px;
-  height: 195px;
-  left: 1204px;
-  top: 513px;
-}
 
 #noms p a {
     position: absolute;
@@ -157,8 +149,8 @@
   position: absolute;
   width: 397px;
   height: 0px;
-  left: 565px;
-  top: 500px;
+  left: 32%;
+  top: 50%;
   border: 1px solid #969696;
   transform: rotate(90deg);
 }
@@ -167,8 +159,8 @@
   position: absolute;
     width: 397px;
     height: 0px;
-    left: 930px;
-    top: 500px;
+    left: 54%;
+    top: 50%;
     border: 1px solid #969696;
     transform: rotate(90deg);
 }
