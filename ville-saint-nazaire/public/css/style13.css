@@ -49,6 +49,7 @@
 #videofin{
     position: absolute;
     width : 51%;
+    height:50%;
     left:23%;
     top:12%;
     z-index:10;
