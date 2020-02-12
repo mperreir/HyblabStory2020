@@ -83,7 +83,7 @@ var deltaa;
 			
 
 				$(document).bind('wheel DOMMouseScroll MozMousePixelScroll', function(event) {
-					that.gotoTarget(6);
+					
 					var ed = arguments[0].originalEvent;
 					deltaa = ed.deltaY;
 
