@@ -1,7 +1,6 @@
 let initSlide13 = function(){
 
   d3.select('#next14-img').on('click', function(){
-    vid.pause();
     moveRight();
     initSlide14();
   });
