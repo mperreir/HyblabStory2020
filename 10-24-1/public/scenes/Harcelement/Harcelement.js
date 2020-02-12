@@ -30,14 +30,17 @@ export default class Harcelement extends Component {
       goToPremierChoix: () => this.premierChoix.render(this.section)
     });
     this.premierChoix = new PremierChoix({
-      onGoToDerniereTentative: () => {
+      goToDerniereTentative: () => {
         this.premierChoix.componentWillUnmount();
-        this.derniereTentative.render(this);
+        this.derniereTentative.render(this.section);
       },
       onGoToLendemain : this.goToLendemain.bind(this)
     });
     this.derniereTentative = new DerniereTentative({
-      onGoToFewHoursBefore: this.goToFewHoursBefore.bind(this),
+      onGoToFewHoursBefore: () => {
+        this.derniereTentative.componentWillUnmount
+        this.fewHoursBefore.render(this.section)
+      },
       onGoToLendemain : this.goToLendemain.bind(this)
     });
 
@@ -54,7 +57,7 @@ export default class Harcelement extends Component {
     });
 
     this.lendemain = new Lendemain({
-      goToArriveeEnfant: () => this.arrivee.render(this.section)
+      goToArriveeEnfant: () => this.porte.render(this.section)
     });
     this.credits = new Credits();
   }
@@ -62,12 +65,11 @@ export default class Harcelement extends Component {
 
   goToArriveeEnfant(e){
     this.onStart(this); 
-    //erreur ici je sais pas pourquoi mais ça empeche le lancement du scenario
-    //il me dit que onStart n'est pas une fonction du coup je sais pas pourquoi ca marche chez Yoann
     this.porte.componentWillUnmount();
     this.arrivee.render(this.section);
     e.preventDefault();
     setTimeout(() => {
+      this.arrivee.componentWillUnmount();
       this.goToClaquePorte();
     }, 500);
   }
@@ -76,8 +78,9 @@ export default class Harcelement extends Component {
     this.porteClaque.render(this.section);
   }
 
-  goToDernièreTentative(){
+  goToDernièreTentative(e){
     this.derniereTentative.render(this.section);
+    e.preventDefault();
   }
 
   goToFewHoursBefore(){

@@ -1,10 +1,10 @@
 import Component from "../../../js/Component.js";
 
 export default class PremierChoix extends Component {
-  constructor({ onGoToLendemain, onGoToDerniereTentative }) {
+  constructor({ goToDerniereTentative, onGoToLendemain }) {
     super();
     this.html = "";
-    this.onGoToDerniereTentative = onGoToDerniereTentative;    
+    this.goToDerniereTentative = goToDerniereTentative;    
     this.onGoToLendemain = onGoToLendemain;
   }
 
@@ -17,11 +17,10 @@ export default class PremierChoix extends Component {
   componentDidMount() {
     document
       .getElementById("aller-le-voir")
-      .addEventListener("click", e => this.onGoToDerniereTentative(e));
+      .addEventListener("click", e => this.goToDerniereTentative(e));
     document
       .getElementById("le-laisser-3")
       .addEventListener("click", e => this.onGoToLendemain(e));
-      ;
   }
 
   render(target) {
