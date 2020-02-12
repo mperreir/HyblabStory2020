@@ -1,6 +1,6 @@
 import Component from "../../../js/Component.js";
 
-export default class ATable extends Component {
+export default class Arrivee extends Component {
   constructor() {
     super();
     this.html = "";

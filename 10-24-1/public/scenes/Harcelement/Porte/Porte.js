@@ -1,6 +1,6 @@
 import Component from "../../../js/Component.js";
 
-export default class ViewPorte extends Component {
+export default class Porte extends Component {
   constructor({ onGoToArriveeEnfant }) {
     super();
     this.html = "";

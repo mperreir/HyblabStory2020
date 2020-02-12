@@ -1,9 +1,10 @@
 import Component from "../../../js/Component.js";
 
 export default class PorteClaque extends Component {
-  constructor() {
+  constructor({ goToPremierChoix}) {
     super();
     this.html = "";
+    this.goToPremierChoix = goToPremierChoix;
   }
 
   async load() {
@@ -14,7 +15,7 @@ export default class PorteClaque extends Component {
 
   componentDidMount() {
     document.getElementById("choix-portes").style.display = "none";
-    setTimeout(() => this.goToPremierChoix(), 1500);
+    setTimeout(() => this.goToPremierChoix(), 3000);
   }
 
   render(target) {

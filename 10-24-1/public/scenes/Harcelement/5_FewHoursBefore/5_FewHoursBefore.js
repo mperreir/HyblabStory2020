@@ -1,9 +1,10 @@
 import Component from "../../../js/Component.js";
 
 export default class FewHoursBefore extends Component {
-  constructor() {
+  constructor({ goToFlashBack }) {
     super();
     this.html = "";
+    this.goToFlashBack = goToFlashBack;
   }
 
   async load() {

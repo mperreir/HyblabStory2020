@@ -1,6 +1,6 @@
 import Component from "../../../js/Component.js";
 
-export default class ViewDerniereTentative extends Component {
+export default class DerniereTentative extends Component {
   constructor({ onGoToFewHoursBefore, onGoToLendemain }) {
     super();
     this.html = "";
@@ -17,10 +17,10 @@ export default class ViewDerniereTentative extends Component {
   componentDidMount() {
     document
       .getElementById("insister")
-      .addEventListener("click", this.onGoToFewHoursBefore);
+      .addEventListener("click", e => this.onGoToFewHoursBefore(e));
     document
       .getElementById("le-laisser")
-      .addEventListener("click", this.onGoToLendemain);
+      .addEventListener("click", e => this.onGoToLendemain(e));
   }
 
   render(target) {
