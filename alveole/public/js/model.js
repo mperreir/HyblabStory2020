@@ -435,6 +435,8 @@ class ModelSlide2 extends Observable {
           console.log('choice set at ' + that.choice)
         }
         else {
+          console.log(this.x)
+          console.log(this.y)
           console.log("Wire not plugged");
         }
       }

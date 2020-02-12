@@ -830,7 +830,6 @@ footer {
   backdrop-filter: blur(2px);
   z-index: 1;
 }
-
 /* Modal Content/Box */
 .modal-content {
   position: absolute;
