@@ -137,11 +137,47 @@ class SuperControler {
       modelSlides.nextSlide();
       modelPopup.setValue(false);
     });
-  }
 
+    Amplitude.init({
+        songs:[{
+          "url":"sons/VOIX_AMATEUR.mp3",
+        },
+        {
+          "url":"sons/BASE_LINE/BASELINE_CANON.mp3",
+        },
+        {
+          "url":"sons/BASE_LINE/BASELINE_LAVALLIER.mp3",
+        },
+        {
+          "url":"sons/BASE_LINE/BASELINE_MD21.mp3",
+        },
+        {
+          "url":"sons/BASE_LINE/BASELINE_STEREO.mp3",
+        },
+        {
+          "url":"sons/TEXTE/CANON.mp3",
+        },
+        {
+          "url":"sons/TEXTE/LAVALLIER.mp3",
+        },        
+        {
+          "url":"sons/TEXTE/MD21.mp3",
+        },        
+        {
+          "url":"sons/TEXTE/STEREO.mp3",
+        },
+        ],
+        continue_next:false,
+        volume:10,
+    });
+    Amplitude.setRepeat(true);
+  }
+  
   loadSlideMediator() {
     return this.mediatorSlide.loadText();
   }
+
+
 
 }
 
@@ -376,10 +412,12 @@ class UpdateSlide1 extends Observer {
         hotelDiv.addEventListener('mouseenter', function() {
           hotel.play();
           $(this).toggleClass('animation_checked');
+          Amplitude.playSongAtIndex(0);
         });
         hotelDiv.addEventListener('mouseleave', function() {
           hotel.pause();
           $(this).toggleClass('animation_checked');
+          Amplitude.pause();
         });
         hotelDiv.addEventListener('click', function() {
           observable.setChoice(0);
@@ -390,10 +428,12 @@ class UpdateSlide1 extends Observer {
         studioDiv.addEventListener('mouseenter', function() {
           studio.play();
           $(this).toggleClass('animation_checked');
+          Amplitude.playSongAtIndex(1);
         });
         studioDiv.addEventListener('mouseleave', function() {
           studio.pause();
           $(this).toggleClass('animation_checked');
+          Amplitude.pause();
         });
         studioDiv.addEventListener('click', function() {
           observable.setChoice(1);
