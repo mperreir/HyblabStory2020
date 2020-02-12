@@ -77,7 +77,7 @@
 #slide4-container-dialogueJ {
 	position: absolute;
 	text-align : justify;
-	width: 56%;
+	width: 60%;
 	height: 10%;
 	left: 17%;
 	top: 64.8%;
@@ -111,9 +111,9 @@
 .slide4-container-dialogueA {
 	position: absolute;
 	text-align : right;
-	width: 60%;
+	width: 57%;
 	height: 13%;
-	left: 22%;
+	left: 25%;
 	top: 64.7%;
 	line-height: 35%;
 	visibility: hidden;
