@@ -137,11 +137,15 @@ class SuperControler {
       modelSlides.nextSlide();
       modelPopup.setValue(false);
     });
+
+    Amplitude.init();
   }
 
   loadSlideMediator() {
     return this.mediatorSlide.loadText();
   }
+
+
 
 }
 
