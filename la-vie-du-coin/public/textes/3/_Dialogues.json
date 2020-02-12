@@ -1,0 +1,41 @@
+{
+"dialogues": [ 
+    {
+        "id": "h2_presentation", 
+        "texte":"DÉCOUVREZ LE PROJET D'ALEX"
+    },
+
+    {
+        "id": "p_presentation",
+        "texte": "Ayant un goût très prononcé pour les sorties culturelles, Alex souhaite organiser des visites d’expositions avec les membres de son quartier sensibles à la culture. Grâce à son idée,  les individus du quartier pourraient partager des univers artistiques avec la découverte des ressources du territoire, de participation à la vie locale et culturelle."
+    },
+
+    {
+        "id": "bureau_commu_name1",
+        "texte": "Agenda culturel"
+    },
+    {
+        "id": "bureau_commu_name2",
+        "texte": "Pause cul’t"
+    },
+
+    {
+        "id": "bureau_commu_name3",
+        "texte": " la petite expo près de chez vous"
+    },
+    {
+        "id": "bureau_commu_question1",
+        "texte": "- Accepteriez-vous de partager, le temps d’une après-midi, une visite d’exposition ?"
+    },
+    {
+        "id": "bureau_commu_question2",
+        "texte": "- Quel type d’exposition aimeriez-vous aller voir dans notre ville et ses alentours ?"
+    },
+    {
+        "id" : "p_presentation_end",
+        "texte" : "VOUS AUSSI VOUS ÊTES PLEINS D'IDÉES ? COMME ALEX FAITES BOUGER VOTRE QUARTIER ET DEVENEZ UN VÉRITABLE AMBASSADEUR."
+
+    }
+ ] 
+}
+

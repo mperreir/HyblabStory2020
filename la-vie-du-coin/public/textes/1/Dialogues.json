@@ -1,0 +1,46 @@
+{
+"dialogues": [ 
+    {
+        "id": "h2_presentation", 
+        "texte":"DÉCOUVREZ LE PROJET DE CAMILLE"
+    },
+
+    {
+        "id": "p_presentation",
+        "texte": "Soucieuse de l’environnement, Camille voudrait développer un système de compostage dans son quartier. Son but ultime serait de créer un potager d’élite gratuit, et sans avoir recours à des engrais chimiques. Grâce à son idée, un composteur communautaire pourra être mis en place."
+    },
+
+    {
+        "id": "bureau_commu_name1",
+        "texte": "Potager en ville"
+    },
+    {
+        "id": "bureau_commu_name2",
+        "texte": "La fabrique écologique"
+    },
+
+    {
+        "id": "bureau_commu_name3",
+        "texte": "La main verte"
+    },
+    {
+        "id": "bureau_commu_question1",
+        "texte": "- Main verte ou pas, je suis à la recherche de personnes prêtes à collaborer sur un potager d’élite gratuit. L’aventure vous tente ?"
+    },
+    {
+        "id": "bureau_commu_question2",
+        "texte": "- Seriez-vous intéressés par la fabrication d’un composteur communautaire ?"
+    },
+    {
+        "id" : "p_presentation_end",
+        "texte" : "VOUS AUSSI VOUS ÊTES PLEINS D'IDÉES ? COMME CAMILLE FAITES BOUGER VOTRE QUARTIER ET DEVENEZ UN VÉRITABLE AMBASSADEUR."
+
+    },
+    {
+        "id" : "etape_texte_custom",
+        "texte" : "Pour son projet Camille va avoir besoin de :"
+    }
+    
+ ] 
+}
+

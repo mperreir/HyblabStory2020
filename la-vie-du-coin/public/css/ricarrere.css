@@ -1,0 +1,162 @@
+/*CSS Slide 10 */
+
+#slide_10{
+    background-color: #b18597;
+
+}
+#box-creator{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+#media-creator{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button.button_slide_10{
+    position: absolute;
+    width: 200px;
+    background: #00e17f;
+    bottom: 0;
+}
+
+button.button_slide_10:hover {
+    background-color: darkred;
+}
+
+#bs10_1{
+    left: 35%;
+    transform: translateX(-50%);
+}
+#bs10_2{
+    left: 50%;
+    transform: translateX(-50%);
+}
+#bs10_3{
+    left: 65%;
+    transform: translateX(-50%);
+}
+/* FIN CSS Slide 10 */
+
+/* CSS Croix Noir */
+
+.croix_menu{
+    bottom: 10px;
+    left: 10px;
+    position: fixed;
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.croix_droite{
+    background: black;
+    transform: rotate(-45deg);
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    opacity: 1;
+}
+
+.croix_gauche{
+    background: black;
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    opacity: 1;
+}
+
+/* FIN CSS Croix Noir */
+
+/* CSS Slide 8 */
+
+#box-project{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+#media-project{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* FIN CSS Slide 8 */
+
+/* CSS Slide 9 */
+
+#text_presentation_end{
+   position: absolute;
+   left:24%;
+   transform: translate(-50%);
+   top: 24vh;
+   width: 660px;
+   color: #fff;
+}
+
+#audio_texte_conclusion
+{
+    margin-top: 60px;
+    font-size: 24px;
+    opacity: 0;
+}
+
+#perso_conclu
+{
+    position: absolute;
+    right: 0;
+    height: 85vh;
+    width: auto;
+}
+
+#audio_2
+{
+  width: 350px;
+  opacity: 0;
+  transition: ease 1s;
+}
+
+
+
+#h_presentation_end{
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+#p_presentation_end{
+    font-family: 'Work Sans';
+    font-size: 27px;
+}
+
+#slide_conclusion{
+    background: url("../image/General/background3.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+/* FIN CSS Slide 9 */
+
+
+
+
+
+
+
+.slide{
+    overflow: hidden;
+}
