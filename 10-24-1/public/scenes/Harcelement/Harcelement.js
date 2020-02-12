@@ -8,9 +8,11 @@ import FewHoursBefore from "./5_FewHoursBefore/5_FewHoursBefore.js"
 import FlashBack from "./6_FlashBack/6_FlashBack.js"
 import FinHistoire from "./7_FinHistoire/7_FinHistoire.js"
 import Lendemain from "./Lendemain/Lendemain.js"
+import Credits from "./8_Credits/Credits.js";
+
 
 export default class Harcelement extends Component {
-  constructor(onStart) {
+  constructor({ onStart }) {
     super();
     this.onStart = onStart;
 
@@ -18,9 +20,7 @@ export default class Harcelement extends Component {
     this.section = document.createElement("section");
     this.section.setAttribute("id", "harcelement");
 
-    
-    
-    
+
     this.porte = new Porte({
       onGoToArriveeEnfant: this.goToArriveeEnfant.bind(this),
       onStart
@@ -30,7 +30,10 @@ export default class Harcelement extends Component {
       goToPremierChoix: () => this.premierChoix.render(this.section)
     });
     this.premierChoix = new PremierChoix({
-      onGoToDerniereTentative: this.goToDernièreTentative.bind(this),
+      onGoToDerniereTentative: () => {
+        this.premierChoix.componentWillUnmount();
+        this.derniereTentative.render(this);
+      },
       onGoToLendemain : this.goToLendemain.bind(this)
     });
     this.derniereTentative = new DerniereTentative({
@@ -46,17 +49,19 @@ export default class Harcelement extends Component {
       goToFinHistoire: () => this.finHistoire.render(this.section)
     });
 
-    this.finHistoire = new FinHistoire();
+    this.finHistoire = new FinHistoire({
+      goToCredits: () => this.credits.render(this.section)
+    });
 
     this.lendemain = new Lendemain({
       goToArriveeEnfant: () => this.arrivee.render(this.section)
     });
-    
+    this.credits = new Credits();
   }
 
 
   goToArriveeEnfant(e){
-    //this.onStart(this); 
+    this.onStart(this); 
     //erreur ici je sais pas pourquoi mais ça empeche le lancement du scenario
     //il me dit que onStart n'est pas une fonction du coup je sais pas pourquoi ca marche chez Yoann
     this.porte.componentWillUnmount();

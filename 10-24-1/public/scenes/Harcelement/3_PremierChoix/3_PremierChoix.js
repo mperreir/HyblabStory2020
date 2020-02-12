@@ -4,8 +4,8 @@ export default class PremierChoix extends Component {
   constructor({ onGoToLendemain, onGoToDerniereTentative }) {
     super();
     this.html = "";
+    this.onGoToDerniereTentative = onGoToDerniereTentative;    
     this.onGoToLendemain = onGoToLendemain;
-    this.onGoToDerniereTentative = onGoToDerniereTentative;
   }
 
   async load() {
@@ -15,7 +15,6 @@ export default class PremierChoix extends Component {
   }
 
   componentDidMount() {
-    console.log("je suis une victime")
     document
       .getElementById("aller-le-voir")
       .addEventListener("click", e => this.onGoToDerniereTentative(e));

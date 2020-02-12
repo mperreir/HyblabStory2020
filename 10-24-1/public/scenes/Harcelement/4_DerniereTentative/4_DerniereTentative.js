@@ -17,7 +17,7 @@ export default class DerniereTentative extends Component {
   componentDidMount() {
     document
       .getElementById("insister")
-      .addEventListener("click", e => this.onGoToFewHoursBefore(e));
+      .addEventListener("click", () => this.onGoToFewHoursBefore());
     document
       .getElementById("le-laisser-4")
       .addEventListener("click", e => this.onGoToLendemain(e));
