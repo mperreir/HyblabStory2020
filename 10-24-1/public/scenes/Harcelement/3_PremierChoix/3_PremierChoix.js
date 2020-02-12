@@ -15,12 +15,14 @@ export default class PremierChoix extends Component {
   }
 
   componentDidMount() {
+    console.log("je suis une victime")
     document
       .getElementById("aller-le-voir")
-      .addEventListener("click", () => this.onGoToDerniereTentative());
+      .addEventListener("click", e => this.onGoToDerniereTentative(e));
     document
-      .getElementById("le-laisser")
+      .getElementById("le-laisser-3")
       .addEventListener("click", e => this.onGoToLendemain(e));
+      ;
   }
 
   render(target) {

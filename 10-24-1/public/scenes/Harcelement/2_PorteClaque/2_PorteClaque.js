@@ -15,7 +15,7 @@ export default class PorteClaque extends Component {
 
   componentDidMount() {
     document.getElementById("choix-portes").style.display = "none";
-    setTimeout(() => this.goToPremierChoix(), 3000);
+    setTimeout(() => this.goToPremierChoix(), 500);
   }
 
   render(target) {

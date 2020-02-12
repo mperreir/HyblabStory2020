@@ -19,7 +19,7 @@ export default class DerniereTentative extends Component {
       .getElementById("insister")
       .addEventListener("click", e => this.onGoToFewHoursBefore(e));
     document
-      .getElementById("le-laisser")
+      .getElementById("le-laisser-4")
       .addEventListener("click", e => this.onGoToLendemain(e));
   }
 

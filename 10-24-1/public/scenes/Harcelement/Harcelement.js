@@ -64,16 +64,12 @@ export default class Harcelement extends Component {
     e.preventDefault();
     setTimeout(() => {
       this.goToClaquePorte();
-    }, 3000);
+    }, 500);
   }
 
   goToClaquePorte(){
     this.porteClaque.render(this.section);
   }
-
-
-  
-  
 
   goToDernièreTentative(){
     this.derniereTentative.render(this.section);
@@ -82,12 +78,6 @@ export default class Harcelement extends Component {
   goToFewHoursBefore(){
     this.fewHoursBefore.render(this.section)
   }
-
-  
-  goToFlashBack(){ 
-    this.flashBack.render(this.section)
-  }
-
 
   goToLendemain() {
     this.lendemain.render(this.section)
