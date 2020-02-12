@@ -1,9 +1,10 @@
 import Component from "../../../js/Component.js";
 
 export default class FlashBack extends Component {
-  constructor() {
+  constructor({ goToFinHistoire }) {
     super();
     this.html = "";
+    this.goToFinHistoire = goToFinHistoire;
   }
 
   async load() {
@@ -14,7 +15,7 @@ export default class FlashBack extends Component {
 
   componentDidMount() {
     document.getElementById("choix-portes").style.display = "none";
-    setTimeout(() => this.goToFinHistoire(), 1000);
+    setTimeout(() => this.goToFinHistoire(), 2000);
   }
 
   render(target) {

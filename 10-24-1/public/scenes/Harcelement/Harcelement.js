@@ -2,8 +2,8 @@ import Component from "../../js/Component.js";
 import Porte from "./Porte/Porte.js"
 import Arrivee from "./1_ArriveeEnfant/1_ArriveeEnfant.js"
 import PorteClaque from "./2_PorteClaque/2_PorteClaque.js"
-import ViewDerniereTentative from "./3_PremierChoix/3_PremierChoix.js"
-import ViewPremierChoix from "./4_DerniereTentative/4_DerniereTentative.js"
+import PremierChoix from "./3_PremierChoix/3_PremierChoix.js"
+import DerniereTentative from "./4_DerniereTentative/4_DerniereTentative.js"
 import FewHoursBefore from "./5_FewHoursBefore/5_FewHoursBefore.js"
 import FlashBack from "./6_FlashBack/6_FlashBack.js"
 import FinHistoire from "./7_FinHistoire/7_FinHistoire.js"
@@ -18,38 +18,45 @@ export default class Harcelement extends Component {
     this.section = document.createElement("section");
     this.section.setAttribute("id", "harcelement");
 
+    
+    
+    
     this.porte = new Porte({
       onGoToArriveeEnfant: this.goToArriveeEnfant.bind(this),
       onStart
     });
     this.arrivee = new Arrivee();
     this.porteClaque = new PorteClaque({
-      goToClaquePorte: () => this.porteClaque.render(this.section)
+      goToPremierChoix: () => this.premierChoix.render(this.section)
     });
-    this.premierChoix = new ViewPremierChoix({
+    this.premierChoix = new PremierChoix({
       onGoToDerniereTentative: this.goToDernièreTentative.bind(this),
       onGoToLendemain : this.goToLendemain.bind(this)
     });
-    this.derniereTentative = new ViewDerniereTentative({
+    this.derniereTentative = new DerniereTentative({
       onGoToFewHoursBefore: this.goToFewHoursBefore.bind(this),
       onGoToLendemain : this.goToLendemain.bind(this)
     });
 
-    this.fewHoursBefore = new FewHoursBefore();
+    this.fewHoursBefore = new FewHoursBefore({
+      goToFlashBack: () => this.f.render(this.section)
+    });
 
-    this.flashBack = new FlashBack();
-
-    this.finHistoire = new FinHistoire({
+    this.flashBack = new FlashBack({
       goToFinHistoire: () => this.finHistoire.render(this.section)
     });
 
-    this.lendemain = new Lendemain();
+    this.finHistoire = new FinHistoire();
+
+    this.lendemain = new Lendemain({
+      goToArriveeEnfant: () => this.arrivee.render(this.section)
+    });
     
   }
 
 
   goToArriveeEnfant(e){
-    this.onStart(this); 
+    //this.onStart(this); 
     //erreur ici je sais pas pourquoi mais ça empeche le lancement du scenario
     //il me dit que onStart n'est pas une fonction du coup je sais pas pourquoi ca marche chez Yoann
     this.porte.componentWillUnmount();
@@ -60,10 +67,12 @@ export default class Harcelement extends Component {
     }, 3000);
   }
 
-
-  goToPremierChoix(){
-    this.premierChoix.render(this.section);
+  goToClaquePorte(){
+    this.porteClaque.render(this.section);
   }
+
+
+  
   
 
   goToDernièreTentative(){

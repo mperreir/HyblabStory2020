@@ -1,9 +1,10 @@
 import Component from "../../../js/Component.js";
 
 export default class Lendemain extends Component {
-  constructor() {
+  constructor({ goToArriveeEnfant }) {
     super();
     this.html = "";
+    this.goToArriveeEnfant = goToArriveeEnfant;
   }
 
   async load() {
@@ -14,7 +15,7 @@ export default class Lendemain extends Component {
 
   componentDidMount() {
     document.getElementById("choix-portes").style.display = "none";
-    setTimeout(() => this.goToArriveeEnfant(), 1000);
+    setTimeout(() => this.goToArriveeEnfant(), 3000);
   }
 
   render(target) {

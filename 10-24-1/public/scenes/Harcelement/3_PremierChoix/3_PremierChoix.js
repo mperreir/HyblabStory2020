@@ -1,6 +1,6 @@
 import Component from "../../../js/Component.js";
 
-export default class ViewPremierChoix extends Component {
+export default class PremierChoix extends Component {
   constructor({ onGoToLendemain, onGoToDerniereTentative }) {
     super();
     this.html = "";
@@ -17,10 +17,10 @@ export default class ViewPremierChoix extends Component {
   componentDidMount() {
     document
       .getElementById("aller-le-voir")
-      .addEventListener("click", this.onGoToDerniereTentative);
+      .addEventListener("click", () => this.onGoToDerniereTentative());
     document
       .getElementById("le-laisser")
-      .addEventListener("click", this.onGoToLendemain);
+      .addEventListener("click", e => this.onGoToLendemain(e));
   }
 
   render(target) {
