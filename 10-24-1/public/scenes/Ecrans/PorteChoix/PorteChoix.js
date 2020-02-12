@@ -10,7 +10,7 @@ export default class PorteChoix extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Ecran/PorteChoix/PorteChoix.html"
+      "/10-24-1/scenes/Ecrans/PorteChoix/PorteChoix.html"
     );
   }
 

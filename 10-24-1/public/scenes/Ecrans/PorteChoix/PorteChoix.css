@@ -40,7 +40,7 @@
 }
 
 /* Texte de la porte */
-#texte-porte > p {
+p {
   text-align: center;
   font-style: normal;
   font-weight: 300;

@@ -1,10 +1,10 @@
 import Component from "../../../js/Component.js";
 
 export default class Rentrer extends Component {
-  constructor({ onGoToChambre }) {
+  constructor({ goToChambre }) {
     super();
     this.html = "";
-    this.onGoToChambre = onGoToChambre;
+    this.goToChambre = goToChambre;
   }
 
   async load() {
@@ -16,7 +16,7 @@ export default class Rentrer extends Component {
   componentDidMount() {
     document
       .getElementById("next")
-      .addEventListener("click", e => this.onGoToChambre(e));
+      .addEventListener("click", e => this.goToChambre(e));
   }
 
   render(target) {

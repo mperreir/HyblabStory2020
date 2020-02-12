@@ -1,10 +1,10 @@
 import Component from "../../../js/Component.js";
 
 export default class Reprimande extends Component {
-  constructor({ onGoToVisage }) {
+  constructor({ goToVisage }) {
     super();
     this.html = "";
-    this.onGoToVisage = onGoToVisage;
+    this.goToVisage = goToVisage;
   }
 
   async load() {
@@ -16,7 +16,7 @@ export default class Reprimande extends Component {
   componentDidMount() {
     document
       .getElementById("next")
-      .addEventListener("click", e => this.onGoToVisage(e));
+      .addEventListener("click", e => this.goToVisage(e));
   }
 
   render(target) {

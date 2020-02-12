@@ -1,10 +1,10 @@
 import Component from "../../../js/Component.js";
 
 export default class Visage extends Component {
-  constructor({ onGoToPageFin }) {
+  constructor({ goToPageFin }) {
     super();
     this.html = "";
-    this.onGoToPageFin = onGoToPageFin;
+    this.goToPageFin = goToPageFin;
   }
 
   async load() {
@@ -16,7 +16,7 @@ export default class Visage extends Component {
   componentDidMount() {
     document
       .getElementById("next")
-      .addEventListener("click", e => this.onGoToPageFin(e));
+      .addEventListener("click", e => this.goToPageFin(e));
   }
 
   render(target) {

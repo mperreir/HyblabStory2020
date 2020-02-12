@@ -15,23 +15,26 @@ export default class Ecrans extends Component {
     this.section = document.createElement("section");
     this.section.setAttribute("id", "ecran");
 
-    this.Porte = new Porte();
     this.PorteChoix = new PorteChoix({
       onGoToRentrer: this.goToRentrer.bind(this),
       onGoToPorte: this.goToPorte.bind(this),
       onStart
     });
+    // this.Porte = new Porte();
+    this.Porte = new Porte({
+      goToPorteChoix: this.goToPorteChoix.bind(this)
+    });
     this.Rentrer = new Rentrer({
-      onGoToChambre: this.goToChambre.bind(this)
+      goToChambre: () => this.Chambre.render(this.section)
     });
     this.Chambre = new Chambre({
-      onGoToReprimande: this.goToReprimande.bind(this)
+      goToReprimande: () => this.Reprimande.render(this.section)
     });
     this.Reprimande = new Reprimande({
-      onGoToVisage: this.goToVisage.bind(this)
+      goToVisage: () => this.Visage.render(this.section)
     });
     this.Visage = new Visage({
-      onGoToPageFin: this.goToPageFin.bind(this) //en attendant de resoudre PlageHoraire
+      goToPageFin: () => this.PageFin.render(this.section) //en attendant de resoudre PlageHoraire
     });
     this.PageFin = new PageFin();
   }
@@ -51,34 +54,41 @@ export default class Ecrans extends Component {
     setTimeout(() => {
       this.Porte.componentWillUnmount();
       this.goToPorteChoix();
-    }, 500);
+    }, 2000);
   }
 
-  goToChambre(e) {
-    this.Rentrer.componentWillUnmount();
-    this.Chambre.render(this.section);
-    e.preventDefault();
+  goToPorteChoix() {
+    // this.Porte.componentWillUnmount();
+    this.PorteChoix.render(this.section);
+    // e.preventDefault();
   }
 
-  goToReprimande(e) {
-    this.Chambre.componentWillUnmount();
-    this.Reprimande.render(this.section);
-    e.preventDefault();
-  }
+  // goToChambre(e) {
+  //   this.Rentrer.componentWillUnmount();
+  //   this.Chambre.render(this.section);
+  //   e.preventDefault();
+  // }
 
-  goToVisage(e) {
-    this.Reprimande.componentWillUnmount();
-    this.Visage.render(this.section);
-    e.preventDefault();
-  }
+  // goToReprimande(e) {
+  //   this.Chambre.componentWillUnmount();
+  //   this.Reprimande.render(this.section);
+  //   e.preventDefault();
+  // }
 
-  goToPageFin(e) {
-    this.Visage.componentWillUnmount();
-    this.PageFin.render(this.section);
-  }
+  // goToVisage(e) {
+  //   this.Reprimande.componentWillUnmount();
+  //   this.Visage.render(this.section);
+  //   e.preventDefault();
+  // }
+
+  // goToPageFin(e) {
+  //   this.Visage.componentWillUnmount();
+  //   this.PageFin.render(this.section);
+  // }
 
   async load() {
     await Promise.all([
+      this.Porte.load(),
       this.PorteChoix.load(),
       this.Rentrer.load(),
       this.Chambre.load(),

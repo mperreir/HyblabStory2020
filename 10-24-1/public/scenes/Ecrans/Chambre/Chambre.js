@@ -1,10 +1,10 @@
 import Component from "../../../js/Component.js";
 
 export default class Chambre extends Component {
-  constructor({ onGoToReprimande }) {
+  constructor({ goToReprimande }) {
     super();
     this.html = "";
-    this.onGoToReprimande = onGoToReprimande;
+    this.goToReprimande = goToReprimande;
   }
 
   async load() {
@@ -16,7 +16,7 @@ export default class Chambre extends Component {
   componentDidMount() {
     document
       .getElementById("next")
-      .addEventListener("click", e => this.onGoToReprimande(e));
+      .addEventListener("click", e => this.goToReprimande(e));
   }
 
   render(target) {
