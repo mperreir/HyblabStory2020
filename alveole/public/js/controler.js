@@ -923,6 +923,7 @@ class UpdateSlide6 extends Observer {
       slider1.appendChild(input1);
       slider2.appendChild(input2);
 
+      /*
       let next = document.createElement('div');
       next.setAttribute('id', 'nextSlide6');
       next.innerHTML = "next";
@@ -930,8 +931,22 @@ class UpdateSlide6 extends Observer {
       next.addEventListener('click', () => {
         this.modelS.nextSlide();
       });
+      */
 
-      container.appendChild(next);
+      //slide_validée
+      let div_valide = document.createElement('div');
+      div_valide.setAttribute('id','slide6_valide');
+      container.appendChild(div_valide);
+
+      div_valide.addEventListener('click', () => {
+        observable.setChoice(1);
+        this.model.setValue(true);
+        observable.setChoice(0);
+      });
+
+      observable.loadValide(div_valide);
+
+      //container.appendChild(next);
 
 
     } else if (val == false) {
