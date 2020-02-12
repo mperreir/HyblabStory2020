@@ -1,5 +1,5 @@
 /* Texte de la plage horaire */
-#e_texte-plage-horaire > p {
+#e_texte-plage-horaire-1 > p {
   text-align: center;
   font-style: normal;
   font-weight: 600;
@@ -10,22 +10,8 @@
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  bottom : 22%;
+  bottom : 21%;
   right: 26%;
-}
-
-/* Button next scene */
-
-#e_next {
-  height: 40px;
-  width: 150px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  position: absolute;
-  bottom: 16%;
-  right: 25%;
-  line-height:15px;
 }
 
 /*SLIDER CSS*/
