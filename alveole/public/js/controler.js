@@ -139,8 +139,18 @@ class SuperControler {
     });
 
     Amplitude.init({
-        songs:[{
+        songs:[
+        {
+          "url":"sons/son lieu - studio.wav"
+        },
+          {
+          "url":"sons/Son lieu-hôtel.wav"
+        },
+        {
           "url":"sons/VOIX_AMATEUR.mp3",
+        },
+        {
+          "url":"sons/voix professionnelle.wav",
         },
         {
           "url":"sons/BASE_LINE/BASELINE_CANON.mp3",
@@ -168,7 +178,7 @@ class SuperControler {
         },
         ],
         continue_next:false,
-        volume:10,
+        volume:50,
     });
     Amplitude.setRepeat(true);
   }
@@ -412,7 +422,7 @@ class UpdateSlide1 extends Observer {
         hotelDiv.addEventListener('mouseenter', function() {
           hotel.play();
           $(this).toggleClass('animation_checked');
-          Amplitude.playSongAtIndex(0);
+          Amplitude.playSongAtIndex(1);
         });
         hotelDiv.addEventListener('mouseleave', function() {
           hotel.pause();
@@ -428,7 +438,7 @@ class UpdateSlide1 extends Observer {
         studioDiv.addEventListener('mouseenter', function() {
           studio.play();
           $(this).toggleClass('animation_checked');
-          Amplitude.playSongAtIndex(1);
+          Amplitude.playSongAtIndex(0);
         });
         studioDiv.addEventListener('mouseleave', function() {
           studio.pause();
@@ -558,6 +568,7 @@ class UpdateSlide2 extends Observer {
         observable.setChoice(1);
         this.model.setValue(true);
         observable.setChoice(0);
+        Amplitude.pause();
       });
 
       observable.loadValide(div_valide);
@@ -665,20 +676,24 @@ class UpdateSlide3 extends Observer {
       bouches[1].addEventListener('DOMLoaded', () => {
         bouche1.addEventListener('mouseenter', function() {
           bouches[1].play();
+          Amplitude.playSongAtIndex(2);
           $(this).toggleClass('animation_checked');
         });
         bouche1.addEventListener('mouseleave', function() {
           bouches[1].pause();
+          Amplitude.pause();
           $(this).toggleClass('animation_checked');
         });
       });
       bouches[2].addEventListener('DOMLoaded', () => {
         bouche2.addEventListener('mouseenter', function() {
           bouches[2].play();
+          Amplitude.playSongAtIndex(3);
           $(this).toggleClass('animation_checked');
         });
         bouche2.addEventListener('mouseleave', function() {
           bouches[2].pause();
+          Amplitude.pause();
           $(this).toggleClass('animation_checked');
         });
       });
@@ -763,10 +778,12 @@ class UpdateSlide4 extends Observer {
         animations[key].addEventListener('DOMLoaded', function() {
           document.getElementById(key).addEventListener('mouseenter', function() {
             animations[key].play();
+            Amplitude.playSongAtIndex(5);
             $(this).toggleClass('animation_checked');
           });
           document.getElementById(key).addEventListener('mouseleave', function() {
             animations[key].pause();
+            Amplitude.pause();
             $(this).toggleClass('animation_checked');
           });
           document.getElementById(key).addEventListener('click', function() {
@@ -813,6 +830,7 @@ class UpdateSlide5 extends Observer {
         label.innerHTML = observable.text.labels[i];
 
         label.addEventListener('click', function() {
+          Amplitude.playSongAtIndex(6);
           $(this).parent().find('#svg_slide5-' + i).toggleClass('slide5visible');
         });
         label.addEventListener('mouseenter', function() {
@@ -835,6 +853,7 @@ class UpdateSlide5 extends Observer {
         let checked = document.getElementsByClassName('slide5visible');
         if (checked.length >= 1) {
           this.model.setValue(true);
+          Amplitude.pause();
         } else {
           console.log('err : expected checked animation');
         }
@@ -968,10 +987,12 @@ class UpdateSlide7 extends Observer {
 
         divs[1].addEventListener('mouseenter', function() {
           animations[1].play();
+          Amplitude.playSongAtIndex(7);
           $(this).toggleClass('animation_checked');
         });
         divs[1].addEventListener('mouseleave', function() {
           animations[1].pause();
+          Amplitude.pause();
           $(this).toggleClass('animation_checked');
         });
 
@@ -983,10 +1004,12 @@ class UpdateSlide7 extends Observer {
 
         divs[2].addEventListener('mouseenter', function() {
           animations[2].play();
+          Amplitude.playSongAtIndex(8);
           $(this).toggleClass('animation_checked');
         });
         divs[2].addEventListener('mouseleave', function() {
           animations[2].pause();
+          Amplitude.pause();
           $(this).toggleClass('animation_checked');
         });
       });
@@ -1023,9 +1046,11 @@ class UpdateSlide8 extends Observer {
       });
       presta.addEventListener('mouseenter', function() {
         $(this).toggleClass('text_checked');
+        Amplitude.playSongAtIndex(8);
       });
       presta.addEventListener('mouseleave', function() {
         $(this).toggleClass('text_checked');
+        Amplitude.pause();
       });
 
 
@@ -1041,9 +1066,11 @@ class UpdateSlide8 extends Observer {
       });
       artisan.addEventListener('mouseenter', function() {
         $(this).toggleClass('text_checked');
+        Amplitude.playSongAtIndex(8);
       });
       artisan.addEventListener('mouseleave', function() {
         $(this).toggleClass('text_checked');
+        Amplitude.pause();
       });
 
       let label2 = document.createElement('div');
