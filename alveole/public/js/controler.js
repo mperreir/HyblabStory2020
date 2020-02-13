@@ -179,8 +179,13 @@ class SuperControler {
         ],
         continue_next:false,
         volume:50,
+        'callbacks':{
+          'song_repeated':function(){
+            console.log('repeat')
+          }
+        }
     });
-    Amplitude.setRepeat(true);
+    Amplitude.setVolume(30);
   }
   
   loadSlideMediator() {
@@ -906,7 +911,9 @@ class UpdateSlide6 extends Observer {
       input1.setAttribute('class', 'slider');
       input1.setAttribute('id', 'slider1');
       input1.setAttribute('orient', 'vertical');
-
+      input1.addEventListener('change',function(){
+        Amplitude.setVolume(input1.value*10);
+      });
       let slider2 = document.createElement('div');
       slider2.setAttribute('class', 'slideContainer2');
 
@@ -917,7 +924,9 @@ class UpdateSlide6 extends Observer {
       input2.setAttribute('value', '5');
       input2.setAttribute('class', 'slider');
       input2.setAttribute('id', 'slider2');
-
+      input2.addEventListener('change',function(){
+        anotherAudio.volume = input2.value/10;
+      });
       container.appendChild(slider2);
       container.appendChild(slider1);
       slider1.appendChild(input1);
@@ -942,13 +951,21 @@ class UpdateSlide6 extends Observer {
         observable.setChoice(1);
         this.model.setValue(true);
         observable.setChoice(0);
+        Amplitude.pause();
+        Amplitude.setContinue_next(false);
+        anotherAudio.pause();
       });
 
       observable.loadValide(div_valide);
 
       //container.appendChild(next);
-
-
+      Amplitude.setRepeatSong(true);
+      Amplitude.setContinue_next(true);
+      Amplitude.playSongAtIndex(1);
+      let anotherAudio = new Audio();
+      anotherAudio.src = 'sons/son lieu - studio.wav';
+      anotherAudio.play();
+      anotherAudio.loop = true;
     } else if (val == false) {
        this.composant.div.querySelector("#slide6_mixtable").remove();
        observable.setDestroyed();
