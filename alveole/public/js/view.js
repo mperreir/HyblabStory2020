@@ -1,3 +1,4 @@
+
 class ViewHeader {
     constructor() {
       this.main = document.querySelector("main");
@@ -61,6 +62,40 @@ class ViewLeft {
     this.main = document.querySelector('main');
     let left = document.createElement('div');
     left.setAttribute('id', 'left');
+    let range_slider=document.createElement('div')
+    range_slider.setAttribute('class','range_slider');
+    this.texte=document.createElement('span');
+    this.texte.innerHTML = 'volume';
+    this.texte.setAttribute('id','left_volume');
+
+    let input_range=document.createElement('input');
+    input_range.setAttribute('class','input_range');
+    input_range.setAttribute('type','range');
+    input_range.setAttribute('step','5');
+    input_range.setAttribute('value','50');
+    input_range.setAttribute('min','0');
+    input_range.setAttribute('max','100');
+    input_range.setAttribute('orient','vertical');
+    input_range.setAttribute('title','volume');
+    this.volume_percent = input_range.value/100;
+    input_range.addEventListener('change',function(){
+      this.volume_percent = input_range.value/100;
+      if(Amplitude.anotherAudio === undefined){
+        Amplitude.setVolume(100*this.volume_percent);
+      }
+      else if(Amplitude.anotherAudio !== undefined){
+        let slider1 = document.getElementById('slider1');
+        let value1 = slider1.value;
+        let slider2 = document.getElementById('slider2');
+        let value2 = slider2.value;
+        Amplitude.setVolume(10*this.volume_percent*value1);
+        Amplitude.anotherAudio.volume = value2/10*this.volume_percent;
+      }
+    })
+
+  range_slider.appendChild(input_range);
+  range_slider.appendChild(this.texte);
+  left.appendChild(range_slider);
 
     this.main.appendChild(left);
   }
