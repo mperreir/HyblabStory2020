@@ -62,7 +62,7 @@
 
     z-index: 6;
 
-    font-family: "Nimbus Sans L";
+    font-family: "NimbusSanL";
     font-size: 60px;
     line-height: 70px;
     text-transform: uppercase;
@@ -113,7 +113,7 @@
     line-height: 130%;
     font-style: normal;
     font-weight: normal;
-    font-family: "Nimbus Sans L";
+    font-family: "NimbusSanL";
 
     /*overflow: scroll;*/
 
@@ -137,7 +137,7 @@
     font-size: 16px;
     line-height: 19px;
 
-    font-family: "Nimbus Sans L";
+    font-family: "NimbusSanL";
 }
 
 .article-footer > p, .article-footer > div {
