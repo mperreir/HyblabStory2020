@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   $("#button-start").click(function(e) {
-    bodyScrollLock.enableBodyScroll(container);
+    bodyScrollLock.clearAllBodyScrollLocks();
     goToByScroll("loading-section", 500);
 
     const soundAnimated = document.querySelector("#sound-content-loading");
@@ -54,7 +54,7 @@ $(document).ready(function() {
   $(".link-contact").click(function(e) {
     $(".hamburger-checkbox").prop('checked', false);
 
-    bodyScrollLock.enableBodyScroll(container);
+    bodyScrollLock.clearAllBodyScrollLocks();
     goToByScroll("contact-section", 0);
 
     const soundAnimated = document.querySelector("#sound-content-loading");
@@ -66,7 +66,7 @@ $(document).ready(function() {
   $(".link-credits").click(function(e) {
       $(".hamburger-checkbox").prop('checked', false);
 
-    bodyScrollLock.enableBodyScroll(container);
+    bodyScrollLock.clearAllBodyScrollLocks();
     goToByScroll("credits-section", 0);
 
     const soundAnimated = document.querySelector("#sound-content-loading");
