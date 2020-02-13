@@ -431,8 +431,21 @@ class ModelSlide2 extends Observable {
       let that = this;
       function updateChoice() {
         if ((this.x == point.x) && (this.y = point.y)) {
-          that.setChoice(this.target.getAttribute('mic'));
-          Amplitude.playSongAtIndex(2);
+          let id_mic = this.target.getAttribute('mic')
+          that.setChoice(id_mic);
+          if (id_mic == 1){
+            Amplitude.playSongAtIndex(8);
+          }
+          if (id_mic == 2){
+            Amplitude.playSongAtIndex(10);
+          }
+          if (id_mic == 3){
+            Amplitude.playSongAtIndex(11);
+          }
+          if (id_mic == 4){
+            Amplitude.playSongAtIndex(9);
+          }
+
           console.log('choice set at ' + that.choice)
         }
         else {
