@@ -41,8 +41,28 @@ export default class Ecrans extends Component {
       goToPlageHoraire: () => this.PlageHoraire.render(this.section)
     });
     this.PlageHoraire = new PlageHoraire({
-      goToPageFin: () => this.PageFin.render(this.section)
+      goToPlageHoraire3: () => {
+        this.PlageHoraire.componentWillUnmount();
+        this.PlageHoraire3.render(this.section)
+      },
+      goToPlageHoraire2: () => {
+        this.PlageHoraire.componentWillUnmount();
+        this.PlageHoraire2.render(this.section)
+      }
     });
+    this.PlageHoraire2 = new PlageHoraire2({
+      goToPlageHoraire3: () => {
+        this.PlageHoraire2.componentWillUnmount();
+        this.PlageHoraire3.render(this.section)
+      },
+      goToPlageHoraire2: () => {
+        this.PlageHoraire2.componentWillUnmount();
+        this.PlageHoraire2.render(this.section)
+      }
+    });
+    this.PlageHoraire3 = new PlageHoraire3({
+      goToPageFin: () => this.PageFin.render(this.section)
+    })
     this.PageFin = new PageFin({
       goToCredits: () => this.Credits.render(this.section)
     });
@@ -82,6 +102,8 @@ export default class Ecrans extends Component {
       this.Reprimande.load(),
       this.Visage.load(),
       this.PlageHoraire.load(),
+      this.PlageHoraire2.load(),
+      this.PlageHoraire3.load(),
       this.PageFin.load(),
       this.Credits.load()
     ]);
