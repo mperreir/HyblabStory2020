@@ -875,7 +875,7 @@ footer {
   font-style: normal;
   font-weight: normal;
   text-align: center;
-  line-height: 22px;
+  /* line-height: 22px; */
   letter-spacing: 0.16em;
   color: #000;
 }

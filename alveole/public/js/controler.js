@@ -1038,7 +1038,7 @@ class UpdateSlide7 extends Observer {
       });
       animations[2].addEventListener('DOMLoaded', () => {
         document.getElementById('slide7_casque').addEventListener('click', () => {
-          observable.setChoice(1);
+          observable.setChoice(2);
           this.model.setValue(true);
         })
 
