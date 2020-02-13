@@ -186,7 +186,7 @@ $(document).ready(function() {
       // expo not selected yet, block scroll
       menuFixed = true;
 
-      e.preventDefault();
+      // e.preventDefault();
       bodyScrollLock.disableBodyScroll(menuSection);
       goToByScroll("menu-section", 400);
     }

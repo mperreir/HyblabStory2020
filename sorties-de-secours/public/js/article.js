@@ -345,6 +345,7 @@ function animateBrush(sectionName, id) {
 
 function goBackToMenu(sectionName) {
     /* go to menu and remove style */
+
     goToByScroll('menu-section', 0);
     $('.expChoice').removeClass("expChoiceHidden");
     $('.expChoice').removeClass("expChoiceExpand");
