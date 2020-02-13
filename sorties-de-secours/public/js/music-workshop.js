@@ -126,7 +126,7 @@ $(document).ready(function() {
                 x: 15,
                 y: stage.height() / 2,
                 text: 'Déplacez la tête de lecture\net lancez le son de Baloji.',
-                fontSize: 30,
+                fontSize: 26,
                 fontFamily: 'NimbusSanL',
                 lineHeight: 1.2
             });

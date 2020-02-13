@@ -112,6 +112,14 @@ function initArticle(sectionName) {
 
     });
 
+    $arrowRight.click(function () {
+        nextSlide(sectionName);
+    });
+
+    $arrowLeft.click(function () {
+        previousSlide(sectionName);
+    });
+
     // lunch sound
     if (!soundPlaying) {
         playSound(sectionName);

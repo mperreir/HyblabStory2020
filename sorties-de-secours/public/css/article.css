@@ -35,19 +35,19 @@
     right: 0;
     transform: translateX(50%);
 }
-.article-arrow-right {
+.article-arrow-right, .article-arrow-left {
     position: absolute;
     top: 50%;
-    right: 75px;
     transform: translate(-50%, -50%);
     display: block;
+    z-index: 500;
+    cursor: pointer;
+}
+.article-arrow-right {
+    right: 75px;
 }
 .article-arrow-left {
-    position: absolute;
-    top: 50%;
     left: 75px;
-    transform: translate(-50%, -50%);
-    display: block;
 }
 .article-arrow-hidden {
     display: none;
