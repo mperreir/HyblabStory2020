@@ -18,9 +18,7 @@ let initSlide8 = function(){
 
         if (top >= top1) {
           clearInterval(id);
-          console.log('1');
         } else {
-            console.log('2');
           top=top+coeff1;
           left=left+coeff2;
           elem.style.top = top + '%';
@@ -33,11 +31,8 @@ let initSlide8 = function(){
       function frame() {
 
         if (top >= top1 || left >= 74) {
-            console.log('3');
           clearInterval(id);
         } else {
-            console.log('4');
-            //console.log(top);
           top=top+coeff1;
           left=left+coeff2;
           elem.style.top = top + '%';
