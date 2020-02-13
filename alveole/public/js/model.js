@@ -824,7 +824,11 @@ class ModelSlide7 extends Observable {
     super();
     this.bool = false;
     this.instanciated = false;
-    this.choice = 1;
+    this.choice;
+  }
+
+  setChoice(val) {
+    this.choice = val;
   }
 
   getValue() {
@@ -841,9 +845,6 @@ class ModelSlide7 extends Observable {
 
   getChoice() {
     return this.choice;
-  }
-
-  setChoice(val) {
   }
 
   loadAnime(containers) {

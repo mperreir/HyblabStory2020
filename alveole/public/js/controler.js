@@ -18,7 +18,7 @@ class SuperControler {
     var viewLeft = new ViewLeft();
 
     // Stupid buttons
-    var viewStupidButtons = new ViewStupidButtons();
+    //var viewStupidButtons = new ViewStupidButtons();
 
     // Popup
     var viewModal = new ViewModal();
@@ -127,14 +127,27 @@ class SuperControler {
     // modelSlides.addObservers(mediatorConclusion);
 
     // Adding Listenners
-    // viewStupidButtons.next.addEventListener('click', function() {
-    //   modelSlides.nextSlide();
-    // });
-    // viewStupidButtons.prev.addEventListener('click', function() {
-    //   modelSlides.prevSlide();
-    // });
-    document.getElementById('button-next').addEventListener('click', function() {
+    /*
+    viewStupidButtons.next.addEventListener('click', function() {
       modelSlides.nextSlide();
+    });
+    viewStupidButtons.prev.addEventListener('click', function() {
+      modelSlides.prevSlide();
+    });
+    */
+    document.getElementById('button-next').addEventListener('click', function() {
+      let val = modelSlides.getValue();
+
+      if (val == 7) {
+        let choice = modelSlide7.getChoice();
+        if (choice == 1) {
+          modelSlides.setValue(9);
+        } else {
+          modelSlides.nextSlide();
+        }
+      } else {
+        modelSlides.nextSlide();
+      }
       modelPopup.setValue(false);
     });
 
@@ -268,9 +281,9 @@ class MediatorModal extends Observer {
     if (val == true) {
       let i = this.model.getValue();
       let choice = this.slides[i].getChoice();
+      console.log(choice);
 
       this.view.title.innerHTML = this.slides[i].text["title"];
-      console.log(choice);
       this.view.mainText.innerHTML = this.slides[i].text["choices"][choice]['main'];
       this.view.subText.innerHTML = this.slides[i].text["choices"][choice]['sub'];
 
@@ -555,7 +568,6 @@ class UpdateSlide2 extends Observer {
       div_valide.addEventListener('click', () => {
         observable.setChoice(1);
         this.model.setValue(true);
-        observable.setChoice(0);
         Amplitude.pause();
       });
 
@@ -996,7 +1008,9 @@ class UpdateSlide7 extends Observer {
 
       animations[1].addEventListener('DOMLoaded', () => {
         document.getElementById('slide7_ondes').addEventListener('click', () => {
-          this.slides.setValue(9);
+          observable.setChoice(1);
+          this.model.setValue(true);
+          // this.slides.setValue(9);
         });
 
         divs[1].addEventListener('mouseenter', function() {
@@ -1012,6 +1026,7 @@ class UpdateSlide7 extends Observer {
       });
       animations[2].addEventListener('DOMLoaded', () => {
         document.getElementById('slide7_casque').addEventListener('click', () => {
+          observable.setChoice(1);
           this.model.setValue(true);
         })
 
@@ -1209,24 +1224,24 @@ class UpdateLastSlide extends Observer {
   }
 }
 
-class UpdatePopup extends Observer {
-
-  constructor(composant, modelSlides) {
-    super();
-    this.composant = composant;
-    this.modelSlides = modelSlides;
-  }
-
-  update(observable, object) {
-
-    let val = observable.getValue();
-
-    if (val == true) {
-      this.composant.div.style.visibility = "visible";
-      this.composant.div.style.opacity = 1;
-    } else if (val == false) {
-      this.composant.div.style.visibility = "hidden";
-      this.composant.div.style.opacity = 0;
-    }
-  }
-}
+// class UpdatePopup extends Observer {
+//
+//   constructor(composant, modelSlides) {
+//     super();
+//     this.composant = composant;
+//     this.modelSlides = modelSlides;
+//   }
+//
+//   update(observable, object) {
+//
+//     let val = observable.getValue();
+//
+//     if (val == true) {
+//       this.composant.div.style.visibility = "visible";
+//       this.composant.div.style.opacity = 1;
+//     } else if (val == false) {
+//       this.composant.div.style.visibility = "hidden";
+//       this.composant.div.style.opacity = 0;
+//     }
+//   }
+// }
