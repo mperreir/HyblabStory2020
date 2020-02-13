@@ -1,0 +1,11 @@
+#fs12_text {
+    height: 12%;
+    width: 6%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    bottom: 58%;
+    left: 37%;
+}

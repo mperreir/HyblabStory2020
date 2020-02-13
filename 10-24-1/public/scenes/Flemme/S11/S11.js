@@ -13,9 +13,11 @@ export default class S11 extends Component {
     );
   }
 
-  componentDidMount() {
-    document.getElementById("choix-portes").style.display = "none";
-  }
+    componentDidMount() {
+      document
+        .getElementById("fs11_bouton")
+        .addEventListener("click", e => this.onGoToS12(e));
+    }
 
   componentWillUnmount() {
     document.getElementById("choix-portes").style.display = "block";
