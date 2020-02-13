@@ -18,7 +18,7 @@ class SuperControler {
     var viewLeft = new ViewLeft();
 
     // Stupid buttons
-    var viewStupidButtons = new ViewStupidButtons();
+    //var viewStupidButtons = new ViewStupidButtons();
 
     // Popup
     var viewModal = new ViewModal();
@@ -127,12 +127,14 @@ class SuperControler {
     // modelSlides.addObservers(mediatorConclusion);
 
     // Adding Listenners
+    /*
     viewStupidButtons.next.addEventListener('click', function() {
       modelSlides.nextSlide();
     });
     viewStupidButtons.prev.addEventListener('click', function() {
       modelSlides.prevSlide();
     });
+    */
     document.getElementById('button-next').addEventListener('click', function() {
       let val = modelSlides.getValue();
 
