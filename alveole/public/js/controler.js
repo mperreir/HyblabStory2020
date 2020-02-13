@@ -168,6 +168,18 @@ class SuperControler {
         {
           "url":"sons/voix professionnelle.wav",
         },
+        {
+          "url":"sons/TEXTE/CANON.mp3",
+        },
+        {
+          "url":"sons/TEXTE/MD21.mp3",
+        },
+        {
+          "url":"sons/TEXTE/STEREO.mp3",
+        },
+        {
+          "url":"sons/TEXTE/LAVALLIER.mp3",
+        }
         ],
         continue_next:false,
         volume:50,
@@ -334,7 +346,7 @@ class UpdateIntroSlide extends Observer {
     let val = observable.getValue();
 
     if (val == true) {
-      
+
       let div = document.createElement('div');
       div.setAttribute('id', 'slideIntro');
       div.addEventListener('click',function(){
@@ -907,7 +919,7 @@ class UpdateSlide6 extends Observer {
       input1.addEventListener('change',function(){
         Amplitude.setVolume(input1.value*10);
       });
-      
+
       let slider2 = document.createElement('div');
       slider2.setAttribute('class', 'slideContainer2');
 

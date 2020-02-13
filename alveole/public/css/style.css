@@ -1988,8 +1988,7 @@ dessus de l'apect ratio 16/9 */
 .svg_logo {
   position: absolute;
   height: 100%;
-  width: 80%;
-  bottom:
+  width: 100%;
 }
 
 #names_ {
