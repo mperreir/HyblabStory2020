@@ -1,47 +1,42 @@
-.cls-7 {
-  /* la boite */
-}
-
-
-/* .cls-8:hover {
-  // l'input
-  fill: #ff9700;
-
-} */
-
-.cls-9:hover {
-  /* le texte j'ai de la chance */
-  fill: #ff9700;
-}
-
-#entree {
-  height: 18vh;
-  width: 25vw;
+#fs5_text {
+  height: 18%;
+  width: 25%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  bottom: 36vh;
-  left: 36vw;
+  bottom: 47%;
+  left: 38%;
 }
 
-#in {
+#fs5_entree {
+  height: 18%;
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom: 38%;
+  left: 43%;
+}
+
+#fs5_input {
   background: transparent;
-  border: solid red 1px;
+  border: transparent;
   padding-left: 10%;
 }
 
-#b1 {
-  height: 3vh;
-  width: 15vw;
-  font-size:1.6vh;
-  padding-top: 0vw;
-  padding-bottom: 3vh;
+#fs5_valider {
+  height: 3%;
+  width: 8%;
+  font-size:1.6%;
+  font:black;
+  padding-top: 0%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  bottom: 41vh;
-  left: 41vw;
+  bottom: 41%;
+  left: 41%;
 
 }

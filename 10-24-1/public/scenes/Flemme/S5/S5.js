@@ -14,7 +14,9 @@ export default class S5 extends Component {
   }
 
   componentDidMount() {
-    document.getElementById("choix-portes").style.display = "none";
+    document
+      .getElementById("fs5_bouton")
+      .addEventListener("click", e => this.onGoToS6(e));
   }
 
   componentWillUnmount() {
