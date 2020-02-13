@@ -15,15 +15,15 @@
 }
 
 /*SLIDER CSS*/
-#slider-distance {
+#slider-distance-1 {
   position: absolute;
-  bottom: 16%;
+  bottom: 14%;
   right: 32%;
 }
 
-#empty_field_for_mozilla {
+#empty_field_for_mozilla-1 {
   position: absolute;
-  bottom: 18%;
+  bottom: 16%;
   right: 30%;
   font-style: normal;
   font-weight: 600;

@@ -9,6 +9,7 @@ import PlageHoraire from "./PlageHoraire/PlageHoraire.js";
 import PlageHoraire2 from "./PlageHoraire2/PlageHoraire2.js";
 import PlageHoraire3 from "./PlageHoraire3/PlageHoraire3.js";
 import PageFin from "./PageFin/PageFin.js";
+import Credits from "./Credits/Credits.js";
 
 export default class Ecrans extends Component {
   constructor({ onStart }) {
@@ -42,7 +43,10 @@ export default class Ecrans extends Component {
     this.PlageHoraire = new PlageHoraire({
       goToPageFin: () => this.PageFin.render(this.section)
     });
-    this.PageFin = new PageFin();
+    this.PageFin = new PageFin({
+      goToCredits: () => this.Credits.render(this.section)
+    });
+    this.Credits = new Credits();
   }
 
 
@@ -78,7 +82,8 @@ export default class Ecrans extends Component {
       this.Reprimande.load(),
       this.Visage.load(),
       this.PlageHoraire.load(),
-      this.PageFin.load()
+      this.PageFin.load(),
+      this.Credits.load()
     ]);
   }
 

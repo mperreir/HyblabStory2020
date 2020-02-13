@@ -18,12 +18,12 @@ function checkbrowser() {
     })();
 
     if (browser == "firefox" || browser == "other") {
-    var element = document.getElementById("slider-distance");
+    var element = document.getElementById("slider-distance-1");
     element.parentNode.removeChild(element);
     //we remove html fields for the chorme version
 
     //and we add the new ones for mozilla
-    var p = document.getElementById("empty_field_for_mozilla");
+    var p = document.getElementById("empty_field_for_mozilla-1");
 
     var newElement = document.createElement("span");
     newElement.setAttribute('id', "texte milieu");
