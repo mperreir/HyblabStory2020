@@ -1,7 +1,7 @@
 import Component from "../../../js/Component.js";
 
 export default class PlageHoraire2 extends Component {
-  constructor({ goToPlageHoraire3, goToPlageHoraire2 }) {
+  constructor({ goToPlageHoraire3, goToPlageHoraire2, goToPlageHoraire2_2, goToPlageHoraire2_3 }) {
     super();
     this.html = "";
     this.valuemin = 0;
@@ -9,6 +9,8 @@ export default class PlageHoraire2 extends Component {
     this.plage = this.valuemax - this.valuemin;
     this.goToPlageHoraire3 = goToPlageHoraire3;
     this.goToPlageHoraire2 = goToPlageHoraire2;
+    this.goToPlageHoraire2_2 = goToPlageHoraire2_2;
+    this.goToPlageHoraire2_3 = goToPlageHoraire2_3;
   }
 
   async load() {
@@ -26,6 +28,12 @@ export default class PlageHoraire2 extends Component {
         this.plage = this.valuemax - this.valuemin;
         if ((this.plage <= 2) && (this.valuemin >= 8) && (this.valuemax <= 21)) {
           this.goToPlageHoraire3(e);
+        }
+        else if ((this.plage <= 2) && (this.valuemin < 8)) {
+          this.goToPlageHoraire2_2(e);
+        }
+        else if ((this.plage <= 2) && (this.valuemax > 21)) {
+          this.goToPlageHoraire2_3(e);
         }
         else {
           this.goToPlageHoraire2(e);

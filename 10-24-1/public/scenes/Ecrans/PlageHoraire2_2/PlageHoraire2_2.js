@@ -1,6 +1,6 @@
 import Component from "../../../js/Component.js";
 
-export default class PlageHoraire extends Component {
+export default class PlageHoraire2_2 extends Component {
   constructor({ goToPlageHoraire3, goToPlageHoraire2, goToPlageHoraire2_2, goToPlageHoraire2_3 }) {
     super();
     this.html = "";
@@ -15,7 +15,7 @@ export default class PlageHoraire extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Ecrans/PlageHoraire/PlageHoraire.html"
+      "/10-24-1/scenes/Ecrans/PlageHoraire2_2/PlageHoraire2_2.html"
     );
   }
 
@@ -23,8 +23,8 @@ export default class PlageHoraire extends Component {
     document
       .getElementById("e_validation")
       .addEventListener("click", e => {
-        this.valuemin = document.getElementById('min_slider').value;
-        this.valuemax = document.getElementById('max_slider').value;
+        this.valuemin = document.getElementById('min_slider_2_2').value;
+        this.valuemax = document.getElementById('max_slider_2_2').value;
         this.plage = this.valuemax - this.valuemin;
         if ((this.plage <= 2) && (this.valuemin >= 8) && (this.valuemax <= 21)) {
           this.goToPlageHoraire3(e);

@@ -27,11 +27,11 @@ function checkbrowser() {
 
     var newElement = document.createElement("span");
     newElement.setAttribute('id', "texte milieu");
-    newElement.innerHTML = "Laisser l&#039acc&egrave;s aux &eacute;cran de ";
+    newElement.innerHTML = "Laisser l&#039acc&egrave;s aux &eacute;crans de ";
     p.appendChild(newElement);
 
     newElement = document.createElement("input");
-    newElement.setAttribute('id', "min_slider");
+    newElement.setAttribute('id', "min_slider_2");
     newElement.value = 18;
     newElement.style.width = "26px";
     p.appendChild(newElement);
@@ -42,7 +42,7 @@ function checkbrowser() {
     p.appendChild(newElement);
 
     newElement = document.createElement("input");
-    newElement.setAttribute('id', "max_slider");
+    newElement.setAttribute('id', "max_slider_2");
     newElement.value = 23;
     newElement.style.width = "26px";
     p.appendChild(newElement);
