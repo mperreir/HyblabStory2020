@@ -1,0 +1,31 @@
+/*default version*/
+@font-face {
+	font-family: 'NimbusSanL';
+	src:
+		url('../fonts/NimbusSanL-Reg.otf')
+		format('opentype');
+    font-weight: normal;
+    /* font-style: normal; */
+}
+
+
+/*bold version*/
+@font-face {
+	font-family: 'NimbusSanL';
+	src:
+		url('../fonts/NimbusSanL-Bol.otf')
+		format('opentype');
+	font-weight: bold;
+}
+
+
+/*italic version*/
+@font-face {
+	font-family: 'NimbusSanL';
+	src:
+		local('NimbusSanL'),
+		url('../fonts/NimbusSanL-RegIta.otf')
+		format('opentype');
+    /* font-weight:normal; */
+    font-style: italic;
+}
