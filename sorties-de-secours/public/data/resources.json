@@ -23,8 +23,8 @@
 "figures": {
     "0": {
         "number" : "4",
-        "description" : "LE SEUL AGENDA CULTUREL DE BRETAGNE",
-        "item" : "COUVRANT 4 MÉTROPOLES"
+        "description" : "C'EST LE NOMBRE DE MÉTROPOLES",
+        "item" : "QUE COUVRE SORTIES DE SECOURS"
     },
     "1": {
         "number" : "5",
@@ -33,13 +33,13 @@
     },
     "2":{
         "number" : "20",
-        "description" : "ANS",
+        "description" : "ANNÉES",
         "item" : "DÉJÀ"
     },
     "3":{
         "number" : "31",
-        "description" : "UN AGENDA MENSUEL",
-        "item" : "DU PREMIER AU DERNIER JOUR"
+        "description" : "JOURS,",
+        "item" : "UN AGENDA MENSUEL"
     },
     "4":{
         "number" : "224",
