@@ -1,5 +1,4 @@
-/* Button next scene */
-
+/* Button next scene 
 #e_next {
   height: 40px;
   width: 150px;
@@ -7,10 +6,11 @@
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  bottom: 16%;
-  right: 25%;
+  bottom: 100%;
+  right: 30%;
   line-height:15px;
 }
+
 
 /* #e_next:hover {
   border-color: white;

@@ -17,17 +17,17 @@
 
 /* Button next scene */
 
-#e_next {
+/*#e_next {
   height: 40px;
   width: 150px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  bottom: 16%;
-  right: 25%;
+  bottom: 100%;
+  right: 30%;
   line-height:15px;
-}
+}*/
 
 /* Effet shake/secousse @see https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
 .shake {
