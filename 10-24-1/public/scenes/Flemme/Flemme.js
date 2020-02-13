@@ -40,7 +40,7 @@ export default class Flemme extends Component {
 
     this.credits = new Credits();
     this.S1 = new S1({  // Porte
-      onGoToS2: this.goToS14.bind(this),
+      onGoToS2: this.goToS2.bind(this),
       onStart
     });
     this.S2 = new S2({  // Jungle
