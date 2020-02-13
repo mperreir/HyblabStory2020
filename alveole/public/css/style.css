@@ -577,8 +577,9 @@ footer {
 .slide2Label {
   position: absolute;
   top: 0;
+  left: -22%;
   height: 30%;
-  width: 100%;
+  width: 150%;
   font-family: Oswald;
   font-style: normal;
   font-weight: 500;
@@ -609,7 +610,7 @@ footer {
 
 #svg_micro-reportage {
   position: absolute;
-  top: 41%;
+  top: 30%;
   width: 100%;
   height: 30%;
 }
