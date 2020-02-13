@@ -561,8 +561,8 @@ class UpdateSlide2 extends Observer {
           observable.loadWire(handles, path, plug, [node1, node2]);
         }
         else if (i == 1){
-          let node1 = [210, 270];
-          let node2 = [230, 280];
+          let node1 = [210, 290];
+          let node2 = [215, 350];
           observable.loadWire(handles, path, plug, [node1, node2]);
         }
         else if (i == 2){
