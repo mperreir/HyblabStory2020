@@ -131,8 +131,8 @@
     "question": "Testez le son <span style='color:#BDB4F3'>sur la table de mixage</span><br>à l’aide des différents curseurs et boutons.",
     "choices": {
       "1": {
-        "main": "le mixage est un processus complexe qui nécessite des connaissances précises.",
-        "sub": "Pierre-Yves Allain, opérateur son pour Alvéole Média maîtrise les règles de l’acoustique à la perfection."
+        "main": "le mixage est un processus<br>complexe qui nécessite<br>des connaissances précises.",
+        "sub": "Pierre-Yves Allain, opérateur son<br>pour Alvéole Média maîtrise les règles<br>de l’acoustique à la perfection."
       }
     }
   },
@@ -150,8 +150,8 @@
     },
     "choices": {
       "1": {
-        "main": "La capsule sonore apporte une dimension d'expérience supplémentaire au podcast.",
-        "sub": "Elle permet à l'auditeur de se plonger davantage dans l'histoire racontée."
+        "main": "La capsule sonore<br>apporte une dimension d'expérience<br>supplémentaire au podcast.",
+        "sub": "Elle permet à l'auditeur de se plonger<br>davantage dans l'histoire racontée."
       }
     }
   },
