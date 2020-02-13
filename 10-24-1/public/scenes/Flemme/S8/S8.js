@@ -14,7 +14,9 @@ export default class S8 extends Component {
   }
 
   componentDidMount() {
-    document.getElementById("choix-portes").style.display = "none";
+    document
+      .getElementById("fs8_bouton")
+      .addEventListener("click", e => this.onGoToS9(e));
   }
 
   componentWillUnmount() {
