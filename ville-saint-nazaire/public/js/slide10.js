@@ -10,10 +10,8 @@ let initSlide10 = function(){
 		var timeOut ;
 		function showLetters(id)
 		{
-		  //console.log(id);
 		  let htmlP = document.getElementById(id);
 		  let txt = htmlP.dataset.label;
-		  console.log(txt.length);
 		  if(cptLettre < txt.length)
 			{
 				if (txt[cptLettre] == '<') {
@@ -30,7 +28,6 @@ let initSlide10 = function(){
 		  else
 			{
 			  clearTimeout(timeOut);
-			  console.log("end");
 			}
 		}
 

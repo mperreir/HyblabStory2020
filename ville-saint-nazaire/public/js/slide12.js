@@ -1,7 +1,6 @@
 let initSlide12 = function(){
 
   d3.select('#next13').on('click', function(){
-    console.log('13');
     moveRight();
     initSlide13();
   });
