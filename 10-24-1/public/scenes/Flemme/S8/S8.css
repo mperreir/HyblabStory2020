@@ -1,0 +1,42 @@
+#fs8_text {
+  height: 18%;
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom: 47%;
+  left: 38%;
+}
+
+#fs8_entree {
+  height: 18%;
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom: 38%;
+  left: 43%;
+}
+
+#fs8_input {
+  background: transparent;
+  border: transparent;
+  padding-left: 10%;
+}
+
+#fs8_valider {
+  height: 3%;
+  width: 8%;
+  font-size:1.6%;
+  font:black;
+  padding-top: 0%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom: 41%;
+  left: 41%;
+
+}

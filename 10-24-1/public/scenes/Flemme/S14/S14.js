@@ -8,25 +8,25 @@ export default class PageFin extends Component {
   }
 
   async load() {
-    this.html = await this.loadHTML("/10-24-1/scenes/Ecrans/PageFin/PageFin.html");
+    this.html = await this.loadHTML("/10-24-1/scenes/Flemme/S14/S14.html");
   }
 
   componentDidMount() {
     // social networks
     document
-      .getElementById("facebook-button-fin")
+      .getElementById("fs14_fb")
       .addEventListener("click", () =>
         window.open("https://www.facebook.com/1024.media/", "_blank")
       );
     document
-      .getElementById("instagram-button-fin")
+      .getElementById("fs14_ig")
       .addEventListener("click", () =>
         window.open("https://www.instagram.com/instagram/", "_blank")
       );
     // Hide social network from carousel and show credits button
     document.getElementById("facebook-button").style.display = "none";
     document.getElementById("instagram-button").style.display = "none";
-    const credits = document.getElementById("credits-button");
+    const credits = document.getElementById("fs14_credits_bouton");
     credits.style.display = "block";
     credits.addEventListener("click", () => {
       this.componentWillUnmount();

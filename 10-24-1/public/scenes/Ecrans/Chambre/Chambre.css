@@ -7,11 +7,10 @@
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  bottom: -35%;
-  right: 35%;
+  bottom: 13%;
+  right: 36%;
   line-height:15px;
 }
-
 
 /* Effet shake/secousse @see https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
 .shake {

@@ -7,8 +7,11 @@ import Reprimande from "./Reprimande/Reprimande.js";
 import Visage from "./Visage/Visage.js";
 import PlageHoraire from "./PlageHoraire/PlageHoraire.js";
 import PlageHoraire2 from "./PlageHoraire2/PlageHoraire2.js";
+import PlageHoraire2_2 from "./PlageHoraire2_2/PlageHoraire2_2.js";
+import PlageHoraire2_3 from "./PlageHoraire2_3/PlageHoraire2_3.js";
 import PlageHoraire3 from "./PlageHoraire3/PlageHoraire3.js";
 import PageFin from "./PageFin/PageFin.js";
+import Credits from "./Credits/Credits.js";
 
 export default class Ecrans extends Component {
   constructor({ onStart }) {
@@ -39,10 +42,90 @@ export default class Ecrans extends Component {
     this.Visage = new Visage({
       goToPlageHoraire: () => this.PlageHoraire.render(this.section)
     });
+
     this.PlageHoraire = new PlageHoraire({
-      goToPageFin: () => this.PageFin.render(this.section)
+      goToPlageHoraire3: () => {
+        this.PlageHoraire.componentWillUnmount();
+        this.PlageHoraire3.render(this.section)
+      },
+      goToPlageHoraire2: () => {
+        this.PlageHoraire.componentWillUnmount();
+        this.PlageHoraire2.render(this.section)
+      },
+      goToPlageHoraire2_2: () => {
+        this.PlageHoraire.componentWillUnmount();
+        this.PlageHoraire2_2.render(this.section)
+      },
+      goToPlageHoraire2_3: () => {
+        this.PlageHoraire.componentWillUnmount();
+        this.PlageHoraire2_3.render(this.section)
+      }
     });
-    this.PageFin = new PageFin();
+
+    this.PlageHoraire2 = new PlageHoraire2({
+      goToPlageHoraire3: () => {
+        this.PlageHoraire2.componentWillUnmount();
+        this.PlageHoraire3.render(this.section)
+      },
+      goToPlageHoraire2: () => {
+        this.PlageHoraire2.componentWillUnmount();
+        this.PlageHoraire2.render(this.section)
+      },
+      goToPlageHoraire2_2: () => {
+        this.PlageHoraire2.componentWillUnmount();
+        this.PlageHoraire2_2.render(this.section)
+      },
+      goToPlageHoraire2_3: () => {
+        this.PlageHoraire2.componentWillUnmount();
+        this.PlageHoraire2_3.render(this.section)
+      }
+    });
+
+    this.PlageHoraire2_2 = new PlageHoraire2_2({
+      goToPlageHoraire3: () => {
+        this.PlageHoraire2_2.componentWillUnmount();
+        this.PlageHoraire3.render(this.section)
+      },
+      goToPlageHoraire2: () => {
+        this.PlageHoraire2_2.componentWillUnmount();
+        this.PlageHoraire2.render(this.section)
+      },
+      goToPlageHoraire2_2: () => {
+        this.PlageHoraire2_2.componentWillUnmount();
+        this.PlageHoraire2_2.render(this.section)
+      },
+      goToPlageHoraire2_3: () => {
+        this.PlageHoraire2_2.componentWillUnmount();
+        this.PlageHoraire2_3.render(this.section)
+      }
+    });
+
+    this.PlageHoraire2_3 = new PlageHoraire2_3({
+      goToPlageHoraire3: () => {
+        this.PlageHoraire2_3.componentWillUnmount();
+        this.PlageHoraire3.render(this.section)
+      },
+      goToPlageHoraire2: () => {
+        this.PlageHoraire2_3.componentWillUnmount();
+        this.PlageHoraire2.render(this.section)
+      },
+      goToPlageHoraire2_2: () => {
+        this.PlageHoraire2_3.componentWillUnmount();
+        this.PlageHoraire2_2.render(this.section)
+      },
+      goToPlageHoraire2_3: () => {
+        this.PlageHoraire2_3.componentWillUnmount();
+        this.PlageHoraire2_3.render(this.section)
+      }
+    });
+
+    this.PlageHoraire3 = new PlageHoraire3({
+      goToPageFin: () => this.PageFin.render(this.section)
+    })
+    this.PageFin = new PageFin({
+      goToCredits: () => this.Credits.render(this.section)
+    });
+    this.Credits = new Credits();
   }
 
 
@@ -78,7 +161,12 @@ export default class Ecrans extends Component {
       this.Reprimande.load(),
       this.Visage.load(),
       this.PlageHoraire.load(),
-      this.PageFin.load()
+      this.PlageHoraire2.load(),
+      this.PlageHoraire2_2.load(),
+      this.PlageHoraire2_3.load(),
+      this.PlageHoraire3.load(),
+      this.PageFin.load(),
+      this.Credits.load()
     ]);
   }
 

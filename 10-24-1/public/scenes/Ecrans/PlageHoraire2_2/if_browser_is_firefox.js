@@ -18,12 +18,12 @@ function checkbrowser() {
     })();
 
     if (browser == "firefox" || browser == "other") {
-    var element = document.getElementById("slider-distance-1");
+    var element = document.getElementById("slider-distance-2");
     element.parentNode.removeChild(element);
     //we remove html fields for the chorme version
 
     //and we add the new ones for mozilla
-    var p = document.getElementById("empty_field_for_mozilla-1");
+    var p = document.getElementById("empty_field_for_mozilla-2");
 
     var newElement = document.createElement("span");
     newElement.setAttribute('id', "texte milieu");
@@ -31,7 +31,7 @@ function checkbrowser() {
     p.appendChild(newElement);
 
     newElement = document.createElement("input");
-    newElement.setAttribute('id', "min_slider");
+    newElement.setAttribute('id', "min_slider_2_2");
     newElement.value = 0;
     newElement.style.width = "26px";
     p.appendChild(newElement);
@@ -42,7 +42,7 @@ function checkbrowser() {
     p.appendChild(newElement);
 
     newElement = document.createElement("input");
-    newElement.setAttribute('id', "max_slider");
+    newElement.setAttribute('id', "max_slider_2_2");
     newElement.value = 24;
     newElement.style.width = "26px";
     p.appendChild(newElement);

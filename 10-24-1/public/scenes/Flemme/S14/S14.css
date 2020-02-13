@@ -1,0 +1,14 @@
+#fs11_credits {
+  height: 3%;
+  width: 8%;
+  font-size:1.6%;
+  font:black;
+  padding-top: 0%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom: 5%;
+  left: 90%;
+
+}

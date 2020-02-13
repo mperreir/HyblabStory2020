@@ -1,6 +1,6 @@
 <!-- On charge les styles -->
 <!-- <link rel="stylesheet" type="text/css" href="../../../style//shared.css" />
-<link rel="stylesheet" type="text/css" href="./PlageHoraire2.css" /> -->
+<link rel="stylesheet" type="text/css" href="./PlageHoraire2_2.css" /> -->
 <script src="if_browser_is_firefox.js"></script>
 
 <!-- Contenu de la scène -->
@@ -47,7 +47,7 @@
 </svg>
 <div id="e_texte-plage-horaire-2">
   <p>
-    Vous pouvez mieux faire ! Les p&eacute;diatres et les<br />p&eacute;dopsychiatres pr&eacute;conisent un usage moindre.<br />Essayez encore.
+    Vous pouvez mieux faire ! Les p&eacute;diatres et les<br />p&eacute;dopsychiatres ne pr&eacute;conisent pas un usage<br />en d&eacute;but de matin&eacute;e. Essayez encore.
   </p>
 </div>
 <div id="e_validation">
@@ -67,7 +67,7 @@
       <span id="value">24h</span>
     </div>
   </div>
-  <input type="range" value="0" max="24" min="0" step="1" id="min_slider_2" oninput="
+  <input type="range" value="0" max="24" min="0" step="1" id="min_slider_2_2" oninput="
   this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
   let value = (this.value/parseInt(this.max))*100
   var children = this.parentNode.childNodes[1].childNodes;
@@ -76,7 +76,7 @@
   children[7].style.left=value+'%';children[11].style.left=value+'%';
   children[11].childNodes[1].innerHTML=this.value+'h';" />
 
-  <input type="range" value="24" max="24" min="0" step="1" id="max_slider_2" oninput="
+  <input type="range" value="24" max="24" min="0" step="1" id="max_slider_2_2" oninput="
   this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
   let value = (this.value/parseInt(this.max))*100
   var children = this.parentNode.childNodes[1].childNodes;
