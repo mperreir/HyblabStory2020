@@ -2,14 +2,24 @@
 'use strict';
 
 // Load usefull expressjs and nodejs objects / modules
-var express = require('express');
-var path = require('path');
+let express = require('express');
+let path = require('path');
 
-var app = express();
+let app = express();
 
 // Minimum routing: serve static content from the html directory
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '../__common-logos__')));
+app.set('views', path.join(__dirname, '/views'));
+
+app.set('view engine', 'ejs');
+
+
+app.use('/story', (req, res, next) => res.render('story'));
+
+app.use('/credits', (req, res, next) => res.render('credits'));
+
+app.use('/', (req, res, next) => res.render('cover'));
 
 // You can then add whatever routing code you need
 

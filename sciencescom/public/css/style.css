@@ -1,169 +1,434 @@
-/* ------- Important ! Regardez bien à la fin de ce CSS pour des règles permettant de ----------- */
-/* contraindre le format des slides affichés sur la page web */
-
+/* Polices d'écriture */
+@font-face {
+    font-family: Avenir;
+    src: url("../fonts/AvenirLTStd-Medium.otf");
+    font-weight: normal;
+}
 
 /* normalisation des marges et padding pour simplifier le positionnement des éléments */
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-body{
-    background-color: black;
-    color: white;
-    overflow: hidden;   /* pour slidr dans certains navigateurs */
-}
-
-#container{
-    position: relative; /* pour permettre le positionnement en absolu des autres éléments */
-}
-
-/* on fait en sorte que le slidr et les slides remplissent tout notre conteneur */
-#slidr, #slidr section{
-    background-color: dodgerblue;
+.wrap {
+    position: relative;
     width: 100%;
-    height: 100%;
+    margin: 0;
 }
 
-/* pour le positionnement facile, on place tout en absolue et on exprime tout en % */
-#titre{
-    text-align: center;
-    width: 20%;
-    left: 30%;
-    top: 10%;
+/* Logos */
+#logos {
+    font-size: 35px;
     position: absolute;
-    font-size: 30%;
+    top: 1em;
+    left: 1em;
+    height: 1em;
 }
 
-#logo-hyblab{
+.logo {
+    height: 1em;
+    display: inline-block;
+}
+
+.logo-separator {
+    width: 0.4em;
+    display: inline-block;
+}
+
+.horizontal-center {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+/* Frame */
+.cover-slide {
+    width: 100vw !important;
+    height: 100vh !important;
+    float: left;
+    margin: 0 1px 0 0;
+    padding: 0;
     text-align: center;
-    width: 50%;
-    left: 50%;
-    top: 50%;
-    margin-left:-25%;
-    margin-top:calc(-7.5% * 9 / 16 ); /* les marges sont exprimées en % de la largeur... :-( */
-    position: absolute;
-    font-size: 50%;
     cursor: pointer;
 }
 
-#background-video{
-    position: relative; /* on doit positionner un éléments pour pouvoir ajuster sont z-index */
-    z-index: -1;
+.slide {
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
 }
 
-/* on centre l'image de fin */
-#img-fini{
-    width: 50%;
-    left: 50%;
-    top: 40%;
-    position: absolute;
-    margin-left:-25%;
-    margin-top:calc(-25% * 9 / 16 ); /* les marges sont exprimées en % de la largeur... :-( */
-}
-
-/* le footer de la slide 1 est positionné en bas de la slide et son texte est centré */
-section[data-slidr="page-1"] footer{
+.key-slide-content{
     width: 100%;
-    bottom: 5%;
-    position: absolute;
-    font-size: 20%;
-    text-align: center;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
 }
 
-/* Pour que la vidéo remplisse son conteneur (elle sera un peu coupée si nécessaire...) */
-.vjs-tech { object-fit: cover; }
-
-/* dernier slide sur fond blanc */
-section[data-slidr="page-2"]{
-    background-color: white;
+.slide:not(#carteInteractive) * {
+    position: absolute;
 }
 
-/* ---------- mise en forme du bandeau des logos ----------------- */
-/* ici comme on doit contraindre la hauteur des images (et non leur largeur) */
-/* on ne peut pas utiliser de taille en % on utilise donc des em (qui sont définis */
-/* comme proportiels à la tailles des slides grace à nos règles plus bas */
-/* (cf. fondt-size du body) */
+.frame {
+    height: 100%;
+    line-height: 300px;
+    overflow: hidden;
+}
 
-#bandeau {
-    padding-top: 3%;
-    width:100%;
-    height:17%;
-    position: absolute;
-    bottom: 0;
-    background-color: white;
-    font-size: 20%;
-    z-index: -1;
-  }
+/* Bounce */
+#livre-icon, #martine, #carte-icon {
+    animation-delay: 1s;
+}
+.bounce {
+    transition: transform 0.5s ease;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+.bounce:hover {
+    transform: scale(1.2);
+    animation: none;
+}
+@keyframes bounce {
+    0%   { transform: scale(1,1)}
+    10%  { transform: scale(1.1,.9)}
+    30%  { transform: scale(.9,1.1)}
+    50%  { transform: scale(1,1)}
+    100% { transform: scale(1,1)}
+}
 
-  #bandeau li{
-    list-style-type: none;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 0.5em;
-  }
+/* ------- Important ! Regardez bien à la fin de ce CSS pour des règles permettant de ----------- */
+/* contraindre le format des slides affichés sur la page web */
 
+.frame ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 50px;
+    overflow: hidden;
+}
 
-  #bandeau img{
-    height: 2em;
-  }
-
-  #bandeau #hyblab{
-    margin: 0.5em 3em;
-    height: 3em;
+.frame ul li {
     float: left;
-  }
-
-  #bandeau #cc, #bandeau #opensource
-  {
-    height: 1em;
-  }
-
-  #bandeau .stacked{
-    display:block;
-  }
-
-  #bandeau ul{
+    width: 1140px;
+    height: 100%;
+    margin: 0 1px 0 0;
+    padding: 0;
     text-align: center;
-    padding: 0 0;
-  }
+    cursor: pointer;
+}
 
-  #bandeau .institutionnel
-  {
-    height: 2em;
-  }
+body {
+    background-color: white;
+    overflow: hidden;
+    font-family: Avenir, sans-serif;
+}
 
-/* ---------- media queries importantes pour le responsive facile :-D ----------------- */
-/* Vous pouvez bien sûr l'adapter pour d'autres ratio que 16:9 */
 
-/* Cette media query permet de s'assurer qu'on remplit toujours la largeur de la fenêtre, 
-tant qu'on est en dessous de l'apect ratio 16/9 */
-@media screen and (max-aspect-ratio: 16/9){
-    #container{
-        margin-top: calc((100vh - 100 * 9vw / 16) / 2);
-        width: 100vw;
-        height: calc(100 * 9vw / 16);
-    }
+/* Slider */
 
-    /* On fixe une taille de police par défaut pour le body qui servira de base à toutes 
-    les autres tailles de police. Celle-ci est proportionelle à la largeur ici. */
-    body{
-        font-size: 9vw;
+.slidercontainer {
+    bottom: 3.5vh;
+    position: fixed;
+    width: 50vw; /* Width of the outside container */
+    transform: translate(50%, 0);
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0.2vh;
+    border-radius: 5px;
+    background: #2d447c;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2.5vh;
+    height: 2.5vh;
+    border-radius: 50%;
+    border-width: 0;
+    background: var(--map-dot-color);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 2.5vh;
+    height: 2.5vh;
+    border-radius: 50%;
+    border-width: 0;
+    background: var(--map-dot-color);
+    cursor: pointer;
+}
+
+
+/* Animations */
+.dooranimation {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+}
+
+/* Décor */
+#bg-decor{
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+    left: 10vw;
+    top: 0
+}
+
+.inslide-decor{
+    width: 80vw;
+    height: 100vh;
+    left: 10vw;
+    top: 0;
+    visibility: hidden;
+}
+
+
+/* Cover */
+#firstpage-slide {
+    background-color: #002B5B;
+}
+
+#never-stop-daring {
+    position: absolute;
+    width: 55vh;
+    top: 15vh
+}
+
+#bottompart {
+    position: absolute;
+    bottom: 104vh;
+}
+
+.indication {
+    font-family: Avenir, sans-serif;
+    color: white;
+    font-size: 30px;
+    line-height: normal;
+}
+
+#mouse-scroll-tip img {
+    height: 80px;
+    margin-top: 25px;
+}
+
+#mouse-scroll-tip p {
+    font-family: Avenir, sans-serif;
+    font-size: 13px;
+    margin-top: 15px;
+    color: #DD4C73;
+}
+
+@keyframes opacityOn {
+    50% {
+        opacity: 0;
     }
 }
 
-/* Cette media query permet de s'assurer qu'on remplit toujours la hauteur de la fenêtre, quand on est au 
-dessus de l'apect ratio 16/9 */
-@media screen and (min-aspect-ratio: 16/9){
-    #container{
-        margin-left: calc((100vw - 100 * 16vh / 9) / 2);
-        width: calc(100 * 16vh / 9);
-        height: 100vh;
-    }
 
-    /* On fixe une taille de police par défaut pour le body qui servira de base à toutes 
-    les autres tailles de police. Celle-ci est proportionelle à la hauteur ici. */
-    body{
-        font-size: 16vh;
+/* TextBox */
+
+.textBox {
+    width: 25vw;
+    left: 5vw;
+    bottom: 15vh;
+}
+
+.textBoxTyped {
+    width: 14.5vw;
+    height: 0;
+    left: 15vw;
+    bottom: 15vh;
+    margin-bottom: 7vw;
+    color: black;
+    line-height: normal;
+    font-size: 1.1vw;
+    text-align: left;
+}
+
+.typed-cursor {
+    display: none;
+}
+
+
+/* Carte interactive */
+
+:root {
+    --map-bg-color: #ffffff;
+    --map-fg-color: #002d59;
+    --map-dot-color: #e83368;
+}
+
+#carteInteractive {
+    background-color: var(--map-bg-color);
+}
+
+.p3-t2-container {
+    position: relative;
+    height: 100vh;
+}
+
+.mapContainer {
+    margin: 60px;
+    height: content-box;
+    width: content-box;
+}
+
+.mapael .map {
+    position: relative;
+    height: 80vh;
+}
+
+.mapael .mapTooltip {
+    position: absolute;
+    background-color: var(--map-bg-color);
+    border-color: var(--map-dot-color);
+    border-width: 5px;
+    border-style: solid;
+    moz-opacity: 0.90;
+    opacity: 0.90;
+    filter: alpha(opacity=90);
+    border-radius: 40px;
+    z-index: 999;
+    max-height: 80vh;
+    max-width: 30vw;
+    margin: 5px;
+    padding: 5px;
+    color: var(--map-fg-color);
+    font-size: 1.9vw;
+    font-family: Avenir;
+    line-height: initial;
+    display: none;
+}
+
+.mapael .plotLegend {
+    position: absolute;
+    bottom: 5vh;
+    left: 5vw;
+    z-index: 1000;
+}
+
+.mapael .plotLegend svg {
+    overflow: visible !important;
+}
+
+.city {
+    font-weight: bold
+}
+
+.date {
+    opacity: 0.80;
+    font-size: 0.8em;
+    font-weight: lighter;
+}
+
+.description {
+    opacity: 0.92;
+    font-size: 0.8em;
+}
+
+
+/* Crédits */
+
+#credits {
+    text-decoration: none;
+    transition: opacity 1s ease;
+    opacity: 0;
+    color: #002B5E;
+    font-size: 2vw;
+    bottom: 5vh;
+    left: 48vw;
+    font-weight: bolder;
+    line-height: initial;
+}
+
+#credits:hover {
+    color: #DD4C73;
+}
+/* Entrée des personnages */
+
+
+@keyframes animPersoLeft {
+    from {left: -15vw;
+        opacity: 1;}
+    to {left: 32vw;
+        opacity: 1;}
+}
+
+@keyframes animPersoRight {
+    from {left: 100vw;
+        opacity: 1;}
+    to {left: 54.3vw;
+        opacity: 1;}
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
     }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.persoLeft{
+    height: 27vw;
+    left: -15vw;
+    bottom: 4.5vw;
+    transform: scaleX(-1);
+    animation-name: animPersoLeft;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-fill-mode: none;
+    opacity: 0;
+}
+
+.persoRight{
+    height: 27vw;
+    left: 100vw;
+    bottom: 3.7vw;
+    animation-name: animPersoRight;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-fill-mode: none;
+    opacity: 0;
+}
+
+.disappearAfter6s{
+    animation: disappear 6s steps(1, end) forwards;
+}
+
+.appearAfter6s{
+    animation: appear 6s steps(1, end) forwards;
 }

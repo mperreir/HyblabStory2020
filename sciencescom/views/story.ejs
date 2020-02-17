@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+    <base class="baseUrl" href="/sciencescom/">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Hyblab 2020 Auden'story</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <!-- Nécessité de charger jquery dans le head pour l'affichage de la carte -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/typed.js"></script>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="wrap" style="width: 100vw; margin: 0;">
+
+            <img src="img/decors/decor_now.webp" id="bg-decor">
+            <div id="decor_hider"
+                style="width: 100vw; height: 100vh; left: 0; top: 0; position: absolute; display: none; background-color: white;">
+            </div>
+
+
+            <video class="dooranimation" id="door_now">
+                <source src="vid/door_now.webm" type="video/webm">
+            </video>
+            <video class="dooranimation" id="door_70s">
+                <source src="vid/door_70s.webm" type="video/webm">
+            </video>
+            <video class="dooranimation" id="door_1900">
+                <source src="vid/door_1900.webm" type="video/webm">
+            </video>
+            <video class="dooranimation" id="door_latest">
+                <source src="vid/door_latest.webm" type="video/webm">
+            </video>
+            <video class="dooranimation" id="door_now_rev">
+                <source src="vid/door_now_rev.webm" type="video/webm">
+            </video>
+            <video class="dooranimation" id="door_70s_rev">
+                <source src="vid/door_70s_rev.webm" type="video/webm">
+            </video>
+            <video class="dooranimation" id="door_1900_rev">
+                <source src="vid/door_1900_rev.webm" type="video/webm">
+            </video>
+            <video class="dooranimation" id="door_latest_rev">
+                <source src="vid/door_latest_rev.webm" type="video/webm">
+            </video>
+
+            <div class="frame oneperframe" id="oneperframe" style="overflow: hidden; height: 100%;">
+                <ul class="clearfix">
+                    <%- include('slides/start.ejs') -%>
+
+                    <%- include('slides/period1/introduction.ejs') -%>
+                    <%- include('slides/period1/testimony1.ejs') -%>
+                    <%- include('slides/period1/testimony2.ejs') -%>
+
+                    <%- include('slides/period2/introduction.ejs') -%>
+                    <%- include('slides/period2/testimony1.ejs') -%>
+                    <%- include('slides/period2/testimony2.ejs') -%>
+
+                    <%- include('slides/period3/introduction.ejs') -%>
+                    <%- include('slides/period3/testimony1.ejs') -%>
+                    <%- include('slides/period3/testimony2.ejs') -%>
+
+                    <%- include('slides/end.ejs') -%>
+                </ul>
+            </div>
+
+            <div class="slidercontainer">
+                <input type="range" min="0" max="4" value="0" class="slider" id="timeSlider" disabled="true">
+            </div>
+
+            <div id="logos">
+                <img src="img/logo/logo_audencia_b.png" class="logo" />
+                <div class="logo-separator"></div>
+                <img src="img/logo/logo_120_b.png" class="logo" />
+            </div>
+
+            <img class="next" src="img/elements/bouton_scroll_bleu.png" style="width: 3vw; right: 4vw; bottom: 3vh; position: fixed;">
+            <div id="mouse-scroll-tip" style="width: 10vw; right: 1vw; bottom: 1vh; position: fixed;">
+                <p style="font-size: 0.68vw; animation: opacityOn 2s linear infinite">Défilez vers le bas pour avancer</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/sly.min.js"></script>
+    <script type="text/javascript" src="js/videoanimation.js"></script>
+    <script type="text/javascript" src="data/Personnage.js"></script>
+    <script type="text/javascript" src="js/horizontal.js"></script>
+    <script type="text/javascript" src="js/map/raphael-min.js"></script>
+    <script type="text/javascript" src="js/map/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="js/map/jquery.mapael-custom.js"></script>
+    <script type="text/javascript" src="js/map/world_countries_miller-custom.js"></script>
+    <script type="text/javascript" src="js/map/carteInteractive.js"></script>
+</body>
+
+</html>

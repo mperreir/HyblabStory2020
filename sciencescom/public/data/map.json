@@ -1,0 +1,98 @@
+[
+    {
+        "ville": "Bruxelles",
+        "pays": "Belgique",
+        "continent": "Europe",
+        "coordonnees": {
+            "longitude": 4.351710,
+            "latitude": 50.850340
+        },
+        "type": "Accreditation",
+        "date": 1998,
+        "description": "Obtention du label EQUIS (European Quality Improvement System)"
+    },
+    {
+        "ville": "Tampa",
+        "pays": "USA",
+        "continent": "Amerique",
+        "coordonnees": {
+            "longitude": -82.4571776,
+            "latitude": 27.950575
+        },
+        "type": "Accreditation",
+        "date": 2004,
+        "description": "Obtention du label AACSB (Association to Advance Collegiate Schools of Business)"
+    },
+    {
+        "ville": "Londres",
+        "pays": "Royaume-Uni",
+        "continent": "Europe",
+        "coordonnees": {
+            "longitude": -1.297355,
+            "latitude": 52.630886
+        },
+        "type": "Accreditation",
+        "date": 2005,
+        "description": "Obtention de l’accréditation anglaise AMBA (Association of Master of Business Administration)"
+    },
+    {
+        "ville": "Morges",
+        "pays": "Suisse",
+        "continent": "Europe",
+        "coordonnees": {
+            "longitude": 6.496130,
+            "latitude": 46.508813
+        },
+        "type": "Partenariat",
+        "date": 2012,
+        "description": "Partenariat stratégique avec la branche française de la WWF (World Wildlife Fund)"
+    },
+    {
+        "ville": "Chengdu",
+        "pays": "Chine",
+        "continent": "Asie",
+        "coordonnees": {
+            "longitude": 104.066541,
+            "latitude": 30.572269
+        },
+        "type": "Partenariat",
+        "date": 2015,
+        "description": "Création d’un cursus de formation commun avec la Western Business School of China"
+    },
+    {
+        "ville": "Alger",
+        "pays": "Algérie",
+        "continent": "Afrique",
+        "coordonnees": {
+            "longitude": 3.042048,
+            "latitude": 36.752887
+        },
+        "type": "Partenariat",
+        "date": 2017,
+        "description": "Coopération avec l’École Supérieure Algérienne des Affaires pour rendre accessible l’Executive MBA (Master of Business Administration) d’Audencia depuis l’Algérie"
+    },
+    {
+        "ville": "Shenzhen",
+        "pays": "Chine",
+        "continent": "Asie",
+        "coordonnees": {
+            "longitude": 114.057868,
+            "latitude": 22.543099
+        },
+        "type": "Campus",
+        "date": 2016,
+        "description": "Ouverture d’un nouveau campus à Shenzhen"
+    },
+    {
+        "ville": "Nantes, La-Roche-sur-Yon, Paris",
+        "pays": "France",
+        "continent": "Europe",
+        "coordonnees": {
+            "longitude": -1.560839,
+            "latitude": 47.204519
+        },
+        "type": "Campus",
+        "date": "2006 à 2020",
+        "description": "2006 : Fusion avec SciencesCom et l’École Atlantique de Commerce.|2013 : Ouverture d’un nouveau campus à Paris.|2014 : Création de l’Alliance, union entre Audencia, Centrale Nantes et l'ENSA Nantes.|2017 : Ouverture du MEDIACAMPUS, nouveau campus d’Audencia SciencesCom.|2020 : Ouverture d’un nouveau campus en Vendée."
+    }
+]
