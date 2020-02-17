@@ -2,8 +2,8 @@ animArray = [];
 
 $(document).ready(function () {
 
-    //Pas compatible firefox et IE
-    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 || navigator.userAgent.toLowerCase().indexOf('MSIE') > -1) {
+    //Pas compatible IE
+    if (navigator.userAgent.toLowerCase().indexOf('MSIE') > -1) {
         $(".error-nav").show().css("display", "flex");
 
     } else {
