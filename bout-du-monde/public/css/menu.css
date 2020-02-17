@@ -1,0 +1,38 @@
+.menu {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 60;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu:hover .menu-svg {
+    -webkit-transform-origin: right;
+    -webkit-transform:scale(1.5);
+}
+
+.menu-svg {
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    -webkit-transform-origin: right;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+/*.menu {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 65;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.menu-svg-fleuve {
+    height: 100%;
+}
+*/

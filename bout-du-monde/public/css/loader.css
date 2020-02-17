@@ -1,0 +1,51 @@
+.loader {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f1f5f6;
+    z-index: 99999;
+    position: fixed;
+    font-family: Dosis;
+    font-size: 20px;
+    color: #485F62;
+}
+
+.pourcent {
+    z-index: 201;
+    background-color: #f1f5f6;
+    padding: 2px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bar {
+    position: absolute;
+    height: 2px;
+    width: 0vw;
+    background-color: #485F62;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.loader-info {
+    height: 50%;
+    z-index: 51;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    position: relative;
+}
+
+.loader-perso {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+}
+
+.txt-loader {
+    text-align: center;
+}

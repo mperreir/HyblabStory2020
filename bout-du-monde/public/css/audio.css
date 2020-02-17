@@ -1,0 +1,56 @@
+.sound-icon {
+   position: fixed;
+   left: 20px;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 65;
+   display: flex;
+   flex-direction: column;
+}
+
+.sound {
+   cursor: pointer;
+   margin: 5px;
+}
+
+.script {
+   height: 30px;
+}
+
+.player {
+   height: 40px;
+}
+
+.script-txt {
+   height: 15px;
+}
+
+.player-txt {
+   height: 15px;
+}
+
+.wrapper {
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   top: 50%;
+   transform: translateY(-50%);
+   left: 10px;
+   padding: 20px;
+   z-index: 99;
+}
+
+.wrapper-popup {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 60;
+   height: 50%;
+   display: none;
+   cursor: pointer;
+}
+
+.player:hover .player-txt {
+   visibility: visible !important;
+}

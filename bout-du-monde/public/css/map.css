@@ -1,0 +1,21 @@
+/* Canvas container */
+.map-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Story */
+.text {
+    font-size: 100vh;
+}
+
+.text p {
+    margin: 0px;
+    padding-top: 250vh;
+    padding-bottom: 250vh;
+}
+
+.js-section {
+    width: 0;
+}

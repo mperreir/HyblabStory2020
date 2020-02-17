@@ -1,0 +1,168 @@
+.div-txt {
+    font-style: normal;
+    z-index: 58;
+    color: white;
+    position: fixed;
+    left: 13.8%;
+    top: 15.2%;
+}
+
+.div-txt-anim, .txt-anim {
+    color: #485F62;
+}
+
+.txt-title {
+    font-family: Adobe Garamond Semibold;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0px 0px 30px;
+}
+
+.txt-p {
+    font-family: Dosis;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 32px;
+}
+
+.div-txt-map {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.txt-p-fleuve1 {
+    position: absolute;
+    bottom: 15.6%;
+    left: 16.4%;
+}
+
+.txt-p-fleuve2 {
+    position: absolute;
+    top: 34.8%;
+    right: 25.9%;
+}
+
+.div-txt-seul {
+    top: 20.7%;
+}
+
+.div-txt-tashi {
+    top: 23.8%;
+}
+
+.div-txt-walk {
+    top: 20.2%;
+}
+
+.div-txt-chute {
+    top: 24.8%;
+}
+
+.div-txt-seul2 {
+    top: 25.1%;
+}
+
+.div-txt-help {
+    top: 36%;
+}
+
+.div-txt-rewalk {
+    top: 60.1%;
+}
+
+.div-txt-grotte {
+    top: 23.4%;
+}
+
+.div-txt-grotte2 {
+    top: 50.6%;
+}
+
+.div-txt-meet {
+    top: 59.4%;
+}
+
+.div-txt-back {
+    top: 21%;
+}
+
+@media screen and (max-width: 1700px) {
+    .txt-title {
+        font-size: 35px;
+        line-height: 42px;
+    }
+
+    .txt-p {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    section button {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .txt-title {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .txt-p {
+        font-size: 19px;
+        line-height: 24px;
+    }
+
+    section button {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .txt-title {
+        font-size: 26px;
+        line-height: 31px;
+    }
+
+    .txt-p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    section button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .txt-title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .txt-p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    section button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .txt-title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .txt-p {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    section button {
+        font-size: 10px;
+    }
+}
