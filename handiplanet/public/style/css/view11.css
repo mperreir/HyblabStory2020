@@ -1,0 +1,186 @@
+/*
+ * File Created: 2020-01-28 13:52:00
+ * Author: Pierre MAUPIN
+ * Copyright - 2020 Pierre MAUPIN
+ */
+#view11 {
+  width: 100vw;
+  height: 100vh;
+}
+#view11 #view-11-middle {
+  width: 80vw;
+  height: 80vh;
+  margin: 0px 10vw;
+  border-bottom: 2px solid #5A8D8C;
+  position: relative;
+  background-image: url("../../assets/view11/Vegetation-view11.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom -4px center;
+}
+#view11 #view-11-middle #view-11-premium-red-tiny-dot {
+  position: absolute;
+  z-index: 500;
+  bottom: 50%;
+  left: 30%;
+  width: 1.5vh;
+  height: 1.5vh;
+  border-radius: 100%;
+  background-color: #71C0A0;
+}
+#view11 #view-11-middle #view-11-premium-green-ring {
+  position: absolute;
+  z-index: 500;
+  top: 15%;
+  right: 65%;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 100%;
+  border: 1vh solid #CB563E;
+}
+#view11 #view-11-middle #view-11-premium-white-ring {
+  position: absolute;
+  z-index: 500;
+  transition: transform ease-in-out;
+  top: 25%;
+  right: 30%;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 100%;
+  border: 5px solid #ffffff;
+}
+#view11 #view-11-middle img {
+  position: relative;
+  bottom: -2px;
+}
+#view11 #view-11-middle #view-11-hotelA-img {
+  z-index: 5;
+  position: absolute;
+  height: 40vh;
+  max-width: 100%;
+  left: 5%;
+}
+#view11 #view-11-middle #view-11-hotelB-img {
+  z-index: 20;
+  position: absolute;
+  height: 40vh;
+  max-width: 100%;
+  left: 35%;
+}
+#view11 #view-11-middle #view-11-vegetation-img {
+  z-index: 6;
+  position: absolute;
+  height: 20vh;
+  max-width: 100%;
+}
+#view11 #view-11-middle article {
+  z-index: 7;
+  position: absolute;
+  left: 65%;
+  max-width: 30%;
+  bottom: 30%;
+}
+#view11 #view-11-middle figcaption {
+  z-index: 100;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #426262;
+  top: 0%;
+  position: relative;
+  margin: 0px !important;
+}
+#view11 #view-11-middle figcaption em {
+  font-weight: bold;
+  color: #CB563E;
+}
+#view11 #view-11-middle #view-11-hotel-a-caption {
+  position: absolute;
+  left: 0%;
+  top: -10%;
+  transform: translateX(100%);
+}
+#view11 #view-11-middle #view-11-hotel-b-caption {
+  position: absolute;
+  left: 10%;
+  transform: translateX(100%);
+}
+#view11 #view-11-middle #view-11-button-hotel-a {
+  right: -10%;
+  top: -100%;
+}
+#view11 #view-11-middle #view-11-button-hotel-b {
+  right: 0%;
+  top: -120%;
+}
+#view11 #view-11-middle .view-11-button {
+  position: absolute;
+  width: 25%;
+  height: 20%;
+  bottom: 0%;
+}
+#view11 #view-11-middle .view-11-button .view-11-bat {
+  width: 100%;
+  height: 100%;
+}
+#view11 #view-11-middle .view-11-button button {
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10000;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#view11 #view-11-middle .view-11-button button:hover {
+  transform: scale(1.2, 1.2);
+}
+#view11 #view-11-middle .view-11-button button:hover .view-11-icon {
+  opacity: 100%;
+}
+#view11 #view-11-middle .view-11-button button img {
+  position: relative;
+  width: 50%;
+}
+#view11 #view-11-middle .view-11-button button .view-11-icon {
+  width: 15%;
+  position: absolute;
+  opacity: 0%;
+  transition: opacity 0.5s;
+}
+#view11 #view-11-middle .view-11-button button .view-11-icon.view-11-1 {
+  top: -10%;
+  right: 35%;
+}
+#view11 #view-11-middle .view-11-button button .view-11-icon.view-11-2 {
+  top: -20%;
+  right: 10%;
+}
+#view11 #view-11-middle .view-11-button button .view-11-icon.view-11-3 {
+  top: -20%;
+  right: -10%;
+}
+#view11 #view-11-middle .view-11-button .view-11-circle {
+  position: absolute;
+  right: 5%;
+}
+#view11 #view-11-middle .view-11-button #view-11-circle-a {
+  top: 12%;
+}
+#view11 #view-11-middle .view-11-button #view-11-circle-b {
+  top: 12%;
+}
+#view11 footer {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+}
+
+/*# sourceMappingURL=view11.css.map */

@@ -1,70 +1,151 @@
-<!doctype html>
+<!--
+File Created: 2020-01-27 13:18:21
+Author: Christophe SONNEVILLE
+Copyright - 2020 Christophe SONNEVILLE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style/css/index.css">
+    <link rel="stylesheet" href="./style/css/contexte.css">
+    <link rel="stylesheet" href="./style/css/app.css">
+    <link rel="stylesheet" href="./style/css/view1.css">
+    <link rel="stylesheet" href="./style/css/view2.css">
+    <link rel="stylesheet" href="./style/css/view3-free.css">
+    <link rel="stylesheet" href="./style/css/view3-premium.css">
+    <link rel="stylesheet" href="./style/css/view4.css">
+    <link rel="stylesheet" href="./style/css/view5.css">
+    <link rel="stylesheet" href="./style/css/view7.css">
+    <link rel="stylesheet" href="./style/css/view6-premium.css">
+    <link rel="stylesheet" href="./style/css/view8.css">
+    <link rel="stylesheet" href="./style/css/view6-free.css">
+    <link rel="stylesheet" href="./style/css/view9free.css">
+    <link rel="stylesheet" href="./style/css/view9premium.css">
+    <link rel="stylesheet" href="./style/css/view10.css">
+    <link rel="stylesheet" href="./style/css/view13.css">
+    <link rel="stylesheet" href="./style/css/view14.css">
+    <link rel="stylesheet" href="./style/css/view12premium.css">
+    <link rel="stylesheet" href="./style/css/view12gratuit.css">
+    <link rel="stylesheet" href="./style/css/textChange.css">
+    <link rel="stylesheet" href="./style/css/view11.css">
+    <link rel="stylesheet" href="./style/css/comparatif.css">
+    <link rel="stylesheet" href="./style/css/viewremerciements.css">
 
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Hyblab 2020</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-  <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
-  <script src="https://rawcdn.githack.com/bchanx/slidr/397004f7acc338b112a9e1dc2481acc1446e0209/slidr.min.js"></script>
-  <script src="js/slide1.js" defer></script>
-  <script src="js/slide2.js" defer></script>
-  <script src="js/index.js" defer></script>
-</head>
-<body>
-    <!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-    <div id="container">
-        <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-        <main id = "slidr">
-            <section data-slidr="page-1">
-                <header>
-                    <h1 id="titre">Welcome to</h1>
-                </header>
-                
-                <img src="img/logo_hyblab.png" id="logo-hyblab"></img>
+    <script defer src="./js/soundManager.js"></script>
+    <script defer src="./js/colorPersoManager.js"></script>
+    <script defer src="./js/template.js"></script>
+    <script defer src="./js/scrollBar.js"></script>
+    <script defer src="./js/transitions.js"></script>
+    <script defer src="./js/view.js"></script>
+    <script defer src="./js/bodymovin.js"></script>
+    <script defer src="./views/view1/view1.js"></script>
+    <script defer src="./views/view2/view2.js"></script>
+    <script defer src="./views/contexte/contexte.js"></script>
+    <script defer src="./views/view3-free/view3-free.js"></script>
+    <script defer src="./views/view3-premium/view3-premium.js"></script>
+    <script defer src="./views/view4/view4.js"></script>
+    <script defer src="./views/view5/view5.js"></script>
+    <script defer src="./views/view6-free/view6-free.js"></script>
+    <script defer src="./views/view6-premium/view6-premium.js"></script>
+    <script defer src="./views/view8/view8.js"></script>
+    <script defer src="./views/view7/view7.js"></script>
+    <script defer src="./views/view9free/view9free.js"></script>
+    <script defer src="./views/view9premium/view9premium.js"></script>
+    <script defer src="./views/view10/view10.js"></script>
+    <script defer src="./views/view13/view13.js"></script>
+    <script defer src="./views/view12premium/view12premium.js"></script>
+    <script defer src="./views/view12gratuit/view12gratuit.js"></script>
+    <script defer src="./views/view14/view14.js"></script>
+    <script defer src="./views/view11/view11.js"></script>
+    <script defer src="./views/viewremerciements/viewremerciements.js"></script>
+    <script defer src="./views/comparatif/comparatif.js"></script>
+    <script defer src="./js/anime.min.js"></script>
+    <script defer src="./js/index.js"></script>
 
-                <video id="background-video" class="video-js" data-setup='{"autoplay": true, "loop" : true, "fill": true, "muted": true}'>
-                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-                </video>
+    <title>HandiGo</title>
 
-                <!-- le footer sera remplir à partir de données lues dans un fichier Json-->
-                <footer></footer>
-            </section>
-            <section data-slidr="page-2">
-                <img id="img-fini" src="https://www.tri-d-aix.com/media/bilder/fini_55c9f_2e319.png">
-                <footer id="bandeau">
-                        <!-- Logo Hyblab -->
-                          <a href="http://www.hyblab.fr/"><img id="hyblab" src="logo_hyblab.png" alt="Hyblab DataSport"></a>
-                      
-                          <!-- Les organisateurs -->
-                          <ul>
-                            <li><a href="http://www.ouestmedialab.fr/"><img src="logo_oml.png" alt="Ouest Médialab"></a></li>
-                            <li><a href="http://www.agrnantes.fr"><img src="ecoles/logo_agr.png" alt="AGR école de l'image"></a></li>
-                            <li><a href="http://www.univ-nantes.fr/"><img src="ecoles/logo_universitenantes.jpg" alt="Université de Nantes"></a></li>
-                            <li><a href="http://www.polytech.univ-nantes.fr/"><img src="ecoles/logo_polytech.png" alt="Polytech Nantes"></a></li>
-                            <li><a href="http://sciencescom.audencia.com/"><img src="ecoles/logo_sciencescom.jpg" alt="SciencesCom"></a></li>
-                          </ul>
-                          <!-- Les autres logos -->
-                          <ul>
-                            <!-- Logos CC et opensource -->
-                            <li>
-                            <ul>
-                              <li class="stacked"><img id="cc" src="logo_cc.png" alt="Creative commons"></li>
-                              <li class="stacked"><img id="opensource" src="logo_opensource.png" alt="Open source"></li>
-                            </ul>
-                            </li>
-                            <!-- Logo de votre porteur de projet -->
-                            <li><a href="http://www.mon-porteur-de-projet.org"><img src="no-logo.png" alt="Logo de mon porteur de projet"></a></li>
-                            <!-- Partenaires institutionnels -->
-                            <li><a href="http://www.paysdelaloire.fr/"><img class="institutionnel" src="institutionnels/logo_pdl.png" alt="Pays de La Loire"></a></li>
-                            <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="institutionnels/logo_nantesmetropole.png" alt="Nantes Métropole"></a></li>
-                          </ul>
-                </footer>
-            </section>
-        </main>
-    </div>
-</body>
+  </head>
+  <body>
+    <section id="home-view" class="view">
+      <div id="home-logo-handiplanet"> </div>
+
+      <div id="begin-button">
+        <h1>Démarrer</h1>
+      </div>
+      <div id="home-text-right">
+        <p>À travers cette expérience,</p>
+        <p>découvrez les avantages de l’accès premium</p>
+        <p>sur notre plateforme.</p>
+      </div>
+      <div id="home-sound">
+        <button id="home-sound-button"><img src="assets/SonW.svg" id="home-sound-img"></button>
+        <div id="home-recommandation-sound">
+          <p>Il est recommandé d’activer le son.</p>
+        </div>
+       </div>
+    </section>
+    <section id="app-view" class="view">
+      <div id="app-overlay">
+        <header>
+          <img src="./assets/logo-overlay.svg" alt="Logo handiplanete">
+          <ul>
+            <li><a href="https://handiplanet.com/pro" id="overlay-subscribe-link">Souscrire</a></li>
+          </ul>
+
+        </header>
+        <p id="scroll-title"></p>
+        <div id="scroll-point">
+          <div class="point selected last" data-place=0></div>
+          <div class="point" data-place=1></div>
+          <div class="point" data-place=2></div>
+          <div class="point" data-place=3></div>
+          <div class="point" data-place=4></div>
+          <div class="point" data-place=5></div>
+        </div>
+
+        <div id="overlay-buttons">
+          <div id="text-size">
+            <button class="text" id="large">Aa</button>
+            <button class="text" id="medium">Aa</button>
+            <button class="text selected" id="small">Aa</button>
+          </div>
+          <div class="switch" id="switch">
+            <button id="tog">
+              <img id="overlay-contrast-icon" src="assets/contrast.svg">
+            </button>
+          </div>
+
+        </div>
+        <div id="background-overlay">
+          <svg viewBox="0 0 1157 685" fill="none" id="overlay-bg-svg">
+            <path d="M1046.28 690.003H93.5308C139.078 562.107 -33.4378 539.109 7.27275 390.233C47.9833 241.356 250.447 292.129 308.158 247.408C356.89 209.644 354.875 152.595 356.89 78.3585C358.906 4.12191 500.5 -43.5 556.779 63.4305C600.898 147.257 709.5 100.503 835.224 152.595C957.157 203.116 960.83 303.086 1007.18 345.852C1053.54 388.619 1152.29 392.97 1155.92 526.919C1158.82 634.078 1084.04 676.958 1046.28 690.003Z" fill="url(#paint0_linear)" fill-opacity="0.5" stroke="#5A8D8C" stroke-width="2"/>
+            <defs>
+              <linearGradient id="paint0_linear" x1="413.5" y1="1" x2="413.5" y2="681" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#80BEA3" />
+                <stop offset="1" stop-color="#F9E9D7" />
+              </linearGradient>
+              <linearGradient id="paint1_linear" x1="391.311" y1="1.21484" x2="391.311" y2="581.5" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#D94D34"/>
+                <stop offset="1" stop-color="#FDE8D5"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <footer id="overlay-footer">
+          <div id="son">
+            <button id="overlay-sound-button"><img src="assets/Son.svg" id="overlay-sound-img"></button>
+          </div>
+        </footer>
+
+      </div>
+
+
+      <div id="clipper"></div>
+      <div id="view-container"></div>
+    </section>
+  </body>
 </html>

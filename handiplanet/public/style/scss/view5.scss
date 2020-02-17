@@ -1,0 +1,148 @@
+#view5 {
+
+  img{
+    position: absolute;
+  }
+  
+  height: 100vh;
+  width: 100vw;
+  
+  #decor-view-5 {
+    height: 80vh;
+    width: 80vw;
+    position: absolute;
+    margin: 0 10vw;
+
+    #fond-view-5{
+        width: 95%;
+        height: 95%;
+        bottom: 0%;
+        left: 0%;
+        position: absolute;
+    }
+
+  }
+
+  #speech {
+    bottom: 15%;
+    left: 20%;
+    max-height: 60%;
+    width: 30%;
+    position: absolute;
+  }
+
+  #view5-smartphone{
+    right: 5%;
+    bottom: 0%;
+    height: 80%;
+    object-fit: cover;
+    object-position: 0 15vh;
+    
+  }
+
+  #view5-croissant{
+    left: 17%;
+    bottom: 43%;
+    width: 20%;
+    border: 1px dashed grey;
+    border-radius: 50%;
+    border-bottom-right-radius: 0px;
+    
+  }
+
+  #view5-omelette{
+    left: 50%;
+    bottom: 40%;
+    width: 15%;
+    object-fit: scale-down;
+    border: 1px dashed grey;
+    border-radius: 50%;
+    border-bottom-left-radius: 0px;
+  }
+
+  #view5-pointille-1{
+    object-fit: none;
+    left: 19%;
+    bottom: 47%;
+    width: 15%;
+  }
+
+  #view5-pointille-2{
+    object-fit: none;
+    left: 38%;
+    bottom: 47%;
+    width: 10%;
+  }
+
+  #view5-cercle-1{
+    left: 58%;
+    width: 1%;
+    bottom: 70%;
+  }
+
+  #view5-cercle-2{
+    left: 10%;
+    width: 3%;
+    bottom: 38%;
+  }
+
+  #view5-cercle-3{
+    left: 8%;
+    width: 1%;
+    bottom: 10%;
+  }
+
+  #view5-cercle-4{
+    left: 60%;
+    width: 2%;
+    bottom: 50%;
+  }
+
+  button{
+    width: 15%;
+    bottom: 50%;
+    position: absolute;
+
+    p {
+      position: relative;
+      font-size: 21px;
+      line-height: 29px;
+      color: #426262;
+      // max-width: 25%;
+      text-align: center;
+      
+      em{
+        font-weight: bold;
+        color: #CB563E;
+      }
+    }
+
+    .view5-circle{
+      position: relative;
+    }
+
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    &:hover{
+      transform: scale(1.2, 1.2);
+    }
+  }
+
+  #view5-button-hotel-a {
+    left: 32%;  
+    bottom: 50%;
+  }
+
+  #view5-button-hotel-b {
+    left: 67%;  
+    bottom: 45%;
+  }
+
+}

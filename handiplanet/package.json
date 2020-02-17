@@ -1,0 +1,15 @@
+{
+  "name": "handigo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./public/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "./node_modules/.bin/sass --watch ./public/style/scss/:./public/style/css/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.25.1-test.1"
+  }
+}

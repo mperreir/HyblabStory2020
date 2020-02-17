@@ -1,0 +1,77 @@
+/*
+* Project: handigo
+* Created Date: Wednesday February 5th 2020
+* Author: Pierre Le Guen
+* -----
+* Last Modified: Thursday, 6th February 2020 1:53:57 pm
+* Modified By: Pierre Le Guen
+* -----
+* Copyright (c) 2020 Pierre Le Guen
+*/
+
+#view12premium {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    //background-color: rgba(20, 155, 96, 0.20);
+    #fond-payant {
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 70%;
+        height: 70%;
+    }
+    b {
+        font-weight: bold;
+        color: #CB563E;
+    }
+    img {
+        width: 8%;
+        height: 8%;
+        position: absolute;
+    }    
+    #arobase {
+        left: 25%;
+        top: 27%;
+    }
+    #youtube {
+        left: 45%;
+        top: 25%;
+    }
+    #clock {
+        left: 65%;
+        top: 20%;
+    }
+    #facebook {
+        left: 70%;
+        top: 50%;
+    }
+    #instagram {
+        left: 67%;
+        top: 70%;
+    }
+    #mail {
+        left: 25%;
+        bottom: 25%;
+    }
+    #money{
+        left: 20%;
+        top: 53%;
+    }
+    #phone{
+        left: 36%;
+        top: 67%;
+    }
+    #localisation{
+        left: 53%;
+        top: 65%;
+    }
+    #description{
+        position: relative;
+        width: 40%;
+        left: 50%;
+        top: 50%;
+        
+        transform: translateX(-50%) translateY(-50%);
+    }
+}

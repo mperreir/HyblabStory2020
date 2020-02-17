@@ -1,0 +1,122 @@
+#view5 {
+  height: 100vh;
+  width: 100vw;
+}
+#view5 img {
+  position: absolute;
+}
+#view5 #decor-view-5 {
+  height: 80vh;
+  width: 80vw;
+  position: absolute;
+  margin: 0 10vw;
+}
+#view5 #decor-view-5 #fond-view-5 {
+  width: 95%;
+  height: 95%;
+  bottom: 0%;
+  left: 0%;
+  position: absolute;
+}
+#view5 #speech {
+  bottom: 15%;
+  left: 20%;
+  max-height: 60%;
+  width: 30%;
+  position: absolute;
+}
+#view5 #view5-smartphone {
+  right: 5%;
+  bottom: 0%;
+  height: 80%;
+  object-fit: cover;
+  object-position: 0 15vh;
+}
+#view5 #view5-croissant {
+  left: 17%;
+  bottom: 43%;
+  width: 20%;
+  border: 1px dashed grey;
+  border-radius: 50%;
+  border-bottom-right-radius: 0px;
+}
+#view5 #view5-omelette {
+  left: 50%;
+  bottom: 40%;
+  width: 15%;
+  object-fit: scale-down;
+  border: 1px dashed grey;
+  border-radius: 50%;
+  border-bottom-left-radius: 0px;
+}
+#view5 #view5-pointille-1 {
+  object-fit: none;
+  left: 19%;
+  bottom: 47%;
+  width: 15%;
+}
+#view5 #view5-pointille-2 {
+  object-fit: none;
+  left: 38%;
+  bottom: 47%;
+  width: 10%;
+}
+#view5 #view5-cercle-1 {
+  left: 58%;
+  width: 1%;
+  bottom: 70%;
+}
+#view5 #view5-cercle-2 {
+  left: 10%;
+  width: 3%;
+  bottom: 38%;
+}
+#view5 #view5-cercle-3 {
+  left: 8%;
+  width: 1%;
+  bottom: 10%;
+}
+#view5 #view5-cercle-4 {
+  left: 60%;
+  width: 2%;
+  bottom: 50%;
+}
+#view5 button {
+  width: 15%;
+  bottom: 50%;
+  position: absolute;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#view5 button p {
+  position: relative;
+  font-size: 21px;
+  line-height: 29px;
+  color: #426262;
+  text-align: center;
+}
+#view5 button p em {
+  font-weight: bold;
+  color: #CB563E;
+}
+#view5 button .view5-circle {
+  position: relative;
+}
+#view5 button:hover {
+  transform: scale(1.2, 1.2);
+}
+#view5 #view5-button-hotel-a {
+  left: 32%;
+  bottom: 50%;
+}
+#view5 #view5-button-hotel-b {
+  left: 67%;
+  bottom: 45%;
+}
+
+/*# sourceMappingURL=view5.css.map */

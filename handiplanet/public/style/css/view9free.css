@@ -1,0 +1,68 @@
+/*
+* File Created: 2020-02-04 20:44:47
+* Author: Christophe SONNEVILLE
+* Copyright - 2020 Christophe SONNEVILLE
+*/
+#view9free {
+  height: 100vh;
+  width: 100vw;
+}
+#view9free #view-9f-middle {
+  width: 80vw;
+  height: 80vh;
+  margin: 0px 10vw;
+  border-bottom: 2px solid #5A8D8C;
+  position: relative;
+}
+#view9free #view-9f-middle section {
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+}
+#view9free #view-9f-middle section article:first-of-type {
+  flex: 2;
+  display: flex;
+}
+#view9free #view-9f-middle section article:first-of-type img {
+  max-height: 80%;
+  max-width: 80%;
+  display: block;
+  margin: auto;
+  margin-right: 5%;
+}
+#view9free #view-9f-middle section article:last-of-type {
+  display: flex;
+  flex: 1;
+  padding: 2%;
+}
+#view9free #view-9f-middle section article:last-of-type p {
+  margin: auto;
+  top: 25%;
+  position: relative;
+  margin: 0px !important;
+}
+#view9free #view-9f-middle #view9f-bulle1 {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+}
+#view9free #view-9f-middle #view9f-bulle2 {
+  position: absolute;
+  left: 80%;
+  top: 80%;
+}
+#view9free #view-9f-middle #view9f-bulle3 {
+  position: absolute;
+  left: 30%;
+  top: 90%;
+}
+#view9free #view-9f-middle #view9f-bulle4 {
+  position: absolute;
+  left: 80%;
+  top: 30%;
+}
+
+/*# sourceMappingURL=view9free.css.map */

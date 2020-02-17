@@ -1,0 +1,93 @@
+/*
+* File Created: 2020-02-05 18:20:33
+* Author: Christophe SONNEVILLE
+* Copyright - 2020 Christophe SONNEVILLE
+*/
+#viewremerciements {
+  height: 100vh;
+  width: 100vw;
+  
+  #view-thanks-middle {
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh 10vw;
+    margin-top: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    #view-thanks-replay {
+      z-index: 10000;
+      bottom: -70%;
+      position: relative;
+      background-color: #CB563E;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 34px;
+      color: #ffffff;
+    }
+    
+    section:first-of-type {
+      margin-top: auto;
+      display: flex;
+      
+      &>article {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        
+        &>img:first-of-type {
+          margin: 0px auto;
+          height: 14vh;
+          max-width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+
+      .sponsor {
+        width: 65%;
+        margin: auto;
+        margin-bottom: 30px;
+        display: flex;
+
+        img {
+          flex: 1;
+          height: 10vh;
+        }
+      }
+      
+      .view-thanks-name {
+        display: flex;
+        margin-bottom: 20px;
+        
+        div:first-of-type {
+          margin-right: 2vh;
+          div {
+            border: 1px solid #426262;
+            padding: 10px;
+            border-radius: 50%;
+            img {
+              display: block;
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+        div:last-of-type {
+          flex-grow: 1;
+          display: flex;
+          h1 {
+            margin: auto 0px;
+            font-size: 1.5em;
+            color: #426262;
+
+            em {
+              font-weight: bold;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}

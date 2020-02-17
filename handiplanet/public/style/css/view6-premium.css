@@ -1,0 +1,92 @@
+#view6-premium {
+  height: 100%;
+  width: 100vw;
+}
+#view6-premium img {
+  position: absolute;
+}
+#view6-premium #decor-view-6 {
+  height: 80vh;
+  width: 80vw;
+  position: relative;
+  margin: 0 10vw;
+}
+#view6-premium #decor-view-6 #fond-view-6-premium {
+  width: 80%;
+  height: 80%;
+  bottom: 0%;
+  left: 10%;
+  position: absolute;
+}
+#view6-premium p {
+  position: absolute;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  color: #426262;
+  max-width: 25%;
+}
+#view6-premium p em {
+  font-weight: bold;
+  color: #CB563E;
+}
+#view6-premium #view6-speech {
+  left: 50%;
+  bottom: 20%;
+}
+#view6-premium #view6p-container {
+  position: relative;
+  left: 10%;
+  bottom: 0%;
+  width: 20%;
+  height: 50%;
+}
+#view6-premium #view6premium-smartphone {
+  position: absolute;
+  width: 20%;
+  bottom: 0%;
+  left: 25%;
+}
+#view6-premium #view6premium-like {
+  bottom: 25%;
+  left: 15%;
+  box-shadow: 0 0 3px 0 #426262;
+  animation: view6p-pulse 6s infinite cubic-bezier(0, 0.29, 0.13, 0.99);
+  width: calc(fit-content - 20px);
+  border-radius: 30px;
+  transition: all 0.1s ease-in-out;
+}
+#view6-premium #view6premium-like:hover {
+  transform: scale(1.2, 1.2);
+  animation: none;
+}
+#view6-premium #view6premium-like:active {
+  transform: scale(1, 1);
+}
+#view6-premium #view6premium-hearts {
+  position: absolute;
+  left: 30%;
+  bottom: 10%;
+  width: 20%;
+}
+#view6-premium #view6p-circle-1 {
+  left: 15%;
+  bottom: 40%;
+}
+#view6-premium #view6p-circle-2 {
+  left: 70%;
+  bottom: 10%;
+}
+#view6-premium #view6p-circle-3 {
+  left: 70%;
+  bottom: 50%;
+}
+@keyframes view6p-pulse {
+  to {
+    box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);
+  }
+}
+
+/*# sourceMappingURL=view6-premium.css.map */

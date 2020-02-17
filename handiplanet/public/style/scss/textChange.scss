@@ -1,0 +1,46 @@
+/*
+ * File Created: 2020-01-28 13:52:00
+ * Author: Pierre MAUPIN
+ * Copyright - 2020 Pierre MAUPIN
+ */
+.body-small{
+  .text-change{
+    font-size: 18px !important;
+  }
+}
+.body-medium{
+  .text-change{
+    font-size: 21px !important;
+  }
+}
+.body-large{
+  .text-change{
+    font-size: 24px !important;
+  }
+}
+
+.text-change {
+  font-family: Nunito !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  line-height: 29px !important;
+  
+  color: #426262 !important;
+  * {
+    color: #426262 !important;
+  }
+
+  em, span {
+    color: #cb563e !important;
+    font-weight: bold !important;
+  }
+
+  cite{
+    font-family: Nunito !important;
+    font-style: normal !important;
+    font-weight: lighter !important;
+    font-size: 15px !important;
+    line-height: 29px !important;
+    color: #426262 !important;
+  }
+}

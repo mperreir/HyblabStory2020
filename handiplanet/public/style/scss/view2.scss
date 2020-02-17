@@ -1,0 +1,139 @@
+/*
+ * File Created: 2020-01-28 13:52:00
+ * Author: Pierre MAUPIN
+ * Copyright - 2020 Pierre MAUPIN
+ */
+ 
+ #second-view {
+    height: 100vh;
+    width: 100vw;
+    #decor-view-2 {
+      height: 80vh;
+      width: 80vw;
+      position: relative;
+      margin: 0 10vw;
+
+      p {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        //font-size: 21px;
+        line-height: 29px;
+        color: #426262;
+      }
+
+      img {
+        position: absolute;
+      }
+
+      #speech {
+        max-width: 23%;
+        right: 13%;
+        bottom: 15%;
+        position: absolute;
+
+      }
+      
+      figcaption {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 29px;
+        color: #426262;
+        top: 25%;
+        position: relative;
+        margin: 0px !important;
+
+        em{
+          font-weight: bold;
+          color: #CB563E;
+        }
+      }
+
+      #hotel-a-caption{
+        position: relative;
+        bottom: -15%;
+      }
+
+      #hotel-b-caption{
+        position: relative;
+        bottom: -15%;
+      }
+
+
+
+      #ordi-view-2 {
+        position: relative;
+        height: 70%;
+        width: 50%;
+      }
+  
+      #fond-view-2 {
+        width: 80%;
+        bottom: 0%;
+        left: 10%;
+      }
+
+      button{
+        padding: 0px;
+        width: 60%;
+        height: 90%;
+        top: -50%;
+        position: absolute;
+
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        &:hover{
+          transform: scale(1.2, 1.2);
+        }
+        
+        img {
+          position: relative;
+          width: 50%;
+        }
+      }
+
+      @-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+      @-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+      @-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+      @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+
+      #circle-a{
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      #circle-b{
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        transform: translateX(-50%) translateY(70%);
+      }
+
+      #button-hotel-a {
+        left: -40%;  
+      }
+
+      #button-hotel-b {
+        right:  10%;
+      }
+
+      #ecran-container {
+        position: absolute;
+        left: 15%;
+        bottom: -5px;
+        width: 50%;
+        max-height: 50%;
+      }
+    }
+  }

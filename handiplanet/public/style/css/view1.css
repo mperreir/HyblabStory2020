@@ -1,0 +1,132 @@
+/*
+* File Created: 2020-01-28 13:52:00
+* Author: Pierre MAUPIN
+* Copyright - 2020 Pierre MAUPIN
+*/
+.body-small .text-change {
+  font-size: 18px;
+}
+
+.body-medium .text-change {
+  font-size: 21px;
+}
+
+.body-large .text-change {
+  font-size: 24px;
+}
+
+#view1 {
+  width: 100vw;
+  height: 100vh;
+}
+#view1 #view-1-middle {
+  width: 80vw;
+  height: 80vh;
+  margin: 0px 10vw;
+  border-bottom: 2px solid #5A8D8C;
+  position: relative;
+}
+#view1 #view-1-middle img {
+  position: absolute;
+  bottom: -2px;
+}
+#view1 #view-1-middle > div {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: flex-start;
+  right: 50%;
+  bottom: -1px;
+  max-height: 70%;
+  max-width: 50%;
+}
+#view1 #view-1-middle > div #view-1-character-img {
+  z-index: 5;
+  position: relative;
+  height: 55vh;
+  max-width: 100%;
+}
+#view1 #view-1-middle > div .view-1-switch-character {
+  z-index: 6;
+  position: absolute;
+  cursor: pointer;
+  left: -5%;
+  bottom: 5%;
+  background-color: #426262;
+  border-radius: 50px;
+  color: #ffffff;
+  padding: 10px 10px;
+}
+#view1 #view-1-middle > div #view-1-select-character {
+  z-index: 6;
+  height: fit-content;
+  display: flex;
+}
+#view1 #view-1-middle > div #view-1-select-character span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-color: red;
+  margin: 0px;
+  margin-right: 10px;
+  box-sizing: content-box;
+  background-clip: padding-box;
+}
+#view1 #view-1-middle > div #view-1-select-character span:nth-of-type(1) {
+  background-color: #ffffff;
+}
+#view1 #view-1-middle > div #view-1-select-character span:nth-of-type(1):hover {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+#view1 #view-1-middle > div #view-1-select-character span:nth-of-type(2) {
+  background-color: #80BEA3;
+}
+#view1 #view-1-middle > div #view-1-select-character span:nth-of-type(2):hover {
+  border: 3px solid rgba(128, 190, 163, 0.3);
+}
+#view1 #view-1-middle > div #view-1-select-character span:nth-of-type(3) {
+  background-color: #CB563E;
+  margin-right: 0px;
+}
+#view1 #view-1-middle > div #view-1-select-character span:nth-of-type(3):hover {
+  border: 3px solid rgba(203, 85, 62, 0.3);
+}
+#view1 #view-1-middle #view-1-hotel-img {
+  position: absolute;
+  max-height: 20%;
+  max-width: 20%;
+  top: 30%;
+  left: 20%;
+}
+#view1 #view-1-middle #view-1-luggage-img {
+  position: absolute;
+  max-height: 20%;
+  max-width: 20%;
+  top: 45%;
+  left: 50%;
+}
+#view1 #view-1-middle #view1-bulle1 {
+  position: absolute;
+  max-height: 20%;
+  max-width: 20%;
+  top: 60%;
+  left: 50%;
+}
+#view1 #view-1-middle #view1-bulle2 {
+  position: absolute;
+  max-height: 20%;
+  max-width: 20%;
+  top: 45%;
+  left: 70%;
+}
+#view1 #view-1-middle article {
+  z-index: 7;
+  position: absolute;
+  left: 55%;
+  max-width: 30%;
+  bottom: 10%;
+}
+
+/*# sourceMappingURL=view1.css.map */

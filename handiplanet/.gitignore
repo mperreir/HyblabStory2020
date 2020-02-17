@@ -1,0 +1,4 @@
+node_modules
+public/style/css/*.map
+public/.DS_Store
+.idea

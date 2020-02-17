@@ -1,0 +1,76 @@
+/*
+* File Created: 2020-02-04 20:44:47
+* Author: Christophe SONNEVILLE
+* Copyright - 2020 Christophe SONNEVILLE
+*/
+#view9free {
+  height: 100vh;
+  width: 100vw;
+  //background-color: rgba(203, 85, 62, 0.1);
+  
+  #view-9f-middle {
+    width: 80vw;
+    height: 80vh;
+    margin: 0px 10vw;
+    border-bottom: 2px solid #5A8D8C;
+    position: relative;
+    
+    section{
+      position: absolute;
+      height: 80%;
+      width: 100%;
+      bottom: 0px;
+      left: 0px;
+      display: flex;
+      
+      article:first-of-type {
+        flex: 2;
+        display: flex;
+        img {
+          max-height: 80%;
+          max-width: 80%;
+          display: block;
+          margin: auto;
+          margin-right: 5%;
+        }
+      }
+      
+      article:last-of-type {
+        display: flex;
+        flex: 1;
+        padding: 2%;
+        p {
+          margin: auto;
+          top: 25%;
+          position: relative;
+          margin: 0px !important;
+        }
+      }
+    }
+
+    #view9f-bulle1{
+      position: absolute;
+      left: 50%;
+      top: 20%;
+    }
+
+    #view9f-bulle2{
+      position: absolute;
+      left: 80%;
+      top: 80%;
+    }
+
+    #view9f-bulle3{
+      position: absolute;
+      left: 30%;
+      top: 90%;
+    }
+
+    #view9f-bulle4{
+      position: absolute;
+      left: 80%;
+      top: 30%;
+    }
+
+  }
+}

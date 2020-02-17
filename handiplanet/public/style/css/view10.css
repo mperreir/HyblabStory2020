@@ -1,0 +1,54 @@
+/*
+* Project: handigo
+* Created Date: Wednesday February 5th 2020
+* Author: Pierre Le Guen
+* -----
+* Last Modified: Thursday, 6th February 2020 5:09:26 pm
+* Modified By: Pierre Le Guen
+* -----
+* Copyright (c) 2020 Pierre Le Guen
+*/
+#view10 {
+  height: 100vh;
+  width: 100vw;
+}
+#view10 #view10-middle {
+  height: 80vh;
+  width: 80vw;
+  margin: 0 10vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+#view10 #view10-middle #view-10-graph_container {
+  width: 100%;
+  position: relative;
+}
+#view10 #view10-middle #view-10-graph_container #view-10-graph {
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+#view10 #view10-middle #view-10-graph_container #view-10-graph_title {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 30px;
+  max-width: 20%;
+  margin: 0;
+}
+#view10 #view10-middle #view-10-data {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#view10 #view10-middle #view-10-data p:first-of-type {
+  margin-top: auto;
+}
+#view10 #view10-middle #view-10-data p:last-of-type {
+  margin-bottom: 50%;
+}
+
+/*# sourceMappingURL=view10.css.map */

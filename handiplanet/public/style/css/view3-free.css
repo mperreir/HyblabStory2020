@@ -1,0 +1,76 @@
+/*
+ * File Created: 2020-01-28 13:52:00
+ * Author: Pierre MAUPIN
+ * Copyright - 2020 Pierre MAUPIN
+ */
+#view3-free {
+  width: 100vw;
+  height: 100vh;
+}
+#view3-free #view-3-free-middle {
+  width: 80vw;
+  height: 80vh;
+  margin: 0px 10vw;
+  border-bottom: 2px solid #5A8D8C;
+  position: relative;
+}
+#view3-free #view-3-free-middle img {
+  position: absolute;
+  bottom: -2px;
+}
+#view3-free #view-3-free-middle #view-3-free-picture {
+  z-index: 5;
+  max-height: 40%;
+  max-width: 40%;
+  bottom: 10%;
+  right: 50%;
+}
+#view3-free #view-3-free-middle #view-3-free-red-ring {
+  position: absolute;
+  transition: transform ease-in-out;
+  top: 20%;
+  left: 15%;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 100%;
+  border: 5px solid #CB563E;
+}
+#view3-free #view-3-free-middle #view-3-free-green-dot {
+  position: absolute;
+  transition: transform ease-in-out;
+  top: 30%;
+  right: 30%;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 100%;
+  background-color: #426262;
+}
+#view3-free #view-3-free-middle #view-3-free-white-ring {
+  position: absolute;
+  transition: transform ease-in-out;
+  bottom: 40%;
+  right: 10%;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 100%;
+  border: 5px solid #ffffff;
+}
+#view3-free #view-3-free-middle #view-3-free-green-tiny-dot {
+  position: absolute;
+  transition: transform ease-in-out;
+  bottom: 5%;
+  left: 30%;
+  width: 2vh;
+  height: 2vh;
+  border-radius: 100%;
+  background-color: #71C0A0;
+}
+#view3-free #view-3-free-middle article {
+  z-index: 7;
+  position: absolute;
+  left: 55%;
+  max-width: 42%;
+  bottom: 10%;
+}
+
+/*# sourceMappingURL=view3-free.css.map */

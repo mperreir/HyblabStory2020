@@ -1,0 +1,173 @@
+/*
+ * File Created: 2020-01-28 13:52:00
+ * Author: Pierre MAUPIN
+ * Copyright - 2020 Pierre MAUPIN
+ */
+#contexte {
+  width: 100vw;
+  height: 100vh;
+}
+#contexte #contexte-middle {
+  width: 80vw;
+  height: 80vh;
+  margin: 0px 10vw;
+  border-bottom: 2px solid #5A8D8C;
+  position: relative;
+}
+#contexte #contexte-middle #contexte-red-tiny-dot {
+  position: absolute;
+  z-index: 4;
+  bottom: 25%;
+  left: 85%;
+  width: 1.5vh;
+  height: 1.5vh;
+  border-radius: 100%;
+  background-color: #CB563E;
+}
+#contexte #contexte-middle #contexte-yellow-tiny-dot {
+  position: absolute;
+  z-index: 4;
+  bottom: 75%;
+  left: 45%;
+  width: 1.5vh;
+  height: 1.5vh;
+  border-radius: 100%;
+  background-color: #F9E9D7;
+}
+#contexte #contexte-middle #contexte-green-ring {
+  position: absolute;
+  z-index: 4;
+  bottom: 10%;
+  left: 15%;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 100%;
+  border: 1vh solid #5A8D8C;
+}
+#contexte #contexte-middle #contexte-white-ring {
+  position: absolute;
+  z-index: 4;
+  bottom: 40%;
+  right: 50%;
+  width: 4vh;
+  height: 4vh;
+  border-radius: 100%;
+  border: 5px solid #ffffff;
+}
+#contexte #contexte-middle #contexte-splash-img {
+  z-index: 1;
+  max-height: 100%;
+  max-width: 60%;
+  left: 40%;
+  position: absolute;
+  bottom: -2px;
+}
+#contexte #contexte-middle #character-container {
+  z-index: 6;
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: flex-start;
+  right: 50%;
+  bottom: -2px;
+  max-height: 70%;
+  max-width: 50%;
+}
+#contexte #contexte-middle #character-container #contexte-character-img {
+  z-index: 5;
+  position: relative;
+  height: 55vh;
+  max-width: 100%;
+}
+#contexte #contexte-middle #answer-container {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 45%;
+  bottom: 0%;
+}
+#contexte #contexte-middle #answer-container #context-text {
+  margin-bottom: 10px;
+}
+#contexte #contexte-middle #answer-container .contexte-question {
+  background-color: #426262;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin: 5px 0;
+  transform: translateX(-10vw);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px 5px 5px 17.5vw;
+  width: fit-content;
+  transition: padding 0.5s;
+  cursor: pointer;
+}
+#contexte #contexte-middle #answer-container .contexte-question .contexte-img {
+  background-color: #ffffff;
+  border-radius: 100%;
+  height: 6vh;
+  width: 6vh;
+  display: flex;
+  padding: 1vh;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+#contexte #contexte-middle #answer-container .contexte-question .contexte-img img {
+  height: 100%;
+}
+#contexte #contexte-middle #answer-container .contexte-question p {
+  color: #ffffff;
+}
+#contexte #contexte-middle #answer-container .contexte-question:hover {
+  background-color: #CB563E;
+  padding: 5px 5px 5px 20vw;
+}
+#contexte #contexte-middle article {
+  z-index: 7;
+  margin-right: 10vw;
+  margin-left: 5vw;
+}
+#contexte #contexte-middle article p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 29px;
+  color: #426262;
+}
+#contexte #contexte-middle article span {
+  color: #cb563e;
+  font-weight: bold;
+}
+#contexte footer {
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+}
+#contexte footer #contexte-next-button {
+  z-index: 10000;
+  position: absolute;
+  right: 0px;
+  background-color: #CB563E;
+  font-family: Nunito;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 34px;
+  color: #ffffff;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  padding: 10px 30px;
+  padding-right: 50px;
+  margin: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#contexte footer #contexte-next-button em {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=contexte.css.map */
