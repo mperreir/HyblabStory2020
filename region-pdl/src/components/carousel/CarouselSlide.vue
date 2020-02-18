@@ -1,9 +1,6 @@
 <template>
   <transition name="slide">
-    <div
-      v-show="visible"
-      class="carouselSlide"
-    >
+    <div v-show="visible" class="carouselSlide">
       <slot />
     </div>
   </transition>

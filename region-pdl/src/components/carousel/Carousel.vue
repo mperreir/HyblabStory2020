@@ -1,19 +1,10 @@
 <template>
   <div style="{ overflow: hidden; }">
-    <div
-      class="black-band black-band-left"
-      :style="bandWidthStyle"
-    />
-    <div
-      ref="carousel"
-      class="carousel"
-    >
+    <div class="black-band black-band-left" :style="bandWidthStyle" />
+    <div ref="carousel" class="carousel">
       <slot />
     </div>
-    <div
-      class="black-band black-band-right"
-      :style="bandWidthStyle"
-    />
+    <div class="black-band black-band-right" :style="bandWidthStyle" />
   </div>
 </template>
 
@@ -51,13 +42,11 @@ export default {
 }
 
 .black-band {
-  /* position: absolute; */
   position: fixed;
   top: 0;
   height: 100vh;
-  background-color: black;
+  background-color: #000;
   z-index: 100;
-
 }
 
 .black-band-left {
