@@ -25,7 +25,7 @@
     </SimpleText>
 
     <SimpleText :style="{textAlign: 'center'}" :width="23.5" :x="71" :y="39">
-      <p>La biomasse sert le plus souvent à :</p>
+      <p>La méthanisation sert le plus souvent à :</p>
     </SimpleText>
 
     <div class="answers">

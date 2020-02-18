@@ -19,7 +19,7 @@
     <div v-show="carGoesOut">
       <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
         Pendant le trajet, {{ getCharacter }} s'aperçoit que la batterie de sa voiture est faible.
-        <br />Un passage aux bornes de rechargement s'impose.
+        <br />Un passage aux bornes de recharge s'impose.
       </SimpleText>
     </div>
 

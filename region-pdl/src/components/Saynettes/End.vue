@@ -29,7 +29,9 @@
     <img src="@/assets/svg/End/logo-audencia.png" class="logo-audencia" />
 
     <SimpleText :y="60" :x="10" :width="20" :style="{textAlign: 'center'}">
-      <span class="large-text">Storytelling</span>
+      <span>
+        <b>Storytelling</b>
+      </span>
       <br />Nina Naulleau
       <br />Vinciane Le Borgne
     </SimpleText>
@@ -37,7 +39,9 @@
     <LogoPolytech class="logo-polytech" />
 
     <SimpleText :y="60" :x="35" :width="30" :style="{textAlign: 'center'}">
-      <span class="large-text">Développement et intégration</span>
+      <span>
+        <b>Développement et intégration</b>
+      </span>
       <br />Julien Garcia
       <br />Nicolas Vautier
       <br />Mathis Le Berrigaud
@@ -46,7 +50,9 @@
     </SimpleText>
 
     <SimpleText :y="60" :x="70" :width="20" :style="{textAlign: 'center'}">
-      <span class="large-text">Direction artistique</span>
+      <span>
+        <b>Direction artistique</b>
+      </span>
       <br />Mathilde Mousset
       <br />Marine Boismain
     </SimpleText>
@@ -112,10 +118,6 @@ export default {
   width: 18%;
   left: 10%;
   top: 49%;
-}
-
-.large-text {
-  font-weight: bold;
 }
 
 a {
