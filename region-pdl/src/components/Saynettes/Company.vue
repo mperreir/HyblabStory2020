@@ -19,33 +19,50 @@
         </b>.
       </span>
     </SimpleText>
+
     <PlusButton v-model="closePopover1" class="plus1" :width="20" @open="closePopover(1)">
       <p class="text">
         La
-        <span class="orange">biomasse</span> utilise <br> le méthane produit par la décomposition de déchets ménagers pour chauffer <br> les bâtiments.
+        <span class="orange">biomasse</span> utilise
+        <br />le méthane produit par la décomposition de déchets ménagers pour chauffer
+        <br />les bâtiments.
       </p>
     </PlusButton>
+
     <PlusButton v-model="closePopover2" class="plus2" :width="20" @open="closePopover(2)">
       <p class="text">
         Avec la biomasse, une entreprise peut produire
-        <span class="orange"> <br> 113 000 MWh.</span>
+        <span class="orange">
+          <br />113 000 MWh.
+        </span>
       </p>
     </PlusButton>
+
     <PlusButton v-model="closePopover3" class="plus3" :width="20" @open="closePopover(3)">
       <p class="text">
         <span class="orange">2 000 m³</span> de biogaz équivalent à
         <span class="orange">1 tonne de pétrole.</span>
       </p>
     </PlusButton>
+
     <PlusButton v-model="closePopover4" class="plus4" :width="20" @open="closePopover(4)">
       <p class="text">
-        En Pays de la Loire, <br> la biomasse produit
-        <span class="orange">651 GWh.</span> <br> Cela équivaut <br> à
-        <span class="orange">56 000 tonnes <br> de pétrole.</span>
+        En Pays de la Loire,
+        <br />la biomasse produit
+        <span class="orange">651 GWh.</span>
+        <br />Cela équivaut
+        <br />à
+        <span class="orange">
+          56 000 tonnes
+          <br />de pétrole.
+        </span>
       </p>
     </PlusButton>
+
     <SimpleButton text="Continuer l'histoire" :width="23" :x="75" :y="90" @click.native="onNext" />
+
     <CompanySVG class="svg" />
+
     <RoadSVG v-if="getCharacterGender === 'mme'" class="road-svg" />
   </div>
 </template>
@@ -54,18 +71,19 @@
 import { mapGetters } from "vuex";
 
 import CompanySVG from "@/assets/svg/Company/background-company.svg";
-import PlusButton from "@/components/Utils/PlusButton";
-import SimpleText from "@/components/Utils/SimpleText";
-import SimpleButton from "@/components/Utils/SimpleButton";
 import RoadSVG from "@/assets/svg/Utils/road.svg";
+
+import PlusButton from "@/components/Utils/PlusButton.vue";
+import SimpleText from "@/components/Utils/SimpleText.vue";
+import SimpleButton from "@/components/Utils/SimpleButton.vue";
 
 export default {
   name: "Intro",
   components: {
     CompanySVG,
+    RoadSVG,
     SimpleButton,
     SimpleText,
-    RoadSVG,
     PlusButton
   },
   data: () => ({

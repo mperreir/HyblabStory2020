@@ -1,11 +1,14 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
+
     <SimpleText :width="70" :x="15" :y="15" :style="{textAlign: 'center'}">
       Pour accompagner la transition énergétique, la Région participe au
       déploiement de bornes de recharge pour véhicules électriques sur
       l’ensemble du territoire ligérien. Ainsi, lorsque {{ getCharacter }} prend sa
-      voiture, <br>{{ getCharacterGender === 'm' ? 'il' : 'elle' }} sait qu’il y aura toujours une
+      voiture,
+      <br />
+      {{ getCharacterGender === 'm' ? 'il' : 'elle' }} sait qu’il y aura toujours une
       <b>borne à proximité</b>.
     </SimpleText>
 
@@ -17,7 +20,8 @@
 
     <PlusButton class="plus-button" :width="23">
       <p class="text">
-        En moyenne, on peut trouver une borne <br> tous les
+        En moyenne, on peut trouver une borne
+        <br />tous les
         <span class="orange">13 km</span> dans toute la région.
       </p>
     </PlusButton>
@@ -41,13 +45,14 @@
 import { mapGetters } from "vuex";
 
 import Background from "@/assets/svg/Borne/background-borne.svg";
-import SimpleText from "@/components/Utils/SimpleText";
 import TrainSVG from "@/assets/svg/Borne/train.svg";
 import BoatSVG from "@/assets/svg/Utils/boat.svg";
 import BorneSVG from "@/assets/svg/Borne/borne.svg";
-import PlusButton from "@/components/Utils/PlusButton";
-import SimpleButton from "@/components/Utils/SimpleButton";
-import Car from "@/components/Utils/Car";
+
+import SimpleText from "@/components/Utils/SimpleText.vue";
+import PlusButton from "@/components/Utils/PlusButton.vue";
+import SimpleButton from "@/components/Utils/SimpleButton.vue";
+import Car from "@/components/Utils/Car.vue";
 
 export default {
   name: "Borne",
@@ -78,6 +83,7 @@ export default {
     goNext() {
       this.$nextTick(() => {
         let train = this.$refs.movingTrain.getBoundingClientRect();
+
         if (train.x + train.width < 0) {
           this.nextInitiated = true;
           this.$store.dispatch("nextScene", {
@@ -93,93 +99,6 @@ export default {
 </script>
 
 <style scoped>
-.train {
-  position: absolute;
-  width: 50%;
-  left: 0%;
-  top: 57.5%;
-  z-index: -1;
-  animation-name: train-move;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 4s;
-}
-
-@-webkit-keyframes train-move {
-  from {
-    transform: translateX(-400%);
-    -ms-transform: translateX(-400%);
-    -moz-transform: translateX(-400%);
-    -webkit-transform: translateX(-400%);
-    -o-transform: translateX(-400%);
-  }
-  to {
-    transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    -moz-transform: translateX(200%);
-    -webkit-transform: translateX(200%);
-    -o-transform: translateX(200%);
-  }
-}
-@keyframes train-move {
-  from {
-    transform: translateX(-400%);
-    -ms-transform: translateX(-400%);
-    -moz-transform: translateX(-400%);
-    -webkit-transform: translateX(-400%);
-    -o-transform: translateX(-400%);
-  }
-  to {
-    transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    -moz-transform: translateX(200%);
-    -webkit-transform: translateX(200%);
-    -o-transform: translateX(200%);
-  }
-}
-
-.boat {
-  position: absolute;
-  width: 12%;
-  left: 55%;
-  top: 59%;
-  animation: 1s ease infinite alternate float;
-}
-
-@-webkit-keyframes float {
-  from {
-    transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    -webkit-transform: translateY(0%);
-    -o-transform: translateY(0%);
-  }
-  to {
-    transform: translateY(-5%);
-    -ms-transform: translateY(-5%);
-    -moz-transform: translateY(-5%);
-    -webkit-transform: translateY(-5%);
-    -o-transform: translateY(-5%);
-  }
-}
-
-@keyframes float {
-  from {
-    transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    -webkit-transform: translateY(0%);
-    -o-transform: translateY(0%);
-  }
-  to {
-    transform: translateY(-5%);
-    -ms-transform: translateY(-5%);
-    -moz-transform: translateY(-5%);
-    -webkit-transform: translateY(-5%);
-    -o-transform: translateY(-5%);
-  }
-}
-
 .plus-button {
   position: absolute;
   left: 82%;
@@ -203,10 +122,92 @@ export default {
   width: 7%;
 }
 
-.tree-svg {
+.train {
   position: absolute;
-  top: 67.5%;
-  left: -1%;
-  width: 7%;
+  width: 50%;
+  left: 0%;
+  top: 57.5%;
+  z-index: -1;
+  -webkit-animation: train-move 4s infinite linear;
+  -moz-animation: train-move 4s infinite linear;
+  -ms-animation: train-move 4s infinite linear;
+  animation: train-move 4s infinite linear;
+}
+
+.boat {
+  position: absolute;
+  width: 12%;
+  left: 55%;
+  top: 59%;
+  -webkit-animation: float 1s ease infinite alternate;
+  -moz-animation: float 1s ease infinite alternate;
+  -ms-animation: float 1s ease infinite alternate;
+  animation: float 1s ease infinite alternate;
+}
+
+@-webkit-keyframes train-move {
+  from {
+    transform: translateX(-400%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+@-moz-keyframes train-move {
+  from {
+    transform: translateX(-400%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+@-ms-keyframes train-move {
+  from {
+    transform: translateX(-400%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+@keyframes train-move {
+  from {
+    transform: translateX(-400%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+
+@-webkit-keyframes float {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-5%);
+  }
+}
+@-moz-keyframes float {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-5%);
+  }
+}
+@-ms-keyframes float {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-5%);
+  }
+}
+@keyframes float {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-5%);
+  }
 }
 </style>

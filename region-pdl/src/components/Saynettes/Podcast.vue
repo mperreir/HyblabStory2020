@@ -1,22 +1,28 @@
 <template>
   <div class="saynette">
     <Background class="svg" style="display: hidden" />
+
     <BackgroundLarge :class="{test: true, moved: carHasStarted}" />
+
     <div :class="{carStartProposal: true, carStartProposalFade: carHasStarted}">
       <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
         Sur le chemin du travail, {{ getCharacter }} observe de nombreux équipements
-        <br>pour la
+        <br />pour la
         <b>transition énergétique qui ont bénéficié d'un financement régional.</b>
       </SimpleText>
+
       <TextTitle :style="{textAlign: 'center'}" :y="40">Démarrer la voiture</TextTitle>
+
       <SwitchButton :width="10" :x="45" :y="47" @toggle="startCar" />
     </div>
+
     <div v-show="carGoesOut">
       <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
         Pendant le trajet, {{ getCharacter }} s'aperçoit que la batterie de sa voiture est faible.
         <br />Un passage aux bornes de rechargement s'impose.
       </SimpleText>
     </div>
+
     <transition name="nextButtonAppear">
       <SimpleButton
         v-if="outButton"
@@ -27,6 +33,7 @@
         @click.native="onNext"
       />
     </transition>
+
     <Car :moving="carHasStarted" :rolling-out="carGoesOut" />
   </div>
 </template>
@@ -37,17 +44,18 @@ import { Howl } from "howler";
 
 import Background from "@/assets/svg/Utils/empty-background.svg";
 import BackgroundLarge from "@/assets/svg/Car/larger-background.svg";
-import SwitchButton from "@/components/Utils/SwitchButton";
-import Car from "@/components/Utils/Car";
-import TextTitle from "@/components/Utils/TextTitle";
-import SimpleText from "@/components/Utils/SimpleText";
-import SimpleButton from "@/components/Utils/SimpleButton";
+
+import SwitchButton from "@/components/Utils/SwitchButton.vue";
+import Car from "@/components/Utils/Car.vue";
+import TextTitle from "@/components/Utils/TextTitle.vue";
+import SimpleText from "@/components/Utils/SimpleText.vue";
+import SimpleButton from "@/components/Utils/SimpleButton.vue";
 
 export default {
   components: {
     Background,
-    SwitchButton,
     BackgroundLarge,
+    SwitchButton,
     TextTitle,
     SimpleText,
     SimpleButton,
@@ -90,7 +98,6 @@ export default {
   position: absolute;
   height: 100vh;
   left: 0;
-
   transition: left 16s ease-in;
 }
 
@@ -100,15 +107,12 @@ export default {
 
 .car {
   left: 0%;
-
   transition: left 16s linear;
 }
 
 .carStartProposal {
   opacity: 1;
   transition: opacity 1s linear;
-  -moz-transition: opacity 1s linear;
-  -webkit-transition: opacity 1s linear;
 }
 
 .carStartProposalFade {
@@ -123,7 +127,8 @@ export default {
 .nextButtonAppear-leave-active {
   transition: opacity 0.5s;
 }
-.nextButtonAppear-enter, .nextButtonAppear-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.nextButtonAppear-enter,
+.nextButtonAppear-leave-to {
   opacity: 0;
 }
 </style>

@@ -1,22 +1,28 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
+
     <TextTitle :x="7" :y="20">
       La Région des Pays de la Loire
       <br />pour la transition énergétique
     </TextTitle>
+
     <SimpleText :x="7" :y="35" :width="45">
       Suivez la journée de M. Moreau et Mme Dubois
       <br />et découvrez comment la
       <b>Région des Pays de la Loire</b>
       <br />les accompagne pour réduire leur impact énergétique et construire un avenir plus vert.
     </SimpleText>
+
     <SimpleText :x="11" :y="51" :width="50">
       Pour une expérience plus immersive, vous pouvez activer le
       <b>son.</b>
     </SimpleText>
+
     <SimpleButton text="Démarrer l'aventure" :width="23" :x="7" :y="58" @click.native="onNext" />
+
     <Tree class="tree" />
+
     <Speaker class="speaker" />
   </div>
 </template>
@@ -25,9 +31,10 @@
 import Background from "@/assets/svg/Home/background-home.svg";
 import Tree from "@/assets/svg/Home/tree-home.svg";
 import Speaker from "@/assets/svg/Home/volume.svg";
-import TextTitle from "@/components/Utils/TextTitle";
-import SimpleText from "@/components/Utils/SimpleText";
-import SimpleButton from "@/components/Utils/SimpleButton";
+
+import TextTitle from "@/components/Utils/TextTitle.vue";
+import SimpleText from "@/components/Utils/SimpleText.vue";
+import SimpleButton from "@/components/Utils/SimpleButton.vue";
 
 export default {
   name: "Intro",

@@ -127,11 +127,12 @@
 </template>
 
 <script>
-import SimpleText from "@/components/Utils/SimpleText";
 import Background from "@/assets/svg/Quizz/background-quizz.svg";
-import TextTitle from "@/components/Utils/TextTitle";
-import QuizzButton from "@/components/Utils/QuizzButton";
-import SimpleButton from "@/components/Utils/SimpleButton";
+
+import SimpleText from "@/components/Utils/SimpleText.vue";
+import TextTitle from "@/components/Utils/TextTitle.vue";
+import QuizzButton from "@/components/Utils/QuizzButton.vue";
+import SimpleButton from "@/components/Utils/SimpleButton.vue";
 
 export default {
   name: "Quizz",

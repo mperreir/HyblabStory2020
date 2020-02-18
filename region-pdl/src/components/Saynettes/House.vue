@@ -1,6 +1,7 @@
 <template>
   <div class="saynette">
     <Background class="svg" />
+
     <SimpleText :y="15" :x="15" :width="70" :style="{textAlign: 'center'}">
       <span v-if="getCharacterGender === 'mme'">
         Il y a peu, Mme Dubois a fait appel à la Région afin
@@ -13,13 +14,15 @@
       </span>
       <span v-if="getCharacterGender === 'm'">
         Il y a peu, M. Moreau a fait appel à la Région afin
-        <b>d’obtenir des aides pour améliorer l’isolation</b><br> de sa maison.
+        <b>d’obtenir des aides pour améliorer l’isolation</b>
+        <br />de sa maison.
         Cette rénovation, rendue possible
         <b>grâce aux aides de la Région</b>, a permis à M. Moreau
         <br />de faire des
         <b>économies d’énergie</b> et de participer à la transition écologique de la région.
       </span>
     </SimpleText>
+
     <transition name="bounce">
       <LittleHouse v-show="indexHouse == 1" class="little" />
     </transition>
@@ -29,6 +32,7 @@
     <transition name="bounce">
       <BigHouse v-show="indexHouse == 3" class="big" />
     </transition>
+
     <div class="size">
       <transition name="bounce">
         <p v-show="indexHouse == 1" class="text">{{ 50 * indexHouse }}m²</p>
@@ -40,25 +44,34 @@
         <p v-show="indexHouse == 3" class="text">{{ 50 * indexHouse }}m²</p>
       </transition>
     </div>
+
     <Slider class="slider" @input="onChange" />
+
     <PlusButton v-model="closePopover1" class="plus1" :width="30" @open="closePopover(1)">
       <p class="text">
         En 2018,
-        <span class="orange">1077 maisons</span> <br> ont bénéficié de cette aide <br> à l’isolation.
+        <span class="orange">1077 maisons</span>
+        <br />ont bénéficié de cette aide
+        <br />à l’isolation.
       </p>
     </PlusButton>
+
     <PlusButton v-model="closePopover2" class="plus2" :width="35" @open="closePopover(2)">
       <p v-if="getCharacterGender === 'm'">
         La maison de M. Moreau fait
-        <span class="orange">50 m².</span> <br> Il a eu le droit à
+        <span class="orange">50 m².</span>
+        <br />Il a eu le droit à
         <span class="orange">4000 euros</span> d’aides.
       </p>
       <p v-if="getCharacterGender === 'mme'">
         La maison de Mme Dubois fait
-        <span class="orange"> <br> 150 m².</span> Elle a eu le droit à
+        <span class="orange">
+          <br />150 m².
+        </span> Elle a eu le droit à
         <span class="orange">4000 euros</span> d’aides.
       </p>
     </PlusButton>
+
     <PlusButton
       v-show="indexHouse == '1'"
       v-model="closePopover3"
@@ -69,10 +82,14 @@
       <p>
         Pour une maison de
         <span class="orange">50 m².</span>
-        Le gain moyen <br> sur la consommation <br> est de
-        <span class="orange">58 %</span> après <br> les travaux.
+        Le gain moyen
+        <br />sur la consommation
+        <br />est de
+        <span class="orange">58 %</span> après
+        <br />les travaux.
       </p>
     </PlusButton>
+
     <PlusButton
       v-show="indexHouse == '2'"
       v-model="closePopover4"
@@ -83,10 +100,13 @@
       <p>
         Pour une maison de
         <span class="orange">100 m².</span>
-        <br> Le gain moyen <br>sur la consommation <br>est de
+        <br />Le gain moyen
+        <br />sur la consommation
+        <br />est de
         <span class="orange">51 %</span> après les travaux.
       </p>
     </PlusButton>
+
     <PlusButton
       v-show="indexHouse == '3'"
       v-model="closePopover5"
@@ -97,10 +117,13 @@
       <p>
         Pour une maison de
         <span class="orange">150 m².</span>
-        <br>Le gain moyen <br> sur la consommation <br> est de
+        <br />Le gain moyen
+        <br />sur la consommation
+        <br />est de
         <span class="orange">53 %</span> après les travaux.
       </p>
     </PlusButton>
+
     <SimpleButton
       text="Continuer l'histoire"
       @click.native="onNextCar"
@@ -119,10 +142,11 @@ import Background from "@/assets/svg/House/background-house.svg";
 import LittleHouse from "@/assets/svg/House/little-house.svg";
 import MediumHouse from "@/assets/svg/House/medium-house.svg";
 import BigHouse from "@/assets/svg/House/big-house.svg";
+
 import Slider from "@/components/Utils/Slider.vue";
-import SimpleText from "@/components/Utils/SimpleText";
-import SimpleButton from "@/components/Utils/SimpleButton";
-import PlusButton from "@/components/Utils/PlusButton";
+import SimpleText from "@/components/Utils/SimpleText.vue";
+import SimpleButton from "@/components/Utils/SimpleButton.vue";
+import PlusButton from "@/components/Utils/PlusButton.vue";
 
 export default {
   name: "House",
@@ -143,7 +167,6 @@ export default {
     closePopover3: false,
     closePopover4: false,
     closePopover5: false,
-    fakeName: "moreau",
     canPlay: false
   }),
   mounted() {
@@ -276,6 +299,9 @@ export default {
 
 .bounce,
 .bounce-enter-active {
+  -webkit-animation: bounce-in 0.5s;
+  -moz-animation: bounce-in 0.5s;
+  -ms-animation: bounce-in 0.5s;
   animation: bounce-in 0.5s;
 }
 
