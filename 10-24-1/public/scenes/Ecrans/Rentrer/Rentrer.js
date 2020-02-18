@@ -20,8 +20,6 @@ export default class Rentrer extends Component {
   }
 
   render(target) {
-    // document.getElementById("ecran-player").pause();
-    // document.getElementById("ecran-player").play();
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

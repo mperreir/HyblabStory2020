@@ -22,8 +22,14 @@ export default class S2 extends Component {
   }
 
   render(target) {
-    document.getElementById("flemme-player").play();
-    document.getElementById("flemme-player").volume = 0.11;
+    document.getElementById("flemme-mid-player").elemMusicOn = true;
+    document.getElementById("flemme-mid-player").volume = 0.11;
+    if (!document.getElementById("flemme-player").isMuted) {
+      document.getElementById("flemme-mid-player").play();
+      document.getElementById("flemme-player").play();
+      document.getElementById("flemme-player").elemMusicOn = true;
+      document.getElementById("flemme-player").volume = 0.11;
+    }
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

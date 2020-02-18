@@ -19,6 +19,14 @@ export default class Rayon extends Component {
   }
 
   render(target) {
+    document.getElementById("super-papa-player").pause();
+    document.getElementById("super-papa-player").elemMusicOn = false;
+
+    document.getElementById("rayon-player").elemMusicOn = true;
+    document.getElementById("rayon-player").volume = 0.1;
+    if (!document.getElementById("rayon-player").isMuted) {
+      document.getElementById("rayon-player").play();
+    }
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

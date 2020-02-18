@@ -20,6 +20,13 @@ export default class Buzzer9 extends Component {
   }
 
   render(target) {
+    document.getElementById("buzzer-player").pause();
+
+    document.getElementById("buzzer-player").elemMusicOn = true;
+    document.getElementById("buzzer-player").volume = 0.1;
+    if (!document.getElementById("buzzer-player").isMuted) {
+      document.getElementById("buzzer-player").play();
+    }
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

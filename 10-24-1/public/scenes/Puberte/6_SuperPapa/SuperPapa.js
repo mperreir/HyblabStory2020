@@ -19,6 +19,14 @@ export default class SuperPapa extends Component {
   }
 
   render(target) {
+    document.getElementById("papa-player").pause();
+    document.getElementById("papa-player").elemMusicOn = false;
+
+    document.getElementById("super-papa-player").elemMusicOn = true;
+    document.getElementById("super-papa-player").volume = 0.1;
+    if (!document.getElementById("super-papa-player").isMuted) {
+      document.getElementById("super-papa-player").play();
+    }
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

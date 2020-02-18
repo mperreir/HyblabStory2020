@@ -20,6 +20,14 @@ export default class Discussion extends Component {
   }
 
   render(target) {
+    document.getElementById("buzzer-player").pause();
+    document.getElementById("buzzer-player").elemMusicOn = false;
+
+    document.getElementById("papa-player").elemMusicOn = true;
+    document.getElementById("papa-player").volume = 0.1;
+    if (!document.getElementById("papa-player").isMuted) {
+      document.getElementById("papa-player").play();
+    }
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

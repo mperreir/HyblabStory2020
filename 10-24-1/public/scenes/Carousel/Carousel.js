@@ -25,6 +25,9 @@ export default class Carousel extends Component {
 
     // state
     this.state = { musicOn: true, currentView: null, isSliding: false };
+
+    // list of playing elements
+    // this.listMusicOn = [];
   }
 
   handleSocialMediaButtons() {
@@ -58,6 +61,7 @@ export default class Carousel extends Component {
     document.getElementById("choix-portes").style.display = "block";
     document.getElementById("auto-carousel").style.display = "none";
     document.getElementById("carousel-player").pause();
+    document.getElementById("carousel-player").elemMusicOn = false;
   }
 
   handleCarouselButton() {
@@ -82,68 +86,107 @@ export default class Carousel extends Component {
   }
 
   handleMusicSwitch() {
-    return;
-    const ir = document.getElementById("switch-active-indicator-right");
-    const il = document.getElementById("switch-active-indicator-left");
-    const i = document.getElementById("switch-active-indicator");
-    const on = document.getElementById("music-on");
-    const off = document.getElementById("music-off");
 
-    document.getElementById("music-switch").addEventListener("click", () => {
-      i.classList.remove("hide");
-      if (this.musicOn) {
-        i.classList.remove("click-left");
-        i.classList.add("click-right");
-        ir.classList.remove("showHover");
-        off.classList.remove("showHover");
-      } else {
-        i.classList.remove("click-right");
-        i.classList.add("click-left");
-        il.classList.remove("showHover");
-        on.classList.remove("showHover");
+    function muteMe(elem) {
+      elem.isMuted = true;
+      if (elem.elemMusicOn) {
+        elem.pause();
       }
-      this.musicOn = !this.musicOn;
+      else {
+        elem.elemMusicOn = false;
+      }
+    }
+
+    function unmuteMe(elem) {
+      elem.isMuted = false;
+      if (elem.elemMusicOn) {
+        elem.play();
+      }
+    }
+
+    document.getElementById("disable-music").addEventListener("click", () => {
+      if (this.state.musicOn) {
+        this.state.musicOn = !this.state.musicOn;
+        document.getElementById("disabled").style.display = "block";
+        document.getElementById("enabled").style.display = "none";
+        var elems = document.querySelectorAll("audio");
+        console.log("elems : ", elems);
+        [].forEach.call(elems, function(elem) { muteMe(elem); });
+      }
     });
 
-    [ir, off].forEach(el =>
-      el.addEventListener("mouseover", () => {
-        if (this.musicOn) {
-          ir.classList.add("showHover");
-          off.classList.add("showHover");
-          i.classList.add("hide");
-        }
-      })
-    );
-
-    [ir, off].forEach(el =>
-      el.addEventListener("mouseout", () => {
-        if (this.musicOn) {
-          ir.classList.remove("showHover");
-          off.classList.remove("showHover");
-          i.classList.remove("hide");
-        }
-      })
-    );
-
-    [il, on].forEach(el =>
-      el.addEventListener("mouseover", () => {
-        if (!this.musicOn) {
-          il.classList.add("showHover");
-          on.classList.add("showHover");
-          i.classList.add("hide");
-        }
-      })
-    );
-
-    [il, on].forEach(el =>
-      el.addEventListener("mouseout", () => {
-        if (!this.musicOn) {
-          il.classList.remove("showHover");
-          on.classList.remove("showHover");
-          i.classList.remove("hide");
-        }
-      })
-    );
+    document.getElementById("enable-music").addEventListener("click", () => {
+      if (!this.state.musicOn) {
+        this.state.musicOn = !this.state.musicOn;
+        document.getElementById("disabled").style.display = "none";
+        document.getElementById("enabled").style.display = "block";
+        var elems = document.querySelectorAll("audio");
+        console.log("elems : ", elems);
+        [].forEach.call(elems, function(elem) { unmuteMe(elem); });
+      }
+    });
+    // return;
+    // const ir = document.getElementById("switch-active-indicator-right");
+    // const il = document.getElementById("switch-active-indicator-left");
+    // const i = document.getElementById("switch-active-indicator");
+    // const on = document.getElementById("music-on");
+    // const off = document.getElementById("music-off");
+    //
+    // document.getElementById("music-switch").addEventListener("click", () => {
+    //   i.classList.remove("hide");
+    //   if (this.musicOn) {
+    //     i.classList.remove("click-left");
+    //     i.classList.add("click-right");
+    //     ir.classList.remove("showHover");
+    //     off.classList.remove("showHover");
+    //   } else {
+    //     i.classList.remove("click-right");
+    //     i.classList.add("click-left");
+    //     il.classList.remove("showHover");
+    //     on.classList.remove("showHover");
+    //   }
+    //   this.musicOn = !this.musicOn;
+    // });
+    //
+    // [ir, off].forEach(el =>
+    //   el.addEventListener("mouseover", () => {
+    //     if (this.musicOn) {
+    //       ir.classList.add("showHover");
+    //       off.classList.add("showHover");
+    //       i.classList.add("hide");
+    //     }
+    //   })
+    // );
+    //
+    // [ir, off].forEach(el =>
+    //   el.addEventListener("mouseout", () => {
+    //     if (this.musicOn) {
+    //       ir.classList.remove("showHover");
+    //       off.classList.remove("showHover");
+    //       i.classList.remove("hide");
+    //     }
+    //   })
+    // );
+    //
+    // [il, on].forEach(el =>
+    //   el.addEventListener("mouseover", () => {
+    //     if (!this.musicOn) {
+    //       il.classList.add("showHover");
+    //       on.classList.add("showHover");
+    //       i.classList.add("hide");
+    //     }
+    //   })
+    // );
+    //
+    // [il, on].forEach(el =>
+    //   el.addEventListener("mouseout", () => {
+    //     if (!this.musicOn) {
+    //       il.classList.remove("showHover");
+    //       on.classList.remove("showHover");
+    //       i.classList.remove("hide");
+    //     }
+    //   })
+    // );
   }
 
   componentDidMount() {
@@ -160,8 +203,9 @@ export default class Carousel extends Component {
     this.handleAutoCarousel();
 
     document.getElementById("carousel-player").volume = 0.1;
+    document.getElementById("carousel-player").elemMusicOn = true;
     document.getElementById("ecran-player").pause();
-    document.getElementById("flemme-player").pause();
+    document.getElementById("ecran-player").elemMusicOn = false;
   }
 
   async load() {
@@ -205,13 +249,23 @@ export default class Carousel extends Component {
     $("#carousel").on('beforeChange', function(event, slick, currentSlide, nextSlide){
       if (nextSlide == 3) {
         document.getElementById("carousel-player").pause();
-        document.getElementById("ecran-player").play();
+        document.getElementById("carousel-player").elemMusicOn = false;
+
+        document.getElementById("ecran-player").elemMusicOn = true;
         document.getElementById("ecran-player").volume = 0.03;
+        if (!document.getElementById("ecran-player").isMuted) {
+          document.getElementById("ecran-player").play();
+        }
       }
       else {
         document.getElementById("ecran-player").pause();
-        document.getElementById("carousel-player").play();
+        document.getElementById("ecran-player").elemMusicOn = false;
+        
+        document.getElementById("carousel-player").elemMusicOn = true;
         document.getElementById("carousel-player").volume = 0.1;
+        if (!document.getElementById("carousel-player").isMuted) {
+          document.getElementById("carousel-player").play();
+        }
       }
     });
 

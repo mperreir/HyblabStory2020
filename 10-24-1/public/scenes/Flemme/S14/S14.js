@@ -14,12 +14,12 @@ export default class PageFin extends Component {
   componentDidMount() {
     // social networks
     document
-      .getElementById("fs14_fb")
+      .getElementById("facebook-button-fin")
       .addEventListener("click", () =>
         window.open("https://www.facebook.com/1024.media/", "_blank")
       );
     document
-      .getElementById("fs14_ig")
+      .getElementById("instagram-button-fin")
       .addEventListener("click", () =>
         window.open("https://www.instagram.com/instagram/", "_blank")
       );

@@ -116,6 +116,11 @@ export default class Choix extends Component {
   }
 
   render(target) {
+    document.getElementById("rayon-player").pause();
+    document.getElementById("rayon-player").elemMusicOn = false;
+    document.getElementById("buzzer-player").pause();
+    document.getElementById("buzzer-player").elemMusicOn = false;
+
     $(function() {
       $("*[draggable!=true]", ".slick-track").unbind("dragstart");
       $(".un-choix");

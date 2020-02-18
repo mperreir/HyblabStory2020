@@ -20,7 +20,6 @@ export default class Reprimande extends Component {
   }
 
   render(target) {
-    document.getElementById("ecran-player").play();
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

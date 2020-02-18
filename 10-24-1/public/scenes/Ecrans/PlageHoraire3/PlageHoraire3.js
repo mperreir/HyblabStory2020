@@ -20,6 +20,8 @@ export default class PlageHoraire3 extends Component {
   }
 
   render(target) {
+    document.getElementById("buzzer-player").pause();
+    document.getElementById("buzzer-player").elemMusicOn = false;
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

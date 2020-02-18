@@ -22,6 +22,9 @@ export default class S3 extends Component {
   }
 
   render(target) {
+    document.getElementById("flemme-mid-player").volume = 0.11;
+    document.getElementById("flemme-player").pause();
+    document.getElementById("flemme-player").elemMusicOn = false;
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

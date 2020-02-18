@@ -22,7 +22,8 @@ export default class S10 extends Component {
   }
 
   render(target) {
-    document.getElementById("flemme-player").pause();
+    document.getElementById("flemme-mid-player").pause();
+    document.getElementById("flemme-mid-player").elemMusicOn = false;
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }
