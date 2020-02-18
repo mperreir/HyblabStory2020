@@ -34,7 +34,16 @@ export default {
     CarGirlSVG,
     CarBoySVG
   },
-  props: ['moving', 'rollingOut'],
+  props: {
+    moving: {
+      type: Boolean,
+      default: false
+    },
+    rollingOut: {
+      type: Boolean,
+      default: false
+    }
+  },
   computed: {
     ...mapGetters(['getCharacterGender'])
   }

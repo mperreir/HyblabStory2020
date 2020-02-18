@@ -137,30 +137,30 @@ export default {
     },
     closePopover (i) {
       switch (i) {
-      case 1:
-        this.closePopover1 = false;
-        this.closePopover2 = true;
-        this.closePopover3 = true;
-        this.closePopover4 = true;
-        break;
-      case 2:
-        this.closePopover2 = false;
-        this.closePopover1 = true;
-        this.closePopover3 = true;
-        this.closePopover4 = true;
-        break;
-      case 3:
-        this.closePopover1 = true;
-        this.closePopover2 = true;
-        this.closePopover3 = false;
-        this.closePopover4 = true;
-        break;
-      case 4:
-        this.closePopover1 = true;
-        this.closePopover2 = true;
-        this.closePopover3 = true;
-        this.closePopover4 = false;
-        break;
+        case 1:
+          this.closePopover1 = false;
+          this.closePopover2 = true;
+          this.closePopover3 = true;
+          this.closePopover4 = true;
+          break;
+        case 2:
+          this.closePopover2 = false;
+          this.closePopover1 = true;
+          this.closePopover3 = true;
+          this.closePopover4 = true;
+          break;
+        case 3:
+          this.closePopover1 = true;
+          this.closePopover2 = true;
+          this.closePopover3 = false;
+          this.closePopover4 = true;
+          break;
+        case 4:
+          this.closePopover1 = true;
+          this.closePopover2 = true;
+          this.closePopover3 = true;
+          this.closePopover4 = false;
+          break;
       }
     }
   }

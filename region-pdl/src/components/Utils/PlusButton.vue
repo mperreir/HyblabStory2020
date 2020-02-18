@@ -28,7 +28,16 @@ export default {
   components: {
     Plus
   },
-  props: ['value', 'width'],
+  props: {
+    value: {
+      type: Number,
+      default: 1
+    },
+    width: {
+      type: Number,
+      default: 20
+    }
+  },
   data: () => ({
     popover: false,
     pulse: true
