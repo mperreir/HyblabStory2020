@@ -1,0 +1,152 @@
+#page2{
+    background-image: url(../img/Bombardement.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#texteBombardement{
+    position: absolute;
+    width: 70%;
+    height: 19%;
+    left: 5%;
+    top: 76%;
+}
+
+#texteBombardement p{
+    font-family: Vibur;
+    color: #265984;
+}
+
+#next3-img{
+     position: absolute;
+     width: 4%;
+     left : 76%;
+     top : 90.5%;
+ }
+#next3-texte{
+    position: absolute;
+    left : 82%;
+    top : 92%;
+    font-family: Vibur;
+    color: #92C2D2;
+}
+
+.next3{
+    cursor: pointer;
+}
+
+
+@media screen and (max-aspect-ratio: 16/9){
+    #texteBombardement p, #next3-texte{
+        font-size: 2vw;
+    }
+}
+@media screen and (min-aspect-ratio: 16/9){
+    #texteBombardement p, #next3-texte{
+        font-size: 3.4vh;
+    }
+}
+
+#bomb1{
+    position:absolute;
+    width:32%;
+    left:1%;
+    top:2%
+}
+#bomb1:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    transition:0.5s;
+    z-index:20;
+}
+#bomb2{
+    position:absolute;
+    width:28%;
+    left:10%;
+    top:33%
+}
+#bomb2:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    transition:0.5s;
+    z-index:20;
+}
+
+#bomb3{
+    position:absolute;
+    width:30%;
+    left:50%;
+    top:21%
+}
+#bomb3:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    transition:0.5s;
+    z-index:20;
+}
+
+#bomb4{
+    position:absolute;
+    width:26%;
+    left:72%;
+    top:38%
+}
+#bomb4:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    transition:0.5s;
+    z-index:20;
+}
+#bomb5{
+    position:absolute;
+    width:20%;
+    left:73%;
+}
+#bomb5:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    transition:0.5s;
+    z-index:20;
+}
+#medaille1{
+    position:absolute;
+    width:24%;
+    left:17%;
+}
+#medaille1:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    transition:0.5s;
+    z-index:20;
+}
+#medaille2{
+    position:absolute;
+    width:15%;
+    left:33%;
+}
+#medaille2:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    transition:0.5s;
+    z-index:20;
+}

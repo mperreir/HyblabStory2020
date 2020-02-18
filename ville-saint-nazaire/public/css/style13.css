@@ -1,0 +1,95 @@
+#page13{
+    background-image: url(../img/fond_conclusion.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#next14-img{
+    position: absolute;
+    width: 4%;
+    left : 90%;
+    top : 90%;
+    cursor: pointer;
+}
+
+#texte13{
+    font-family: Vibur;
+    color: #265984;
+}
+
+#play{
+    position: absolute;
+    width:5%;
+    left:45.5%;
+    top:32%;
+    z-index: 20;
+    cursor: pointer;
+}
+
+@media screen and (max-aspect-ratio: 16/9){
+    #texte13, #next14-texte{
+        font-size: 2vw;
+    }
+}
+@media screen and (min-aspect-ratio: 16/9){
+    #texte13, #next14-texte{
+        font-size: 3.4vh;
+    }
+}
+
+#texte13 {
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    left: 17%;
+    top: 70%;
+}
+
+#videofin{
+    position: absolute;
+    width : 51%;
+    height:50%;
+    left:23%;
+    top:12%;
+    z-index:10;
+}
+
+#degaulle{
+    position: absolute;
+    width :30%;
+    top:10%
+}
+
+#degaulle:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    transition:0.5s;
+    z-index:20;
+}
+#maries{
+    position: absolute;
+    width:25%;
+    left:73%;
+    top:28%
+}
+#maries:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    transition:0.5s;
+    z-index:20;
+}
+
+#barre-dialogue-slide13{
+  position:absolute;
+  bottom:12%;
+  left: 14.5%;
+  height: 17%;
+  width: 1%;
+}

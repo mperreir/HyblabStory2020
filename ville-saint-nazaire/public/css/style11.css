@@ -1,0 +1,314 @@
+#next12-1{
+	cursor : pointer;
+}
+#next12-2{
+	cursor : pointer;
+}
+#next12-3{
+	cursor : pointer;
+}
+
+
+#maq1_1{
+	visibility:hidden;
+	position: absolute;
+	width: 6.5%;
+	height: 11%;
+	top:45%;
+	left: 14%;
+	z-index:5;
+}
+
+
+
+#maq1_2{
+	visibility:hidden;
+	position: absolute;
+	width: 13.8%;
+	height: 10%;
+	top:53%;
+	left: 10.2%;
+	z-index:4;
+}
+
+#maq1_3{
+	visibility:hidden;
+	position: absolute;
+	width: 9.5%;
+	height: 19%;
+	top:34%;
+	left: 12%;
+	z-index:3;
+}
+
+#maq1_4{
+	visibility:hidden;
+	position: absolute;
+	width: 4%;
+	height: 6.5%;
+	top:38%;
+	left: 6.5%;
+	z-index:5;
+}
+
+#maq1_5{
+	visibility:hidden;
+	position: absolute;
+	width: 10%;
+	height: 11%;
+	top:43%;
+	left: 5%;
+	z-index:2;
+}
+
+#maq1_6{
+	visibility:hidden;
+	position: absolute;
+	width: 7%;
+	height: 16.5%;
+	top:39.5%;
+	left: 20%;
+	z-index:1;
+}
+
+#maq1_7{
+	visibility:hidden;
+	position: absolute;
+	width: 4%;
+	height: 7%;
+	top:59%;
+	left: 21.5%;
+	z-index:5;
+}
+
+
+
+
+#maq2_1{
+	visibility:hidden;
+	position: absolute;
+	width: 6%;
+	height: 10.5%;
+	top:47%;
+	left: 46%;
+	z-index:5;
+}
+
+
+#maq2_2{
+	visibility:hidden;
+	position: absolute;
+	width: 6%;
+	height: 23%;
+	top:41%;
+	left: 50%;
+	z-index:4;
+}
+
+#maq2_3{
+	visibility:hidden;
+	position: absolute;
+	width: 13%;
+	height: 15%;
+	top:45%;
+	left: 41%;
+	z-index:3;
+}
+
+#maq2_4{
+	visibility:hidden;
+	position: absolute;
+	width: 4%;
+	height: 6.5%;
+	top:55%;
+	left: 53%;
+	z-index:5;
+}
+
+#maq2_5{
+	visibility:hidden;
+	position: absolute;
+	width: 6%;
+	height: 11%;
+	top:58%;
+	left: 45%;
+	z-index:1;
+}
+
+#maq2_6{
+	visibility:hidden;
+	position: absolute;
+	width: 10%;
+	height: 11%;
+	top:34%;
+	left: 44%;
+	z-index:2;
+}
+
+#maq2_7{
+	visibility:hidden;
+	position: absolute;
+	width: 4%;
+	height: 7%;
+	top:35%;
+	left: 42%;
+	z-index:5;
+}
+
+
+
+
+#maq3_1{
+	visibility:hidden;
+	position: absolute;
+	width: 6.5%;
+	height: 11%;
+	top:48%;
+	left: 81%;
+	z-index:5;
+}
+
+
+#maq3_2{
+	visibility:hidden;
+	position: absolute;
+	width: 13.5%;
+	height: 10%;
+	top:58%;
+	left: 78.3%;
+	z-index:4;
+}
+
+#maq3_3{
+	visibility:hidden;
+	position: absolute;
+	width: 9.5%;
+	height: 25%;
+	top:38.5%;
+	left: 76.5%;
+	z-index:3;
+}
+
+#maq3_4{
+	visibility:hidden;
+	position: absolute;
+	width: 4%;
+	height: 6.5%;
+	top:54%;
+	left: 69%;
+	z-index:5;
+}
+
+#maq3_5{
+	visibility:hidden;
+	position: absolute;
+	width: 8%;
+	height: 11.3%;
+	top:46.7%;
+	left: 70%;
+	z-index:2;
+}
+
+#maq3_6{
+	visibility:hidden;
+	position: absolute;
+	width: 7.2%;
+	height: 17%;
+	top:33%;
+	left: 83%;
+	z-index:1;
+}
+
+#maq3_7{
+	visibility:hidden;
+	position: absolute;
+	width: 3.7%;
+	height: 6.6%;
+	top:35.5%;
+	left: 74.7%;
+	z-index:4;
+}
+
+
+
+#page11 p{
+	font-family:Vibur;
+    color: #92C2D2;
+    text-align:center;
+}
+
+#ecume{
+ 	position: absolute;
+    left:6%;
+    top: 75%;
+    width:28%;
+}
+
+#ecume img{
+	float:left;
+	width:15.5%;
+}
+
+
+#brise{
+	position: absolute;
+    left:38%;
+    top: 75%;
+	width:28%;
+}
+
+#brise img{
+	float:left;
+	width:16%;
+}
+
+#rive{
+	position: absolute;
+    right:7%;
+    top: 75%;
+	width:25%;
+}
+
+
+#rive img{
+	float:left;
+	width:18%;
+}
+
+
+
+
+#survol1:hover p{
+	color:#255A85;
+}
+#survol1:hover img{
+	color:#255A85;
+}
+
+#survol2:hover p{
+	color:#255A85;
+}
+#survol2:hover img{
+	color:#255A85;
+}
+
+#survol3:hover p{
+	color:#255A85;
+}
+#survol3:hover img{
+	color:#255A85;
+}
+
+
+
+
+@media screen and (max-aspect-ratio: 16/9){
+    #page11 p{
+        font-size: 3vw;
+    }
+}
+@media screen and (min-aspect-ratio: 16/9){
+    #page11 p{
+        font-size: 5vh;
+    }
+}

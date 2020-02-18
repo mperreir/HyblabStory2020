@@ -1,15 +1,16 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : Direction de la communication de la ville de Saint Nazaire
 
-Sujet :
+Sujet : Saint-Nazaire
 
-Nom d'équipe :
+Nom d'équipe : Les Nineties
 
-Participants : 
+Participants :
 
-- Sciencescom
+- Sciencescom : Chloé Ragueneau, Marie Rivalin
 
-- AGR :
-- Polytech :  
 
+- AGR : Suzie Renaud, Justine David
+
+- Polytech : Julien Le Roux, Alan Le Verge, Jérôme Montigny, Ghislain Percie du Sert, Simon Bellanger
