@@ -1,5 +1,9 @@
 <template>
-  <div class="classic-btn bg-darkblue" :style="{width: width+'%', left: x+'%', top: y+'%'}" @click="onClick">
+  <div
+    class="classic-btn bg-darkblue"
+    :style="{width: width+'%', left: x+'%', top: y+'%'}"
+    @click="onClick"
+  >
     <div class="text">{{ text }}</div>
   </div>
 </template>

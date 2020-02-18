@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="slider">
-      <Minus class="button minus" :class="{clickable: clickableMinus}" @click="minusClick" />
+      <Minus class="button minus" :class="{ clickable: clickableMinus }" @click="minusClick" />
       <input v-model="value" type="range" min="1" max="3" @input="onValueChange" />
-      <Plus class="button plus" :class="{clickable: clickablePlus}" @click="plusClick" />
+      <Plus class="button plus" :class="{ clickable: clickablePlus }" @click="plusClick" />
     </div>
   </div>
 </template>

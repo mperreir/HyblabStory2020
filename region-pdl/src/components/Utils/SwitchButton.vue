@@ -1,14 +1,14 @@
 <template>
   <div
     class="classic-btn bg-darkblue"
-    :style="{width: width+'%', height: height+'%', left: x+'%', top: y+'%'}"
+    :style="{ width: width + '%', height: height + '%', left: x + '%', top: y + '%' }"
   >
     <div
-      :class="{'cursor-toggle': true, 'bg-lightgrey': !state, on: state, 'bg-lightblue': state}"
+      :class="{ 'cursor-toggle': true, 'bg-lightgrey': !state, on: state, 'bg-lightblue': state }"
       @click="toggleOn"
     >
       <span
-        :class="{text: true, adaptiveText: true, darkblue: !state, lightgrey: state}"
+        :class="{ text: true, adaptiveText: true, darkblue: !state, lightgrey: state }"
       >{{ state === true ? "ON" : "OFF" }}</span>
     </div>
   </div>
@@ -53,7 +53,7 @@ export default {
 }
 
 .classic-btn {
-  color: white;
+  color: #fff;
   position: absolute;
   border-radius: 0.3vh;
   text-align: center;
@@ -79,6 +79,6 @@ export default {
 }
 
 .onText {
-  color: white;
+  color: #fff;
 }
 </style>

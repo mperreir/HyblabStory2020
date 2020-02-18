@@ -92,12 +92,18 @@ export default {
   height: 2.5vh;
   width: 2.5vh;
   border-radius: 50%;
+  -webkit-animation: animation-dot-reverse 0.4s linear;
+  -moz-animation: animation-dot-reverse 0.4s linear;
+  -ms-animation: animation-dot-reverse 0.4s linear;
   animation: animation-dot-reverse 0.4s linear;
 }
 
 .current {
   height: 3vh;
   width: 3vh;
+  -webkit-animation: animation-dot 0.4s linear;
+  -moz-animation: animation-dot 0.4s linear;
+  -ms-animation: animation-dot 0.4s linear;
   animation: animation-dot 0.4s linear;
 }
 

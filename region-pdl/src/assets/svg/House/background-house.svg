@@ -222,5 +222,11 @@
          <path id="path258" d="M1397.09,788.68s3.47-.42,4.64,6.73c1.06,6.46-2.13,7.61-4.64,7.61Z" style="fill:#b6c891" />
          <rect id="rect260" x="1396.59" y="803.02" width="1.02" height="6.21" style="fill:#5e7e8f" />
       </g>
+      <g id="panneau_photovoltaique" data-name="panneau photovoltaique">
+         <g id="photovoltaique">
+            <path id="path263" d="M4423.66,1024.61H1323.35A125.7,125.7,0,0,1,1449,898.87h2849a125.69,125.69,0,0,1,125.69,125.69Z" style="fill:#79787d" />
+            <path id="path265" d="M1378.29,1024.53s-2.9-78.3,63.65-78.88,2880,0,2880,0,54.41,8.54,51.85,82.69" style="fill:none;stroke:#fff;stroke-miterlimit:5;stroke-width:3px;stroke-dasharray:80" />
+         </g>
+      </g>
    </g>
 </svg>

@@ -1,5 +1,8 @@
 <template>
-  <div :style="{width: width+'%', left: x+'%', top: y+'%'}" class="innerContent darkblue title">
+  <div
+    :style="{ width: width + '%', left: x + '%', top: y + '%' }"
+    class="innerContent darkblue title"
+  >
     <slot />
   </div>
 </template>
