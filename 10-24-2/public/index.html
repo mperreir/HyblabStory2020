@@ -1,79 +1,306 @@
-<!doctype html>
-
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Hyblab 2020</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet"/>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-    <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
-    <script src="https://rawcdn.githack.com/bchanx/slidr/397004f7acc338b112a9e1dc2481acc1446e0209/slidr.min.js"></script>
-    <script defer src="js/slide1.js"></script>
-    <script defer src="js/slide2.js"></script>
-    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>10-24</title>
+    <script src = "js/jquery-3.4.1.js"></script>
+    <script src = "js/main.js" defer></script>
+
 </head>
-<body>
-<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-<div id="container">
-    <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-    <main id="slidr">
-        <section data-slidr="page-1">
-            <header>
-                <h1 id="titre">Welcome to</h1>
-            </header>
+<body  style="overflow: hidden;">
+<div class="fullpage">
 
-            <img id="logo-hyblab" src="img/logo_hyblab.png"></img>
+    <div class="Page1" style="height: 100vh; background-image: url('images/fond.png'); background-size:cover">
+        <div class="top">
+            <img class="logo popup_logo btnMedia" src="images/logo2.png"/>
+            <div class="all_reseau">
+            <a  href="https://twitter.com/media1024">
+                <img class="reseau" src="images/twitter_blanc.png"/>
+            </a>
+            <a  href="https://www.instagram.com/1024.media/">
+                <img class="reseau" src="images/insta_blanc.png"/>
+            </a>
+            <a href="https://www.facebook.com/1024.media">
+                <img class="reseau" src="images/fb_blanc.png"/>
+            </a>
+            </div>
+            <question class="c1 son" id="Question_1">Me parle pas sur ce ton !</question>
 
-            <video class="video-js" data-setup='{"autoplay": true, "loop" : true, "fill": true, "muted": true}'
-                   id="background-video">
-                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-            </video>
+            <question class="c2 son" id="Question_2">Tu as eu des notes ?</question>
 
-            <!-- le footer sera remplir à partir de données lues dans un fichier Json-->
-            <footer></footer>
-        </section>
-        <section data-slidr="page-2">
-            <img id="img-fini" src="https://www.tri-d-aix.com/media/bilder/fini_55c9f_2e319.png">
-            <footer id="bandeau">
-                <!-- Logo Hyblab -->
-                <a href="http://www.hyblab.fr/"><img alt="Hyblab DataSport" id="hyblab" src="logo_hyblab.png"></a>
+            <question class="c3 son" id="Question_3">Tu parles à qui ?</question>
 
-                <!-- Les organisateurs -->
-                <ul>
-                    <li><a href="http://www.ouestmedialab.fr/"><img alt="Ouest Médialab" src="logo_oml.png"></a></li>
-                    <li><a href="http://www.agrnantes.fr"><img alt="AGR école de l'image" src="ecoles/logo_agr.png"></a>
-                    </li>
-                    <li><a href="http://www.univ-nantes.fr/"><img alt="Université de Nantes"
-                                                                  src="ecoles/logo_universitenantes.jpg"></a></li>
-                    <li><a href="http://www.polytech.univ-nantes.fr/"><img alt="Polytech Nantes"
-                                                                           src="ecoles/logo_polytech.png"></a></li>
-                    <li><a href="http://sciencescom.audencia.com/"><img alt="SciencesCom"
-                                                                        src="ecoles/logo_sciencescom.jpg"></a></li>
-                </ul>
-                <!-- Les autres logos -->
-                <ul>
-                    <!-- Logos CC et opensource -->
-                    <li>
-                        <ul>
-                            <li class="stacked"><img alt="Creative commons" id="cc" src="logo_cc.png"></li>
-                            <li class="stacked"><img alt="Open source" id="opensource" src="logo_opensource.png"></li>
-                        </ul>
-                    </li>
-                    <!-- Logo de votre porteur de projet -->
-                    <li><a href="http://www.mon-porteur-de-projet.org"><img alt="Logo de mon porteur de projet"
-                                                                            src="no-logo.png"></a></li>
-                    <!-- Partenaires institutionnels -->
-                    <li><a href="http://www.paysdelaloire.fr/"><img alt="Pays de La Loire" class="institutionnel"
-                                                                    src="institutionnels/logo_pdl.png"></a></li>
-                    <li><a href="http://www.nantesmetropole.fr/"><img alt="Nantes Métropole" class="institutionnel"
-                                                                      src="institutionnels/logo_nantesmetropole.png"></a>
-                    </li>
-                </ul>
-            </footer>
-        </section>
-    </main>
+            <question class="c1 son" id="Question_4">Range ta chambre !!</question>
+
+            <question class="c4 son" id="Question_5">Réponds moi quand je te parle ! </question>
+
+        </div>
+
+        <p class = "question1">Vous aussi, vous avez déjà <br/>prononcé au moins une fois<br/>une de ces phrases?</p>
+        <p class = "reponse1">Découvrez les histoires <br/>de Louise (17 ans) et Arthur (15 ans) !</p>
+        <button id="commencerExp" class="bouton" ><img class="image_arrow" src="images/Arrow_2.png"/></button>
+
+    </div>
+
+
+    <div class="Page2" id="map">
+
+        <div class="top">
+            <div class="all_reseau">
+                <img class="logo popup_logo btnMedia" src="images/logo2.png"/>
+
+                <a  href="https://twitter.com/media1024">
+                    <img class="reseau" src="images/twitter_blanc.png"/>
+                </a>
+                <a  href="https://www.instagram.com/1024.media/">
+                    <img class="reseau" src="images/insta_blanc.png"/>
+                </a>
+                <a href="https://www.facebook.com/1024.media">
+                    <img class="reseau" src="images/fb_blanc.png"/>
+                </a>
+            </div>
+        </div>
+
+
+        <div id="popupRessourceContainer">
+            <div class="testanim"></div>
+            <div id="popupRessourceTitre">
+                <p id="r">Ressource</p>
+            </div>
+
+            <div class="popup" id="popupRessource">
+
+                <div id="ressourceGauche">
+                    <div id="titreRessource">
+                        <h1 id="ressourceTitreArticle">Article:</h1>
+                        <h1 id="ressourceTitreArticleNom"></h1>
+                    </div>
+                    <div id="texteRessource">
+                        <h2></h2>
+                    </div>
+                    <div id="lienRessource">
+                        <span>Source: </span><a href="http://www.pediatre-online.fr/adolescents/pourquoi-les-adolescents-fument-ils/">http://www.pediatre-online.fr/adolescents/pourquoi-les-adolescents-fument-ils</a>
+                    </div>
+                    <div id="reseauRessource">
+                        <h2 id="callToAction">Rejoignez-nous !</h2>
+                        <div id="containReseauRessource" >
+                            <a href="https://www.facebook.com/1024.media">
+                                <img class="reseauR" src="images/ressourceFacebook.png"/>
+                            </a>
+
+                            <a  href="https://www.instagram.com/1024.media/">
+                                <img class="reseauR" src="images/ressourceInsta.png"/>
+                            </a>
+                            <a  href="https://twitter.com/media1024">
+                                <img class="reseauR" src="images/ressourceTwitter.png"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ressourceDroite">
+                    <div id="labelAutreHistoire"> <h1>Découvrez une situation similaire !</h1></div>
+                    <img id="autreHistoire" src="">
+
+                    <button id="btnRetourCarte">Retour carte</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div  id="popupLieu">
+            <div id="Maison">
+                <img src="images/Picto_Maison.png" class="Maison lieu Picto" id="btnMaison"><p id="legendeMaison" class="legende legendeMaison"></p>
+                <img src="images/gars.png" class="Maison sexe Homme sexeMaison" id="btnHommeMaison">
+                <img src="images/fille.png" class="Maison sexe Femme sexeMaison" id="btnFemmeMaison">
+            </div>
+            <div id="Piscine">
+                <img src="images/Picto_Piscine.png" class="Piscine lieu Picto" id="btnPiscine"><p id="legendePiscine" class="legende legendePiscine"></p>
+                <img src="images/gars.png" class="Piscine sexe Homme sexePiscine" id="btnHommePiscine">
+                <img src="images/fille.png" class="Piscine sexe Femme sexePiscine" id="btnFemmePiscine">
+            </div>
+            <div id="Bar">
+                <img src="images/Picto_Bar.png" class="Bar lieu Picto" id="btnBar"><p id="legendeBar" class="legende legendeBar"></p>
+                <img src="images/gars.png" class="Bar sexe Homme sexeBar" id="btnHommeBar">
+                <img src="images/fille.png" class="Bar sexe Femme sexeBar" id="btnFemmeBar">
+            </div>
+            <div id="Lycee">
+                <img src="images/Picto_Ecole.png" class="Lycee lieu Picto" id="btnLycee"><p id="legendeLycee" class="legende legendeLycee"></p>
+                <img src="images/gars.png" class="Lycee sexe Homme sexeLycee" id="btnHommeLycee">
+                <img src="images/fille.png" class="Lycee sexe Femme sexeLycee" id="btnFemmeLycee">
+            </div>
+        </div>
+
+
+        <div class="popup" id="popupContexte">
+
+            <div id="contexte_intro">Vous avez choisi le personnage : </div>
+            <img id="contexteImgAdo" class="contexte_icone contexte_icone" src="">
+            <p id="contexteNomAdo" class="contexte_description contexte_texte_nom"></p>
+            <div id="contexte_texte"></div>
+            <img id="contexteGif" src="">
+            <!--RAJOUTER UNE DIV/IMG POUR LE GIF ICI .... RAPPEL C'EST JUST UN SRC="TRUC.GIF"-->
+            <button id="boutonFinContexte" ><img id="image_arrow" src="images/Arrow_2.png"/></button>
+        </div>
+
+
+        <h6 id="annonceClique"><div>Cliquez sur un lieu</div><div>pour découvrir une histoire</div></h6>
+
+
+        <div class="popup" id="popupDialogue">
+
+            <div class="EnteteLieu"></div>
+            <div class="scene">
+                <img class="imageScene" src="" alt="parent">
+
+                <div class="bulleparent">
+                    <div class="bulleparent-text">
+                        <div id="paroleParent"></div>
+                        <div class="arrow-down-parent"></div>
+                    </div>
+                </div>
+
+                <div class="bulledepensee">
+                    <img class="penseeAdo" src="images/bulle-pensee.png">
+                    <div id="penseeAdo"></div>
+                </div>
+
+                <div class="bulleado">
+                    <div class="bulleado-text">
+                        <div id="paroleAdo"></div>
+                        <div class="arrow-down-ado"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="cliquez">Cliquez sur la réponse que vous voulez donner à Arthur</div>
+
+            <div class="Choix">
+                <div class="Choix1">
+                    <button class="boutonDialogue" id="btnRep1"><img src="images/Arrow_2.png"/>
+                        <div class="animbtn2" id="monte2"></div>
+                        <div id="contenuRep1" class="choix_rep"></div>
+
+                    </button>
+
+                </div>
+                <div class="Choix1">
+                    <button class="boutonDialogue" id="btnRep2"><img src="images/Arrow_2.png"/>
+                        <div class="animbtn" id="monte"></div>
+                        <div id="contenuRep2" class="choix_rep"></div>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="Passer">
+                <button id="btnPasserDialogue" class="boutonDialogue"><img src="images/Arrow_2.png"/>
+                    <div class="animbtn" id="descente"></div>
+                    <div class="animbtn2" id="descente2"></div>
+                </button>
+            </div>
+
+
+        </div>
+
+        <div class="popup" id="popupMedia">
+            <div class="popupMedia_header">
+                <img class="popupMedia_Logo" src="images/logo2.png">
+                <img class="popupMedia_Croix" src="images/croix.png">
+
+            </div>
+            <div class="popupMedia_content">
+                <div class="popupMedia_content_texte">
+                    <p class="popupMedia_Titre">
+                        Un média pour les parents d'adolescents.
+                    </p>
+                    <p class="popupMedia_Texte">
+                        10-24 est le nouveau média des parents d’ados : un condensé d’articles, de paroles d’ados, de fiches pédagogiques thématiques et de conseils entre parents sont à découvrir. Retrouvez-nous sur notre communauté Facebook pour en parler et échanger ! À très bientôt ! </p>
+                </div>
+
+                <div id="felix" >
+                        <h2 id="callToAction2">Rejoignez-nous !</h2>
+                        <div id="containReseauRessource2" >
+                            <a href="https://www.facebook.com/1024.media">
+                                <img class="reseauR" src="images/ressourceFacebook.png"/>
+                            </a>
+
+                            <a  href="https://www.instagram.com/1024.media/">
+                                <img class="reseauR" src="images/ressourceInsta.png"/>
+                            </a>
+                            <a  href="https://twitter.com/media1024">
+                                <img class="reseauR" src="images/ressourceTwitter.png"/>
+                            </a>
+                        </div>
+                </div>
+
+            </div>
+
+            <button id="realisation">Réalisation</button>
+
+        </div>
+
+        <div id="popupCredit" class="popup">
+
+            <div id="haut">
+                <img class="image_credits" id="haut"  src="images/logo_hyblab.png">
+                <img class="popupCredit_Croix" src="images/croix.png">
+
+            </div>
+
+            <div id="milieu">
+                <div class="ecole"id="agr">
+                    <img class="image_credits" src="images/AGR_logo_Nantes_Rennes-01.png">
+                    <div id="etu_agr">
+                        <p class="participants agr">Félix Audebaud</p>
+                        <p class="participants agr">Mary Lorant</p>
+                    </div>
+                </div>
+                <div id="polytech">
+                    <img class="image_credits" src="images/logo_polytech.png">
+                    <div id="etu_po">
+                        <p class="participants polytech">Lucie Chérigny</p>
+                        <p class="participants polytech">Emilien Simon</p>
+                        <p class="participants polytech">Nicolas Lepasquier</p>
+                        <p class="participants polytech">Baptiste Mansire</p>
+                        <p class="participants polytech">Adel Dali</p>
+                    </div>
+                </div>
+
+                <div id="com">
+
+                    <img class="image_credits" src="images/logo_sciencescom.jpg">
+                    <div id="etu_com">
+                        <p class="participants com">Sibylle de Sazilly</p>
+                        <p class="participants com">Clémence Barrais</p>
+                    </div>
+                </div>
+            </div>
+            <div id="bas">
+                <img class="image_credits" id="univ" src="images/logo_universitenantes.jpg">
+                <img class="image_credits " id="opensource" src="images/logo_opensource.png">
+                <img class="image_credits" id="nantes" src="images/logo_nantesmetropole.png">
+                <img class="image_credits" id="cc" src="images/logo_cc.png">
+                <img class="image_credits" id="oml" src="images/logo_oml.png">
+            </div>
+        </div>
+
+        <!--
+        <script>
+            // When the user clicks on <div>, open the popup
+            function myFunction() {
+              var popup = document.getElementById("myPopup");
+              popup.classList.toggle("show");
+            }
+        </script>
+        -->
+
+    </div>
 </div>
 </body>
 </html>

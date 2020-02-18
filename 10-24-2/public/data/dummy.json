@@ -1,3 +1,51 @@
 {
-    "message": "Some data from JSON :-)"
+  "sexe":
+    {
+      "Homme": {
+        "Lieu1": {
+          "dialogue": [
+            {"Parent": "salut fiston"},
+            {"Ado": "salut papa"},
+            {"Parent": "tu veux me parler ?"},
+            {"Ado": "non nikoumouk"}
+          ],
+          "rep1": {
+            "contenu": "baffer l'ado",
+            "dialogue": [
+              {
+                "Parent": "alors c'est qui le patron ?"
+              },
+              {
+                "Ado": "je te deteste"
+              },
+              {
+                "Parent": "comment tu parles de ton père ?"
+              },
+              {
+                "Ado": "mais nique ta race!"
+              }
+            ]
+          },
+          "rep2": {
+            "contenu": "faire un calin à l'enfant",
+            "dialogue": [
+              {
+                "Parent": "ça va mieux ?"
+              },
+              {
+                "Ado": "Non je t'aime pas"
+              },
+              {
+                "Parent": "bah nique ta mère"
+              },
+              {
+                "Ado": "c'est déjà fait"
+              }
+            ]
+          }
+        }
+      },
+
+      "Femme": "25ans"
+    }
 }

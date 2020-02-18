@@ -1,0 +1,39 @@
+{
+  "lieu1": {
+    "Dialogue1": [
+      {"Parent":"toujour la musique a fond"},
+      {"Ado": "Tu peux frapper au moin"},
+      {"Ado":  "j'ai une intimité "},
+      {"Pensee": "il me casse les coiuille"},
+      {"Parent": "aller leve toi on est en retard "},
+      {"Ado":  "En retard?"},
+      {"Parent": "On va à"}
+    ],
+    "Choix1":
+      { "Reponse": "Ecole",
+          "Dialogue2": [
+            {"Ado": "j'ai pas envie d'y aller"},
+            {"Parent":  "arrete tes gaminrie , on est en retard je t'ai dit"},
+            {"Pensee":  "je vais encore me faire insulter"},
+            { "Ado": "j'ai dir que je ne voulais pas y aller"}
+          ],
+        "Choix1":
+        {
+          "Reponse" : ""
+        },
+        "Choix2": {
+          "Reponse": "On y vaaa maintenant",
+          "Dialogue": ""
+        }
+      },
+
+    "Choix2":
+    {
+      "Reponse": "Piscine",
+      "Dialogue2" : [
+        {"Ado": "j'ai pas envie d'y aller"},
+        {"Parent":  "arrete tes gaminrie , on est en retard je t'ai dit"}
+      ]
+    }
+  }
+}
