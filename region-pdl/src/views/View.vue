@@ -43,7 +43,7 @@
 
 <script>
 import ProgressBar from "@/components/ProgressBar.vue";
-import LogoRegion from "@/assets/logo-region.svg";
+import LogoRegion from "@/assets/Utils/logo-region.svg";
 import Intro from "@/components/Saynettes/Intro.vue";
 import Persos from "@/components/Saynettes/Persos.vue";
 import House from "@/components/Saynettes/House.vue";
@@ -53,8 +53,9 @@ import Company from "@/components/Saynettes/Company.vue";
 import School from "@/components/Saynettes/School.vue";
 import Quizz from "@/components/Saynettes/Quizz.vue";
 import End from "@/components/Saynettes/End.vue";
-import Carousel from "@/components/carousel/Carousel.vue";
-import CarouselSlide from "@/components/carousel/CarouselSlide.vue";
+import Carousel from "@/components/Carousel/Carousel.vue";
+import CarouselSlide from "@/components/Carousel/CarouselSlide.vue";
+
 import { Howl } from 'howler';
 
 export default {

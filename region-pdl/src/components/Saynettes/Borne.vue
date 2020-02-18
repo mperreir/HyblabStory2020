@@ -43,7 +43,7 @@ import { mapGetters } from "vuex";
 import Background from "@/assets/Borne/background-borne.svg";
 import SimpleText from "@/components/SimpleText";
 import TrainSVG from "@/assets/Borne/train.svg";
-import BoatSVG from "@/assets/boat.svg";
+import BoatSVG from "@/assets/Utils/boat.svg";
 import BorneSVG from "@/assets/Borne/borne.svg";
 import PlusButton from "@/components/PlusButton";
 import SimpleButton from "@/components/SimpleButton";

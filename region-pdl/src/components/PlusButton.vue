@@ -17,7 +17,7 @@
 <script>
 import { Howl } from "howler";
 
-import Plus from "@/assets/plus.svg";
+import Plus from "@/assets/Utils/plus-button.svg";
 
 export default {
   name: "PlusButton",

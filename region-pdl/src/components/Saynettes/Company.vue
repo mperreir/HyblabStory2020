@@ -56,7 +56,7 @@ import CompanySVG from "@/assets/Company/background-company.svg";
 import PlusButton from "@/components/PlusButton";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
-import RoadSVG from "@/assets/road.svg";
+import RoadSVG from "@/assets/Utils/road.svg";
 
 export default {
   name: "Intro",

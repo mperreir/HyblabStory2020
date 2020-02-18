@@ -38,7 +38,7 @@ import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
 import PersoHomme from "@/assets/Persos/man.svg";
 import PersoFemme from "@/assets/Persos/woman.svg";
-import Boat from "@/assets/boat.svg";
+import Boat from "@/assets/Utils/boat.svg";
 
 export default {
   name: "Persos",

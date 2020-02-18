@@ -34,7 +34,7 @@
 <script>
 import { mapGetters } from "vuex";
 
-import Background from "@/assets/empty-background.svg";
+import Background from "@/assets/Utils/empty-background.svg";
 import BackgroundLarge from "@/assets/Car/larger-background.svg";
 import SwitchButton from "@/components/SwitchButton";
 import Car from "@/components/Car";

@@ -44,7 +44,7 @@
 import { mapGetters } from "vuex";
 
 import Background from "@/assets/School/background-school.svg";
-import RoadSVG from "@/assets/road.svg";
+import RoadSVG from "@/assets/Utils/road.svg";
 import SimpleText from "@/components/SimpleText";
 import SimpleButton from "@/components/SimpleButton";
 import PlusButton from "@/components/PlusButton";
