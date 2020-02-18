@@ -56,8 +56,8 @@ import Company from '@/components/Saynettes/Company.vue';
 import School from '@/components/Saynettes/School.vue';
 import Quizz from '@/components/Saynettes/Quizz.vue';
 import End from '@/components/Saynettes/End.vue';
-import Carousel from '@/components/Carousel.vue';
-import CarouselSlide from '@/components/CarouselSlide.vue';
+import Carousel from '@/components/Carousel/Carousel.vue';
+import CarouselSlide from '@/components/Carousel/CarouselSlide.vue';
 
 export default {
   name: 'Views',
