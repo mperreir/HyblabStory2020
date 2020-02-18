@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 1024">
+    <defs>
+        <linearGradient id="Dégradé_sans_nom_26" x1="962.6" y1="620.81" x2="962.6" y2="617.12" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fbc36b"/>
+            <stop offset="1" stop-color="#faaf39"/>
+        </linearGradient>
+    </defs>
+    <title>Planche2-Perso-StyleIntegré</title>
+    <g id="ciel">
+        <path d="M957.94,619s2.25-1.85,2.94-1.85.85.33,1.79.26.27-.19,1.3-.26,2.14,1.32,3.07,1.32-1.14,2.17-2.19,2.31-4.14,0-5.26,0S957.94,619,957.94,619Z" style="fill:url(#Dégradé_sans_nom_26)"/>
+    </g>
+    <g id="fond">
+        <rect x="1002.72" y="533.57" width="106.86" height="264.02" style="fill:#94c6e4"/>
+        <rect id="fenetre" x="1013.6" y="546.57" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-2" data-name="fenetre" x="1036.56" y="546.57" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-3" data-name="fenetre" x="1059.52" y="546.57" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-4" data-name="fenetre" x="1082.48" y="546.57" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-5" data-name="fenetre" x="1013.6" y="576.95" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-6" data-name="fenetre" x="1036.56" y="576.95" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-7" data-name="fenetre" x="1059.52" y="576.95" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-8" data-name="fenetre" x="1082.48" y="576.95" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-9" data-name="fenetre" x="1013.6" y="607.34" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-10" data-name="fenetre" x="1036.56" y="607.34" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-11" data-name="fenetre" x="1059.52" y="607.34" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-12" data-name="fenetre" x="1082.48" y="607.34" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-13" data-name="fenetre" x="1013.6" y="637.72" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-14" data-name="fenetre" x="1036.56" y="637.72" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-15" data-name="fenetre" x="1059.52" y="637.72" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-16" data-name="fenetre" x="1082.48" y="637.72" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-17" data-name="fenetre" x="1013.6" y="668.11" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-18" data-name="fenetre" x="1036.56" y="668.11" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-19" data-name="fenetre" x="1059.52" y="668.11" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-20" data-name="fenetre" x="1082.48" y="668.11" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-21" data-name="fenetre" x="1013.6" y="698.49" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-22" data-name="fenetre" x="1036.56" y="698.49" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-23" data-name="fenetre" x="1059.52" y="698.49" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-24" data-name="fenetre" x="1082.48" y="698.49" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-25" data-name="fenetre" x="1013.6" y="728.88" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-26" data-name="fenetre" x="1036.56" y="728.88" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-27" data-name="fenetre" x="1059.52" y="728.88" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-28" data-name="fenetre" x="1082.48" y="728.88" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-29" data-name="fenetre" x="1013.6" y="759.26" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-30" data-name="fenetre" x="1036.56" y="759.26" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-31" data-name="fenetre" x="1059.52" y="759.26" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <rect id="fenetre-32" data-name="fenetre" x="1082.48" y="759.26" width="14.92" height="22.62" style="fill:#cae2f1"/>
+        <path d="M-486.76,832.32s313.33-40.58,861.62-36.19,928.23-18,1348.59-10.4,584.84,12.77,1251.93-1c1136.77-23.38,1188,66.93,310.7,89.89s-1453,7.14-2284.54,10.28S-486.76,832.32-486.76,832.32Z" style="fill:#80bbde"/>
+        <path d="M-959.84,890.83c4.53-3,9-6.15,13.37-9.33,23.47-17,102.28-68.29,218.65-84.78,140.24-19.88,214.59,21.6,365.7-7.58s291.35.94,361.47,7.58S259.06,856,394.1,858.6,942.37,783,1061.84,788.41s167.17,3.43,403.34,119.5c0,0-211.46,87.16-530.89,81.71C617.51,984.21-1183.82,1040.19-959.84,890.83Z" style="fill:#e5eec9"/>
+        <g id="pont">
+            <rect x="496.88" y="759.63" width="317" height="5.75" transform="translate(-3.65 3.16) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="573.29" y="755.91" width="4.5" height="2.06" transform="translate(-3.63 2.77) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="573.27" y="751.79" width="4.5" height="2.06" transform="translate(-3.61 2.77) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="573.25" y="747.67" width="4.5" height="2.06" transform="translate(-3.59 2.77) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="573.24" y="743.55" width="4.5" height="2.06" transform="translate(-3.57 2.77) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="573.22" y="739.43" width="4.5" height="2.06" transform="translate(-3.55 2.77) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="573.2" y="735.31" width="4.5" height="2.06" transform="translate(-3.53 2.77) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="573.18" y="731.19" width="4.5" height="2.06" transform="translate(-3.51 2.77) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="573.16" y="727.07" width="4.5" height="2.06" transform="translate(-3.49 2.77) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="573.14" y="722.95" width="4.5" height="2.06" transform="translate(-3.47 2.77) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <line x1="573.13" y1="723.29" x2="515.53" y2="760.32" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <line x1="573.38" y1="726.05" x2="532.89" y2="760.21" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <line x1="573.16" y1="729.14" x2="553.1" y2="760.12" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <line x1="577.48" y1="723.26" x2="635.44" y2="759.75" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <line x1="577.26" y1="726.04" x2="618.08" y2="759.8" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <line x1="577.51" y1="729.12" x2="597.87" y2="759.9" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <line x1="733.71" y1="722.95" x2="676.1" y2="759.55" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <line x1="733.95" y1="725.28" x2="693.46" y2="759.44" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <line x1="733.73" y1="728.37" x2="713.67" y2="759.35" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <line x1="738.06" y1="722.93" x2="796.01" y2="758.98" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <line x1="737.83" y1="725.26" x2="778.65" y2="759.03" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <line x1="738.08" y1="728.35" x2="758.44" y2="759.13" style="fill:none;stroke:#0177be;stroke-miterlimit:10"/>
+            <rect x="733.87" y="755.14" width="4.5" height="2.06" transform="translate(-3.62 3.54) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="733.85" y="751.02" width="4.5" height="2.06" transform="translate(-3.6 3.54) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="733.83" y="746.9" width="4.5" height="2.06" transform="translate(-3.58 3.54) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="733.81" y="742.78" width="4.5" height="2.06" transform="translate(-3.56 3.54) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="733.79" y="738.66" width="4.5" height="2.06" transform="translate(-3.54 3.54) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="733.77" y="734.54" width="4.5" height="2.06" transform="translate(-3.52 3.54) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="733.75" y="730.42" width="4.5" height="2.06" transform="translate(-3.5 3.54) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="733.73" y="726.3" width="4.5" height="2.06" transform="translate(-3.48 3.54) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="573.3" y="757.97" width="4.5" height="2.06" transform="translate(-3.64 2.77) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="573.28" y="753.85" width="4.5" height="2.06" transform="translate(-3.62 2.77) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="573.26" y="749.73" width="4.5" height="2.06" transform="translate(-3.6 2.77) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="573.25" y="745.61" width="4.5" height="2.06" transform="translate(-3.58 2.77) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="573.23" y="741.49" width="4.5" height="2.06" transform="translate(-3.56 2.77) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="573.21" y="737.37" width="4.5" height="2.06" transform="translate(-3.54 2.77) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="573.19" y="733.25" width="4.5" height="2.06" transform="translate(-3.52 2.77) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="573.17" y="729.13" width="4.5" height="2.06" transform="translate(-3.5 2.77) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="573.15" y="725.01" width="4.5" height="2.06" transform="translate(-3.48 2.77) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="733.88" y="757.2" width="4.5" height="2.06" transform="translate(-3.63 3.54) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="733.86" y="753.08" width="4.5" height="2.06" transform="translate(-3.61 3.54) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="733.84" y="748.96" width="4.5" height="2.06" transform="translate(-3.59 3.54) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="733.82" y="744.84" width="4.5" height="2.06" transform="translate(-3.57 3.54) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="733.8" y="740.72" width="4.5" height="2.06" transform="translate(-3.55 3.54) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="733.78" y="736.6" width="4.5" height="2.06" transform="translate(-3.53 3.54) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="733.76" y="732.48" width="4.5" height="2.06" transform="translate(-3.51 3.54) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="733.74" y="728.36" width="4.5" height="2.06" transform="translate(-3.49 3.54) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="733.72" y="724.24" width="4.5" height="2.06" transform="translate(-3.47 3.54) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="733.71" y="722.18" width="4.5" height="2.06" transform="translate(-3.46 3.54) rotate(-0.28)" style="fill:#fcfcfc"/>
+            <rect x="572.5" y="765.75" width="6.8" height="21.83" transform="translate(-3.72 2.77) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="569.8" y="787.58" width="12.96" height="8.71" transform="translate(-3.8 2.78) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="505.3" y="766.08" width="6.8" height="21.83" transform="matrix(1, 0, 0, 1, -3.72, 2.45)" style="fill:#8dc2e2"/>
+            <rect x="502.6" y="787.9" width="12.96" height="8.71" transform="translate(-3.8 2.45) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="732.72" y="764.98" width="6.8" height="21.83" transform="matrix(1, 0, 0, 1, -3.72, 3.54)" style="fill:#8dc2e2"/>
+            <rect x="730.02" y="786.81" width="12.96" height="8.71" transform="translate(-3.79 3.54) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="799.92" y="764.66" width="6.8" height="21.83" transform="translate(-3.71 3.87) rotate(-0.28)" style="fill:#8dc2e2"/>
+            <rect x="797.22" y="786.49" width="12.96" height="8.71" transform="translate(-3.79 3.87) rotate(-0.28)" style="fill:#8dc2e2"/>
+        </g>
+        <path d="M10092.23,866.65c-100.14,9.72-1421.09,21-1548.91,21-158.45,0-810.14,7.5-932.62-5.73-724.86-78.35-3263.1-75.91-3814.12-30.84-142,11.61-696.57-15.57-1004.39,4.4S2284.3,842.2,2038,835.33s-514.36,41.78-760.61,43.22-593.77-16.38-1086.28-23-946.53-20.19-946.53-20.19c-364.78,0-566.79,107-686.82,117.33v72.2l12963.66,1V868.19C11520.37,868.3,10093.32,866.55,10092.23,866.65Z" style="fill:#c5e567"/>
+        <rect x="880.05" y="664.82" width="49.39" height="144.01" style="fill:#8dc2e2"/>
+        <rect id="fenetre-33" data-name="fenetre" x="885.08" y="671.91" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-34" data-name="fenetre" x="895.69" y="671.91" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-35" data-name="fenetre" x="906.3" y="671.91" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-36" data-name="fenetre" x="916.91" y="671.91" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-37" data-name="fenetre" x="885.08" y="688.48" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-38" data-name="fenetre" x="895.69" y="688.48" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-39" data-name="fenetre" x="906.3" y="688.48" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-40" data-name="fenetre" x="916.91" y="688.48" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-41" data-name="fenetre" x="885.08" y="705.05" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-42" data-name="fenetre" x="895.69" y="705.05" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-43" data-name="fenetre" x="906.3" y="705.05" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-44" data-name="fenetre" x="916.91" y="705.05" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-45" data-name="fenetre" x="885.08" y="721.63" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-46" data-name="fenetre" x="895.69" y="721.63" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-47" data-name="fenetre" x="906.3" y="721.63" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-48" data-name="fenetre" x="916.91" y="721.63" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-49" data-name="fenetre" x="885.08" y="738.2" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-50" data-name="fenetre" x="895.69" y="738.2" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-51" data-name="fenetre" x="906.3" y="738.2" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-52" data-name="fenetre" x="916.91" y="738.2" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-53" data-name="fenetre" x="885.08" y="754.78" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-54" data-name="fenetre" x="895.69" y="754.78" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-55" data-name="fenetre" x="906.3" y="754.78" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-56" data-name="fenetre" x="916.91" y="754.78" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-57" data-name="fenetre" x="885.08" y="771.35" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-58" data-name="fenetre" x="895.69" y="771.35" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-59" data-name="fenetre" x="906.3" y="771.35" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-60" data-name="fenetre" x="916.91" y="771.35" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-61" data-name="fenetre" x="885.08" y="787.93" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-62" data-name="fenetre" x="895.69" y="787.93" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-63" data-name="fenetre" x="906.3" y="787.93" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect id="fenetre-64" data-name="fenetre" x="916.91" y="787.93" width="6.9" height="12.34" style="fill:#cae2f1"/>
+        <rect x="943.52" y="577.82" width="75.17" height="219.18" style="fill:#8dc2e2"/>
+        <rect id="fenetre-65" data-name="fenetre" x="951.17" y="588.61" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-66" data-name="fenetre" x="967.32" y="588.61" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-67" data-name="fenetre" x="983.47" y="588.61" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-68" data-name="fenetre" x="999.62" y="588.61" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-69" data-name="fenetre" x="951.17" y="613.84" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-70" data-name="fenetre" x="967.32" y="613.84" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-71" data-name="fenetre" x="983.47" y="613.84" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-72" data-name="fenetre" x="999.62" y="613.84" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-73" data-name="fenetre" x="951.17" y="639.06" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-74" data-name="fenetre" x="967.32" y="639.06" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-75" data-name="fenetre" x="983.47" y="639.06" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-76" data-name="fenetre" x="999.62" y="639.06" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-77" data-name="fenetre" x="951.17" y="664.29" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-78" data-name="fenetre" x="967.32" y="664.29" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-79" data-name="fenetre" x="983.47" y="664.29" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-80" data-name="fenetre" x="999.62" y="664.29" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-81" data-name="fenetre" x="951.17" y="689.52" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-82" data-name="fenetre" x="967.32" y="689.52" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-83" data-name="fenetre" x="983.47" y="689.52" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-84" data-name="fenetre" x="999.62" y="689.52" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-85" data-name="fenetre" x="951.17" y="714.74" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-86" data-name="fenetre" x="967.32" y="714.74" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-87" data-name="fenetre" x="983.47" y="714.74" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-88" data-name="fenetre" x="999.62" y="714.74" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-89" data-name="fenetre" x="951.17" y="739.97" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-90" data-name="fenetre" x="967.32" y="739.97" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-91" data-name="fenetre" x="983.47" y="739.97" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-92" data-name="fenetre" x="999.62" y="739.97" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-93" data-name="fenetre" x="951.17" y="765.19" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-94" data-name="fenetre" x="967.32" y="765.19" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-95" data-name="fenetre" x="983.47" y="765.19" width="10.5" height="18.78" style="fill:#cae2f1"/>
+        <rect id="fenetre-96" data-name="fenetre" x="999.62" y="765.19" width="10.5" height="18.78" style="fill:#cae2f1"/>
+    </g>
+    <g id="ECOLE">
+        <rect x="152.31" y="816.72" width="4.35" height="30.56" style="fill:#5e7e8f"/>
+        <polygon points="154.48 740.11 154.48 816.72 129.59 816.72 154.48 740.11" style="fill:#76b6dc"/>
+        <polyline points="179.37 816.48 154.48 739.87 154.48 816.48" style="fill:#52a3d3"/>
+        <rect x="1129.62" y="781.43" width="1.82" height="13.52" style="fill:#5e7e8f"/>
+        <polygon points="1130.53 747.53 1130.53 781.43 1120.12 781.43 1130.53 747.53" style="fill:#9db56b"/>
+        <polyline points="1140.95 781.33 1130.53 747.43 1130.53 781.33" style="fill:#b6c891"/>
+        <rect x="1265" y="810.4" width="6.4" height="47.6" style="fill:#5e7e8f"/>
+        <polygon points="1268.2 691.1 1268.2 810.4 1231.55 810.4 1268.2 691.1" style="fill:#9db56b"/>
+        <polyline points="1304.86 810.04 1268.2 690.73 1268.2 810.04" style="fill:#b6c891"/>
+        <rect x="96.21" y="810.57" width="1.82" height="13.52" style="fill:#5e7e8f"/>
+        <polygon points="97.12 776.67 97.12 810.57 86.71 810.57 97.12 776.67" style="fill:#9db56b"/>
+        <polyline points="107.54 810.46 97.12 776.56 97.12 810.46" style="fill:#b6c891"/>
+        <rect x="16.45" y="570.37" width="70.58" height="249.43" style="fill:#8dc2e2"/>
+        <rect id="fenetre-97" data-name="fenetre" x="27.47" y="589.83" width="11.85" height="218.59" style="fill:#cae2f1"/>
+        <rect id="fenetre-98" data-name="fenetre" x="45.69" y="589.83" width="11.85" height="218.59" style="fill:#cae2f1"/>
+        <rect id="fenetre-99" data-name="fenetre" x="63.91" y="589.83" width="11.85" height="218.59" style="fill:#cae2f1"/>
+        <rect x="4.45" y="673.16" width="54.17" height="157.94" style="fill:#8dc2e2"/>
+        <rect id="fenetre-100" data-name="fenetre" x="9.96" y="680.93" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-101" data-name="fenetre" x="21.6" y="680.93" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-102" data-name="fenetre" x="33.24" y="680.93" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-103" data-name="fenetre" x="44.88" y="680.93" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-104" data-name="fenetre" x="9.96" y="699.11" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-105" data-name="fenetre" x="21.6" y="699.11" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-106" data-name="fenetre" x="33.24" y="699.11" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-107" data-name="fenetre" x="44.88" y="699.11" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-108" data-name="fenetre" x="9.96" y="717.29" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-109" data-name="fenetre" x="21.6" y="717.29" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-110" data-name="fenetre" x="33.24" y="717.29" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-111" data-name="fenetre" x="44.88" y="717.29" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-112" data-name="fenetre" x="9.96" y="735.47" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-113" data-name="fenetre" x="21.6" y="735.47" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-114" data-name="fenetre" x="33.24" y="735.47" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-115" data-name="fenetre" x="44.88" y="735.47" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-116" data-name="fenetre" x="9.96" y="753.64" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-117" data-name="fenetre" x="21.6" y="753.64" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-118" data-name="fenetre" x="33.24" y="753.64" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-119" data-name="fenetre" x="44.88" y="753.64" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-120" data-name="fenetre" x="9.96" y="771.82" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-121" data-name="fenetre" x="21.6" y="771.82" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-122" data-name="fenetre" x="33.24" y="771.82" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-123" data-name="fenetre" x="44.88" y="771.82" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-124" data-name="fenetre" x="9.96" y="790" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-125" data-name="fenetre" x="21.6" y="790" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-126" data-name="fenetre" x="33.24" y="790" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-127" data-name="fenetre" x="44.88" y="790" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-128" data-name="fenetre" x="9.96" y="808.17" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-129" data-name="fenetre" x="21.6" y="808.17" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-130" data-name="fenetre" x="33.24" y="808.17" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect id="fenetre-131" data-name="fenetre" x="44.88" y="808.17" width="7.56" height="13.53" style="fill:#cae2f1"/>
+        <rect x="150.6" y="845.62" width="12.12" height="85.42" style="fill:#5e7e8f"/>
+        <polygon points="156.66 631.5 156.66 845.62 87.3 845.62 156.66 631.5" style="fill:#9db56b"/>
+        <polyline points="226.02 844.96 156.66 630.84 156.66 844.96" style="fill:#b6c891"/>
+        <polygon points="1483.28 462.05 1483.28 813.62 1369.39 813.62 1483.28 462.05" style="fill:#9db56b"/>
+        <path d="M780.18,775.17s-11.75-1.42-15.72,22.78c-3.59,21.89,7.22,25.77,15.72,25.77Z" style="fill:#9db56b"/>
+        <path d="M780.18,775.17s11.74-1.42,15.72,22.78c3.59,21.89-7.22,25.77-15.72,25.77Z" style="fill:#b6c891"/>
+        <rect x="778.48" y="823.72" width="3.45" height="21.02" style="fill:#5e7e8f"/>
+        <path d="M1100.5,757.21s-11.75-1.41-15.72,22.79c-3.59,21.88,7.22,25.76,15.72,25.76Z" style="fill:#9db56b"/>
+        <path d="M1100.5,757.21s11.75-1.41,15.72,22.79c3.59,21.88-7.22,25.76-15.72,25.76Z" style="fill:#b6c891"/>
+        <rect x="1098.8" y="805.76" width="3.45" height="21.02" style="fill:#5e7e8f"/>
+        <path d="M1166.87,755.4s-8.81-1.07-11.79,17.08c-2.69,16.41,5.42,19.33,11.79,19.33Z" style="fill:#9db56b"/>
+        <path d="M1166.87,755.4s8.81-1.07,11.79,17.08c2.7,16.41-5.41,19.33-11.79,19.33Z" style="fill:#b6c891"/>
+        <rect x="1165.6" y="791.81" width="2.59" height="15.77" style="fill:#5e7e8f"/>
+        <path d="M840.42,741.59s-10.19-1.72-13.63,27.67c-3.11,26.57,6.26,31.29,13.63,31.29Z" style="fill:#9db56b"/>
+        <path d="M840.42,741.59s10.19-1.72,13.63,27.67c3.11,26.57-6.26,31.29-13.63,31.29Z" style="fill:#b6c891"/>
+        <rect x="838.95" y="800.55" width="2.99" height="25.53" style="fill:#5e7e8f"/>
+        <path d="M78.29,798.94s-5.64-.68-7.54,10.94c-1.73,10.5,3.46,12.37,7.54,12.37Z" style="fill:#9db56b"/>
+        <path d="M78.29,798.94s5.64-.68,7.55,10.94c1.72,10.5-3.47,12.37-7.55,12.37Z" style="fill:#b6c891"/>
+        <rect x="77.48" y="822.25" width="1.65" height="10.09" style="fill:#5e7e8f"/>
+        <path d="M1344.11,760.23s-32.62-3.93-43.65,63.28c-10,60.77,20,71.57,43.65,71.57Z" style="fill:#9db56b"/>
+        <path d="M1344.11,760.23s32.63-3.93,43.66,63.28c10,60.77-20,71.57-43.66,71.57Z" style="fill:#b6c891"/>
+        <rect x="1339.4" y="895.08" width="9.58" height="58.39" style="fill:#5e7e8f"/>
+    </g>
+    <g id="bateau">
+        <line x1="304.07" y1="813.79" x2="225.56" y2="813.79" style="fill:none;stroke:#f2f2f2;stroke-miterlimit:10"/>
+        <line x1="300.99" y1="818.86" x2="249.49" y2="818.86" style="fill:none;stroke:#f2f2f2;stroke-miterlimit:10"/>
+        <line x1="291.34" y1="808.03" x2="253.86" y2="808.72" style="fill:none;stroke:#f2f2f2;stroke-miterlimit:10"/>
+        <line x1="522.63" y1="815.89" x2="601.14" y2="815.89" style="fill:none;stroke:#f2f2f2;stroke-miterlimit:10"/>
+        <line x1="525.71" y1="810.81" x2="577.21" y2="810.81" style="fill:none;stroke:#f2f2f2;stroke-miterlimit:10"/>
+        <line x1="535.36" y1="821.64" x2="572.84" y2="820.96" style="fill:none;stroke:#f2f2f2;stroke-miterlimit:10"/>
+    </g>
+    <g id="borne">
+        <path d="M448.71,667.19c.35-.89.65-1.75.89-2.56A14.7,14.7,0,0,0,448.71,667.19Z" style="fill:#f98c8b"/>
+    </g>
+</svg>

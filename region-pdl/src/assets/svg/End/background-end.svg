@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Calque_1"
+   data-name="Calque 1"
+   viewBox="0 0 1440 1024"
+   version="1.1"
+   sodipodi:docname="background-end.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata255">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs253" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview251"
+     showgrid="false"
+     inkscape:zoom="0.65186406"
+     inkscape:cx="462.34384"
+     inkscape:cy="388.80474"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Calque_1" />
+  <title
+     id="title2">fond_fin</title>
+  <path
+     d="m -0.25,703.82 v 174 c 485.5621,11.57 958.74791,17.11 1256.1625,14.74 L 459.73423,788.21216 C 274.9865,783.84092 207.83479,699.92344 -0.25,703.82 Z"
+     style="fill:#e5eecf;stroke-width:0.93390775"
+     id="path4"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccc" />
+  <path
+     d="m 8.89,863.33 c -3.28,0.33 -3.08,1.9 -8.89,2.24 v 158.59 l 1440,0.11 V 858.84 C 2022.436,615.26971 71.443269,841.63472 8.89,863.33 Z"
+     style="fill:#c5e567"
+     id="path248"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccccc" />
+</svg>
