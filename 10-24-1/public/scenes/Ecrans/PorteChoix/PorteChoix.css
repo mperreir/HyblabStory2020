@@ -11,6 +11,7 @@
   right: 30%;
   font-size: 14px;
   line-height:14px;
+  padding-left: 10px;
 }
 
 #e_toquer {
@@ -24,6 +25,7 @@
   right: 30%;
   font-size: 14px;
   line-height:28px;
+  padding-left: 35px;
 }
 
 #e_toquer:hover {
