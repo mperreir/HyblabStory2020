@@ -1,0 +1,971 @@
+{
+  "sexe": {
+    "Homme":{
+      "Maison": {
+        "imgBackground" : "SC1_IL_1_ARTHUR_(1).jpg",
+        "contexte" : "Vous avez choisi le personnage d'Arthur qui est un adolescent de 15 ans plutôt introverti et timide. Arthur a une grande sœur Louise âgée de 17 ans. Au cours des différents lieux qu’il fréquente, suivez Arthur dans sa vie d’adolescent et découvrez plein de conseils pour mieux comprendre ses réactions et celles de votre adolescent.\nCe matin, Arthur déjeune avec son père Guillaume avant de partir au lycée. L’ambiance est morose. Hier, ils ont eu une conversation pour aborder le sujet de la sexualité et des relations amoureuses. Le père d’Arthur souhaiterait l'emmener chez le médecin afin qu’il puisse poser toutes ses questions, chose qu’Arthur refuse catégoriquement. La tension est donc toujours présente au petit-déjeuner.\n",
+        "dialogue": [
+          {"paroleParent": " Tu es vraiment sûr que tu ne veux pas te rendre chez le médecin ? Il pourra répondre à toutes tes questions.  "},
+          {"paroleAdo": " Papaaaaaa ! Arrête avec ce sujet. J’en ai déjà parlé hier. "},
+          {"paroleParent": " Tu comprends, avec ta mère, on aimerait te guider sur : ... "}
+        ],
+        "rep1": {
+          "imgBackground" : "SC1_IL_2_ARTHUR.jpg",
+          "contenu": " ... les relations amoureuses et sexuelles avec une petite copine ou un petit copain. ",
+          "dialogue": [
+            {
+              "paroleParent": " Ce n’est pas une honte de parler de ta vie sexuelle. Je suis passé par là aussi,  je peux t’apporter des conseils. "
+            },
+            {
+              "paroleAdo": " Mais je ne suis pas à l’aise à l’idée d’en parler, j’en parle plus avec mes amis, parce que c’est plus facile. Je sais pas, on se comprend mieux.  "
+            },
+            {
+              "paroleParent": " Comme tu veux, mais en tous cas n’hésite pas, je suis là si tu as besoin de conseils. Promis je n’en parlerai pas à ta mère. "
+            },
+            {
+              "penseeAdo": " Mon père ne comprend pas que je ne suis pas à l’aise à l’idée d’en parler. Ça ne regarde que moi, surtout devant lui. La honte ! En plus je ne suis jamais tombé véritablement amoureux d’une fille.  "
+            },
+            {
+              "paroleParent" : " Il faut que tu saches que : "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC1_IL_2_ARTHUR.jpg",
+            "contenu": " ...tes relations amoureuses ne regardent que toi.  ",
+            "dialogue": [
+              {
+                "paroleParent": " Après tout, même si tu es encore mineur, en tant que père, je n’ai pas à m’introduire dans ta vie amoureuse, c’est ton choix et ton intimité "
+              }
+            ],
+            "ressource": {
+              "titre": "Comment aborder la sexualité avec mon adolescent ?",
+              "texte": " En matière de sexualité, il n’y a pas de règles, c’est à vous de décider quand aborder le sujet. Ne pas en parler avec votre adolescent, peut laisser penser que c’est un sujet tabou. Si vous n’êtes pas à l’aise à l’idée de lui en parler, proposez-lui d’en parler à une tierce personne. En revanche, ce qui peut vous paraître anodin ou justifié, peut être vu comme intrusif par votre adolescent. L’important est de lui faire comprendre que vous êtes à son écoute. Parler de consentement à son adolescent est également une notion importante, il doit donc savoir qu’un non est un non et qu’un oui n’est pas forcément valable pour toutes les autres fois. ",
+              "source": " Santé Magazine ",
+              "url": " https://www.santemagazine.fr/psycho-sexo/psycho/psycho-adolescent/parler-de-sexualite-avec-son-ado-175836 "
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC1_IL_2_ARTHUR.jpg",
+            "contenu": " ... tu peux parler de tes relations avec ton médecin. ",
+            "dialogue": [
+              {
+                "paroleParent": " Le conseil que je puisse te donner est de voir un médecin qui t’accompagnera vers les structures dédiées à la sexualité "
+              }
+            ],
+            "ressource": {
+              "titre" : " À qui et à quel endroit mon adolescent peut se confier sur sa sexualité ?  ",
+              "texte" : " Il est possible que votre adolescent soit plus à l’aise de parler de sujets intimes avec une personne de confiance. Cette personne peut être un adulte proche de la famille ou votre médecin généraliste s’il se sent en confiance avec lui. Il existe aussi plusieurs espaces où votre adolescent pourra trouver des ressources et des conseils pour parler de sa sexualité. À Nantes par exemple, la maison des adolescents est un lieu d’écoute et d’échange . ",
+              "source" : " 10-24 ",
+              "url": " https://www.facebook.com/1024.media/ "
+            }
+          }
+        },
+        "rep2": {
+          "imgBackground" : "SC1_IL_3_ARTHUR.jpg",
+          "contenu": " ... ta puberté. ",
+          "dialogue": [
+              {
+                "paroleParent": " Arthur, ce n’est pas une honte de te questionner sur la puberté et sur les changements qui apparaissent sur ton corps "
+              },
+              {
+                "paroleAdo": " Je ne suis pas à l’aise à l’idée d’en parler, j’en parle davantage avec mes amis, mais c’est tout. Surtout que je n’ai pas..., pas encore… encore mué et que j’ai très peu de pilosité. Toi-même, tu me charries constamment sur les quelques poils que j’ai sur le menton.  "
+              },
+              {
+                "paroleParent": " Mais tu sais bien que je te taquines. T’inquiète pas fiston, ça arrivera plus tard. Je me souviens aussi que j’étais complexé au même âge que toi. Regarde, maintenant ma barbe a bien poussé.  "
+              },
+              {
+                "penseeAdo": " Mon père ne comprend pas que je n’ai pas envie d’en parler avec lui, surtout devant lui. La honte ! En plus, je n’ai pas encore mué et j’ai très peu de pilosité.  "
+              },
+              {
+                "paroleParent": " Il faut que tu saches que :  "
+              }
+          ],
+          "rep1": {
+            "imgBackground" : "SC1_IL_3_ARTHUR.jpg",
+            "contenu": " … ton corps se transformera tôt au tard. ",
+            "dialogue": [
+              {
+                "paroleParent": " Même si tu as 15 ans, tu n’as pas encore fini ta puberté. Je suis sûr que tu vas encore grandir. "
+              }
+            ],
+            "ressource":{
+              "titre" : "Comment rassurer mon adolescent sur sa puberté ?",
+              "texte" : " Chez les adolescents, la pilosité faciale apparaît généralement autour de 15-16 ans. C’est d’abord le duvet de la lèvre supérieure qui se développe, viennent les poils sur les joues puis le menton. Sur le reste du corps, les poils apparaîtront encore un peu plus tard.  ",
+              "source" : "Santé magazine",
+              "url" : " https://www.santemagazine.fr/ "
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC1_IL_3_ARTHUR.jpg",
+            "contenu": " … la modification de ton corps est un chamboulement auquel tu vas progressivement t’habituer. ",
+            "dialogue": [
+              {
+                "paroleParent": " Les modifications de ton corps sont généralement sources d’angoisse et d'inquiétude mais une fois cette étape passée tu te familiariseras à ton nouveau corps. Patience, ça demande du temps "
+              }
+            ],
+            "ressource":{
+              "titre" : "Comment aider mon adolescent à s’approprier son nouveau corps ?",
+              "texte" : "Les garçons grandissent en moyenne de 27 cm pendant la puberté. Généralement, la croissance ralentit vers 15-16 ans mais les muscles continuent de se développer, transformant la silhouette.\nLa poitrine peut aussi se développer légèrement, c’est normal. Ce “gonflement” disparaîtra de lui-même. il ne faut donc pas que votre adolescent s’en inquiète.",
+              "source" : "10-24",
+              "url" : " https://www.facebook.com/1024.media/ "
+            }
+          }
+        }
+      },
+      "Piscine": {
+        "contexte" : "Après s’être dépêché à se laver les dents, Arthur monte avec lenteur dans la voiture de son père pour se rendre à son premier cours de la journée : le cours de piscine. Son père l'emmène à la piscine et s’aperçoit qu’Arthur ne parle pas et semble perturbé. Il le questionne mais Arthur répond de manière agressive. Guillaume, son père ne comprend pas pourquoi Arthur réagit de cette manière. La conversation reprend seulement lorsque son père coupe le moteur.",
+        "imgBackground" : "SC2_IL_1_ARTHUR (1).jpg",
+        "dialogue": [
+          {"paroleParent": "S’il te plait Arthur, parles-moi, je vois bien qu’il y a un quelque chose qui ne va pas. "},
+          {"paroleAdo": "..."},
+          {"paroleAdo": "Non mais rien..."},
+          {"paroleParent": "Arthur, j’ai besoin de comprendre ce qu’il se passe, tu n’as quasiment rien manger ce matin."},
+          {"paroleAdo": " ... Certains garçons se moquent de mes oreilles décollés...elle se voient encore plus avec mon bonnet de bain."},
+          {"ParoleParent": "C’est donc ça le problème, je comprends mieux.. . je peux t’aider sur:"}
+        ],
+        "rep1": {
+          "imgBackground" : "SC2_IL_2_ARTHUR (1).jpg",
+          "contenu": " ... Les démarches que je peux faire auprès de l’établissement scolaire pour signaler ta situation ",
+          "dialogue": [
+            {
+              "paroleAdo": " Je n’ose pas en parler à l’école, je vais être vu comme une balance par les autres de la classe. "
+            },
+            {
+              "paroleParent": " Tu peux seulement en faire part à ton professeur de sport, il remarquera peut-être les comportements des harceleurs. "
+            },
+            {
+              "paroleAdo": " Ouais, je verrais bien ... "
+            },
+            {
+              "paroleParent": " Je t’assure que c’est important d’en parler à ton professeur, il sera tenu au courant et pourra observer les comportements de tes camarades. "
+            },
+            {
+              "penseeAdo": " Papa, tu ne comprends pas que ce n’est pas si facile, je n’oserais jamais le dire à mon professeur. C’est sur, qu’il va en parler aux élèves concernés.  "
+            },
+            {
+              "paroleParent": " Il faut que tu saches que : "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC2_IL_2_ARTHUR (2).jpg",
+            "contenu": " ... ton professeur de sport doit être au courant de la situation. ",
+            "dialogue": [
+              {
+                "paroleParent": " Ton professeur se rendra compte de la situation et il fera le nécessaire pour que la situation s'apaise "
+              }
+            ],
+            "ressource": {
+              "titre": " Dois-je prévenir l’établissement scolaire si mon adolescent est harcelé ?  ",
+              "texte": " En cas de harcèlement, il est important d’en parler. Différentes ressources existent au sein d’un établissement scolaire : enseignants, CPE, infirmiers, chef d’établissement. Il existe également des numéros verts pour obtenir des conseils : 3020 ou 0800 200 000",
+              "source": "10-24",
+              "url" : " https://www.facebook.com/1024.media/ "
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC2_IL_2_ARTHUR (2).jpg",
+            "contenu": " ... tes camarades doivent être punis et sanctionnés par leur comportement ",
+            "dialogue": [
+              {
+                "paroleParent": " Tes camarades ont commis des moqueries sur une partie de ton corps, ils doivent comprendre que ces agissements sont graves. "
+              }
+            ],
+            "ressource": {
+              "titre" : "Comment sensibiliser les harceleurs à arrêter leur agissement ?",
+              "texte" : "Même si ça peut paraître difficile et contre-intuitif, il est important de comprendre la “mécanique” des harceleurs. Souvent, ce sont eux-mêmes d’anciens harcelés. Ils ne cherchent pas forcément à nuire mais à attirer l’attention et gagner en popularité en se montrant “le plus fort”. S’ils ne faut pas les excuser, comprendre leur comportement est aussi une clé vers la solution.",
+              "source" : "Education.gouv.fr",
+              "url" : "https://www.education.gouv.fr/"
+            }
+          }
+        },
+        "rep2": {
+          "imgBackground": "SC2_IL_3_ARTHUR (1).jpg",
+          "contenu": " ... l'accompagnement personnel pour que tu reprennes confiance en toi ",
+          "dialogue": [
+            {
+              "paroleAdo": " Plus facile à dire qu’à faire, car j’ai l’impression que le problème vient de moi. "
+            },
+            {
+              "paroleParent": " Non, si tu te fais harceler, surtout viens me voir, pour que je puisse t’aider à trouver des solutions. "
+            },
+            {
+              "paroleAdo": " Si tu le dis... "
+            },
+            {
+              "paroleParent": " Je suis ton père, je peux prendre un rendez-vous chez la psychologue pour t’aider à te sentir mieux. "
+            },
+            {
+              "penseeAdo": " Papa, tu ne comprends pas que je n’ai pas envie de me rendre chez une psychologue, je n’ai rien à lui dire, et je ne veux pas qu’elle sache mes problèmes.  "
+            },
+            {
+              "paroleParent": " Il faut que tu saches que : "
+            }
+          ],
+          "rep1": {
+            "imgBackground": "SC2_IL_3_ARTHUR (2).jpg",
+            "contenu": " ... tu n’es responsable en aucun cas de la situation ",
+            "dialogue": [
+              {
+                "paroleParent": " Tu n’as rien à te reprocher, le problème c’est les autres. "
+              }
+            ],
+            "ressource": {
+              "titre" : "Comment déculpabiliser son adolescent en situation de harcèlement ?",
+              "texte" : " En cas de harcèlement, vous pouvez ouvrir le dialogue avec votre adolescent en expliquant ce qui définit le harcèlement : une situation de violence répétée (verbale, physique ou psychologique). Il existe différents types de harcèlement : moral, physique, sexuel ou matériel, qui lorsqu’il se poursuit en ligne est qualifié de cyber-harcèlement.  ",
+              "source" : "10-24",
+              "url" : " https://www.facebook.com/1024.media/ "
+            }
+          },
+          "rep2": {
+            "imgBackground": "SC2_IL_3_ARTHUR (2).jpg",
+            "contenu": " ... ta différence doit être une force. ",
+            "dialogue": [
+              {
+                "paroleParent": " On a tous des imperfections, tu es une belle personne, peu importe les remarques de tes camarades. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Comment aider mon adolescent à reprendre confiance ? ",
+              "texte" : " Pour la psychologue Emmanuelle Piquet, il faut d'abord aider l’adolescent “à quitter la croyance selon laquelle il ne peut pas avoir d'impact sur la situation. Ensuite, on va se servir des insultes et des attaques du harceleur. Une des armes infaillibles pour casser la popularité et le pouvoir est l'humour et l'autodérision. Pour cela, l’adolescent doit apprendre à accepter l'attaque et en jouer. Il faut ridiculiser l’harceleur dans son action en public et non personnellement. Parfois regarder l'autre dans les yeux peut suffire à désamorcer les attaques.” ",
+              "source" : "Livre de Emmanuelle Piquet \"Te laisse pas faire : aider son enfant face au harcèlement scolaire\"",
+              "url" : " "
+            }
+          }
+        }
+      },
+      "Lycee": {
+        "imgBackground" : "SC3_IL_1_ARTHUR (1).jpg",
+        "contexte" : "En fin de journée, Magalie va chercher son fils. Devant le lycée, elle le surprend à fumer une cigarette avec ses amis. Arthur rejoint sa mère devant le portail du lycée et débute une conversation, jusqu’au moment où sa mère l’interroge sur une odeur suspecte de fumée.",
+        "dialogue": [
+          {
+            "paroleParent": " Tu n’as pas quelques choses à me dire ? "
+          },
+          {
+            "paroleAdo": " ... Non, pourquoi ? "
+          },
+          {
+            "paroleParent": " Tu es vraiment sûr ? Tu sens particulièrement fort l’odeur de cigarette. "
+          },
+          {
+            "paroleAdo": " ... Euh non ...  Non, vraiment ce sont mes amis qui fument, pas moi. "
+          },
+          {
+            "paroleParent": " Tu es sûr que tu ne me mens pas, car je t’ai vu avec une cigarette à la main. Je souhaite te mettre en garde  "
+          }
+        ],
+        "rep1": {
+          "imgBackground" : "SC3_IL_2_ARTHUR (1).jpg",
+          "contenu": " ... l’influence du groupe dans le tabagisme. ",
+          "dialogue": [
+            {
+              "paroleAdo": " Oui, j’ai déjà essayé à la sortie des cours, mais ..., mais, à vrai dire ce sont les garçons qui me poussent à fumer. Je te promets que de base je voulais pas commencer. "
+            },
+            {
+              "paroleParent": " Ah oui ? Mais pourquoi ils font ça ? "
+            },
+            {
+              "paroleAdo": " Je sais pas, mais ils disent que pour parler à un groupe de filles, il vaut mieux fumer pour s’intégrer au groupe et être perçu comme quelqu’un de “cool” au lycée. C’est pas mal, j’ai plein d’amis maintenant. "
+            },
+            {
+              "paroleParent": " Mais Arthur, tu peux dire non, ce sont tes amis, et ils doivent te comprendre. Si tu n’as pas envie de fumer, c’est ton choix ! "
+            },
+            {
+              "penseeAdo": " Mais maman, tu ne comprends pas que pour se faire accepter dans un groupe il faut parfois fumer.  "
+            },
+            {
+              "paroleParent" : " Il faut que tu saches que ... : "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC3_IL_2_ARTHUR (2).jpg",
+            "contenu": " ... tu dois faire des choix pour toi, et non pour les autres. ",
+            "dialogue": [
+              {
+                "paroleParent": " Le groupe joue un poids dans tes choix, mais c’est important de s’en détacher, notamment pour la cigarette, qui n’est pas un acte anodin "
+              }
+            ],
+            "ressource": {
+              "titre" : " Comment aider mon adolescent à s’affirmer dans un groupe ? ",
+              "texte" : " L’adolescence se construit généralement sous le regard des autres. Avant d’arriver à construire sa propre identité, l’adolescent cherche à “plaire aux autres” pour pouvoir s’intégrer plus facilement au groupe. L’affirmation de soi réside dans le fait d’exprimer ce que l’on ressent et d’accepter les choses ou au contraire de les refuser. Vous pouvez conseiller votre adolescent en lui disant qu’affirmer son point de vue c’est aussi  prendre le risque de s’opposer à une idée. Votre adolescent peut être effrayé, mais exprimer son avis avec confiance permet aux autres d’accepter et de respecter le propos qu’il énonce. ",
+              "source" : "Michèle Freud formation et Union Francophone des associations de parents.",
+              "url" : " "
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC3_IL_2_ARTHUR (2).jpg",
+            "contenu": " ... fumer n’est pas un acte anodin, tes amis doivent le comprendre. ",
+            "dialogue": [
+              {
+                "paroleParent": " Tes amis ne doivent pas t’influencer à fumer si tu n’as pas envie. Ils sont censés être là pour toi "
+              }
+            ],
+            "ressource": {
+              "titre" : " L’influence des amis dans le tabagisme : comment en parler à mon adolescent ?  ",
+              "texte" : " En 2017, des chercheurs de l’université de Pennsylvanie, ont révélé que les jeunes âgés de 10 à 19 ans, dont les amis fument sont plus susceptibles de fumer à leur tour. Cette influence n’est pas anodine, car l’apparition de la cigarette dans un groupe conduit généralement les non-fumeurs à le devenir. Il est important de rappeler à votre adolescent que même si les autres le font, cela ne veut pas dire que ce n’est pas dangereux, bien au contraire. Votre adolescent peut être effrayé à l’idée qu’on lui interdise de fumer, mais rappelez-lui, qu’il peut en parler à ses amis et leur confier qu’il n’en ressent pas le besoin et que c’est son choix. ",
+              "source" : "Tabac info services",
+              "url" : " https://www.tabac-info-service.fr/ "
+            }
+          }
+        },
+        "rep2": {
+          "imgBackground" : "SC3_IL_3_ARTHUR (1).jpg",
+          "contenu": " ...  le tabac n’est plus un atout de séduction. ",
+          "dialogue": [
+            {
+              "paroleAdo": " Oui, j’ai déjà essayé à la sortie des cours, mais je t’assure que je vais arrêter dans pas longtemps. "
+            },
+            {
+              "paroleParent": " Ah oui ? Dans combien de temps ? Je ne te l’apprends pas, mais les cigarettes te donnent les dents jaunes. Certains disent même que ça fait baisser la libido, crois-mois ce n’est vraiment pas un atout de séduction. "
+            },
+            {
+              "paroleAdo": " Je sais, je sais, mais seulement quelques gens sont impactés par une baisse de la libido. "
+            },
+            {
+              "paroleParent": " Je t’aurai prévenu en tout cas. "
+            },
+            {
+              "penseeAdo": " Maman, même s’il y a plein d’inconvénients, je peux toujours prendre un chewing-gum, ou même me faire un détartrage pour ne pas avoir les dents jaunes. La baisse de la libido, je n’en ai jamais entendu parlé. "
+            },
+            {
+              "paroleParent": " Il faut que tu saches que :  "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC3_IL_3_ARTHUR (2).jpg",
+            "contenu": " ... a cigarette n’est plus forcément synonyme de liberté et de séduction. ",
+            "dialogue": [
+              {
+                "paroleParent": " Tu sais Arthur, fumer n’est plus forcément synonyme de séduction. Je dirais même que la cigarette est devenue une norme sociale "
+              }
+            ],
+            "ressource": {
+              "titre" : " La cigarette chez mon adolescent, source d’émancipation ? ",
+              "texte" : " Chez certains adolescents fumer permet de braver les interdits, de prendre des risques et de s’affirmer. Les ados ayant commencés à fumer entre 14 et 17 ans fument quotidiennement à 52%. Les premières cigarettes des adolescents correspondent généralement à une volonté d’émancipation, pour rapidement se transformer en dépendance. D’ailleurs seulement 23% ont conscience qu’ils sont dépendants. Pour permettre à votre adolescent d’arrêter de fumer vous pouvez lui proposer de se faire aider par un professionnel. Cette méthode permet aux ados pour 50% d’entre eux d’arrêter grâce aux 6 mois de suivi. ",
+              "source" : "Ministère de la Santé et le programme national de réduction du tabagisme.",
+              "url" : " https://solidarites-sante.gouv.fr/ "
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC3_IL_3_ARTHUR (2).jpg",
+            "contenu": " ... la cigarette peut être repoussante.  ",
+            "dialogue": [
+              {
+                "paroleParent": " Tu sais Arthur, certaines personnes n’aiment pas l’odeur du tabac froid, et l’haleine qui va avec. C’est même repoussant pour certains non-fumeurs. "
+              }
+            ],
+            "ressource": {
+              "titre" : " La cigarette et la séduction : comment l’aborder avec mon adolescent ? ",
+              "texte" : " Fumer n’est pas une source d’attirance pour tout le monde, certains déplorent même l’odeur forte ou encore la mauvaise haleine. \nLa cigarette n’est pas sans conséquence sur la sexualité et notamment sur la libido des hommes. En effet, cela a un impact direct sur leur érection à cause de la nicotine et du monoxyde de carbone. Votre adolescent peut être effrayé, mais l’idée est de lui faire prendre conscience qu’au-delà d’avoir un impact sur sa santé, la cigarette peut également agir sur ses relations sexuelles, un aspect souvent méconnu des adolescents. ",
+              "source" : "Tabac info services ",
+              "url" : " https://www.tabac-info-service.fr/ "
+            }
+          }
+        }
+      },
+      "Bar": {
+        "imgBackground" : "SC4_IL_1_ARTHUR.jpg",
+        "contexte" : "En fin de soirée, Arthur demande à sa mère de venir le chercher au bar à proximité de la maison. La mère d’Arthur est étonnée, car initialement il était censé être chez son ami et non au bar. Magalie entre dans le bar et l’attend près du comptoir. Le ton commence à hausser entre la mère et son fils. Magalie reproche à Arthur d’avoir menti sur le lieu de sa sortie et Arthur accuse sa mère de lui faire honte en faisant un scandale devant ses amis.",
+        "dialogue": [
+          {
+            "paroleParent": " Tu peux comprendre que l’on s’inquiète, tu es encore mineur, tu ne connais pas encore tes limites et tu risques de te faire influencer par tes camarades.  "
+          },
+          {
+            "paroleAdo": " De toute façon, vous ne me faites jamais confiance "
+          },
+          {
+            "paroleAdo": " Je peux très bien boire et ne pas être ivre mort à la soirée. "
+          },
+          {
+            "paroleParent": " Tu comprends j'aimerais bien t’accompagner sur : "
+          }
+        ],
+        "rep1": {
+          "imgBackground" : "SC4_IL_2_ARTHUR.jpg",
+          "contenu": " ... les risques de la consommation d’alcool. ",
+          "dialogue": [
+            {
+              "paroleAdo": " Je connais plus au moins les risques maman, je sais que ça peut être dangereux pour la santé. "
+            },
+            {
+              "paroleParent": " Oui sans doute, mais ce sont surtout les jeux d’alcool qui m’inquiète, car avec l’ambiance et la pression du groupe tu peux très vite perdre pied. "
+            },
+            {
+              "paroleAdo": " Oui oui, mais t’inquiète pas je ferais attention. "
+            },
+            {
+              "paroleParent": " J’espère pouvoir te faire confiance. "
+            },
+            {
+              "penseeAdo": " Maman, je ferais attention, même si je prendrais certainement au moins quelques verres durant la soirée. "
+            },
+            {
+              "paroleParent" : " Il faut que tu saches que ... : "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC4_IL_2_ARTHUR.jpg",
+            "contenu": " ...tu ne connais pas encore tes limites dans ta consommation d’alcool. ",
+            "dialogue": [
+              {
+                "paroleParent": " Plus tu bois de l’alcool Arthur, et plus tu risques de développer une addiction, car ton cerveau fera le lien entre alcool et plaisir. Tu dois modérer ta consommation pour éviter de tomber dans l'excès. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Quelles sont les risques de l’alcool pour mon adolescent ? ",
+              "texte" : " À forte dose, l’alcool entraîne un remodelage des connections entre les neurones. Ce remodelage permet au cerveau de s’adapter à cette consommation et d’en amoindrir les effets, ce qui entraîne, paradoxalement, un appel à la consommation. \nCe phénomène explique le danger que représente l’alcool au cours de l’adolescence. Jusqu’à l’âge de 25 ans, le cerveau continue de se développer. La consommation d’alcool au cours de cette période perturbe le développement normal du cerveau et augmente le risque de dépendance. Sans être dans une démarche moralisatrice avec votre adolescent, vous devez néanmoins le prévenir des risques de l’alcool\n ",
+              "source" : "Inserm",
+              "url" : ""
+            }
+          },
+          "rep2": {
+            "contenu": " ... tu peux développer des comportements violents que tu ne maîtrises pas.  ",
+            "dialogue": [
+              {
+                "paroleParent": " Tu le sais déjà sans doute, mais boire de l’alcool peut modifier ta personnalité et conduire à réaliser des actions que tu pourrais regretter. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Les changements de comportements liés à l’alcool : comment en parler avec mon adolescent ? ",
+              "texte" : " L’alcool a des effets désinhibiteurs. Sous son influence, les comportements peuvent changer. Agressivité, tristesse ou au contraire alcool joyeux, votre adolescent peut se retrouver dans des situations qu’il regrettera une fois la soirée passée. Il est important de pouvoir évoquer ces risques avec lui sans les dramatiser. ",
+              "source" : "Info tabac service ",
+              "url" : " https://www.tabac-info-service.fr/ "
+            }
+          }
+        },
+        "rep2": {
+          "imgBackground" : "SC4_IL_3_ARTHUR.jpg",
+          "contenu": " ... les attitudes à adopter sur la consommation d’alcool. ",
+          "dialogue": [
+            {
+              "paroleAdo": " Oui, maman, je sais les choses à faire et à ne pas faire. "
+            },
+            {
+            "paroleParent": " Oui, mais en état d’ivresse tu peux complètement perdre la raison, et avoir des attitudes qui peuvent te mettre en danger mais aussi mettre en danger tes amis. "
+            },
+            {
+              "paroleAdo": " Je te promets que je ferai attention. "
+            },
+            {
+              "paroleParent": " J’espère pouvoir te faire confiance "
+            },
+            {
+              "penseeAdo": " Maman, je ferais attention à mes amis et à moi, mais je suis aussi là pour m’amuser et faire la fête. "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC4_IL_3_ARTHUR.jpg",
+            "contenu": " ... tu as prévu de dormir sur place ou de rentrer en bus ? ",
+            "dialogue": [
+              {
+                "paroleParent": " Tu es encore mineur, et en tant que père, je t’interdis de monter dans une voiture si le conducteur a consommé de l’alcool. C’est beaucoup trop dangereux. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Quels conseils donner à mon adolescent en soirée ? ",
+              "texte" : " Il faut compter 90 minutes pour éliminer chaque verre d’alcool. Lorsqu’une soirée “arrosée” est prévue, il est important d’anticiper le retour de votre ado. Dans le cas d’utilisation de transports en commun, il est conseillé de ne pas faire un trajet seul. En cas d’inquiétude et si c’est possible, rappelez à votre adolescent que vous pourrez toujours venir le chercher… Sans poser de questions ! ",
+              "source" : " Jeunes alcool info service ",
+              "url" : ""
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC4_IL_3_ARTHUR.jpg",
+            "contenu": " tu ne dois pas hésiter à dire non quand on te force à boire ",
+            "dialogue": [
+              {
+                "paroleParent": " Même si tes amis ont un rôle dans ta vie, et que c’est difficile de les contredire, tu as le droit de leur dire que tu n’es pas d’accord avec eux, notamment lorsqu’il s’agit de te forcer à boire. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Le poids du groupe en soirée : quel impact sur mon adolescent ? ",
+              "texte" : " Il est parfois difficile de faire face à la pression du groupe quand tout le monde boit. Mais vous pouvez encourager votre adolescent à faire valoir son droit à ne pas boire d’alcool ou à ne pas céder aux phénomènes comme le “Binge drinking”.\nUne pratique qui consiste à boire le plus possible dans un temps imparti. ",
+              "source" : " Jeunes alcool info service ",
+              "url" : ""
+            }
+          }
+        }
+      }
+    },
+    "Femme":{
+      "Maison": {
+        "imgBackground" : "SC1_IL_1_LOUISE.jpg",
+        "contexte" : "Vous avez choisi le personnage de Louise qui est une adolescente de 17 ans plutôt extravertie. Louise a un petit frère Arthur âgé de 15 ans. \nAu cours des différents lieux qu’elle fréquente, suivez Louise dans sa vie d’adolescente et découvrez plein de conseils pour mieux comprendre ses réactions et celles de votre adolescente.\nCe matin, Louise déjeune avec sa mère Magalie avant de partir au lycée. L’ambiance est morose. Il y a quelques jours, Magalie a surpris sa fille en train d’embrasser un garçon. Elle a attendu que Louise lui en parle mais celle-ci n’a pas jugé bon d’en informer sa mère. Magalie aimerait discuter de la sexualité et des relations amoureuses avec sa fille, mais Louise n’a pas tendance à se confier à sa mère ni à son père d’ailleurs. La tension est donc toujours présente au petit-déjeuner.\n",
+        "dialogue": [
+          {"paroleParent": "  Louise, tu n’aurai pas quelque chose à me dire ? "},
+          {"paroleAdo": " Euuuuuh non ? "},
+          {"paroleParent": " Je t’ai vu l’autre jour tenir la main d’un garçon et l’embrasser. "},
+          {
+            "paroleAdo": " Tu m’espionnes maintenant ? "
+          },
+          {
+            "paroleParent": " Mais non Louise, mais il serait temps de parler :  "
+          }
+        ],
+        "rep1": {
+          "imgBackground" : "SC1_IL_2_LOUISE.jpg",
+          "contenu": " ... des différentes méthodes de contraception et de protection. ",
+          "dialogue": [
+            {
+              "paroleParent": " Tu sais lorsqu’on commence une relation avec une personne, il faut savoir quelques petites choses. "
+            },
+            {
+              "paroleAdo": " Oh non ! On ne va pas avoir cette conversation Maman ? "
+            },
+            {
+              "paroleParent": " Si, il faut en parler. Et il ne faut pas que tu te sentes mal à l’aise de parler de ces choses-là "
+            },
+            {
+              "penseeAdo": " C’est hyper gênant cette conversation. J’ai aucune envie d’en parler, surtout que je n’ai pas encore pensé à faire ma première fois. Je n’ai donc pas besoin de tout savoir sur ça. "
+            },
+            {
+              "paroleParent" : " Il faut que tu saches que ... : "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC1_IL_2_LOUISE.jpg",
+            "contenu": " ... qu’il existe plusieurs types de contraception. ",
+            "dialogue": [
+              {
+                "paroleParent": " Tu peux en choisir une avec laquelle tu es vraiment à l’aise et qui te correspond le mieux. "
+              }
+            ],
+            "ressource": {
+              "titre": " Comment aborder la sexualité avec mon adolescente ? ",
+              "texte": "Votre adolescente connaît certainement la pilule et le préservatif masculin, mais elle ne pense peut-être pas aux autres moyens contraceptifs comme l’implant, le patch, le stérilet ou le préservatif féminin. Parler contraception, c’est aussi une façon d’ouvrir le dialogue sur la sexualité en général.",
+              "source" : "10-24",
+              "url" : " https://www.facebook.com/1024.media/ "
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC1_IL_2_LOUISE.jpg",
+            "contenu": " ... qu’il faut que tu fasses attention à ta santé et que tu te protèges. ",
+            "dialogue": [
+              {
+                "paroleParent": " Même si tu prends la pilule, il faut te protéger. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Comment évoquer les risques sexuels et les solutions existantes avec mon adolescente ? ",
+              "texte" : " En matière de prévention des Infections Sexuellement Transmissibles (IST), mieux vaut se répéter… et rappeler que le préservatif est le seul moyen de se protéger ! Si votre adolescente et son/sa partenaire ne souhaitent pas utiliser le préservatif pour différentes raisons, comme une allergie par exemple, il faut insister sur le fait qu’ils doivent se faire dépister tous les deux.  \nSi au cours d’un rapport sexuel, un souci se présente tel que l’absence ou le déchirement de préservatif, ou un oubli de pilule, rassurez-la, et dites-lui que des solutions existent à utiliser seulement en dernier recours. La pillule du lendemain, en fait partie et pour en savoir plus, vous pouvez demander des conseils à votre pharmacien. ",
+              "source" : " Santé publique France ",
+              "url" : " https://www.santepubliquefrance.fr/presse/2018/infections-sexuellement-transmissibles-ist-preservatif-et-depistage-seuls-remparts-contre-leur-recrudescence "
+            }
+          }
+        },
+        "rep2": {
+          "imgBackground" : "SC1_IL_3_LOUISE.jpg",
+          "contenu": " ... de la relation amoureuse et sexuelle avec ton copain. ",
+          "dialogue": [
+            {
+              "paroleParent": " Avoir un petit copain ou une petite copine à ton âge c’est un peu comme une nouvelle expérience. C’est normal si tu te poses des questions sur ce sujet. "
+            },
+            {
+              "paroleAdo": " Euh non, Maman, je ne me pose pas ce genre de questions. En plus on a déjà vu des choses en cours de SVT en quatrième, tu te souviens ? "
+            },
+            {
+              "paroleParent": " Oui oui mais au collège tout n’est pas abordé. "
+            },
+            {
+              "penseeAdo": " Oh non on ne va pas avoir cette conversation ? C’est beaucoup trop gênant ! En plus je n’ai pas pensé à faire ma première fois-là maintenant. "
+            },
+            {
+              "paroleParent": " Il faut que tu saches que :  "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC1_IL_3_LOUISE.jpg",
+            "contenu": " ... pour ta première fois avec un garçon ou une fille tu dois te sentir en confiance. ",
+            "dialogue": [
+              {
+                "paroleParent": " Louise, tu n’es pas obligée de faire des pratiques sexuelles qui ne te plaisent pas. Tu es en droit de dire non si tu n’en as pas envie, car c’est ton corps. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Comment éduquer mon adolescente au consentement sexuel ? ",
+              "texte" : " Même s’il ne faut pas sous-estimer l’existence d’une pression “pour le faire” chez certaines filles, les adolescentes ont leur premier rapport sexuel vers 17,6 ans en moyenne. Un chiffre qui varie peu au fil des générations. Mais encore une fois ce n’est pas parce que c’est l’âge moyen que votre adolescente doit se sentir obligée d’avoir une relation sexuelle. Ne pas être prête ce n’est pas grave. Il faut aussi se souvenir qu’un “non”, n’est pas un oui. Et ce n’est pas parce que l’on dit “oui” au début que l’on ne peut plus revenir sur ce que l’on a dit. Dire à son adolescente que c’est son corps et qu’elle en prenne soin est un point important à aborder. ",
+              "source" : " Le Parisien ",
+              "url" : " http://www.leparisien.fr/societe/consentement-sexuel-comment-en-parler-a-vos-jeunes-ados-24-10-2018-7927203.php "
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC1_IL_3_LOUISE.jpg",
+            "contenu": " ... tu peux avoir des appréhensions et ce n’est pas grave. ",
+            "dialogue": [
+              {
+                "paroleParent": " C’est normal d’avoir des inquiétudes, mais sache qu’il ne sert à rien de se fixer des objectifs. Il faut du temps pour que tu comprennes ton corps et tes désirs. Tout est une question de temps. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Comment aider mon adolescente à distinguer la fiction de la réalité sexuelle ? ",
+              "texte" : " La première fois peut être une source d’angoisse pour votre adolescente. Pour l’aider, il est important de lui rappeler que ce n’est pas un coucours. La première fois peut être décevante et ce n’est pas grave. Ce qu’elle a pu voir dans des vidéos pornographiques reflètent rarement la réalité. Il ne faut pas oublier qu’il s’agit avant tout de passer un moment d’intimité avec son ou sa partenaire et de ressentir du plaisir. ",
+              "source" : "10-24",
+              "url" : " https://www.facebook.com/1024.media/ "
+            }
+          }
+        }
+      },
+      "Piscine": {
+        "contexte" : "Après s’être dépêchée à se laver les dents, Louise monte avec lenteur dans la voiture de son père pour se rendre à son premier cours de la journée : le cours de piscine. Son père l'emmène à la piscine et s’aperçoit que Louise ne parle pas et semble perturbée. Il la questionne mais Louise répond de manière agressive. Guillaume, son père ne comprend pas pourquoi Louise réagit de cette manière. La conversation reprend seulement lorsque son père coupe le moteur.",
+        "imgBackground" : "SC2_IL_1_LOUISE.jpg",
+        "dialogue": [
+          {"paroleParent": " S’il te plait Louise, je vois bien qu’il y a un quelque chose qui ne va pas."},
+          {"paroleAdo": "..."},
+          {"paroleAdo": "Non mais rien..."},
+          {"paroleParent": " Louise, j’ai besoin de comprendre ce qu’il se passe, tu n’as quasiment rien manger ce matin."},
+          {"paroleAdo": " … Certaines filles se moquent de ma poitrine...j’en ai pas beaucoup, et ça se voit encore plus avec mon maillot de bain. "},
+          {"paroleParent": "C’est donc ça le problème, je comprends mieux.. je peux t’aider sur:"}
+        ],
+        "rep1": {
+          "imgBackground" : "SC2_IL_2_LOUISE (1).jpg",
+          "contenu": " ... les démarches que je peux faire auprès de l’établissement scolaire pour signaler ta situation ",
+          "dialogue": [
+            {
+              "paroleAdo": " Je n’ose pas en parler à l’école, je vais être vu comme une balance par les autres de la classe. "
+            },
+            {
+              "paroleParent": " Tu peux seulement en faire part à ton professeur de sport, il remarquera peut-être les comportements des harceleurs. "
+            },
+            {
+              "paroleAdo": " Ouais, je verrais bien… "
+            },
+            {
+              "paroleParent": " Je t’assure que c’est important d’en parler à ton professeur, il sera tenu au courant et pourra observer les comportements de tes camarades. "
+            },
+            {
+              "penseeAdo": " Papa, tu ne comprends pas que ce n’est pas si facile, je n’oserais jamais le dire à mon professeur. C’est sur, qu’il va en parler aux élèves concernés.  "
+            },
+            {
+              "paroleParent": " Il faut que tu saches que : "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC2_IL_2_LOUISE (2).jpg",
+            "contenu": " ... ton professeur de sport doit être au courant de la situation ",
+            "dialogue": [
+              {
+                "paroleParent": " Ton professeur se rendra compte de la situation et il fera le nécessaire pour que la situation s'apaise "
+              }
+            ],
+            "ressource": {
+              "titre" : " Dois-je prévenir l’établissement scolaire si mon adolescente est harcelée ? ",
+              "texte" : " En cas de harcèlement, il est important d’en parler. Différentes ressources existent au sein d’un établissement scolaire : enseignants, CPE, infirmier, chef d’établissement. Il existe également des numéros verts pour obtenir des conseils : 3020 ou 0800 200 000 ",
+              "source" : "10-24 ",
+              "url" : " https://www.facebook.com/1024.media/ "
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC2_IL_2_LOUISE (2).jpg",
+            "contenu": " Tes camarades doivent être punis et sanctionnés par leur comportement ",
+            "dialogue":[
+              {
+                "paroleParent": " Tes camarades ont commis des moqueries sur une partie de ton corps, ils doivent comprendre que ces agissements sont graves. "
+              }
+            ],
+            "ressource": {
+              "titre" : "Comment sensibiliser les harceleurs à arrêter leur agissement ?",
+              "texte" : "Même si ça peut paraître difficile et contre-intuitif, il est important de comprendre la “mécanique” des harceleurs. Souvent, ce sont eux-mêmes d’anciens harcelés. Ils ne cherchent pas forcément à nuire mais à attirer l’attention et gagner en popularité en se montrant “le plus fort”. S’ils ne faut pas les excuser, comprendre leur comportement est aussi une clé vers la solution.",
+              "source" : "Education.gouv.fr",
+              "url" : " https://www.education.gouv.fr/ "
+            }
+          }
+        },
+        "rep2": {
+          "imgBackground" : "SC2_IL_3_LOUISE (1).jpg",
+          "contenu": " ... l'accompagnement personnel pour que tu reprennes confiance en toi ",
+          "dialogue": [
+            {
+              "paroleAdo": " Plus facile à dire qu’à faire, car j’ai l’impression que le problème vient de moi. "
+            },
+            {
+              "paroleParent": " Non, si tu te fais harceler, surtout viens me voir, pour que je puisse t’aider à trouver des solutions. "
+            },
+            {
+              "paroleAdo": " Si tu le dis... "
+            },
+            {
+              "paroleParent": " Je suis ton père, je peux prendre un rendez-vous chez la psychologue pour t’aider à te sentir mieux. "
+            },
+            {
+              "penseeAdo": " Papa, tu ne comprends pas que je n’ai pas envie de me rendre chez une psychologue, je n’ai rien à lui dire, et je ne veux pas qu’elle sache mes problèmes.  "
+            },
+            {
+              "paroleParent": " Il faut que tu saches que : "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC2_IL_3_LOUISE (2).jpg",
+            "contenu": " ... tu n’es responsable en aucun cas de la situation ",
+            "dialogue": [
+              {
+                "paroleParent": " Tu n’as rien à te reprocher, le problème c’est les autres. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Comment déculpabiliser mon adolescente en situation de harcèlement ? ",
+              "texte" : " En cas de harcèlement, vous pouvez ouvrir le dialogue avec votre adolescente en expliquant ce qui définit le harcèlement : une situation de violence répétée (verbale, physique ou psychologique). Il existe différents types de harcèlement : moral, physique, sexuel ou matériel, qui lorsqu’il se poursuit en ligne est qualifié de cyber-harcèlement. \nMettre des mots sur sa situation peut être un premier pas pour aider votre adolescente et la déculpabiliser. ",
+              "source" : "10-24",
+              "url" : " https://www.facebook.com/1024.media/ "
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC2_IL_3_LOUISE (2).jpg",
+            "contenu": " ... ta différence doit être une force. ",
+            "dialogue":[
+              {
+                "paroleParent": " On a tous des imperfections, tu es une belle personne, peu importe les remarques de tes camarades. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Comment aider mon adolescente à reprendre confiance ? ",
+              "texte" : " Pour la psychologue Emmanuelle Piquet, il faut d'abord aider l’adolescente “à quitter la croyance selon laquelle elle ne peut pas avoir d'impact sur la situation. Ensuite, on va se servir des insultes et des attaques du harceleur. Une des armes infaillibles pour casser la popularité et le pouvoir est l'humour et l'autodérision. Pour cela, l’adolescente doit apprendre à accepter l'attaque et en jouer. Il faut ridiculiser l’harceleur dans son action en public et non personnellement. Parfois regarder l'autre dans les yeux peut suffire à désamorcer les attaques.” ",
+              "source" : "Livre de Emmanuelle Piquet \"Te laisse pas faire : aider son enfant face au harcèlement scolaire\"",
+              "url" : ""
+            }
+          }
+        }
+      },
+      "Lycee": {
+        "imgBackground" : "SC3_IL_1_LOUISE.jpg",
+        "contexte" : "En fin de journée, Magalie va chercher sa fille. Devant le lycée, elle la surprend à fumer une cigarette avec ses amis. Louise rejoint sa mère devant le portail du lycée et débute une conversation, jusqu’au moment où sa mère l’interroge sur une odeur suspecte de fumée.",
+        "dialogue": [
+          {
+            "paroleParent": " Tu n’as pas quelques choses à me dire ? "
+          },
+          {
+            "paroleAdo": " ... Non, pourquoi ? "
+          },
+          {
+            "paroleParent": " Tu es vraiment sûr ? Tu sens particulièrement fort l’odeur de cigarette. "
+          },
+          {
+            "paroleAdo": " ... Euh non ...  Non, vraiment ce sont mes amis qui fument, pas moi. "
+          },
+          {
+            "paroleParent": " Tu es sûr que tu ne me mens pas, car je t’ai vu avec une cigarette à la main. Je souhaite te mettre en garde ... "
+          }
+        ],
+        "rep1": {
+          "imgBackground" : "SC3_IL_2_LOUISE (1).jpg",
+          "contenu": " ... des dangers de la cigarette chez les adolescents. ",
+          "dialogue": [
+            {
+              "paroleAdo": " Oui, j’ai déjà essayé à la sortie des cours, mais ..., mais, à vrai dire ce sont les garçons qui me poussent à fumer. Je te promets que de base je voulais pas commencer. "
+            },
+            {
+              "paroleParent": " Ah oui ? Mais pourquoi ils font ça ? "
+            },
+            {
+              "paroleAdo": " Je sais pas, mais je sais que ce n’est pas bon pour ma santé.  En même temps, papa fume aussi, donc il est dans le même bateau que moi.  "
+            },
+            {
+              "paroleParent": " On dirait pas, puisque tu continues. D’ailleurs, j’aurais aimé que tu prennes d’autres sources d’inspiration de ton père que la cigarette… "
+            },
+            {
+              "penseeAdo": " Maman c’est plus facile à dire qu’à faire. J’aime plutôt bien le goût de la cigarette, je suis de plus en plus accro. En plus j’ai pu me faire de nouvelles amies. "
+            },
+            {
+              "paroleParent" : " Il faut que tu saches que ... : "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC3_IL_2_LOUISE (2).jpg",
+            "contenu": " ... tu risques d’y prendre goût et tu auras des difficultés à t’en passer. ",
+            "dialogue": [
+              {
+                "paroleParent": " Plus tu fumes et plus tu auras des difficultés à t’arrêter. Tu es encore jeune, et tu as la possibilité de diminuer ta consommation avant que tu ne deviennes complètement accro. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Quelles sont les effets néfastes de la cigarette chez mon adolescente ? ",
+              "texte" : " Le tabac est le produit le plus addictif, 32 % des consommateurs sont dépendant. Il existe trois types de dépendances liées au tabac : \nLa dépendance physique qui se traduit par des sensations de manque\nLa dépendance psychologique : la cigarette permet au fumeur de gérer son anxiété\nLa dépendance comportementale, liée à la pression sociale\nLa dépendance à la nicotine se développe plus vite chez les adolescents que chez les adultes. Sans être dans une démarche moralisatrice avec votre adolescent, vous devez néanmoins la prévenir des risques de la cigarette. ",
+              "source" : "Tabac info services ",
+              "url" : " https://www.tabac-info-service.fr/ "
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC3_IL_2_LOUISE (2).jpg",
+            "contenu": " ... tu risques d’être moins performante au basket. ",
+            "dialogue": [
+              {
+                "paroleParent": " Saches que fumer des cigarettes te freineras fortement dans la progression de ton endurance au sport. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Quels sont les impacts de la cigarette dans l’activité physique de mon adolescente ? ",
+              "texte" : " C’est connu le tabagisme est mauvais pour la santé et source potentielle de maladies. Peu de sportifs de haut niveau fument, et si votre adolescente souhaite faire carrière dans le sport, ce témoignage d’un joueur breton peut l’intéresser : \n“C’était la fin de la saison, on venait de remporter la coupe de Bretagne contre le Stade Brestois et j’avais fait un super match. Après la rencontre, je sors de la douche et je m’allume une petite clope. Normal. Sauf que j’ai appris plus tard par quelqu’un qui bossait au club qu’un recruteur du Stade Rennais était sur le point de me proposer d’intégrer leur centre de formation après ce match mais qu’il avait fait demi-tour en me voyant allumer ma clope. Ça a été rédhibitoire. »\n ",
+              "source" : "20 minutes",
+              "url" : " https://www.20minutes.fr/ "
+            }
+          }
+        },
+        "rep2": {
+          "imgBackground" : "SC3_IL_3_LOUISE (1).jpg",
+          "contenu": " ...  des coûts que représentent les cigarettes. ",
+          "dialogue": [
+            {
+              "paroleAdo": " Oui, j’ai déjà essayé à la sortie des cours, mais je t’assure que je vais arrêter dans pas longtemps. "
+            },
+            {
+              "paroleParent": " Ah oui ? Dans combien de temps ? Je ne te l’apprends pas, mais c’est extrêmement polluant. Toi qui es sensible à la cause environnementale, tu sais que les cigarettes ont un impact désastreux sur la planète aussi bien dans l’air, dans le sol que dans l’eau. "
+            },
+            {
+              "paroleAdo": " Je sais, je sais…  "
+            },
+            {
+              "penseeAdo": " Maman, je n’ai pas d’autres moyens financiers pour me payer mes cigarettes, et pour le moment j’utilise ton argent de poche.  "
+            },
+            {
+              "paroleParent": " Il faut que tu saches que :  "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC3_IL_3_LOUISE (2).jpg",
+            "contenu": " ... tu vas dépenser une partie de ton argent de poche dans l’achat de cigarettes. ",
+            "dialogue": [
+              {
+                "paroleParent": " Même si tu gères ton argent de poche comme tu en as envie, réfléchis à la somme que tu mets par mois pour t’acheter tes cigarettes. Tu risques d’être étonnée par le budget que cela représente. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Combien dépense mon adolescente dans les cigarettes ? ",
+              "texte" : " Fumer 5 cigarettes par jour revient en moyenne à 810 euros par an. Au-delà d’apporter des exemples à votre adolescente, il convient de l’écouter en lui rappelant que diminuer ou arrêter la cigarette peut lui permettre de faire d’importantes économies. À ce tarif-là, elle peut changer de smartphone ou se faire plaisir dans des sorties. L’idée n’est pas d’imposer un arrêt immédiat à votre adolescente car elle risquerait de se brusquer. Néanmoins, ces arguments peuvent être des déclencheurs dans l’arrêt de la consommation de cigarettes. ",
+              "source" : " Santé magazine ",
+              "url" : ""
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC3_IL_3_LOUISE (2).jpg",
+            "contenu": " ... tu sais que ça pollue et c’est un coût important pour la planète. Un mégot ça prend plusieurs années pour disparaître.  ",
+            "dialogue": [
+              {
+                "paroleParent": " Même si je n’ai pas envie de te faire des leçons de moral, saches que l’industrie du tabac a un impact catastrophique sur la planète. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Comment sensibiliser mon adolescente à l’impact de la cigarette sur la planète ? ",
+              "texte" : " 12 ans ! C’est le nombre d’années que prend un mégot pour se décomposer.\nEn 1995, l’industrie mondiale du tabac a généré environ 2,3 millions de tonnes de déchets industriels et 209 000 tonnes de déchets chimiques (chiffres de l’OMS). Sensible à la cause environnementale, ces arguments peuvent être des éléments déclencheurs chez votre adolescente. ",
+              "source" : " OMS ",
+              "url" : ""
+            }
+
+          }
+        }
+      },
+      "Bar": {
+        "imgBackground" : "SC4_IL_1_LOUISE.jpg",
+        "contexte" : "En fin de soirée, Louise demande à son père de venir la chercher au bar, à proximité de la maison. Le père de Louise est étonnée, car initialement elle était censée être chez son amie et non au bar. Guillaume entre dans le bar et l’attend près du comptoir. Le ton commence à hausser entre le père et sa fille. Guillaume reproche à Louise d’avoir menti sur le lieu de sa sortie et Louise accuse son père de lui faire honte en faisant un scandale devant ses amis.",
+        "dialogue": [
+          {
+            "paroleParent": " Tu peux comprendre que je m’inquiète, tu es encore mineure, tu ne connais pas encore tes limites et tu risques de te faire influencer par tes camarades. "
+          },
+          {
+            "paroleAdo": " De toute façon, vous ne me faites jamais confiance "
+          },
+          {
+            "paroleAdo": " Je peux très bien boire et ne pas être ivre morte à la soirée. "
+          },
+          {
+            "paroleParent": " Tu comprends j'aimerais bien te prévenir :  "
+          }
+        ],
+        "rep1": {
+          "imgBackground" : "SC4_IL_2_LOUISE (1).jpg",
+          "contenu": " ... du comportements des autres en soirée. ",
+          "dialogue": [
+            {
+              "paroleAdo": " Comment ça le comportement des autres à la soirée ? "
+            },
+            {
+              "paroleParent": " Ce que j’essaye de te dire c’est que certain de tes camarades peuvent sous l’emprise de l’alcool avoir des comportements déplacés. "
+            },
+            {
+              "paroleAdo": " Mais papa, on ne fait que boire. Je ne vois pas où est le problème ... "
+            },
+            {
+              "penseeAdo": " Qu’est-ce qu’il est encore en train de s’imaginer ? Je suis sûr qu’il est en train de se monter la tête pour m’interdire d’y aller. C’est trop nul ! "
+            },
+            {
+              "paroleParent" : " Il faut que tu saches que : "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC4_IL_2_LOUISE (2).jpg",
+            "contenu": " ... certains garçons ou filles peuvent avoir des gestes déplacés et tu dois te méfier. ",
+            "dialogue": [
+              {
+                "paroleParent": " Malheureusement en soirée, l’alcool conduit à des agissements intolérables comme le viol, tu dois être conscience de ça en soirée. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Comment parler des risques sexuels en soirée avec mon adolescente ? ",
+              "texte" : " Au cours d’une soirée, certains comportements alcoolisés ou non, tels que des attouchements, des mains déplacées ou encore du harcèlement sexuel peuvent survenir. Les agressions sexuelles représentent un réel fléau dont les premières victimes sont les adolescentes. Ces agressions provoquent des dégâts physiques et psychologiques important. Il convient de parler de ces agissements avec votre adolescente et de lui faire prendre conscience de la gravité de ces comportements. Vous devez être à son écoute et l’accompagner si elle en ressent le besoin, si possible en dénonçant ceux qui ont commis ces actes.  ",
+              "source" : " Service public ",
+              "url": "https://www.service-public.fr/"
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC4_IL_2_LOUISE (2).jpg",
+            "contenu": " ... tu ne dois pas laisser ton verre d’alcool sans surveillance car des personnes malveillantes pourraient y mettre des drogues. ",
+            "dialogue": [
+              {
+                "paroleParent": " Certaines personnes peuvent mettre des substances illicites dans ton verre, sans que tu le saches. Tu dois être vigilante, et toujours garder ton verre près de toi. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Quels comportement mon adolescente doit adopter en soirée ? ",
+              "texte" : " Les premières soirées peuvent être des sources d’appréhension. L’idée n’est pas de lui faire peur mais de la prévenir que certaines personnes malveillantes introduisent des substances illicites dans des verres. Il convient donc de lui expliquer que dans des bars, il est important de garder son verre à proximité d’elle, car des drogues peuvent provoquer des effets euphorisants ou anesthésiants. ",
+              "source" : " Drogues.gouv.fr ",
+              "url" : " https://www.drogues.gouv.fr/ "
+            }
+          }
+        },
+        "rep2": {
+          "imgBackground" : "SC4_IL_3_LOUISE.jpg",
+          "contenu": " ... les attitudes à adopter sur la consommation d’alcool. ",
+          "dialogue": [
+            {
+              "paroleAdo": "  Oui, papa, je sais les choses à faire et à ne pas faire. "
+            },
+            {
+              "paroleParent": " Oui, mais en état d’ivresse tu peux complètement perdre la raison, et avoir des attitudes qui peuvent te mettre en danger. "
+            },
+            {
+              "paroleAdo": " Je te promets que je ferai attention. "
+            },
+            {
+              "penseeAdo": " Il pense vraiment qu’on ne parle pas de ça avec mes copines. En plus ce n’est pas ma première soirée, j’ai 17 ans quand même. "
+            }
+          ],
+          "rep1": {
+            "imgBackground" : "SC4_IL_3_LOUISE.jpg",
+            "contenu": " ... tu as prévu de dormir sur place ou de rentrer en bus ? ",
+            "dialogue": [
+              {
+                "paroleParent": " Tu es encore mineure, et en tant que père, je t’interdis de monter dans une voiture si le conducteur a consommé de l’alcool. C’est beaucoup trop dangereux. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Quels conseils donner à mon adolescente en soirée ? ",
+              "texte" : " Il faut compter 90 minutes pour éliminer chaque verre d’alcool. Lorsqu’une soirée “arrosée” est prévue, il est important d’anticiper le retour de votre adolescente. Dans le cas d’utilisation de transports en commun, il est conseillé de ne pas faire un trajet seul. En cas d’inquiétude et si c’est possible, rappelez à votre adolescente que vous pourrez toujours venir la chercher… Sans poser de questions ! ",
+              "source" : "  Jeunes alcool info service ",
+              "url" : " https://jeunes.alcool-info-service.fr/ "
+            }
+          },
+          "rep2": {
+            "imgBackground" : "SC4_IL_3_LOUISE.jpg",
+            "contenu": " ... tu ne dois pas hésiter à dire non quand on te force à boire. ",
+            "dialogue": [
+              {
+                "paroleParent": " Même si tes amis ont un rôle dans ta vie, et que c’est difficile de les contredire, tu as le droit de leur dire que tu n’es pas d’accord avec eux, notamment lorsqu’il s’agit de te forcer à boire. "
+              }
+            ],
+            "ressource": {
+              "titre" : " Le poids du groupe en soirée : quel impact sur mon adolescente ? ",
+              "texte" : " Il est parfois difficile de faire face à la pression du groupe quand tout le monde boit. Mais vous pouvez encourager votre adolescente à faire valoir son droit à ne pas boire d’alcool ou à ne pas céder aux phénomènes comme le “Binge drinking”. Une pratique qui consiste à boire le plus possible dans un temps imparti. ",
+              "source" : " Jeunes alcool info service ",
+              "url" : " https://jeunes.alcool-info-service.fr/ "
+            }
+          }
+        }
+      }
+    }
+  }
+}

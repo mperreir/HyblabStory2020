@@ -1,169 +1,1319 @@
-/* ------- Important ! Regardez bien à la fin de ce CSS pour des règles permettant de ----------- */
-/* contraindre le format des slides affichés sur la page web */
-
-
-/* normalisation des marges et padding pour simplifier le positionnement des éléments */
-* {
+body{
     padding: 0;
     margin: 0;
 }
-
-body {
-    background-color: black;
-    color: white;
-    overflow: hidden; /* pour slidr dans certains navigateurs */
+.scroll{
+    transition: 1s;
+    transform: translateY(-100vh);
+}
+.bouton:focus{
+    outline: none;
 }
 
-#container {
-    position: relative; /* pour permettre le positionnement en absolu des autres éléments */
+.bouton{
+    cursor: pointer;
+    margin-top: 75vh;
+    margin-left: 14vh;
+    width:50px;
+    height:50px;
+    background:white;
+    font:bold 13px Arial;
+    border-radius:50%;
+    border-color: #FC5938;
+    color:#FC5938;
+    Border-style: solid;
+    /*Border-width: thick;*/
 }
 
-/* on fait en sorte que le slidr et les slides remplissent tout notre conteneur */
-#slidr, #slidr section {
-    background-color: dodgerblue;
-    width: 100%;
-    height: 100%;
+
+.top{
+    display: inline-block;
+    width:100%;
+    height : 90px;
+    position : absolute;
+    top : 0;
+    left : 0;
 }
 
-/* pour le positionnement facile, on place tout en absolue et on exprime tout en % */
-#titre {
-    text-align: center;
-    width: 20%;
-    left: 30%;
-    top: 10%;
+
+
+.logo{
+    height : 80px;
+    margin-left : 3vw;
+    margin-top: 1vh;
+}
+
+.reseau{
+    float : right;
+    position : relative;
+    height : 40px;
+    margin-left: 0.5vw;
+    margin-right : 0.5vw;
+}
+
+.all_reseau{
+    margin-right : 3vw;
+    margin-top : 2vh;
+}
+
+.btnMedia{
     position: absolute;
-    font-size: 30%;
+    float : left;
+    height : 100px;
+
 }
 
-#logo-hyblab {
+
+
+.question1{
+    position: absolute;
+    margin-top : 35vh;
+    margin-left: 14vh;
+    color:#25AB8F;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.reponse1{
+    position: absolute;
+    margin-top : 60vh;
+    margin-left: 14vh;
+    color:#FC5938;
+    font-family: Roboto;
+    font-size: 24px;
+}
+
+.Page2{
+    transform: translateY(0vh);
+}
+
+#map{
+    background: url('../images/carte.jpg') no-repeat center center;
+    /* Ajout de la propriété avec les préfixes pour tous les moteurs de rendu */
+    /*-webkit-background-size: cover;*/
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+.btnMedia{
+    position: absolute;
+    float : left;
+    padding : 5px;
+    height : 80px;
+}
+
+#annonceClique {
+    color: #FC5938;
+    font-family: Roboto;
+    font-size: 50px;
+    text-shadow: white 3px 3px;
+    position: absolute;
+    margin-left: 22%;
+    margin-right: 22%;
+    border-radius: 40px;
+    border: 10px #FC5938 solid;
+    padding: 10px;
+    top: -85px;
+    background-color: white;
+    width: 45%;
     text-align: center;
-    width: 50%;
+    box-shadow: #FC5938 10px 10px;
+    left: 46px;
+    text-align: center;
+}
+
+.popup {
+    position: relative;
+    top:  20%;
+    width: 94vw;
+    height: 70vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    opacity: 95%;
+    display: flex;
+}
+
+.Picto:hover{
+    transform: scale(1.15);
+}
+
+
+.Picto{
+    width: 14vh;
+    position : relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.Picto:focus{
+    outline: none;
+}
+
+
+#btnMaison{
+    position : absolute;
+    margin-left: 79vw;
+    margin-top: 16vh;
+}
+
+#btnHommeMaison{
+    position: absolute;
+    margin-left: 79vw;
+    margin-top: 26vh;
+
+}
+#btnFemmeMaison{
+    position: absolute;
+    margin-left: 83vw;
+    margin-top: 25.5vh;
+}
+
+#btnPiscine{
+    position: absolute;
+    margin-left: 72vw;
+    margin-top: 70vh;
+}
+
+#btnFemmePiscine{
+    position: absolute;
+    margin-left: 76vw;
+    margin-top: 79.5vh;
+
+}
+#btnHommePiscine{
+    position: absolute;
+    margin-left: 72vw;
+    margin-top: 80vh;
+}
+
+
+#btnBar{
+    position: absolute;
+    margin-left: 41vw;
+    margin-top : 28vh;
+}
+
+#btnHommeBar{
+    position: absolute;
+    margin-left: 41vw;
+    margin-top: 38vh;
+
+}
+#btnFemmeBar{
+    position: absolute;
+    margin-left: 45vw;
+    margin-top: 37.5vh;
+}
+
+#btnLycee{
+    position: absolute;
+    margin-left: 20vw;
+    margin-top : 48vh;
+}
+
+#btnHommeLycee{
+    position: absolute;
+    margin-left: 20vw;
+    margin-top: 58vh;
+
+}
+#btnFemmeLycee{
+    position: absolute;
+    margin-left: 24vw;
+    margin-top: 57.5vh;
+}
+
+.sexe:hover{
+    transform: scale(1.30);
+}
+
+.sexe{
+    width: 7vh;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.lieu{
+
+}
+
+
+.popup #btnFemme {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: relative;
+    /*z-index: 1;
+    bottom: 125%;
     left: 50%;
-    top: 50%;
-    margin-left: -25%;
-    margin-top: calc(-7.5% * 9 / 16); /* les marges sont exprimées en % de la largeur... :-( */
-    position: absolute;
-    font-size: 50%;
+    margin-left: -80px;*/
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    /*position: absolute;*/
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+/**************************************************************/
+
+
+
+
+
+
+body{
+    background: no-repeat center fixed;
+    margin:0;
+    padding:0;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+/*-----------------------------------*/
+
+
+.son{
     cursor: pointer;
 }
 
-#background-video {
-    position: relative; /* on doit positionner un éléments pour pouvoir ajuster sont z-index */
-    z-index: -1;
+
+
+question{
+    width: auto;
+    height: 15vh;
+    position:absolute;
+
+    color: white;
+    font-family: Roboto;
+
 }
 
-/* on centre l'image de fin */
-#img-fini {
-    width: 50%;
-    left: 50%;
-    top: 40%;
-    position: absolute;
-    margin-left: -25%;
-    margin-top: calc(-25% * 9 / 16); /* les marges sont exprimées en % de la largeur... :-( */
+question.c1 {
+
+    animation-name: example1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    font-size: 4vh;
 }
 
-/* le footer de la slide 1 est positionné en bas de la slide et son texte est centré */
-section[data-slidr="page-1"] footer {
-    width: 100%;
-    bottom: 5%;
-    position: absolute;
-    font-size: 20%;
-    text-align: center;
+
+
+question.c2 {
+
+    animation-name: example2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    font-size: 5vh;
 }
 
-/* Pour que la vidéo remplisse son conteneur (elle sera un peu coupée si nécessaire...) */
-.vjs-tech {
-    object-fit: cover;
+question.c3 {
+
+    animation-name: example3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    font-size: 3vh;
+
 }
 
-/* dernier slide sur fond blanc */
-section[data-slidr="page-2"] {
+question.c4 {
+
+    animation-name: example3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    font-size: 2vh;
+
+}
+
+
+
+
+#Question_1{
+
+    margin-top: 80vh;
+    margin-left: 40vw;
+    -ms-transform: rotate(-28deg); /* IE 9 */
+    -webkit-transform: rotate(-28deg); /* Safari 3-8 */
+    transform: rotate(-28deg);
+}
+
+
+#Question_2{
+
+    margin-top: 20vh;
+    margin-left: 70vw;
+
+    -ms-transform: rotate(18deg); /* IE 9 */
+    -webkit-transform: rotate(18deg); /* Safari 3-8 */
+    transform: rotate(18deg);
+}
+
+#Question_3{
+
+    margin-top: 85vh;
+    margin-left: 60vw;
+
+    -ms-transform: rotate(3deg); /* IE 9 */
+    -webkit-transform: rotate(3deg); /* Safari 3-8 */
+    transform: rotate(3deg);
+}
+
+
+#Question_4{
+
+    margin-left: 70vw;
+    margin-top: 55vh;
+
+    -ms-transform: rotate(-10deg); /* IE 9 */
+    -webkit-transform: rotate(-10deg); /* Safari 3-8 */
+    transform: rotate(-10deg);
+
+}
+
+
+#Question_5{
+
+    margin-left: 55vw;
+    margin-top: 35vh;
+
+    -ms-transform: rotate(50deg); /* IE 9 */
+    -webkit-transform: rotate(50deg); /* Safari 3-8 */
+    transform: rotate(50deg);
+
+}
+
+
+@keyframes example1 {
+    0%   {opacity: 0.2}
+    10%  {opacity: 0.5}
+    20%  {opacity: 0.7}
+    30%  {opacity: 0.8}
+    40%  {opacity: 0.9}
+    50%  {opacity: 1}
+    60%  {opacity: 0.9}
+    70%  {opacity: 0.8}
+    80%  {opacity: 0.7}
+    90%  {opacity: 0.5}
+    100%  {opacity: 0.2}
+
+}
+
+@keyframes example2 {
+    20%   {opacity: 0.2}
+    30%  {opacity: 0.5}
+    40%  {opacity: 0.7}
+    50%  {opacity: 0.8}
+    60%  {opacity: 0.9}
+    70%  {opacity: 1}
+    80%  {opacity: 0.9}
+    90%  {opacity: 0.8}
+    100%  {opacity: 0.7}
+    0%  {opacity: 0.5}
+    10%  {opacity: 0.2}
+}
+
+
+
+@keyframes example3 {
+    40%   {opacity: 0.2}
+    50%  {opacity: 0.5}
+    60%  {opacity: 0.7}
+    70%  {opacity: 0.8}
+    80%  {opacity: 0.9}
+    90%  {opacity: 1}
+    100%  {opacity: 0.9}
+    0%  {opacity: 0.8}
+    10%  {opacity: 0.7}
+    20%  {opacity: 0.5}
+    30%  {opacity: 0.2}
+}
+.popup_logo{
+    cursor: pointer;
+}
+#popupMedia{
     background-color: white;
 }
-
-/* ---------- mise en forme du bandeau des logos ----------------- */
-/* ici comme on doit contraindre la hauteur des images (et non leur largeur) */
-/* on ne peut pas utiliser de taille en % on utilise donc des em (qui sont définis */
-/* comme proportiels à la tailles des slides grace à nos règles plus bas */
-/* (cf. fondt-size du body) */
-
-#bandeau {
-    padding-top: 3%;
-    width: 100%;
-    height: 17%;
-    position: absolute;
-    bottom: 0;
-    background-color: white;
-    font-size: 20%;
-    z-index: -1;
+.popupMedia_Logo {
+    position: relative;
+    height: 20%;
+    margin-left: 470%;
+    width: 218%;
+    margin-top: 53px;
+    transform: translateX(-50%);
 }
 
-#bandeau li {
-    list-style-type: none;
-    display: inline-block;
+.popupMedia_content{
+    margin-top: 10px;
+    display: flex;
+}
+.popupMedia_Titre, .popupMedia_Reseau_Titre{
+    font-size: 40px;
+    color: #FC5938;
+    font-family: Roboto;
+    font-weight:bold;
+}
+
+.Media_Reseau{
+    height:65px;
+    margin-left: 20px;
+    margin-top:10px;
+}
+
+
+.popupMedia_Croix{
+    width: 45px;
+    position: absolute;
+    right: 18px;
+    top: 16px;
+}
+
+.imageScene{
+    position: absolute;
+    height: 87%;
+    top: 7%;
+    left: 2%;
+    border-radius: 9px;
+    z-index: 0;
+}
+
+.cliquez{
+    position: absolute;
+    width: 19%;
+    height: 48px;
+    right: 12%;
+    top: 12%;
+    color: #25AB8F;
+    font-family: Roboto;
+    font-size: 22px;
+}
+
+.bulleparent{
+    height: 0%;
+}
+
+.bulleado{
+    height: 0%;
+}
+
+#paroleParent{
+    position: relative;
+    left: 24px;
+    width: 85%;
+}
+
+.bulleparent-text{
+    background: #FFFFFF;
+    color: #027882;
+    padding: 15px 10px;
+    border-radius: 8px;
+    width: 281px;
+    position: absolute;
+    font-size: 14px;
+    font-family: roboto;
+    transform:translatey(-100%);
+}
+
+.bulledepensee{
+    position: absolute;
+    left: 22%;
+    width: 21%;
+    top: 65%;
+}
+
+.penseeAdo {
+    position: relative;
+    width: 100%;
+    color: #027882;
+    font-family: roboto;
     vertical-align: middle;
-    margin: 0 0.5em;
+    transform: scaleX(-1) rotate(180deg);
+    top: 50%;
+    left: 2%;
 }
 
-
-#bandeau img {
-    height: 2em;
-}
-
-#bandeau #hyblab {
-    margin: 0.5em 3em;
-    height: 3em;
-    float: left;
-}
-
-#bandeau #cc, #bandeau #opensource {
-    height: 1em;
-}
-
-#bandeau .stacked {
-    display: block;
-}
-
-#bandeau ul {
+#penseeAdo {
+    position: absolute;
+    font-family: roboto;
+    color: #027882;
     text-align: center;
-    padding: 0 0;
+    top: 55%;
+    left: 24%;
+    width: 63%;
+    transform: translateY(-50%);
+    font-size: 14px;
+
 }
 
-#bandeau .institutionnel {
-    height: 2em;
+
+.arrow-down-parent {
+    width: 0;
+    height: 0;
+    position: absolute;
 }
 
-/* ---------- media queries importantes pour le responsive facile :-D ----------------- */
-/* Vous pouvez bien sûr l'adapter pour d'autres ratio que 16:9 */
-
-/* Cette media query permet de s'assurer qu'on remplit toujours la largeur de la fenêtre, 
-tant qu'on est en dessous de l'apect ratio 16/9 */
-@media screen and (max-aspect-ratio: 16/9) {
-    #container {
-        margin-top: calc((100vh - 100 * 9vw / 16) / 2);
-        width: 100vw;
-        height: calc(100 * 9vw / 16);
-    }
-
-    /* On fixe une taille de police par défaut pour le body qui servira de base à toutes 
-    les autres tailles de police. Celle-ci est proportionelle à la largeur ici. */
-    body {
-        font-size: 9vw;
-    }
+#paroleParent{
+    position: relative;
+    left: 24px;
+    width: 85%;
 }
 
-/* Cette media query permet de s'assurer qu'on remplit toujours la hauteur de la fenêtre, quand on est au 
-dessus de l'apect ratio 16/9 */
-@media screen and (min-aspect-ratio: 16/9) {
-    #container {
-        margin-left: calc((100vw - 100 * 16vh / 9) / 2);
-        width: calc(100 * 16vh / 9);
-        height: 100vh;
-    }
 
-    /* On fixe une taille de police par défaut pour le body qui servira de base à toutes 
-    les autres tailles de police. Celle-ci est proportionelle à la hauteur ici. */
-    body {
-        font-size: 16vh;
-    }
+.bulleado-text{
+    background: #FFFFFF;
+    color: #027882;
+    padding: 15px 10px;
+    border-radius: 8px;
+    width: 279px;
+    position: absolute;
+    font-size: 14px;
+    font-family: roboto;
+    transform:translatey(-100%);
+
+}
+
+.arrow-down-ado {
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+
+#paroleAdo{
+    position: relative;
+    left: 14px;
+    width: 94%;
+}
+
+.Choix{
+
+    width: 35%;
+    height: 100%;
+    right: 1%;
+    position: absolute;
+}
+
+.Choix1{
+    position: relative;
+    width: 69%;
+    height: 100px;
+    left: 11%;
+    top: 46%;
+    font-family: roboto;
+    color: #027882;
+    font-size: 23px;
+}
+
+
+.btnRep1{
+    width: 100px;
+    height: 100px;
+}
+
+.EnteteLieu{
+    height: 65px;
+    width: 266px;
+    background-color: #FFFFFF;
+    left: 43%;
+    top: -15%;
+    position: absolute;
+    border-radius: 44px;
+    font-family: roboto;
+    font-weight: bold;
+    color: #FC5938;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #027882;
+    border-style: solid;
+    border-width: 6px 6px 6px 6px;
+    box-shadow: 4px 4px 0px white;
+}
+
+.boutonDialogue:focus{
+    outline: none;
+}
+
+.boutonDialogue{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: white;
+    font: bold 13px Arial;
+    border-radius: 50%;
+    border-color: #FC5938;
+    color: #FC5938;
+    position: absolute;
+    bottom: 19px;
+    left: -16px;
+    Border-style: solid;
+    /*Border-width: thick;*/
+}
+
+
+#btnRep1{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+
+
+
+.choix_rep{
+    color: #027882;
+    position: absolute;
+    width: 452px;
+    left: 148%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    text-align: start;
+}
+
+.Passer{
+    right: 4%;
+    bottom: 2%;
+    position: absolute;
+}
+
+#popupRessource
+{
+    display: flex;
+    justify-content: space-between;
+    top: 80px;
+    background-color: #F7FCFB;
+    font-family: Roboto;
+
+}
+
+#popupRessourceTitre
+{
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: -30px;
+    bottom: 1px;
+}
+
+
+
+#r
+{
+    display: flex;
+    justify-content: center;
+    color: #FC5938;
+    height: 65px;
+    width: 266px;
+    background-color: #FFFFFF;
+    border-radius: 44px;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 45px;
+    border-color: #027882;
+    border-style: solid;
+    border-width: 6px 6px 6px 6px;
+    box-shadow: 4px 4px 0px white;
+    margin-bottom: -16px;
+    margin-top: 106px;
+
+}
+
+#ressourceGauche {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    padding-right: 7%;
+    padding-left: 15%;
+    margin-top: -45px;
+}
+
+#ressourceDroite {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35%;
+    padding-right: 7%;
+    padding-left: 7%;
+    margin-top: 40px;
+}
+
+
+#titreRessource
+{
+    margin-top: 17%;
+    height: 10%;
+
+}
+
+#texteRessource
+{
+    height: 50%;
+    color:#027882;
+    padding-top: 40px;
+}
+
+
+#lienRessource
+{
+    margin-bottom: 30%;
+}
+
+#lienRessource a {
+    color: #FC5938;
+}
+
+#lienRessource span{
+    color: #027882;
+    font-size: 1em;
+}
+
+#labelAutreHistoire
+{
+    margin-top: 19%;
+    height: 10%;
+    color: #027882;
+}
+
+#btnRetourCarte
+{
+    margin-bottom: 50px;
+    margin-left: 27%;
+    border: 3px #FC5938 solid;
+    color: #FC5938;
+    background-color: #FFFFFF;
+    border-radius: 44px;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 35px;
+    border-style: solid;
+    border-width: 6px 6px 6px 6px;
+}
+#btnRetourCarte:hover
+{
+    color: #FFFFFF;
+    background-color: #FC5938;
+}
+#titreRessource
+{
+    display: flex;
+}
+
+#ressourceTitreArticle
+{
+    color: #027882;
+}
+
+#ressourceTitreArticleNom
+{
+    color: #FC5938;
+    padding-left: 10px;
+}
+
+#autreHistoire
+{
+    width: 250px;
+    height: 250px;
+
+    margin-bottom: 25%;
+}
+
+
+/*Popup CONTEXTE*/
+
+
+
+#boutonFinContexte:focus{
+    outline: none;
+}
+#boutonFinContexte{
+    position : absolute;
+    cursor: pointer;
+    width:50px;
+    height:50px;
+    background:transparent;
+    font:bold 13px Arial;
+    border-radius:50%;
+    border-color: #FC5938;
+    color:#FC5938;
+    bottom: 3vh;
+    right:2vw;
+}
+
+#contexte_intro{
+    color:#027882;
+    font-family: Roboto;
+    font-size: 3vh;
+    position: absolute;
+    margin-top : 8vh;
+    margin-left: 13vw;
+}
+
+#contexte_texte {
+    color: #027882;
+    font-family: Roboto;
+    font-size: 2vh;
+    text-align: justify;
+    position: absolute;
+    width: 575px;
+    height: 211px;
+    left: 50vw;
+    top: 30vh;
+}
+.contexte_icone{
+    height : 44vh;
+    position: absolute;
+    margin-top : 12vh;
+    margin-left : 14vw;
+
+}
+
+.contexte_description{
+    position : absolute;
+    font-family: Roboto;
+}
+
+
+.contexte_texte_nom{
+    color:#FC5938;
+    font-size: 4vh;
+    margin-top : 58vh;
+    margin-left : 21.5vw;
+}
+
+#contexteGif {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 115px;
+}
+
+.arrow90{
+    transform : rotate(-90deg);
+}
+
+.legende{
+    position : absolute;
+    top:-156px;
+    font-size : 36px;
+    font-family: Roboto;
+    color : #FC5938;
+    text-shadow: white 1px 1px;
+}
+
+.legendeLycee{
+    margin-left: 21.5vw;
+    margin-top: 60vh;
+}
+
+.legendeBar{
+    margin-left: 43vw;
+    margin-top: 40vh;
+}
+
+.legendePiscine{
+    margin-left: 72.5vw;
+    margin-left: 72.5vw;
+    margin-top: 82vh;
+}
+
+.legendeMaison{
+    margin-left: 79.5vw;
+    margin-top: 26vh;
+
+}
+
+#reseauRessource
+{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 18px;
+    border: 3px #26AB90 solid ;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.reseauR
+{
+    height: 31px;
+    width: 31px;
+    color: #FC5938;
+}
+
+#containReseauRessource {
+    display: flex;
+    margin: auto;
+    width: 250px;
+    justify-content: space-around;
+}
+
+#callToAction {
+    font-size: 24px;
+    color: #26AB90;
+    margin-left: 15px;
+}
+
+.popupMedia_Texte {
+    font-size: 23px;
+    color: #25AB8F;
+    width: 90%;
+    font-family: Roboto;
+}
+.popupMedia_content_texte {
+    width: 55%;
+    display: inline-block;
+    margin-left: -0.5%;
+    margin-top: 16%;
+}
+.popupMedia_Reseau {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5.02%;
+    margin-top: 13%;
+}
+
+/*********** ANIMATION *************/
+.animbtn{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -6%;
+    left: -7%;
+    border-radius: 38px;
+    border-style: solid;
+
+
+}
+
+
+
+.animbtn2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -6%;
+    left: -7%;
+    border-radius: 38px;
+    border-style: solid;
+
+
+
+}
+
+#descente2{
+    animation-name: descente2;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes descente2 {
+    0% {top: -610%;left: -1110%;background-color: #FC5938;}
+    100%{left: -6%;top: -7%;background-color: transparent;}
+
+}
+
+#monte2{
+
+    animation-name: monte2;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes monte2 {
+    0% {top: 598%;left: 1098%;background-color: #FC5938;}
+    100%{left: -6%;top: -7%;background-color: transparent;}
+
+}
+
+
+
+
+#monte{
+
+    animation-name: monte;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+
+}
+
+#descente{
+    animation-name: descente;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes monte {
+    0% {top: 327%;left: 1097%;background-color: #FC5938;}
+    100%{left: -6%;top: -7%;background-color: transparent;}
+
+}
+
+
+
+@keyframes descente {
+    0% {top: -339%;left: -1111%;background-color: #FC5938;}
+    100%{left: -6%;top: -7%;background-color: transparent;}
+
+}
+
+.testanim {
+    height: 65px;
+    width: 266px;
+    top: 11%;
+    left: 42.8%;
+    border-radius: 44px;
+    font-size: 45px;
+    border-color: #027882;
+    border-style: none;
+    border-width: 6px 6px 6px 6px;
+    z-index: 1;
+    /* box-shadow: 4px 4px 0px white; */
+    position: absolute;
+    animation-name: exampletest;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes exampletest {
+    0% {height: 65px;width: 266px;top: 11%;left: 42.8%;border-color:#027882 }
+    1% {border-style: solid;}
+    20% {border-color:#FC5938}
+    100% {left: 75%;top: 81.4%;width: 284px;height: 44px;border-color:#FC5938}
+
+}
+
+#felix {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 100px;
+    width: 500px;
+    border: 3px #26AB90 solid;
+    border-radius: 20px;
+    padding: 1px 20px 1px 20px;
+    margin-bottom: 18%;
+    margin-right: 86px;
+}
+
+#containReseauRessource2 {
+    display: flex;
+    margin: auto;
+    width: 250px;
+    justify-content: space-around;
+}
+
+#callToAction2 {
+    font-size: 30px;
+    color: #26AB90;
+    font-family: Roboto;
+    margin-top: 32px;
+    margin-left: 15px;
+}
+
+#realisation {
+    position: absolute;
+    top: 81%;
+    right: 4%;
+    font-size: 36px;
+    background-color: white;
+    border: 5px #FC5938 solid;
+    border-radius: 108px;
+    font-family: roboto;
+    color: #FC5938;
+    padding: 15px 35px 15px 35px;
+}
+
+#realisation:hover{
+    color: white;
+    background-color: #FC5938;
+}
+
+
+#haut{
+    position: absolute;
+    height: auto;
+    left: 50%;
+    width: 45%;
+    margin-top: 25px;
+    transform: translateX(-50%);
+}
+
+#milieu {
+    display: inline-flex;
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    top: 25%;
+}
+
+#polytech{
+    position: relative;
+    width: 33%;
+    height: 100%;
+}
+
+#polytech img{
+    position: absolute;
+    width: 23%;
+    left: 33%;
+}
+
+
+
+#agr{
+    position: relative;
+    width: 33%;
+    height: 100%;
+}
+
+#agr img{
+    position: absolute;
+    top:-5%;
+    width: 25%;
+    left: 36%;
+}
+
+#com{
+    position: relative;
+
+    width: 33%;
+    height: 100%;
+    /* left: 66%; */
+    display: inline-block;
+}
+
+#com img{
+    width: 60%;
+    position: absolute;
+    left: 18%;
+
+}
+
+.participants{
+    font-size: 20px;
+    color: #027882;
+    font-family: Roboto;
+}
+
+#etu_agr{
+    width: 28%;
+    position: absolute;
+    top: 30%;
+    left: 32%;
+}
+
+#etu_po{
+    width: 35%;
+    position: absolute;
+    top: 30%;
+    left: 32%;
+}
+
+#etu_com{
+    width: 33%;
+    position: absolute;
+    top: 30%;
+    left: 32%;
+}
+
+.image_credits{
+    vertical-align: top;
+}
+
+.popupCredit_Croix{
+    width: 45px;
+    position: absolute;
+    left: 150%;
+    top: 30%;
+}
+
+#cc{
+    width: 6%;
+    height: 100%;
+    left: 66%;
+    position: absolute;
+}
+
+#opensource{
+    width: 6%;
+    height: 100%;
+    left: 25%;
+    position: absolute;
+
+}
+
+#oml{
+    width: 13%;
+    height: 100%;
+    left: 81%;
+    position: absolute;
+
+}
+
+#univ{
+    width: 10%;
+    height: 125%;
+    left: 5%;
+    position: absolute;
+}
+
+#nantes{
+    width: 12%;
+    height: 100%;
+    left: 43%;
+    position: absolute;
+
+}
+
+
+#bas{
+    position: absolute;
+    height:10%;
+    width: 100%;
+    top:85%;
 }
