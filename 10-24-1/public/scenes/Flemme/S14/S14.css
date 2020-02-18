@@ -1,4 +1,4 @@
-#fs11_credits {
+#fs14_credits {
   height: 3%;
   width: 8%;
   font-size:1.6%;
@@ -10,5 +10,13 @@
   position: absolute;
   bottom: 5%;
   left: 90%;
+}
 
+#fs14_fb:hover {
+  fill:  rgb(255, 110, 0);
+}
+
+
+#fs14_ig:hover {
+  fill:  rgb(255, 110, 0);
 }

@@ -45,7 +45,7 @@ export default class Harcelement extends Component {
     });
 
     this.fewHoursBefore = new FewHoursBefore({
-      goToFlashBack: () => this.f.render(this.section)
+      goToFlashBack: () => this.flashBack.render(this.section)
     });
 
     this.flashBack = new FlashBack({
@@ -71,7 +71,7 @@ export default class Harcelement extends Component {
     setTimeout(() => {
       this.arrivee.componentWillUnmount();
       this.goToClaquePorte();
-    }, 500);
+    }, 3000);
   }
 
   goToClaquePorte(){
