@@ -26,7 +26,7 @@ export default class PageFin extends Component {
     // Hide social network from carousel and show credits button
     document.getElementById("facebook-button").style.display = "none";
     document.getElementById("instagram-button").style.display = "none";
-    const credits = document.getElementById("fs14_credits_bouton");
+    const credits = document.getElementById("credits-button");
     credits.style.display = "block";
     credits.addEventListener("click", () => {
       this.componentWillUnmount();

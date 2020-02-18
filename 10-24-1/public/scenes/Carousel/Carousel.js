@@ -56,12 +56,28 @@ export default class Carousel extends Component {
     document.getElementById("nextArrow").style.display = "none";
     document.getElementById("previousArrow").style.display = "none";
     document.getElementById("choix-portes").style.display = "block";
+    document.getElementById("auto-carousel").style.display = "none";
     document.getElementById("carousel-player").pause();
   }
 
   handleCarouselButton() {
     document.getElementById("choix-portes").addEventListener("click", () => {
       this.render(document.getElementById("root"));
+    });
+  }
+
+  handleAutoCarousel() {
+    document.getElementById("auto-carousel").addEventListener("click", () => {
+      if (document.getElementById("auto-carousel").value == 0) {
+        document.getElementById("auto-carousel").innerHTML = 'Activer le d&eacute;filement automatique';
+        document.getElementById("auto-carousel").value = 1;
+        $(carousel).slick("slickPause");
+      }
+      else {
+        document.getElementById("auto-carousel").innerHTML = 'D&eacute;sactiver le d&eacute;filement automatique';
+        document.getElementById("auto-carousel").value = 0;
+        $(carousel).slick("slickPlay");
+      }
     });
   }
 
@@ -140,7 +156,12 @@ export default class Carousel extends Component {
     // wire the carousel/root button
     this.handleCarouselButton();
 
+    //wire the auto Carousel
+    this.handleAutoCarousel();
+
     document.getElementById("carousel-player").volume = 0.1;
+    document.getElementById("ecran-player").pause();
+    document.getElementById("flemme-player").pause();
   }
 
   async load() {
@@ -181,15 +202,29 @@ export default class Carousel extends Component {
     this.harcelementC.render(divHarcelementC);
     this.puberteC.render(divPuberteC);
 
+    $("#carousel").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      if (nextSlide == 3) {
+        document.getElementById("carousel-player").pause();
+        document.getElementById("ecran-player").play();
+        document.getElementById("ecran-player").volume = 0.03;
+      }
+      else {
+        document.getElementById("ecran-player").pause();
+        document.getElementById("carousel-player").play();
+        document.getElementById("carousel-player").volume = 0.1;
+      }
+    });
+
+
     // We activate the slider
     $(carousel).slick({
       autoplay: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 4000,
       nextArrow: $("#nextArrow"),
-      prevArrow: $("#previousArrow")
+      prevArrow: $("#previousArrow"),
     });
     this.carousel = carousel;
 

@@ -42,6 +42,7 @@ export default class PlageHoraire extends Component {
   }
 
   render(target) {
+    document.getElementById("ecran-player").pause();
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

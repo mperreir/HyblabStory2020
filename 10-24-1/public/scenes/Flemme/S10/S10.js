@@ -22,6 +22,7 @@ export default class S10 extends Component {
   }
 
   render(target) {
+    document.getElementById("flemme-player").pause();
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

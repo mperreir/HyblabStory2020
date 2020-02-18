@@ -20,6 +20,7 @@ export default class Chambre extends Component {
   }
 
   render(target) {
+    document.getElementById("ecran-player").volume = 0.1;
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

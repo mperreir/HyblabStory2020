@@ -10,21 +10,21 @@
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  bottom : 18%;
+  bottom : 14%;
   right: 26%;
 }
 
 /*Validation button*/
 #e_validation {
   position: absolute;
-  bottom: 7%;
+  bottom: 5%;
   right: 33%;
 }
 
 /*SLIDER CSS*/
 #slider-distance-1 {
   position: absolute;
-  bottom: 17%;
+  bottom: 14%;
   right: 32%;
 }
 

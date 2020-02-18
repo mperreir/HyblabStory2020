@@ -10,15 +10,17 @@ export default class Porte extends Component {
     this.html = await this.loadHTML("/10-24-1/scenes/Ecrans/Porte/Porte.html");
   }
 
-  componentDidMount() {
-    document.getElementById("choix-portes").style.display = "none";
-  }
-
-  componentWillUnmount() {
-    document.getElementById("choix-portes").style.display = "block";
-  }
+  // componentDidMount() {
+  //   document.getElementById("choix-portes").style.display = "none";
+  // }
+  //
+  // componentWillUnmount() {
+  //   document.getElementById("choix-portes").style.display = "block";
+  // }
 
   render(target) {
+    // document.getElementById("ecran-player").pause();
+    // document.getElementById("ecran-player").play();
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

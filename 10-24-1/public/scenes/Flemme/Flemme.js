@@ -32,7 +32,7 @@ export default class Flemme extends Component {
     super();
     this.onStart = onStart;
 
-    console.log("Flemme --- Starting to create");
+    // console.log("Flemme --- Starting to create");
     // Carousel container section for the flemme playscript
     this.section = document.createElement("section");
     this.section.setAttribute("id", "flemme");
@@ -94,12 +94,13 @@ export default class Flemme extends Component {
     this.S14 = new S14({
       goToCredits: () => this.credits.render(this.section)
     });
+    this.credits = new Credits();
 
-    console.log("Flemme --- created");
+    // console.log("Flemme --- created");
   }
 
   goToS2(e) {
-    console.log("Flemme --- going to s2");
+    // console.log("Flemme --- going to s2");
     this.onStart(this);
     this.S1.componentWillUnmount();
     this.S2.render(this.section);
@@ -107,22 +108,22 @@ export default class Flemme extends Component {
     setTimeout(() => {
       this.S2.componentWillUnmount();
       this.goToS3();
-    }, 1500);
+    }, 3000);
   }
 
   goToS3(e) {
-    console.log("Flemme --- going to s3");
+    // console.log("Flemme --- going to s3");
     this.S2.componentWillUnmount();
     this.S3.render(this.section);
     // Automatic unmount of next scene after 1500ms
     setTimeout(() => {
       this.S3.componentWillUnmount();
       this.goToS4();
-    }, 1500);
+    }, 3000);
   }
 
   goToS4(e) {
-    console.log("Flemme --- going to s4");
+    // console.log("Flemme --- going to s4");
     this.S3.componentWillUnmount();
     this.S4.render(this.section);
     // Automatic unmount of next scene after 3000ms
@@ -133,14 +134,14 @@ export default class Flemme extends Component {
   }
 
   goToS5(e) {
-    console.log("Flemme --- going to s5");
+    // console.log("Flemme --- going to s5");
     this.S4.componentWillUnmount();
     this.S5.render(this.section);
     // No automatic unmount of next scene
   }
 
   goToS6(e) {
-    console.log("Flemme --- going to s6");
+    // console.log("Flemme --- going to s6");
     this.S5.componentWillUnmount();
     this.S6.render(this.section);
     // Automatic unmount of next scene after 3000ms
@@ -151,7 +152,7 @@ export default class Flemme extends Component {
   }
 
   goToS7(e) {
-    console.log("Flemme --- going to s7");
+    // console.log("Flemme --- going to s7");
     this.S6.componentWillUnmount();
     this.S7.render(this.section);
     // Automatic unmount of next scene after 3000ms
@@ -162,14 +163,14 @@ export default class Flemme extends Component {
   }
 
   goToS8(e) { // prop 2
-    console.log("Flemme --- going to s8");
+    // console.log("Flemme --- going to s8");
     this.S7.componentWillUnmount();
     this.S8.render(this.section);
     // No automatic unmount of next scene
   }
 
   goToS9(e) { //reponse 2
-    console.log("Flemme --- going to s9");
+    // console.log("Flemme --- going to s9");
     this.S8.componentWillUnmount();
     this.S9.render(this.section);
     // Automatic unmount of next scene after 3000ms
@@ -180,7 +181,7 @@ export default class Flemme extends Component {
   }
 
   goToS10(e) { //canape
-    console.log("Flemme --- going to s10");
+    // console.log("Flemme --- going to s10");
     this.S9.componentWillUnmount();
     this.S10.render(this.section);
     // Automatic unmount of next scene after 3000ms
@@ -191,14 +192,14 @@ export default class Flemme extends Component {
   }
 
   goToS11(e) { // prop 3
-    console.log("Flemme --- going to s11");
+    // console.log("Flemme --- going to s11");
     this.S10.componentWillUnmount();
     this.S11.render(this.section);
     // No automatic unmount of next scene
   }
 
   goToS12(e) {
-    console.log("Flemme --- going to s12");
+    // console.log("Flemme --- going to s12");
     this.S11.componentWillUnmount();
     this.S12.render(this.section);
     // Automatic unmount of next scene after 3000ms
@@ -209,7 +210,7 @@ export default class Flemme extends Component {
   }
 
   goToS13(e) {
-    console.log("Flemme --- going to s13");
+    // console.log("Flemme --- going to s13");
     this.S12.componentWillUnmount();
     this.S13.render(this.section);
     // Automatic unmount of next scene after 3000ms
@@ -220,7 +221,7 @@ export default class Flemme extends Component {
   }
 
   goToS14(e) {
-    console.log("Flemme --- going to s14");
+    // console.log("Flemme --- going to s14");
     this.S13.componentWillUnmount();
     this.S14.render(this.section);
   }

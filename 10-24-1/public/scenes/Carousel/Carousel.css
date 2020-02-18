@@ -45,6 +45,10 @@
   display: none;
 }
 
+#auto-carousel {
+  display: block;
+}
+
 #credits-button {
   display: none;
   width: 116px;
@@ -83,6 +87,7 @@
 button {
   width: 263px;
 }
+
 
 /* height issues */
 

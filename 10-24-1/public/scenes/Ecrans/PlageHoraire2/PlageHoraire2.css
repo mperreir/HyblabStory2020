@@ -10,14 +10,14 @@
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
-  bottom : 15%;
+  bottom : 11%;
   right: 26%;
 }
 
 /*SLIDER CSS*/
 #slider-distance-2 {
   position: absolute;
-  bottom: 17%;
+  bottom: 14%;
   right: 32%;
 }
 

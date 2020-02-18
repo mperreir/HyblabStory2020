@@ -22,6 +22,8 @@ export default class S2 extends Component {
   }
 
   render(target) {
+    document.getElementById("flemme-player").play();
+    document.getElementById("flemme-player").volume = 0.11;
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }
