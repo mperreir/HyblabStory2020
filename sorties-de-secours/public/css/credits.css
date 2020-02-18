@@ -1,0 +1,186 @@
+#credits-section {
+    background-color: #F6F5F5;
+    /* text-align: center; */
+    font-family: 'NimbusSanLRegular';
+    position:relative;
+}
+
+.centerize {
+    text-align: center;
+}
+
+#tableau-logos {
+    margin:auto;
+    margin-top:9vh;
+}
+
+#logos-ecoles {
+    vertical-align: middle;
+}
+
+#logo-big-audencia {
+  position: absolute;
+  width: 269px;
+  height: 71px;
+  left: 23%;
+  top: 32%;
+}
+
+#logo-big-polytech {
+  position: absolute;
+  width: 195px;
+  height: 124px;
+  left: 70%;
+  top: 27%;
+}
+
+#logo-big-agr {
+  position: absolute;
+  width: 146px;
+  height: 216px;
+  left: 48%;
+  top: 25%;
+}
+
+#logos-ecoles>td {
+    padding-bottom:5vh;
+}
+
+.intro-text {
+  font-family: NimbusSanL;
+  font-size: 30px;
+  line-height: 50px;
+  /* identical to box height, or 167% */
+  display: flex;
+  align-items: center;
+  color: #1E1E1E;
+}
+#intro-1{
+  position: absolute;
+  height: 50px;
+  left: 48%;
+  top: 6%;
+}
+#intro-2{
+  position: absolute;
+  height: 50px;
+  left: 47%;
+  top: 10%;
+}
+#noms {
+    position: absolute;
+    vertical-align:top;
+    font-family: NimbusSanL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E1E1E;
+}
+#nom-audencia {
+  position: absolute;
+  width: 200px;
+  height: 78px;
+  left: 23vw;
+  top: 50vh;
+}
+
+#nom-agr {
+  position: absolute;
+  width: 250px;
+  height: 80px;
+  left: 48vw;
+  top: 50vh;
+}
+
+#nom-polytech {
+  position: absolute;
+  width: 300px;
+  height: 195px;
+  left: 70vw;
+  top: 50vh;
+}
+
+#noms > a {
+    position: absolute;
+    vertical-align:top;
+    font-family: NimbusSanL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E1E1E;
+}
+
+
+#noms p a {
+    position: absolute;
+    vertical-align:top;
+    font-family: NimbusSanL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E1E1E;
+
+    text-decoration: none;
+}
+
+#noms p a:hover {
+  font-weight: bold;
+}
+
+.ligne_verticale1
+{
+  position: absolute;
+  width: 397px;
+  height: 0px;
+  left: 32%;
+  top: 50%;
+  border: 1px solid #969696;
+  transform: rotate(90deg);
+}
+.ligne_verticale2
+{
+  position: absolute;
+    width: 397px;
+    height: 0px;
+    left: 54%;
+    top: 50%;
+    border: 1px solid #969696;
+    transform: rotate(90deg);
+}
+
+.logos-partenaires {
+    width:70%;
+    height:auto;
+    left:15%;
+    position:absolute;
+    display: inline-block;
+    bottom: 10vh;;
+    text-align: center;
+    /* margin-bottom:25px; */
+}
+
+
+.logos-partenaires img {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    vertical-align: middle;
+}
+
+td p {
+    margin-bottom:2vh;
+}

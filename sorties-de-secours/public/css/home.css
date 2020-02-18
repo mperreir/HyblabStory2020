@@ -1,0 +1,116 @@
+#home-section {
+	position: relative;
+	background-color: #1E1E1E;
+}
+
+#home-wrapper {
+	position: relative;
+	top: 20%;
+	text-align: center;
+	background-color: #1E1E1E;
+}
+
+#logo-wrapper {
+	position: relative;
+	background-color: #1E1E1E;
+	width: 100%;
+	height: 400px;
+}
+
+#logo-experience {
+	position: absolute;
+	top: 67%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	opacity: 0;
+	transition: opacity 2s;
+	/* transition-delay: 0.25s; */
+}
+
+.logo-experience-show {
+	opacity: 1 !important;
+}
+
+#logo-sorties-de-secours {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#start-experience {
+	position: relative;
+	margin-top: 100px;
+}
+
+#button-start {
+	position: absolute;
+	left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+	border-style: solid;
+	border-color: white;
+	margin: auto;
+	text-transform: uppercase;
+	width: 250px;
+	color: white;
+	font-family: "NimbusSanL";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+#img-start {
+	z-index: 1;
+	opacity: 0;
+	transition-property: opacity;
+  transition-duration: 1s;
+}
+
+#button-start-text {
+	margin: 1vw;
+}
+
+#video_logo {
+	background-color: #1E1E1E;
+  color: #1E1E1E;
+}
+
+#logo-white {
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+
+	width: 750px;
+	height: 350px;
+	/* margin: auto; */
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+#logo-white.logo-white-show {
+	opacity: 1;
+}
+
+#logo-gif {
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+
+	width: 750px;
+	height: 350px;
+
+	/* display: block; */
+	opacity: 1;
+	transition: opacity 1s;
+	/* margin: auto; */
+}
+
+#logo-gif.logo-gif-hide {
+	opacity: 0;
+}
