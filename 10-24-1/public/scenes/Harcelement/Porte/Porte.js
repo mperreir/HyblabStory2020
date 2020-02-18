@@ -15,7 +15,7 @@ export default class Porte extends Component {
 
   componentDidMount() {
     document
-      .getElementById("harcelement")
+      .getElementById("arrivee-enfant")
       .addEventListener("click", e => this.onGoToArriveeEnfant(e));
   }
 

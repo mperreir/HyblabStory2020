@@ -15,7 +15,7 @@ export default class FewHoursBefore extends Component {
 
   componentDidMount() {
     document.getElementById("choix-portes").style.display = "none";
-    setTimeout(() => this.goToFlashBack(), 1000);
+    setTimeout(() => this.goToFlashBack(), 3000);
   }
 
   render(target) {
