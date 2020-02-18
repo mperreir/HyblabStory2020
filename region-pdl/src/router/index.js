@@ -6,14 +6,14 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-      path: '/',
-        name: 'view',
-        component: View
+    path: '/',
+    name: 'view',
+    component: View
   }
 ],
 
 router = new VueRouter({
-    routes
+  routes
 });
 
 export default router;

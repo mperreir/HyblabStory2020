@@ -44,8 +44,9 @@
 <script>
 import { Howl } from "howler";
 
-import ProgressBar from "@/components/Utils/ProgressBar.vue";
 import LogoRegion from "@/assets/svg/Utils/logo-region.svg";
+
+import ProgressBar from "@/components/Utils/ProgressBar.vue";
 import Intro from "@/components/Saynettes/Intro.vue";
 import Persos from "@/components/Saynettes/Persos.vue";
 import House from "@/components/Saynettes/House.vue";

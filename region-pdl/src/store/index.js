@@ -36,6 +36,5 @@ export default new Vuex.Store({
                 "mme" :
                 "m";
         }
-    },
-    modules: {}
+    }
 });
