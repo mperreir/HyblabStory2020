@@ -1,15 +1,16 @@
 # Descriptif du projet
 
-Porteur de projet :
+Porteur de projet : La  vie du coin, Antoine Nguyen & Adrien Grall.
 
-Sujet :
+Sujet : Raconter une histoire interactive par le biais d'un site web.
 
-Nom d'équipe :
+Nom d'équipe : Du coté de chez nous.
 
 Participants : 
 
-- Sciencescom
+- Sciencescom : Claire Le Roux, Philippine Duares.
 
-- AGR :
-- Polytech :  
+- AGR : Yoann Langonne, Louise Le Floch.
+
+- Polytech :  Charles Ego, Hugo Dominguez, Guillaume Huguerre, Hugo Ricarrere.
 

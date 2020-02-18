@@ -1,0 +1,45 @@
+{
+"dialogues": [ 
+    {
+        "id": "h2_presentation", 
+        "texte":"DÉCOUVREZ LE PROJET DE SAM"
+    },
+
+    {
+        "id": "p_presentation",
+        "texte": "De nature sportive, Sam souhaiterait mettre en place un tournoi de football avec des équipes mixtes dans son quartier. Pour cela, il faudra prévoir un espace et du matériel adéquat. Grâce à l’idée de Sam, les individus du quartier pourraient créer une cohésion d’équipe et passer du bon temps."
+    },
+
+    {
+        "id": "bureau_commu_name1",
+        "texte": "Sport & Co"
+    },
+    {
+        "id": "bureau_commu_name2",
+        "texte": "Autour d’un foot"
+    },
+
+    {
+        "id": "bureau_commu_name3",
+        "texte": "Passe à plusieurs"
+    },
+    {
+        "id": "bureau_commu_question1",
+        "texte": "- Seriez-vous tentés par un tournoi de foot mensuel ?"
+    },
+    {
+        "id": "bureau_commu_question2",
+        "texte": "- Dans quels lieux de la ville est-il possible d’organiser des tournois de foot dans les quartiers ? "
+    },
+    {
+        "id" : "p_presentation_end",
+        "texte" : "VOUS AUSSI VOUS ÊTES PLEINS D'IDÉES ? COMME SAM FAITES BOUGER VOTRE QUARTIER ET DEVENEZ UN VÉRITABLE AMBASSADEUR."
+
+    },
+    {
+        "id" : "etape_texte_custom",
+        "texte" : "Pour son projet Sam va avoir besoin de :"
+    }
+ ] 
+}
+

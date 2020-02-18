@@ -4,6 +4,9 @@
 // Load usefull expressjs and nodejs objects / modules
 var express = require('express');
 var path = require('path');
+const anime = require('animejs');
+
+
 
 var app = express();
 
