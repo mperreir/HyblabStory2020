@@ -147,7 +147,7 @@
 
 #sliding_info_commu{
   position: absolute;
-  left: 105px;
+  left: 0;
   z-index: 100;
 }
 #animation_final{
@@ -203,3 +203,15 @@ position: absolute;
 #slide_video_createur{
   position: relative;
 }
+
+.btn_creer_commu{
+
+padding: 10px 20px 10px 20px;
+border-style: solid;
+border-width: 1px;
+border-radius: 100px;
+
+border-color: #fff;
+font-size:26px;
+
+transition: ease 0.5s;}

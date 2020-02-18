@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1280 1024" style="enable-background:new 0 0 1280 1024;" xml:space="preserve">
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
 <style type="text/css">
 	.st0{display:none;}
 	.st1{fill:#42B06F;}
@@ -9,7 +9,8 @@
 <g id="Calque_1" class="st0">
 </g>
 <g id="Calque_2">
-	<path class="st1" d="M1277.6,1024H156.2c0,0,294.6-26.1,334.3-185.5c16.5-66.2-3.2-136.4-21-202.3c-22-81.2-26-202.6,44.3-257.3
-		c96.2-74.8,240-61.8,306.5-91.5c66.8-29.8,88.8-66.6,111.7-121.2C984.2,41.6,1154.1,4.8,1280,0L1277.6,1024z"/>
+	<path class="st1" d="M1917.4,1080H688c0,0,322.98-27.56,366.52-195.68c18.08-69.83-3.51-143.85-23.07-213.31
+		c-24.12-85.65-28.47-213.69,48.55-271.33c105.49-78.93,263.07-65.15,336-96.47c73.24-31.46,97.37-70.29,122.42-127.8
+		C1595.72,43.85,1781.95,5.01,1920,0L1917.4,1080z"/>
 </g>
 </svg>

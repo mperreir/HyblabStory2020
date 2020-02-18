@@ -108,18 +108,18 @@ var deltaa;
 							
 							
 							targetIndex = that.currIndex + (delta>0?-1:1);						
-							console.log(that.currIndex);
-							if (that.currIndex != 1 && that.currIndex != 3 && that.currIndex !=4)
-							{
-
 							
+							if (that.currIndex != 1 && that.currIndex != 3 && that.currIndex !=4)
+							{							
 								that.gotoTarget(targetIndex);
+								console.log('2');
 							}
 							if (that.currIndex == 4 || that.currIndex == 3) {
+								console.log('1');
 								can_scroll_paralax = false;
 								setTimeout(function(){
 									can_scroll_paralax = true;
-								},1000);
+								},2000);
 							}
 							
 							
@@ -135,6 +135,7 @@ var deltaa;
 
 					if(that.currIndex == 3 && can_scroll_paralax)
 					{
+						console.log('3');
 						$('#perso_bureau').css('transform', 'translateX(-4000px)');
 						setTimeout(function()
 						{
@@ -456,8 +457,7 @@ var deltaa;
                 if(index == 2)
                 {
 					setTimeout(function(){
-						var textWrapper = document.querySelector('#p_presentation');
-						textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+						
 
 						var tl = anime.timeline({
 							easing: 'easeOutExpo',
@@ -466,9 +466,10 @@ var deltaa;
 
 						 
 						  tl.add({
-							targets: '#p_presentation, .letter',
+							targets: '#p_presentation',
 							opacity: [0,1],
 							easing: "easeInOutQuad",
+							duration : 700,
 							delay: (el, i) => 50 * (i+1)
 						});
 

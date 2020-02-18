@@ -251,7 +251,7 @@ button.learn-more:active::before {
 
 #decor_premiere_page
 {
-  width:  45vw;
+  width:  42vw;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -265,7 +265,7 @@ button.learn-more:active::before {
   height:100vh;
   background: url('../image/General/background1.svg');
   background-repeat: no-repeat;
-  background-size: 90%;
+  background-size: 100%;
 
 }
 
@@ -732,7 +732,7 @@ button.learn-more:active::before {
   left: 50%;
   transform: translate(-50%, 50%);
   font-size: 30px;
-  width: 1100px;
+  width: 1000px;
   text-align: center;
   font-family: 'Montserrat';
   position: absolute;
@@ -936,7 +936,7 @@ button.learn-more:active::before {
 }
 
 #user_commu{
-  left: 11.4%;
+  left: 50px;
   top: 10vh;
   border-style: solid;
   border-width: 2px;
@@ -944,7 +944,6 @@ button.learn-more:active::before {
   position: absolute;
   font-size: 30px;
   border-radius: 8px;
-  transform: translate(-50%);
   
 }
 
@@ -989,8 +988,8 @@ button.learn-more:active::before {
   color : #23DC82;
   font-size: 30px;
   text-align: center;
-  left: 12%;
-  transform: translate(-50%);
+  left: 50px;
+  /*transform: translate(-50%);*/
   top: 4vh;
 
 }
@@ -1297,6 +1296,23 @@ button.learn-more:active::before {
   top: 0;
   z-index: 100;
   background-color: white;
+}
+
+
+
+
+
+#retour_site
+{
+  color: #fff;
+  position: absolute;
+  right: 3%;
+  bottom: 3vh;
+  font-size: 40px;
+}
+
+#retour_site:hover{
+  cursor: pointer;
 }
 
 
