@@ -4,54 +4,68 @@
 
     <Background class="svg" />
 
-    <TextTitle :y="18" :style="{textAlign: 'center'}">Qui voulez-vous suivre aujourd'hui ?</TextTitle>
+    <TextTitle
+      :y="18"
+      :style="{textAlign: 'center'}"
+    >
+      Qui voulez-vous suivre aujourd'hui ?
+    </TextTitle>
 
-    <SimpleText :y="27" :style="{textAlign: 'center'}">
+    <SimpleText
+      :y="27"
+      :style="{textAlign: 'center'}"
+    >
       Mme Dubois et M. Moreau sont voisins et
       <b>vivent dans la région des Pays de la Loire.</b>
-      <br />
+      <br>
       <b>Ils sont très attentifs à leur impact sur l'environnement</b> et pratiquent le covoiturage
-      <br />pour se rendre sur leur lieu de travail.
+      <br>pour se rendre sur leur lieu de travail.
     </SimpleText>
 
     <SimpleButton
       text="Mme Dubois"
-      @mouseover.native="animDubois = true"
-      @mouseleave.native="animDubois = false"
-      @click.native="onNext('dubois')"
       :width="20"
       :y="45"
       :x="20"
+      @mouseover.native="animDubois = true"
+      @mouseleave.native="animDubois = false"
+      @click.native="onNext('dubois')"
     />
 
-    <PersoFemme class="perso p1" :class="{ grow: animDubois }" />
+    <PersoFemme
+      class="perso p1"
+      :class="{ grow: animDubois }"
+    />
 
     <SimpleButton
       text="M. Moreau"
-      @mouseover.native="animMoreau = true"
-      @mouseleave.native="animMoreau = false"
-      @click.native="onNext('moreau')"
       :width="20"
       :y="45"
       :x="60"
+      @mouseover.native="animMoreau = true"
+      @mouseleave.native="animMoreau = false"
+      @click.native="onNext('moreau')"
     />
 
-    <PersoHomme class="perso p2" :class="{ grow: animMoreau }" />
+    <PersoHomme
+      class="perso p2"
+      :class="{ grow: animMoreau }"
+    />
   </div>
 </template>
 
 <script>
-import Background from "@/assets/svg/Persos/background-perso.svg";
-import PersoHomme from "@/assets/svg/Persos/man.svg";
-import PersoFemme from "@/assets/svg/Persos/woman.svg";
-import Boat from "@/assets/svg/Utils/boat.svg";
+import Background from '@/assets/svg/Persos/background-perso.svg';
+import PersoHomme from '@/assets/svg/Persos/man.svg';
+import PersoFemme from '@/assets/svg/Persos/woman.svg';
+import Boat from '@/assets/svg/Utils/boat.svg';
 
-import TextTitle from "@/components/Utils/TextTitle.vue";
-import SimpleText from "@/components/Utils/SimpleText.vue";
-import SimpleButton from "@/components/Utils/SimpleButton.vue";
+import TextTitle from '@/components/Utils/TextTitle.vue';
+import SimpleText from '@/components/Utils/SimpleText.vue';
+import SimpleButton from '@/components/Utils/SimpleButton.vue';
 
 export default {
-  name: "Persos",
+  name: 'Persos',
   components: {
     TextTitle,
     SimpleText,
@@ -68,9 +82,9 @@ export default {
     };
   },
   methods: {
-    onNext(characterName) {
-      this.$store.dispatch("nextScene", {});
-      this.$store.dispatch("setCharacter", { name: characterName });
+    onNext (characterName) {
+      this.$store.dispatch('nextScene', {});
+      this.$store.dispatch('setCharacter', { name: characterName });
     }
   }
 };

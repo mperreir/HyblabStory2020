@@ -38,9 +38,9 @@ export default {
     state: false
   }),
   methods: {
-    toggleOn() {
+    toggleOn () {
       this.state = true;
-      this.$emit("toggle");
+      this.$emit('toggle');
     }
   }
 };

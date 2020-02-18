@@ -2,71 +2,113 @@
   <div class="saynette">
     <Background class="svg" />
 
-    <SimpleText :y="15" :x="15" :width="70" :style="{textAlign: 'center'}">
+    <SimpleText
+      :y="15"
+      :x="15"
+      :width="70"
+      :style="{textAlign: 'center'}"
+    >
       <span v-if="getCharacterGender === 'mme'">
         Il y a peu, Mme Dubois a fait appel à la Région afin
         <b>d’obtenir des aides pour améliorer l’isolation</b>
-        <br />de sa maison.
+        <br>de sa maison.
         Cette rénovation, rendue possible
         <b>grâce aux aides de la Région</b>, a permis à Mme Dubois
-        <br />de faire des
+        <br>de faire des
         <b>économies d’énergie</b> et de participer à la transition écologique de la région.
       </span>
       <span v-if="getCharacterGender === 'm'">
         Il y a peu, M. Moreau a fait appel à la Région afin
         <b>d’obtenir des aides pour améliorer l’isolation</b>
-        <br />de sa maison.
+        <br>de sa maison.
         Cette rénovation, rendue possible
         <b>grâce aux aides de la Région</b>, a permis à M. Moreau
-        <br />de faire des
+        <br>de faire des
         <b>économies d’énergie</b> et de participer à la transition écologique de la région.
       </span>
     </SimpleText>
 
     <transition name="bounce">
-      <LittleHouse v-show="indexHouse == 1" class="little" />
+      <LittleHouse
+        v-show="indexHouse == 1"
+        class="little"
+      />
     </transition>
     <transition name="bounce">
-      <MediumHouse v-show="indexHouse == 2" class="medium" />
+      <MediumHouse
+        v-show="indexHouse == 2"
+        class="medium"
+      />
     </transition>
     <transition name="bounce">
-      <BigHouse v-show="indexHouse == 3" class="big" />
+      <BigHouse
+        v-show="indexHouse == 3"
+        class="big"
+      />
     </transition>
 
     <div class="size">
       <transition name="bounce">
-        <p v-show="indexHouse == 1" class="text">{{ 50 * indexHouse }}m²</p>
+        <p
+          v-show="indexHouse == 1"
+          class="text"
+        >
+          {{ 50 * indexHouse }}m²
+        </p>
       </transition>
       <transition name="bounce">
-        <p v-show="indexHouse == 2" class="text">{{ 50 * indexHouse }}m²</p>
+        <p
+          v-show="indexHouse == 2"
+          class="text"
+        >
+          {{ 50 * indexHouse }}m²
+        </p>
       </transition>
       <transition name="bounce">
-        <p v-show="indexHouse == 3" class="text">{{ 50 * indexHouse }}m²</p>
+        <p
+          v-show="indexHouse == 3"
+          class="text"
+        >
+          {{ 50 * indexHouse }}m²
+        </p>
       </transition>
     </div>
 
-    <Slider class="slider" @input="onChange" />
+    <Slider
+      class="slider"
+      @input="onChange"
+    />
 
-    <PlusButton v-model="closePopover1" class="plus1" :width="30" @open="closePopover(1)">
+    <PlusButton
+      v-model="closePopover1"
+      class="plus1"
+      :width="30"
+      @open="closePopover(1)"
+    >
       <p class="text">
         En 2018,
         <span class="orange">1077 maisons</span>
-        <br />ont bénéficié de cette aide
-        <br />à l’isolation.
+        <br>ont bénéficié de cette aide
+        <br>à l’isolation.
       </p>
     </PlusButton>
 
-    <PlusButton v-model="closePopover2" class="plus2" :width="35" @open="closePopover(2)">
+    <PlusButton
+      v-model="closePopover2"
+      class="plus2"
+      :width="35"
+      @open="closePopover(2)"
+    >
       <p v-if="getCharacterGender === 'm'">
         La maison de M. Moreau fait
         <span class="orange">50 m².</span>
-        <br />Il a eu le droit à
+        <br>Il a eu le droit à
         <span class="orange">4000 euros</span> d’aides.
       </p>
       <p v-if="getCharacterGender === 'mme'">
         La maison de Mme Dubois fait
         <span class="orange">
-          <br />150 m².
+          <br>150 m².
         </span> Elle a eu le droit à
         <span class="orange">4000 euros</span> d’aides.
       </p>
@@ -83,10 +125,10 @@
         Pour une maison de
         <span class="orange">50 m².</span>
         Le gain moyen
-        <br />sur la consommation
-        <br />est de
+        <br>sur la consommation
+        <br>est de
         <span class="orange">58 %</span> après
-        <br />les travaux.
+        <br>les travaux.
       </p>
     </PlusButton>
 
@@ -100,9 +142,9 @@
       <p>
         Pour une maison de
         <span class="orange">100 m².</span>
-        <br />Le gain moyen
-        <br />sur la consommation
-        <br />est de
+        <br>Le gain moyen
+        <br>sur la consommation
+        <br>est de
         <span class="orange">51 %</span> après les travaux.
       </p>
     </PlusButton>
@@ -117,39 +159,39 @@
       <p>
         Pour une maison de
         <span class="orange">150 m².</span>
-        <br />Le gain moyen
-        <br />sur la consommation
-        <br />est de
+        <br>Le gain moyen
+        <br>sur la consommation
+        <br>est de
         <span class="orange">53 %</span> après les travaux.
       </p>
     </PlusButton>
 
     <SimpleButton
       text="Continuer l'histoire"
-      @click.native="onNextCar"
       :width="23"
       :y="90"
       :x="75"
+      @click.native="onNextCar"
     />
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import { Howl } from "howler";
+import { mapGetters } from 'vuex';
+import { Howl } from 'howler';
 
-import Background from "@/assets/svg/House/background-house.svg";
-import LittleHouse from "@/assets/svg/House/little-house.svg";
-import MediumHouse from "@/assets/svg/House/medium-house.svg";
-import BigHouse from "@/assets/svg/House/big-house.svg";
+import Background from '@/assets/svg/House/background-house.svg';
+import LittleHouse from '@/assets/svg/House/little-house.svg';
+import MediumHouse from '@/assets/svg/House/medium-house.svg';
+import BigHouse from '@/assets/svg/House/big-house.svg';
 
-import Slider from "@/components/Utils/Slider.vue";
-import SimpleText from "@/components/Utils/SimpleText.vue";
-import SimpleButton from "@/components/Utils/SimpleButton.vue";
-import PlusButton from "@/components/Utils/PlusButton.vue";
+import Slider from '@/components/Utils/Slider.vue';
+import SimpleText from '@/components/Utils/SimpleText.vue';
+import SimpleButton from '@/components/Utils/SimpleButton.vue';
+import PlusButton from '@/components/Utils/PlusButton.vue';
 
 export default {
-  name: "House",
+  name: 'House',
   components: {
     Background,
     LittleHouse,
@@ -169,17 +211,17 @@ export default {
     closePopover5: false,
     canPlay: false
   }),
-  mounted() {
+  computed: {
+    ...mapGetters(['getCharacterGender'])
+  },
+  mounted () {
     this.clickSound = new Howl({
-      src: ["sounds/water-drop.mp3"],
+      src: ['sounds/water-drop.mp3'],
       volume: 0.2
     });
   },
-  computed: {
-    ...mapGetters(["getCharacterGender"])
-  },
   methods: {
-    onChange(value) {
+    onChange (value) {
       this.indexHouse = value;
 
       if (this.canPlay) {
@@ -188,10 +230,10 @@ export default {
 
       this.canPlay = true;
     },
-    onNextCar() {
-      this.$store.dispatch("nextScene", {});
+    onNextCar () {
+      this.$store.dispatch('nextScene', {});
     },
-    closePopover(i) {
+    closePopover (i) {
       switch (i) {
         case 1:
           this.closePopover1 = false;

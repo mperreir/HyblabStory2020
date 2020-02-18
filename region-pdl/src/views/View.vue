@@ -42,25 +42,25 @@
 </template>
 
 <script>
-import { Howl } from "howler";
+import { Howl } from 'howler';
 
-import LogoRegion from "@/assets/svg/Utils/logo-region.svg";
+import LogoRegion from '@/assets/svg/Utils/logo-region.svg';
 
-import ProgressBar from "@/components/Utils/ProgressBar.vue";
-import Intro from "@/components/Saynettes/Intro.vue";
-import Persos from "@/components/Saynettes/Persos.vue";
-import House from "@/components/Saynettes/House.vue";
-import Podcast from "@/components/Saynettes/Podcast.vue";
-import Borne from "@/components/Saynettes/Borne.vue";
-import Company from "@/components/Saynettes/Company.vue";
-import School from "@/components/Saynettes/School.vue";
-import Quizz from "@/components/Saynettes/Quizz.vue";
-import End from "@/components/Saynettes/End.vue";
-import Carousel from "@/components/Carousel/Carousel.vue";
-import CarouselSlide from "@/components/Carousel/CarouselSlide.vue";
+import ProgressBar from '@/components/Utils/ProgressBar.vue';
+import Intro from '@/components/Saynettes/Intro.vue';
+import Persos from '@/components/Saynettes/Persos.vue';
+import House from '@/components/Saynettes/House.vue';
+import Podcast from '@/components/Saynettes/Podcast.vue';
+import Borne from '@/components/Saynettes/Borne.vue';
+import Company from '@/components/Saynettes/Company.vue';
+import School from '@/components/Saynettes/School.vue';
+import Quizz from '@/components/Saynettes/Quizz.vue';
+import End from '@/components/Saynettes/End.vue';
+import Carousel from '@/components/carousel/Carousel.vue';
+import CarouselSlide from '@/components/carousel/CarouselSlide.vue';
 
 export default {
-  name: "Views",
+  name: 'Views',
   components: {
     Intro,
     Persos,
@@ -76,9 +76,9 @@ export default {
     End,
     LogoRegion
   },
-  mounted() {
+  mounted () {
     const sound = new Howl({
-      src: ["sounds/countryside.mp3"],
+      src: ['sounds/countryside.mp3'],
       loop: true,
       volume: 0.4
     });

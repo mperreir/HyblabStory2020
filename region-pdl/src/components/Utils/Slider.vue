@@ -1,19 +1,33 @@
 <template>
   <div>
     <div class="slider">
-      <Minus class="button minus" :class="{ clickable: clickableMinus }" @click="minusClick" />
-      <input v-model="value" type="range" min="1" max="3" @input="onValueChange" />
-      <Plus class="button plus" :class="{ clickable: clickablePlus }" @click="plusClick" />
+      <Minus
+        class="button minus"
+        :class="{ clickable: clickableMinus }"
+        @click="minusClick"
+      />
+      <input
+        v-model="value"
+        type="range"
+        min="1"
+        max="3"
+        @input="onValueChange"
+      >
+      <Plus
+        class="button plus"
+        :class="{ clickable: clickablePlus }"
+        @click="plusClick"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import Minus from "@/assets/svg/Utils/minus-slider.svg";
-import Plus from "@/assets/svg/Utils/plus-slider.svg";
+import Minus from '@/assets/svg/Utils/minus-slider.svg';
+import Plus from '@/assets/svg/Utils/plus-slider.svg';
 
 export default {
-  name: "Slider",
+  name: 'Slider',
   components: {
     Minus,
     Plus
@@ -23,12 +37,12 @@ export default {
     clickableMinus: true,
     clickablePlus: true
   }),
-  created: function() {
+  created: function () {
     this.onValueChange();
   },
   methods: {
-    onValueChange() {
-      this.$emit("input", this.value);
+    onValueChange () {
+      this.$emit('input', this.value);
 
       if (this.value > 1) {
         this.clickableMinus = true;
@@ -42,14 +56,14 @@ export default {
         this.clickablePlus = false;
       }
     },
-    minusClick() {
+    minusClick () {
       if (this.value > 1) {
         this.value--;
       }
 
       this.onValueChange();
     },
-    plusClick() {
+    plusClick () {
       if (this.value < 3) {
         this.value++;
       }

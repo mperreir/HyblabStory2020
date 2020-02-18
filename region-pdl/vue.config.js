@@ -1,13 +1,13 @@
 module.exports = {
 
-    // build: {
-        // assetsPublicPath: '/region-pdl/'
-    // }
+  // build: {
+  // assetsPublicPath: '/region-pdl/'
+  // }
 
-    publicPath: '/region-pdl/',
+  publicPath: '/region-pdl/',
 
-    lintOnSave: true,
-    chainWebpack: (config) => {
+  lintOnSave: true,
+  chainWebpack: (config) => {
     const svgRule = config.module.rule('svg');
 
     svgRule.uses.clear();
@@ -18,7 +18,7 @@ module.exports = {
       .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader');
-  },
+  }
 
   // chainWebpack: config => {
   //       config.module
@@ -27,4 +27,4 @@ module.exports = {
   //               .loader("vue-svg-inline-loader")
   //               .options({ /* ... */ });
   //   }
-}
+};

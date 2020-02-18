@@ -4,7 +4,9 @@
     :class="{ 'bg-lightblue': answer !== 'vrai' && selected, 'bg-darkblue': answer !== 'vrai' && !selected, 'bg-green': answer === 'vrai' && selected, 'bg-lightgreen': answer === 'vrai' && !selected }"
     :style="{ selected: selected, answer: '' }"
   >
-    <div class="text">{{ text }}</div>
+    <div class="text">
+      {{ text }}
+    </div>
   </div>
 </template>
 
@@ -13,11 +15,11 @@ export default {
   props: {
     text: {
       type: String,
-      default: "Click me !"
+      default: 'Click me !'
     },
     answer: {
       type: String,
-      default: "waiting"
+      default: 'waiting'
     },
     selected: {
       type: Boolean,

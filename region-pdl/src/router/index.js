@@ -10,9 +10,9 @@ const routes = [
     name: 'view',
     component: View
   }
-],
+];
 
-router = new VueRouter({
+const router = new VueRouter({
   routes
 });
 

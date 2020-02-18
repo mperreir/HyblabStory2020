@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="progress-line bg-darkblue">
-      <div class="percentage bg-yellow" :style="{'width': percentage + '%'}" />
+      <div
+        class="percentage bg-yellow"
+        :style="{'width': percentage + '%'}"
+      />
     </div>
     <div class="progress">
       <div
@@ -16,9 +19,12 @@
 
 <script>
 export default {
-  name: "ProgressBar",
+  name: 'ProgressBar',
   props: {
-    number: Number
+    number: {
+      type: Number,
+      default: 0
+    }
   },
   data: () => {
     return {
@@ -29,10 +35,10 @@ export default {
     };
   },
   watch: {
-    index: function() {
+    index: function () {
       this.animCurrent = false;
 
-      let newPercentage = ((this.index - 1) / (this.number - 1)) * 100;
+      const newPercentage = ((this.index - 1) / (this.number - 1)) * 100;
 
       setInterval(() => {
         if (
@@ -45,12 +51,12 @@ export default {
         }
       }, 25);
     },
-    percentage: function() {
+    percentage: function () {
       if (this.percentage > ((this.index - 1) / (this.number - 1)) * 100 - 2) {
         this.animCurrent = true;
       }
     },
-    "$store.state.currentSceneIndex": function() {
+    '$store.state.currentSceneIndex': function () {
       if (
         this.$store.state.currentSceneIndex <
         this.$store.state.nbScenes - 1

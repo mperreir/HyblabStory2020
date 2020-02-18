@@ -4,18 +4,20 @@
     :style="{width: width+'%', left: x+'%', top: y+'%'}"
     @click="onClick"
   >
-    <div class="text">{{ text }}</div>
+    <div class="text">
+      {{ text }}
+    </div>
   </div>
 </template>
 
 <script>
-import { Howl } from "howler";
+import { Howl } from 'howler';
 
 export default {
   props: {
     text: {
       type: String,
-      default: "Click me !"
+      default: 'Click me !'
     },
     width: {
       type: Number,
@@ -30,14 +32,14 @@ export default {
       default: 0
     }
   },
-  mounted() {
+  mounted () {
     this.clickSound = new Howl({
-      src: ["sounds/click.mp3"],
+      src: ['sounds/click.mp3'],
       volume: 0.2
     });
   },
   methods: {
-    onClick() {
+    onClick () {
       this.clickSound.play();
     }
   }

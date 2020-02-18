@@ -1,6 +1,9 @@
 <template>
   <transition name="slide">
-    <div v-show="visible" class="carouselSlide">
+    <div
+      v-show="visible"
+      class="carouselSlide"
+    >
       <slot />
     </div>
   </transition>
@@ -15,7 +18,7 @@ export default {
     }
   },
   computed: {
-    visible() {
+    visible () {
       return this.index === this.$store.state.currentSceneIndex;
     }
   }

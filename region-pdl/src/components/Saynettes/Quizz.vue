@@ -1,22 +1,40 @@
 <template>
   <div class="saynette">
-    <TextTitle :y="12" :style="{textAlign: 'center'}">Bilan de consommation d’énergie</TextTitle>
+    <TextTitle
+      :y="12"
+      :style="{textAlign: 'center'}"
+    >
+      Bilan de consommation d’énergie
+    </TextTitle>
 
-    <SimpleText :style="{textAlign: 'center'}" :y="20">
+    <SimpleText
+      :style="{textAlign: 'center'}"
+      :y="20"
+    >
       <p>
         <b>Grâce à tous les dispositifs et les aides mises en place par la Région,</b> M. Moreau et Mme Dubois
-        <br />font des
+        <br>font des
         <b>économies</b> et
         <b>réduisent</b> leur impact sur l’environnement en utilisant des énergies plus vertes et durables.
-        <br />Et maintenant, un petit quiz pour tester vos connaissances ?
+        <br>Et maintenant, un petit quiz pour tester vos connaissances ?
       </p>
     </SimpleText>
 
-    <SimpleText :style="{textAlign: 'center'}" :width="23.5" :x="5.5" :y="37">
+    <SimpleText
+      :style="{textAlign: 'center'}"
+      :width="23.5"
+      :x="5.5"
+      :y="37"
+    >
       <p>Qui peut bénéficier des aides régionales pour la rénovation énergétique ?</p>
     </SimpleText>
 
-    <SimpleText :style="{textAlign: 'center'}" :y="37" :width="23.5" :x="38">
+    <SimpleText
+      :style="{textAlign: 'center'}"
+      :y="37"
+      :width="23.5"
+      :x="38"
+    >
       <p>
         En moyenne, à quelle distance
         se situe une borne de chargement
@@ -24,7 +42,12 @@
       </p>
     </SimpleText>
 
-    <SimpleText :style="{textAlign: 'center'}" :width="23.5" :x="71" :y="39">
+    <SimpleText
+      :style="{textAlign: 'center'}"
+      :width="23.5"
+      :x="71"
+      :y="39"
+    >
       <p>La méthanisation sert le plus souvent à :</p>
     </SimpleText>
 
@@ -127,15 +150,15 @@
 </template>
 
 <script>
-import Background from "@/assets/svg/Quizz/background-quizz.svg";
+import Background from '@/assets/svg/Quizz/background-quizz.svg';
 
-import SimpleText from "@/components/Utils/SimpleText.vue";
-import TextTitle from "@/components/Utils/TextTitle.vue";
-import QuizzButton from "@/components/Utils/QuizzButton.vue";
-import SimpleButton from "@/components/Utils/SimpleButton.vue";
+import SimpleText from '@/components/Utils/SimpleText.vue';
+import TextTitle from '@/components/Utils/TextTitle.vue';
+import QuizzButton from '@/components/Utils/QuizzButton.vue';
+import SimpleButton from '@/components/Utils/SimpleButton.vue';
 
 export default {
-  name: "Quizz",
+  name: 'Quizz',
   components: {
     Background,
     SimpleText,
@@ -144,23 +167,23 @@ export default {
     SimpleButton
   },
   data: () => ({
-    //Handle if answer is true or not
+    //  Handle if answer is true or not
     Answer1: null,
     Answer2: null,
     Answer3: null,
 
-    //Display wrongs and goods answers
-    q1a1: "waiting",
-    q1a2: "waiting",
-    q1a3: "waiting",
-    q2a1: "waiting",
-    q2a2: "waiting",
-    q2a3: "waiting",
-    q3a1: "waiting",
-    q3a2: "waiting",
-    q3a3: "waiting",
+    //  Display wrongs and goods answers
+    q1a1: 'waiting',
+    q1a2: 'waiting',
+    q1a3: 'waiting',
+    q2a1: 'waiting',
+    q2a2: 'waiting',
+    q2a3: 'waiting',
+    q3a1: 'waiting',
+    q3a2: 'waiting',
+    q3a3: 'waiting',
 
-    //Handle if user clicked on the button
+    // Handle if user clicked on the button
     selected11: false,
     selected12: false,
     selected13: false,
@@ -173,10 +196,10 @@ export default {
     selected32: false,
     selected33: false,
 
-    //Handle next scene button
+    // Handle next scene button
     validate: false,
 
-    // Handle answer position
+    //  Handle answer position
     answer11: null,
     answer12: null,
     answer13: null,
@@ -189,30 +212,30 @@ export default {
     answer32: null,
     answer33: null
   }),
-  created() {
-    let q1Order = this.shuffle([1, 2, 3]);
+  created () {
+    const q1Order = this.shuffle([1, 2, 3]);
     this.answer11 = `index-${q1Order[0]}`;
     this.answer12 = `index-${q1Order[1]}`;
     this.answer13 = `index-${q1Order[2]}`;
 
-    let q2Order = this.shuffle([1, 2, 3]);
+    const q2Order = this.shuffle([1, 2, 3]);
     this.answer21 = `index-${q2Order[0]}`;
     this.answer22 = `index-${q2Order[1]}`;
     this.answer23 = `index-${q2Order[2]}`;
 
-    let q3Order = this.shuffle([1, 2, 3]);
+    const q3Order = this.shuffle([1, 2, 3]);
     this.answer31 = `index-${q3Order[0]}`;
     this.answer32 = `index-${q3Order[1]}`;
     this.answer33 = `index-${q3Order[2]}`;
   },
   methods: {
-    shuffle(array) {
+    shuffle (array) {
       return array.sort(() => Math.random() - 0.5);
     },
-    onNext() {
-      this.$store.dispatch("nextScene", { sceneId: null });
+    onNext () {
+      this.$store.dispatch('nextScene', { sceneId: null });
     },
-    onSelectFirstQuestion(numero) {
+    onSelectFirstQuestion (numero) {
       if (numero === 1) {
         this.Answer1 = true;
         this.selected11 = true;
@@ -230,7 +253,7 @@ export default {
         this.selected13 = true;
       }
     },
-    onSelectSecondQuestion(numero) {
+    onSelectSecondQuestion (numero) {
       if (numero === 1) {
         this.Answer2 = false;
         this.selected21 = true;
@@ -248,7 +271,7 @@ export default {
         this.selected23 = true;
       }
     },
-    onSelectThirdQuestion(numero) {
+    onSelectThirdQuestion (numero) {
       if (numero === 1) {
         this.Answer3 = false;
         this.selected31 = true;
@@ -266,10 +289,10 @@ export default {
         this.selected33 = true;
       }
     },
-    onCheck() {
-      this.q1a1 = "vrai";
-      this.q2a2 = "vrai";
-      this.q3a3 = "vrai";
+    onCheck () {
+      this.q1a1 = 'vrai';
+      this.q2a2 = 'vrai';
+      this.q3a3 = 'vrai';
       this.validate = true;
     }
   }

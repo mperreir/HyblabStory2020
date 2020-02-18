@@ -1,25 +1,48 @@
 <template>
   <div class="saynette">
-    <Background class="svg" style="display: hidden" />
+    <Background
+      class="svg"
+      style="display: hidden"
+    />
 
     <BackgroundLarge :class="{test: true, moved: carHasStarted}" />
 
     <div :class="{carStartProposal: true, carStartProposalFade: carHasStarted}">
-      <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
+      <SimpleText
+        :style="{textAlign: 'center'}"
+        :x="15"
+        :y="15"
+        :width="70"
+      >
         Sur le chemin du travail, {{ getCharacter }} observe de nombreux équipements
-        <br />pour la
+        <br>pour la
         <b>transition énergétique qui ont bénéficié d'un financement régional.</b>
       </SimpleText>
 
-      <TextTitle :style="{textAlign: 'center'}" :y="40">Démarrer la voiture</TextTitle>
+      <TextTitle
+        :style="{textAlign: 'center'}"
+        :y="40"
+      >
+        Démarrer la voiture
+      </TextTitle>
 
-      <SwitchButton :width="10" :x="45" :y="47" @toggle="startCar" />
+      <SwitchButton
+        :width="10"
+        :x="45"
+        :y="47"
+        @toggle="startCar"
+      />
     </div>
 
     <div v-show="carGoesOut">
-      <SimpleText :style="{textAlign: 'center'}" :x="15" :y="15" :width="70">
+      <SimpleText
+        :style="{textAlign: 'center'}"
+        :x="15"
+        :y="15"
+        :width="70"
+      >
         Pendant le trajet, {{ getCharacter }} s'aperçoit que la batterie de sa voiture est faible.
-        <br />Un passage aux bornes de recharge s'impose.
+        <br>Un passage aux bornes de recharge s'impose.
       </SimpleText>
     </div>
 
@@ -34,22 +57,25 @@
       />
     </transition>
 
-    <Car :moving="carHasStarted" :rolling-out="carGoesOut" />
+    <Car
+      :moving="carHasStarted"
+      :rolling-out="carGoesOut"
+    />
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import { Howl } from "howler";
+import { mapGetters } from 'vuex';
+import { Howl } from 'howler';
 
-import Background from "@/assets/svg/Utils/empty-background.svg";
-import BackgroundLarge from "@/assets/svg/Car/larger-background.svg";
+import Background from '@/assets/svg/Utils/empty-background.svg';
+import BackgroundLarge from '@/assets/svg/Car/larger-background.svg';
 
-import SwitchButton from "@/components/Utils/SwitchButton.vue";
-import Car from "@/components/Utils/Car.vue";
-import TextTitle from "@/components/Utils/TextTitle.vue";
-import SimpleText from "@/components/Utils/SimpleText.vue";
-import SimpleButton from "@/components/Utils/SimpleButton.vue";
+import SwitchButton from '@/components/Utils/SwitchButton.vue';
+import Car from '@/components/Utils/Car.vue';
+import TextTitle from '@/components/Utils/TextTitle.vue';
+import SimpleText from '@/components/Utils/SimpleText.vue';
+import SimpleButton from '@/components/Utils/SimpleButton.vue';
 
 export default {
   components: {
@@ -68,10 +94,15 @@ export default {
     podcastSong: null
   }),
   computed: {
-    ...mapGetters(["getCharacter"])
+    ...mapGetters(['getCharacter'])
+  },
+  mounted () {
+    this.podcastSong = new Howl({
+      src: ['sounds/podcast.wav']
+    });
   },
   methods: {
-    startCar() {
+    startCar () {
       this.carHasStarted = true;
       this.podcastSong.play();
       setTimeout(() => {
@@ -81,14 +112,9 @@ export default {
         }, 5000);
       }, 16000);
     },
-    onNext() {
-      this.$store.dispatch("nextScene", {});
+    onNext () {
+      this.$store.dispatch('nextScene', {});
     }
-  },
-  mounted() {
-    this.podcastSong = new Howl({
-      src: ["sounds/podcast.wav"]
-    });
   }
 };
 </script>

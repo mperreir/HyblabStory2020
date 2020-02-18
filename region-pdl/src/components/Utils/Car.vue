@@ -5,18 +5,28 @@
       class="car-svg"
       :class="{rollingOut: rollingOut}"
     />
-    <CarBoySVG v-else class="car-svg" :class="{rollingOut: rollingOut}" />
-    <WheelSVG class="wheel left-wheel" :class="{moving: moving, rollingOutLeft: rollingOut}" />
-    <WheelSVG class="wheel right-wheel" :class="{moving: moving, rollingOutRight: rollingOut}" />
+    <CarBoySVG
+      v-else
+      class="car-svg"
+      :class="{rollingOut: rollingOut}"
+    />
+    <WheelSVG
+      class="wheel left-wheel"
+      :class="{moving: moving, rollingOutLeft: rollingOut}"
+    />
+    <WheelSVG
+      class="wheel right-wheel"
+      :class="{moving: moving, rollingOutRight: rollingOut}"
+    />
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
-import CarBoySVG from "@/assets/svg/Car/car-boy.svg";
-import CarGirlSVG from "@/assets/svg/Car/car-girl.svg";
-import WheelSVG from "@/assets/svg/Car/wheel.svg";
+import CarBoySVG from '@/assets/svg/Car/car-boy.svg';
+import CarGirlSVG from '@/assets/svg/Car/car-girl.svg';
+import WheelSVG from '@/assets/svg/Car/wheel.svg';
 
 export default {
   components: {
@@ -24,9 +34,9 @@ export default {
     CarGirlSVG,
     CarBoySVG
   },
-  props: ["moving", "rollingOut"],
+  props: ['moving', 'rollingOut'],
   computed: {
-    ...mapGetters(["getCharacterGender"])
+    ...mapGetters(['getCharacterGender'])
   }
 };
 </script>

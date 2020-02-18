@@ -1,7 +1,11 @@
 <template>
   <div class="plus-button">
     <span class="qs">
-      <Plus class="plus" :class="{ spinnin: popover, pulse: pulse }" @click="plusOnClick" />
+      <Plus
+        class="plus"
+        :class="{ spinnin: popover, pulse: pulse }"
+        @click="plusOnClick"
+      />
       <span
         v-if="popover"
         class="text darkblue"
@@ -15,29 +19,35 @@
 </template>
 
 <script>
-import { Howl } from "howler";
+import { Howl } from 'howler';
 
-import Plus from "@/assets/svg/Utils/plus-button.svg";
+import Plus from '@/assets/svg/Utils/plus-button.svg';
 
 export default {
-  name: "PlusButton",
+  name: 'PlusButton',
   components: {
     Plus
   },
-  props: ["value", "width"],
+  props: ['value', 'width'],
   data: () => ({
     popover: false,
     pulse: true
   }),
   watch: {
-    value: function(oldValue, newValue) {
+    value: function (oldValue, newValue) {
       if (newValue === false) {
         this.close();
       }
     }
   },
+  mounted () {
+    this.clickSound = new Howl({
+      src: ['sounds/click-swoosh.mp3'],
+      volume: 0.1
+    });
+  },
   methods: {
-    plusOnClick() {
+    plusOnClick () {
       this.popover = !this.popover;
 
       this.clickSound.play();
@@ -47,20 +57,14 @@ export default {
       }
 
       if (this.popover === true) {
-        this.$emit("open");
+        this.$emit('open');
       }
     },
-    close() {
+    close () {
       if (this.popover === true) {
         this.popover = false;
       }
     }
-  },
-  mounted() {
-    this.clickSound = new Howl({
-      src: ["sounds/click-swoosh.mp3"],
-      volume: 0.1
-    });
   }
 };
 </script>

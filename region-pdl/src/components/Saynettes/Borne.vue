@@ -2,26 +2,38 @@
   <div class="saynette">
     <Background class="svg" />
 
-    <SimpleText :width="70" :x="15" :y="15" :style="{textAlign: 'center'}">
+    <SimpleText
+      :width="70"
+      :x="15"
+      :y="15"
+      :style="{textAlign: 'center'}"
+    >
       Pour accompagner la transition énergétique, la Région participe au
       déploiement de bornes de recharge pour véhicules électriques sur
       l’ensemble du territoire ligérien. Ainsi, lorsque {{ getCharacter }} prend sa
       voiture,
-      <br />
+      <br>
       {{ getCharacterGender === 'm' ? 'il' : 'elle' }} sait qu’il y aura toujours une
       <b>borne à proximité</b>.
     </SimpleText>
 
-    <TrainSVG v-show="!nextInitiated" ref="movingTrain" class="train" />
+    <TrainSVG
+      v-show="!nextInitiated"
+      ref="movingTrain"
+      class="train"
+    />
 
     <Car class="car" />
 
     <BoatSVG class="boat" />
 
-    <PlusButton class="plus-button" :width="23">
+    <PlusButton
+      class="plus-button"
+      :width="23"
+    >
       <p class="text">
         En moyenne, on peut trouver une borne
-        <br />tous les
+        <br>tous les
         <span class="orange">13 km</span> dans toute la région.
       </p>
     </PlusButton>
@@ -42,20 +54,20 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
-import Background from "@/assets/svg/Borne/background-borne.svg";
-import TrainSVG from "@/assets/svg/Borne/train.svg";
-import BoatSVG from "@/assets/svg/Utils/boat.svg";
-import BorneSVG from "@/assets/svg/Borne/borne.svg";
+import Background from '@/assets/svg/Borne/background-borne.svg';
+import TrainSVG from '@/assets/svg/Borne/train.svg';
+import BoatSVG from '@/assets/svg/Utils/boat.svg';
+import BorneSVG from '@/assets/svg/Borne/borne.svg';
 
-import SimpleText from "@/components/Utils/SimpleText.vue";
-import PlusButton from "@/components/Utils/PlusButton.vue";
-import SimpleButton from "@/components/Utils/SimpleButton.vue";
-import Car from "@/components/Utils/Car.vue";
+import SimpleText from '@/components/Utils/SimpleText.vue';
+import PlusButton from '@/components/Utils/PlusButton.vue';
+import SimpleButton from '@/components/Utils/SimpleButton.vue';
+import Car from '@/components/Utils/Car.vue';
 
 export default {
-  name: "Borne",
+  name: 'Borne',
   components: {
     Background,
     SimpleText,
@@ -71,23 +83,23 @@ export default {
     nextInitiated: false
   }),
   computed: {
-    ...mapGetters(["getCharacter", "getCharacterGender"])
+    ...mapGetters(['getCharacter', 'getCharacterGender'])
   },
   methods: {
-    onNext() {
+    onNext () {
       if (!this.nextPressed) {
         this.nextPressed = true;
         this.goNext();
       }
     },
-    goNext() {
+    goNext () {
       this.$nextTick(() => {
-        let train = this.$refs.movingTrain.getBoundingClientRect();
+        const train = this.$refs.movingTrain.getBoundingClientRect();
 
         if (train.x + train.width < 0) {
           this.nextInitiated = true;
-          this.$store.dispatch("nextScene", {
-            sceneId: this.getCharacterGender === "m" ? 2 : 1
+          this.$store.dispatch('nextScene', {
+            sceneId: this.getCharacterGender === 'm' ? 2 : 1
           });
         } else {
           setTimeout(this.goNext, 200);
