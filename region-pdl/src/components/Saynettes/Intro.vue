@@ -22,12 +22,12 @@
 </template>
 
 <script>
-import Background from "@/assets/Home/background-home.svg";
-import Tree from "@/assets/Home/tree-home.svg";
-import Speaker from "@/assets/Home/volume.svg";
-import TextTitle from "@/components/TextTitle";
-import SimpleText from "@/components/SimpleText";
-import SimpleButton from "@/components/SimpleButton";
+import Background from "@/assets/svg/Home/background-home.svg";
+import Tree from "@/assets/svg/Home/tree-home.svg";
+import Speaker from "@/assets/svg/Home/volume.svg";
+import TextTitle from "@/components/Utils/TextTitle";
+import SimpleText from "@/components/Utils/SimpleText";
+import SimpleButton from "@/components/Utils/SimpleButton";
 
 export default {
   name: "Intro",

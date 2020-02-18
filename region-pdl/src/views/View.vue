@@ -42,8 +42,10 @@
 </template>
 
 <script>
-import ProgressBar from "@/components/ProgressBar.vue";
-import LogoRegion from "@/assets/Utils/logo-region.svg";
+import { Howl } from "howler";
+
+import ProgressBar from "@/components/Utils/ProgressBar.vue";
+import LogoRegion from "@/assets/svg/Utils/logo-region.svg";
 import Intro from "@/components/Saynettes/Intro.vue";
 import Persos from "@/components/Saynettes/Persos.vue";
 import House from "@/components/Saynettes/House.vue";
@@ -56,10 +58,7 @@ import End from "@/components/Saynettes/End.vue";
 import Carousel from "@/components/Carousel/Carousel.vue";
 import CarouselSlide from "@/components/Carousel/CarouselSlide.vue";
 
-import { Howl } from 'howler';
-
 export default {
-  
   name: "Views",
   components: {
     Intro,
@@ -75,21 +74,14 @@ export default {
     ProgressBar,
     End,
     LogoRegion
-
-  },
-  data: () => ({}),
-  methods: {
-    click() {
-      this.$store.dispatch("nextScene", {});
-    }
   },
   mounted() {
-      const sound = new Howl({
-        src: ['sounds/countryside.mp3'],
-        loop: true,
-        volume: 0.4,
-      });
-      sound.play();
+    const sound = new Howl({
+      src: ["sounds/countryside.mp3"],
+      loop: true,
+      volume: 0.4
+    });
+    sound.play();
   }
 };
 </script>

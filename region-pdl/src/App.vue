@@ -6,9 +6,7 @@
 
 <style>
 html {
-  /* background: linear-gradient(to bottom, #90dffe 0%, #38a3d1 100%); */
-  /* background: linear-gradient(to bottom, #90dffe 0%,#ebb2b1 100%); */
-  background: linear-gradient(to bottom, #00b7ff 20%,#fff 100%);
+  background: linear-gradient(to bottom, #00b7ff 20%, #fff 100%);
 }
 
 body {

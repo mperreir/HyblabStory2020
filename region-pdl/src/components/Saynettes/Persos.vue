@@ -32,13 +32,13 @@
 </template>
 
 <script>
-import Background from "@/assets/Persos/background-perso.svg";
-import TextTitle from "@/components/TextTitle";
-import SimpleText from "@/components/SimpleText";
-import SimpleButton from "@/components/SimpleButton";
-import PersoHomme from "@/assets/Persos/man.svg";
-import PersoFemme from "@/assets/Persos/woman.svg";
-import Boat from "@/assets/Utils/boat.svg";
+import Background from "@/assets/svg/Persos/background-perso.svg";
+import TextTitle from "@/components/Utils/TextTitle";
+import SimpleText from "@/components/Utils/SimpleText";
+import SimpleButton from "@/components/Utils/SimpleButton";
+import PersoHomme from "@/assets/svg/Persos/man.svg";
+import PersoFemme from "@/assets/svg/Persos/woman.svg";
+import Boat from "@/assets/svg/Utils/boat.svg";
 
 export default {
   name: "Persos",

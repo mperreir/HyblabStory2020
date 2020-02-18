@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Minus from "@/assets/Utils/minus-slider.svg";
-import Plus from "@/assets/Utils/plus-slider.svg";
+import Minus from "@/assets/svg/Utils/minus-slider.svg";
+import Plus from "@/assets/svg/Utils/plus-slider.svg";
 
 export default {
   name: "Slider",

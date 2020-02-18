@@ -40,14 +40,14 @@
 <script>
 import { mapGetters } from "vuex";
 
-import Background from "@/assets/Borne/background-borne.svg";
-import SimpleText from "@/components/SimpleText";
-import TrainSVG from "@/assets/Borne/train.svg";
-import BoatSVG from "@/assets/Utils/boat.svg";
-import BorneSVG from "@/assets/Borne/borne.svg";
-import PlusButton from "@/components/PlusButton";
-import SimpleButton from "@/components/SimpleButton";
-import Car from "@/components/Car";
+import Background from "@/assets/svg/Borne/background-borne.svg";
+import SimpleText from "@/components/Utils/SimpleText";
+import TrainSVG from "@/assets/svg/Borne/train.svg";
+import BoatSVG from "@/assets/svg/Utils/boat.svg";
+import BorneSVG from "@/assets/svg/Borne/borne.svg";
+import PlusButton from "@/components/Utils/PlusButton";
+import SimpleButton from "@/components/Utils/SimpleButton";
+import Car from "@/components/Utils/Car";
 
 export default {
   name: "Borne",

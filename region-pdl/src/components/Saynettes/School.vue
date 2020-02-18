@@ -43,11 +43,11 @@
 <script>
 import { mapGetters } from "vuex";
 
-import Background from "@/assets/School/background-school.svg";
-import RoadSVG from "@/assets/Utils/road.svg";
-import SimpleText from "@/components/SimpleText";
-import SimpleButton from "@/components/SimpleButton";
-import PlusButton from "@/components/PlusButton";
+import Background from "@/assets/svg/School/background-school.svg";
+import RoadSVG from "@/assets/svg/Utils/road.svg";
+import SimpleText from "@/components/Utils/SimpleText";
+import SimpleButton from "@/components/Utils/SimpleButton";
+import PlusButton from "@/components/Utils/PlusButton";
 
 export default {
   name: "School",

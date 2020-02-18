@@ -33,15 +33,15 @@
 
 <script>
 import { mapGetters } from "vuex";
-
-import Background from "@/assets/Utils/empty-background.svg";
-import BackgroundLarge from "@/assets/Car/larger-background.svg";
-import SwitchButton from "@/components/SwitchButton";
-import Car from "@/components/Car";
-import TextTitle from "@/components/TextTitle";
-import SimpleText from "@/components/SimpleText";
-import SimpleButton from "@/components/SimpleButton";
 import { Howl } from "howler";
+
+import Background from "@/assets/svg/Utils/empty-background.svg";
+import BackgroundLarge from "@/assets/svg/Car/larger-background.svg";
+import SwitchButton from "@/components/Utils/SwitchButton";
+import Car from "@/components/Utils/Car";
+import TextTitle from "@/components/Utils/TextTitle";
+import SimpleText from "@/components/Utils/SimpleText";
+import SimpleButton from "@/components/Utils/SimpleButton";
 
 export default {
   components: {

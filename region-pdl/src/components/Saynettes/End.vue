@@ -1,11 +1,11 @@
 <template>
   <div class="saynette">
     <div class="logo-div">
-      <img src="@/assets/End/logo-hyblab.png" class="logo" />
-      <img src="@/assets/End/logo-Nantes.png" class="logo" />
-      <img src="@/assets/End/logo-OML.png" class="logo" />
-      <img src="@/assets/End/logo_cc.png" class="logo logo-cc" />
-      <img src="@/assets/End/logo_opensource.png" class="logo logo-cc" />
+      <img src="@/assets/svg/End/logo-hyblab.png" class="logo" />
+      <img src="@/assets/svg/End/logo-Nantes.png" class="logo" />
+      <img src="@/assets/svg/End/logo-OML.png" class="logo" />
+      <img src="@/assets/svg/End/logo_cc.png" class="logo logo-cc" />
+      <img src="@/assets/svg/End/logo_opensource.png" class="logo logo-cc" />
     </div>
 
     <TextTitle :x="40" :y="15">Félicitations !</TextTitle>
@@ -24,7 +24,7 @@
       </p>
     </SimpleText>
 
-    <img src="@/assets/End/logo-audencia.png" class="logo-audencia" />
+    <img src="@/assets/svg/End/logo-audencia.png" class="logo-audencia" />
     <SimpleText :y="60" :x="10" :width="20" :style="{textAlign: 'center'}">
       <span class="large-text">Storytelling</span>
       <br />Nina Naulleau
@@ -50,11 +50,11 @@
 </template>
 
 <script>
-import Background from "@/assets/End/background-end.svg";
-import TextTitle from "@/components/TextTitle";
-import SimpleText from "@/components/SimpleText";
-import LogoPolytech from "@/assets/End/logo-polytech.svg";
-import LogoAgr from "@/assets/End/logo-agr.svg";
+import Background from "@/assets/svg/End/background-end.svg";
+import TextTitle from "@/components/Utils/TextTitle";
+import SimpleText from "@/components/Utils/SimpleText";
+import LogoPolytech from "@/assets/svg/End/logo-polytech.svg";
+import LogoAgr from "@/assets/svg/End/logo-agr.svg";
 
 export default {
   name: "Persos",

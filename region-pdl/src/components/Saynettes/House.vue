@@ -115,14 +115,14 @@
 import { mapGetters } from "vuex";
 import { Howl } from "howler";
 
-import Background from "@/assets/House/background-house.svg";
-import LittleHouse from "@/assets/House/little-house.svg";
-import MediumHouse from "@/assets/House/medium-house.svg";
-import BigHouse from "@/assets/House/big-house.svg";
-import Slider from "@/components/Slider.vue";
-import SimpleText from "@/components/SimpleText";
-import SimpleButton from "@/components/SimpleButton";
-import PlusButton from "@/components/PlusButton";
+import Background from "@/assets/svg/House/background-house.svg";
+import LittleHouse from "@/assets/svg/House/little-house.svg";
+import MediumHouse from "@/assets/svg/House/medium-house.svg";
+import BigHouse from "@/assets/svg/House/big-house.svg";
+import Slider from "@/components/Utils/Slider.vue";
+import SimpleText from "@/components/Utils/SimpleText";
+import SimpleButton from "@/components/Utils/SimpleButton";
+import PlusButton from "@/components/Utils/PlusButton";
 
 export default {
   name: "House",

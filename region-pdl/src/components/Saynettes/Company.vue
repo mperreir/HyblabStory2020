@@ -52,11 +52,12 @@
 
 <script>
 import { mapGetters } from "vuex";
-import CompanySVG from "@/assets/Company/background-company.svg";
-import PlusButton from "@/components/PlusButton";
-import SimpleText from "@/components/SimpleText";
-import SimpleButton from "@/components/SimpleButton";
-import RoadSVG from "@/assets/Utils/road.svg";
+
+import CompanySVG from "@/assets/svg/Company/background-company.svg";
+import PlusButton from "@/components/Utils/PlusButton";
+import SimpleText from "@/components/Utils/SimpleText";
+import SimpleButton from "@/components/Utils/SimpleButton";
+import RoadSVG from "@/assets/svg/Utils/road.svg";
 
 export default {
   name: "Intro",

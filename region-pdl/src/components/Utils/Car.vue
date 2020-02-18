@@ -10,9 +10,9 @@
 <script>
 import { mapGetters } from "vuex";
 
-import CarBoySVG from "@/assets/Car/car-boy.svg";
-import CarGirlSVG from "@/assets/Car/car-girl.svg";
-import WheelSVG from "@/assets/Car/wheel.svg";
+import CarBoySVG from "@/assets/svg/Car/car-boy.svg";
+import CarGirlSVG from "@/assets/svg/Car/car-girl.svg";
+import WheelSVG from "@/assets/svg/Car/wheel.svg";
 
 export default {
   components: {
