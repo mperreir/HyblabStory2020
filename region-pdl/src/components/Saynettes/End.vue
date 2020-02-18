@@ -25,7 +25,7 @@
 
     <TextTitle
       :x="40"
-      :y="15"
+      :y="12"
     >
       Félicitations !
     </TextTitle>
@@ -35,7 +35,7 @@
     <LogoAgr class="logo-agr" />
 
     <SimpleText
-      :y="22"
+      :y="20"
       :style="{textAlign: 'center'}"
     >
       <p class="text">
@@ -59,7 +59,7 @@
     >
 
     <SimpleText
-      :y="60"
+      :y="55"
       :x="10"
       :width="20"
       :style="{textAlign: 'center'}"
@@ -74,7 +74,7 @@
     <LogoPolytech class="logo-polytech" />
 
     <SimpleText
-      :y="60"
+      :y="55"
       :x="35"
       :width="30"
       :style="{textAlign: 'center'}"
@@ -90,7 +90,7 @@
     </SimpleText>
 
     <SimpleText
-      :y="60"
+      :y="55"
       :x="70"
       :width="20"
       :style="{textAlign: 'center'}"
@@ -148,21 +148,21 @@ export default {
   position: absolute;
   width: 12%;
   left: 74%;
-  top: 43%;
+  top: 38%;
 }
 
 .logo-polytech {
   position: absolute;
   width: 18%;
   left: 41%;
-  top: 46%;
+  top: 42%;
 }
 
 .logo-audencia {
   position: absolute;
   width: 18%;
   left: 10%;
-  top: 49%;
+  top: 44%;
 }
 
 a {

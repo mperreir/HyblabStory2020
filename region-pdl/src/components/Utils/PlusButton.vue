@@ -30,8 +30,8 @@ export default {
   },
   props: {
     value: {
-      type: Number,
-      default: 1
+      type: Boolean,
+      default: false
     },
     width: {
       type: Number,
