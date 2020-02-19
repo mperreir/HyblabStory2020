@@ -14,9 +14,11 @@ export default class Discussion extends Component {
   }
 
   componentDidMount() {
-    document
-      .getElementById("go-to-super-papa")
-      .addEventListener("click", e => this.goToSuperPapa(e));
+    document.getElementById("go-to-super-papa").addEventListener("click", e => {
+      this.goToSuperPapa(e);
+    });
+    // Pause sur la musique d'ambiance jusqu'à la scene des choix
+    document.getElementById("puberte-global-player").pause();
   }
 
   render(target) {

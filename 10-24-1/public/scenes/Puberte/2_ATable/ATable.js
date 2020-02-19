@@ -13,6 +13,7 @@ export default class ATable extends Component {
   }
 
   componentDidMount() {
+    document.getElementById("puberte-global-player").play();
     document.getElementById("choix-portes").style.display = "none";
   }
 

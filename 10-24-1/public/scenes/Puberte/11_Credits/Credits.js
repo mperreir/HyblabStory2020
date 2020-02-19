@@ -18,6 +18,9 @@ export default class Credits extends Component {
     if (!document.getElementById("carousel-player").isMuted) {
       document.getElementById("carousel-player").play();
     }
+
+    // Fin de la musique d'ambiance
+    document.getElementById("puberte-global-player").pause();
   }
 
   render(target) {

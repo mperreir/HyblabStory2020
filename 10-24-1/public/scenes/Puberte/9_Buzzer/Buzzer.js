@@ -17,6 +17,10 @@ export default class Buzzer9 extends Component {
     document
       .getElementById("buzzer9")
       .addEventListener("click", e => this.goToChoix(e));
+    // Pause sur la musique d'ambiance
+    document.getElementById("puberte-global-player").pause();
+    document.getElementById("buzzer-player").onended = () =>
+      document.getElementById("puberte-global-player").play();
   }
 
   render(target) {

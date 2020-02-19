@@ -17,6 +17,11 @@ export default class Buzzer extends Component {
     document
       .getElementById("explic-buzzer-4")
       .addEventListener("click", e => this.goToDiscussion(e));
+    // Pause sur la musique d'ambiance
+    document.getElementById("puberte-global-player").pause();
+    console.log(document.getElementById("buzzer-player"));
+    document.getElementById("buzzer-player").onended = () =>
+      document.getElementById("puberte-global-player").play();
   }
 
   render(target) {

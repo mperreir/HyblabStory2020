@@ -35,6 +35,7 @@ export default class Choix extends Component {
   }
 
   componentDidMount() {
+    document.getElementById("puberte-global-player").play();
     document.getElementById("choix-portes").style.display = "block";
     const { x, y } = document.getElementById("panier").getBoundingClientRect();
 
