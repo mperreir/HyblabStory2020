@@ -1,0 +1,134 @@
+/* Omnes Semibold font */
+@font-face {
+  font-family: "Omnes Semibold";
+  src: url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.eot");
+  src: url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/827efd408950e4d94af5e60b9a37c5b8.svg#Omnes Semibold")
+      format("svg");
+}
+
+html * {
+  font-size: 17px;
+  font-family: "Omnes Semibold";
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+#root > * {
+  width: 100%;
+  height: 100%;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+/* Text buttons */
+button {
+  width: 263px;
+  padding: 10px;
+  border-radius: 151px;
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+}
+
+button:hover {
+  border-color: rgb(255, 110, 0);
+  background-color: rgb(255, 110, 0);
+  color: white;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Social networks */
+
+#facebook-button,
+#instagram-button {
+  fill: transparent;
+}
+
+#facebook-button:hover,
+#instagram-button:hover {
+  cursor: pointer;
+}
+
+#facebook-button:hover > circle,
+#instagram-button:hover > circle {
+  stroke: rgb(255, 110, 0);
+  fill: rgb(255, 110, 0);
+}
+
+#facebook-button:hover path,
+#instagram-button:hover path {
+  fill: white;
+}
+
+#facebook-button-fin,
+#instagram-button-fin {
+  fill: transparent;
+}
+
+#facebook-button-fin:hover,
+#instagram-button-fin:hover {
+  cursor: pointer;
+}
+
+#facebook-button-fin:hover > circle,
+#instagram-button-fin:hover > circle {
+  stroke: rgb(255, 110, 0);
+  fill: rgb(255, 110, 0);
+}
+
+#facebook-button-fin:hover path,
+#instagram-button-fin:hover path {
+  fill: white;
+}
+
+.social-network-button {
+  width: 37.5px;
+  height: 37.5px;
+}
+
+*:focus {
+  outline: none;
+}

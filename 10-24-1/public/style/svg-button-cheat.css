@@ -1,0 +1,12 @@
+.svg-button:hover {
+  cursor: pointer;
+}
+
+.svg-button:hover > rect {
+  stroke: rgb(255, 110, 0);
+  fill: rgb(255, 110, 0);
+}
+
+.svg-button:hover > path {
+  fill: white;
+}

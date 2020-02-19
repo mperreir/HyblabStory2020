@@ -1,0 +1,42 @@
+/* Buttons scénarios */
+
+#e_partir {
+  height: 55px;
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0%;
+  right: 35%;
+  font-size: 14px;
+  line-height:14px;
+  padding-left: 10px;
+}
+
+#e_toquer {
+  height: 55px;
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom: 35%;
+  right: 35%;
+  font-size: 14px;
+  line-height:28px;
+  padding-left: 35px;
+}
+
+#e_toquer:hover {
+  border-color: white;
+}
+
+#e_partir:hover {
+  border-color: white;
+}
+
+/* .scenario-buttons > button {
+  width: 100%;
+  border-radius: 151px;
+} */

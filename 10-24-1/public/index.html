@@ -1,79 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Hyblab 2020</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet"/>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-    <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
-    <script src="https://rawcdn.githack.com/bchanx/slidr/397004f7acc338b112a9e1dc2481acc1446e0209/slidr.min.js"></script>
-    <script defer src="js/slide1.js"></script>
-    <script defer src="js/slide2.js"></script>
-    <script defer src="js/index.js"></script>
-</head>
-<body>
-<!-- Le conteneur sert à vérouiller les proportions (aspect ratio) du contenu de la page (ici des slides) -->
-<div id="container">
-    <!-- le main est aussi le conteneur des différents slides (contenus à chaque fois dans des sections-->
-    <main id="slidr">
-        <section data-slidr="page-1">
-            <header>
-                <h1 id="titre">Welcome to</h1>
-            </header>
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/10-24-1/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/10-24-1/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/10-24-1/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/10-24-1/assets/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
-            <img id="logo-hyblab" src="img/logo_hyblab.png"></img>
+    <!-- load stylesheets -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./style/shared.css" />
+    <!-- Scenes d'accueil-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Accueil/Accueil.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Carousel/Carousel.css"
+    />
+    <!-- Scenes de Puberte -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Puberte/1_Porte/Porte.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style/svg-button-cheat.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="scenes/Puberte/1_Porte/Porte.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="scenes/Puberte/2_ATable/ATable.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Puberte/3_Culotte/Culotte.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="scenes/Puberte/4_Buzzer/Buzzer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Puberte/5_Discussion/Discussion.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Puberte/7_Rayon/Rayon.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Puberte/8_Choix/Choix.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Puberte/9_Buzzer/Buzzer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Puberte/10_Fin/Fin.css"
+    />
+    <!-- Scenes de Harcelement -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Harcelement/3_PremierChoix/3_PremierChoix.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Harcelement/4_DerniereTentative/4_DerniereTentative.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Harcelement/6_FlashBack/6_FlashBack.css"
+    />
 
-            <video class="video-js" data-setup='{"autoplay": true, "loop" : true, "fill": true, "muted": true}'
-                   id="background-video">
-                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-            </video>
+    <!-- Scenes de Ecrans -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Ecrans/Chambre/Chambre.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Ecrans/PageFin/PageFin.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Ecrans/Porte/Porte.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Ecrans/PorteChoix/PorteChoix.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Ecrans/Rentrer/Rentrer.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Ecrans/Reprimande/Reprimande.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./scenes/Ecrans/Visage/Visage.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./scenes/Ecrans/PlageHoraire/PlageHoraire.css" />
+    <link rel="stylesheet" type="text/css" href="./scenes/Ecrans/PlageHoraire2/PlageHoraire2.css" />
+    <link rel="stylesheet" type="text/css" href="./scenes/Ecrans/PlageHoraire3/PlageHoraire3.css" />
 
-            <!-- le footer sera remplir à partir de données lues dans un fichier Json-->
-            <footer></footer>
-        </section>
-        <section data-slidr="page-2">
-            <img id="img-fini" src="https://www.tri-d-aix.com/media/bilder/fini_55c9f_2e319.png">
-            <footer id="bandeau">
-                <!-- Logo Hyblab -->
-                <a href="http://www.hyblab.fr/"><img alt="Hyblab DataSport" id="hyblab" src="logo_hyblab.png"></a>
+    <!-- FLEMME -->
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S1/S1.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S2/S2.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S3/S3.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S4/S4.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S5/S5.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S6/S6.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S7/S7.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S8/S8.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S9/S9.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S10/S10.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S11/S11.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S12/S12.css"/>
+    <link rel="stylesheet" type="text/css" href="./scenes/Flemme/S13/S13.css"/>
 
-                <!-- Les organisateurs -->
-                <ul>
-                    <li><a href="http://www.ouestmedialab.fr/"><img alt="Ouest Médialab" src="logo_oml.png"></a></li>
-                    <li><a href="http://www.agrnantes.fr"><img alt="AGR école de l'image" src="ecoles/logo_agr.png"></a>
-                    </li>
-                    <li><a href="http://www.univ-nantes.fr/"><img alt="Université de Nantes"
-                                                                  src="ecoles/logo_universitenantes.jpg"></a></li>
-                    <li><a href="http://www.polytech.univ-nantes.fr/"><img alt="Polytech Nantes"
-                                                                           src="ecoles/logo_polytech.png"></a></li>
-                    <li><a href="http://sciencescom.audencia.com/"><img alt="SciencesCom"
-                                                                        src="ecoles/logo_sciencescom.jpg"></a></li>
-                </ul>
-                <!-- Les autres logos -->
-                <ul>
-                    <!-- Logos CC et opensource -->
-                    <li>
-                        <ul>
-                            <li class="stacked"><img alt="Creative commons" id="cc" src="logo_cc.png"></li>
-                            <li class="stacked"><img alt="Open source" id="opensource" src="logo_opensource.png"></li>
-                        </ul>
-                    </li>
-                    <!-- Logo de votre porteur de projet -->
-                    <li><a href="http://www.mon-porteur-de-projet.org"><img alt="Logo de mon porteur de projet"
-                                                                            src="no-logo.png"></a></li>
-                    <!-- Partenaires institutionnels -->
-                    <li><a href="http://www.paysdelaloire.fr/"><img alt="Pays de La Loire" class="institutionnel"
-                                                                    src="institutionnels/logo_pdl.png"></a></li>
-                    <li><a href="http://www.nantesmetropole.fr/"><img alt="Nantes Métropole" class="institutionnel"
-                                                                      src="institutionnels/logo_nantesmetropole.png"></a>
-                    </li>
-                </ul>
-            </footer>
-        </section>
-    </main>
-</div>
-</body>
+
+
+    <!-- ******************************************************************* -->
+
+    <!-- load scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script type="module" src="./js/index.js"></script>
+
+    <title>10 - 24</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

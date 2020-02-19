@@ -1,0 +1,48 @@
+#accueil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#accueil #accueil-contenu {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: center;
+}
+
+/* Logo */
+
+#accueil #logo {
+  width: 217px;
+  height: 195px;
+}
+
+/* Texte de présentation */
+#accueil #texte-presentation > p {
+  text-align: center;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 23px;
+  margin: 40px 0;
+}
+
+/* Commencer l'expérience */
+
+#accueil #commencer-experience > button {
+  width: 220px;
+  border: 3px solid #ff6e00;
+  box-sizing: border-box;
+  border-radius: 152px;
+  margin-top: 10px;
+  margin-bottom: 70px;
+  line-height: 1;
+}
+
+/* Social Networks */
+
+#accueil #social-networks {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}

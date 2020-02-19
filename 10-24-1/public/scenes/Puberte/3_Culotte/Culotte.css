@@ -1,0 +1,82 @@
+/* Buttons scénarios */
+
+.scenario-buttons {
+  height: 173px;
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+
+  /* right: 15%; */
+  /* left: 20%; */
+  bottom: 20%;
+  left: 66%;
+}
+
+.scenario-buttons > button {
+  width: 100%;
+  border-radius: 151px;
+}
+
+/* Goutte sang */
+
+@keyframes changeTranslation {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(700px);
+  }
+}
+
+.goutte-sang {
+  /* -100px pour cacher les gouttes derrière la culotte */
+  transform: translateY(-100px);
+  animation: changeTranslation 1.1s infinite normal ease-in;
+}
+
+.goutte-sang:nth-of-type(1) {
+  animation-delay: 0ms;
+}
+
+.goutte-sang:nth-of-type(2) {
+  animation-delay: 300ms;
+}
+
+.goutte-sang:nth-of-type(3) {
+  animation-delay: 700ms;
+}
+
+/* Effet shake/secousse @see https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 3px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, -3px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, -2px, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 2px, 0);
+  }
+}

@@ -1,0 +1,10 @@
+#fs6_text {
+    height: 12%;
+    width: 6%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    bottom: 66%;
+    left: 45.6%;
+}

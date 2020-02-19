@@ -1,0 +1,15 @@
+/* Texte de la plage horaire */
+#e_texte-plage-horaire-3 > p {
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 23px;
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  bottom : 10%;
+  right: 26%;
+}

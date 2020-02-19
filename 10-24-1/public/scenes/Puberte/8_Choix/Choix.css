@@ -1,0 +1,138 @@
+/* Section */
+
+#section-choix {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#section-choix {
+  height: 650px;
+}
+
+/* Quelle protection */
+
+#quelle-protection {
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+}
+
+/*  Choix */
+
+#choix {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  justify-content: space-evenly;
+}
+
+.un-choix {
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.un-choix > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#serviette .texte {
+  width: 120%;
+  height: 120%;
+  margin-top: 4%;
+}
+
+#tampon .texte {
+  position: absolute;
+  width: 155%;
+  height: 143%;
+}
+
+.showText .texte {
+  display: block;
+}
+
+.showText .design {
+  display: none;
+}
+
+.texte {
+  display: none;
+}
+
+.design {
+  display: block;
+}
+
+.texte {
+  position: relative;
+}
+
+.texte > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.texte > p {
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  font-size: 25px;
+}
+#serviette > div.texte > p {
+  width: 94%;
+  transform: translateY(-106%);
+}
+
+#tampon > div.texte > p {
+  transform: translateY(-100%);
+  width: 55%;
+}
+
+/* Bottom */
+#bottom {
+  position: relative;
+  width: 100%;
+  height: 25%;
+}
+
+/* Panier */
+
+#panier {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: 5%;
+  bottom: -57px;
+}
+
+/* Drag and drop */
+
+#drag-and-drop {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 17%;
+  bottom: 12%;
+  animation: dragDrop 4s ease-in-out 0.5s 1 normal;
+}
+
+@keyframes dragDrop {
+  from {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(57vw, -20vh);
+  }
+  to {
+    transform: translate(57vw, 10vh);
+  }
+}
