@@ -24,7 +24,7 @@ export default class PorteClaque extends Component {
 
   render(target) {
     document.getElementById("porte-claque-player").elemMusicOn = true;
-    document.getElementById("porte-claque-player").volume = 0.14;
+    document.getElementById("porte-claque-player").volume = 0.15;
     if (!document.getElementById("porte-claque-player").isMuted) {
       document.getElementById("porte-claque-player").play();
     }
