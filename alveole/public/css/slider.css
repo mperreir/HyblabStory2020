@@ -1,0 +1,40 @@
+
+.range_slider{
+  background: #cccccc;
+}
+.input_range{
+  position: absolute;
+  height: 0.5%;
+  width: 60%;
+  top:60%;
+  left:30%;
+  background: whitesmoke;
+  outline: none; 
+  opacity: 0.7; 
+  -webkit-transition: .2s; 
+  transition: opacity .2s;
+}
+#left_volume{
+  position: absolute;
+  width: 10%;
+  height: 5%;
+  left: 50%;
+  top: 40%;
+  font-family: Oswald; /*Google font*/
+  font-style: normal;
+  font-weight: 10;
+  font-size: 10%;
+  letter-spacing: 0.24em;
+}
+.input_range:hover {
+  opacity: 1; 
+}
+.input_range {
+  position: absolute;
+  transform: rotate(270deg);
+  -webkit-appearance: none;    
+  cursor: pointer;
+ }
+ /* .range-slider::-webkit-slider-runnable-track {
+  background-color: #cccccc; 
+} */

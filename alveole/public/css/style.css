@@ -8,6 +8,15 @@
     margin: 0;
 }
 
+*.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body {
     background-color: black;
     color: white;
@@ -18,6 +27,871 @@ body {
     position: relative; /* pour permettre le positionnement en absolu des autres éléments */
 }
 
+header {
+  position: absolute;
+  top: 0;
+  height: 10%;
+  width: 100%;
+  background-color: black;
+}
+
+main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#header_brand {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 5%;
+  top: 60%;
+}
+
+#svg_brand
+  .st0{fill:#FFFFFF;}
+
+#svg_brand {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+footer {
+  position: absolute;
+  top: 86%;
+  height: 14%;
+  width: 100%;
+  background-color: black;
+}
+
+#footer_ellipse {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#svg_ellipse {
+  position: absolute;
+  bottom: 0;
+  height: 150%!important;
+  width: 100%;
+  left: 0;
+}
+
+#footer_text {
+  position: absolute;
+  height: 40%;
+  width: 40%;
+  left: 30%;
+  top: 40%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+#svg_ellipse_big_circle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 707px;
+  top: 717px;
+}
+
+#left {
+  position: absolute;
+  top: 10%;
+  width: 20%;
+  height: 70%;
+  background-color: black;
+}
+
+#right {
+  position: absolute;
+  top: 10%;
+  width: 20%;
+  left: 80%;
+  height: 70%;
+  background-color: black;
+}
+
+#buttonContainers {
+  display: block;
+  position: absolute;
+}
+.stupidButton {
+  position: relative;
+  width: 50px;
+  height: 30px;
+  z-index: 11;
+}
+
+#center {
+  position: absolute;
+  display: block;
+  top: 10%;
+  width: 60%;
+  height: 70%;
+  left: 20%;
+  background-color: black;
+}
+
+#slideIntro {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.slideIntroAnimation {
+  position: absolute;
+  transform: scale(1.3)!important;
+}
+
+#next {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  top: 40%;
+  left: 40%;
+  z-index: 1;
+}
+
+#introSlide_next {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.next_checked {
+  transform: scale(1.1)!important;
+  transition: all .2s ease-in-out;
+}
+
+.next_checked, .next_checked * {
+  stroke: #9E90F2!important;
+}
+
+
+#hotel {
+  position: absolute;
+  left: 10%;
+  top: 35%;
+  width: 25%;
+  height: 65%;
+  z-index: 1;
+}
+
+#studio {
+  position: absolute;
+  right: 10%;
+  top: 35%;
+  width: 25%;
+  height: 65%;
+  z-index: 1;
+}
+
+.slide1 {
+  position: absolute;
+  top: 0%;
+  width: 100%!important;
+  height: 80%!important;
+  z-index: -1;
+}
+
+#slide1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide1Label {
+  position: absolute;
+  bottom: 0;
+  height: 15%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+/*
+#slide2_micros {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.micro {
+  position: absolute;
+  height: 40%;
+  width: 20%;
+  z-index: 1;
+}
+
+.slide2Label {
+  position: absolute;
+  top: 0;
+  height: 30%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+#slide2_1_micro {
+  position: absolute;
+  left: -10%;
+  top: 70%;
+}
+
+#svg_micro-canon {
+  position: absolute;
+  top: 30%;
+  height: 40%;
+  width: 100%;
+}
+
+#slide2_2_micro {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+#svg_micro-reportage {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  height: 25%;
+}
+
+#slide2_3_micro {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+}
+
+#svg_micro-couple {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  height: 30%;
+}
+
+#slide2_4_micro {
+  position: absolute;
+  right: -10%;
+  top: 70%;
+}
+
+#svg_micro-cravate {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 20%;
+}
+
+.slide2 .st0 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-miterlimit: 10;
+}
+
+.slide2 .st1 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+#slide2_plug {
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  width: 30%;
+  height: 20%;
+}
+
+#svg_plug {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  left: 35%;
+  height: 40%;
+}
+
+#slide2_plugLabel {
+  position: absolute;
+  width: 100%;
+  bottom: -15%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+  color: #9E90F2;
+}
+
+#slide2_micros {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.micro {
+  position: absolute;
+  height: 40%;
+  width: 20%;
+  z-index: 1;
+}
+
+.slide2Label {
+  position: absolute;
+  top: 0;
+  height: 30%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+#slide2_1_micro {
+  position: absolute;
+  left: -10%;
+  top: 70%;
+}
+
+#svg_micro-canon {
+  position: absolute;
+  top: 30%;
+  height: 40%;
+  width: 100%;
+}
+
+#slide2_2_micro {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+#svg_micro-reportage {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 30%;
+}
+
+#slide2_3_micro {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+}
+
+#svg_micro-couple {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 30%;
+}
+
+#slide2_4_micro {
+  position: absolute;
+  right: -10%;
+  top: 70%;
+}
+
+#svg_micro-cravate {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 20%;
+}
+
+.slide2 .st0 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-miterlimit: 10;
+}
+
+.slide2 .st1 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+#slide2_plug {
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  width: 30%;
+  height: 20%;
+}
+
+#svg_plug {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  left: 35%;
+  height: 40%;
+}
+
+#slide2_plugLabel {
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+  color: #9E90F2;
+}
+
+#wires {
+  position: absolute;
+  width: 100%;
+  height: 200%;
+}
+
+#wires .path0 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle0 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#wires .path1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#wires .path2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#wires .path3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#slide2_valide{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  left: 115%;
+  top: 62%;
+  z-index: 1;
+}
+*/
+
+#slide2_micros {
+  position: absolute;
+  top: 0;
+  left:0;
+  height: 100%;
+  width: 100%;
+}
+
+.micro {
+  position: absolute;
+  height: 170px;
+  width: 130px;
+  z-index: 1;
+}
+
+.slide2Label {
+  position: absolute;
+  top: 0;
+  left: -22%;
+  height: 30%;
+  width: 150%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+#slide2_1_micro {
+  position: absolute;
+  left: -65px; /* -10 70 */
+  top: 295px;
+}
+
+#svg_micro-canon {
+  position: absolute;
+  top: 30%;
+  height: 40%;
+  width: 100%;
+}
+
+#slide2_2_micro {
+  position: absolute;
+  top: 170px;
+  left: 97px;
+}
+
+#svg_micro-reportage {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 30%;
+}
+
+#slide2_3_micro {
+  position: absolute;
+  top: 170px;
+  left: 420px;
+}
+
+#svg_micro-couple {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 30%;
+}
+
+#slide2_4_micro {
+  position: absolute;
+  left: 582px;
+  top: 295px;
+}
+
+#svg_micro-cravate {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 20%;
+}
+
+.slide2 .st0 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-miterlimit: 10;
+}
+
+.slide2 .st1 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+#slide2_plug {
+  position: absolute;
+  top: 297px;
+  left: 226px;
+  width: 195px;
+  height: 85px;
+}
+
+#svg_plug {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  left: 35%;
+  height: 40%;
+}
+
+#slide2_plugLabel {
+  position: absolute;
+  width: 100%;
+  bottom: 30%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+  color: #9E90F2;
+}
+
+#wires {
+  position: absolute;
+  width: 100%;
+  height: 200%;
+}
+
+#wires .path0 {
+  position: absolute;
+  left: -65px;
+  top: 300px;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle0 {
+  position: absolute;
+  left: -65px;
+  top: 300px;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#wires .path1 {
+  position: absolute;
+  left: -65px;
+  top: 300px;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle1 {
+  position: absolute;
+  left: -65px;
+  top: 300px;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#wires .path2 {
+  position: absolute;
+  top: 170px;
+  left: 420px;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle2 {
+  position: absolute;
+  top: 170px;
+  left: 420px;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#wires .path3 {
+  position: absolute;
+  left: 582px;
+  top: 20px;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: white!important;
+  stroke-width: 3!important;
+  z-index: 13!important;
+}
+
+#wires .handle3 {
+  position: absolute;
+  left: 582px;
+  top: 290px;
+  width: 100%;
+  height: 100%;
+  fill: white!important;
+  z-index: 13!important;
+}
+
+#slide2_valide{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  left: 115%;
+  top: 62%;
+  z-index: 1;
+}
+
+#svg_mix_table
+  	.st0{opacity:0.5;fill:#FFF8E6;stroke:#FFF8E6;stroke-width:2.0609;stroke-linecap:round;stroke-miterlimit:10;}
+#svg_mix_table
+  	.st1{opacity:0.74;}
+#svg_mix_table
+  	.st2{opacity:0.5;fill:#FFFFFF;stroke:#FFFFFF;stroke-width:2.0609;stroke-linecap:round;stroke-miterlimit:10;}
+#svg_mix_table
+  	.st3{opacity:0.5;fill:none;stroke:#FFFFFF;stroke-width:2.0609;stroke-linecap:round;stroke-miterlimit:10;}
+#svg_mix_table
+  	.st4{opacity:0.5;fill:#FFFFFF;}
+#svg_mix_table
+  	.st5{display:none;}
+#svg_mix_table
+  	.st6{fill:none;stroke:#FFFFFF;stroke-width:3.5;stroke-linecap:round;stroke-miterlimit:10;}/*5.2156*/
+#svg_mix_table
+  	.st7{opacity:0.6;fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+#svg_mix_table
+  	.st8{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+#svg_mix_table
+  	.st9{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+#svg_mix_table
+  	.st10{fill:none;stroke:#FFF8E6;stroke-width:5.2156;stroke-linecap:round;stroke-miterlimit:10;}
+#svg_mix_table
+  	.st11{fill:none;stroke:#FFF8E6;stroke-width:1.5461;stroke-linecap:round;stroke-miterlimit:10;}
+#svg_mix_table
+  	.st12{fill:#FFFFFF;}
+
+#svg_mix_table {
+  position: absolute;
+  height: 90%;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  backdrop-filter: blur(2px);
+  z-index: 10;
+}
+/* Modal Content/Box */
+.modal-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  top: 25%;
+  left: 32%;
+  width: 36%;
+  height: 61%;
+  background: rgba(255, 255, 255, 0.6);
+  border: 3px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+.modal-content #title {
+  font-size: 20%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: #000;
+}
+
+.modal-content #main_text {
+  font-size: 13%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.modal-content #sub_text {
+  font-size: 14%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  /* line-height: 22px; */
+  letter-spacing: 0.16em;
+  color: #000;
+}
+
+#button-next {
+  width: 13%;
+  height: 20%;
+  left: 44%;
+}
+
+
+#svg_skip {
+  width: 100%;
+  height: 100%;
+}
+
 /* on fait en sorte que le slidr et les slides remplissent tout notre conteneur */
 #slidr, #slidr section {
     background-color: dodgerblue;
@@ -26,14 +900,14 @@ body {
 }
 
 /* pour le positionnement facile, on place tout en absolue et on exprime tout en % */
-#titre {
+/* #titre{
     text-align: center;
     width: 20%;
     left: 30%;
     top: 10%;
     position: absolute;
     font-size: 30%;
-}
+} */
 
 #logo-hyblab {
     text-align: center;
@@ -63,13 +937,21 @@ body {
 }
 
 /* le footer de la slide 1 est positionné en bas de la slide et son texte est centré */
-section[data-slidr="page-1"] footer {
+/* section[data-slidr="page-1"] footer{
     width: 100%;
     bottom: 5%;
     position: absolute;
     font-size: 20%;
     text-align: center;
-}
+} */
+
+/* footer{
+    width: 100%;
+    bottom: 5%;
+    position: absolute;
+    font-size: 20%;
+    text-align: center;
+} */
 
 /* Pour que la vidéo remplisse son conteneur (elle sera un peu coupée si nécessaire...) */
 .vjs-tech {
@@ -136,7 +1018,7 @@ section[data-slidr="page-2"] {
 /* ---------- media queries importantes pour le responsive facile :-D ----------------- */
 /* Vous pouvez bien sûr l'adapter pour d'autres ratio que 16:9 */
 
-/* Cette media query permet de s'assurer qu'on remplit toujours la largeur de la fenêtre, 
+/* Cette media query permet de s'assurer qu'on remplit toujours la largeur de la fenêtre,
 tant qu'on est en dessous de l'apect ratio 16/9 */
 @media screen and (max-aspect-ratio: 16/9) {
     #container {
@@ -145,14 +1027,14 @@ tant qu'on est en dessous de l'apect ratio 16/9 */
         height: calc(100 * 9vw / 16);
     }
 
-    /* On fixe une taille de police par défaut pour le body qui servira de base à toutes 
+    /* On fixe une taille de police par défaut pour le body qui servira de base à toutes
     les autres tailles de police. Celle-ci est proportionelle à la largeur ici. */
     body {
         font-size: 9vw;
     }
 }
 
-/* Cette media query permet de s'assurer qu'on remplit toujours la hauteur de la fenêtre, quand on est au 
+/* Cette media query permet de s'assurer qu'on remplit toujours la hauteur de la fenêtre, quand on est au
 dessus de l'apect ratio 16/9 */
 @media screen and (min-aspect-ratio: 16/9) {
     #container {
@@ -161,9 +1043,990 @@ dessus de l'apect ratio 16/9 */
         height: 100vh;
     }
 
-    /* On fixe une taille de police par défaut pour le body qui servira de base à toutes 
+    /* On fixe une taille de police par défaut pour le body qui servira de base à toutes
     les autres tailles de police. Celle-ci est proportionelle à la hauteur ici. */
     body {
         font-size: 16vh;
     }
+}
+
+#buttonContainers{
+  position: absolute;
+  bottom: 0;
+}
+
+
+/* Text style */
+.center_question, .theme {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  left: 0%;
+  top: 0%;
+  font-family: Oswald; /*Google font*/
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15%;
+  line-height: 172%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.center_speech {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: 0%;
+  top: 15%;
+  font-family: Open sans; /*Google font*/
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10%;
+  line-height: 172%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  color: #BDB4F3;
+}
+
+.center_speech1 {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: 0%;
+  top: 15%;
+  font-family: Open sans; /*Google font*/
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10%;
+  line-height: 172%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  color: #BDB4F3;
+}
+
+.center_speech2 {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  left: 0%;
+  top: 60%;
+  font-family: Oswald; /*Google font*/
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15%;
+  line-height: 172%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.footer_speech {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  left: 0%;
+  top: 90%;
+  font-family: Oswald; /*Google font*/
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15%;
+  line-height: 172%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+#slide3_voix {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.onClick {
+  position: absolute;
+  top: 45%;
+  width: 40%;
+  height: 55%;
+}
+
+#bouche1 {
+  position: absolute;
+  left: 3%;
+}
+
+#bouche2 {
+  position: absolute;
+  right: 3%;
+}
+
+.slide3 {
+  position: absolute;
+  top: 0;
+  height: 65%!important;
+  width: 100%!important;
+}
+
+.slide3Label {
+  position: absolute;
+  bottom: 0;
+  height: 20%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+#slide4_tournage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide4Label {
+  position: absolute;
+  top: 5%;
+  height: 25%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: +1;
+}
+
+.slide4Label_checked {
+  position: absolute;
+  top: 5%;
+  height: 25%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+  color: #9E90F2;
+  z-index: +1;
+}
+
+.slide4Animations {
+  position: absolute;
+  height: 60%;
+  width: 18%;
+  top: 40%;
+}
+
+.animation, .animation *{
+  fill: #fff;
+  stroke: #fff;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+.animation_checked {
+  transform: scale(1.1)!important;
+  transition: all .2s ease-in-out;
+}
+
+.text_checked {
+  transform: scale(1.1)!important;
+  transition: all .2s ease-in-out;
+  color: #9E90F2;
+}
+
+.animation_checked, .animation_checked *{
+  fill: #9E90F2!important;
+  stroke: #9E90F2!important;
+  /* transform: scale(1.1); */
+  /* transition: scale .3s; */
+}
+
+.label_checked {
+  color: #9E90F2;
+}
+
+#etape1 {
+  position: absolute;
+  left: -7%;
+}
+
+#etape2 {
+  position: absolute;
+  left: 25%;
+}
+
+#etape3 {
+  position: absolute;
+  right: 25%;
+}
+
+#etape4 {
+  position: absolute;
+  right: -7%;
+}
+
+#slide4_installer {
+  /* Composition 2 1 */
+  position: absolute;
+  width: 100%!important;
+  height: 50%!important;
+  top: 30%;
+  z-index: 1;
+}
+
+#slide4_repetition {
+  /* Composition 2 1 */
+  position: absolute;
+  width: 100%!important;
+  height: 50%!important;
+  top: 30%;
+  z-index: 1;
+}
+
+#slide4_vocalise {
+  /* Composition 2 1 */
+  position: absolute;
+  width: 100%!important;
+  height: 50%!important;
+  top: 30%;
+  z-index: 1;
+}
+
+#slide4_interview {
+  /* Composition 2 1 */
+  position: absolute;
+  width: 100%!important;
+  height: 50%!important;
+  top: 30%;
+  z-index: 1;
+}
+
+.slide4_checkbox {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 20%;
+  z-index: 1;
+}
+
+.svg_checkbox {
+  position: absolute;
+  height: 50%;
+  bottom: 0%;
+  width: 20%;
+  left: 40%;
+  z-index: 1;
+}
+
+.svg_checkbox_checked {
+  position: absolute;
+  height: 50%;
+  bottom: 0%;
+  width: 20%;
+  left: 40%;
+  fill: #9E90F2;
+  z-index: 1;
+}
+
+#slide4_valide{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  left: 115%;
+  top: 62%;
+  z-index: 1;
+}
+
+#slide4_flech{
+  position: absolute;
+  width: 80%;
+  height: 80%;
+}
+
+#slide4_valide_text{
+  /* valider */
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  left: 114%;
+  top: 72%;
+
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10%;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.21em;
+
+  color: #FFFFFF;
+  z-index: 1;
+}
+
+.slide5Label {
+  position: absolute;
+  top: 50%;
+  width: 20%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20%;
+  line-height: 172%;
+  text-align: center;
+  z-index: 1;
+}
+
+#slide5_1_label {
+  left: 0;
+}
+
+#slide5_2_label {
+  left: 40%;
+}
+
+#slide5_3_label {
+  right: 0;
+}
+
+#slide5TimeLine {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  top: 70%;
+}
+
+#svg_slide5-vide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#svg_slide5-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+#svg_slide5-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+#svg_slide5-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.slide5visible {
+  visibility: visible!important;
+  z-index: 1;
+}
+
+#slide6_mixtable {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  top: 30%;
+}
+
+#slide6_valide {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  right: 0;
+  top: 50%;
+  font-size: 10%;
+  text-align: center;
+  z-index: 11;
+}
+
+#svg_mix_table {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slideContainer {
+  position: absolute;
+  width: 25.5%;
+  height: 40%;
+  left: 12.6%;
+  top: 15%;
+  z-index: 1;
+}
+
+#slider1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(90deg);
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 1;
+  background: none;
+  outline: none;
+}
+
+#slider1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 2px solid #fff;
+  height: calc(30px);
+  width: 30px;
+  border-radius: 50%;
+  background: rgba(73, 73, 73, 0.5);
+  cursor: pointer;
+  margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+/*
+#slider2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 1;
+  background: none;
+  outline: none;
+}
+*/
+#slider2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* transform: rotate(90deg); */
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 1;
+  background: none;
+  outline: none;
+}
+
+#slider2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 2px solid #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: rgba(73, 73, 73, 0.5);
+  cursor: pointer;
+  margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+#thumb {
+  z-index: -1;
+}
+
+#slide7_choice {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slideContainer2 {
+  position: absolute;
+  height: 20%;
+  width: 25%;
+  right: 19%;
+  bottom: 9.5%;
+  z-index: 2;
+}
+
+#slider2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide7Label {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15%;
+  /* line-height: 27px; */
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+#slide7_1_choice {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 45%;
+  left: 5%;
+}
+
+#slide7_2_choice {
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  top: 35%;
+  right: 10%;
+}
+
+#slide8_podcast {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#slide8Animation {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  height: 70%;
+  top: 0%;
+  z-index: 1;
+}
+
+#svg_slide8 {
+  position: absolute!important;
+  top: 0;
+  height: 150%!important;
+  width: 100%!important;
+  top: 0;
+}
+
+#presta {
+  position: absolute;
+  width: 40%;
+  left: -10%;
+  height: 30%;
+  top: 60%;
+}
+
+#artisan {
+  position: absolute;
+  width: 40%;
+  right: -10%;
+  height: 30%;
+  top: 60%;
+}
+
+.slide8Label {
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.slide8Label_checked {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #9E90F2;
+}
+
+.slide8_checkbox {
+  position: absolute;
+  height: 50%;
+  width: 10%;
+  left: 45%;
+  bottom: 0%;
+}
+
+.svg_checkbox_8 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.svg_checkbox_8_checked {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: #9E90F2;
+}
+
+#svg_capsule {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#svg_capsule
+  .st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+#svg_capsule
+  .st1{fill:#FFFFFF;}
+#svg_capsule
+  .st2{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+#svg_capsule
+  .st3{fill:none;stroke:#FFFFFF;stroke-width:2.5918;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+#svg_capsule
+  .st4{fill:none;stroke:#FFFFFF;stroke-width:2.0403;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+#svg_capsule
+  .st5{fill:none;stroke:#FFFFFF;stroke-width:1.7326;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+#svg_capsule
+  .st6{fill:none;stroke:#FFFFFF;stroke-width:2.0425;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+#svg_capsule
+  .st7{fill:none;stroke:#FFFFFF;stroke-width:2.0223;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+#svg_capsule
+  .st8{display:none;}
+#svg_capsule
+  .st9{display:inline;fill:none;stroke:#000000;stroke-width:2.0403;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+#svg_capsule
+  .st10{display:inline;fill:none;stroke:#000000;stroke-width:1.7326;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+#svg_capsule
+  .st11{display:inline;fill:none;stroke:#000000;stroke-width:2.0425;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+#svg_capsule
+  .st12{display:inline;fill:none;stroke:#000000;stroke-width:2.0223;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+#lastSlide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#last_title {
+  position: absolute;
+  top: 0;
+  height: 10%;
+  left: -10%;
+  width: 120%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+#speech {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10%;
+  text-align: center;
+  letter-spacing: 0.18em;
+}
+
+#logo_alveole {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  width: 10%;
+  height: 20%;
+}
+
+#logo_alveole #svg_brand {
+  position: absolute;
+  width: 100%;
+}
+
+#motto {
+  position: absolute;
+  top: 60%;
+  left: 0%;
+  width: 100%;
+  height: 20%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+#soundcloud {
+  position: absolute;
+  top: 80%;
+  left: 15%;
+  width: 70%;
+  height: 15%;
+  border: none;
+}
+
+#alveole {
+  position: absolute;
+  bottom: -15%;
+  width: 66%;
+  left: 17%;
+  height: 7%;
+  z-index: 1;
+}
+
+#website {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  left: 0%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+#fleche_website {
+  position: absolute;
+  right: 5%;
+  height: 100%;
+}
+
+#sourcesDiv {
+  position: absolute;
+  right: -20%;
+  width: 10%;
+  height: 15%;
+  bottom: -22%;
+  z-index: 1;
+}
+
+#fleche_sources {
+  position: absolute;
+  left: 30%;
+  width: 40%;
+  height: 50%;
+}
+
+#sourceLabel {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: -5%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10%;
+  line-height: 10%;
+  text-align: center;
+  letter-spacing: 0.21em;
+}
+
+#soundcloud .cookiePolicy {
+  visibility: hidden!important;
+  display: none!important;
+}
+
+#sourcesButton {
+  position: absolute;
+  left: 30%;
+  width: 40%;
+  height: 50%;
+  z-index: 1;
+}
+
+.lastOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  transition: opacity 500ms;
+  visibility: hidden;
+  z-index: 12;
+  opacity: 0;
+}
+
+.lastOverlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 10%;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  z-index: 13;
+}
+.close:hover {
+  color: #9E90F2;
+}
+.content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+#audencia {
+  position: absolute;
+  top: 35%;
+  height: 40%;
+  width: 14%;
+  left: 20%;
+}
+
+#polytech {
+  position: absolute;
+  top: 35%;
+  height: 40%;
+  width: 14%;
+  left: 43%;
+}
+
+#agr {
+  position: absolute;
+  top: 35%;
+  height: 40%;
+  width: 14%;
+  right: 20%;
+}
+
+#top {
+  position: absolute;
+  top: 10%;
+  height: 20%;
+  width: 40%;
+  left: 30%;
+}
+
+#bottom {
+  position: absolute;
+  bottom: 10%;
+  width: 70%;
+  height: 20%;
+  left: 15%;
+}
+
+.person {
+  position: absolute;
+  width: 100%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.18em;
+}
+
+#person0 {
+  position: absolute;
+  bottom: 30%;
+  height: 10%;
+}
+
+#person1 {
+  position: absolute;
+  bottom: 20%;
+  height: 10%;
+}
+
+#person2 {
+  position: absolute;
+  bottom: 10%;
+  height: 10%;
+}
+
+.role {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+.logo {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 30%;
+}
+
+#logoAlv {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60%;
+}
+
+#svg_logo_conclu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.svg_logo {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#names_ {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15%;
+  text-align: center;
+  letter-spacing: 0.18em;
+  bottom: 0;
+  text-transform: uppercase;
+}
+
+#svg_agr
+  .st0{fill:#FFFFFF;}
+#svg_agr
+  .st1{fill:#997D4A;}
+#svg_agr
+  .st2{fill:#E30613;}
+#svg_agr
+  .st3{fill:none;}
+#svg_agr
+  .st4{fill:#997D4A;stroke:#997D4A;stroke-width:0.25;stroke-miterlimit:10;}
+
+ #hyblab{
+  position: absolute;
+  left: 10%;
+  height: 100%;
+  width: 20%;
+}
+
+
+#medialab {
+  position: absolute;
+  right: 10%;
+  height: 100%;
+  width: 20%;
 }
