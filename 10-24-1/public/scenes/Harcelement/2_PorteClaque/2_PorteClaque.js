@@ -17,12 +17,17 @@ export default class PorteClaque extends Component {
     document.getElementById("choix-portes").style.display = "none";
     setTimeout(() => this.goToPremierChoix(), 3000);
   }
-  
+
   componentWillUnmount() {
     document.getElementById("choix-portes").style.display = "block";
   }
 
   render(target) {
+    document.getElementById("porte-claque-player").elemMusicOn = true;
+    document.getElementById("porte-claque-player").volume = 0.14;
+    if (!document.getElementById("porte-claque-player").isMuted) {
+      document.getElementById("porte-claque-player").play();
+    }
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
   }

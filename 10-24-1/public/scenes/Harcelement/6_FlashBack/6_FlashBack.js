@@ -15,7 +15,7 @@ export default class FlashBack extends Component {
 
   componentDidMount() {
     document.getElementById("choix-portes").style.display = "none";
-    setTimeout(() => this.goToFinHistoire(), 4000);
+    setTimeout(() => this.goToFinHistoire(), 20500);
   }
 
   render(target) {

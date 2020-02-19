@@ -13,7 +13,11 @@ export default class Credits extends Component {
   }
 
   componentDidMount() {
-    document.getElementById("carousel-player").play();
+    document.getElementById("carousel-player").elemMusicOn = true;
+    document.getElementById("carousel-player").volume = 0.1;
+    if (!document.getElementById("carousel-player").isMuted) {
+      document.getElementById("carousel-player").play();
+    }
   }
 
   render(target) {

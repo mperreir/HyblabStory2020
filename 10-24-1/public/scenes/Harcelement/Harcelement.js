@@ -64,7 +64,7 @@ export default class Harcelement extends Component {
 
 
   goToArriveeEnfant(e){
-    this.onStart(this); 
+    this.onStart(this);
     this.porte.componentWillUnmount();
     this.arrivee.render(this.section);
     e.preventDefault();
@@ -101,7 +101,8 @@ export default class Harcelement extends Component {
       this.fewHoursBefore.load(),
       this.flashBack.load(),
       this.finHistoire.load(),
-      this.lendemain.load()
+      this.lendemain.load(),
+      this.credits.load()
     ]);
   }
 

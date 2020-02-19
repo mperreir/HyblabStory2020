@@ -45,6 +45,9 @@ export default class FinHistoire extends Component {
   }
 
   render(target) {
+    document.getElementById("harcelement-player").pause();
+    document.getElementById("harcelement-player").elemMusicOn = false;
+
     document.getElementById("choix-portes").style.display = "block";
     this.renderHtmlInTarget(target, this.html);
     this.componentDidMount();
