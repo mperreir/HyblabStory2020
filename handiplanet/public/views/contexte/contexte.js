@@ -1,19 +1,19 @@
 
+const textes = {
+    0: 'Pour commencer mes recherches, <span>je devrais ?</span>',
+    1: 'Pour approfondir mes recherches,<br><span>que me conseilles-tu ?</span>',
+    2: 'Selon toi, <span>que devrais-je faire</span> ensuite ?',
+    3: '<span>On a bien avancé,</span> il ne reste qu\'à...'
+};
+
+const sounds = [
+    'sound/context_1.mp3',
+    'sound/context_2.mp3',
+    'sound/context_3.mp3',
+    'sound/context_4.mp3',
+];
+
 class Contexte extends View {
-    textes = {
-        0: 'Pour commencer mes recherches, <span>je devrais ?</span>',
-        1: 'Pour approfondir mes recherches,<br><span>que me conseilles-tu ?</span>',
-        2: 'Selon toi, <span>que devrais-je faire</span> ensuite ?',
-        3: '<span>On a bien avancé,</span> il ne reste qu\'à...'
-    };
-
-    sounds = [
-        'sound/context_1.mp3',
-        'sound/context_2.mp3',
-        'sound/context_3.mp3',
-        'sound/context_4.mp3',
-    ];
-
     constructor(receiver) {
         super('contexte', receiver);
         this.questionNumber = 0;
@@ -21,7 +21,7 @@ class Contexte extends View {
     }
 
     reloadContext(){
-        this.text.innerHTML = this.textes[this.questionNumber];
+        this.text.innerHTML = textes[this.questionNumber];
         if(this.buttons[0]) this.photo.style.display = 'flex';
         if(this.buttons[1]) this.contact.style.display = 'flex';
         if(this.buttons[2]) this.reseau.style.display = 'flex';
@@ -29,7 +29,7 @@ class Contexte extends View {
     }
 
     play() {
-        window.soundManager.play(this.sounds[this.questionNumber]);
+        window.soundManager.play(sounds[this.questionNumber]);
     }
 
     linkElements() {
@@ -39,7 +39,7 @@ class Contexte extends View {
         this.info = document.getElementById('contexte-info');
         this.text = document.getElementById('context-message');
         this.persoImg = document.getElementById('contexte-character-img');
-        this.text.innerHTML = this.textes[0];
+        this.text.innerHTML = textes[0];
 
         this.persoImg.src = window.colorPersoManager.getAsset().face;
 
