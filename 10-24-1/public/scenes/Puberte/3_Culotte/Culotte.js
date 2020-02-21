@@ -10,7 +10,7 @@ export default class Culotte extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Puberte/3_Culotte/Culotte.html"
+      "scenes/Puberte/3_Culotte/Culotte.html"
     );
   }
 

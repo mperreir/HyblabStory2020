@@ -10,7 +10,7 @@ export default class PremierChoix extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Harcelement/3_PremierChoix/3_PremierChoix.html"
+      "scenes/Harcelement/3_PremierChoix/3_PremierChoix.html"
     );
   }
 

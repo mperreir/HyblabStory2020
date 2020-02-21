@@ -10,7 +10,7 @@ export default class DerniereTentative extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Harcelement/4_DerniereTentative/4_DerniereTentative.html"
+      "scenes/Harcelement/4_DerniereTentative/4_DerniereTentative.html"
     );
   }
 

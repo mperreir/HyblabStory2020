@@ -7,7 +7,7 @@ export default class Porte extends Component {
   }
 
   async load() {
-    this.html = await this.loadHTML("/10-24-1/scenes/Ecrans/Porte/Porte.html");
+    this.html = await this.loadHTML("scenes/Ecrans/Porte/Porte.html");
   }
 
   // componentDidMount() {

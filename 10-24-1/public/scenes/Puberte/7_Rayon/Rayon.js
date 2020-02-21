@@ -9,7 +9,7 @@ export default class Rayon extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Puberte/7_Rayon/Rayon.html"
+      "scenes/Puberte/7_Rayon/Rayon.html"
     );
   }
 

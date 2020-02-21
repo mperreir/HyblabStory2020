@@ -9,7 +9,7 @@ export default class S9 extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Flemme/S9/S9.html"
+      "scenes/Flemme/S9/S9.html"
     );
   }
 

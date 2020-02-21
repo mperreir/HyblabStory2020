@@ -9,7 +9,7 @@ export default class Discussion extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Puberte/5_Discussion/Discussion.html"
+      "scenes/Puberte/5_Discussion/Discussion.html"
     );
   }
 

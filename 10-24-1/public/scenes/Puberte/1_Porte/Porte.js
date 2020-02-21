@@ -9,7 +9,7 @@ export default class Porte extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Puberte/1_Porte/Porte.html"
+      "scenes/Puberte/1_Porte/Porte.html"
     );
   }
 

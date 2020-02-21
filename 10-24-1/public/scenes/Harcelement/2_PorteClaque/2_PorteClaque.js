@@ -9,7 +9,7 @@ export default class PorteClaque extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Harcelement/2_PorteClaque/2_PorteClaque.html"
+      "scenes/Harcelement/2_PorteClaque/2_PorteClaque.html"
     );
   }
 

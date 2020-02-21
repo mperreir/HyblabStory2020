@@ -1,10 +1,10 @@
 module.exports = {
 
   // build: {
-  // assetsPublicPath: '/region-pdl/'
+  // assetsPublicPath: ''
   // }
 
-  publicPath: '/region-pdl/',
+  publicPath: '',
 
   lintOnSave: true,
   chainWebpack: (config) => {

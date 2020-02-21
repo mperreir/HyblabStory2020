@@ -9,7 +9,7 @@ export default class S3 extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Flemme/S3/S3.html"
+      "scenes/Flemme/S3/S3.html"
     );
   }
 

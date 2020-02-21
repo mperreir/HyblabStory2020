@@ -15,7 +15,7 @@ export default class PlageHoraire2_2 extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Ecrans/PlageHoraire2_2/PlageHoraire2_2.html"
+      "scenes/Ecrans/PlageHoraire2_2/PlageHoraire2_2.html"
     );
   }
 

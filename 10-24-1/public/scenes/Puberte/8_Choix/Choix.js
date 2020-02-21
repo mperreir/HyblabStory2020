@@ -28,7 +28,7 @@ export default class Choix extends Component {
 
   async load() {
     const promises = await Promise.all([
-      this.loadHTML("/10-24-1/scenes/Puberte/8_Choix/Choix.html"),
+      this.loadHTML("scenes/Puberte/8_Choix/Choix.html"),
       this.buzzer.load()
     ]);
     this.html = promises[0];

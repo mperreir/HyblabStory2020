@@ -9,7 +9,7 @@ export default class Lendemain extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Harcelement/Lendemain/Lendemain.html"
+      "scenes/Harcelement/Lendemain/Lendemain.html"
     );
   }
 

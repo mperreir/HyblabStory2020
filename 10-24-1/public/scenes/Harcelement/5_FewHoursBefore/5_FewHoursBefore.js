@@ -9,7 +9,7 @@ export default class FewHoursBefore extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Harcelement/5_FewHoursBefore/5_FewHoursBefore.html"
+      "scenes/Harcelement/5_FewHoursBefore/5_FewHoursBefore.html"
     );
   }
 

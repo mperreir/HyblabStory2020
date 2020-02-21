@@ -8,7 +8,7 @@ export default class Fin extends Component {
   }
 
   async load() {
-    this.html = await this.loadHTML("/10-24-1/scenes/Puberte/10_Fin/Fin.html");
+    this.html = await this.loadHTML("scenes/Puberte/10_Fin/Fin.html");
   }
 
   componentDidMount() {

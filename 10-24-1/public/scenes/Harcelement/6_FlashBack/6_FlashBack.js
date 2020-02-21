@@ -9,7 +9,7 @@ export default class FlashBack extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Harcelement/6_FlashBack/6_FlashBack.html"
+      "scenes/Harcelement/6_FlashBack/6_FlashBack.html"
     );
   }
 

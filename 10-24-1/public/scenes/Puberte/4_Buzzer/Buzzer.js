@@ -9,7 +9,7 @@ export default class Buzzer extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Puberte/4_Buzzer/Buzzer.html"
+      "scenes/Puberte/4_Buzzer/Buzzer.html"
     );
   }
 

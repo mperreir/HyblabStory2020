@@ -10,7 +10,7 @@ export default class FinHistoire extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Harcelement/7_FinHistoire/7_FinHistoire.html"
+      "scenes/Harcelement/7_FinHistoire/7_FinHistoire.html"
     );
   }
 

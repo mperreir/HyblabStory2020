@@ -8,7 +8,7 @@ export default class PageFin extends Component {
   }
 
   async load() {
-    this.html = await this.loadHTML("/10-24-1/scenes/Flemme/S14/S14.html");
+    this.html = await this.loadHTML("scenes/Flemme/S14/S14.html");
   }
 
   componentDidMount() {

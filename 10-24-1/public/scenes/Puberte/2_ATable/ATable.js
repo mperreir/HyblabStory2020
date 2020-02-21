@@ -8,7 +8,7 @@ export default class ATable extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Puberte/2_ATable/ATable.html"
+      "scenes/Puberte/2_ATable/ATable.html"
     );
   }
 

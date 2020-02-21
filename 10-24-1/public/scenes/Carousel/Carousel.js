@@ -141,7 +141,7 @@ export default class Carousel extends Component {
 
   async load() {
     const promises = await Promise.all([
-      this.loadHTML("/10-24-1/scenes/Carousel/Carousel.html"),
+      this.loadHTML("scenes/Carousel/Carousel.html"),
       this.ecransC.load(),
       this.flemmeC.load(),
       this.harcelementC.load(),

@@ -5,7 +5,7 @@
  */
 function loadTemplate(name, target) {
   return new Promise((resolve,reject) => {
-    fetch(`/handiplanet/views/${name}/${name}.html`).then((res) => {
+    fetch(`views/${name}/${name}.html`).then((res) => {
       return res.text();
     }).then((html) => {
       target.innerHTML = html;

@@ -9,7 +9,7 @@ export default class SuperPapa extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Puberte/6_SuperPapa/SuperPapa.html"
+      "scenes/Puberte/6_SuperPapa/SuperPapa.html"
     );
   }
 

@@ -24,7 +24,7 @@ export default class View {
   async load() {
     try {
       this.htmlText = await this.loadHTML(
-        `/10-24-1/views/${this.viewName}/${this.viewName}.html`
+        `views/${this.viewName}/${this.viewName}.html`
       );
     } catch (err) {
       console.error(err);

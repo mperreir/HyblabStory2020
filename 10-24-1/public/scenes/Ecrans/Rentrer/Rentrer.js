@@ -9,7 +9,7 @@ export default class Rentrer extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Ecrans/Rentrer/Rentrer.html"
+      "scenes/Ecrans/Rentrer/Rentrer.html"
     );
   }
 

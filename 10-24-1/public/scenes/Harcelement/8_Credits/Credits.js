@@ -8,7 +8,7 @@ export default class Credits extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Harcelement/8_Credits/Credits.html"
+      "scenes/Harcelement/8_Credits/Credits.html"
     );
   }
 

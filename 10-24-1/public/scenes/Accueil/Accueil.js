@@ -10,7 +10,7 @@ export default class Home extends Component {
 
   async load() {
     const promises = await Promise.all([
-      this.loadHTML("/10-24-1/scenes/Accueil/Accueil.html"),
+      this.loadHTML("scenes/Accueil/Accueil.html"),
       this.carouselC.load()
     ]);
     this.html = promises[0];

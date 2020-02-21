@@ -9,7 +9,7 @@ export default class Reprimande extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Ecrans/Reprimande/Reprimande.html"
+      "scenes/Ecrans/Reprimande/Reprimande.html"
     );
   }
 

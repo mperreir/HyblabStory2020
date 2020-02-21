@@ -8,7 +8,7 @@ export default class Arrivee extends Component {
 
   async load() {
     this.html = await this.loadHTML(
-      "/10-24-1/scenes/Harcelement/1_ArriveeEnfant/1_ArriveeEnfant.html"
+      "scenes/Harcelement/1_ArriveeEnfant/1_ArriveeEnfant.html"
     );
   }
 
