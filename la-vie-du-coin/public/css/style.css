@@ -3,11 +3,6 @@
 
 
 /* normalisation des marges et padding pour simplifier le positionnement des éléments */
-* {
-    padding: 0;
-    margin: 0;
-
-
 
 *{
     padding:0;
